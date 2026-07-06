@@ -399,32 +399,109 @@ BgaCards is the modern replacement for Stock specifically designed for card game
 - More features
 - Easier API
 - Better TypeScript support
+- Integrated animation support via bga-animations
 
-#### Basic BgaCards Usage
+#### BgaCards Architecture
 
-**Import:**
+BgaCards uses a Manager/Stock pattern where the Manager handles card creation and the Stocks manage display and layout.
+
+**Stock Types:**
+- `BgaCards.LineStock` - Horizontal or vertical card line display
+- `BgaCards.HandStock` - Fan of cards (hand display)
+- `BgaCards.Deck` - Card deck with draw pile appearance
+- `BgaCards.SlotStock` - Cards in slots/grid positions
+- `BgaCards.VoidStock` - Discard pile or void destination
+
+#### Importing BgaCards
+
+**Modern ES Modules import (recommended):**
 ```javascript
-const [BgaCards] = await importDojoLibs(['bga-cards']);
+const BgaAnimations = await importEsmLib('bga-animations', '1.x'); // REQUIRED - bga-cards uses animations
+const BgaCards = await importEsmLib('bga-cards', '1.x');
 ```
 
-**Create:**
+**Legacy Dojo import:**
 ```javascript
-this.cards = new BgaCards(this.bga.gameui, 'card_container', {
-    width: 60,
-    height: 90,
-    gap: 5
+define([
+    "dojo","dojo/_base/declare",
+    "ebg/core/gamegui",
+    getLibUrl('bga-animations', '1.x'), // REQUIRED - bga-cards uses animations
+    getLibUrl('bga-cards', '1.x'),
+], function (dojo, declare, gamegui, BgaAnimations, BgaCards) {
+    // ...
 });
 ```
 
-**Add card:**
+#### Setting Up BgaCards
+
+The BgaCards setup requires creating both an Animation Manager and a Card Manager:
+
 ```javascript
-this.cards.addCard(cardId, cardType, imageUrl);
+// In your Game.js constructor or setup method
+setup: function(gamedatas) {
+    // Create the animation manager first
+    this.animationManager = new BgaAnimations.Manager({
+        animationsActive: () => this.bga.gameui.bgaAnimationsActive(),
+    });
+
+    // Create the card manager
+    this.cardsManager = new BgaCards.Manager({
+        animationManager: this.animationManager,
+        type: 'mygame-card',  // CSS class prefix for cards
+        getId: (card) => card.id,
+        setupFrontDiv: (card, div) => {
+            // Customize card appearance
+            div.dataset.type = card.type;
+            div.dataset.typeArg = card.type_arg;
+            // For sprite positioning (if using card sprite sheet):
+            // div.style.backgroundPositionX = `calc(100% / 13 * (${card.type_arg} - 2))`;
+            // div.style.backgroundPositionY = `calc(100% / 3 * (${card.type} - 1))`;
+            this.bga.gameui.addTooltipHtml(div.id, `Card: ${card.type} value ${card.type_arg}`);
+        },
+    });
 ```
 
-**Remove card:**
+#### Creating Card Stocks
+
 ```javascript
-this.cards.removeCard(cardId);
+// LineStock - for hand, table, or deck displays
+this.cardStock = new BgaCards.LineStock(this.cardsManager, document.getElementById('card_stock'));
+
+// HandStock - for fan-style hand display
+this.handStock = new BgaCards.HandStock(this.cardsManager, document.getElementById('player_hand'), {
+    spacing: 10,
+    fanOffset: 15,
+});
+
+// Deck - for draw piles
+this.deck = new BgaCards.Deck(this.cardsManager, document.getElementById('deck'));
 ```
+
+#### Adding and Removing Cards
+
+```javascript
+// Add cards to stock (cards should be array of objects)
+this.cardStock.addCards([
+    { id: 1, type: 1, type_arg: 5 },
+    { id: 2, type: 2, type_arg: 10 }
+]);
+
+// Remove cards from stock
+this.cardStock.removeCards([{ id: 1, type: 1, type_arg: 5 }]);
+
+// Move cards between stocks
+this.cardStock.addCards(cards).then(() => {
+    this.otherStock.addCards(cards);
+});
+```
+
+#### Important BgaCards Notes
+
+- **BgaAnimations dependency**: BgaCards requires bga-animations to be imported and instantiated
+- **Array format**: Card data must be in array format, not object map format from `getCardsInLocation()`
+- **Type casting**: PHP returns types as strings; BgaCards methods may expect integers. See Hearts tutorial for helper methods like `remapToBgaCard()`
+- **Async methods**: `addCards()` and `removeCards()` return Promises; use `.then()` or `await` for sequential operations
+- **Sprite configuration**: For CSS sprite images, configure `backgroundPositionX/Y` in `setupFrontDiv` callback
 
 ### Best Practices for UI Components
 

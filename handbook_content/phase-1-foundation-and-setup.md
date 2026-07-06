@@ -1,4 +1,4 @@
-# BGA Studio Developer Handbook - Phase 1: Foundation and Setup
+This is an automatically generated documentation consolidation from https://en.doc.boardgamearena.com/. The complete handbook is available as Developer_Handbook_v1.md.
 
 ## Chapter 1: Introduction to BGA Studio
 
@@ -329,9 +329,11 @@ Use the **BGA Extension Pack** to download all recommended extensions with one c
 
 #### JavaScript Intellisense
 
-Since BGA ditched Dojo in 2025, we can enjoy full IDE support. If you try this with old Dojo projects, it won't work well.
+Since BGA adopted ES Modules and modernized the framework, we can enjoy full IDE support. If you try this with legacy Dojo projects, it may not work well.
 
-A good way to improve auto-complete is to use TypeScript and SCSS (not recommended for beginners). See the original wiki: https://en.doc.boardgamearena.com/Using_Typescript_and_Scss
+A good way to improve auto-complete is to use TypeScript and SCSS (not required for beginners). See the original wiki: https://en.doc.boardgamearena.com/Using_Typescript_and_Scss
+
+**Note:** The modern framework still uses Dojo libraries (ebg/stock, ebg/zone) internally, so understanding the legacy patterns remains useful.
 
 #### PHP Intellisense
 

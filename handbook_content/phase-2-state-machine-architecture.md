@@ -1,4 +1,4 @@
-# BGA Studio Developer Handbook - Phase 2: State Machine Architecture
+This is an automatically generated documentation consolidation from https://en.doc.boardgamearena.com/. The complete handbook is available as Developer_Handbook_v1.md.
 
 ## Chapter 4: State Machine Architecture
 
@@ -104,6 +104,7 @@ Only `game`, `id`, and `type` are mandatory. Other parameters are optional. The 
 **id (Mandatory)**
 - Must be a positive integer
 - Must be unique between all your states (don't use the same ID twice)
+- Number 1 is reserved for the first game state - don't modify it
 - Number 99 is reserved for the last game state (end of game) - don't modify it
 - **Important:** When a game is in production and you change the ID of a state, all active games (including turn-based) will behave unpredictably
 
@@ -197,9 +198,11 @@ This requires state arguments for `otherplayer` and `otherplayer_id`.
 ```php
 transitions: [
     'playCard' => 3, 
-    'pass' => 3,
+    'pass' => 4,
 ]
 ```
+
+**Note:** If there is only one transition, you may use an empty array: `transitions: []`
 
 **updateGameProgression**
 - Optional boolean (default: false)
@@ -210,6 +213,7 @@ transitions: [
 - Optional (default: null)
 - Used during multiactive states to specify an initial private state
 - See the section on private states for more details
+- Can also be a class name: `initialPrivate: PlaceCard::class`
 
 #### State Class Methods
 
@@ -227,6 +231,49 @@ public function getArgs(): array
     ];
 }
 ```
+
+**Magic Parameters for getArgs()**
+The getArgs method accepts magic parameters that are automatically filled by the framework:
+- `int $activePlayerId` (or `int $active_player_id`) - filled for ACTIVE_PLAYER states only
+- `int $activePlayerNo` (or `int $active_player_no`) - filled for ACTIVE_PLAYER states only
+- `int $playerId` (or `int $player_id`) - filled for PRIVATE states only
+- `int $playerNo` (or `int $player_no`) - filled for PRIVATE states only
+
+**Skipped States (_no_notify flag)**
+To optimize performance for states that will be automatically skipped, use the `_no_notify` flag:
+```php
+public function getArgs(): array
+{
+    $playableCardsIds = $this->game->getPlayableCards();
+    return [
+        'playableCardsIds' => $playableCardsIds,
+        '_no_notify' => count($playableCardsIds) === 0,
+    ];
+}
+
+function onEnteringState(int $activePlayerId, array $args): void {
+    if ($args['_no_notify']) {
+        return $this->actPass($activePlayerId);
+    }
+}
+```
+
+**Private Data in getArgs (_private)**
+Private data can be sent to specific players only:
+```php
+public function getArgs(): array {
+    return [
+        '_private' => [
+            $activePlayerId => [
+                'somePrivateData' => $this->game->getSomePrivateData($activePlayerId)
+            ]
+        ],
+        'possibleMoves' => $this->game->getPossibleMoves()
+    ];
+}
+```
+
+Use `_merge_private` to merge private data into the main args object.
 
 **onEnteringState(int $activePlayerId)**
 - Called when the state is entered

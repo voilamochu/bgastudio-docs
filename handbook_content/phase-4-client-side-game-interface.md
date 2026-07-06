@@ -1,4 +1,4 @@
-# BGA Studio Developer Handbook - Phase 4: Client-Side Game Interface
+This is an automatically generated documentation consolidation from https://en.doc.boardgamearena.com/. The complete handbook is available as Developer_Handbook_v1.md.
 
 ## Chapter 6: Client-Side Game Interface (JavaScript)
 
