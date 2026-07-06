@@ -36,3 +36,15 @@
 - The --force flag bypasses ALL caching - use only when needed
 - URL canonicalization affects deduplication - changes impact URL mapping
 - Logging format is JSON Lines - each line is independently parseable
+
+# Workspace Orientation
+
+Before performing any task:
+
+1. Determine the actual workspace root.
+2. Run:
+   - pwd
+   - git rev-parse --show-toplevel
+3. Use the returned repository root for filesystem operations.
+4. Never infer paths from previous conversations or memory.
+5. If the workspace root cannot be determined, stop and ask for clarification.

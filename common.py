@@ -23,6 +23,9 @@ IGNORED_NAMESPACES = {
     "mediawiki",
     "help",
 }
+IGNORED_PATH_PREFIXES = {
+    "/gamehelp",
+}
 IGNORED_EXTENSIONS = {
     ".pdf",
     ".png",
@@ -145,6 +148,10 @@ def should_ignore_url(url: str) -> tuple[bool, str]:
         return True, "binary_asset"
     if lower_path == "/api.php":
         return True, "api_endpoint"
+    if lower_path == "/help":
+        return True, "help_page"
+    if any(lower_path.startswith(prefix) for prefix in IGNORED_PATH_PREFIXES):
+        return True, "path_prefix_excluded"
 
     path_title = _path_title(path)
     query_title = unquote(query_params.get("title", "")).strip()
