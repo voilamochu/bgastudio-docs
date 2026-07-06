@@ -1,0 +1,520 @@
+[
+    {
+        "title": "Anti-Stock",
+        "url": "https://en.doc.boardgamearena.com/Anti-Stock",
+        "depth": 1,
+        "filename": "Anti-Stock.html",
+        "timestamp": "2026-07-06T01:36:08.790756+00:00"
+    },
+    {
+        "title": "BGA Code Sharing",
+        "url": "https://en.doc.boardgamearena.com/BGA_Code_Sharing",
+        "depth": 1,
+        "filename": "BGA_Code_Sharing.html",
+        "timestamp": "2026-07-06T01:36:10.055868+00:00"
+    },
+    {
+        "title": "BGA extension",
+        "url": "https://en.doc.boardgamearena.com/ChromeExtension",
+        "depth": 2,
+        "filename": "BGA_extension.html",
+        "timestamp": "2026-07-06T01:36:11.295405+00:00"
+    },
+    {
+        "title": "BGA Game licenses",
+        "url": "https://en.doc.boardgamearena.com/BGA_Game_licenses",
+        "depth": 1,
+        "filename": "BGA_Game_licenses.html",
+        "timestamp": "2026-07-06T01:36:12.407507+00:00"
+    },
+    {
+        "title": "BGA game Lifecycle",
+        "url": "https://en.doc.boardgamearena.com/BGA_game_Lifecycle",
+        "depth": 1,
+        "filename": "BGA_game_Lifecycle.html",
+        "timestamp": "2026-07-06T01:36:13.438376+00:00"
+    },
+    {
+        "title": "BGA Studio Cookbook",
+        "url": "https://en.doc.boardgamearena.com/BGA_Studio_Cookbook",
+        "depth": 1,
+        "filename": "BGA_Studio_Cookbook.html",
+        "timestamp": "2026-07-06T01:36:14.961833+00:00"
+    },
+    {
+        "title": "BGA Studio Guidelines",
+        "url": "https://en.doc.boardgamearena.com/BGA_Studio_Guidelines",
+        "depth": 1,
+        "filename": "BGA_Studio_Guidelines.html",
+        "timestamp": "2026-07-06T01:36:16.153855+00:00"
+    },
+    {
+        "title": "BGA Studio Migration Guide",
+        "url": "https://en.doc.boardgamearena.com/BGA_Studio_Migration_Guide",
+        "depth": 1,
+        "filename": "BGA_Studio_Migration_Guide.html",
+        "timestamp": "2026-07-06T01:36:17.471600+00:00"
+    },
+    {
+        "title": "BGA Undo policy",
+        "url": "https://en.doc.boardgamearena.com/BGA_Undo_policy",
+        "depth": 2,
+        "filename": "BGA_Undo_policy.html",
+        "timestamp": "2026-07-06T01:36:18.437336+00:00"
+    },
+    {
+        "title": "BgaAnimations",
+        "url": "https://en.doc.boardgamearena.com/BgaAnimations",
+        "depth": 1,
+        "filename": "BgaAnimations.html",
+        "timestamp": "2026-07-06T01:36:19.603299+00:00"
+    },
+    {
+        "title": "BgaAutofit",
+        "url": "https://en.doc.boardgamearena.com/BgaAutofit",
+        "depth": 1,
+        "filename": "BgaAutofit.html",
+        "timestamp": "2026-07-06T01:36:20.648138+00:00"
+    },
+    {
+        "title": "BgaCards",
+        "url": "https://en.doc.boardgamearena.com/BgaCards",
+        "depth": 1,
+        "filename": "BgaCards.html",
+        "timestamp": "2026-07-06T01:36:21.656770+00:00"
+    },
+    {
+        "title": "BgaDice",
+        "url": "https://en.doc.boardgamearena.com/BgaDice",
+        "depth": 1,
+        "filename": "BgaDice.html",
+        "timestamp": "2026-07-06T01:36:22.718481+00:00"
+    },
+    {
+        "title": "BgaScoreSheet",
+        "url": "https://en.doc.boardgamearena.com/BgaScoreSheet",
+        "depth": 1,
+        "filename": "BgaScoreSheet.html",
+        "timestamp": "2026-07-06T01:36:23.846903+00:00"
+    },
+    {
+        "title": "Bots and Artificial Intelligence",
+        "url": "https://en.doc.boardgamearena.com/Bots_and_Artificial_Intelligence",
+        "depth": 1,
+        "filename": "Bots_and_Artificial_Intelligence.html",
+        "timestamp": "2026-07-06T01:36:24.888596+00:00"
+    },
+    {
+        "title": "Common board game elements image resources",
+        "url": "https://en.doc.boardgamearena.com/Common_board_game_elements_image_resources",
+        "depth": 1,
+        "filename": "Common_board_game_elements_image_resources.html",
+        "timestamp": "2026-07-06T01:36:26.010794+00:00"
+    },
+    {
+        "title": "Compatibility",
+        "url": "https://en.doc.boardgamearena.com/Compatibility",
+        "depth": 1,
+        "filename": "Compatibility.html",
+        "timestamp": "2026-07-06T01:36:27.108824+00:00"
+    },
+    {
+        "title": "Contact BGA Studio",
+        "url": "https://en.doc.boardgamearena.com/Contact_BGA_Studio",
+        "depth": 1,
+        "filename": "Contact_BGA_Studio.html",
+        "timestamp": "2026-07-06T01:36:28.234620+00:00"
+    },
+    {
+        "title": "Counter",
+        "url": "https://en.doc.boardgamearena.com/Counter",
+        "depth": 1,
+        "filename": "Counter.html",
+        "timestamp": "2026-07-06T01:36:29.271037+00:00"
+    },
+    {
+        "title": "Create a game in BGA Studio: Complete Walkthrough",
+        "url": "https://en.doc.boardgamearena.com/Create_a_game_in_BGA_Studio:_Complete_Walkthrough",
+        "depth": 1,
+        "filename": "Create_a_game_in_BGA_Studio_Complete_Walkthrough.html",
+        "timestamp": "2026-07-06T01:36:30.527879+00:00"
+    },
+    {
+        "title": "Deck",
+        "url": "https://en.doc.boardgamearena.com/Deck",
+        "depth": 1,
+        "filename": "Deck.html",
+        "timestamp": "2026-07-06T01:36:31.778665+00:00"
+    },
+    {
+        "title": "Draggable",
+        "url": "https://en.doc.boardgamearena.com/Draggable",
+        "depth": 1,
+        "filename": "Draggable.html",
+        "timestamp": "2026-07-06T01:36:32.758186+00:00"
+    },
+    {
+        "title": "ExpandableSection",
+        "url": "https://en.doc.boardgamearena.com/ExpandableSection",
+        "depth": 1,
+        "filename": "ExpandableSection.html",
+        "timestamp": "2026-07-06T01:36:33.828093+00:00"
+    },
+    {
+        "title": "First steps with BGA Studio",
+        "url": "https://en.doc.boardgamearena.com/First_steps_with_BGA_Studio",
+        "depth": 1,
+        "filename": "First_steps_with_BGA_Studio.html",
+        "timestamp": "2026-07-06T01:36:34.761394+00:00"
+    },
+    {
+        "title": "Game art: img directory",
+        "url": "https://en.doc.boardgamearena.com/Game_art:_img_directory",
+        "depth": 1,
+        "filename": "Game_art_img_directory.html",
+        "timestamp": "2026-07-06T01:36:35.969123+00:00"
+    },
+    {
+        "title": "Game database model: dbmodel.sql",
+        "url": "https://en.doc.boardgamearena.com/Game_database_model:_dbmodel.sql",
+        "depth": 1,
+        "filename": "Game_database_model_dbmodel.sql.html",
+        "timestamp": "2026-07-06T01:36:37.106043+00:00"
+    },
+    {
+        "title": "Game fonts: fonts directory",
+        "url": "https://en.doc.boardgamearena.com/Game_fonts:_fonts_directory",
+        "depth": 1,
+        "filename": "Game_fonts_fonts_directory.html",
+        "timestamp": "2026-07-06T01:36:38.240571+00:00"
+    },
+    {
+        "title": "Game interface logic: Game.js",
+        "url": "https://en.doc.boardgamearena.com/Game_interface_logic:_Game.js",
+        "depth": 1,
+        "filename": "Game_interface_logic_Game.js.html",
+        "timestamp": "2026-07-06T01:36:39.877893+00:00"
+    },
+    {
+        "title": "Game interface logic: Game.js",
+        "url": "https://en.doc.boardgamearena.com/Game_interface_logic:_yourgamename.js",
+        "depth": 1,
+        "filename": "Game_interface_logic_Game.js.html",
+        "timestamp": "2026-07-06T01:36:39.877893+00:00"
+    },
+    {
+        "title": "Game interface stylesheet: yourgamename.css",
+        "url": "https://en.doc.boardgamearena.com/Game_interface_stylesheet:_yourgamename.css",
+        "depth": 1,
+        "filename": "Game_interface_stylesheet_yourgamename.css.html",
+        "timestamp": "2026-07-06T01:36:40.987976+00:00"
+    },
+    {
+        "title": "Game material description: material.inc.php",
+        "url": "https://en.doc.boardgamearena.com/Game_material_description:_material.inc.php",
+        "depth": 1,
+        "filename": "Game_material_description_material.inc.php.html",
+        "timestamp": "2026-07-06T01:36:42.136753+00:00"
+    },
+    {
+        "title": "Game meta-information: gameinfos.jsonc",
+        "url": "https://en.doc.boardgamearena.com/Game_meta-information:_gameinfos.jsonc",
+        "depth": 1,
+        "filename": "Game_meta-information_gameinfos.jsonc.html",
+        "timestamp": "2026-07-06T01:36:43.357792+00:00"
+    },
+    {
+        "title": "Game metadata manager",
+        "url": "https://en.doc.boardgamearena.com/Game_metadata_manager",
+        "depth": 1,
+        "filename": "Game_metadata_manager.html",
+        "timestamp": "2026-07-06T01:36:44.503899+00:00"
+    },
+    {
+        "title": "Game options and preferences: gameoptions.inc.php",
+        "url": "https://en.doc.boardgamearena.com/Game_options_and_preferences:_gameoptions.inc.php",
+        "depth": 2,
+        "filename": "Game_options_and_preferences_gameoptions.inc.php.html",
+        "timestamp": "2026-07-06T01:36:46+00:00"
+    },
+    {
+        "title": "Game replay",
+        "url": "https://en.doc.boardgamearena.com/Game_replay",
+        "depth": 1,
+        "filename": "Game_replay.html",
+        "timestamp": "2026-07-06T01:36:47+00:00"
+    },
+    {
+        "title": "Game sounds: sounds directory",
+        "url": "https://en.doc.boardgamearena.com/Game_sounds:_sounds_directory",
+        "depth": 1,
+        "filename": "Game_sounds_sounds_directory.html",
+        "timestamp": "2026-07-06T01:36:48+00:00"
+    },
+    {
+        "title": "Game statistics: stats.json",
+        "url": "https://en.doc.boardgamearena.com/Game_statistics:_stats.json",
+        "depth": 1,
+        "filename": "Game_statistics_stats.json.html",
+        "timestamp": "2026-07-06T01:36:49+00:00"
+    },
+    {
+        "title": "Game statistics: stats.json",
+        "url": "https://en.doc.boardgamearena.com/Game_statistics:_stats.inc.php",
+        "depth": 1,
+        "filename": "Game_statistics_stats.json.html",
+        "timestamp": "2026-07-06T01:36:49.232096+00:00"
+    },
+    {
+        "title": "Help",
+        "url": "https://en.doc.boardgamearena.com/Help",
+        "depth": 1,
+        "filename": "Help.html",
+        "timestamp": "2026-07-06T01:36:50+00:00"
+    },
+    {
+        "title": "How to join BGA developer team?",
+        "url": "https://en.doc.boardgamearena.com/How_to_join_BGA_developer_team%3F",
+        "depth": 1,
+        "filename": "How_to_join_BGA_developer_team.html",
+        "timestamp": "2026-07-06T01:36:51+00:00"
+    },
+    {
+        "title": "https://en.doc.boardgamearena.com/index.php?title=Main_game_logic:_Game.php#Game_statistics",
+        "url": "https://en.doc.boardgamearena.com/index.php?title=Main_game_logic:_Game.php",
+        "depth": 2,
+        "filename": "https_en.doc.boardgamearena.com_index.php_title=Main_game_logic_Game.php#Game_statistics.html",
+        "timestamp": "2026-07-06T01:37:00+00:00"
+    },
+    {
+        "title": "https://en.doc.boardgamearena.com/Zombie_Mode#The_different_Zombie_levels",
+        "url": "https://en.doc.boardgamearena.com/Zombie_Mode",
+        "depth": 2,
+        "filename": "https_en.doc.boardgamearena.com_Zombie_Mode#The_different_Zombie_levels.html",
+        "timestamp": "2026-07-06T01:37:01+00:00"
+    },
+    {
+        "title": "I wish I knew this when I started",
+        "url": "https://en.doc.boardgamearena.com/I_wish_I_knew_this_when_I_started",
+        "depth": 1,
+        "filename": "I_wish_I_knew_this_when_I_started.html",
+        "timestamp": "2026-07-06T01:37:02+00:00"
+    },
+    {
+        "title": "Main game logic: Game.php",
+        "url": "https://en.doc.boardgamearena.com/Main_game_logic:_Game.php",
+        "depth": 1,
+        "filename": "Main_game_logic_Game.php.html",
+        "timestamp": "2026-07-06T01:37:03+00:00"
+    },
+    {
+        "title": "Main game logic: Game.php",
+        "url": "https://en.doc.boardgamearena.com/Main_game_logic:_yourgamename.game.php",
+        "depth": 1,
+        "filename": "Main_game_logic_Game.php.html",
+        "timestamp": "2026-07-06T01:37:03.945433+00:00"
+    },
+    {
+        "title": "Options and preferences: gameoptions.json, gamepreferences.json",
+        "url": "https://en.doc.boardgamearena.com/Options_and_preferences:_gameoptions.json,_gamepreferences.json",
+        "depth": 1,
+        "filename": "Options_and_preferences_gameoptions.json,_gamepreferences.json.html",
+        "timestamp": "2026-07-06T01:37:05+00:00"
+    },
+    {
+        "title": "PlayerCounter and TableCounter",
+        "url": "https://en.doc.boardgamearena.com/PlayerCounter_and_TableCounter",
+        "depth": 1,
+        "filename": "PlayerCounter_and_TableCounter.html",
+        "timestamp": "2026-07-06T01:37:06+00:00"
+    },
+    {
+        "title": "Players actions: yourgamename.action.php",
+        "url": "https://en.doc.boardgamearena.com/Players_actions:_yourgamename.action.php",
+        "depth": 1,
+        "filename": "Players_actions_yourgamename.action.php.html",
+        "timestamp": "2026-07-06T01:37:07+00:00"
+    },
+    {
+        "title": "Post-release phase",
+        "url": "https://en.doc.boardgamearena.com/Post-release_phase",
+        "depth": 1,
+        "filename": "Post-release_phase.html",
+        "timestamp": "2026-07-06T01:37:08+00:00"
+    },
+    {
+        "title": "Practical debugging",
+        "url": "https://en.doc.boardgamearena.com/Practical_debugging",
+        "depth": 1,
+        "filename": "Practical_debugging.html",
+        "timestamp": "2026-07-06T01:37:09+00:00"
+    },
+    {
+        "title": "Pre-release checklist",
+        "url": "https://en.doc.boardgamearena.com/Pre-release_checklist",
+        "depth": 1,
+        "filename": "Pre-release_checklist.html",
+        "timestamp": "2026-07-06T01:37:10+00:00"
+    },
+    {
+        "title": "Scrollmap",
+        "url": "https://en.doc.boardgamearena.com/Scrollmap",
+        "depth": 1,
+        "filename": "Scrollmap.html",
+        "timestamp": "2026-07-06T01:37:12+00:00"
+    },
+    {
+        "title": "Setting up BGA Development environment using VSCode",
+        "url": "https://en.doc.boardgamearena.com/Setting_up_BGA_Development_environment_using_VSCode",
+        "depth": 1,
+        "filename": "Setting_up_BGA_Development_environment_using_VSCode.html",
+        "timestamp": "2026-07-06T01:37:13+00:00"
+    },
+    {
+        "title": "State classes: State directory",
+        "url": "https://en.doc.boardgamearena.com/State_classes:_State_directory",
+        "depth": 1,
+        "filename": "State_classes_State_directory.html",
+        "timestamp": "2026-07-06T01:37:14+00:00"
+    },
+    {
+        "title": "Stock",
+        "url": "https://en.doc.boardgamearena.com/Stock",
+        "depth": 1,
+        "filename": "Stock.html",
+        "timestamp": "2026-07-06T01:37:15+00:00"
+    },
+    {
+        "title": "Studio",
+        "url": "https://en.doc.boardgamearena.com/Studio",
+        "depth": 0,
+        "filename": "Studio.html",
+        "timestamp": "2026-07-06T01:37:16+00:00"
+    },
+    {
+        "title": "Studio FAQ",
+        "url": "https://en.doc.boardgamearena.com/Studio_FAQ",
+        "depth": 1,
+        "filename": "Studio_FAQ.html",
+        "timestamp": "2026-07-06T01:37:17+00:00"
+    },
+    {
+        "title": "Studio file reference",
+        "url": "https://en.doc.boardgamearena.com/Studio_file_reference",
+        "depth": 1,
+        "filename": "Studio_file_reference.html",
+        "timestamp": "2026-07-06T01:37:18+00:00"
+    },
+    {
+        "title": "Studio logs",
+        "url": "https://en.doc.boardgamearena.com/Studio_logs",
+        "depth": 1,
+        "filename": "Studio_logs.html",
+        "timestamp": "2026-07-06T01:37:20+00:00"
+    },
+    {
+        "title": "Studio logs",
+        "url": "https://en.doc.boardgamearena.com/Production_issues_reporting",
+        "depth": 1,
+        "filename": "Studio_logs.html",
+        "timestamp": "2026-07-06T01:37:20.095961+00:00"
+    },
+    {
+        "title": "Testing by developer",
+        "url": "https://en.doc.boardgamearena.com/Testing_by_developer",
+        "depth": 1,
+        "filename": "Testing_by_developer.html",
+        "timestamp": "2026-07-06T01:37:21+00:00"
+    },
+    {
+        "title": "Tools and tips of BGA Studio",
+        "url": "https://en.doc.boardgamearena.com/Tools_and_tips_of_BGA_Studio",
+        "depth": 1,
+        "filename": "Tools_and_tips_of_BGA_Studio.html",
+        "timestamp": "2026-07-06T01:37:22+00:00"
+    },
+    {
+        "title": "Translations",
+        "url": "https://en.doc.boardgamearena.com/Translations",
+        "depth": 1,
+        "filename": "Translations.html",
+        "timestamp": "2026-07-06T01:37:23+00:00"
+    },
+    {
+        "title": "Troubleshooting",
+        "url": "https://en.doc.boardgamearena.com/Troubleshooting",
+        "depth": 1,
+        "filename": "Troubleshooting.html",
+        "timestamp": "2026-07-06T01:37:24+00:00"
+    },
+    {
+        "title": "Tutorial hearts",
+        "url": "https://en.doc.boardgamearena.com/Tutorial_hearts",
+        "depth": 1,
+        "filename": "Tutorial_hearts.html",
+        "timestamp": "2026-07-06T01:37:26+00:00"
+    },
+    {
+        "title": "Tutorial reversi",
+        "url": "https://en.doc.boardgamearena.com/Tutorial_reversi",
+        "depth": 1,
+        "filename": "Tutorial_reversi.html",
+        "timestamp": "2026-07-06T01:37:27+00:00"
+    },
+    {
+        "title": "Tutorials checklist",
+        "url": "https://en.doc.boardgamearena.com/Tutorials_checklist",
+        "depth": 1,
+        "filename": "Tutorials_checklist.html",
+        "timestamp": "2026-07-06T01:37:28+00:00"
+    },
+    {
+        "title": "Using AI for BGA game development",
+        "url": "https://en.doc.boardgamearena.com/Using_AI_for_BGA_game_development",
+        "depth": 1,
+        "filename": "Using_AI_for_BGA_game_development.html",
+        "timestamp": "2026-07-06T01:37:29+00:00"
+    },
+    {
+        "title": "Using Typescript and Scss",
+        "url": "https://en.doc.boardgamearena.com/Using_Typescript_and_Scss",
+        "depth": 1,
+        "filename": "Using_Typescript_and_Scss.html",
+        "timestamp": "2026-07-06T01:37:30+00:00"
+    },
+    {
+        "title": "Using Vue",
+        "url": "https://en.doc.boardgamearena.com/Using_Vue",
+        "depth": 1,
+        "filename": "Using_Vue.html",
+        "timestamp": "2026-07-06T01:37:31+00:00"
+    },
+    {
+        "title": "Wiki formatting",
+        "url": "https://en.doc.boardgamearena.com/Wiki_formatting",
+        "depth": 2,
+        "filename": "Wiki_formatting.html",
+        "timestamp": "2026-07-06T01:37:33+00:00"
+    },
+    {
+        "title": "Your game mobile version",
+        "url": "https://en.doc.boardgamearena.com/Your_game_mobile_version",
+        "depth": 1,
+        "filename": "Your_game_mobile_version.html",
+        "timestamp": "2026-07-06T01:37:35+00:00"
+    },
+    {
+        "title": "Your game state machine: states.inc.php",
+        "url": "https://en.doc.boardgamearena.com/Your_game_state_machine:_states.inc.php",
+        "depth": 1,
+        "filename": "Your_game_state_machine_states.inc.php.html",
+        "timestamp": "2026-07-06T01:37:36+00:00"
+    },
+    {
+        "title": "Zone",
+        "url": "https://en.doc.boardgamearena.com/Zone",
+        "depth": 1,
+        "filename": "Zone.html",
+        "timestamp": "2026-07-06T01:37:37+00:00"
+    }
+]

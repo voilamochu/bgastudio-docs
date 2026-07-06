@@ -1,0 +1,76 @@
+Title,Depth,URL
+Anti-Stock,1,https://en.doc.boardgamearena.com/Anti-Stock
+BGA Code Sharing,1,https://en.doc.boardgamearena.com/BGA_Code_Sharing
+BGA extension,2,https://en.doc.boardgamearena.com/ChromeExtension
+BGA Game licenses,1,https://en.doc.boardgamearena.com/BGA_Game_licenses
+BGA game Lifecycle,1,https://en.doc.boardgamearena.com/BGA_game_Lifecycle
+BGA Studio Cookbook,1,https://en.doc.boardgamearena.com/BGA_Studio_Cookbook
+BGA Studio Guidelines,1,https://en.doc.boardgamearena.com/BGA_Studio_Guidelines
+BGA Studio Migration Guide,1,https://en.doc.boardgamearena.com/BGA_Studio_Migration_Guide
+BGA Undo policy,2,https://en.doc.boardgamearena.com/BGA_Undo_policy
+BgaAnimations,1,https://en.doc.boardgamearena.com/BgaAnimations
+BgaAutofit,1,https://en.doc.boardgamearena.com/BgaAutofit
+BgaCards,1,https://en.doc.boardgamearena.com/BgaCards
+BgaDice,1,https://en.doc.boardgamearena.com/BgaDice
+BgaScoreSheet,1,https://en.doc.boardgamearena.com/BgaScoreSheet
+Bots and Artificial Intelligence,1,https://en.doc.boardgamearena.com/Bots_and_Artificial_Intelligence
+Common board game elements image resources,1,https://en.doc.boardgamearena.com/Common_board_game_elements_image_resources
+Compatibility,1,https://en.doc.boardgamearena.com/Compatibility
+Contact BGA Studio,1,https://en.doc.boardgamearena.com/Contact_BGA_Studio
+Counter,1,https://en.doc.boardgamearena.com/Counter
+Create a game in BGA Studio: Complete Walkthrough,1,https://en.doc.boardgamearena.com/Create_a_game_in_BGA_Studio:_Complete_Walkthrough
+Deck,1,https://en.doc.boardgamearena.com/Deck
+Draggable,1,https://en.doc.boardgamearena.com/Draggable
+ExpandableSection,1,https://en.doc.boardgamearena.com/ExpandableSection
+First steps with BGA Studio,1,https://en.doc.boardgamearena.com/First_steps_with_BGA_Studio
+Game art: img directory,1,https://en.doc.boardgamearena.com/Game_art:_img_directory
+Game database model: dbmodel.sql,1,https://en.doc.boardgamearena.com/Game_database_model:_dbmodel.sql
+Game fonts: fonts directory,1,https://en.doc.boardgamearena.com/Game_fonts:_fonts_directory
+Game interface logic: Game.js,1,https://en.doc.boardgamearena.com/Game_interface_logic:_Game.js
+Game interface logic: Game.js,1,https://en.doc.boardgamearena.com/Game_interface_logic:_yourgamename.js
+Game interface stylesheet: yourgamename.css,1,https://en.doc.boardgamearena.com/Game_interface_stylesheet:_yourgamename.css
+Game material description: material.inc.php,1,https://en.doc.boardgamearena.com/Game_material_description:_material.inc.php
+Game meta-information: gameinfos.jsonc,1,https://en.doc.boardgamearena.com/Game_meta-information:_gameinfos.jsonc
+Game metadata manager,1,https://en.doc.boardgamearena.com/Game_metadata_manager
+Game options and preferences: gameoptions.inc.php,2,https://en.doc.boardgamearena.com/Game_options_and_preferences:_gameoptions.inc.php
+Game replay,1,https://en.doc.boardgamearena.com/Game_replay
+Game sounds: sounds directory,1,https://en.doc.boardgamearena.com/Game_sounds:_sounds_directory
+Game statistics: stats.json,1,https://en.doc.boardgamearena.com/Game_statistics:_stats.json
+Game statistics: stats.json,1,https://en.doc.boardgamearena.com/Game_statistics:_stats.inc.php
+Help,1,https://en.doc.boardgamearena.com/Help
+How to join BGA developer team?,1,https://en.doc.boardgamearena.com/How_to_join_BGA_developer_team%3F
+https://en.doc.boardgamearena.com/How_to_join_BGA_developer_team,2,https://en.doc.boardgamearena.com/How_to_join_BGA_developer_team
+https://en.doc.boardgamearena.com/index.php?title=Main_game_logic:_Game.php#Game_statistics,2,https://en.doc.boardgamearena.com/index.php?title=Main_game_logic:_Game.php
+https://en.doc.boardgamearena.com/Zombie_Mode#The_different_Zombie_levels,2,https://en.doc.boardgamearena.com/Zombie_Mode
+I wish I knew this when I started,1,https://en.doc.boardgamearena.com/I_wish_I_knew_this_when_I_started
+Main game logic: Game.php,1,https://en.doc.boardgamearena.com/Main_game_logic:_Game.php
+Main game logic: Game.php,1,https://en.doc.boardgamearena.com/Main_game_logic:_yourgamename.game.php
+"Options and preferences: gameoptions.json, gamepreferences.json",1,"https://en.doc.boardgamearena.com/Options_and_preferences:_gameoptions.json,_gamepreferences.json"
+PlayerCounter and TableCounter,1,https://en.doc.boardgamearena.com/PlayerCounter_and_TableCounter
+Players actions: yourgamename.action.php,1,https://en.doc.boardgamearena.com/Players_actions:_yourgamename.action.php
+Post-release phase,1,https://en.doc.boardgamearena.com/Post-release_phase
+Practical debugging,1,https://en.doc.boardgamearena.com/Practical_debugging
+Pre-release checklist,1,https://en.doc.boardgamearena.com/Pre-release_checklist
+Scrollmap,1,https://en.doc.boardgamearena.com/Scrollmap
+Setting up BGA Development environment using VSCode,1,https://en.doc.boardgamearena.com/Setting_up_BGA_Development_environment_using_VSCode
+State classes: State directory,1,https://en.doc.boardgamearena.com/State_classes:_State_directory
+Stock,1,https://en.doc.boardgamearena.com/Stock
+Studio,0,https://en.doc.boardgamearena.com/Studio
+Studio FAQ,1,https://en.doc.boardgamearena.com/Studio_FAQ
+Studio file reference,1,https://en.doc.boardgamearena.com/Studio_file_reference
+Studio logs,1,https://en.doc.boardgamearena.com/Studio_logs
+Studio logs,1,https://en.doc.boardgamearena.com/Production_issues_reporting
+Testing by developer,1,https://en.doc.boardgamearena.com/Testing_by_developer
+Tools and tips of BGA Studio,1,https://en.doc.boardgamearena.com/Tools_and_tips_of_BGA_Studio
+Translations,1,https://en.doc.boardgamearena.com/Translations
+Troubleshooting,1,https://en.doc.boardgamearena.com/Troubleshooting
+Tutorial hearts,1,https://en.doc.boardgamearena.com/Tutorial_hearts
+Tutorial reversi,1,https://en.doc.boardgamearena.com/Tutorial_reversi
+Tutorials checklist,1,https://en.doc.boardgamearena.com/Tutorials_checklist
+Using AI for BGA game development,1,https://en.doc.boardgamearena.com/Using_AI_for_BGA_game_development
+Using Typescript and Scss,1,https://en.doc.boardgamearena.com/Using_Typescript_and_Scss
+Using Vue,1,https://en.doc.boardgamearena.com/Using_Vue
+Wiki formatting,2,https://en.doc.boardgamearena.com/Wiki_formatting
+Your game mobile version,1,https://en.doc.boardgamearena.com/Your_game_mobile_version
+Your game state machine: states.inc.php,1,https://en.doc.boardgamearena.com/Your_game_state_machine:_states.inc.php
+Zone,1,https://en.doc.boardgamearena.com/Zone

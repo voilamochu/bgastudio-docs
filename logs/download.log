@@ -1,0 +1,288 @@
+2026-07-06 07:06:07,378 - INFO - Starting Phase 2: Download
+2026-07-06 07:06:07,378 - INFO - Loaded 75 URLs from urls.json
+2026-07-06 07:06:07,378 - INFO - Downloading: https://en.doc.boardgamearena.com/Anti-Stock -> C:\Users\mOCHU\CascadeProjects\bgastudio-docs\source-html\Anti-Stock.html
+2026-07-06 07:06:08,790 - INFO - Successfully saved Anti-Stock to C:\Users\mOCHU\CascadeProjects\bgastudio-docs\source-html\Anti-Stock.html
+2026-07-06 07:06:08,791 - INFO - Downloading: https://en.doc.boardgamearena.com/BGA_Code_Sharing -> C:\Users\mOCHU\CascadeProjects\bgastudio-docs\source-html\BGA_Code_Sharing.html
+2026-07-06 07:06:10,057 - INFO - Successfully saved BGA Code Sharing to C:\Users\mOCHU\CascadeProjects\bgastudio-docs\source-html\BGA_Code_Sharing.html
+2026-07-06 07:06:10,058 - INFO - Downloading: https://en.doc.boardgamearena.com/ChromeExtension -> C:\Users\mOCHU\CascadeProjects\bgastudio-docs\source-html\BGA_extension.html
+2026-07-06 07:06:11,301 - INFO - Successfully saved BGA extension to C:\Users\mOCHU\CascadeProjects\bgastudio-docs\source-html\BGA_extension.html
+2026-07-06 07:06:11,301 - INFO - Downloading: https://en.doc.boardgamearena.com/BGA_Game_licenses -> C:\Users\mOCHU\CascadeProjects\bgastudio-docs\source-html\BGA_Game_licenses.html
+2026-07-06 07:06:12,408 - INFO - Successfully saved BGA Game licenses to C:\Users\mOCHU\CascadeProjects\bgastudio-docs\source-html\BGA_Game_licenses.html
+2026-07-06 07:06:12,408 - INFO - Downloading: https://en.doc.boardgamearena.com/BGA_game_Lifecycle -> C:\Users\mOCHU\CascadeProjects\bgastudio-docs\source-html\BGA_game_Lifecycle.html
+2026-07-06 07:06:13,439 - INFO - Successfully saved BGA game Lifecycle to C:\Users\mOCHU\CascadeProjects\bgastudio-docs\source-html\BGA_game_Lifecycle.html
+2026-07-06 07:06:13,439 - INFO - Downloading: https://en.doc.boardgamearena.com/BGA_Studio_Cookbook -> C:\Users\mOCHU\CascadeProjects\bgastudio-docs\source-html\BGA_Studio_Cookbook.html
+2026-07-06 07:06:14,965 - INFO - Successfully saved BGA Studio Cookbook to C:\Users\mOCHU\CascadeProjects\bgastudio-docs\source-html\BGA_Studio_Cookbook.html
+2026-07-06 07:06:14,965 - INFO - Downloading: https://en.doc.boardgamearena.com/BGA_Studio_Guidelines -> C:\Users\mOCHU\CascadeProjects\bgastudio-docs\source-html\BGA_Studio_Guidelines.html
+2026-07-06 07:06:16,164 - INFO - Successfully saved BGA Studio Guidelines to C:\Users\mOCHU\CascadeProjects\bgastudio-docs\source-html\BGA_Studio_Guidelines.html
+2026-07-06 07:06:16,165 - INFO - Downloading: https://en.doc.boardgamearena.com/BGA_Studio_Migration_Guide -> C:\Users\mOCHU\CascadeProjects\bgastudio-docs\source-html\BGA_Studio_Migration_Guide.html
+2026-07-06 07:06:17,471 - INFO - Successfully saved BGA Studio Migration Guide to C:\Users\mOCHU\CascadeProjects\bgastudio-docs\source-html\BGA_Studio_Migration_Guide.html
+2026-07-06 07:06:17,472 - INFO - Downloading: https://en.doc.boardgamearena.com/BGA_Undo_policy -> C:\Users\mOCHU\CascadeProjects\bgastudio-docs\source-html\BGA_Undo_policy.html
+2026-07-06 07:06:18,438 - INFO - Successfully saved BGA Undo policy to C:\Users\mOCHU\CascadeProjects\bgastudio-docs\source-html\BGA_Undo_policy.html
+2026-07-06 07:06:18,438 - INFO - Downloading: https://en.doc.boardgamearena.com/BgaAnimations -> C:\Users\mOCHU\CascadeProjects\bgastudio-docs\source-html\BgaAnimations.html
+2026-07-06 07:06:19,610 - INFO - Successfully saved BgaAnimations to C:\Users\mOCHU\CascadeProjects\bgastudio-docs\source-html\BgaAnimations.html
+2026-07-06 07:06:19,611 - INFO - Downloading: https://en.doc.boardgamearena.com/BgaAutofit -> C:\Users\mOCHU\CascadeProjects\bgastudio-docs\source-html\BgaAutofit.html
+2026-07-06 07:06:20,655 - INFO - Successfully saved BgaAutofit to C:\Users\mOCHU\CascadeProjects\bgastudio-docs\source-html\BgaAutofit.html
+2026-07-06 07:06:20,655 - INFO - Downloading: https://en.doc.boardgamearena.com/BgaCards -> C:\Users\mOCHU\CascadeProjects\bgastudio-docs\source-html\BgaCards.html
+2026-07-06 07:06:21,668 - INFO - Successfully saved BgaCards to C:\Users\mOCHU\CascadeProjects\bgastudio-docs\source-html\BgaCards.html
+2026-07-06 07:06:21,668 - INFO - Downloading: https://en.doc.boardgamearena.com/BgaDice -> C:\Users\mOCHU\CascadeProjects\bgastudio-docs\source-html\BgaDice.html
+2026-07-06 07:06:22,718 - INFO - Successfully saved BgaDice to C:\Users\mOCHU\CascadeProjects\bgastudio-docs\source-html\BgaDice.html
+2026-07-06 07:06:22,719 - INFO - Downloading: https://en.doc.boardgamearena.com/BgaScoreSheet -> C:\Users\mOCHU\CascadeProjects\bgastudio-docs\source-html\BgaScoreSheet.html
+2026-07-06 07:06:23,854 - INFO - Successfully saved BgaScoreSheet to C:\Users\mOCHU\CascadeProjects\bgastudio-docs\source-html\BgaScoreSheet.html
+2026-07-06 07:06:23,855 - INFO - Downloading: https://en.doc.boardgamearena.com/Bots_and_Artificial_Intelligence -> C:\Users\mOCHU\CascadeProjects\bgastudio-docs\source-html\Bots_and_Artificial_Intelligence.html
+2026-07-06 07:06:24,889 - INFO - Successfully saved Bots and Artificial Intelligence to C:\Users\mOCHU\CascadeProjects\bgastudio-docs\source-html\Bots_and_Artificial_Intelligence.html
+2026-07-06 07:06:24,889 - INFO - Downloading: https://en.doc.boardgamearena.com/Common_board_game_elements_image_resources -> C:\Users\mOCHU\CascadeProjects\bgastudio-docs\source-html\Common_board_game_elements_image_resources.html
+2026-07-06 07:06:26,011 - INFO - Successfully saved Common board game elements image resources to C:\Users\mOCHU\CascadeProjects\bgastudio-docs\source-html\Common_board_game_elements_image_resources.html
+2026-07-06 07:06:26,011 - INFO - Downloading: https://en.doc.boardgamearena.com/Compatibility -> C:\Users\mOCHU\CascadeProjects\bgastudio-docs\source-html\Compatibility.html
+2026-07-06 07:06:27,110 - INFO - Successfully saved Compatibility to C:\Users\mOCHU\CascadeProjects\bgastudio-docs\source-html\Compatibility.html
+2026-07-06 07:06:27,111 - INFO - Downloading: https://en.doc.boardgamearena.com/Contact_BGA_Studio -> C:\Users\mOCHU\CascadeProjects\bgastudio-docs\source-html\Contact_BGA_Studio.html
+2026-07-06 07:06:28,235 - INFO - Successfully saved Contact BGA Studio to C:\Users\mOCHU\CascadeProjects\bgastudio-docs\source-html\Contact_BGA_Studio.html
+2026-07-06 07:06:28,236 - INFO - Downloading: https://en.doc.boardgamearena.com/Counter -> C:\Users\mOCHU\CascadeProjects\bgastudio-docs\source-html\Counter.html
+2026-07-06 07:06:29,272 - INFO - Successfully saved Counter to C:\Users\mOCHU\CascadeProjects\bgastudio-docs\source-html\Counter.html
+2026-07-06 07:06:29,272 - INFO - Downloading: https://en.doc.boardgamearena.com/Create_a_game_in_BGA_Studio:_Complete_Walkthrough -> C:\Users\mOCHU\CascadeProjects\bgastudio-docs\source-html\Create_a_game_in_BGA_Studio_Complete_Walkthrough.html
+2026-07-06 07:06:30,537 - INFO - Successfully saved Create a game in BGA Studio: Complete Walkthrough to C:\Users\mOCHU\CascadeProjects\bgastudio-docs\source-html\Create_a_game_in_BGA_Studio_Complete_Walkthrough.html
+2026-07-06 07:06:30,537 - INFO - Downloading: https://en.doc.boardgamearena.com/Deck -> C:\Users\mOCHU\CascadeProjects\bgastudio-docs\source-html\Deck.html
+2026-07-06 07:06:31,785 - INFO - Successfully saved Deck to C:\Users\mOCHU\CascadeProjects\bgastudio-docs\source-html\Deck.html
+2026-07-06 07:06:31,785 - INFO - Downloading: https://en.doc.boardgamearena.com/Draggable -> C:\Users\mOCHU\CascadeProjects\bgastudio-docs\source-html\Draggable.html
+2026-07-06 07:06:32,759 - INFO - Successfully saved Draggable to C:\Users\mOCHU\CascadeProjects\bgastudio-docs\source-html\Draggable.html
+2026-07-06 07:06:32,760 - INFO - Downloading: https://en.doc.boardgamearena.com/ExpandableSection -> C:\Users\mOCHU\CascadeProjects\bgastudio-docs\source-html\ExpandableSection.html
+2026-07-06 07:06:33,829 - INFO - Successfully saved ExpandableSection to C:\Users\mOCHU\CascadeProjects\bgastudio-docs\source-html\ExpandableSection.html
+2026-07-06 07:06:33,830 - INFO - Downloading: https://en.doc.boardgamearena.com/First_steps_with_BGA_Studio -> C:\Users\mOCHU\CascadeProjects\bgastudio-docs\source-html\First_steps_with_BGA_Studio.html
+2026-07-06 07:06:34,770 - INFO - Successfully saved First steps with BGA Studio to C:\Users\mOCHU\CascadeProjects\bgastudio-docs\source-html\First_steps_with_BGA_Studio.html
+2026-07-06 07:06:34,770 - INFO - Downloading: https://en.doc.boardgamearena.com/Game_art:_img_directory -> C:\Users\mOCHU\CascadeProjects\bgastudio-docs\source-html\Game_art_img_directory.html
+2026-07-06 07:06:35,976 - INFO - Successfully saved Game art: img directory to C:\Users\mOCHU\CascadeProjects\bgastudio-docs\source-html\Game_art_img_directory.html
+2026-07-06 07:06:35,976 - INFO - Downloading: https://en.doc.boardgamearena.com/Game_database_model:_dbmodel.sql -> C:\Users\mOCHU\CascadeProjects\bgastudio-docs\source-html\Game_database_model_dbmodel.sql.html
+2026-07-06 07:06:37,119 - INFO - Successfully saved Game database model: dbmodel.sql to C:\Users\mOCHU\CascadeProjects\bgastudio-docs\source-html\Game_database_model_dbmodel.sql.html
+2026-07-06 07:06:37,119 - INFO - Downloading: https://en.doc.boardgamearena.com/Game_fonts:_fonts_directory -> C:\Users\mOCHU\CascadeProjects\bgastudio-docs\source-html\Game_fonts_fonts_directory.html
+2026-07-06 07:06:38,250 - INFO - Successfully saved Game fonts: fonts directory to C:\Users\mOCHU\CascadeProjects\bgastudio-docs\source-html\Game_fonts_fonts_directory.html
+2026-07-06 07:06:38,250 - INFO - Downloading: https://en.doc.boardgamearena.com/Game_interface_logic:_Game.js -> C:\Users\mOCHU\CascadeProjects\bgastudio-docs\source-html\Game_interface_logic_Game.js.html
+2026-07-06 07:06:39,882 - INFO - Successfully saved Game interface logic: Game.js to C:\Users\mOCHU\CascadeProjects\bgastudio-docs\source-html\Game_interface_logic_Game.js.html
+2026-07-06 07:06:39,883 - INFO - Skipped download of 'Game interface logic: Game.js'; already exists at C:\Users\mOCHU\CascadeProjects\bgastudio-docs\source-html\Game_interface_logic_Game.js.html
+2026-07-06 07:06:39,883 - INFO - Downloading: https://en.doc.boardgamearena.com/Game_interface_stylesheet:_yourgamename.css -> C:\Users\mOCHU\CascadeProjects\bgastudio-docs\source-html\Game_interface_stylesheet_yourgamename.css.html
+2026-07-06 07:06:40,988 - INFO - Successfully saved Game interface stylesheet: yourgamename.css to C:\Users\mOCHU\CascadeProjects\bgastudio-docs\source-html\Game_interface_stylesheet_yourgamename.css.html
+2026-07-06 07:06:40,989 - INFO - Downloading: https://en.doc.boardgamearena.com/Game_material_description:_material.inc.php -> C:\Users\mOCHU\CascadeProjects\bgastudio-docs\source-html\Game_material_description_material.inc.php.html
+2026-07-06 07:06:42,137 - INFO - Successfully saved Game material description: material.inc.php to C:\Users\mOCHU\CascadeProjects\bgastudio-docs\source-html\Game_material_description_material.inc.php.html
+2026-07-06 07:06:42,137 - INFO - Downloading: https://en.doc.boardgamearena.com/Game_meta-information:_gameinfos.jsonc -> C:\Users\mOCHU\CascadeProjects\bgastudio-docs\source-html\Game_meta-information_gameinfos.jsonc.html
+2026-07-06 07:06:43,363 - INFO - Successfully saved Game meta-information: gameinfos.jsonc to C:\Users\mOCHU\CascadeProjects\bgastudio-docs\source-html\Game_meta-information_gameinfos.jsonc.html
+2026-07-06 07:06:43,363 - INFO - Downloading: https://en.doc.boardgamearena.com/Game_metadata_manager -> C:\Users\mOCHU\CascadeProjects\bgastudio-docs\source-html\Game_metadata_manager.html
+2026-07-06 07:06:44,515 - INFO - Successfully saved Game metadata manager to C:\Users\mOCHU\CascadeProjects\bgastudio-docs\source-html\Game_metadata_manager.html
+2026-07-06 07:06:44,515 - INFO - Downloading: https://en.doc.boardgamearena.com/Game_options_and_preferences:_gameoptions.inc.php -> C:\Users\mOCHU\CascadeProjects\bgastudio-docs\source-html\Game_options_and_preferences_gameoptions.inc.php.html
+2026-07-06 07:06:44,550 - INFO - Starting Phase 2: Download
+2026-07-06 07:06:44,551 - INFO - Loaded 75 URLs from urls.json
+2026-07-06 07:06:44,551 - INFO - Skipped download of 'Anti-Stock'; already exists at C:\Users\mOCHU\CascadeProjects\bgastudio-docs\source-html\Anti-Stock.html
+2026-07-06 07:06:44,551 - INFO - Skipped download of 'BGA Code Sharing'; already exists at C:\Users\mOCHU\CascadeProjects\bgastudio-docs\source-html\BGA_Code_Sharing.html
+2026-07-06 07:06:44,552 - INFO - Skipped download of 'BGA extension'; already exists at C:\Users\mOCHU\CascadeProjects\bgastudio-docs\source-html\BGA_extension.html
+2026-07-06 07:06:44,552 - INFO - Skipped download of 'BGA Game licenses'; already exists at C:\Users\mOCHU\CascadeProjects\bgastudio-docs\source-html\BGA_Game_licenses.html
+2026-07-06 07:06:44,552 - INFO - Skipped download of 'BGA game Lifecycle'; already exists at C:\Users\mOCHU\CascadeProjects\bgastudio-docs\source-html\BGA_game_Lifecycle.html
+2026-07-06 07:06:44,552 - INFO - Skipped download of 'BGA Studio Cookbook'; already exists at C:\Users\mOCHU\CascadeProjects\bgastudio-docs\source-html\BGA_Studio_Cookbook.html
+2026-07-06 07:06:44,552 - INFO - Skipped download of 'BGA Studio Guidelines'; already exists at C:\Users\mOCHU\CascadeProjects\bgastudio-docs\source-html\BGA_Studio_Guidelines.html
+2026-07-06 07:06:44,553 - INFO - Skipped download of 'BGA Studio Migration Guide'; already exists at C:\Users\mOCHU\CascadeProjects\bgastudio-docs\source-html\BGA_Studio_Migration_Guide.html
+2026-07-06 07:06:44,553 - INFO - Skipped download of 'BGA Undo policy'; already exists at C:\Users\mOCHU\CascadeProjects\bgastudio-docs\source-html\BGA_Undo_policy.html
+2026-07-06 07:06:44,553 - INFO - Skipped download of 'BgaAnimations'; already exists at C:\Users\mOCHU\CascadeProjects\bgastudio-docs\source-html\BgaAnimations.html
+2026-07-06 07:06:44,553 - INFO - Skipped download of 'BgaAutofit'; already exists at C:\Users\mOCHU\CascadeProjects\bgastudio-docs\source-html\BgaAutofit.html
+2026-07-06 07:06:44,553 - INFO - Skipped download of 'BgaCards'; already exists at C:\Users\mOCHU\CascadeProjects\bgastudio-docs\source-html\BgaCards.html
+2026-07-06 07:06:44,554 - INFO - Skipped download of 'BgaDice'; already exists at C:\Users\mOCHU\CascadeProjects\bgastudio-docs\source-html\BgaDice.html
+2026-07-06 07:06:44,554 - INFO - Skipped download of 'BgaScoreSheet'; already exists at C:\Users\mOCHU\CascadeProjects\bgastudio-docs\source-html\BgaScoreSheet.html
+2026-07-06 07:06:44,554 - INFO - Skipped download of 'Bots and Artificial Intelligence'; already exists at C:\Users\mOCHU\CascadeProjects\bgastudio-docs\source-html\Bots_and_Artificial_Intelligence.html
+2026-07-06 07:06:44,554 - INFO - Skipped download of 'Common board game elements image resources'; already exists at C:\Users\mOCHU\CascadeProjects\bgastudio-docs\source-html\Common_board_game_elements_image_resources.html
+2026-07-06 07:06:44,554 - INFO - Skipped download of 'Compatibility'; already exists at C:\Users\mOCHU\CascadeProjects\bgastudio-docs\source-html\Compatibility.html
+2026-07-06 07:06:44,554 - INFO - Skipped download of 'Contact BGA Studio'; already exists at C:\Users\mOCHU\CascadeProjects\bgastudio-docs\source-html\Contact_BGA_Studio.html
+2026-07-06 07:06:44,555 - INFO - Skipped download of 'Counter'; already exists at C:\Users\mOCHU\CascadeProjects\bgastudio-docs\source-html\Counter.html
+2026-07-06 07:06:44,555 - INFO - Skipped download of 'Create a game in BGA Studio: Complete Walkthrough'; already exists at C:\Users\mOCHU\CascadeProjects\bgastudio-docs\source-html\Create_a_game_in_BGA_Studio_Complete_Walkthrough.html
+2026-07-06 07:06:44,555 - INFO - Skipped download of 'Deck'; already exists at C:\Users\mOCHU\CascadeProjects\bgastudio-docs\source-html\Deck.html
+2026-07-06 07:06:44,555 - INFO - Skipped download of 'Draggable'; already exists at C:\Users\mOCHU\CascadeProjects\bgastudio-docs\source-html\Draggable.html
+2026-07-06 07:06:44,555 - INFO - Skipped download of 'ExpandableSection'; already exists at C:\Users\mOCHU\CascadeProjects\bgastudio-docs\source-html\ExpandableSection.html
+2026-07-06 07:06:44,556 - INFO - Skipped download of 'First steps with BGA Studio'; already exists at C:\Users\mOCHU\CascadeProjects\bgastudio-docs\source-html\First_steps_with_BGA_Studio.html
+2026-07-06 07:06:44,556 - INFO - Skipped download of 'Game art: img directory'; already exists at C:\Users\mOCHU\CascadeProjects\bgastudio-docs\source-html\Game_art_img_directory.html
+2026-07-06 07:06:44,557 - INFO - Skipped download of 'Game database model: dbmodel.sql'; already exists at C:\Users\mOCHU\CascadeProjects\bgastudio-docs\source-html\Game_database_model_dbmodel.sql.html
+2026-07-06 07:06:44,557 - INFO - Skipped download of 'Game fonts: fonts directory'; already exists at C:\Users\mOCHU\CascadeProjects\bgastudio-docs\source-html\Game_fonts_fonts_directory.html
+2026-07-06 07:06:44,557 - INFO - Skipped download of 'Game interface logic: Game.js'; already exists at C:\Users\mOCHU\CascadeProjects\bgastudio-docs\source-html\Game_interface_logic_Game.js.html
+2026-07-06 07:06:44,557 - INFO - Skipped download of 'Game interface logic: Game.js'; already exists at C:\Users\mOCHU\CascadeProjects\bgastudio-docs\source-html\Game_interface_logic_Game.js.html
+2026-07-06 07:06:44,558 - INFO - Skipped download of 'Game interface stylesheet: yourgamename.css'; already exists at C:\Users\mOCHU\CascadeProjects\bgastudio-docs\source-html\Game_interface_stylesheet_yourgamename.css.html
+2026-07-06 07:06:44,558 - INFO - Skipped download of 'Game material description: material.inc.php'; already exists at C:\Users\mOCHU\CascadeProjects\bgastudio-docs\source-html\Game_material_description_material.inc.php.html
+2026-07-06 07:06:44,558 - INFO - Skipped download of 'Game meta-information: gameinfos.jsonc'; already exists at C:\Users\mOCHU\CascadeProjects\bgastudio-docs\source-html\Game_meta-information_gameinfos.jsonc.html
+2026-07-06 07:06:44,558 - INFO - Skipped download of 'Game metadata manager'; already exists at C:\Users\mOCHU\CascadeProjects\bgastudio-docs\source-html\Game_metadata_manager.html
+2026-07-06 07:06:44,558 - INFO - Downloading: https://en.doc.boardgamearena.com/Game_options_and_preferences:_gameoptions.inc.php -> C:\Users\mOCHU\CascadeProjects\bgastudio-docs\source-html\Game_options_and_preferences_gameoptions.inc.php.html
+2026-07-06 07:06:45,743 - INFO - Successfully saved Game options and preferences: gameoptions.inc.php to C:\Users\mOCHU\CascadeProjects\bgastudio-docs\source-html\Game_options_and_preferences_gameoptions.inc.php.html
+2026-07-06 07:06:45,743 - INFO - Downloading: https://en.doc.boardgamearena.com/Game_replay -> C:\Users\mOCHU\CascadeProjects\bgastudio-docs\source-html\Game_replay.html
+2026-07-06 07:06:46,111 - INFO - Successfully saved Game options and preferences: gameoptions.inc.php to C:\Users\mOCHU\CascadeProjects\bgastudio-docs\source-html\Game_options_and_preferences_gameoptions.inc.php.html
+2026-07-06 07:06:46,112 - INFO - Downloading: https://en.doc.boardgamearena.com/Game_replay -> C:\Users\mOCHU\CascadeProjects\bgastudio-docs\source-html\Game_replay.html
+2026-07-06 07:06:46,853 - INFO - Successfully saved Game replay to C:\Users\mOCHU\CascadeProjects\bgastudio-docs\source-html\Game_replay.html
+2026-07-06 07:06:46,853 - INFO - Downloading: https://en.doc.boardgamearena.com/Game_sounds:_sounds_directory -> C:\Users\mOCHU\CascadeProjects\bgastudio-docs\source-html\Game_sounds_sounds_directory.html
+2026-07-06 07:06:47,090 - INFO - Successfully saved Game replay to C:\Users\mOCHU\CascadeProjects\bgastudio-docs\source-html\Game_replay.html
+2026-07-06 07:06:47,090 - INFO - Downloading: https://en.doc.boardgamearena.com/Game_sounds:_sounds_directory -> C:\Users\mOCHU\CascadeProjects\bgastudio-docs\source-html\Game_sounds_sounds_directory.html
+2026-07-06 07:06:47,762 - INFO - Successfully saved Game sounds: sounds directory to C:\Users\mOCHU\CascadeProjects\bgastudio-docs\source-html\Game_sounds_sounds_directory.html
+2026-07-06 07:06:47,762 - INFO - Downloading: https://en.doc.boardgamearena.com/Game_statistics:_stats.json -> C:\Users\mOCHU\CascadeProjects\bgastudio-docs\source-html\Game_statistics_stats.json.html
+2026-07-06 07:06:48,209 - INFO - Successfully saved Game sounds: sounds directory to C:\Users\mOCHU\CascadeProjects\bgastudio-docs\source-html\Game_sounds_sounds_directory.html
+2026-07-06 07:06:48,209 - INFO - Downloading: https://en.doc.boardgamearena.com/Game_statistics:_stats.json -> C:\Users\mOCHU\CascadeProjects\bgastudio-docs\source-html\Game_statistics_stats.json.html
+2026-07-06 07:06:48,969 - INFO - Successfully saved Game statistics: stats.json to C:\Users\mOCHU\CascadeProjects\bgastudio-docs\source-html\Game_statistics_stats.json.html
+2026-07-06 07:06:48,969 - INFO - Skipped download of 'Game statistics: stats.json'; already exists at C:\Users\mOCHU\CascadeProjects\bgastudio-docs\source-html\Game_statistics_stats.json.html
+2026-07-06 07:06:48,969 - INFO - Downloading: https://en.doc.boardgamearena.com/Help -> C:\Users\mOCHU\CascadeProjects\bgastudio-docs\source-html\Help.html
+2026-07-06 07:06:49,246 - INFO - Successfully saved Game statistics: stats.json to C:\Users\mOCHU\CascadeProjects\bgastudio-docs\source-html\Game_statistics_stats.json.html
+2026-07-06 07:06:49,246 - INFO - Skipped download of 'Game statistics: stats.json'; already exists at C:\Users\mOCHU\CascadeProjects\bgastudio-docs\source-html\Game_statistics_stats.json.html
+2026-07-06 07:06:49,246 - INFO - Downloading: https://en.doc.boardgamearena.com/Help -> C:\Users\mOCHU\CascadeProjects\bgastudio-docs\source-html\Help.html
+2026-07-06 07:06:50,569 - INFO - Successfully saved Help to C:\Users\mOCHU\CascadeProjects\bgastudio-docs\source-html\Help.html
+2026-07-06 07:06:50,569 - INFO - Downloading: https://en.doc.boardgamearena.com/How_to_join_BGA_developer_team%3F -> C:\Users\mOCHU\CascadeProjects\bgastudio-docs\source-html\How_to_join_BGA_developer_team.html
+2026-07-06 07:06:50,862 - INFO - Successfully saved Help to C:\Users\mOCHU\CascadeProjects\bgastudio-docs\source-html\Help.html
+2026-07-06 07:06:50,862 - INFO - Downloading: https://en.doc.boardgamearena.com/How_to_join_BGA_developer_team%3F -> C:\Users\mOCHU\CascadeProjects\bgastudio-docs\source-html\How_to_join_BGA_developer_team.html
+2026-07-06 07:06:51,650 - INFO - Successfully saved How to join BGA developer team? to C:\Users\mOCHU\CascadeProjects\bgastudio-docs\source-html\How_to_join_BGA_developer_team.html
+2026-07-06 07:06:51,650 - INFO - Downloading: https://en.doc.boardgamearena.com/How_to_join_BGA_developer_team -> C:\Users\mOCHU\CascadeProjects\bgastudio-docs\source-html\https_en.doc.boardgamearena.com_How_to_join_BGA_developer_team.html
+2026-07-06 07:06:51,937 - INFO - Successfully saved How to join BGA developer team? to C:\Users\mOCHU\CascadeProjects\bgastudio-docs\source-html\How_to_join_BGA_developer_team.html
+2026-07-06 07:06:51,938 - INFO - Downloading: https://en.doc.boardgamearena.com/How_to_join_BGA_developer_team -> C:\Users\mOCHU\CascadeProjects\bgastudio-docs\source-html\https_en.doc.boardgamearena.com_How_to_join_BGA_developer_team.html
+2026-07-06 07:06:52,699 - WARNING - Attempt 1/4 failed for https://en.doc.boardgamearena.com/How_to_join_BGA_developer_team with status 404
+2026-07-06 07:06:52,944 - WARNING - Attempt 1/4 failed for https://en.doc.boardgamearena.com/How_to_join_BGA_developer_team with status 404
+2026-07-06 07:06:54,723 - WARNING - Attempt 2/4 failed for https://en.doc.boardgamearena.com/How_to_join_BGA_developer_team with status 404
+2026-07-06 07:06:54,926 - WARNING - Attempt 2/4 failed for https://en.doc.boardgamearena.com/How_to_join_BGA_developer_team with status 404
+2026-07-06 07:06:56,603 - WARNING - Attempt 3/4 failed for https://en.doc.boardgamearena.com/How_to_join_BGA_developer_team with status 404
+2026-07-06 07:06:56,831 - WARNING - Attempt 3/4 failed for https://en.doc.boardgamearena.com/How_to_join_BGA_developer_team with status 404
+2026-07-06 07:06:58,483 - WARNING - Attempt 4/4 failed for https://en.doc.boardgamearena.com/How_to_join_BGA_developer_team with status 404
+2026-07-06 07:06:58,483 - ERROR - Failed to download https://en.doc.boardgamearena.com/How_to_join_BGA_developer_team after 4 attempts
+2026-07-06 07:06:58,483 - ERROR - Failed to download https://en.doc.boardgamearena.com/How_to_join_BGA_developer_team from https://en.doc.boardgamearena.com/How_to_join_BGA_developer_team
+2026-07-06 07:06:58,483 - INFO - Downloading: https://en.doc.boardgamearena.com/index.php?title=Main_game_logic:_Game.php -> C:\Users\mOCHU\CascadeProjects\bgastudio-docs\source-html\https_en.doc.boardgamearena.com_index.php_title=Main_game_logic_Game.php#Game_statistics.html
+2026-07-06 07:06:58,702 - WARNING - Attempt 4/4 failed for https://en.doc.boardgamearena.com/How_to_join_BGA_developer_team with status 404
+2026-07-06 07:06:58,702 - ERROR - Failed to download https://en.doc.boardgamearena.com/How_to_join_BGA_developer_team after 4 attempts
+2026-07-06 07:06:58,702 - ERROR - Failed to download https://en.doc.boardgamearena.com/How_to_join_BGA_developer_team from https://en.doc.boardgamearena.com/How_to_join_BGA_developer_team
+2026-07-06 07:06:58,703 - INFO - Downloading: https://en.doc.boardgamearena.com/index.php?title=Main_game_logic:_Game.php -> C:\Users\mOCHU\CascadeProjects\bgastudio-docs\source-html\https_en.doc.boardgamearena.com_index.php_title=Main_game_logic_Game.php#Game_statistics.html
+2026-07-06 07:07:00,194 - INFO - Successfully saved https://en.doc.boardgamearena.com/index.php?title=Main_game_logic:_Game.php#Game_statistics to C:\Users\mOCHU\CascadeProjects\bgastudio-docs\source-html\https_en.doc.boardgamearena.com_index.php_title=Main_game_logic_Game.php#Game_statistics.html
+2026-07-06 07:07:00,195 - INFO - Downloading: https://en.doc.boardgamearena.com/Zombie_Mode -> C:\Users\mOCHU\CascadeProjects\bgastudio-docs\source-html\https_en.doc.boardgamearena.com_Zombie_Mode#The_different_Zombie_levels.html
+2026-07-06 07:07:00,435 - INFO - Successfully saved https://en.doc.boardgamearena.com/index.php?title=Main_game_logic:_Game.php#Game_statistics to C:\Users\mOCHU\CascadeProjects\bgastudio-docs\source-html\https_en.doc.boardgamearena.com_index.php_title=Main_game_logic_Game.php#Game_statistics.html
+2026-07-06 07:07:00,435 - INFO - Downloading: https://en.doc.boardgamearena.com/Zombie_Mode -> C:\Users\mOCHU\CascadeProjects\bgastudio-docs\source-html\https_en.doc.boardgamearena.com_Zombie_Mode#The_different_Zombie_levels.html
+2026-07-06 07:07:01,333 - INFO - Successfully saved https://en.doc.boardgamearena.com/Zombie_Mode#The_different_Zombie_levels to C:\Users\mOCHU\CascadeProjects\bgastudio-docs\source-html\https_en.doc.boardgamearena.com_Zombie_Mode#The_different_Zombie_levels.html
+2026-07-06 07:07:01,333 - INFO - Downloading: https://en.doc.boardgamearena.com/I_wish_I_knew_this_when_I_started -> C:\Users\mOCHU\CascadeProjects\bgastudio-docs\source-html\I_wish_I_knew_this_when_I_started.html
+2026-07-06 07:07:01,437 - INFO - Successfully saved https://en.doc.boardgamearena.com/Zombie_Mode#The_different_Zombie_levels to C:\Users\mOCHU\CascadeProjects\bgastudio-docs\source-html\https_en.doc.boardgamearena.com_Zombie_Mode#The_different_Zombie_levels.html
+2026-07-06 07:07:01,437 - INFO - Downloading: https://en.doc.boardgamearena.com/I_wish_I_knew_this_when_I_started -> C:\Users\mOCHU\CascadeProjects\bgastudio-docs\source-html\I_wish_I_knew_this_when_I_started.html
+2026-07-06 07:07:02,322 - INFO - Successfully saved I wish I knew this when I started to C:\Users\mOCHU\CascadeProjects\bgastudio-docs\source-html\I_wish_I_knew_this_when_I_started.html
+2026-07-06 07:07:02,322 - INFO - Downloading: https://en.doc.boardgamearena.com/Main_game_logic:_Game.php -> C:\Users\mOCHU\CascadeProjects\bgastudio-docs\source-html\Main_game_logic_Game.php.html
+2026-07-06 07:07:02,343 - INFO - Successfully saved I wish I knew this when I started to C:\Users\mOCHU\CascadeProjects\bgastudio-docs\source-html\I_wish_I_knew_this_when_I_started.html
+2026-07-06 07:07:02,343 - INFO - Downloading: https://en.doc.boardgamearena.com/Main_game_logic:_Game.php -> C:\Users\mOCHU\CascadeProjects\bgastudio-docs\source-html\Main_game_logic_Game.php.html
+2026-07-06 07:07:03,782 - INFO - Successfully saved Main game logic: Game.php to C:\Users\mOCHU\CascadeProjects\bgastudio-docs\source-html\Main_game_logic_Game.php.html
+2026-07-06 07:07:03,782 - INFO - Skipped download of 'Main game logic: Game.php'; already exists at C:\Users\mOCHU\CascadeProjects\bgastudio-docs\source-html\Main_game_logic_Game.php.html
+2026-07-06 07:07:03,783 - INFO - Downloading: https://en.doc.boardgamearena.com/Options_and_preferences:_gameoptions.json,_gamepreferences.json -> C:\Users\mOCHU\CascadeProjects\bgastudio-docs\source-html\Options_and_preferences_gameoptions.json,_gamepreferences.json.html
+2026-07-06 07:07:03,946 - INFO - Successfully saved Main game logic: Game.php to C:\Users\mOCHU\CascadeProjects\bgastudio-docs\source-html\Main_game_logic_Game.php.html
+2026-07-06 07:07:03,946 - INFO - Skipped download of 'Main game logic: Game.php'; already exists at C:\Users\mOCHU\CascadeProjects\bgastudio-docs\source-html\Main_game_logic_Game.php.html
+2026-07-06 07:07:03,947 - INFO - Downloading: https://en.doc.boardgamearena.com/Options_and_preferences:_gameoptions.json,_gamepreferences.json -> C:\Users\mOCHU\CascadeProjects\bgastudio-docs\source-html\Options_and_preferences_gameoptions.json,_gamepreferences.json.html
+2026-07-06 07:07:05,044 - INFO - Successfully saved Options and preferences: gameoptions.json, gamepreferences.json to C:\Users\mOCHU\CascadeProjects\bgastudio-docs\source-html\Options_and_preferences_gameoptions.json,_gamepreferences.json.html
+2026-07-06 07:07:05,044 - INFO - Downloading: https://en.doc.boardgamearena.com/PlayerCounter_and_TableCounter -> C:\Users\mOCHU\CascadeProjects\bgastudio-docs\source-html\PlayerCounter_and_TableCounter.html
+2026-07-06 07:07:05,301 - INFO - Successfully saved Options and preferences: gameoptions.json, gamepreferences.json to C:\Users\mOCHU\CascadeProjects\bgastudio-docs\source-html\Options_and_preferences_gameoptions.json,_gamepreferences.json.html
+2026-07-06 07:07:05,301 - INFO - Downloading: https://en.doc.boardgamearena.com/PlayerCounter_and_TableCounter -> C:\Users\mOCHU\CascadeProjects\bgastudio-docs\source-html\PlayerCounter_and_TableCounter.html
+2026-07-06 07:07:06,020 - INFO - Successfully saved PlayerCounter and TableCounter to C:\Users\mOCHU\CascadeProjects\bgastudio-docs\source-html\PlayerCounter_and_TableCounter.html
+2026-07-06 07:07:06,020 - INFO - Downloading: https://en.doc.boardgamearena.com/Players_actions:_yourgamename.action.php -> C:\Users\mOCHU\CascadeProjects\bgastudio-docs\source-html\Players_actions_yourgamename.action.php.html
+2026-07-06 07:07:06,457 - INFO - Successfully saved PlayerCounter and TableCounter to C:\Users\mOCHU\CascadeProjects\bgastudio-docs\source-html\PlayerCounter_and_TableCounter.html
+2026-07-06 07:07:06,457 - INFO - Downloading: https://en.doc.boardgamearena.com/Players_actions:_yourgamename.action.php -> C:\Users\mOCHU\CascadeProjects\bgastudio-docs\source-html\Players_actions_yourgamename.action.php.html
+2026-07-06 07:07:07,181 - INFO - Successfully saved Players actions: yourgamename.action.php to C:\Users\mOCHU\CascadeProjects\bgastudio-docs\source-html\Players_actions_yourgamename.action.php.html
+2026-07-06 07:07:07,181 - INFO - Downloading: https://en.doc.boardgamearena.com/Post-release_phase -> C:\Users\mOCHU\CascadeProjects\bgastudio-docs\source-html\Post-release_phase.html
+2026-07-06 07:07:07,555 - INFO - Successfully saved Players actions: yourgamename.action.php to C:\Users\mOCHU\CascadeProjects\bgastudio-docs\source-html\Players_actions_yourgamename.action.php.html
+2026-07-06 07:07:07,555 - INFO - Downloading: https://en.doc.boardgamearena.com/Post-release_phase -> C:\Users\mOCHU\CascadeProjects\bgastudio-docs\source-html\Post-release_phase.html
+2026-07-06 07:07:08,246 - INFO - Successfully saved Post-release phase to C:\Users\mOCHU\CascadeProjects\bgastudio-docs\source-html\Post-release_phase.html
+2026-07-06 07:07:08,246 - INFO - Downloading: https://en.doc.boardgamearena.com/Practical_debugging -> C:\Users\mOCHU\CascadeProjects\bgastudio-docs\source-html\Practical_debugging.html
+2026-07-06 07:07:08,605 - INFO - Successfully saved Post-release phase to C:\Users\mOCHU\CascadeProjects\bgastudio-docs\source-html\Post-release_phase.html
+2026-07-06 07:07:08,605 - INFO - Downloading: https://en.doc.boardgamearena.com/Practical_debugging -> C:\Users\mOCHU\CascadeProjects\bgastudio-docs\source-html\Practical_debugging.html
+2026-07-06 07:07:09,497 - INFO - Successfully saved Practical debugging to C:\Users\mOCHU\CascadeProjects\bgastudio-docs\source-html\Practical_debugging.html
+2026-07-06 07:07:09,497 - INFO - Downloading: https://en.doc.boardgamearena.com/Pre-release_checklist -> C:\Users\mOCHU\CascadeProjects\bgastudio-docs\source-html\Pre-release_checklist.html
+2026-07-06 07:07:09,884 - INFO - Successfully saved Practical debugging to C:\Users\mOCHU\CascadeProjects\bgastudio-docs\source-html\Practical_debugging.html
+2026-07-06 07:07:09,885 - INFO - Downloading: https://en.doc.boardgamearena.com/Pre-release_checklist -> C:\Users\mOCHU\CascadeProjects\bgastudio-docs\source-html\Pre-release_checklist.html
+2026-07-06 07:07:10,690 - INFO - Successfully saved Pre-release checklist to C:\Users\mOCHU\CascadeProjects\bgastudio-docs\source-html\Pre-release_checklist.html
+2026-07-06 07:07:10,690 - INFO - Downloading: https://en.doc.boardgamearena.com/Scrollmap -> C:\Users\mOCHU\CascadeProjects\bgastudio-docs\source-html\Scrollmap.html
+2026-07-06 07:07:10,973 - INFO - Successfully saved Pre-release checklist to C:\Users\mOCHU\CascadeProjects\bgastudio-docs\source-html\Pre-release_checklist.html
+2026-07-06 07:07:10,974 - INFO - Downloading: https://en.doc.boardgamearena.com/Scrollmap -> C:\Users\mOCHU\CascadeProjects\bgastudio-docs\source-html\Scrollmap.html
+2026-07-06 07:07:11,792 - INFO - Successfully saved Scrollmap to C:\Users\mOCHU\CascadeProjects\bgastudio-docs\source-html\Scrollmap.html
+2026-07-06 07:07:11,792 - INFO - Downloading: https://en.doc.boardgamearena.com/Setting_up_BGA_Development_environment_using_VSCode -> C:\Users\mOCHU\CascadeProjects\bgastudio-docs\source-html\Setting_up_BGA_Development_environment_using_VSCode.html
+2026-07-06 07:07:12,150 - INFO - Successfully saved Scrollmap to C:\Users\mOCHU\CascadeProjects\bgastudio-docs\source-html\Scrollmap.html
+2026-07-06 07:07:12,150 - INFO - Downloading: https://en.doc.boardgamearena.com/Setting_up_BGA_Development_environment_using_VSCode -> C:\Users\mOCHU\CascadeProjects\bgastudio-docs\source-html\Setting_up_BGA_Development_environment_using_VSCode.html
+2026-07-06 07:07:12,824 - INFO - Successfully saved Setting up BGA Development environment using VSCode to C:\Users\mOCHU\CascadeProjects\bgastudio-docs\source-html\Setting_up_BGA_Development_environment_using_VSCode.html
+2026-07-06 07:07:12,825 - INFO - Downloading: https://en.doc.boardgamearena.com/State_classes:_State_directory -> C:\Users\mOCHU\CascadeProjects\bgastudio-docs\source-html\State_classes_State_directory.html
+2026-07-06 07:07:13,317 - INFO - Successfully saved Setting up BGA Development environment using VSCode to C:\Users\mOCHU\CascadeProjects\bgastudio-docs\source-html\Setting_up_BGA_Development_environment_using_VSCode.html
+2026-07-06 07:07:13,318 - INFO - Downloading: https://en.doc.boardgamearena.com/State_classes:_State_directory -> C:\Users\mOCHU\CascadeProjects\bgastudio-docs\source-html\State_classes_State_directory.html
+2026-07-06 07:07:14,166 - INFO - Successfully saved State classes: State directory to C:\Users\mOCHU\CascadeProjects\bgastudio-docs\source-html\State_classes_State_directory.html
+2026-07-06 07:07:14,166 - INFO - Downloading: https://en.doc.boardgamearena.com/Stock -> C:\Users\mOCHU\CascadeProjects\bgastudio-docs\source-html\Stock.html
+2026-07-06 07:07:14,565 - INFO - Successfully saved State classes: State directory to C:\Users\mOCHU\CascadeProjects\bgastudio-docs\source-html\State_classes_State_directory.html
+2026-07-06 07:07:14,565 - INFO - Downloading: https://en.doc.boardgamearena.com/Stock -> C:\Users\mOCHU\CascadeProjects\bgastudio-docs\source-html\Stock.html
+2026-07-06 07:07:15,431 - INFO - Successfully saved Stock to C:\Users\mOCHU\CascadeProjects\bgastudio-docs\source-html\Stock.html
+2026-07-06 07:07:15,431 - INFO - Downloading: https://en.doc.boardgamearena.com/Studio -> C:\Users\mOCHU\CascadeProjects\bgastudio-docs\source-html\Studio.html
+2026-07-06 07:07:15,806 - INFO - Successfully saved Stock to C:\Users\mOCHU\CascadeProjects\bgastudio-docs\source-html\Stock.html
+2026-07-06 07:07:15,806 - INFO - Downloading: https://en.doc.boardgamearena.com/Studio -> C:\Users\mOCHU\CascadeProjects\bgastudio-docs\source-html\Studio.html
+2026-07-06 07:07:16,497 - INFO - Successfully saved Studio to C:\Users\mOCHU\CascadeProjects\bgastudio-docs\source-html\Studio.html
+2026-07-06 07:07:16,497 - INFO - Downloading: https://en.doc.boardgamearena.com/Studio_FAQ -> C:\Users\mOCHU\CascadeProjects\bgastudio-docs\source-html\Studio_FAQ.html
+2026-07-06 07:07:16,877 - INFO - Successfully saved Studio to C:\Users\mOCHU\CascadeProjects\bgastudio-docs\source-html\Studio.html
+2026-07-06 07:07:16,877 - INFO - Downloading: https://en.doc.boardgamearena.com/Studio_FAQ -> C:\Users\mOCHU\CascadeProjects\bgastudio-docs\source-html\Studio_FAQ.html
+2026-07-06 07:07:17,618 - INFO - Successfully saved Studio FAQ to C:\Users\mOCHU\CascadeProjects\bgastudio-docs\source-html\Studio_FAQ.html
+2026-07-06 07:07:17,618 - INFO - Downloading: https://en.doc.boardgamearena.com/Studio_file_reference -> C:\Users\mOCHU\CascadeProjects\bgastudio-docs\source-html\Studio_file_reference.html
+2026-07-06 07:07:17,889 - INFO - Successfully saved Studio FAQ to C:\Users\mOCHU\CascadeProjects\bgastudio-docs\source-html\Studio_FAQ.html
+2026-07-06 07:07:17,890 - INFO - Downloading: https://en.doc.boardgamearena.com/Studio_file_reference -> C:\Users\mOCHU\CascadeProjects\bgastudio-docs\source-html\Studio_file_reference.html
+2026-07-06 07:07:18,577 - INFO - Successfully saved Studio file reference to C:\Users\mOCHU\CascadeProjects\bgastudio-docs\source-html\Studio_file_reference.html
+2026-07-06 07:07:18,577 - INFO - Downloading: https://en.doc.boardgamearena.com/Studio_logs -> C:\Users\mOCHU\CascadeProjects\bgastudio-docs\source-html\Studio_logs.html
+2026-07-06 07:07:18,987 - INFO - Successfully saved Studio file reference to C:\Users\mOCHU\CascadeProjects\bgastudio-docs\source-html\Studio_file_reference.html
+2026-07-06 07:07:18,987 - INFO - Downloading: https://en.doc.boardgamearena.com/Studio_logs -> C:\Users\mOCHU\CascadeProjects\bgastudio-docs\source-html\Studio_logs.html
+2026-07-06 07:07:19,873 - INFO - Successfully saved Studio logs to C:\Users\mOCHU\CascadeProjects\bgastudio-docs\source-html\Studio_logs.html
+2026-07-06 07:07:19,874 - INFO - Skipped download of 'Studio logs'; already exists at C:\Users\mOCHU\CascadeProjects\bgastudio-docs\source-html\Studio_logs.html
+2026-07-06 07:07:19,874 - INFO - Downloading: https://en.doc.boardgamearena.com/Testing_by_developer -> C:\Users\mOCHU\CascadeProjects\bgastudio-docs\source-html\Testing_by_developer.html
+2026-07-06 07:07:20,103 - INFO - Successfully saved Studio logs to C:\Users\mOCHU\CascadeProjects\bgastudio-docs\source-html\Studio_logs.html
+2026-07-06 07:07:20,103 - INFO - Skipped download of 'Studio logs'; already exists at C:\Users\mOCHU\CascadeProjects\bgastudio-docs\source-html\Studio_logs.html
+2026-07-06 07:07:20,103 - INFO - Downloading: https://en.doc.boardgamearena.com/Testing_by_developer -> C:\Users\mOCHU\CascadeProjects\bgastudio-docs\source-html\Testing_by_developer.html
+2026-07-06 07:07:20,911 - INFO - Successfully saved Testing by developer to C:\Users\mOCHU\CascadeProjects\bgastudio-docs\source-html\Testing_by_developer.html
+2026-07-06 07:07:20,911 - INFO - Downloading: https://en.doc.boardgamearena.com/Tools_and_tips_of_BGA_Studio -> C:\Users\mOCHU\CascadeProjects\bgastudio-docs\source-html\Tools_and_tips_of_BGA_Studio.html
+2026-07-06 07:07:21,178 - INFO - Successfully saved Testing by developer to C:\Users\mOCHU\CascadeProjects\bgastudio-docs\source-html\Testing_by_developer.html
+2026-07-06 07:07:21,179 - INFO - Downloading: https://en.doc.boardgamearena.com/Tools_and_tips_of_BGA_Studio -> C:\Users\mOCHU\CascadeProjects\bgastudio-docs\source-html\Tools_and_tips_of_BGA_Studio.html
+2026-07-06 07:07:22,179 - INFO - Successfully saved Tools and tips of BGA Studio to C:\Users\mOCHU\CascadeProjects\bgastudio-docs\source-html\Tools_and_tips_of_BGA_Studio.html
+2026-07-06 07:07:22,179 - INFO - Downloading: https://en.doc.boardgamearena.com/Translations -> C:\Users\mOCHU\CascadeProjects\bgastudio-docs\source-html\Translations.html
+2026-07-06 07:07:22,331 - INFO - Successfully saved Tools and tips of BGA Studio to C:\Users\mOCHU\CascadeProjects\bgastudio-docs\source-html\Tools_and_tips_of_BGA_Studio.html
+2026-07-06 07:07:22,331 - INFO - Downloading: https://en.doc.boardgamearena.com/Translations -> C:\Users\mOCHU\CascadeProjects\bgastudio-docs\source-html\Translations.html
+2026-07-06 07:07:23,441 - INFO - Successfully saved Translations to C:\Users\mOCHU\CascadeProjects\bgastudio-docs\source-html\Translations.html
+2026-07-06 07:07:23,441 - INFO - Downloading: https://en.doc.boardgamearena.com/Troubleshooting -> C:\Users\mOCHU\CascadeProjects\bgastudio-docs\source-html\Troubleshooting.html
+2026-07-06 07:07:23,596 - INFO - Successfully saved Translations to C:\Users\mOCHU\CascadeProjects\bgastudio-docs\source-html\Translations.html
+2026-07-06 07:07:23,596 - INFO - Downloading: https://en.doc.boardgamearena.com/Troubleshooting -> C:\Users\mOCHU\CascadeProjects\bgastudio-docs\source-html\Troubleshooting.html
+2026-07-06 07:07:24,808 - INFO - Successfully saved Troubleshooting to C:\Users\mOCHU\CascadeProjects\bgastudio-docs\source-html\Troubleshooting.html
+2026-07-06 07:07:24,808 - INFO - Downloading: https://en.doc.boardgamearena.com/Tutorial_hearts -> C:\Users\mOCHU\CascadeProjects\bgastudio-docs\source-html\Tutorial_hearts.html
+2026-07-06 07:07:24,929 - INFO - Successfully saved Troubleshooting to C:\Users\mOCHU\CascadeProjects\bgastudio-docs\source-html\Troubleshooting.html
+2026-07-06 07:07:24,930 - INFO - Downloading: https://en.doc.boardgamearena.com/Tutorial_hearts -> C:\Users\mOCHU\CascadeProjects\bgastudio-docs\source-html\Tutorial_hearts.html
+2026-07-06 07:07:26,144 - INFO - Successfully saved Tutorial hearts to C:\Users\mOCHU\CascadeProjects\bgastudio-docs\source-html\Tutorial_hearts.html
+2026-07-06 07:07:26,144 - INFO - Downloading: https://en.doc.boardgamearena.com/Tutorial_reversi -> C:\Users\mOCHU\CascadeProjects\bgastudio-docs\source-html\Tutorial_reversi.html
+2026-07-06 07:07:26,390 - INFO - Successfully saved Tutorial hearts to C:\Users\mOCHU\CascadeProjects\bgastudio-docs\source-html\Tutorial_hearts.html
+2026-07-06 07:07:26,390 - INFO - Downloading: https://en.doc.boardgamearena.com/Tutorial_reversi -> C:\Users\mOCHU\CascadeProjects\bgastudio-docs\source-html\Tutorial_reversi.html
+2026-07-06 07:07:27,319 - INFO - Successfully saved Tutorial reversi to C:\Users\mOCHU\CascadeProjects\bgastudio-docs\source-html\Tutorial_reversi.html
+2026-07-06 07:07:27,320 - INFO - Downloading: https://en.doc.boardgamearena.com/Tutorials_checklist -> C:\Users\mOCHU\CascadeProjects\bgastudio-docs\source-html\Tutorials_checklist.html
+2026-07-06 07:07:27,779 - INFO - Successfully saved Tutorial reversi to C:\Users\mOCHU\CascadeProjects\bgastudio-docs\source-html\Tutorial_reversi.html
+2026-07-06 07:07:27,780 - INFO - Downloading: https://en.doc.boardgamearena.com/Tutorials_checklist -> C:\Users\mOCHU\CascadeProjects\bgastudio-docs\source-html\Tutorials_checklist.html
+2026-07-06 07:07:28,408 - INFO - Successfully saved Tutorials checklist to C:\Users\mOCHU\CascadeProjects\bgastudio-docs\source-html\Tutorials_checklist.html
+2026-07-06 07:07:28,408 - INFO - Downloading: https://en.doc.boardgamearena.com/Using_AI_for_BGA_game_development -> C:\Users\mOCHU\CascadeProjects\bgastudio-docs\source-html\Using_AI_for_BGA_game_development.html
+2026-07-06 07:07:28,858 - INFO - Successfully saved Tutorials checklist to C:\Users\mOCHU\CascadeProjects\bgastudio-docs\source-html\Tutorials_checklist.html
+2026-07-06 07:07:28,858 - INFO - Downloading: https://en.doc.boardgamearena.com/Using_AI_for_BGA_game_development -> C:\Users\mOCHU\CascadeProjects\bgastudio-docs\source-html\Using_AI_for_BGA_game_development.html
+2026-07-06 07:07:29,394 - INFO - Successfully saved Using AI for BGA game development to C:\Users\mOCHU\CascadeProjects\bgastudio-docs\source-html\Using_AI_for_BGA_game_development.html
+2026-07-06 07:07:29,394 - INFO - Downloading: https://en.doc.boardgamearena.com/Using_Typescript_and_Scss -> C:\Users\mOCHU\CascadeProjects\bgastudio-docs\source-html\Using_Typescript_and_Scss.html
+2026-07-06 07:07:29,827 - INFO - Successfully saved Using AI for BGA game development to C:\Users\mOCHU\CascadeProjects\bgastudio-docs\source-html\Using_AI_for_BGA_game_development.html
+2026-07-06 07:07:29,827 - INFO - Downloading: https://en.doc.boardgamearena.com/Using_Typescript_and_Scss -> C:\Users\mOCHU\CascadeProjects\bgastudio-docs\source-html\Using_Typescript_and_Scss.html
+2026-07-06 07:07:30,545 - INFO - Successfully saved Using Typescript and Scss to C:\Users\mOCHU\CascadeProjects\bgastudio-docs\source-html\Using_Typescript_and_Scss.html
+2026-07-06 07:07:30,545 - INFO - Downloading: https://en.doc.boardgamearena.com/Using_Vue -> C:\Users\mOCHU\CascadeProjects\bgastudio-docs\source-html\Using_Vue.html
+2026-07-06 07:07:30,976 - INFO - Successfully saved Using Typescript and Scss to C:\Users\mOCHU\CascadeProjects\bgastudio-docs\source-html\Using_Typescript_and_Scss.html
+2026-07-06 07:07:30,976 - INFO - Downloading: https://en.doc.boardgamearena.com/Using_Vue -> C:\Users\mOCHU\CascadeProjects\bgastudio-docs\source-html\Using_Vue.html
+2026-07-06 07:07:31,555 - INFO - Successfully saved Using Vue to C:\Users\mOCHU\CascadeProjects\bgastudio-docs\source-html\Using_Vue.html
+2026-07-06 07:07:31,555 - INFO - Downloading: https://en.doc.boardgamearena.com/Wiki_formatting -> C:\Users\mOCHU\CascadeProjects\bgastudio-docs\source-html\Wiki_formatting.html
+2026-07-06 07:07:31,985 - INFO - Successfully saved Using Vue to C:\Users\mOCHU\CascadeProjects\bgastudio-docs\source-html\Using_Vue.html
+2026-07-06 07:07:31,985 - INFO - Downloading: https://en.doc.boardgamearena.com/Wiki_formatting -> C:\Users\mOCHU\CascadeProjects\bgastudio-docs\source-html\Wiki_formatting.html
+2026-07-06 07:07:33,812 - INFO - Successfully saved Wiki formatting to C:\Users\mOCHU\CascadeProjects\bgastudio-docs\source-html\Wiki_formatting.html
+2026-07-06 07:07:33,812 - INFO - Downloading: https://en.doc.boardgamearena.com/Your_game_mobile_version -> C:\Users\mOCHU\CascadeProjects\bgastudio-docs\source-html\Your_game_mobile_version.html
+2026-07-06 07:07:33,879 - INFO - Successfully saved Wiki formatting to C:\Users\mOCHU\CascadeProjects\bgastudio-docs\source-html\Wiki_formatting.html
+2026-07-06 07:07:33,879 - INFO - Downloading: https://en.doc.boardgamearena.com/Your_game_mobile_version -> C:\Users\mOCHU\CascadeProjects\bgastudio-docs\source-html\Your_game_mobile_version.html
+2026-07-06 07:07:34,740 - INFO - Successfully saved Your game mobile version to C:\Users\mOCHU\CascadeProjects\bgastudio-docs\source-html\Your_game_mobile_version.html
+2026-07-06 07:07:34,740 - INFO - Downloading: https://en.doc.boardgamearena.com/Your_game_state_machine:_states.inc.php -> C:\Users\mOCHU\CascadeProjects\bgastudio-docs\source-html\Your_game_state_machine_states.inc.php.html
+2026-07-06 07:07:35,135 - INFO - Successfully saved Your game mobile version to C:\Users\mOCHU\CascadeProjects\bgastudio-docs\source-html\Your_game_mobile_version.html
+2026-07-06 07:07:35,136 - INFO - Downloading: https://en.doc.boardgamearena.com/Your_game_state_machine:_states.inc.php -> C:\Users\mOCHU\CascadeProjects\bgastudio-docs\source-html\Your_game_state_machine_states.inc.php.html
+2026-07-06 07:07:36,230 - INFO - Successfully saved Your game state machine: states.inc.php to C:\Users\mOCHU\CascadeProjects\bgastudio-docs\source-html\Your_game_state_machine_states.inc.php.html
+2026-07-06 07:07:36,230 - INFO - Downloading: https://en.doc.boardgamearena.com/Zone -> C:\Users\mOCHU\CascadeProjects\bgastudio-docs\source-html\Zone.html
+2026-07-06 07:07:36,334 - INFO - Successfully saved Your game state machine: states.inc.php to C:\Users\mOCHU\CascadeProjects\bgastudio-docs\source-html\Your_game_state_machine_states.inc.php.html
+2026-07-06 07:07:36,334 - INFO - Downloading: https://en.doc.boardgamearena.com/Zone -> C:\Users\mOCHU\CascadeProjects\bgastudio-docs\source-html\Zone.html
+2026-07-06 07:07:37,312 - INFO - Successfully saved Zone to C:\Users\mOCHU\CascadeProjects\bgastudio-docs\source-html\Zone.html
+2026-07-06 07:07:37,313 - INFO - Saved 74 entries to index.json
+2026-07-06 07:07:37,313 - INFO - === Download Summary ===
+2026-07-06 07:07:37,314 - INFO - Downloaded (Successfully Fetched): 70
+2026-07-06 07:07:37,314 - INFO - Skipped (Already downloaded): 4
+2026-07-06 07:07:37,314 - INFO - Retries: 3
+2026-07-06 07:07:37,314 - INFO - Errors (Failures): 2
+2026-07-06 07:07:37,314 - INFO - Elapsed time: 89.94 seconds
+2026-07-06 07:07:37,391 - INFO - Successfully saved Zone to C:\Users\mOCHU\CascadeProjects\bgastudio-docs\source-html\Zone.html
+2026-07-06 07:07:37,393 - INFO - Saved 74 entries to index.json
+2026-07-06 07:07:37,393 - INFO - === Download Summary ===
+2026-07-06 07:07:37,393 - INFO - Downloaded (Successfully Fetched): 38
+2026-07-06 07:07:37,393 - INFO - Skipped (Already downloaded): 36
+2026-07-06 07:07:37,394 - INFO - Retries: 3
+2026-07-06 07:07:37,394 - INFO - Errors (Failures): 2
+2026-07-06 07:07:37,394 - INFO - Elapsed time: 52.84 seconds
