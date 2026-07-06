@@ -1,0 +1,630 @@
+{
+  "title": "Practical debugging",
+  "source_file": "Practical_debugging.html",
+  "relative_path": "Practical_debugging.html",
+  "content_json_path": "content_json/Practical_debugging.json",
+  "headings": [
+    {
+      "level": 2,
+      "text": "Tools",
+      "id": "Tools"
+    },
+    {
+      "level": 2,
+      "text": "General tip for debugging",
+      "id": "General_tip_for_debugging"
+    },
+    {
+      "level": 3,
+      "text": "Save & Restore",
+      "id": "Save_.26_Restore"
+    },
+    {
+      "level": 3,
+      "text": "Refresh",
+      "id": "Refresh"
+    },
+    {
+      "level": 2,
+      "text": "Debugging my game when it cannot start",
+      "id": "Debugging_my_game_when_it_cannot_start"
+    },
+    {
+      "level": 2,
+      "text": "Debugging an issue with the waiting screen",
+      "id": "Debugging_an_issue_with_the_waiting_screen"
+    },
+    {
+      "level": 2,
+      "text": "Debugging my PHP game logic (or my view)",
+      "id": "Debugging_my_PHP_game_logic_.28or_my_view.29"
+    },
+    {
+      "level": 3,
+      "text": "Add traces to your code",
+      "id": "Add_traces_to_your_code"
+    },
+    {
+      "level": 3,
+      "text": "Dump data and die",
+      "id": "Dump_data_and_die"
+    },
+    {
+      "level": 3,
+      "text": "Debug at home",
+      "id": "Debug_at_home"
+    },
+    {
+      "level": 3,
+      "text": "Debugging setupNewGame",
+      "id": "Debugging_setupNewGame"
+    },
+    {
+      "level": 3,
+      "text": "Debugging endOfGame",
+      "id": "Debugging_endOfGame"
+    },
+    {
+      "level": 3,
+      "text": "Writing custom debug functions",
+      "id": "Writing_custom_debug_functions"
+    },
+    {
+      "level": 2,
+      "text": "Debugging my HTML/CSS layout",
+      "id": "Debugging_my_HTML.2FCSS_layout"
+    },
+    {
+      "level": 3,
+      "text": "Debugging Toolips CSS/Layout",
+      "id": "Debugging_Toolips_CSS.2FLayout"
+    },
+    {
+      "level": 3,
+      "text": "Debugging my Javascript game interface logic",
+      "id": "Debugging_my_Javascript_game_interface_logic"
+    },
+    {
+      "level": 3,
+      "text": "Do complex things on the PHP side",
+      "id": "Do_complex_things_on_the_PHP_side"
+    },
+    {
+      "level": 3,
+      "text": "Add traces in your code",
+      "id": "Add_traces_in_your_code"
+    },
+    {
+      "level": 2,
+      "text": "Online format checkers",
+      "id": "Online_format_checkers"
+    },
+    {
+      "level": 2,
+      "text": "Some frequent errors",
+      "id": "Some_frequent_errors"
+    },
+    {
+      "level": 2,
+      "text": "Get the database matching a bug report",
+      "id": "Get_the_database_matching_a_bug_report"
+    },
+    {
+      "level": 2,
+      "text": "Studio environment",
+      "id": "Studio_environment"
+    }
+  ],
+  "content": [
+    {
+      "type": "paragraph",
+      "text": "This page gives you practical tips to debug your game during development. Don't hesitate to share your difficulties with us so that we can improve this section."
+    },
+    {
+      "type": "paragraph",
+      "text": "To work on BGA Studio, we recommend that you use Google Chrome as it's currently the fastest browser for the BGA platform, and it's available for all OSes."
+    },
+    {
+      "type": "paragraph",
+      "text": "A good practice is to use a second browser to develop the game, in order to verify that your game is working fine on this browser too."
+    },
+    {
+      "type": "list",
+      "ordered": false,
+      "items": [
+        {
+          "text": "Firebug",
+          "nested": null
+        },
+        {
+          "text": "Web developer",
+          "nested": null
+        }
+      ]
+    },
+    {
+      "type": "paragraph",
+      "text": "To debug with other browsers (IE, Edge, Opera), we advise you to use one of the most recent versions. Latest versions of the browser will likely have better development tools than the previous ones..."
+    },
+    {
+      "type": "paragraph",
+      "text": "In general for debugging, think of using the ' save & restore state' functionality. It enables you to save the state of your game just before the issue you are investigating, then come back to that point with one click as many times as needed to understand what is going wrong."
+    },
+    {
+      "type": "paragraph",
+      "text": "If something does not seems to work properly even you \"fixed it\", it may be refresh issue. Not all files born equal. Some require a lot more steps to get into the game."
+    },
+    {
+      "type": "paragraph",
+      "text": "If your game won't start because of an error, you are probably in one of these situations:"
+    },
+    {
+      "type": "list",
+      "ordered": false,
+      "items": [
+        {
+          "text": "There is a SQL error in your dbmodel.sql file.",
+          "nested": null
+        },
+        {
+          "text": "You have a syntax error in your PHP file.",
+          "nested": null
+        },
+        {
+          "text": "Your PHP \"setupNewGame\" generates exception",
+          "nested": null
+        },
+        {
+          "text": "You transition to new game state from the initial state which generates exception (or state is misconfigured)",
+          "nested": null
+        },
+        {
+          "text": "You transition to player state from the initial state which has excpetion in arg* or action* method (or state is misconfigured)",
+          "nested": null
+        }
+      ]
+    },
+    {
+      "type": "paragraph",
+      "text": "If the error is not explicitly displayed when you click on \"Express start\", you should check the \"Gameserver error log\" as per Studio logs . However errors and logs generated by setupNewGame not always (almost never) there, so see Debug setupNewGame session. More cases of why game can't start are described on the Troubleshooting page."
+    },
+    {
+      "type": "paragraph",
+      "text": "BGA displays a waiting screen during a few seconds inviting free players to become premium when they are playing a lot."
+    },
+    {
+      "type": "paragraph",
+      "text": "To test the waiting screen on the studio, you can set the desired duration by adding the get parameter studioLockingDuration with the number of seconds for the lock screen to be displayed. For example to have a 10 seconds waiting screen when you launch a game on the studio: https://studio.boardgamearena.com?studioLockingDuration=10"
+    },
+    {
+      "type": "paragraph",
+      "text": "You can use the following functions in your game to add server side logging:"
+    },
+    {
+      "type": "paragraph",
+      "text": "$this->debug( $message ); // debug level logging, goes to BGA request&SQL logs"
+    },
+    {
+      "type": "paragraph",
+      "text": "$this->warn( $message ); // warning level logging, goes to BGA unexpected exceptions log"
+    },
+    {
+      "type": "paragraph",
+      "text": "Check Studio logs for more details on how to access your logs."
+    },
+    {
+      "type": "paragraph",
+      "text": "Only the error log level will appear in production. This level should be used only for critical problems. Other levels will show only in the development environment and can be used as you see fit."
+    },
+    {
+      "type": "paragraph",
+      "text": "To access logs on production, use button \"Display recent errors from production (unexpected errors)\" on control panel of your game"
+    },
+    {
+      "type": "paragraph",
+      "text": "First, make sure you can reproduce the needed game situation with one click.  Use Save (\" save & restore \") function before doing some \"test actions\"."
+    },
+    {
+      "type": "code",
+      "language": null,
+      "text": "$value = var_export($my_var, true);\nthrow new \\BgaUserException('I am here: ${value}', args: ['value'=>$value]);"
+    },
+    {
+      "type": "paragraph",
+      "text": "Alternately use json instead of php formaing:"
+    },
+    {
+      "type": "code",
+      "language": null,
+      "text": "   $value = json_encode($my_var, JSON_PRETTY_PRINT);"
+    },
+    {
+      "type": "code",
+      "language": null,
+      "text": " echo \"<pre>\";\n var_dump( $my_variable );\n echo \"</pre>\";\n die('ok');"
+    },
+    {
+      "type": "note",
+      "variant": "note",
+      "text": "Note: since this text will be returned back to client it will usually choke on this, but you can actually see it better if you wrap it some html (hence the <pre> tag)"
+    },
+    {
+      "type": "paragraph",
+      "text": "If you develop some complex logic it is better sometimes to stub all external calls and debug it locally using command line or IDE debugger for php. You can get some basic stubs here https://github.com/elaskavaia/bga-sharedcode/raw/master/misc/module/table/table.game.php"
+    },
+    {
+      "type": "paragraph",
+      "text": "This is separate section because tracing method do not work in this function. Recommended way to debug it"
+    },
+    {
+      "type": "list",
+      "ordered": false,
+      "items": [
+        {
+          "text": "leave  setupNewGame exactly as in template (inlcuding setting up player table and activating first player), and add a single call at the end",
+          "nested": null
+        }
+      ]
+    },
+    {
+      "type": "code",
+      "language": null,
+      "text": " $this->initMyTables();"
+    },
+    {
+      "type": "paragraph",
+      "text": "This will be your own function which you will be changing, so you don't touch setupNewGame anymore."
+    },
+    {
+      "type": "code",
+      "language": null,
+      "text": "   function initMyTables() {\n       try {\n          $players = $this->loadPlayersBasicInfos();\n         // ... code the function\n       } catch ( Exception $e ) {\n           // logging does not actually work in game init :(\n           $this->error(\"Fatal error while creating game\");\n           $this->dump('err', $e);\n       }\n   }"
+    },
+    {
+      "type": "paragraph",
+      "text": "Create a code for this function, and if it does not work run it from a debug_ function of the just created game. That way you can see debug output! The only trick is you have to clear all your tables in the begging so when you run it multiple times your db does not puke. If your game does not start at all - do not even call it from setupNewGame, comment it out and only call from a debug_ function until it works. Don't forget you can also look at tables in db using php-admin tool (link at the bottom of the game table in studio)."
+    },
+    {
+      "type": "paragraph",
+      "text": "Instead of calling initMyTables directly you can call an helper function ike this which will also reset the client, i.e."
+    },
+    {
+      "type": "code",
+      "language": null,
+      "text": "    function debug_initMyTables() {\n        $this->deleteAllTables(); // this suppose to delete/reset all data - you have to implement this function\n        $this->initMyTables();\n        $newGameDatas = $this->getAllTableDatas(); // this is framework function\n        $this->bga->notify->player($this->getActivePlayerId(), 'resetInterfaceWithAllDatas', '', $newGameDatas); // this is notification to reset all data \n        $this->bga->notify->all(\"message\",'setup called',[]);\n    }"
+    },
+    {
+      "type": "paragraph",
+      "text": "Debugging end of game is hard if game ends! Make sure it does not end, then you can restore to previous state using saved states. In php file:"
+    },
+    {
+      "type": "code",
+      "language": null,
+      "text": "   $this->processEndOfGame();\n   if ($this->getBgaEnvironment() == 'studio')\n      $this->gamestate->nextState('debuglast'); // debug end\n   else\n      $this->gamestate->nextState('last'); // real end"
+    },
+    {
+      "type": "paragraph",
+      "text": "You have to add a special user state in states.inc.php file (note: this snippet uses php constants instead of state numbers)"
+    },
+    {
+      "type": "code",
+      "language": null,
+      "text": "        STATE_GAME_TURN_NEXT_PLAYER => array( // normal state\n                \"name\" => \"gameTurnNextPlayer\",\n                \"description\" => '',\n                \"type\" => \"game\",\n                \"action\" => \"st_gameTurnNextPlayer\",\n                \"updateGameProgression\" => true,\n                \"transitions\" => array(\n                        \"next\" => STATE_PLAYER_TURN_ACTION,\n                        \"loopback\" =>  STATE_GAME_TURN_NEXT_PLAYER,\n                        \"last\" => STATE_END_GAME,\n                        \"debuglast\" => STATE_PLAYER_GAME_END // for debugging on studio\n                        ), \n        ),\n        // for debugging end of game\n        STATE_PLAYER_GAME_END => array(\n                \"name\" => \"playerGameEnd\",\n                \"description\" => clienttranslate('Game Over'),\n                \"descriptionmyturn\" => clienttranslate('Game Over'),\n                \"type\" => \"activeplayer\",\n                \"args\"=>\"arg_playerTurnAction\",\n                \"possibleactions\" => array( \"end\"),\n                \"transitions\" =>\n                array(\n                        \"next\" => STATE_END_GAME,\n                        \"loopback\"=> STATE_PLAYER_GAME_END)\n        ),"
+    },
+    {
+      "type": "paragraph",
+      "text": "Sometimes you want to set up a situation to debug a special case, and you need to update the game situation to fit your test. To do this quickly without needing to play a full game and hope to get the card you want to test, you can write custom debug functions."
+    },
+    {
+      "type": "code",
+      "language": null,
+      "text": "    #[Debug(reload: true)]\n    function debug_setCardType(int $id, int $type, int $typeArg = 0) {\n      $this->DbQuery(\"UPDATE `card` SET `card_type` = $type, `card_type_arg` = $typeArg WHERE `card_id` = $id\" );\n    }"
+    },
+    {
+      "type": "note",
+      "variant": "note",
+      "text": "Note: you need to prefix it with debug_ to make it show in the debug menu of the Studio :"
+    },
+    {
+      "type": "paragraph",
+      "text": "BGA will detect methods with this prefix and the associated parameters."
+    },
+    {
+      "type": "paragraph",
+      "text": "More examples of debug functions :"
+    },
+    {
+      "type": "code",
+      "language": null,
+      "text": "    // jump to a state, for example to simulate the end of a player turn and go to the next player turn.\n    public function debug_goToState(int $state = ST_NEXT_PLAYER) {\n      $this->gamestate->jumpToState($state);\n    }\n\n    // play one move, using the zombie code\n    function debug_playOneMove() {\n        $this->debug->playUntil(fn(int $count) => $count == 1);\n    }\n\n    // if you want to be able to concede\n    function debug_playToFiftyPercent() {\n        $this->debug->playUntil(fn(int $count) => $this->gamestate->getCurrentMainStateId() >= ST_END_GAME || $this->getGameProgression() >= 50 || $count >= 100);\n    }\n\n    // to see end game result\n    function debug_playToEndGame() {\n        $this->debug->playUntil(fn(int $count) => $this->gamestate->getCurrentMainStateId() >= ST_END_GAME || $count >= 100);\n    }\n\n    // to see end round result\n    function debug_playToEndRound() {\n      $round = $this->getCurrentRound();\n      $this->debug->playUntil(fn(int $count) => $this->getCurrentRound() > $round);\n    }\n\n    // to go to the turn of a specific player\n    function debug_playUntilTurnOf(int $playerId) {\n        $this->debug->playUntil(fn(int $count) => (int)$this->getActivePlayerId() === $playerId);\n    }\n    function debug_playUntilMyTurn() {\n        $this->debug->playUntil(fn(int $count) => (int)$this->getActivePlayerId() === (int)$this->getCurrentPlayerId());\n    }"
+    },
+    {
+      "type": "paragraph",
+      "text": "Example situations"
+    },
+    {
+      "type": "list",
+      "ordered": false,
+      "items": [
+        {
+          "text": "Why doesn't my game element show up in the interface?",
+          "nested": null
+        },
+        {
+          "text": "Why hasn't my CSS property been applied to this element?",
+          "nested": null
+        },
+        {
+          "text": "Why is this game element displayed at this position?",
+          "nested": null
+        }
+      ]
+    },
+    {
+      "type": "paragraph",
+      "text": "A useful tip when an element does not show up in the interface is to give it a red background:"
+    },
+    {
+      "type": "code",
+      "language": null,
+      "text": "#my_element {\n  ... some CSS definitions ...\n  background-color: red;\n}"
+    },
+    {
+      "type": "paragraph",
+      "text": "This way, you know if the element is not visible because of some CSS property or because of something else."
+    },
+    {
+      "type": "paragraph",
+      "text": "Using Chrome \"Elements\" tab (the first one), you can:"
+    },
+    {
+      "type": "list",
+      "ordered": false,
+      "items": [
+        {
+          "text": "See the CURRENT HTML of your page. Remember that the classical \"show page source\" is inefficient with BGA as you are modifying the page source with your Javascript code.",
+          "nested": null
+        },
+        {
+          "text": "Using the \"magnifying glass\", you can click on any part of your game interface and check its HTML code and associated CSS styles.",
+          "nested": null
+        },
+        {
+          "text": "You can even modify directly some CSS properties and see how it looks immediately in the game interface.",
+          "nested": null
+        }
+      ]
+    },
+    {
+      "type": "paragraph",
+      "text": "When changing css you have to force reload (Ctrl+R). But it also reloads all images which is long, if you want it faster you can click the Reload CSS button."
+    },
+    {
+      "type": "paragraph",
+      "text": "To inspect tooltip you need to pin it so it does not disappear."
+    },
+    {
+      "type": "list",
+      "ordered": false,
+      "items": [
+        {
+          "text": "Chrome tools:",
+          "nested": {
+            "type": "list",
+            "ordered": false,
+            "items": [
+              {
+                "text": "Open dev tools and switch to Source tab to engage with debugger",
+                "nested": null
+              },
+              {
+                "text": "Hover over you element until tooltip showing",
+                "nested": null
+              },
+              {
+                "text": "Press F8 - that stops the JS, so tooltip should freeze",
+                "nested": null
+              },
+              {
+                "text": "Now you can go to Elements tab and find your tooltip at the botton in dijitTooltip div",
+                "nested": null
+              },
+              {
+                "text": "Don't forget to resume it again to continue (F8 again or resume button)",
+                "nested": null
+              }
+            ]
+          }
+        },
+        {
+          "text": "Other method: Open the console (dev tools) large enough window, hover to make the tooltip appear and alt + tab to focus the console that will cover the tooltip. That way the onmouseout will never be triggered.",
+          "nested": null
+        }
+      ]
+    },
+    {
+      "type": "paragraph",
+      "text": "To debug javascript you just use embedded browser debugger, usually found in Source tab of dev tools (F12)"
+    },
+    {
+      "type": "paragraph",
+      "text": "You can do this by pressing Ctrl + B when your cursor is on the line where you want to set the breakpoint, or by clicking just to the left of the line number. One thing to be aware of is that refreshing via F5 removes set breakpoints, due to some cache busting values added to the URL. This can be remedied by adding this line to the end of your javascript source file, which enables the proper source mapping:"
+    },
+    {
+      "type": "code",
+      "language": null,
+      "text": "//# sourceURL=myjsfile.js"
+    },
+    {
+      "type": "paragraph",
+      "text": "[image: Bga-debug.jpg]"
+    },
+    {
+      "type": "paragraph",
+      "text": "In Chrome, to add a breakpoint: add a line to your .js file"
+    },
+    {
+      "type": "code",
+      "language": null,
+      "text": "debugger; "
+    },
+    {
+      "type": "paragraph",
+      "text": "Refresh the page F5, and make sure you have the Developer tools window open, press F12. When the break-point is hit you can then step through your code and visualise variables, etc."
+    },
+    {
+      "type": "paragraph",
+      "text": "The most frequent case is the following: you want to compute possible moves in a game situation. Doing it in Javascript is a nightmare. Do it in PHP, and transfer the results to your client interface using the \"args\" game state property."
+    },
+    {
+      "type": "paragraph",
+      "text": "You can use the following:"
+    },
+    {
+      "type": "paragraph",
+      "text": "It will give you the object structure of the variable in the Javascript console, without blocking the execution."
+    },
+    {
+      "type": "paragraph",
+      "text": "alert( variable_to_inspect )"
+    },
+    {
+      "type": "paragraph",
+      "text": "This won't be useful for complex structures; only native types will be plainly displayed. But this is sometimes useful just with messages to make sure which way the execution goes."
+    },
+    {
+      "type": "paragraph",
+      "text": "Copy and paste code for a quick code sanity check like the right number of brackets."
+    },
+    {
+      "type": "paragraph",
+      "text": "JS: http://esprima.org/demo/validate.html"
+    },
+    {
+      "type": "paragraph",
+      "text": "CSS: http://jigsaw.w3.org/css-validator/"
+    },
+    {
+      "type": "paragraph",
+      "text": "See Troubleshooting ."
+    },
+    {
+      "type": "paragraph",
+      "text": "When a player creates a bug report in production, a snapshot of the game database is taken. You can get access to this snapshot from the studio by following the steps below:"
+    },
+    {
+      "type": "list",
+      "ordered": false,
+      "items": [
+        {
+          "text": "Create a table in the studio with the same game and number of players as the table for which the report has been written. Launch this table.",
+          "nested": null
+        },
+        {
+          "text": "Load the bug dump by entering the bug report ID this debug section",
+          "nested": null
+        }
+      ]
+    },
+    {
+      "type": "paragraph",
+      "text": "[image: LoadBugReportInput.png]"
+    },
+    {
+      "type": "paragraph",
+      "text": "Some developers have requested a method allowing to know which environment the module is running on. While in general, your code should be the same on all environments so that the validation process makes sense, this may allow for example to display some helpers for testing during development while being sure that they'll never show up outside of the studio."
+    },
+    {
+      "type": "code",
+      "language": null,
+      "text": "if ($this->getBgaEnvironment() === 'studio') { ... }"
+    },
+    {
+      "type": "paragraph",
+      "text": "Or if needed from your <gamename>.view.php file:"
+    },
+    {
+      "type": "code",
+      "language": null,
+      "text": "if ($this->game->getBgaEnvironment() === 'studio') { ... }"
+    }
+  ],
+  "links": [
+    {
+      "text": "Google Chrome",
+      "url": "http://www.google.com/chrome"
+    },
+    {
+      "text": "Firebug",
+      "url": "https://addons.mozilla.org/firefox/addon/firebug/"
+    },
+    {
+      "text": "Web developer",
+      "url": "https://addons.mozilla.org/firefox/addon/web-developer/"
+    },
+    {
+      "text": "save & restore",
+      "url": "Tools_and_tips_of_BGA_Studio.html"
+    },
+    {
+      "text": "Studio logs",
+      "url": "Studio_logs.html"
+    },
+    {
+      "text": "Troubleshooting",
+      "url": "Troubleshooting.html"
+    },
+    {
+      "text": "https://studio.boardgamearena.com?studioLockingDuration=10",
+      "url": "https://studio.boardgamearena.com?studioLockingDuration=10"
+    },
+    {
+      "text": "BGA request&SQL logs",
+      "url": "Studio_logs.html"
+    },
+    {
+      "text": "BGA unexpected exceptions log",
+      "url": "Studio_logs.html"
+    },
+    {
+      "text": "https://github.com/elaskavaia/bga-sharedcode/raw/master/misc/module/table/table.game.php",
+      "url": "https://github.com/elaskavaia/bga-sharedcode/raw/master/misc/module/table/table.game.php"
+    },
+    {
+      "text": "Bga-debug.jpg",
+      "url": "File:Bga-debug.jpg.html"
+    },
+    {
+      "text": "http://esprima.org/demo/validate.html",
+      "url": "http://esprima.org/demo/validate.html"
+    },
+    {
+      "text": "http://jigsaw.w3.org/css-validator/",
+      "url": "http://jigsaw.w3.org/css-validator/"
+    },
+    {
+      "text": "LoadBugReportInput.png",
+      "url": "File:LoadBugReportInput.png.html"
+    }
+  ],
+  "images": [
+    {
+      "src": "/images/5/57/Bga-debug.jpg",
+      "alt": "Bga-debug.jpg"
+    },
+    {
+      "src": "/images/d/d7/LoadBugReportInput.png",
+      "alt": "LoadBugReportInput.png"
+    }
+  ],
+  "metadata": {
+    "extractor_version": "1.0.0",
+    "extracted_at": "2026-07-06T06:53:17.508140+00:00",
+    "word_count": 1712,
+    "heading_count": 22,
+    "code_block_count": 15,
+    "table_count": 0,
+    "image_count": 2,
+    "list_count": 7
+  }
+}

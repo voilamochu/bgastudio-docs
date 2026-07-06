@@ -1,0 +1,125 @@
+{
+  "title": "BgaDice",
+  "source_file": "BgaDice.html",
+  "relative_path": "BgaDice.html",
+  "content_json_path": "content_json/BgaDice.json",
+  "headings": [
+    {
+      "level": 2,
+      "text": "Overview",
+      "id": "Overview"
+    },
+    {
+      "level": 2,
+      "text": "Usage",
+      "id": "Usage"
+    },
+    {
+      "level": 2,
+      "text": "Versioning",
+      "id": "Versioning"
+    },
+    {
+      "level": 2,
+      "text": "Using with TypeScript",
+      "id": "Using_with_TypeScript"
+    },
+    {
+      "level": 2,
+      "text": "Changelog",
+      "id": "Changelog"
+    }
+  ],
+  "content": [
+    {
+      "type": "paragraph",
+      "text": "bga-dice is a javascript component to display dice."
+    },
+    {
+      "type": "paragraph",
+      "text": "To see how its work and access examples of source code (via browser dev tools) see Doc"
+    },
+    {
+      "type": "paragraph",
+      "text": "Load the lib:"
+    },
+    {
+      "type": "code",
+      "language": null,
+      "text": "const BgaAnimations = await importEsmLib('bga-animations', '1.x'); // the library uses bga-animations so this is required!\nconst BgaDice = await importEsmLib('bga-dice', '1.x');"
+    },
+    {
+      "type": "paragraph",
+      "text": "This line should be placed on top of the JS file, before any class declaration."
+    },
+    {
+      "type": "code",
+      "language": null,
+      "text": "define([\n    \"dojo\",\"dojo/_base/declare\",\n    \"ebg/core/gamegui\",\n    \"ebg/counter\",\n    getLibUrl('bga-animations', '1.x'), // the lib uses bga-animations so this is required!\n    getLibUrl('bga-dice', '1.x'),\n],\nfunction (dojo, declare, gamegui, counter, BgaAnimations, BgaDice) { // note that the index of `BgaAnimations` must match the index of the define array"
+    },
+    {
+      "type": "paragraph",
+      "text": "In your game setup:"
+    },
+    {
+      "type": "code",
+      "language": null,
+      "text": "        // create the animation manager, and bind it to the `gameui.bgaAnimationsActive()` function\n        this.animationManager = new BgaAnimations.Manager({\n            animationsActive: () => this.bga.gameui.bgaAnimationsActive(),\n        });\n\n        // create the dice manager\n        this.diceManager = new BgaDice.Manager({\n            animationManager: this.animationManager,\n            type: 'my-game-die',\n        });"
+    },
+    {
+      "type": "paragraph",
+      "text": "Only setup an animation manager if you don't already have one, else re-use the same one."
+    },
+    {
+      "type": "code",
+      "language": null,
+      "text": "\n\n        // create the stock, in the game setup\n        this.dieStock = new BgaDice.LineStock(this.diceManager, document.getElementById('dice-stock'));\n        this.dieStock.addDice(gamedatas.dice); // dice should be something like [{ id: 1, face: 5, location: 'table' }]\n\nasync notif_rollDice(args) {\n    await this.dieStock.rollDice(args.rolledDice); // similar form as above, but with a different face value.\n}"
+    },
+    {
+      "type": "paragraph",
+      "text": "Look at the demo page and the demo source code for a list of all possibilities!"
+    },
+    {
+      "type": "paragraph",
+      "text": "The lib is using semver, so you can require 1.x to be sure to have the last fixes without risking a breaking change. Any breaking change will be noted on the Changelog section."
+    },
+    {
+      "type": "paragraph",
+      "text": "If you use TypeScript and this lib, you can download the d.ts file to put in on your game folder to benefit from auto-completion. Depending on the way you build, you might need to remove the last line (the export instruction) to be able to use it."
+    },
+    {
+      "type": "code",
+      "language": null,
+      "text": "define([\n        \"dojo\",\n        \"dojo/_base/declare\",\n        \"ebg/core/gamegui\",\n        \"ebg/counter\",\n        \"ebg/stock\",\n        getLibUrl('bga-animations', '1.x'),\n    ],\nfunction (dojo, declare, gamegui, counter, stock, BgaAnimations) {\n    (window as any).BgaAnimations = BgaAnimations; //trick\n    return declare(\"bgagame.reforest\", ebg.core.gamegui, new Reforest());\n});"
+    },
+    {
+      "type": "paragraph",
+      "text": "1.0.2 : more logs for dice element not matching a card / accept keyed objects in addition to arrays on inputs"
+    },
+    {
+      "type": "paragraph",
+      "text": "1.0.0 : Initial version"
+    }
+  ],
+  "links": [
+    {
+      "text": "Doc",
+      "url": "https://x.boardgamearena.net/data/game-libs/bga-dice/1.x/docs/index.html"
+    },
+    {
+      "text": "d.ts",
+      "url": "https://x.boardgamearena.net/data/game-libs/bga-dice/1.x/dist/bga-dice.d.ts"
+    }
+  ],
+  "images": [],
+  "metadata": {
+    "extractor_version": "1.0.0",
+    "extracted_at": "2026-07-06T06:53:17.246904+00:00",
+    "word_count": 355,
+    "heading_count": 5,
+    "code_block_count": 5,
+    "table_count": 0,
+    "image_count": 0,
+    "list_count": 0
+  }
+}

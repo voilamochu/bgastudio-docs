@@ -1,0 +1,259 @@
+{
+  "title": "BGA Game licenses",
+  "source_file": "BGA_Game_licenses.html",
+  "relative_path": "BGA_Game_licenses.html",
+  "content_json_path": "content_json/BGA_Game_licenses.json",
+  "headings": [
+    {
+      "level": 2,
+      "text": "What is a \"license\" exactly?",
+      "id": "What_is_a_.22license.22_exactly.3F"
+    },
+    {
+      "level": 2,
+      "text": "Are all games on BGA licensed by their respective copyright owners?",
+      "id": "Are_all_games_on_BGA_licensed_by_their_respective_copyright_owners.3F"
+    },
+    {
+      "level": 2,
+      "text": "Where can I find a list of games for which a license has already been granted?",
+      "id": "Where_can_I_find_a_list_of_games_for_which_a_license_has_already_been_granted.3F"
+    },
+    {
+      "level": 2,
+      "text": "What if I start developing a game that is not on the \"Available licences\" list?",
+      "id": "What_if_I_start_developing_a_game_that_is_not_on_the_.22Available_licences.22_list.3F"
+    },
+    {
+      "level": 2,
+      "text": "Wow, I WANT to develop a game on this list!",
+      "id": "Wow.2C_I_WANT_to_develop_a_game_on_this_list.21"
+    },
+    {
+      "level": 2,
+      "text": "What needs to be done to add a game on this list?",
+      "id": "What_needs_to_be_done_to_add_a_game_on_this_list.3F"
+    },
+    {
+      "level": 2,
+      "text": "Why aren't all the best-selling games that I love on that list?",
+      "id": "Why_aren.27t_all_the_best-selling_games_that_I_love_on_that_list.3F"
+    },
+    {
+      "level": 2,
+      "text": "I want to make my prototype/unpublished game available on BGA",
+      "id": "I_want_to_make_my_prototype.2Funpublished_game_available_on_BGA"
+    },
+    {
+      "level": 2,
+      "text": "What if I really want to develop a particular game that is NOT on the list of \"Available licences\"?",
+      "id": "What_if_I_really_want_to_develop_a_particular_game_that_is_NOT_on_the_list_of_.22Available_licences.22.3F"
+    },
+    {
+      "level": 3,
+      "text": "0: The game is popular",
+      "id": "0:_The_game_is_popular"
+    },
+    {
+      "level": 3,
+      "text": "1: Determine the Publisher",
+      "id": "1:_Determine_the_Publisher"
+    },
+    {
+      "level": 3,
+      "text": "2: Check Publisher Relation with BGA",
+      "id": "2:_Check_Publisher_Relation_with_BGA"
+    },
+    {
+      "level": 3,
+      "text": "3: Check Publisher's Other Available Licenses",
+      "id": "3:_Check_Publisher.27s_Other_Available_Licenses"
+    },
+    {
+      "level": 3,
+      "text": "4: Publisher is not in the list",
+      "id": "4:_Publisher_is_not_in_the_list"
+    }
+  ],
+  "content": [
+    {
+      "type": "paragraph",
+      "text": "Almost all games on the Board Game Arena platform are adaptations of existing commercial \"real\" board games. In order to host an adaptation of one of these board games on a website, the copyright owners must first grant a license/authorisation to this website."
+    },
+    {
+      "type": "paragraph",
+      "text": "Yes, for all games that are not in the public domain, BGA has been granted an authorisation to create and host an online version."
+    },
+    {
+      "type": "paragraph",
+      "text": "Check the list of available licenses"
+    },
+    {
+      "type": "paragraph",
+      "text": "We allow developers to start any project in the Studio. But when you submit your project to go live on BGA, it will be rejected during the review process if BGA doesn't hold a proper license for the game."
+    },
+    {
+      "type": "paragraph",
+      "text": "Great! :)"
+    },
+    {
+      "type": "paragraph",
+      "text": "Check the list of current projects"
+    },
+    {
+      "type": "paragraph",
+      "text": "Try establishing a contact with the publisher or designer before developing a new game. To release the implementation as a public game, the publisher must approve the game during alpha test phase. Without publisher support your game will remain private indefinitely."
+    },
+    {
+      "type": "paragraph",
+      "text": "The copyright owners have to give an license/authorisation to BGA."
+    },
+    {
+      "type": "paragraph",
+      "text": "As you can imagine, the more popular a game is, the most difficult it can be to get an agreement to host this game on BGA."
+    },
+    {
+      "type": "paragraph",
+      "text": "We are really happy to have been able to build a very nice platform that managed to convince some of the most prestigious publishers to host their games here, but of course we can't convince -everyone-."
+    },
+    {
+      "type": "paragraph",
+      "text": "This is possible, BUT most of the time, we consider this is a bad idea for the following reasons:"
+    },
+    {
+      "type": "list",
+      "ordered": false,
+      "items": [
+        {
+          "text": "if your game has not been published yet, there is certainly a good reason - most of the time there is still some more work to do on the game itself. Publishing a game on BGA that is not 100% finalized won't help you to finalize it.",
+          "nested": null
+        },
+        {
+          "text": "as a rule of thumb, popular board games on BGA are games that are popular in the real world. As a consequence prototypes most likely won't get a big audience on BGA.",
+          "nested": null
+        },
+        {
+          "text": "we also advise you against developing your own game: games adaptation are better when there is a designer whose focus is on the gameplay and a developer whose focus is on the implementation.",
+          "nested": null
+        }
+      ]
+    },
+    {
+      "type": "paragraph",
+      "text": "So you definitely can develop your prototype/unpublished game on BGA, but we encourage you to think twice about it and do it only if you are in one/several of the situations below:"
+    },
+    {
+      "type": "list",
+      "ordered": false,
+      "items": [
+        {
+          "text": "the game is going to be published in the near future",
+          "nested": null
+        },
+        {
+          "text": "the game design process is really 100% done: the game is ready to be published in its current shape (ex: self-publishing game, game in a crowdfunding process...)",
+          "nested": null
+        },
+        {
+          "text": "you want to test your game with a big number of players to fine-tune some minor things (\"balance\" of the game).",
+          "nested": null
+        }
+      ]
+    },
+    {
+      "type": "paragraph",
+      "text": "Note : Games that can not be bought will not be published at BGA. It will not go further than private alpha, so you'll only be able to play with your friends."
+    },
+    {
+      "type": "paragraph",
+      "text": "This is the most frequently asked question, so for a detailed answer please follow the white rabbit down these numbered instructions:"
+    },
+    {
+      "type": "paragraph",
+      "text": "If the game is already popular (lets say top 1000 on bgg) its likely BGA already contacted them and we don't have a license OR its secretly developed by BGA already, so before you proceed any further check with dev team on forum or discord to see if anybody has more information."
+    },
+    {
+      "type": "paragraph",
+      "text": "First, you should determine who is the owner of the digital rights of the game. Most of the time, this is the original publisher of the game. The original publisher is not always easy to find, because very often board games are translated and published in different countries by a local publisher."
+    },
+    {
+      "type": "list",
+      "ordered": false,
+      "items": [
+        {
+          "text": "check in which country the game has been published first (ex: If it's in Poland, the original publisher is probably Polish).",
+          "nested": null
+        },
+        {
+          "text": "check the copyright notice at the end of the rules, where the original publisher is mentioned almost every time.",
+          "nested": null
+        },
+        {
+          "text": "very often, if two publishers are mentioned on a gamebox, the well-known publisher is the local publisher from your country and the other one is the original publisher.",
+          "nested": null
+        }
+      ]
+    },
+    {
+      "type": "paragraph",
+      "text": "Special case: if the game is themed with a prestigious licence (Star Wars, Lord of the Rings, some TV show, some well known novel...), you can stop here immediately: contracts between game publishers and prestigious licenses owners are very restrictive, and there is 99% chance that an online adaptation on BGA would be impossible to manage."
+    },
+    {
+      "type": "paragraph",
+      "text": "Read the list of publishers from the Available licenses page to check if BGA is already working with this publisher."
+    },
+    {
+      "type": "paragraph",
+      "text": "However, if the publisher is listed as \"not working with BGA\", you can stop here immediately. It happens that some publishers are not convinced or interested by online boardgaming and it is their right to think so. The BGA team regularly meets new publishers during board games events to show them the platform, so we're working on this but -again- we cannot convince everyone."
+    },
+    {
+      "type": "paragraph",
+      "text": "Is there already in the list a game licensed by this publisher that is available to be developed or under development?"
+    },
+    {
+      "type": "paragraph",
+      "text": "If NO: you can click on \"template email\" at the top of the licensing page to display a form that will help you generate an email to send to the publisher to request a new license."
+    },
+    {
+      "type": "paragraph",
+      "text": "We have never worked with this publisher before."
+    },
+    {
+      "type": "paragraph",
+      "text": "If this is your first game on BGA, we advise you to start with a game already on the list. Why? Because unfortunately, sometimes developers request a license, and then don't finish the development. When asking for a license, it's better if you have already shown your ability to realise an adaptation."
+    },
+    {
+      "type": "paragraph",
+      "text": "Special case #2: if you are the publisher, represent the publisher, or the license owner (i.e. author of unpublished game) please check out https://boardgamearena.com/#!gamepublishers and if you are interested contact us by email! (you can use the email template available on this page)."
+    }
+  ],
+  "links": [
+    {
+      "text": "Check the list of available licenses",
+      "url": "https://studio.boardgamearena.com/#!licensing"
+    },
+    {
+      "text": "Check the list of current projects",
+      "url": "http://studio.boardgamearena.com/projects"
+    },
+    {
+      "text": "Available licenses",
+      "url": "https://studio.boardgamearena.com/#!licensing"
+    },
+    {
+      "text": "https://boardgamearena.com/#!gamepublishers",
+      "url": "https://boardgamearena.com/#!gamepublishers"
+    }
+  ],
+  "images": [],
+  "metadata": {
+    "extractor_version": "1.0.0",
+    "extracted_at": "2026-07-06T06:53:17.150061+00:00",
+    "word_count": 741,
+    "heading_count": 14,
+    "code_block_count": 0,
+    "table_count": 0,
+    "image_count": 0,
+    "list_count": 3
+  }
+}

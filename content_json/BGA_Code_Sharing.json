@@ -1,0 +1,929 @@
+{
+  "title": "BGA Code Sharing",
+  "source_file": "BGA_Code_Sharing.html",
+  "relative_path": "BGA_Code_Sharing.html",
+  "content_json_path": "content_json/BGA_Code_Sharing.json",
+  "headings": [
+    {
+      "level": 2,
+      "text": "Community shared components, pens, etc",
+      "id": "Community_shared_components.2C_pens.2C_etc"
+    },
+    {
+      "level": 2,
+      "text": "Projects",
+      "id": "Projects"
+    },
+    {
+      "level": 2,
+      "text": "Projects on studio",
+      "id": "Projects_on_studio"
+    },
+    {
+      "level": 2,
+      "text": "Other useful resources",
+      "id": "Other_useful_resources"
+    }
+  ],
+  "content": [
+    {
+      "type": "paragraph",
+      "text": "This page is for listing of externally hosted bga projects, tools and resources, as well as internal project intended for sharing"
+    },
+    {
+      "type": "table",
+      "headers": [
+        "NAME",
+        "CODE LINK",
+        "DESCRIPTION"
+      ],
+      "rows": [
+        [
+          "Dice models and animation"
+        ],
+        [
+          "Die: 4 sided",
+          "https://codepen.io/mrkiffie/pen/doVZgW;https://codepen.io/VictoriaLa/pen/JjZNezr",
+          "code pen"
+        ],
+        [
+          "Die: 6 sided",
+          "https://github.com/elaskavaia/bga-sharedcode;https://codepen.io/VictoriaLa/pen/QWBBbwz",
+          ""
+        ],
+        [
+          "Die: 8 sided",
+          "https://codepen.io/VictoriaLa/pen/YzMPeGq",
+          "code pen"
+        ],
+        [
+          "Die: 12 sided (dodecahedron)",
+          "https://codepen.io/VictoriaLa/pen/xxLLxOPhttps://codepen.io/hoursgoby/pen/GRwQzxo",
+          "Code pen"
+        ],
+        [
+          "Die: 20 sided",
+          "https://codepen.io/vicentemundim/details/cenIh",
+          "Code pen"
+        ],
+        [
+          "Moving object using CSS animation (mostly)"
+        ],
+        [
+          "Phantom object move on oversurface",
+          "https://codepen.io/VictoriaLa/pen/gORvdJo",
+          "This technique creates clone of the object it moves it on another surface. It works well when parents that css transform applies such as scale and rotate"
+        ],
+        [
+          "Move object directly using positioning",
+          "https://codepen.io/VictoriaLa/pen/dyzgKVX",
+          "This technique is modification of BGA framework method to allow mobile object not to have absolute position before or after the move (and uses css animation not dojo). Methods slideToObjectRelative, attachToNewObjectNoDestroy"
+        ],
+        [
+          "Responsive layout, zoom and navigation for game boards"
+        ],
+        [
+          "Flex Layout",
+          "https://codepen.io/VictoriaLa/pen/XWjJJgG",
+          "Example on how to create flexible layout just by using css"
+        ],
+        [
+          "Zoom",
+          "Repo|Demo(visible on Knarr, Azul, Abyss, ...)",
+          "Allow the user to zoom on the game board. Include the controls to zoom, and handle the scale applied to the HTML element."
+        ],
+        [
+          "Jump to",
+          "Repo|Demo(visible on Knarr, Elawa)",
+          "Add floating controls to quickly jump to a player's table"
+        ],
+        [
+          "Algorithms"
+        ],
+        [
+          "Hex grid",
+          "tapestry,Tumbleweed,gaia project,Gold West",
+          ""
+        ],
+        [
+          "Shortest path on hex grid",
+          "memoir 44",
+          "Dijkstra"
+        ],
+        [
+          "Largest area on hex grid",
+          "tapestry, ...",
+          ""
+        ],
+        [
+          "Largest area on square grid",
+          "king domino, ...",
+          ""
+        ],
+        [
+          "Tetris pieces",
+          "patchwork, ...",
+          "Matrix manupations to rotate, flip and fit tetris pieces"
+        ],
+        [
+          "Line of sights on hex grid",
+          "memoir 44",
+          "Find intersecting hexes on a line between two cells"
+        ],
+        [
+          "Alternative implementations of BGA modules"
+        ],
+        [
+          "Scrollmap with zoom",
+          "https://github.com/yansnow78/bga_scrollmap",
+          "you can find it in cacao, ginkgopilis, sagani, bigmonster,dominoes, Carcassonne hunters and gatherers and many others. # improvements compare to scrollmap:- add zoom capabilities- add possibility to adjust pan delta to tile size when clicking on arrows- allow zoom with scroll wheel. only allow zoom with wheel if alt or ctrl or shift are pressed by default.  add possibility to select which key need to be pressed when zooming with wheel- allow pan/scroll and pinch zoom on smartphone. only allow 2 fingers to start scrolling by default, one finger is for page scrolling- make clickable area of buttons a bit bigger on smartphone- improve animation between game board and player bards thanks to an animation_div- add support to long click on buttons (continuous scroll or zoom or enlarge/reduce until button released)"
+        ],
+        [
+          "Scrollmap Plus",
+          "patchwork",
+          "Implementation with some bugs fixed, improved drag support and ability to use only one direction (i.e. only horizontal like carousel). Found in modules/extscrollmap.js"
+        ],
+        [
+          "Assorted stuff"
+        ],
+        [
+          "Help",
+          "Repo|Demo(visible on Knarr)",
+          "Add floating help buttons at the bottom left corner of the screen"
+        ]
+      ]
+    },
+    {
+      "type": "paragraph",
+      "text": "Add the game name, a link to repository and nickname of the developer on bga (same as used for dev forum), and short description. See Tools_and_tips_of_BGA_Studio#Version_Control for some suggestions on how and where to publish your code externally. Also see the boardgamearena topic on github."
+    },
+    {
+      "type": "table",
+      "headers": [
+        "NON-GAME PROJECTS",
+        "CODE LINK",
+        "DEVELOPER",
+        "COMMENT"
+      ],
+      "rows": [
+        [
+          "Shared Code (not a game)",
+          "https://github.com/elaskavaia/bga-sharedcode",
+          "Victoria_La",
+          "Examples of various game components and PHP stubs of framework code to make IDE happy"
+        ],
+        [
+          "Vanilla Typescipt template (not a game)",
+          "https://github.com/elaskavaia/bga-dojoless",
+          "Victoria_La",
+          "Project template for typescript and using minimal dojo, good for vscode - type checking, auto-complete, navigation"
+        ],
+        [
+          "BoardGameArena Workbench (not a game)",
+          "https://github.com/danielholmes/bga-workbench",
+          "Daniel Holmes (dhau)"
+        ],
+        [
+          "BGA-boilerplate",
+          "https://github.com/bga-devs/tisaac-boilerplate/",
+          "Tisaac (and Vincentt ?)",
+          "Main boilerplate with extended \"basic\" function and code structure"
+        ],
+        [
+          "BGA Type Safe Template",
+          "https://github.com/NevinAF/bga-ts-template",
+          "NevinAF",
+          "Full typing of all BGA Framework components."
+        ],
+        [
+          "Undo functionality",
+          "https://github.com/Ginso/UndoFunctions",
+          "Ginso",
+          "Code for adding undo functionality that also allows undoing single actions and not just the whole turn.Also contains a class that wraps DB functions and adds a parsing functionality for numbers, bools and json"
+        ],
+        [
+          "GAME",
+          "CODE LINK",
+          "DEVELOPER",
+          "COMMENT"
+        ],
+        [
+          "99 (Trick-taking Card Game)",
+          "https://github.com/ekelly/bga-ninetynine",
+          "QuasarDukeDev"
+        ],
+        [
+          "Abandon All Artichokes",
+          "https://github.com/0-wiz-0/bga-abandonallartichokes",
+          "__wiz__, rojomojo"
+        ],
+        [
+          "Assyria",
+          "https://github.com/sebastien-prudhomme/bga-assyria",
+          "daikinee"
+        ],
+        [
+          "Aura",
+          "https://github.com/micahstairs/bga-aura",
+          "Micah Stairs (micahstairs)"
+        ],
+        [
+          "Bandido",
+          "https://github.com/opheliehb/BandidoBGA",
+          "ophelopede & Harkle"
+        ],
+        [
+          "The Battle for Hill 218",
+          "https://github.com/danielholmes/battle-for-hill-218",
+          "Daniel Holmes (dhau)"
+        ],
+        [
+          "Bonbons",
+          "https://github.com/AntonioSoler/bga-bonbons",
+          "Morgalad"
+        ],
+        [
+          "Big Monster",
+          "https://github.com/nmatton/bigmonster",
+          "nicotacotac"
+        ],
+        [
+          "Bonsai",
+          "https://github.com/PhilipDavis/BGA-Bonsai",
+          "Philip Davis (pdw3)",
+          "Action stack for client-side undo system; generator functions to model complex turn workflows; infinite hex grid with auto resizing; all data in a single JSON blob; animated scorepad"
+        ],
+        [
+          "Canosa",
+          "https://codeberg.org/halibut/Canosa",
+          "junibegood"
+        ],
+        [
+          "Cóatl",
+          "https://github.com/AbelTiborToth/bga-coatl",
+          "Doctor Neo Cortex"
+        ],
+        [
+          "Coinche",
+          "https://github.com/drasill/bga-coinche",
+          "Draasill"
+        ],
+        [
+          "Copenhagen",
+          "https://github.com/JoeProgram/bga-copenhagen",
+          "JoeProgram"
+        ],
+        [
+          "Coup: City State",
+          "https://github.com/quietmint/bga-coupcitystate",
+          "quietmint"
+        ],
+        [
+          "Deep Regrets",
+          "https://github.com/JamesGames7/bga-deepRegrets",
+          "JamesGames7"
+        ],
+        [
+          "Dice Hospital : Emergency Roll",
+          "https://github.com/firgon/dicehospitaler",
+          "firgon"
+        ],
+        [
+          "Dice Summoners",
+          "https://github.com/eoincos/bga-dicesummoners",
+          "eoincos"
+        ],
+        [
+          "Dungeon Roll",
+          "https://github.com/MartinGoulet/bga-dungeonroll",
+          "MGoulet"
+        ],
+        [
+          "Egyptian Ratscrew",
+          "https://github.com/0BuRner/bga-egyptianratscrew",
+          "0BuRner"
+        ],
+        [
+          "Eruption",
+          "https://github.com/AndyKerrison/bga-eruption",
+          "Andy_K"
+        ],
+        [
+          "A Fistful Of Gold",
+          "https://bitbucket.org/Joel_L/fistfulofgold",
+          "Brainchild"
+        ],
+        [
+          "Fled",
+          "https://github.com/PhilipDavis/BGA-Fled",
+          "Philip Davis (pdw3)",
+          "All data in a single JSON blob"
+        ],
+        [
+          "Flip Freighters",
+          "https://github.com/joesimpson/bga-flipfreighters",
+          "joesimpson (Jonathan2004)"
+        ],
+        [
+          "Florenza: The Card Game",
+          "https://github.com/alberto-bottarini/bga-florenza",
+          "tarini"
+        ],
+        [
+          "For-Ex",
+          "https://github.com/Fnordistan/forex",
+          "AmadanNaBriona",
+          ""
+        ],
+        [
+          "Get the MacGuffin",
+          "https://github.com/mizutismask/bga-get-the-MacGuffin",
+          "mizutismask",
+          ""
+        ],
+        [
+          "Gangsta!",
+          "https://github.com/joesimpson/bga-gangsta",
+          "joesimpson (Jonathan2004)",
+          "git history only since V2 when I became maintainer"
+        ],
+        [
+          "Goa",
+          "https://github.com/joesimpson/bga-goa",
+          "joesimpson (Jonathan2004)"
+        ],
+        [
+          "Hardback",
+          "https://github.com/quietmint/bga-hardback",
+          "quietmint",
+          ""
+        ],
+        [
+          "Hearts(Tutorial)",
+          "https://github.com/elaskavaia/bga-heartsla",
+          "Victoria_La",
+          ""
+        ],
+        [
+          "Homesteaders",
+          "https://github.com/npatron/bga-homesteaders",
+          "TheBoot"
+        ],
+        [
+          "Incan Gold",
+          "https://github.com/AntonioSoler/bga-incangold",
+          "Morgalad"
+        ],
+        [
+          "In the Year of the Dragon (10th Anniversary Edition)",
+          "https://github.com/Fnordistan/ityotd",
+          "AmadanNaBriona"
+        ],
+        [
+          "Just Desserts",
+          "https://github.com/mizutismask/bga-just-desserts",
+          "mizutismask",
+          ""
+        ],
+        [
+          "The King's Guild",
+          "https://github.com/AdamNovotny/BGG-KingsGuild",
+          "A-dam"
+        ],
+        [
+          "The Lady and the Tiger (Doors)",
+          "https://github.com/Fnordistan/ladyandthetiger",
+          "AmadanNaBriona"
+        ],
+        [
+          "Linkage",
+          "https://github.com/ShaPhi7/linkage",
+          "ShaPhi7",
+          ""
+        ],
+        [
+          "Love Letter",
+          "https://github.com/ShaPhi7/loveletter",
+          "ShaPhi7",
+          ""
+        ],
+        [
+          "Mapmaker: The Gerrymandering Game",
+          "https://github.com/gzhang01/bga-mapmaker",
+          "gkz"
+        ],
+        [
+          "Marco Polo",
+          "https://github.com/rcitaliano/MarcoPolo",
+          "rcitaliano",
+          ""
+        ],
+        [
+          "Monster Lands",
+          "https://github.com/JamesGames7/bga-monsterlands",
+          "James_Games",
+          ""
+        ],
+        [
+          "Mythicals The Boardgame",
+          "https://github.com/joesimpson/bga-mythicals",
+          "joesimpson (Jonathan2004)",
+          ""
+        ],
+        [
+          "Nile",
+          "https://github.com/AndyKerrison/bga-nile",
+          "Andy_K"
+        ],
+        [
+          "Ninjan",
+          "https://github.com/dorukkicikoglu/bga-ninjan",
+          "fenadoruk"
+        ],
+        [
+          "Noir: Killer vs Inspector",
+          "https://bitbucket.org/chhuang76/bga_noirkvi",
+          "ch huang"
+        ],
+        [
+          "Now Boarding",
+          "https://github.com/quietmint/bga-nowboarding",
+          "quietmint"
+        ],
+        [
+          "Odin",
+          "https://github.com/dorukkicikoglu/bga-odin",
+          "fenadoruk"
+        ],
+        [
+          "Penny Press",
+          "https://github.com/AdamNovotny/bga-blooms",
+          "A-dam"
+        ],
+        [
+          "Perikles",
+          "https://github.com/Fnordistan/perikles",
+          "AmadanNaBriona",
+          ""
+        ],
+        [
+          "P.I.",
+          "https://gitlab.com/fa81/bga-pi,https://github.com/hellp/bga-pi(mirror)",
+          "Fabian Neumann (fa81)"
+        ],
+        [
+          "President",
+          "https://github.com/quaresma95/president",
+          "quaresma95"
+        ],
+        [
+          "Santorini",
+          "https://github.com/AntonioSoler/bga-santorini",
+          "Morgalad, quietmint, Tisaac",
+          ""
+        ],
+        [
+          "Stigméria",
+          "https://github.com/joesimpson/bga-stigmeria",
+          "joesimpson (Jonathan2004)"
+        ],
+        [
+          "Tablut",
+          "https://github.com/Lucas-C/tablut",
+          "Lucas-C & ntaffore"
+        ],
+        [
+          "Takara Island",
+          "https://github.com/AntonioSoler/bga-takaraisland",
+          "Morgalad"
+        ],
+        [
+          "Taluva",
+          "https://github.com/quietmint/bga-taluva",
+          "Morgalad & quietmint"
+        ],
+        [
+          "Teotihuacan: City of Gods",
+          "https://github.com/Trompetenhut/bga-teotihuacan",
+          "Trompetenhut"
+        ],
+        [
+          "Texas 42 (domino game, still under development)",
+          "https://github.com/ishermandom/bga-42",
+          "Stardust Spikes, Jason Turner-Maier, Ilya Sherman"
+        ],
+        [
+          "Tic Tac Match",
+          "https://github.com/leocaseiro/bga-tictacmatch",
+          "Leo Caseiro"
+        ],
+        [
+          "Trick of the Rails",
+          "https://github.com/Fnordistan/trickoftherails",
+          "AmadanNaBriona"
+        ],
+        [
+          "Uptown",
+          "https://github.com/elliotkendall/bga-uptown",
+          "SpottedShroom"
+        ],
+        [
+          "Via Magica",
+          "https://github.com/christopherburke/bga_viamagica",
+          "CuriousTerran",
+          ""
+        ],
+        [
+          "Winter",
+          "https://github.com/joesimpson/bga-winter",
+          "joesimpson (Jonathan2004)"
+        ]
+      ]
+    },
+    {
+      "type": "paragraph",
+      "text": "Any developer can add themselves to a project as read-only from https://studio.boardgamearena.com/#!projects page (almost any project)."
+    },
+    {
+      "type": "paragraph",
+      "text": "Moved to Tools_and_tips_of_BGA_Studio"
+    }
+  ],
+  "links": [
+    {
+      "text": "https://codepen.io/mrkiffie/pen/doVZgW",
+      "url": "https://codepen.io/mrkiffie/pen/doVZgW"
+    },
+    {
+      "text": "https://codepen.io/VictoriaLa/pen/JjZNezr",
+      "url": "https://codepen.io/VictoriaLa/pen/JjZNezr"
+    },
+    {
+      "text": "https://github.com/elaskavaia/bga-sharedcode",
+      "url": "https://github.com/elaskavaia/bga-sharedcode"
+    },
+    {
+      "text": "https://codepen.io/VictoriaLa/pen/QWBBbwz",
+      "url": "https://codepen.io/VictoriaLa/pen/QWBBbwz"
+    },
+    {
+      "text": "https://codepen.io/VictoriaLa/pen/YzMPeGq",
+      "url": "https://codepen.io/VictoriaLa/pen/YzMPeGq"
+    },
+    {
+      "text": "https://codepen.io/VictoriaLa/pen/xxLLxOP",
+      "url": "https://codepen.io/VictoriaLa/pen/xxLLxOP"
+    },
+    {
+      "text": "https://codepen.io/hoursgoby/pen/GRwQzxo",
+      "url": "https://codepen.io/hoursgoby/pen/GRwQzxo"
+    },
+    {
+      "text": "https://codepen.io/vicentemundim/details/cenIh",
+      "url": "https://codepen.io/vicentemundim/details/cenIh"
+    },
+    {
+      "text": "https://codepen.io/VictoriaLa/pen/gORvdJo",
+      "url": "https://codepen.io/VictoriaLa/pen/gORvdJo"
+    },
+    {
+      "text": "https://codepen.io/VictoriaLa/pen/dyzgKVX",
+      "url": "https://codepen.io/VictoriaLa/pen/dyzgKVX"
+    },
+    {
+      "text": "https://codepen.io/VictoriaLa/pen/XWjJJgG",
+      "url": "https://codepen.io/VictoriaLa/pen/XWjJJgG"
+    },
+    {
+      "text": "Repo",
+      "url": "https://github.com/thoun/bga-zoom/"
+    },
+    {
+      "text": "Demo",
+      "url": "https://thoun.github.io/bga-zoom/demo/index.html"
+    },
+    {
+      "text": "Repo",
+      "url": "https://github.com/thoun/bga-jump-to/"
+    },
+    {
+      "text": "Demo",
+      "url": "https://thoun.github.io/bga-jump-to/demo/index.html"
+    },
+    {
+      "text": "https://github.com/yansnow78/bga_scrollmap",
+      "url": "https://github.com/yansnow78/bga_scrollmap"
+    },
+    {
+      "text": "Repo",
+      "url": "https://github.com/thoun/bga-help/"
+    },
+    {
+      "text": "Demo",
+      "url": "https://thoun.github.io/bga-help/demo/index.html"
+    },
+    {
+      "text": "Tools_and_tips_of_BGA_Studio#Version_Control",
+      "url": "Tools_and_tips_of_BGA_Studio.html"
+    },
+    {
+      "text": "boardgamearena",
+      "url": "https://github.com/topics/boardgamearena"
+    },
+    {
+      "text": "https://github.com/elaskavaia/bga-dojoless",
+      "url": "https://github.com/elaskavaia/bga-dojoless"
+    },
+    {
+      "text": "https://github.com/danielholmes/bga-workbench",
+      "url": "https://github.com/danielholmes/bga-workbench"
+    },
+    {
+      "text": "https://github.com/bga-devs/tisaac-boilerplate/",
+      "url": "https://github.com/bga-devs/tisaac-boilerplate/"
+    },
+    {
+      "text": "https://github.com/NevinAF/bga-ts-template",
+      "url": "https://github.com/NevinAF/bga-ts-template"
+    },
+    {
+      "text": "https://github.com/Ginso/UndoFunctions",
+      "url": "https://github.com/Ginso/UndoFunctions"
+    },
+    {
+      "text": "https://github.com/ekelly/bga-ninetynine",
+      "url": "https://github.com/ekelly/bga-ninetynine"
+    },
+    {
+      "text": "https://github.com/0-wiz-0/bga-abandonallartichokes",
+      "url": "https://github.com/0-wiz-0/bga-abandonallartichokes"
+    },
+    {
+      "text": "https://github.com/sebastien-prudhomme/bga-assyria",
+      "url": "https://github.com/sebastien-prudhomme/bga-assyria"
+    },
+    {
+      "text": "https://github.com/micahstairs/bga-aura",
+      "url": "https://github.com/micahstairs/bga-aura"
+    },
+    {
+      "text": "https://github.com/opheliehb/BandidoBGA",
+      "url": "https://github.com/opheliehb/BandidoBGA"
+    },
+    {
+      "text": "https://github.com/danielholmes/battle-for-hill-218",
+      "url": "https://github.com/danielholmes/battle-for-hill-218"
+    },
+    {
+      "text": "https://github.com/AntonioSoler/bga-bonbons",
+      "url": "https://github.com/AntonioSoler/bga-bonbons"
+    },
+    {
+      "text": "https://github.com/nmatton/bigmonster",
+      "url": "https://github.com/nmatton/bigmonster"
+    },
+    {
+      "text": "https://github.com/PhilipDavis/BGA-Bonsai",
+      "url": "https://github.com/PhilipDavis/BGA-Bonsai"
+    },
+    {
+      "text": "https://codeberg.org/halibut/Canosa",
+      "url": "https://codeberg.org/halibut/Canosa"
+    },
+    {
+      "text": "https://github.com/AbelTiborToth/bga-coatl",
+      "url": "https://github.com/AbelTiborToth/bga-coatl"
+    },
+    {
+      "text": "https://github.com/drasill/bga-coinche",
+      "url": "https://github.com/drasill/bga-coinche"
+    },
+    {
+      "text": "https://github.com/JoeProgram/bga-copenhagen",
+      "url": "https://github.com/JoeProgram/bga-copenhagen"
+    },
+    {
+      "text": "https://github.com/quietmint/bga-coupcitystate",
+      "url": "https://github.com/quietmint/bga-coupcitystate"
+    },
+    {
+      "text": "https://github.com/JamesGames7/bga-deepRegrets",
+      "url": "https://github.com/JamesGames7/bga-deepRegrets"
+    },
+    {
+      "text": "https://github.com/firgon/dicehospitaler",
+      "url": "https://github.com/firgon/dicehospitaler"
+    },
+    {
+      "text": "https://github.com/eoincos/bga-dicesummoners",
+      "url": "https://github.com/eoincos/bga-dicesummoners"
+    },
+    {
+      "text": "https://github.com/MartinGoulet/bga-dungeonroll",
+      "url": "https://github.com/MartinGoulet/bga-dungeonroll"
+    },
+    {
+      "text": "https://github.com/0BuRner/bga-egyptianratscrew",
+      "url": "https://github.com/0BuRner/bga-egyptianratscrew"
+    },
+    {
+      "text": "https://github.com/AndyKerrison/bga-eruption",
+      "url": "https://github.com/AndyKerrison/bga-eruption"
+    },
+    {
+      "text": "https://bitbucket.org/Joel_L/fistfulofgold",
+      "url": "https://bitbucket.org/Joel_L/fistfulofgold"
+    },
+    {
+      "text": "https://github.com/PhilipDavis/BGA-Fled",
+      "url": "https://github.com/PhilipDavis/BGA-Fled"
+    },
+    {
+      "text": "https://github.com/joesimpson/bga-flipfreighters",
+      "url": "https://github.com/joesimpson/bga-flipfreighters"
+    },
+    {
+      "text": "https://github.com/alberto-bottarini/bga-florenza",
+      "url": "https://github.com/alberto-bottarini/bga-florenza"
+    },
+    {
+      "text": "https://github.com/Fnordistan/forex",
+      "url": "https://github.com/Fnordistan/forex"
+    },
+    {
+      "text": "https://github.com/mizutismask/bga-get-the-MacGuffin",
+      "url": "https://github.com/mizutismask/bga-get-the-MacGuffin"
+    },
+    {
+      "text": "https://github.com/joesimpson/bga-gangsta",
+      "url": "https://github.com/joesimpson/bga-gangsta"
+    },
+    {
+      "text": "https://github.com/joesimpson/bga-goa",
+      "url": "https://github.com/joesimpson/bga-goa"
+    },
+    {
+      "text": "https://github.com/quietmint/bga-hardback",
+      "url": "https://github.com/quietmint/bga-hardback"
+    },
+    {
+      "text": "https://github.com/elaskavaia/bga-heartsla",
+      "url": "https://github.com/elaskavaia/bga-heartsla"
+    },
+    {
+      "text": "https://github.com/npatron/bga-homesteaders",
+      "url": "https://github.com/npatron/bga-homesteaders"
+    },
+    {
+      "text": "https://github.com/AntonioSoler/bga-incangold",
+      "url": "https://github.com/AntonioSoler/bga-incangold"
+    },
+    {
+      "text": "https://github.com/Fnordistan/ityotd",
+      "url": "https://github.com/Fnordistan/ityotd"
+    },
+    {
+      "text": "https://github.com/mizutismask/bga-just-desserts",
+      "url": "https://github.com/mizutismask/bga-just-desserts"
+    },
+    {
+      "text": "https://github.com/AdamNovotny/BGG-KingsGuild",
+      "url": "https://github.com/AdamNovotny/BGG-KingsGuild"
+    },
+    {
+      "text": "https://github.com/Fnordistan/ladyandthetiger",
+      "url": "https://github.com/Fnordistan/ladyandthetiger"
+    },
+    {
+      "text": "https://github.com/ShaPhi7/linkage",
+      "url": "https://github.com/ShaPhi7/linkage"
+    },
+    {
+      "text": "https://github.com/ShaPhi7/loveletter",
+      "url": "https://github.com/ShaPhi7/loveletter"
+    },
+    {
+      "text": "https://github.com/gzhang01/bga-mapmaker",
+      "url": "https://github.com/gzhang01/bga-mapmaker"
+    },
+    {
+      "text": "https://github.com/rcitaliano/MarcoPolo",
+      "url": "https://github.com/rcitaliano/MarcoPolo"
+    },
+    {
+      "text": "https://github.com/JamesGames7/bga-monsterlands",
+      "url": "https://github.com/JamesGames7/bga-monsterlands"
+    },
+    {
+      "text": "https://github.com/joesimpson/bga-mythicals",
+      "url": "https://github.com/joesimpson/bga-mythicals"
+    },
+    {
+      "text": "https://github.com/AndyKerrison/bga-nile",
+      "url": "https://github.com/AndyKerrison/bga-nile"
+    },
+    {
+      "text": "https://github.com/dorukkicikoglu/bga-ninjan",
+      "url": "https://github.com/dorukkicikoglu/bga-ninjan"
+    },
+    {
+      "text": "https://bitbucket.org/chhuang76/bga_noirkvi",
+      "url": "https://bitbucket.org/chhuang76/bga_noirkvi"
+    },
+    {
+      "text": "https://github.com/quietmint/bga-nowboarding",
+      "url": "https://github.com/quietmint/bga-nowboarding"
+    },
+    {
+      "text": "https://github.com/dorukkicikoglu/bga-odin",
+      "url": "https://github.com/dorukkicikoglu/bga-odin"
+    },
+    {
+      "text": "https://github.com/AdamNovotny/bga-blooms",
+      "url": "https://github.com/AdamNovotny/bga-blooms"
+    },
+    {
+      "text": "https://github.com/Fnordistan/perikles",
+      "url": "https://github.com/Fnordistan/perikles"
+    },
+    {
+      "text": "https://gitlab.com/fa81/bga-pi",
+      "url": "https://gitlab.com/fa81/bga-pi"
+    },
+    {
+      "text": "https://github.com/hellp/bga-pi",
+      "url": "https://github.com/hellp/bga-pi"
+    },
+    {
+      "text": "https://github.com/quaresma95/president",
+      "url": "https://github.com/quaresma95/president"
+    },
+    {
+      "text": "https://github.com/AntonioSoler/bga-santorini",
+      "url": "https://github.com/AntonioSoler/bga-santorini"
+    },
+    {
+      "text": "https://github.com/joesimpson/bga-stigmeria",
+      "url": "https://github.com/joesimpson/bga-stigmeria"
+    },
+    {
+      "text": "https://github.com/Lucas-C/tablut",
+      "url": "https://github.com/Lucas-C/tablut"
+    },
+    {
+      "text": "https://github.com/AntonioSoler/bga-takaraisland",
+      "url": "https://github.com/AntonioSoler/bga-takaraisland"
+    },
+    {
+      "text": "https://github.com/quietmint/bga-taluva",
+      "url": "https://github.com/quietmint/bga-taluva"
+    },
+    {
+      "text": "https://github.com/Trompetenhut/bga-teotihuacan",
+      "url": "https://github.com/Trompetenhut/bga-teotihuacan"
+    },
+    {
+      "text": "https://github.com/ishermandom/bga-42",
+      "url": "https://github.com/ishermandom/bga-42"
+    },
+    {
+      "text": "https://github.com/leocaseiro/bga-tictacmatch",
+      "url": "https://github.com/leocaseiro/bga-tictacmatch"
+    },
+    {
+      "text": "https://github.com/Fnordistan/trickoftherails",
+      "url": "https://github.com/Fnordistan/trickoftherails"
+    },
+    {
+      "text": "https://github.com/elliotkendall/bga-uptown",
+      "url": "https://github.com/elliotkendall/bga-uptown"
+    },
+    {
+      "text": "https://github.com/christopherburke/bga_viamagica",
+      "url": "https://github.com/christopherburke/bga_viamagica"
+    },
+    {
+      "text": "https://github.com/joesimpson/bga-winter",
+      "url": "https://github.com/joesimpson/bga-winter"
+    },
+    {
+      "text": "https://studio.boardgamearena.com/#!projects",
+      "url": "https://studio.boardgamearena.com/#!projects"
+    },
+    {
+      "text": "Tools_and_tips_of_BGA_Studio",
+      "url": "Tools_and_tips_of_BGA_Studio.html"
+    }
+  ],
+  "images": [],
+  "metadata": {
+    "extractor_version": "1.0.0",
+    "extracted_at": "2026-07-06T06:53:17.145632+00:00",
+    "word_count": 85,
+    "heading_count": 4,
+    "code_block_count": 0,
+    "table_count": 2,
+    "image_count": 0,
+    "list_count": 0
+  }
+}

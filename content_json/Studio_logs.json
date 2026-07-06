@@ -1,0 +1,644 @@
+{
+  "title": "Studio logs",
+  "source_file": "Studio_logs.html",
+  "relative_path": "Studio_logs.html",
+  "content_json_path": "content_json/Studio_logs.json",
+  "headings": [
+    {
+      "level": 2,
+      "text": "BGA request&SQL logs",
+      "id": "BGA_request.26SQL_logs"
+    },
+    {
+      "level": 3,
+      "text": "Your requests",
+      "id": "Your_requests"
+    },
+    {
+      "level": 3,
+      "text": "Request responses",
+      "id": "Request_responses"
+    },
+    {
+      "level": 3,
+      "text": "SQL requests",
+      "id": "SQL_requests"
+    },
+    {
+      "level": 3,
+      "text": "Custom trace",
+      "id": "Custom_trace"
+    },
+    {
+      "level": 2,
+      "text": "BGA unexpected exceptions logs",
+      "id": "BGA_unexpected_exceptions_logs"
+    },
+    {
+      "level": 2,
+      "text": "BGA Production Logs",
+      "id": "BGA_Production_Logs"
+    },
+    {
+      "level": 3,
+      "text": "How to access production server exception logs",
+      "id": "How_to_access_production_server_exception_logs"
+    },
+    {
+      "level": 2,
+      "text": "Backend & frontend issues reporting",
+      "id": "Backend_.26_frontend_issues_reporting"
+    },
+    {
+      "level": 3,
+      "text": "Sentry concepts",
+      "id": "Sentry_concepts"
+    },
+    {
+      "level": 4,
+      "text": "Views",
+      "id": "Views"
+    },
+    {
+      "level": 5,
+      "text": "Issues list view",
+      "id": "Issues_list_view"
+    },
+    {
+      "level": 5,
+      "text": "Issue detail view",
+      "id": "Issue_detail_view"
+    },
+    {
+      "level": 6,
+      "text": "Main information",
+      "id": "Main_information"
+    },
+    {
+      "level": 6,
+      "text": "Culprit",
+      "id": "Culprit"
+    },
+    {
+      "level": 6,
+      "text": "Stack trace",
+      "id": "Stack_trace"
+    },
+    {
+      "level": 6,
+      "text": "Request",
+      "id": "Request"
+    },
+    {
+      "level": 6,
+      "text": "Tags",
+      "id": "Tags"
+    },
+    {
+      "level": 6,
+      "text": "Statistics",
+      "id": "Statistics"
+    },
+    {
+      "level": 5,
+      "text": "Events list view",
+      "id": "Events_list_view"
+    }
+  ],
+  "content": [
+    {
+      "type": "paragraph",
+      "text": "BGA implemented several production issues reporting tools:"
+    },
+    {
+      "type": "list",
+      "ordered": false,
+      "items": [
+        {
+          "text": "Syntax errors reporting",
+          "nested": null
+        },
+        {
+          "text": "Unexpected errors reporting",
+          "nested": null
+        },
+        {
+          "text": "Backend & frontend issues reporting",
+          "nested": null
+        }
+      ]
+    },
+    {
+      "type": "paragraph",
+      "text": "All of these are available at the bottom of your game studio page.  Access your game studio page (for instance: https://studio.boardgamearena.com/studiogame?game=xxx ) and scroll to the \" Errors in production \" block:"
+    },
+    {
+      "type": "paragraph",
+      "text": "This log is useful:"
+    },
+    {
+      "type": "list",
+      "ordered": false,
+      "items": [
+        {
+          "text": "When you want to check what SQL requests has been built during a request.",
+          "nested": null
+        },
+        {
+          "text": "When you want to debug your PHP code using \"self::trace\"",
+          "nested": null
+        },
+        {
+          "text": "When you want to know why a request takes too much time.",
+          "nested": null
+        }
+      ]
+    },
+    {
+      "type": "paragraph",
+      "text": "On this log, you can see:"
+    },
+    {
+      "type": "paragraph",
+      "text": "Example:"
+    },
+    {
+      "type": "code",
+      "language": null,
+      "text": " 20/06 21:50:56 [info] [T403] [4/mytest0] /cinco/cinco/exchange4Cards.html?id=4&lock=97d1c7a1-903a-4d1f-8206-de39ce8204fc&table=403&testuser=4&dojo.preventCache=1371757856044"
+    },
+    {
+      "type": "paragraph",
+      "text": "Note that the best way to check your Ajax request is to read the [ Input/Output section ]."
+    },
+    {
+      "type": "paragraph",
+      "text": "Example:"
+    },
+    {
+      "type": "code",
+      "language": null,
+      "text": " 20/06 21:50:56 [notice] [T403] [4/mytest0] OK-0 169 d141 c8 e0 I9 A158 V0 T0 /cinco/cinco/exchange4Cards.html?id=4&lock=97d1c7a1-903a-4d1f-8206-de39ce8204fc&table=403&testuser=4&dojo.preventCache=1371757856044"
+    },
+    {
+      "type": "paragraph",
+      "text": "You can recognize a response because it contains [notice]. Usually, there is one response for each request."
+    },
+    {
+      "type": "list",
+      "ordered": false,
+      "items": [
+        {
+          "text": "20/06 21:50:56: the date",
+          "nested": null
+        },
+        {
+          "text": "[notice]",
+          "nested": null
+        },
+        {
+          "text": "[T403]: this is a log from table 403",
+          "nested": null
+        },
+        {
+          "text": "[4/mytest0]: this is use \"mytest0\", with id 4",
+          "nested": null
+        },
+        {
+          "text": "OK-0: it means that the request ended up successfully, with no exception (expected or unexpected).",
+          "nested": null
+        },
+        {
+          "text": "169: this is the time taken to process the request (169ms).",
+          "nested": null
+        },
+        {
+          "text": "d141: this is the total Database time used to process the request (141ms).",
+          "nested": null
+        }
+      ]
+    },
+    {
+      "type": "paragraph",
+      "text": "Example:"
+    },
+    {
+      "type": "code",
+      "language": null,
+      "text": " 20/06 21:50:56 [info] [T403] [4/mytest0] 0.26 SELECT player_tokenColor FROM player WHERE player_id ='4'"
+    },
+    {
+      "type": "paragraph",
+      "text": "All requests to Database are traced in this log. You can see here the time take by the request (0,26ms)."
+    },
+    {
+      "type": "paragraph",
+      "text": "You can use special PHP methods in your PHP code to left some trace in this log:"
+    },
+    {
+      "type": "list",
+      "ordered": false,
+      "items": [
+        {
+          "text": "$this->trace( \"your message here\" );    // Display \"your message here\" in the log",
+          "nested": null
+        },
+        {
+          "text": "$this->dump( \"My variable\", $variable_to_dump );   // Display the content of $variable_to_dump in the log",
+          "nested": null
+        }
+      ]
+    },
+    {
+      "type": "paragraph",
+      "text": "In this log you can check the last Unexpected exceptions from your game."
+    },
+    {
+      "type": "paragraph",
+      "text": "The log displayed the complete stacktrace of the exception, so you can debug it."
+    },
+    {
+      "type": "list",
+      "ordered": true,
+      "items": [
+        {
+          "text": "Navigate to your game page on the Studio website",
+          "nested": {
+            "type": "list",
+            "ordered": true,
+            "items": [
+              {
+                "text": "e.g. https://studio.boardgamearena.com/studiogame?game=YOURGAMEID",
+                "nested": null
+              }
+            ]
+          }
+        },
+        {
+          "text": "Scroll to the bottom of the page",
+          "nested": null
+        },
+        {
+          "text": "Click the `Display recent errors from production` button",
+          "nested": {
+            "type": "list",
+            "ordered": true,
+            "items": [
+              {
+                "text": "[image: Production errors buttuns.png]",
+                "nested": null
+              }
+            ]
+          }
+        }
+      ]
+    },
+    {
+      "type": "paragraph",
+      "text": "This is the next generation reporting tool.  It is based on Sentry, a tool that aggregates any frontend and backend errors encountered by users.  It allows modern statistics and gives more context."
+    },
+    {
+      "type": "paragraph",
+      "text": "When an error or a warning is caught, information is sent to Sentry in the form of an event, which is processed.  Sentry then as the following concepts:"
+    },
+    {
+      "type": "list",
+      "ordered": false,
+      "items": [
+        {
+          "text": "Event : an error or warning that triggered either in the user browser or in one of BGA servers",
+          "nested": null
+        },
+        {
+          "text": "Issue: all events are attached to an issue.  Sentry figures out how to merge then depending on the place the event has taken place in the code.  Hence, false positive could happen",
+          "nested": null
+        },
+        {
+          "text": "Issue  ID : a unique value assigned to an issue.",
+          "nested": null
+        },
+        {
+          "text": "Project: a software module.  We currently have two projects that are exposed to the studio developers: gameserver-js (frontend) and gameserver ( backend )",
+          "nested": null
+        },
+        {
+          "text": "Tags: metadata associated to an event, like browser version, user ID, etc.  They are used to provide statistics in the issues page.",
+          "nested": null
+        },
+        {
+          "text": "Release: a release is a package name and a version name.  It helps knowing when an issue appears, then narrowing down its cause.  There are two releases set on BGA: mainsite release (our code) and game release (your code)",
+          "nested": null
+        }
+      ]
+    },
+    {
+      "type": "paragraph",
+      "text": "The sentry viewer offer several views."
+    },
+    {
+      "type": "paragraph",
+      "text": "This is the landing view, it shows an issue list after a brief query on the Sentry server."
+    },
+    {
+      "type": "paragraph",
+      "text": "In the event of more than 25 issues, it is possible to paginate over them (right red rectangle).  Ordering can also be changed, it can be:"
+    },
+    {
+      "type": "list",
+      "ordered": false,
+      "items": [
+        {
+          "text": "number of events: the more, the more impactful this issue is.",
+          "nested": null
+        },
+        {
+          "text": "last seen: last time an event has been added to this issue.  The more ancient, the more likely it is fixed.",
+          "nested": null
+        },
+        {
+          "text": "first seen: first time an event has been recorded into this issue.  This is valuable to understand when a bug was introduced (for instance, if that matches a release date)",
+          "nested": null
+        },
+        {
+          "text": "trend: Sentry \"magic\" ordering to determine which issues are currently gaining momentum.",
+          "nested": null
+        }
+      ]
+    },
+    {
+      "type": "paragraph",
+      "text": "[image: Issues list.png]"
+    },
+    {
+      "type": "list",
+      "ordered": false,
+      "items": [
+        {
+          "text": "ID: Sentry internal ID regarding this event.  It is unique and starts with the project name.  Hence, \" `GAMESERVER-JS-XXX` \" is an error related to frontend (javascript)",
+          "nested": null
+        },
+        {
+          "text": "Type: error, warning or sometimes, it contains the name of the exceptions raised",
+          "nested": null
+        },
+        {
+          "text": "Description: short description, normally the same error as the user experienced if that was not a silent error",
+          "nested": null
+        },
+        {
+          "text": "Seen: first and last times this issue has been encountered",
+          "nested": null
+        },
+        {
+          "text": "Status: number of events (🏴) and users (👤) affected by this.",
+          "nested": null
+        }
+      ]
+    },
+    {
+      "type": "paragraph",
+      "text": "Please note that we tried hard to limit false positives into this list, but, mainly for frontend errors, some errors can be \"ours\" and not your code.  This can be guessed in the next screen if the stack is empty."
+    },
+    {
+      "type": "paragraph",
+      "text": "This view shows the details of an issue.  As every \"specific\" data is attached to an event and not an issue, this view chooses by default an event (latest one) and uses its data to fill in some fields (for instance, tags).  If you navigate between events (see next view), this data is subjected to change."
+    },
+    {
+      "type": "paragraph",
+      "text": "This page is separated into several blocks."
+    },
+    {
+      "type": "paragraph",
+      "text": "[image: Issue main informations.png]"
+    },
+    {
+      "type": "list",
+      "ordered": false,
+      "items": [
+        {
+          "text": "Type of error (warning, error, exception name, etc.)",
+          "nested": null
+        },
+        {
+          "text": "Description of error",
+          "nested": null
+        },
+        {
+          "text": "Error ID",
+          "nested": null
+        },
+        {
+          "text": "More detailed information and counters:",
+          "nested": {
+            "type": "list",
+            "ordered": false,
+            "items": [
+              {
+                "text": "Priority: Sentry estimate of the criticality of this issue",
+                "nested": null
+              },
+              {
+                "text": "Count: number of events",
+                "nested": null
+              },
+              {
+                "text": "User count: approximate number of users impacted by this issue",
+                "nested": null
+              },
+              {
+                "text": "First seen",
+                "nested": null
+              },
+              {
+                "text": "Last seen",
+                "nested": null
+              }
+            ]
+          }
+        }
+      ]
+    },
+    {
+      "type": "paragraph",
+      "text": "[image: Issue culprit.png] This summarizes where and the issue happens, with a source file position and a release."
+    },
+    {
+      "type": "paragraph",
+      "text": "[image: Issue stack trace.png]"
+    },
+    {
+      "type": "paragraph",
+      "text": "Every element of the stack trace is clickable to see a hint on exactly when the execution was.  Please note that some of this code is minified and hence is not very readable.  However, it can still provide useful information.  We plan to perhaps unminify this code later."
+    },
+    {
+      "type": "paragraph",
+      "text": "[image: Issue request details.png] This block contains details on the request, namely:"
+    },
+    {
+      "type": "list",
+      "ordered": false,
+      "items": [
+        {
+          "text": "URL: complete URL of the request, but without the query string",
+          "nested": null
+        },
+        {
+          "text": "Method: could be `GET` or `POST`",
+          "nested": null
+        },
+        {
+          "text": "Query: all query parameters if any",
+          "nested": null
+        }
+      ]
+    },
+    {
+      "type": "paragraph",
+      "text": "[image: Issue tags.png]"
+    },
+    {
+      "type": "paragraph",
+      "text": "[image: Issue statistics - histogram.png]"
+    },
+    {
+      "type": "paragraph",
+      "text": "[image: Issue statistics.png]"
+    },
+    {
+      "type": "list",
+      "ordered": false,
+      "items": [
+        {
+          "text": "browsers",
+          "nested": null
+        },
+        {
+          "text": "device family",
+          "nested": null
+        },
+        {
+          "text": "OSes",
+          "nested": null
+        },
+        {
+          "text": "users",
+          "nested": null
+        },
+        {
+          "text": "tables",
+          "nested": null
+        }
+      ]
+    },
+    {
+      "type": "paragraph",
+      "text": "The more a stats impacts a browser, user or device brand, the more it is suspect that the issue is specific to them."
+    },
+    {
+      "type": "paragraph",
+      "text": "[image: Issue events list.png]"
+    }
+  ],
+  "links": [
+    {
+      "text": "https://studio.boardgamearena.com/studiogame?game=xxx",
+      "url": "https://studio.boardgamearena.com/studiogame?game=medina"
+    },
+    {
+      "text": "Input/Output section",
+      "url": "http://en.doc.boardgamearena.com/Tools_and_tips_of_BGA_Studio#Input.2FOutput_debugging_section"
+    },
+    {
+      "text": "Production errors buttuns.png",
+      "url": "File:Production_errors_buttuns.png.html"
+    },
+    {
+      "text": "Issues list.png",
+      "url": "File:Issues_list.png.html"
+    },
+    {
+      "text": "Issue main informations.png",
+      "url": "File:Issue_main_informations.png.html"
+    },
+    {
+      "text": "Issue culprit.png",
+      "url": "File:Issue_culprit.png.html"
+    },
+    {
+      "text": "Issue stack trace.png",
+      "url": "File:Issue_stack_trace.png.html"
+    },
+    {
+      "text": "Issue request details.png",
+      "url": "File:Issue_request_details.png.html"
+    },
+    {
+      "text": "Issue tags.png",
+      "url": "File:Issue_tags.png.html"
+    },
+    {
+      "text": "Issue statistics - histogram.png",
+      "url": "File:Issue_statistics_-_histogram.png.html"
+    },
+    {
+      "text": "Issue statistics.png",
+      "url": "File:Issue_statistics.png.html"
+    },
+    {
+      "text": "Issue events list.png",
+      "url": "File:Issue_events_list.png.html"
+    }
+  ],
+  "images": [
+    {
+      "src": "/images/thumb/a/a0/Production_errors_buttuns.png/458px-Production_errors_buttuns.png",
+      "alt": "Production errors buttuns.png"
+    },
+    {
+      "src": "/images/thumb/2/2b/Issues_list.png/600px-Issues_list.png",
+      "alt": "Issues list.png"
+    },
+    {
+      "src": "/images/thumb/c/c5/Issue_main_informations.png/300px-Issue_main_informations.png",
+      "alt": "Issue main informations.png"
+    },
+    {
+      "src": "/images/thumb/e/ef/Issue_culprit.png/300px-Issue_culprit.png",
+      "alt": "Issue culprit.png"
+    },
+    {
+      "src": "/images/thumb/0/07/Issue_stack_trace.png/300px-Issue_stack_trace.png",
+      "alt": "Issue stack trace.png"
+    },
+    {
+      "src": "/images/thumb/f/f3/Issue_request_details.png/300px-Issue_request_details.png",
+      "alt": "Issue request details.png"
+    },
+    {
+      "src": "/images/thumb/5/5f/Issue_tags.png/300px-Issue_tags.png",
+      "alt": "Issue tags.png"
+    },
+    {
+      "src": "/images/thumb/0/0f/Issue_statistics_-_histogram.png/300px-Issue_statistics_-_histogram.png",
+      "alt": "Issue statistics - histogram.png"
+    },
+    {
+      "src": "/images/thumb/c/ca/Issue_statistics.png/300px-Issue_statistics.png",
+      "alt": "Issue statistics.png"
+    },
+    {
+      "src": "/images/thumb/6/64/Issue_events_list.png/300px-Issue_events_list.png",
+      "alt": "Issue events list.png"
+    }
+  ],
+  "metadata": {
+    "extractor_version": "1.0.0",
+    "extracted_at": "2026-07-06T06:53:17.588655+00:00",
+    "word_count": 525,
+    "heading_count": 20,
+    "code_block_count": 3,
+    "table_count": 0,
+    "image_count": 10,
+    "list_count": 11
+  }
+}

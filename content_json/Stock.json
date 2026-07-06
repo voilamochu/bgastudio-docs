@@ -1,0 +1,839 @@
+{
+  "title": "Stock",
+  "source_file": "Stock.html",
+  "relative_path": "Stock.html",
+  "content_json_path": "content_json/Stock.json",
+  "headings": [
+    {
+      "level": 2,
+      "text": "Overview",
+      "id": "Overview"
+    },
+    {
+      "level": 2,
+      "text": "Using stock: a simple example",
+      "id": "Using_stock:_a_simple_example"
+    },
+    {
+      "level": 2,
+      "text": "Complete stock component reference",
+      "id": "Complete_stock_component_reference"
+    },
+    {
+      "level": 3,
+      "text": "Creation",
+      "id": "Creation"
+    },
+    {
+      "level": 3,
+      "text": "Add/Remove items",
+      "id": "Add.2FRemove_items"
+    },
+    {
+      "level": 3,
+      "text": "Getters",
+      "id": "Getters"
+    },
+    {
+      "level": 3,
+      "text": "Selection",
+      "id": "Selection"
+    },
+    {
+      "level": 3,
+      "text": "Layout",
+      "id": "Layout"
+    },
+    {
+      "level": 3,
+      "text": "Customize Appearance",
+      "id": "Customize_Appearance"
+    },
+    {
+      "level": 2,
+      "text": "Tips when adding/removing items to/from Stock components",
+      "id": "Tips_when_adding.2Fremoving_items_to.2Ffrom_Stock_components"
+    },
+    {
+      "level": 2,
+      "text": "Known issues",
+      "id": "Known_issues"
+    },
+    {
+      "level": 4,
+      "text": "Incorrectly displayed sprites on Safari",
+      "id": "Incorrectly_displayed_sprites_on_Safari"
+    }
+  ],
+  "content": [
+    {
+      "type": "paragraph",
+      "text": "A new lib for cards has been added to the framework: BgaCards . We recommend to use it instead of Stock."
+    },
+    {
+      "type": "paragraph",
+      "text": "Stock is a javascript component that you can use in your game interface to display a set of elements of the same size that need to be arranged in single or multiple lines."
+    },
+    {
+      "type": "paragraph",
+      "text": "Examples of stock use cases:"
+    },
+    {
+      "type": "list",
+      "ordered": false,
+      "items": [
+        {
+          "text": "Display a set of cards, typically hands (examples: Hearts , Seasons , The Boss , Race for the Galaxy ).",
+          "nested": null
+        },
+        {
+          "text": "Display items in player panels (examples: Takenoko , Amyitis , ...)",
+          "nested": null
+        },
+        {
+          "text": "... Many other situations. For example, black dice and cubes on cards in Troyes are displayed with stock components.",
+          "nested": null
+        }
+      ]
+    },
+    {
+      "type": "paragraph",
+      "text": "Using stock:"
+    },
+    {
+      "type": "list",
+      "ordered": false,
+      "items": [
+        {
+          "text": "Your items are arranged nicely and sorted by type.",
+          "nested": null
+        },
+        {
+          "text": "When adding or removing items to a set, all items slide smoothly to their new position in the set.",
+          "nested": null
+        },
+        {
+          "text": "Selecting and unselecting items are built-in functions.",
+          "nested": null
+        },
+        {
+          "text": "You don't have to worry about inserting/removing HTML code; the entire life cycle of the stock is managed by the component.",
+          "nested": null
+        }
+      ]
+    },
+    {
+      "type": "paragraph",
+      "text": "Let's have a look at how the stock is used in the game Hearts to display a hand of standard cards."
+    },
+    {
+      "type": "code",
+      "language": null,
+      "text": "const [stock] = await importDojoLibs(['ebg/stock']);"
+    },
+    {
+      "type": "paragraph",
+      "text": "The stock is initialized in the Javascript \"setup\" method like this:"
+    },
+    {
+      "type": "code",
+      "language": null,
+      "text": "    // Player hand\n    this.playerHand = new ebg.stock();\n    this.playerHand.create( this.bga.gameui, $('myhand'), this.cardwidth, this.cardheight );"
+    },
+    {
+      "type": "paragraph",
+      "text": "Explanations:"
+    },
+    {
+      "type": "list",
+      "ordered": false,
+      "items": [
+        {
+          "text": "We create a new stock object for the player hand.",
+          "nested": null
+        },
+        {
+          "text": "As parameters of the \"create\" method, we provide the width/height of an item (a card), and the div container \"myhand\" - which is a simple empty \"div\" element defined in our HTML template (.tpl).",
+          "nested": null
+        }
+      ]
+    },
+    {
+      "type": "paragraph",
+      "text": "Then, we must tell the stock what items it is going to display during its life: the 52 cards of a standard card game. Of course, we did not create 52 different images, but a \"CSS sprite\" image named \"cards.jpg\" with the cards arranged in 4 rows and 13 columns."
+    },
+    {
+      "type": "code",
+      "language": null,
+      "text": "    // Specify that there are 13 images per row in the CSS sprite image\n    this.playerHand.image_items_per_row = 13;\n\n    // Create card types:\n    for( var color=1;color<=4;color++ )\n    {\n        for( var value=2;value<=14;value++ )\n        {\n            // Build card type id\n            var card_type_id = this.getCardUniqueId( color, value );\n            this.playerHand.addItemType( card_type_id, card_type_id, this.bga.images.getImgUrl('cards.jpg'), card_type_id );\n        }\n    }"
+    },
+    {
+      "type": "paragraph",
+      "text": "Explanation:"
+    },
+    {
+      "type": "list",
+      "ordered": false,
+      "items": [
+        {
+          "text": "First, we tell the stock component that our CSS sprite contains 13 items per row. This way, it can find the correct image for each card type id.",
+          "nested": null
+        },
+        {
+          "text": "Then for the 4x13 cards, we call the \"addItemType\" method that creates the type. The arguments are the type id, the weight of the card (for sorting purpose), the URL of our CSS sprite, and the position of our card image in the CSS sprite.",
+          "nested": null
+        }
+      ]
+    },
+    {
+      "type": "note",
+      "variant": "note",
+      "text": "Note: In this specific example we need to generate a unique ID for each type of card based on its color and value. This is the only purpose of \"getCardUniqueId\"."
+    },
+    {
+      "type": "code",
+      "language": null,
+      "text": "this.playerHand.addToStock( this.getCardUniqueId( 2 /* 2=hearts */, 5 ) );"
+    },
+    {
+      "type": "paragraph",
+      "text": "In reality, cards have some IDs, which are useful to manipulate them. This is the reason we are using \"addToStockWithId\" instead:"
+    },
+    {
+      "type": "code",
+      "language": null,
+      "text": "this.playerHand.addToStockWithId( this.getCardUniqueId( 2 /* 2=hearts */, 5 ), my_card_id );"
+    },
+    {
+      "type": "paragraph",
+      "text": "If afterwards we want to remove this card from the stock:"
+    },
+    {
+      "type": "code",
+      "language": null,
+      "text": "this.playerHand.removeFromStockById( my_card_id );"
+    },
+    {
+      "type": "paragraph",
+      "text": "for interest, the source is available here : https://x.boardgamearena.net/data/themereleases/220811-1000/js/modules/stock.js (this link may change with new release)"
+    },
+    {
+      "type": "paragraph",
+      "text": "And StockItemType is record {weight: number, image: string, image_position: number}"
+    },
+    {
+      "type": "paragraph",
+      "text": "create( page, container_div, item_width, item_height ):"
+    },
+    {
+      "type": "paragraph",
+      "text": "Parameters:"
+    },
+    {
+      "type": "list",
+      "ordered": false,
+      "items": [
+        {
+          "text": "page: the container page. Usually: \"this.bga.gameui\".",
+          "nested": null
+        },
+        {
+          "text": "container_div: the container \"div\" element. Its not an id, if you have id you can pass $(id). It must exists.",
+          "nested": null
+        },
+        {
+          "text": "width and height (in pixels) for the stock component.",
+          "nested": null
+        }
+      ]
+    },
+    {
+      "type": "paragraph",
+      "text": "(See Hearts example above)."
+    },
+    {
+      "type": "paragraph",
+      "text": "Define a new type of item (StockItemtType) and add it to the stock with given type id."
+    },
+    {
+      "type": "paragraph",
+      "text": "Parameters:"
+    },
+    {
+      "type": "list",
+      "ordered": false,
+      "items": [
+        {
+          "text": "type: id of the type to add. You can choose any positive integer. All item types must have distinct IDs.",
+          "nested": null
+        },
+        {
+          "text": "weight: weight of items of this type. Weight value is used to sort items of the stock during the display. Note that you can specify the same weight for all items; in this case, they are not sorted and their order might change randomly at any time.",
+          "nested": null
+        },
+        {
+          "text": "image: URL of item image. Most of the time, you will use a CSS sprite for stock items, so you have to specify CSS sprite image here.",
+          "nested": null
+        }
+      ]
+    },
+    {
+      "type": "paragraph",
+      "text": "Be careful: you must specify the image url as this:"
+    },
+    {
+      "type": "code",
+      "language": null,
+      "text": "  this.bga.images.getImgUrl('yourimage.png')"
+    },
+    {
+      "type": "list",
+      "ordered": false,
+      "items": [
+        {
+          "text": "image_position: if \"image\" specify the URL of a CSS sprite, you must specify the position of the item image in this CSS sprite. For example, if you have a CSS sprite with 3 cubes with a size of 20x20 pixels each (so your CSS image has for example a size of 20x60 or 60x20), you specify \"0\" for the first cube image, 1 for the second, 2 for the third.",
+          "nested": null
+        }
+      ]
+    },
+    {
+      "type": "paragraph",
+      "text": "Important : if there is more than one line of items in your CSS sprite,  you must specify how many items per line you have in your CSS sprite, see image_items_per_row below:"
+    },
+    {
+      "type": "code",
+      "language": null,
+      "text": "    // Specify that there are 10 image items per row in images used in \"myStockObject\" control.\n    this.myStockObject.image_items_per_row = 4;"
+    },
+    {
+      "type": "paragraph",
+      "text": "addToStock( type, from )"
+    },
+    {
+      "type": "paragraph",
+      "text": "To make your life easier, in most cases we suggest you use addToStockWithId in order to give an ID to the item added. addToStock is suitable when you are using a stock to control items that are generic game materials that don't need to be tracked individually (example: a bunch of money tokens)."
+    },
+    {
+      "type": "list",
+      "ordered": false,
+      "items": [
+        {
+          "text": "type: ID of the item type to use (as specified in \"addItemType\")",
+          "nested": null
+        },
+        {
+          "text": "from: OPTIONAL: if you specify an HTML item here, the item will appear on this item and will be slid to its position on the stock item.",
+          "nested": null
+        }
+      ]
+    },
+    {
+      "type": "paragraph",
+      "text": "Example:"
+    },
+    {
+      "type": "code",
+      "language": null,
+      "text": "  // Add a money token to the \"player money\" stock.\n  // The money token will appear on \"player_id\" player panel and will move to its position.\n  this.playerMoney.addToStock( MONEY_TOKEN, 'overall_player_board_'+player_id );"
+    },
+    {
+      "type": "note",
+      "variant": "warning",
+      "text": "Important: for a given stock control, you must use either addToStock or addToStockWithId , but NEVER BOTH OF THEM."
+    },
+    {
+      "type": "paragraph",
+      "text": "This is the same method as addToStock , except that it also associates an ID with the newly created item."
+    },
+    {
+      "type": "list",
+      "ordered": false,
+      "items": [
+        {
+          "text": "When you need to know which item(s) have been selected by the user (see getSelectedItems ).",
+          "nested": null
+        },
+        {
+          "text": "When you need to remove a specific item from the stock with removeFromStockById .",
+          "nested": null
+        }
+      ]
+    },
+    {
+      "type": "paragraph",
+      "text": "removeFromStock( type, to, noupdate )"
+    },
+    {
+      "type": "paragraph",
+      "text": "'to' is an optional parameter. If \"to\" contains the ID of an HTML element, the item removed from the Stock slides to this HTML element before it disappears. Note that this method does not expose the associated animation object, however, so it's not possible to trigger other actions when it finishes, for example. If you need to do that, use Dojo's slideToObject() instead."
+    },
+    {
+      "type": "paragraph",
+      "text": "removeFromStockById( id, to, noupdate )"
+    },
+    {
+      "type": "paragraph",
+      "text": "'to' is an optional parameter. If \"to\" contains the ID of an HTML element, the item removed from the Stock slides to this HTML element before it disappears. Note that this method does not expose the associated animation object, however, so it's not possible to trigger other actions when it finishes, for example. If you need to do that, use Dojo's slideToObject() instead."
+    },
+    {
+      "type": "paragraph",
+      "text": "removeAll()"
+    },
+    {
+      "type": "paragraph",
+      "text": "removeAllTo( to )"
+    },
+    {
+      "type": "paragraph",
+      "text": "getPresentTypeList()"
+    },
+    {
+      "type": "paragraph",
+      "text": "Example:"
+    },
+    {
+      "type": "code",
+      "language": null,
+      "text": "    this.myStockControl.removeAll();\n    this.myStockControl.addToStock( 65 );\n    this.myStockControl.addToStock( 34 );\n    this.myStockControl.addToStock( 89 );\n    this.myStockControl.addToStock( 65 );\n    \n    // The following returns: { 34:1,  65:1,  89:1  }\n    var item_types = this.myStockControl.getPresentTypeList();"
+    },
+    {
+      "type": "paragraph",
+      "text": "count():"
+    },
+    {
+      "type": "paragraph",
+      "text": "getAllItems()"
+    },
+    {
+      "type": "paragraph",
+      "text": "getItemDivId(id)"
+    },
+    {
+      "type": "paragraph",
+      "text": "getItemById(id)"
+    },
+    {
+      "type": "paragraph",
+      "text": "getItemWeightById(id: number): number|null"
+    },
+    {
+      "type": "paragraph",
+      "text": "container_div"
+    },
+    {
+      "type": "paragraph",
+      "text": "control_name Its id of container_div above"
+    },
+    {
+      "type": "paragraph",
+      "text": "setSelectionMode( mode )"
+    },
+    {
+      "type": "list",
+      "ordered": false,
+      "items": [
+        {
+          "text": "0: no item can be selected by the player.",
+          "nested": null
+        },
+        {
+          "text": "1 (default): a maximum of one item can be selected by the player at a time.",
+          "nested": null
+        },
+        {
+          "text": "2: multiple items can be selected by the player at the same time.",
+          "nested": null
+        }
+      ]
+    },
+    {
+      "type": "paragraph",
+      "text": "setSelectionAppearance( type )"
+    },
+    {
+      "type": "list",
+      "ordered": false,
+      "items": [
+        {
+          "text": "'border': there will be a red border around selected items (this is the default). The attribute 'apparenceBorderWidth' can be used to manage the width of the border (in pixels).",
+          "nested": null
+        },
+        {
+          "text": "'disappear': the selected item will fade out and disappear. This is useful when the selection has the effect of destroying the item.",
+          "nested": null
+        },
+        {
+          "text": "'class': there will be an extra stockitem_selected css class added to the element when it is selected (and removed when unselected). The name of the class can be changed by using the selectionClass attribute. You can also override the default class in the css file for your game but beware of the !important keyword.",
+          "nested": null
+        }
+      ]
+    },
+    {
+      "type": "paragraph",
+      "text": "By default this class definition is:"
+    },
+    {
+      "type": "code",
+      "language": null,
+      "text": ".stockitem_selected {\n\tborder: 2px solid red ! important;\n}"
+    },
+    {
+      "type": "paragraph",
+      "text": "If you want to override it (for example, to change the border color) add this in your <game>.css file:"
+    },
+    {
+      "type": "code",
+      "language": null,
+      "text": ".stockitem_selected {\n\tborder: 2px solid orange ! important;\n}"
+    },
+    {
+      "type": "paragraph",
+      "text": "isSelected( id )"
+    },
+    {
+      "type": "paragraph",
+      "text": "selectItem( id )"
+    },
+    {
+      "type": "paragraph",
+      "text": "unselectItem( id )"
+    },
+    {
+      "type": "paragraph",
+      "text": "unselectAll()"
+    },
+    {
+      "type": "paragraph",
+      "text": "selectItemsByType(type: number): void"
+    },
+    {
+      "type": "paragraph",
+      "text": "unselectItemsByType(type: number): void"
+    },
+    {
+      "type": "paragraph",
+      "text": "onChangeSelection"
+    },
+    {
+      "type": "paragraph",
+      "text": "You can connect this to one of your methods like this:"
+    },
+    {
+      "type": "code",
+      "language": null,
+      "text": "    dojo.connect( this.myStockControl, 'onChangeSelection', this, 'onMyMethodToCall' );\n    \n    (...)\n    \n    onMyMethodToCall( control_name, item_id )\n    {\n        // This method is called when myStockControl selected items changed\n        var items = this.myStockControl.getSelectedItems();\n        \n        // (do something)\n    }"
+    },
+    {
+      "type": "paragraph",
+      "text": "Nota bene: - The \"control_name\" argument is the ID (the \"DOM\" id) of the \"div\" container of your stock control. Using \"control_name\", you can use the same callback method for different Stock control and see which one trigger the method. - The \"item_id\" argument is the stock ID (index) of the stock item that has just been selected/unselected."
+    },
+    {
+      "type": "paragraph",
+      "text": "Return the list of selected items, as an array with the following format:"
+    },
+    {
+      "type": "code",
+      "language": null,
+      "text": "[\n   { type:1,  id:  1001 },\n   { type:1,  id:  1002 },\n   { type:3,  id:  1003 }\n   ...\n]"
+    },
+    {
+      "type": "paragraph",
+      "text": "getUnselectedItems()"
+    },
+    {
+      "type": "paragraph",
+      "text": "resetItemsPosition()"
+    },
+    {
+      "type": "paragraph",
+      "text": "Example code if you change the underlying stock item, or otherwise want to make the stock item refresh:"
+    },
+    {
+      "type": "code",
+      "language": null,
+      "text": "    this.myStockControl.updateDisplay();"
+    },
+    {
+      "type": "paragraph",
+      "text": "item_margin"
+    },
+    {
+      "type": "paragraph",
+      "text": "Example:"
+    },
+    {
+      "type": "code",
+      "language": null,
+      "text": "     this.myStockControl.item_margin=5;"
+    },
+    {
+      "type": "paragraph",
+      "text": "changeItemsWeight( newWeights )"
+    },
+    {
+      "type": "paragraph",
+      "text": "Items are immediately re-sorted with the new weight."
+    },
+    {
+      "type": "paragraph",
+      "text": "newWeights is an associative array: item type id => new weight."
+    },
+    {
+      "type": "code",
+      "language": null,
+      "text": "    // Item type 1 gets a new weight of 10, 2 a new weight of 20, 3 a new weight of 30.\n    this.myStockControl.changeItemsWeight( { 1: 10, 2: 20, 3: 30 } );"
+    },
+    {
+      "type": "paragraph",
+      "text": "Example2:"
+    },
+    {
+      "type": "code",
+      "language": null,
+      "text": "    // Be careful with object initialisers with variables, use the bracket notation.\n    // Item type 1 gets a new weight of 10\n    var card_type = 1;\n    this.myStockControl.changeItemsWeight( { [card_type]: 10 } );"
+    },
+    {
+      "type": "paragraph",
+      "text": "centerItems"
+    },
+    {
+      "type": "paragraph",
+      "text": "setOverlap( horizontal_percent, vertical_percent )"
+    },
+    {
+      "type": "paragraph",
+      "text": "horizontal_overlap"
+    },
+    {
+      "type": "paragraph",
+      "text": "When horizontal_overlap=20, it means that a stock item will overlap to only show 20% of the width of all the previous items. horizontal_overlap can't be greater than 100."
+    },
+    {
+      "type": "paragraph",
+      "text": "There is two modes, in one mode it used to adjust every 2nd item (See the games \"Jaipur\" or \"Koryŏ\"), second mode when setting use_vertical_overlap_as_offset=false is more/less normal overlap with vertical layout except its perentage of overlap (opposite of horizontal_overlap)."
+    },
+    {
+      "type": "paragraph",
+      "text": "This is example of vertical stock with overlap"
+    },
+    {
+      "type": "code",
+      "language": null,
+      "text": "stock.container_div.width = \"60px\"; // enought just for 1 card\nstock.autowidth = false; // this is required so it obeys the width set above\nstock.use_vertical_overlap_as_offset = false; // this is to use normal vertical_overlap\nstock.vertical_overlap = 20; // overlap\nstock.horizontal_overlap  = -1; // current bug in stock - this is needed to enable z-index on overlapping items\nstock.item_margin = 0; // has to be 0 if using overlap\nstock.updateDisplay(); // re-layout"
+    },
+    {
+      "type": "paragraph",
+      "text": "[image: StockV.png] [image: StockHV.png] [image: StockMixed.png]"
+    },
+    {
+      "type": "paragraph",
+      "text": "autowidth"
+    },
+    {
+      "type": "code",
+      "language": null,
+      "text": "  mystock.autowidth = true;"
+    },
+    {
+      "type": "paragraph",
+      "text": "resizeItems( width, height, background_width, background_height )"
+    },
+    {
+      "type": "paragraph",
+      "text": "background_height is an optional argument."
+    },
+    {
+      "type": "code",
+      "language": null,
+      "text": " stock.resizeItems(100, 120, 150, 170);"
+    },
+    {
+      "type": "paragraph",
+      "text": "extraClasses"
+    },
+    {
+      "type": "code",
+      "language": null,
+      "text": " this.playerHand.extraClasses='mycard';"
+    },
+    {
+      "type": "paragraph",
+      "text": "Note that it is the same list for all items."
+    },
+    {
+      "type": "paragraph",
+      "text": "Using onItemCreate, you can trigger a method each time a new item is added to the Stock, in order to customize it."
+    },
+    {
+      "type": "code",
+      "language": null,
+      "text": "    // During \"setup\" phase, we associate our method \"setupNewCard\" with the creation of a new stock item:\n    this.myStockItem.onItemCreate = dojo.hitch( this, 'setupNewCard' ); \n\n\n    // And here is our \"setupNewCard\":\n    setupNewCard( card_div, card_type_id, card_id )\n    {\n       // Add a special tooltip on the card:\n       this.addTooltip( card_div.id, _(\"Some nice tooltip for this item\"), '' );\n\n       // Note that \"card_type_id\" contains the type of the item, so you can do special actions depending on the item type\n\n       // Add some custom HTML content INSIDE the Stock item:\n       dojo.place( this.format_block( 'jstpl_my_card_content', {\n                                ....\n                           } ), card_div.id );\n    }"
+    },
+    {
+      "type": "paragraph",
+      "text": "onItemDelete"
+    },
+    {
+      "type": "code",
+      "language": null,
+      "text": "  this.myStock.onItemDelete = (card_div, card_type_id, card_id) => { console.log(\"card deleted from myStock: \"+card_id); };"
+    },
+    {
+      "type": "paragraph",
+      "text": "jstpl_stock_item"
+    },
+    {
+      "type": "code",
+      "language": null,
+      "text": "  mystock.jstpl_stock_item ='<div id=\"${id}\" class=\"stockitem ${extra_classes}\" style=\"top:${top}px;left:${left}px;width:${width}px;height:${height}px;${position};background-image:url(\\'${image}\\');${additional_style}\"></div>';\n            "
+    },
+    {
+      "type": "note",
+      "variant": "note",
+      "text": "Note: variable ${position} normally resolve to nothing or z-index: X - depending on overlap variables, and additional_style resolves to `background-size: ${this.backgroundSize}` if it is set"
+    },
+    {
+      "type": "paragraph",
+      "text": "If you want to use your own css styles for images on the items (i.e. not grid), you can do it as following, use customize template, then modify onItemCreate to add slyle which is based on type"
+    },
+    {
+      "type": "code",
+      "language": null,
+      "text": " mystock.jstpl_stock_item =  '<div id=\"${id}\" class=\"stockitem card\" style=\"top:${top}px;left:${left}px;${position};\"></div>';\n mystock.onItemCreate = (card_div, card_type_id, card_id ) => { dojo.addClass(card_div, 'card_type_'+card_type_id); }\n for (var type = 0; type <= 48; type++) {\n   mystock.addItemType(type, type); // we skipped image and image position here\n }"
+    },
+    {
+      "type": "note",
+      "variant": "note",
+      "text": "Note: in this case your CSS must define all styles require for these stock items such as width, heigh, image and image positioning for every type"
+    },
+    {
+      "type": "code",
+      "language": null,
+      "text": ".card {\n  width: 50px;\n  height: 80px;\n  background-image: url(img/cards.jpg);\n  background-size: 600% auto;\n}\n.card_type_1 {\n  background-postion: 20% 0%;\n}"
+    },
+    {
+      "type": "paragraph",
+      "text": "Most cases will be one of the following situations:"
+    },
+    {
+      "type": "paragraph",
+      "text": "When you add a card to a stock item, and this card is not coming from another stock:"
+    },
+    {
+      "type": "list",
+      "ordered": false,
+      "items": [
+        {
+          "text": "Use addToStockWithId with a \"from\" argument set to the element of your interface where the card should come from (i.e. div id). For example if you want to \"reveal\" card from player hand and it is not an interface element you can set from to be 'player_board_'+activePlayerId (where activePlayerId is player who played that card).",
+          "nested": null
+        }
+      ]
+    },
+    {
+      "type": "paragraph",
+      "text": "Situation B :"
+    },
+    {
+      "type": "list",
+      "ordered": false,
+      "items": [
+        {
+          "text": "On the destination Stock, use addToStockWithId with a \"from\" argument which is the HTML id of the corresponding item in the source Stock. For example, if the source stock id is \"myHand\", then the HTML id of card 48 is \"myHand_item_48\".",
+          "nested": null
+        },
+        {
+          "text": "Then, remove the source item with removeFromStockById . Note: do NOT set the 'to' argument in this call, otherwise you'll get two animations.",
+          "nested": null
+        }
+      ]
+    },
+    {
+      "type": "paragraph",
+      "text": "(Note that it's important to do things in this order, because the source item must still exist when you use it as the origin of the slide.)"
+    },
+    {
+      "type": "paragraph",
+      "text": "When you move a card from a stock item to something that is not a stock item:"
+    },
+    {
+      "type": "list",
+      "ordered": false,
+      "items": [
+        {
+          "text": "Insert the card as a classic HTML template (dojo.place / this.format_block).",
+          "nested": null
+        },
+        {
+          "text": "Place it on the Stock item with this.placeOnObject , using the Stock item HTML id (see above).",
+          "nested": null
+        },
+        {
+          "text": "Slide it to its new position with this.slideToObject .",
+          "nested": null
+        },
+        {
+          "text": "Remove the card from the Stock item with removeFromStockById .",
+          "nested": null
+        }
+      ]
+    },
+    {
+      "type": "paragraph",
+      "text": "Using the methods above, your cards should slide to, from, and between your Stock controls smoothly."
+    },
+    {
+      "type": "paragraph",
+      "text": "As mentioned above, stock displays its images using \"sprites\" consisting of a portion of a larger image. To accomplish this, it uses the CSS background-position attribute in negative multiples of 100%. For example, the first element of the first row would be 0% 0%. The second element of the first row would be -100% 0%, etc."
+    },
+    {
+      "type": "paragraph",
+      "text": "Using pixels in background-position is probably the easiest way to fix this problem, but that would require modifying the stock code itself. As a developer, you can also work around the problem by specifying a background-size attribute based on the size in elements of your source image. For example, if you have a source image that contains 5 rows of 28 sprites, you should specify \"background-size: 2800% 500%;\""
+    }
+  ],
+  "links": [
+    {
+      "text": "BgaCards",
+      "url": "BgaCards.html"
+    },
+    {
+      "text": "https://x.boardgamearena.net/data/themereleases/220811-1000/js/modules/stock.js",
+      "url": "https://x.boardgamearena.net/data/themereleases/220811-1000/js/modules/stock.js"
+    },
+    {
+      "text": "StockV.png",
+      "url": "File:StockV.png.html"
+    },
+    {
+      "text": "StockHV.png",
+      "url": "File:StockHV.png.html"
+    },
+    {
+      "text": "StockMixed.png",
+      "url": "File:StockMixed.png.html"
+    }
+  ],
+  "images": [
+    {
+      "src": "/images/f/fb/StockV.png",
+      "alt": "StockV.png"
+    },
+    {
+      "src": "/images/6/66/StockHV.png",
+      "alt": "StockHV.png"
+    },
+    {
+      "src": "/images/1/11/StockMixed.png",
+      "alt": "StockMixed.png"
+    }
+  ],
+  "metadata": {
+    "extractor_version": "1.0.0",
+    "extracted_at": "2026-07-06T06:53:17.558772+00:00",
+    "word_count": 1716,
+    "heading_count": 12,
+    "code_block_count": 27,
+    "table_count": 0,
+    "image_count": 3,
+    "list_count": 14
+  }
+}

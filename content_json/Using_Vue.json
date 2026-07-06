@@ -1,0 +1,30 @@
+{
+  "title": "Using Vue",
+  "source_file": "Using_Vue.html",
+  "relative_path": "Using_Vue.html",
+  "content_json_path": "content_json/Using_Vue.json",
+  "headings": [],
+  "content": [
+    {
+      "type": "paragraph",
+      "text": "This guide will discuss how to incorporate the progressive JavaScript framework Vue.js 3 to make a game on BGA."
+    }
+  ],
+  "links": [
+    {
+      "text": "Vue.js 3",
+      "url": "https://v3.vuejs.org/"
+    }
+  ],
+  "images": [],
+  "metadata": {
+    "extractor_version": "1.0.0",
+    "extracted_at": "2026-07-06T06:53:17.703342+00:00",
+    "word_count": 19,
+    "heading_count": 0,
+    "code_block_count": 0,
+    "table_count": 0,
+    "image_count": 0,
+    "list_count": 0
+  }
+}

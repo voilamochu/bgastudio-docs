@@ -1,0 +1,67 @@
+{
+  "title": "Game fonts: fonts directory",
+  "source_file": "Game_fonts_fonts_directory.html",
+  "relative_path": "Game_fonts_fonts_directory.html",
+  "content_json_path": "content_json/Game_fonts_fonts_directory.json",
+  "headings": [
+    {
+      "level": 2,
+      "text": "Game fonts",
+      "id": "Game_fonts"
+    },
+    {
+      "level": 2,
+      "text": "Example",
+      "id": "Example"
+    },
+    {
+      "level": 2,
+      "text": "Debugging",
+      "id": "Debugging"
+    }
+  ],
+  "content": [
+    {
+      "type": "paragraph",
+      "text": "You must upload in a `fonts` directory all fonts that you will use in your game interface."
+    },
+    {
+      "type": "paragraph",
+      "text": "The you can use them by setting a font-family with the filename (note the dashes will be replaced by spaces), without needing to declare a `@font-face`."
+    },
+    {
+      "type": "paragraph",
+      "text": "With a `custom-font.woff2` in the `fonts` directory:"
+    },
+    {
+      "type": "code",
+      "language": null,
+      "text": "  .element-with-custom-font {\n    font-family: 'custom font';\n  }"
+    },
+    {
+      "type": "paragraph",
+      "text": "With a `custom-font-bold.woff2` in the `fonts` directory:"
+    },
+    {
+      "type": "code",
+      "language": null,
+      "text": "  .element-with-custom-font-bold-solution1 {\n    font-family: 'custom font';\n    font-weight: bold;\n  }\n  .element-with-custom-font-bold-solution2 {\n    font-family: 'custom font bold';\n  }"
+    },
+    {
+      "type": "paragraph",
+      "text": "In the DevTool console, write `document.getElementById('bga-auto-declared-font-faces')` to list the fonts that are preloaded by the framework."
+    }
+  ],
+  "links": [],
+  "images": [],
+  "metadata": {
+    "extractor_version": "1.0.0",
+    "extracted_at": "2026-07-06T06:53:17.341618+00:00",
+    "word_count": 94,
+    "heading_count": 3,
+    "code_block_count": 2,
+    "table_count": 0,
+    "image_count": 0,
+    "list_count": 0
+  }
+}

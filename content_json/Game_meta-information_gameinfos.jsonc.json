@@ -1,0 +1,341 @@
+{
+  "title": "Game meta-information: gameinfos.jsonc",
+  "source_file": "Game_meta-information_gameinfos.jsonc.html",
+  "relative_path": "Game_meta-information_gameinfos.jsonc.html",
+  "content_json_path": "content_json/Game_meta-information_gameinfos.jsonc.json",
+  "headings": [
+    {
+      "level": 2,
+      "text": "Overview",
+      "id": "Overview"
+    },
+    {
+      "level": 2,
+      "text": "Publisher",
+      "id": "Publisher"
+    },
+    {
+      "level": 2,
+      "text": "Time Profiles",
+      "id": "Time_Profiles"
+    },
+    {
+      "level": 2,
+      "text": "Number of players",
+      "id": "Number_of_players"
+    },
+    {
+      "level": 2,
+      "text": "Colors",
+      "id": "Colors"
+    },
+    {
+      "level": 2,
+      "text": "Minimum screen size",
+      "id": "Minimum_screen_size"
+    },
+    {
+      "level": 2,
+      "text": "Losers not ranked between themselves",
+      "id": "Losers_not_ranked_between_themselves"
+    },
+    {
+      "level": 2,
+      "text": "Disable player rotation in case of rematch",
+      "id": "Disable_player_rotation_in_case_of_rematch"
+    },
+    {
+      "level": 2,
+      "text": "Deprecated fields",
+      "id": "Deprecated_fields"
+    },
+    {
+      "level": 2,
+      "text": "Tie breaker description",
+      "id": "Tie_breaker_description"
+    },
+    {
+      "level": 2,
+      "text": "Multiple tie breaker management",
+      "id": "Multiple_tie_breaker_management"
+    },
+    {
+      "level": 2,
+      "text": "Language dependency",
+      "id": "Language_dependency"
+    },
+    {
+      "level": 2,
+      "text": "Coop Elo Mode",
+      "id": "Coop_Elo_Mode"
+    }
+  ],
+  "content": [
+    {
+      "type": "paragraph",
+      "text": "From this file, you can edit the various meta-information of your game."
+    },
+    {
+      "type": "note",
+      "variant": "note",
+      "text": "Note: if you break gameinfos and cannot load the management page, then reload using the direct URL: https://studio.boardgamearena.com/admin/studio/reloadGameInfos.html?game= (with your game name at the end of url)."
+    },
+    {
+      "type": "paragraph",
+      "text": "See sections below for specific cases."
+    },
+    {
+      "type": "paragraph",
+      "text": "These fields should match the publisher of the game. In the case of a public domain name, they should be left empty (empty string)"
+    },
+    {
+      "type": "paragraph",
+      "text": "fast/medium/slow_additional_time : please set high values here: after the game has been released, there is a process that adjusts these values to match the real game duration. Adjustment starts when the game enters beta, after that these have no effect, and require admin intervention to change."
+    },
+    {
+      "type": "paragraph",
+      "text": "players"
+    },
+    {
+      "type": "code",
+      "language": null,
+      "text": " \"players\": [3, 4, 6],"
+    },
+    {
+      "type": "list",
+      "ordered": false,
+      "items": [
+        {
+          "text": "during the first step of development of a game, it is recommended to have a \"1 player\" configuration: it is much easier to start/stop a game this way, as you don't need to switch players.",
+          "nested": null
+        },
+        {
+          "text": "if you change the minimum number of players from 1 to 2, for example, make sure the new tables you create are not restricted from 1 to 1 player otherwise when you create a new table and this account setting is used, there will be a conflict with the new minimum number of players allowed and you will be blocked from creating the game.",
+          "nested": null
+        }
+      ]
+    },
+    {
+      "type": "paragraph",
+      "text": "But you can also unblock yourself by changing the number of players again, launching a game with a larger number, and then getting back to the number you want."
+    },
+    {
+      "type": "code",
+      "language": null,
+      "text": " \"suggest_player_number\": 3,\n \"not_recommend_player_number\": [6],"
+    },
+    {
+      "type": "paragraph",
+      "text": "Don't specify anything here (null) if there is no configuration that is REALLY better/worse than another one. You can check player's poll on BoardGameGeek game page if you have any doubt. Note that there can be at most one suggested player count (provide either null or a single number), but there can be several not recommended player counts (provide either null or an array of values)."
+    },
+    {
+      "type": "paragraph",
+      "text": "Important exception: in the automatic lobby, if 'suggest_player_number' is not specified, the system will try first the lowest. So if the lowest player number is not compatible with the default options for your game (especially if there is a Solo mode that can only be played in training mode) you have to specify a suggest_player_number of your choice, so that players launching a game in the automatic lobby without checking the option don't get an error with the default configuration."
+    },
+    {
+      "type": "paragraph",
+      "text": "player_colors"
+    },
+    {
+      "type": "code",
+      "language": null,
+      "text": "  \"player_colors\": [\"ff0000\", \"008000\", \"0000ff\", \"ffa500\", \"ffffff\"],"
+    },
+    {
+      "type": "paragraph",
+      "text": "This array defines the default player colors, theoretically this can be bigger then maximum number of players but you have to support all of the players in your game. Your setupNewGame in php is responsible for attributing these values to players. See section \"Player color preferences\" in Main_game_logic:_yourgamename.game.php for details."
+    },
+    {
+      "type": "paragraph",
+      "text": "The settings to specify mobile (or small desktop) screen size if detailled here: https://en.doc.boardgamearena.com/Your_game_mobile_version"
+    },
+    {
+      "type": "paragraph",
+      "text": "By default, all player are ranked, but in some games, the rules say that all non-winners are losers and not ranked between themselves. You can set this option to true so that for your game, there are only winners and losers, without a full ranking of all players."
+    },
+    {
+      "type": "code",
+      "language": null,
+      "text": "// If in the game, all losers are equal (no score to rank them or explicit in the rules that losers are not ranked between them), set this to true \n// The game end result will display \"Winner\" for the 1st player and \"Loser\" for all other players\n\"losers_not_ranked\": false,"
+    },
+    {
+      "type": "paragraph",
+      "text": "Note : In some team games like Tichu, Spades, and Belote, players do not gain or lose ELO by teammates. (Hover over the ELO changes to find 'Teammate: -100%')"
+    },
+    {
+      "type": "note",
+      "variant": "warning",
+      "text": "Warning: This modifier should not be applied to co-op games or games where 3 or more parties can compete each other (e.g. individual mode with 3 or more players, 2v2v2 6 player mode, and etc.)."
+    },
+    {
+      "type": "paragraph",
+      "text": "By default, in case of a rematch players are rotated so that the first player changes. If for your game it's better to always have a random player order you can change this option."
+    },
+    {
+      "type": "code",
+      "language": null,
+      "text": "// When doing a rematch, the player order is swapped using a \"rotation\" so the starting player is not the same\n// If you want to disable this, set this to true (even if the comment in your game file say the opposite).\n\"disable_player_order_swap_on_rematch\": false,"
+    },
+    {
+      "type": "list",
+      "ordered": false,
+      "items": [
+        {
+          "text": "Game designer ( `designer` )",
+          "nested": null
+        },
+        {
+          "text": "Game artist ( `artist` )",
+          "nested": null
+        },
+        {
+          "text": "Year ( `year` )",
+          "nested": null
+        },
+        {
+          "text": "Tags ( `tags` )",
+          "nested": null
+        },
+        {
+          "text": "Game presentation ( `presentation` )",
+          "nested": null
+        },
+        {
+          "text": "Game page warning ( `gamepanel_page_warning` )",
+          "nested": null
+        },
+        {
+          "text": "Custom \"buy this game\" button ( `custom_buy_button` )",
+          "nested": null
+        }
+      ]
+    },
+    {
+      "type": "paragraph",
+      "text": "⚠ Note : these fields are no longer read from this file ; these are now managed via the Game Metadata Manager ."
+    },
+    {
+      "type": "paragraph",
+      "text": "Describe tie breaker score calculation (using $this->playerScoreAux)."
+    },
+    {
+      "type": "paragraph",
+      "text": "Example:"
+    },
+    {
+      "type": "code",
+      "language": null,
+      "text": "\"tie_breaker_description\": \"Number of remaining cards in hand\","
+    },
+    {
+      "type": "paragraph",
+      "text": "If your game has multiple tie breakers, here is what you should do."
+    },
+    {
+      "type": "paragraph",
+      "text": "In this example, your playerScoreAux field might be calculated like this:"
+    },
+    {
+      "type": "paragraph",
+      "text": "In this case, you should add the following in gameinfos.inc.php:"
+    },
+    {
+      "type": "code",
+      "language": null,
+      "text": " \"tie_breaker_split\": [10000, 100 , 1],"
+    },
+    {
+      "type": "paragraph",
+      "text": "It means that the first tie breaker has been multiplied by 10000, the second by 100, and the third by 1."
+    },
+    {
+      "type": "list",
+      "ordered": false,
+      "items": [
+        {
+          "text": "When 2 players are tied, it will show their remaining money.",
+          "nested": null
+        },
+        {
+          "text": "If their remaining money are equal, it will show the number of building built in addition to the remaining money.",
+          "nested": null
+        },
+        {
+          "text": "If these two tie breaker are still the same, it will show the 3 tie breaking values.",
+          "nested": null
+        }
+      ]
+    },
+    {
+      "type": "paragraph",
+      "text": "If you have a game that is language dependent, you can use the option described here: Main_game_logic:_yourgamename.game.php#Language_dependent_games_API"
+    },
+    {
+      "type": "paragraph",
+      "text": "For cooperative games, by default players will earn as many rating points as the score. Games ended with a positive score counts as wins, and scores of 0 or below count as losses."
+    },
+    {
+      "type": "paragraph",
+      "text": "Related discussion:"
+    },
+    {
+      "type": "paragraph",
+      "text": "https://boardgamearena.com/forum/viewtopic.php?t=32289"
+    },
+    {
+      "type": "paragraph",
+      "text": "Here is an example using options and win/loss (score 1/0):"
+    },
+    {
+      "type": "code",
+      "language": null,
+      "text": "   'coop_elo_mode' => [\n       'type' => 'points_references',\n       'references' => [\n           // Difficulty 1\n           ['players_nbr' => 2, 'options' => [100 => 1, 101 => 0], 'elo' => [0 => 1000, 1 => 1400]],\n           ['players_nbr' => 2, 'options' => [100 => 1, 101 => 1], 'elo' => [0 => 1000, 1 => 1470]],\n           ['players_nbr' => 3, 'options' => [100 => 1, 101 => 0], 'elo' => [0 => 1000, 1 => 1350]],\n           ['players_nbr' => 3, 'options' => [100 => 1, 101 => 1], 'elo' => [0 => 1000, 1 => 1400]],\n           ['players_nbr' => 4, 'options' => [100 => 1, 101 => 0], 'elo' => [0 => 1000, 1 => 1400]],\n           ['players_nbr' => 4, 'options' => [100 => 1, 101 => 1], 'elo' => [0 => 1000, 1 => 1470]],\n           // Difficulty 2\n           ['players_nbr' => 2, 'options' => [100 => 2, 101 => 0], 'elo' => [0 => 1000, 1 => 1540]],\n           ['players_nbr' => 2, 'options' => [100 => 2, 101 => 1], 'elo' => [0 => 1000, 1 => 1690]],\n           ['players_nbr' => 3, 'options' => [100 => 2, 101 => 0], 'elo' => [0 => 1000, 1 => 1450]],\n           ['players_nbr' => 3, 'options' => [100 => 2, 101 => 1], 'elo' => [0 => 1000, 1 => 1540]],\n           ['players_nbr' => 4, 'options' => [100 => 2, 101 => 0], 'elo' => [0 => 1000, 1 => 1540]],\n           ['players_nbr' => 4, 'options' => [100 => 2, 101 => 1], 'elo' => [0 => 1000, 1 => 1690]],\n           // Difficulty 3\n           ['players_nbr' => 2, 'options' => [100 => 3, 101 => 0], 'elo' => [0 => 1000, 1 => 1690]],\n           ['players_nbr' => 2, 'options' => [100 => 3, 101 => 1], 'elo' => [0 => 1000, 1 => 1910]],\n           ['players_nbr' => 3, 'options' => [100 => 3, 101 => 0], 'elo' => [0 => 1000, 1 => 1540]],\n           ['players_nbr' => 3, 'options' => [100 => 3, 101 => 1], 'elo' => [0 => 1000, 1 => 1690]],\n           ['players_nbr' => 4, 'options' => [100 => 3, 101 => 0], 'elo' => [0 => 1000, 1 => 1690]],\n           ['players_nbr' => 4, 'options' => [100 => 3, 101 => 1], 'elo' => [0 => 1000, 1 => 1910]],\n           // Difficulty 4\n           ['players_nbr' => 2, 'options' => [100 => 4, 101 => 0], 'elo' => [0 => 1000, 1 => 1830]],\n           ['players_nbr' => 2, 'options' => [100 => 4, 101 => 1], 'elo' => [0 => 1000, 1 => 2120]],\n           ['players_nbr' => 3, 'options' => [100 => 4, 101 => 0], 'elo' => [0 => 1000, 1 => 1640]],\n           ['players_nbr' => 3, 'options' => [100 => 4, 101 => 1], 'elo' => [0 => 1000, 1 => 1830]],\n           ['players_nbr' => 4, 'options' => [100 => 4, 101 => 0], 'elo' => [0 => 1000, 1 => 1830]],\n           ['players_nbr' => 4, 'options' => [100 => 4, 101 => 1], 'elo' => [0 => 1000, 1 => 2120]],\n           // Difficulty 5\n           ['players_nbr' => 2, 'options' => [100 => 5, 101 => 0], 'elo' => [0 => 1000, 1 => 1980]],\n           ['players_nbr' => 2, 'options' => [100 => 5, 101 => 1], 'elo' => [0 => 1000, 1 => 2340]],\n           ['players_nbr' => 3, 'options' => [100 => 5, 101 => 0], 'elo' => [0 => 1000, 1 => 1740]],\n           ['players_nbr' => 3, 'options' => [100 => 5, 101 => 1], 'elo' => [0 => 1000, 1 => 1980]],\n           ['players_nbr' => 4, 'options' => [100 => 5, 101 => 0], 'elo' => [0 => 1000, 1 => 1980]],\n           ['players_nbr' => 4, 'options' => [100 => 5, 101 => 1], 'elo' => [0 => 1000, 1 => 2340]],\n       ],\n   ],"
+    },
+    {
+      "type": "paragraph",
+      "text": "Here is an example using different scoring values to indicate the level of difficulty mastered by the players winning the game:"
+    },
+    {
+      "type": "code",
+      "language": null,
+      "text": "   'coop_elo_mode' => array(\n       'type' => 'points_references',\n       'references' => array(\n           array(\n               'players_nbr' => 2,\n               //'options' => array( ),\n               'elo' => array(\n                   0 => 1000,\n                   1 => 1350,\n                   2 => 1425,\n                   3 => 1500,\n                   4 => 1576,\n                   5 => 1651,\n                   6 => 1727,\n                   7 => 1802,\n                   8 => 1878,\n                   9 => 1953,\n                   10 => 2029,\n                   11 => 2104,\n                   12 => 2180\n               )\n           ),\n           array(\n               'players_nbr' => 3,\n               //'options' => array( ),\n               'elo' => array(\n                   0 => 1000,\n                   1 => 1400,\n                   2 => 1470,\n                   3 => 1541,\n                   4 => 1612,\n                   5 => 1683,\n                   6 => 1754,\n                   7 => 1825,\n                   8 => 1895,\n                   9 => 1966,\n                   10 => 2018,\n                   11 => 2095,\n                   12 => 2250\n               )\n           ),\n           array(\n               'players_nbr' => 4,\n               //'options' => array( ),\n               'elo' => array(\n                   0 => 1000,\n                   1 => 1430,\n                   2 => 1505,\n                   3 => 1580,\n                   4 => 1655,\n                   5 => 1730,\n                   6 => 1805,\n                   7 => 1880,\n                   8 => 1955,\n                   9 => 2030,\n                   10 => 2105,\n                   11 => 2180,\n                   12 => 2330\n               )\n           ),\n           array(\n               'players_nbr' => 5,\n               // 'options' => array( ),\n               'elo' => array(\n                   0 => 1000,\n                   1 => 1480,\n                   2 => 1558,\n                   3 => 1636,\n                   4 => 1714,\n                   5 => 1792,\n                   6 => 1870,\n                   7 => 1949,\n                   8 => 2027,\n                   9 => 2105,\n                   10 => 2183,\n                   11 => 2261,\n                   12 => 2340\n               )\n           )\n       )\n   ),"
+    }
+  ],
+  "links": [
+    {
+      "text": "https://studio.boardgamearena.com/admin/studio/reloadGameInfos.html?game=",
+      "url": "https://studio.boardgamearena.com/admin/studio/reloadGameInfos.html?game="
+    },
+    {
+      "text": "Main_game_logic:_yourgamename.game.php",
+      "url": "Main_game_logic:_yourgamename.game.php.html"
+    },
+    {
+      "text": "https://en.doc.boardgamearena.com/Your_game_mobile_version",
+      "url": "https://en.doc.boardgamearena.com/Your_game_mobile_version"
+    },
+    {
+      "text": "Game Metadata Manager",
+      "url": "Game_metadata_manager.html"
+    },
+    {
+      "text": "Main_game_logic:_yourgamename.game.php#Language_dependent_games_API",
+      "url": "Main_game_logic:_yourgamename.game.php.html"
+    },
+    {
+      "text": "https://boardgamearena.com/forum/viewtopic.php?t=32289",
+      "url": "https://boardgamearena.com/forum/viewtopic.php?t=32289"
+    }
+  ],
+  "images": [],
+  "metadata": {
+    "extractor_version": "1.0.0",
+    "extracted_at": "2026-07-06T06:53:17.396029+00:00",
+    "word_count": 1609,
+    "heading_count": 13,
+    "code_block_count": 9,
+    "table_count": 0,
+    "image_count": 0,
+    "list_count": 3
+  }
+}

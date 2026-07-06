@@ -1,0 +1,793 @@
+{
+  "title": "Options and preferences: gameoptions.json, gamepreferences.json",
+  "source_file": "Options_and_preferences_gameoptions.json,_gamepreferences.json.html",
+  "relative_path": "Options_and_preferences_gameoptions.json,_gamepreferences.json.html",
+  "content_json_path": "content_json/Options_and_preferences_gameoptions.json,_gamepreferences.json.json",
+  "headings": [
+    {
+      "level": 2,
+      "text": "Game Options",
+      "id": "Game_Options"
+    },
+    {
+      "level": 3,
+      "text": "Details of game options format",
+      "id": "Details_of_game_options_format"
+    },
+    {
+      "level": 4,
+      "text": "displaycondition vs startcondition",
+      "id": "displaycondition_vs_startcondition"
+    },
+    {
+      "level": 4,
+      "text": "gamestartonly",
+      "id": "gamestartonly"
+    },
+    {
+      "level": 4,
+      "text": "level",
+      "id": "level"
+    },
+    {
+      "level": 4,
+      "text": "option presentation",
+      "id": "option_presentation"
+    },
+    {
+      "level": 2,
+      "text": "User Preferences",
+      "id": "User_Preferences"
+    },
+    {
+      "level": 3,
+      "text": "Listening for preference changes and updating preference from code",
+      "id": "Listening_for_preference_changes_and_updating_preference_from_code"
+    },
+    {
+      "level": 3,
+      "text": "Accessing User Preferences on the server",
+      "id": "Accessing_User_Preferences_on_the_server"
+    },
+    {
+      "level": 2,
+      "text": "Translations",
+      "id": "Translations"
+    },
+    {
+      "level": 2,
+      "text": "Migration",
+      "id": "Migration"
+    }
+  ],
+  "content": [
+    {
+      "type": "paragraph",
+      "text": "In `gameoptions.json` , you can define your game options (i.e. game variants)."
+    },
+    {
+      "type": "note",
+      "variant": "note",
+      "text": "Note:"
+    },
+    {
+      "type": "list",
+      "ordered": false,
+      "items": [
+        {
+          "text": "If your game has no variants or preferences, you don't have to modify these files.",
+          "nested": null
+        },
+        {
+          "text": "you can use jsonc instead of json, to allow comments in the Json.",
+          "nested": null
+        },
+        {
+          "text": "If a change on this file doesn't reflect on the Studio, go to the control panel and press \"Reload game options configuration\" on Studio to force your changes to be detected (or have an error about the issue).",
+          "nested": null
+        }
+      ]
+    },
+    {
+      "type": "paragraph",
+      "text": "Make sure you understand difference between options and preferences:"
+    },
+    {
+      "type": "list",
+      "ordered": false,
+      "items": [
+        {
+          "text": "Game options - something usually in the rule book defined as \"variant\" (except for player count, which is automatically handled). For example, whether to include The River in Carcassonne.",
+          "nested": null
+        },
+        {
+          "text": "User preferences - personal choices of each player only visible to that specific player - i.e. layout, whether or not to prompt for action, whether or not auto-opt in in some actions, etc.",
+          "nested": null
+        }
+      ]
+    },
+    {
+      "type": "paragraph",
+      "text": "Game options are selected by the table creator and usually correspond to game variants, for example if the game includes expansions or certain special rules."
+    },
+    {
+      "type": "code",
+      "language": null,
+      "text": " {\n    \"100\": { \"name\": \"Game Setup\", ... },\n    \"101\": { \"name\": \"Draft\", ... }\n }"
+    },
+    {
+      "type": "paragraph",
+      "text": "Each key corresponds to the option id, and each value is that option definition, which is described below."
+    },
+    {
+      "type": "paragraph",
+      "text": "Note 2: the key in json file must be a string type, even its correspond to a number in other places (such as php, or other references in same json)."
+    },
+    {
+      "type": "paragraph",
+      "text": "To get the value of a table option from the Game class, using the JSON key."
+    },
+    {
+      "type": "paragraph",
+      "text": "To access json data (the metadata only) can use"
+    },
+    {
+      "type": "code",
+      "language": null,
+      "text": "  $game_options = $this->getTableOptions();"
+    },
+    {
+      "type": "paragraph",
+      "text": "The options will be displayed in order they appear in JSON, not sorted by id or name!"
+    },
+    {
+      "type": "paragraph",
+      "text": "The following are the values of the option definition object:"
+    },
+    {
+      "type": "list",
+      "ordered": false,
+      "items": [
+        {
+          "text": "name - mandatory . The name of the option visible for table creator. This is automatically marked for translation.",
+          "nested": null
+        },
+        {
+          "text": "values - mandatory . The map representing possible values of this option. The key of the map is possible value of this option, its a number but has to be string in json. The value is an object descring it.",
+          "nested": {
+            "type": "list",
+            "ordered": false,
+            "items": [
+              {
+                "text": "name - mandatory . String representation of the numeric value visible to table creator. This is automatically marked for translation.",
+                "nested": null
+              },
+              {
+                "text": "description - String description of this value to use when the name of the option is not self-explanatory. Displayed at the table under the option when this value is selected. Note: if there is no description, this should be omitted.",
+                "nested": null
+              },
+              {
+                "text": "tmdisplay - String representation of the option visible in the table description in the lobby. Usually if a variant values are On and Off (default), the tmdisplay would be same as description name when On, and nothing (empty string) when Off. ( Warning : due to some caching, a change in tmdisplay may not be effective immediately in the studio, even after forcing a reload of options.) Pro Tip: You can use this as a pre-game communication by adding fake options that just do nothing in the game but make it easier to find other player wanted the same game configuration (see the crew deep sea for example).",
+                "nested": null
+              },
+              {
+                "text": "nobeginner - Set to true if not recommended for beginners",
+                "nested": null
+              },
+              {
+                "text": "firstgameonly - Set to true if this option is recommended only for the first game (discovery option)",
+                "nested": null
+              },
+              {
+                "text": "beta - Set to true to indicate that this option is in \"beta\" development stage (there will be a warning for players starting the game)",
+                "nested": null
+              },
+              {
+                "text": "alpha - Set to true to indicate that this option is in \"alpha\" development stage (there will be a warning, and starting the game will be allowed only in training mode except for the developer)",
+                "nested": null
+              },
+              {
+                "text": "premium - Option can be only used by premium members",
+                "nested": null
+              }
+            ]
+          }
+        },
+        {
+          "text": "default - indicates the default value to use for this option (optional, if not present the first value listed is the default)",
+          "nested": null
+        },
+        {
+          "text": "displaycondition - (array of conditions) - checks the conditions before displaying the option for selection. All (or any) conditions must be true for the option to be displayed. All or any depends on value of displayconditionoperand",
+          "nested": null
+        }
+      ]
+    },
+    {
+      "type": "paragraph",
+      "text": "Supported display condition types:"
+    },
+    {
+      "type": "list",
+      "ordered": false,
+      "items": [
+        {
+          "text": "displayconditionoperand - can be 'and' (this is the default) or 'or'. Allows to change the behaviour to display the option if one of the conditions is true instead of all of them.",
+          "nested": null
+        },
+        {
+          "text": "startcondition - (map from value to conditions array) - checks the conditions (on options VALUES) before starting the game. All conditions must be true for the game to start, otherwise players will get a red error message when attempting to begin the game.",
+          "nested": null
+        }
+      ]
+    },
+    {
+      "type": "paragraph",
+      "text": "Supported start condition types:"
+    },
+    {
+      "type": "list",
+      "ordered": false,
+      "items": [
+        {
+          "text": "For all these condition types, a gamestartonly boolean option can be added, if you have options that are exclusive. Setting this boolean to true will defer the evaluation of the startcondition to the game creation, instead of preventing the player to select options that are exclusive at all. See below for an example. But this should never be used -- see the warning below",
+          "nested": {
+            "type": "list",
+            "ordered": false,
+            "items": [
+              {
+                "text": "minplayers condition ensures at least this many players (an array of values is not supported here)",
+                "nested": null
+              },
+              {
+                "text": "maxplayers condition ensures at most this many players",
+                "nested": null
+              },
+              {
+                "text": "otheroption conditions ensure another option is set to this given values. That works the same as in displaycondition .",
+                "nested": null
+              },
+              {
+                "text": "otheroptionisnot conditions ensure another option is NOT set to this given value.  That works the same as in displaycondition .",
+                "nested": null
+              }
+            ]
+          }
+        },
+        {
+          "text": "notdisplayedmessage - if option is not suppose to be visible because of displaycondition but this is set, the text will be visible instead of combo drop down",
+          "nested": null
+        },
+        {
+          "text": "level - what kind of option it is: base , major , or additional . See below for more informations.",
+          "nested": null
+        }
+      ]
+    },
+    {
+      "type": "paragraph",
+      "text": "Common (reserved) options for all tables (reserved range 200-299):"
+    },
+    {
+      "type": "list",
+      "ordered": false,
+      "items": [
+        {
+          "text": "201 (const GAMESTATE_RATING_MODE) - ELO OFF (aka Training mode),",
+          "nested": {
+            "type": "list",
+            "ordered": false,
+            "items": [
+              {
+                "text": "0 = Normal",
+                "nested": null
+              },
+              {
+                "text": "1 = Training",
+                "nested": null
+              },
+              {
+                "text": "2 = Arena",
+                "nested": null
+              }
+            ]
+          }
+        },
+        {
+          "text": "200 (const GAMESTATE_CLOCK_MODE) - game speed profile",
+          "nested": {
+            "type": "list",
+            "ordered": false,
+            "items": [
+              {
+                "text": "[0, 1, 2] - realtime (technically <10 realtime but you cannot define range in php)",
+                "nested": null
+              },
+              {
+                "text": "values >=10 - turn based (currently 10..21)",
+                "nested": null
+              },
+              {
+                "text": "Note there are two similar values, 9 = realtime \"no time limit with friends only\" vs. 20 = turn-based \"no time limit with friends only\"",
+                "nested": null
+              }
+            ]
+          }
+        }
+      ]
+    },
+    {
+      "type": "paragraph",
+      "text": "GAMESTATE_RATING_MODE and GAMESTATE_CLOCK_MODE are PHP global constants usable in your PHP game code (ex: `$this->tableOptions->get(GAMESTATE_CLOCK_MODE)` ) but not in json."
+    },
+    {
+      "type": "code",
+      "language": null,
+      "text": "{\n  \"100\": {\n    \"name\": \"Game Variant\",\n    \"values\": {\n      \"1\": {\n        \"name\": \"Learning\",\n        \"firstgameonly\": true,\n        \"tmdisplay\": \"Learning\"\n      },\n      \"2\": {\n        \"name\": \"Base\",\n      },\n      \"3\": {\n        \"name\": \"Extended\",\n        \"nobeginner\": true,\n        \"beta\": true,\n        \"tmdisplay\": \"Extended\"\n      }\n    },\n    \"default\": 2\n  },\n  \"101\": {\n    \"name\": \"Draft variant\",\n    \"values\": {\n      \"1\": {\n        \"name\": \"No draft\"\n      },\n      \"2\": {\n        \"name\": \"Draft\",\n        \"tmdisplay\": \"Draft\",\n        \"premium\": true,\n        \"nobeginner\": true\n      }\n    },\n    \"displaycondition\": [\n      {\n        \"type\": \"otheroption\",\n        \"id\": 100,\n        \"value\": [ 2, 3 ]\n      },\n      {\n        \"type\": \"otheroption\",\n        \"id\": 201,\n        \"value\": 1\n      }\n    ],\n    \"startcondition\": {\n      \"1\": [],\n      \"2\": [\n        {\n          \"type\": \"maxplayers\",\n          \"value\": 3,\n          \"message\": \"Draft option is available for 3 players maximum.\"\n        }\n      ]\n    }\n  },\n  \"102\": {\n    \"name\": \"Takeovers\",\n    \"values\": {\n      \"2\": {\n        \"name\": \"No takeover\"\n      },\n      \"1\": {\n        \"name\": \"Allow takeovers\",\n        \"tmdisplay\": \"Takeovers\",\n        \"premium\": true,\n        \"nobeginner\": true\n      }\n    },\n    \"displaycondition\": [\n      {\n        \"type\": \"otheroption\",\n        \"id\": 100,\n        \"value\": [ 3 ]\n      }\n    ],\n    \"startcondition\": {\n      \"2\": [],\n      \"1\": [\n        {\n          \"type\": \"maxplayers\",\n          \"value\": 2,\n          \"message\": \"Rebel vs Imperium Takeover Scenario is available for 2 players only.\"\n        }\n      ]\n    }\n  }\n}"
+    },
+    {
+      "type": "paragraph",
+      "text": "Example of option that condition on ELO off:"
+    },
+    {
+      "type": "code",
+      "language": null,
+      "text": "{\n  \"100\": {\n    \"name\": \"Learning Game (No Research)\",\n    \"values\": {\n      \"1\": {\n        \"name\": \"Off\",\n        \"tmdisplay\": \"\"\n      },\n      \"2\": {\n        \"name\": \"On\",\n        \"tmdisplay\": \"Learning Game\"\n      }\n    },\n    \"startcondition\": {\n      \"2\": {\n        \"type\": \"otheroption\",\n        \"id\": 201,\n        \"value\": 1,\n        \"message\": \"Learning variant available only in friendly mode\"\n      }\n    }\n  }\n}"
+    },
+    {
+      "type": "paragraph",
+      "text": "Example of condition that is only available for REALTIME game mode:"
+    },
+    {
+      "type": "code",
+      "language": null,
+      "text": "\"displaycondition\": [\n    { \"type\": \"otheroption\", \"id\": 200, \"value\": [0, 1, 2] }\n],"
+    },
+    {
+      "type": "paragraph",
+      "text": "Example of using condition on your own option:"
+    },
+    {
+      "type": "code",
+      "language": null,
+      "text": "{\n  \"102\": {\n    \"name\": \"Scenarios\",\n    \"values\": {\n      \"1\": {\n        \"name\": \"Off\",\n        \"nobeginner\": false\n      },\n      \"2\": {\n        \"name\": \"On\",\n        \"tmdisplay\": \"Scenarios\",\n        \"nobeginner\": true\n      }\n    },\n    \"displaycondition\": [\n      {\n        \"type\": \"otheroptionisnot\",\n        \"id\": 100,\n        \"value\": 1\n      }\n    ],\n    \"notdisplayedmessage\": \"Scenarios variant is not available if Learning variant is chosen\"\n  }\n}"
+    },
+    {
+      "type": "paragraph",
+      "text": "Example of handling solo vs multiplayer options:"
+    },
+    {
+      "type": "paragraph",
+      "text": "`displaycondition` should be used when an option should not be present in the list under certain conditions."
+    },
+    {
+      "type": "list",
+      "ordered": false,
+      "items": [
+        {
+          "text": "2 player maps: A B C D",
+          "nested": null
+        },
+        {
+          "text": "3 player maps: E F G H",
+          "nested": null
+        },
+        {
+          "text": "4 player maps: I J K L",
+          "nested": null
+        }
+      ]
+    },
+    {
+      "type": "paragraph",
+      "text": "`startcondition` should be used when a specific combination of option values is invalid, but the option itself still makes sense to show."
+    },
+    {
+      "type": "list",
+      "ordered": false,
+      "items": [
+        {
+          "text": "Player 1 faction: A, B, C, D, E, F, G",
+          "nested": null
+        },
+        {
+          "text": "Player 2 faction: A, B, C, D, E, F, G",
+          "nested": null
+        },
+        {
+          "text": "startcondition: both players can't be the same faction",
+          "nested": null
+        }
+      ]
+    },
+    {
+      "type": "paragraph",
+      "text": "These options should both be displayed at all times, but there are some invalid configurations."
+    },
+    {
+      "type": "paragraph",
+      "text": "On the table configuration page, it won't let you select a combination which is invalid according to `startcondition` . Doing so will show a red warning, and will revert the option to the previous value. This means you could end up in a situation where you can't easily change between certain options (requiring you to set or unset options in a specific order)."
+    },
+    {
+      "type": "paragraph",
+      "text": "Probably the easiest way to see what the difference is is with an example."
+    },
+    {
+      "type": "list",
+      "ordered": false,
+      "items": [
+        {
+          "text": "set to training mode",
+          "nested": null
+        },
+        {
+          "text": "set player count to 1",
+          "nested": null
+        },
+        {
+          "text": "try setting \"Clan Auction\" to one of the \"On\" options",
+          "nested": null
+        },
+        {
+          "text": "try starting the game, there's an error! Ie. `\"gamestartonly\" => true`",
+          "nested": null
+        }
+      ]
+    },
+    {
+      "type": "paragraph",
+      "text": "Then, with a _Sushi Go Party!_ table:"
+    },
+    {
+      "type": "list",
+      "ordered": false,
+      "items": [
+        {
+          "text": "set number of players to 7",
+          "nested": null
+        },
+        {
+          "text": "try setting \"Sushi Go! / Sushi Go Party!\" to \"Sushi Go!\"",
+          "nested": null
+        },
+        {
+          "text": "you can't set the option! Ie. `\"gamestartonly\" => false`",
+          "nested": null
+        }
+      ]
+    },
+    {
+      "type": "paragraph",
+      "text": "In code:"
+    },
+    {
+      "type": "code",
+      "language": null,
+      "text": "{\n  \"100\": {\n    \"name\": \"Option name\",\n    \"values\": [],\n    \"startcondition\": {\n      \"1\": [\n        {\n          \"type\": \"maxplayers\",\n          \"value\": 2,\n          \"message\": \"This option is available for 2 players only.\",\n          \"gamestartonly\": true\n        }\n      ]\n    }\n  }\n}"
+    },
+    {
+      "type": "code",
+      "language": null,
+      "text": "{\n    \"100\": {\n        \"name\": \"Option name\",\n        \"values\": [...],\n        \"level\": \"major\"\n    }\n}"
+    },
+    {
+      "type": "list",
+      "ordered": false,
+      "items": [
+        {
+          "text": "base is the default value (you don't need to specify it).",
+          "nested": null
+        },
+        {
+          "text": "major denotes a major option, which will always be displayed on top, and with a specific UI.",
+          "nested": null
+        },
+        {
+          "text": "additional means this option will not be displayed by default, to unclutter the option panel.",
+          "nested": null
+        }
+      ]
+    },
+    {
+      "type": "paragraph",
+      "text": "About major options:"
+    },
+    {
+      "type": "list",
+      "ordered": false,
+      "items": [
+        {
+          "text": "a game can only have 1 major option , and of course, it must be a important game changer.",
+          "nested": null
+        },
+        {
+          "text": "the pictures will default to the standard Game Box, and can be set independently for each value, from the Game metadata manager (in the \"Major Variants\" section). Note: this cannot be tested from Studio as there is not studio-only Game metadata manager, to see Major Variants option - the game has to be deployed at least as alpha.",
+          "nested": null
+        },
+        {
+          "text": "the major option can have more than 2 values (there will then be an arrow to slide to the other values, carousel-like)",
+          "nested": null
+        },
+        {
+          "text": "the naming of major variant values should be concise and the values should have descriptive text (not just \"enabled\" or \"disabled\")",
+          "nested": {
+            "type": "list",
+            "ordered": false,
+            "items": [
+              {
+                "text": "👍 Option name \"Expansion\", option values \"Base game\", \"Bigger is Better\" => Displayed as \"Expansion: Base game\" or \"Expansion: Bigger is Better\"",
+                "nested": null
+              },
+              {
+                "text": "👎 Option name \"Bigger is Better\", option values \"Enabled\", \"Disabled => Displayed as \"Bigger is Better: Enabled\" or \"Bigger is Better: Disabled\"",
+                "nested": null
+              }
+            ]
+          }
+        }
+      ]
+    },
+    {
+      "type": "paragraph",
+      "text": "About additional options:"
+    },
+    {
+      "type": "list",
+      "ordered": false,
+      "items": [
+        {
+          "text": "Please set each option that concerns small details in this category: Advanced players will find this option anyway, and it will simplify the interface of the page of your game.",
+          "nested": null
+        }
+      ]
+    },
+    {
+      "type": "paragraph",
+      "text": "[image: Option levels]"
+    },
+    {
+      "type": "paragraph",
+      "text": "An option WILL be displayed as a Checkbox instead of a selector if certain conditions are met:"
+    },
+    {
+      "type": "list",
+      "ordered": false,
+      "items": [
+        {
+          "text": "option has only 2 values",
+          "nested": null
+        },
+        {
+          "text": "values are either (case insensitive):",
+          "nested": {
+            "type": "list",
+            "ordered": false,
+            "items": [
+              {
+                "text": "yes and no",
+                "nested": null
+              },
+              {
+                "text": "on and off",
+                "nested": null
+              },
+              {
+                "text": "enabled and disabled",
+                "nested": null
+              }
+            ]
+          }
+        }
+      ]
+    },
+    {
+      "type": "paragraph",
+      "text": "The \"default\" value still has to be specified, and can be \"on\" or \"off\" (it's actually just a difference in display)."
+    },
+    {
+      "type": "paragraph",
+      "text": "User preferences is something cosmetic about the game interface which however can create user wars, so you can satisfy all users by giving them individual preferences. You should use this only if it significantly improves the interface for a large proportion of users. These preferences appear in the three-line hamburger menu in the top corner of the bga menu (and also at the bottom on the page in the Options tab). \"Display game logs\" and \"Display tooltips\" are baked-in by default, but you can extend this list as below."
+    },
+    {
+      "type": "paragraph",
+      "text": "[image: The user preferences menu for the game Century]"
+    },
+    {
+      "type": "blockquote",
+      "text": "These preferences are a good place to put accessibility options - as Century did for its Colorblind Support."
+    },
+    {
+      "type": "code",
+      "language": null,
+      "text": "{\n  \"100\": {\n    \"name\": \"Colorblind Support\",\n    \"needReload\": true,\n    \"values\": {\n      \"1\": {\n        \"name\": \"None\",\n        \"cssPref\": \"colorblind_off\"\n      },\n      \"2\": {\n        \"name\": \"Numbers\",\n        \"cssPref\": \"colorblind_on\"\n      },\n      \"3\": {\n        \"name\": \"Shapes\",\n        \"cssPref\": \"colorblind_shapes\"\n      }\n    },\n    \"default\": 1\n  }\n}"
+    },
+    {
+      "type": "paragraph",
+      "text": "There is two ways to check/apply this. In javascript"
+    },
+    {
+      "type": "code",
+      "language": null,
+      "text": " if (this.bga.userPreferences.get(100) == 2) ..."
+    },
+    {
+      "type": "paragraph",
+      "text": "This checks if preferences 100 has selected value 2."
+    },
+    {
+      "type": "paragraph",
+      "text": "As user you have to select them from the Gear menu when game is started. On studio only dev0 account will have it actually working (bug?)."
+    },
+    {
+      "type": "list",
+      "ordered": false,
+      "items": [
+        {
+          "text": "name - mandatory . The name of the preference. This string is marked for translation.",
+          "nested": null
+        },
+        {
+          "text": "needReload - If set to true, the game interface will auto-reload after a change of the preference.",
+          "nested": null
+        },
+        {
+          "text": "values - mandatory . The map of values with additional parameters per value.",
+          "nested": {
+            "type": "list",
+            "ordered": false,
+            "items": [
+              {
+                "text": "name - mandatory . String representation of the numeric value.  This string is marked for translation.",
+                "nested": null
+              },
+              {
+                "text": "cssPref - CSS class to add to the <html> tag. Currently it is added or removed only after a reload (see needReload).",
+                "nested": null
+              }
+            ]
+          }
+        },
+        {
+          "text": "default - Indicates the default value to use for this preference (optional, if not present the first value listed is the default).",
+          "nested": null
+        }
+      ]
+    },
+    {
+      "type": "paragraph",
+      "text": "The BGA framework offers read/write and callback for user preference changes. See Game interface logic: yourgamename.js#User preferences"
+    },
+    {
+      "type": "paragraph",
+      "text": "PHP has an object called $this->userPreferences , and you simply have to use its method get ( get($playerId, $prefId): ?$int ) to know the preference value of a specific player :"
+    },
+    {
+      "type": "code",
+      "language": null,
+      "text": "if ($this->userPreferences->get($playerId, $prefId) == $prefValue) {\n....\n}"
+    },
+    {
+      "type": "note",
+      "variant": "note",
+      "text": "Note: it is stored in database table bga_user_preferences"
+    },
+    {
+      "type": "paragraph",
+      "text": "Note that any name or description values in these JSON files are automatically added to the translation system."
+    },
+    {
+      "type": "paragraph",
+      "text": "Previously, options and preferences were specified in a single `gameoptions.inc.php` file."
+    },
+    {
+      "type": "paragraph",
+      "text": "The PHP format will continue to work for existing games, and although preferred, there is no need to migrate unless you want to. However, newly created games must use the new format."
+    },
+    {
+      "type": "paragraph",
+      "text": "If you want to migrate:"
+    },
+    {
+      "type": "list",
+      "ordered": false,
+      "items": [
+        {
+          "text": "Go to studio and press Reload game options configuration",
+          "nested": null
+        },
+        {
+          "text": "It will dump json on the log window - you can take this, format it and save into 2 files (if you have both). For gamepreference.json remove option \"200\" - this is default common option, it should not be in your file.",
+          "nested": null
+        }
+      ]
+    },
+    {
+      "type": "paragraph",
+      "text": "Manual method:"
+    },
+    {
+      "type": "list",
+      "ordered": false,
+      "items": [
+        {
+          "text": "Remove all calls to `totranslate()` , and replace with the plain string",
+          "nested": null
+        },
+        {
+          "text": "Remove any references to BGA's PHP constants, such as GAMESTATE_RATING_MODE, and replace with the plain value (in this case, 201)",
+          "nested": null
+        },
+        {
+          "text": "You can populate `gameoptions.json` with the result of `json_encode($game_options, JSON_PRETTY_PRINT)`",
+          "nested": null
+        },
+        {
+          "text": "You can populate `gamepreferences.json` with the result of `json_encode($game_preferences, JSON_PRETTY_PRINT)`",
+          "nested": null
+        },
+        {
+          "text": "If you include gameoptions.inc.php directly, to read the values, then replace those calls with `$this->getTableOptions()` or `$this->getTablePreferences()` as appropriate which return arrays parsed from the JSON files",
+          "nested": null
+        }
+      ]
+    },
+    {
+      "type": "blockquote",
+      "text": "Game options change (Optional!) `gameoptions.inc.php` is now considered legacy, and `gameoptions.json` and `gamepreferences.json` are recommended for new projects: The wiki and the template project have been updated: https://en.doc.boardgamearena.com/Options_and_preferences:_gameoptions.json,_gamepreferences.json Any questions/problems can come to me, or can be asked here. The format of the json files matches the format of the old php files We realise there are some drawbacks (sorry!): No comments in the JSON file, meaning you have to check the wiki for examples No PHP constants in the JSON file, meaning magic numbers However, we hope it's good for BGA because: Simpler to parse (for robots and humans) Easier to check for errors (we could perhaps use an XSLT one day) No need to run game-specific PHP code on the metasite NOTE : Switching is totally optional, and the legacy files will still work for existing projects, and for those who know about them."
+    }
+  ],
+  "links": [
+    {
+      "text": "below",
+      "url": "#gamestartonly"
+    },
+    {
+      "text": "below",
+      "url": "#level"
+    },
+    {
+      "text": "See studio bug #104",
+      "url": "https://studio.boardgamearena.com/bug?id=104"
+    },
+    {
+      "text": "Game metadata manager",
+      "url": "Game_metadata_manager.html"
+    },
+    {
+      "text": "Option levels",
+      "url": "File:Option-levels.png.html"
+    },
+    {
+      "text": "The user preferences menu for the game Century",
+      "url": "File:Century_preferences_menu.PNG.html"
+    },
+    {
+      "text": "Game interface logic: yourgamename.js#User preferences",
+      "url": "Game_interface_logic:_yourgamename.js.html"
+    },
+    {
+      "text": "https://en.doc.boardgamearena.com/Options_and_preferences:_gameoptions.json,_gamepreferences.json",
+      "url": "Options_and_preferences:_gameoptions.json,_gamepreferences.json.html"
+    }
+  ],
+  "images": [
+    {
+      "src": "/images/thumb/0/0c/Option-levels.png/800px-Option-levels.png",
+      "alt": "Option levels"
+    },
+    {
+      "src": "/images/thumb/c/c1/Century_preferences_menu.PNG/400px-Century_preferences_menu.PNG",
+      "alt": "The user preferences menu for the game Century"
+    }
+  ],
+  "metadata": {
+    "extractor_version": "1.0.0",
+    "extracted_at": "2026-07-06T06:53:17.477861+00:00",
+    "word_count": 1230,
+    "heading_count": 11,
+    "code_block_count": 11,
+    "table_count": 0,
+    "image_count": 2,
+    "list_count": 17
+  }
+}

@@ -1,0 +1,525 @@
+{
+  "title": "Tutorial hearts",
+  "source_file": "Tutorial_hearts.html",
+  "relative_path": "Tutorial_hearts.html",
+  "content_json_path": "content_json/Tutorial_hearts.json",
+  "headings": [
+    {
+      "level": 2,
+      "text": "Introduction",
+      "id": "Introduction"
+    },
+    {
+      "level": 2,
+      "text": "Hearts Rules",
+      "id": "Hearts_Rules"
+    },
+    {
+      "level": 2,
+      "text": "Create your first game",
+      "id": "Create_your_first_game"
+    },
+    {
+      "level": 2,
+      "text": "Hook version control system",
+      "id": "Hook_version_control_system"
+    },
+    {
+      "level": 2,
+      "text": "Update game infos and box graphics",
+      "id": "Update_game_infos_and_box_graphics"
+    },
+    {
+      "level": 2,
+      "text": "Layout and Graphics",
+      "id": "Layout_and_Graphics"
+    },
+    {
+      "level": 2,
+      "text": "Game Interface with BGA Cards",
+      "id": "Game_Interface_with_BGA_Cards"
+    },
+    {
+      "level": 2,
+      "text": "Game Database and Game Initialization",
+      "id": "Game_Database_and_Game_Initialization"
+    },
+    {
+      "level": 4,
+      "text": "Database Schema",
+      "id": "Database_Schema"
+    },
+    {
+      "level": 3,
+      "text": "Game State Variables",
+      "id": "Game_State_Variables"
+    },
+    {
+      "level": 3,
+      "text": "Game Setup",
+      "id": "Game_Setup"
+    },
+    {
+      "level": 4,
+      "text": "Dealing Cards",
+      "id": "Dealing_Cards"
+    },
+    {
+      "level": 2,
+      "text": "Full Game Model Synchronization",
+      "id": "Full_Game_Model_Synchronization"
+    },
+    {
+      "level": 3,
+      "text": "Player's Hand",
+      "id": "Player.27s_Hand"
+    },
+    {
+      "level": 3,
+      "text": "Cards on Table",
+      "id": "Cards_on_Table"
+    },
+    {
+      "level": 2,
+      "text": "State Machine",
+      "id": "State_Machine"
+    },
+    {
+      "level": 3,
+      "text": "State Templates",
+      "id": "State_Templates"
+    },
+    {
+      "level": 4,
+      "text": "States/NewHand.php",
+      "id": "States.2FNewHand.php"
+    },
+    {
+      "level": 4,
+      "text": "States/PlayerTurn.php",
+      "id": "States.2FPlayerTurn.php"
+    },
+    {
+      "level": 4,
+      "text": "States/NextPlayer.php",
+      "id": "States.2FNextPlayer.php"
+    },
+    {
+      "level": 4,
+      "text": "States/EndHand.php",
+      "id": "States.2FEndHand.php"
+    },
+    {
+      "level": 3,
+      "text": "Test Your Game is not broken",
+      "id": "Test_Your_Game_is_not_broken"
+    },
+    {
+      "level": 3,
+      "text": "State Logic",
+      "id": "State_Logic"
+    },
+    {
+      "level": 4,
+      "text": "New Hand",
+      "id": "New_Hand"
+    },
+    {
+      "level": 4,
+      "text": "Next Player",
+      "id": "Next_Player"
+    },
+    {
+      "level": 4,
+      "text": "Player Turn",
+      "id": "Player_Turn"
+    },
+    {
+      "level": 2,
+      "text": "Client - Server Interactions",
+      "id": "Client_-_Server_Interactions"
+    },
+    {
+      "level": 2,
+      "text": "Zombie turn",
+      "id": "Zombie_turn"
+    },
+    {
+      "level": 2,
+      "text": "Scoring and End of game handling",
+      "id": "Scoring_and_End_of_game_handling"
+    },
+    {
+      "level": 2,
+      "text": "Clean Up",
+      "id": "Clean_Up"
+    },
+    {
+      "level": 2,
+      "text": "Rule Enforcements",
+      "id": "Rule_Enforcements"
+    },
+    {
+      "level": 2,
+      "text": "Fix first player with 2 of clubs",
+      "id": "Fix_first_player_with_2_of_clubs"
+    },
+    {
+      "level": 2,
+      "text": "Spectator support",
+      "id": "Spectator_support"
+    },
+    {
+      "level": 2,
+      "text": "Improve UI",
+      "id": "Improve_UI"
+    },
+    {
+      "level": 3,
+      "text": "Center Player Areas",
+      "id": "Center_Player_Areas"
+    },
+    {
+      "level": 3,
+      "text": "Better Card Play Animations",
+      "id": "Better_Card_Play_Animations"
+    },
+    {
+      "level": 3,
+      "text": "Card Sorting",
+      "id": "Card_Sorting"
+    },
+    {
+      "level": 3,
+      "text": "Tooltips",
+      "id": "Tooltips"
+    },
+    {
+      "level": 2,
+      "text": "Game progresstion",
+      "id": "Game_progresstion"
+    },
+    {
+      "level": 2,
+      "text": "Additional stuff",
+      "id": "Additional_stuff"
+    },
+    {
+      "level": 2,
+      "text": "After the tutorial",
+      "id": "After_the_tutorial"
+    }
+  ],
+  "content": [
+    {
+      "type": "paragraph",
+      "text": "Using this tutorial, you can build a complete working game on the BGA environment: Hearts."
+    },
+    {
+      "type": "list",
+      "ordered": false,
+      "items": [
+        {
+          "text": "Read the overall presentations of the BGA Framework ( see here ).",
+          "nested": null
+        },
+        {
+          "text": "Some-what know the languages used on BGA: PHP, SQL, HTML, CSS, Javascript",
+          "nested": null
+        },
+        {
+          "text": "Set up your development environment First Steps with BGA Studio",
+          "nested": null
+        },
+        {
+          "text": "As part of setup you have to have access to your ftp home folder in studio, which would have the full 'hearts' game source code. We will be using some resources of this game in this tutorial, so copy it over to local disk if you have not done so.",
+          "nested": null
+        }
+      ]
+    },
+    {
+      "type": "paragraph",
+      "text": "If you are stuck or have question about this tutorial, post on BGA Developers forum"
+    },
+    {
+      "type": "paragraph",
+      "text": "Hearts is a trick-taking card game for four players where the goal is to score the fewest points. Players aim to avoid taking tricks with heart cards (1 point each) and the Queen of Spades (13 points). Each round, 13 cards are dealt, players pass three cards, and the player with the 2 of Clubs starts the first trick. Play continues clockwise, with players needing to follow suit if they can, and the highest card of the lead suit wins the trick. Hearts cannot be played until they are \"broken\" by a player who can't follow suit and discards a heart, or by a player leading with a heart after they've been broken."
+    },
+    {
+      "type": "paragraph",
+      "text": "If you have not already, you have to create a project in BGA Studio. For this tutorial you can create a project heartsYOURNAME where YOURNAME is your developer login name (or shorter version of thereof). You can also re-use the project you have created for the \"First Steps\" tutorial above."
+    },
+    {
+      "type": "paragraph",
+      "text": "With the initial skeleton of code provided, you can already start a game from the BGA Studio."
+    },
+    {
+      "type": "paragraph",
+      "text": "2. Modify the text in .js file (for example replace \"Player zone content goes here\" to \"Hello\"), reload the page in the browser and make sure your ftp sync works as expected. Note: if you have not setup auto-sync do it now, manually copying files is a no-starter."
+    },
+    {
+      "type": "paragraph",
+      "text": "Attention!!! Very important note about reloading, if you don't remember this you may spend hours debugging. The browser caches images. If you change any of these files, you have to do \"full reload\" which is usually Ctrl+F5 (or Ctrl+reload button on browser) not just a regular reload."
+    },
+    {
+      "type": "paragraph",
+      "text": "For a real game, or even for this tutorial, we recommend committing the code to version control right from the start. You are going to find yourself in a situation where the game doesn't even start anymore and no way of debugging it, unless you have a way to revert. That is where version control becomes very handy. If you are not familiar with version control (e.g. git ) then at least back up your files after each major change. Start now."
+    },
+    {
+      "type": "paragraph",
+      "text": "Different revisions represent different steps along the process, starting from original template to a PARTIAL game."
+    },
+    {
+      "type": "paragraph",
+      "text": "The real hearts game (that you can play on BGA) can be found in your FTP home folder, after getting read-only access, go to https://studio.boardgamearena.com/projects , select Already Published and find Hearts to get access (It may not match this tutorial as framework diverged since this game was created and it may not have been updated)"
+    },
+    {
+      "type": "paragraph",
+      "text": "Even it does nothing yet, always start by making sure the game looks decent in the game selector, meaning it has nice box graphics and its information is correct. For that we need to edit gameinfos.jsonc ."
+    },
+    {
+      "type": "paragraph",
+      "text": "So let's do that. Find \"hearts\" on BoardGameGeek. (Hint: Original release 1850 :))"
+    },
+    {
+      "type": "code",
+      "language": null,
+      "text": " // Game publisher\n   'publisher' => 'Public Domain',"
+    },
+    {
+      "type": "code",
+      "language": null,
+      "text": " // Board Game Geek ID of the publisher\n   'publisher_bgg_id' => 171,"
+    },
+    {
+      "type": "code",
+      "language": null,
+      "text": " // Players configuration that can be played (ex: 2 to 4 players)\n 'players' => array( 4 ),  "
+    },
+    {
+      "type": "paragraph",
+      "text": "Important step : you have to refresh the information in the Studio website through the control panel. So go to Control Panel -> Manage Games -> heartsYOURNAME and press Reload for 'Reload game informations'."
+    },
+    {
+      "type": "paragraph",
+      "text": "The next step would be to replace game box with nicer images. This can be done from the Game metadata manager ."
+    },
+    {
+      "type": "note",
+      "variant": "note",
+      "text": "Note: if you had run the game before with less than 4 players there is a bug that will prevent you from running it with 4 only (if you did not run it before or run it with 4 players as instructed stop reading this note), to workaround revert back to original players array (i.e. 1,2,3,4), reload game options, then create a table with 4 players, exit that game table, then change gameoptions to 4 only as above, reload game options, create table again."
+    },
+    {
+      "type": "paragraph",
+      "text": "In this section we will do graphics of the game, and main layout of the game."
+    },
+    {
+      "type": "paragraph",
+      "text": "Details about images can be found here: Game art: img directory . If you did not setup auto-sync of files, sync the graphics manually with remote folder (re-sync with your workspace)."
+    },
+    {
+      "type": "code",
+      "language": null,
+      "text": "\n\n  setup(gamedatas) {\n    console.log(\"Starting game setup\");\n\n    this.bga.gameArea.getElement().insertAdjacentHTML(\n      \"beforeend\",\n      `\n                <div id=\"myhand_wrap\" class=\"whiteblock\">\n                    <b id=\"myhand_label\">${_(\"My hand\")}</b>\n                        <div id=\"myhand\">\n                        </div>\n                    </div>\n\n            `,\n    );\n    // ..."
+    },
+    {
+      "type": "paragraph",
+      "text": "If you refresh you should see now white area with My Hand title."
+    },
+    {
+      "type": "paragraph",
+      "text": "Now lets add a card into the hand, just so you can feel it. Edit the html snippet we inserted earlier buy adding a line representing a card"
+    },
+    {
+      "type": "code",
+      "language": null,
+      "text": "...\n    <div id=\"myhand\">\n       <div class=\"fakecard\"></div>\n    </div>\n..."
+    },
+    {
+      "type": "paragraph",
+      "text": "Edit .css file, add this code (.css file is empty now, only has comments, just tuck this at the end)"
+    },
+    {
+      "type": "code",
+      "language": null,
+      "text": ".fakecard {\n    display: inline-block;\n    position: relative;\n    margin-top: 5px;\n    border-radius: 5%;\n    width: 100px;\n    height: 135px;\n    background-size: calc(100px * 15);\n    background-image: url('img/cards.jpg'); /* temp hack to see it */\n}"
+    },
+    {
+      "type": "paragraph",
+      "text": "When you change existing graphics files remember that you have to FORCE-reload page, i.e. Ctrl-F5, otherwise its cached."
+    },
+    {
+      "type": "paragraph",
+      "text": "[image: Heartsla-tpl3.png]"
+    },
+    {
+      "type": "paragraph",
+      "text": "Awesome! Now lets do the rest of layout."
+    },
+    {
+      "type": "paragraph",
+      "text": "Let's complete the game template. You template should have this code, just leave it there"
+    },
+    {
+      "type": "code",
+      "language": null,
+      "text": "\n\n      // Example to add a div on the game area\n      this.bga.gameArea.getElement().insertAdjacentHTML(\"beforeend\",\n                            <div id=\"player-tables\"></div>\n                        `\n      );"
+    },
+    {
+      "type": "paragraph",
+      "text": "Then change the code following comment \"// Setting up player boards\" with this"
+    },
+    {
+      "type": "code",
+      "language": null,
+      "text": "      // Setting up player boards\n      const numPlayers = Object.keys(gamedatas.players).length;\n      Object.values(gamedatas.players).forEach((player, index) => {\n        document.getElementById(\"player-tables\").insertAdjacentHTML(\n          \"beforeend\",\n          // we generate this html snippet for each player\n          `\n    <div class=\"playertable whiteblock playertable_${DIRECTIONS[index]}\">\n        <div class=\"playertablename\" style=\"color:#${player.color};\">${player.name}</div>\n        <div id=\"tableau_${player.id}\"></div>\n    </div>\n    `\n        );\n      });"
+    },
+    {
+      "type": "paragraph",
+      "text": "What we did is we added a template for every players at the table. Now try to reload you game. Oops! it won't load. This is to teach you how it will look like when you have syntax error in your js file. The game will hang loading at 10% or so. How to know what happened? Open dev tools in browser (usually F12) and navigate to Console tab. You will see a stack trace of where error is. In our case"
+    },
+    {
+      "type": "code",
+      "language": null,
+      "text": " HeartsFIXME.js:68 Uncaught (in promise) ReferenceError: DIRECTIONS is not defined"
+    },
+    {
+      "type": "paragraph",
+      "text": "In real hearts game they use this direction array to map every player to direction (like North) but its not needed, we can just use player index. Lets just replace DIRECTIONS[index] with index, i.e"
+    }
+  ],
+  "links": [
+    {
+      "text": "see here",
+      "url": "Studio.html"
+    },
+    {
+      "text": "First Steps with BGA Studio",
+      "url": "http://en.doc.boardgamearena.com/First_steps_with_BGA_Studio"
+    },
+    {
+      "text": "BGA Developers forum",
+      "url": "https://forum.boardgamearena.com/viewforum.php?f=12"
+    },
+    {
+      "text": "git",
+      "url": "https://git-scm.com/docs/gittutorial"
+    },
+    {
+      "text": "https://studio.boardgamearena.com/projects",
+      "url": "https://studio.boardgamearena.com/projects"
+    },
+    {
+      "text": "gameinfos.jsonc",
+      "url": "Game_meta-information:_gameinfos.jsonc.html"
+    },
+    {
+      "text": "Game metadata manager",
+      "url": "Game_metadata_manager.html"
+    },
+    {
+      "text": "Game art: img directory",
+      "url": "Game_art:_img_directory.html"
+    },
+    {
+      "text": "Heartsla-tpl3.png",
+      "url": "File:Heartsla-tpl3.png.html"
+    },
+    {
+      "text": "Display player space of all players",
+      "url": "File:Heartsla-tpl4.png.html"
+    },
+    {
+      "text": "Heartsla-tpl5.png",
+      "url": "File:Heartsla-tpl5.png.html"
+    },
+    {
+      "text": "BgaCards",
+      "url": "BgaCards.html"
+    },
+    {
+      "text": "Deck",
+      "url": "Deck.html"
+    },
+    {
+      "text": "Display two cards in player's hand",
+      "url": "File:Heartsla-tpl6.png.html"
+    },
+    {
+      "text": "Heartsla-tpl7.png",
+      "url": "File:Heartsla-tpl7.png.html"
+    },
+    {
+      "text": "https://en.doc.boardgamearena.com/Tools_and_tips_of_BGA_Studio#Stopping_Hanging_Game",
+      "url": "https://en.doc.boardgamearena.com/Tools_and_tips_of_BGA_Studio#Stopping_Hanging_Game"
+    },
+    {
+      "text": "Translations",
+      "url": "Translations.html"
+    },
+    {
+      "text": "Heartsla-sync.png",
+      "url": "File:Heartsla-sync.png.html"
+    },
+    {
+      "text": "Focus on BGA game state machine",
+      "url": "http://www.slideshare.net/boardgamearena/bga-studio-focus-on-bga-game-state-machine"
+    },
+    {
+      "text": "State classes: State directory",
+      "url": "State_classes:_State_directory.html"
+    },
+    {
+      "text": "https://x.boardgamearena.net/data/game-libs/bga-cards/1.0.7/docs/classes/stocks_void-stock.VoidStock.html",
+      "url": "https://x.boardgamearena.net/data/game-libs/bga-cards/1.0.7/docs/classes/stocks_void-stock.VoidStock.html"
+    },
+    {
+      "text": "Scoring Dialog",
+      "url": "Game_interface_logic:_yourgamename.js.html"
+    },
+    {
+      "text": "https://fontawesome.com/v4/icons",
+      "url": "https://fontawesome.com/v4/icons"
+    },
+    {
+      "text": "Create a game in BGA Studio: Complete Walkthrough",
+      "url": "Create_a_game_in_BGA_Studio:_Complete_Walkthrough.html"
+    }
+  ],
+  "images": [
+    {
+      "src": "/images/1/15/Heartsla-tpl3.png",
+      "alt": "Heartsla-tpl3.png"
+    },
+    {
+      "src": "/images/1/1b/Heartsla-tpl4.png",
+      "alt": "Display player space of all players"
+    },
+    {
+      "src": "/images/2/27/Heartsla-tpl5.png",
+      "alt": "Heartsla-tpl5.png"
+    },
+    {
+      "src": "/images/a/af/Heartsla-tpl6.png",
+      "alt": "Display two cards in player's hand"
+    },
+    {
+      "src": "/images/3/32/Heartsla-tpl7.png",
+      "alt": "Heartsla-tpl7.png"
+    },
+    {
+      "src": "/images/8/8c/Heartsla-sync.png",
+      "alt": "Heartsla-sync.png"
+    }
+  ],
+  "metadata": {
+    "extractor_version": "1.0.0",
+    "extracted_at": "2026-07-06T06:53:17.642965+00:00",
+    "word_count": 1083,
+    "heading_count": 41,
+    "code_block_count": 9,
+    "table_count": 0,
+    "image_count": 6,
+    "list_count": 1
+  }
+}

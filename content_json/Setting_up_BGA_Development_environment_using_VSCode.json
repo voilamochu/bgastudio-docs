@@ -1,0 +1,422 @@
+{
+  "title": "Setting up BGA Development environment using VSCode",
+  "source_file": "Setting_up_BGA_Development_environment_using_VSCode.html",
+  "relative_path": "Setting_up_BGA_Development_environment_using_VSCode.html",
+  "content_json_path": "content_json/Setting_up_BGA_Development_environment_using_VSCode.json",
+  "headings": [
+    {
+      "level": 2,
+      "text": "Downloads",
+      "id": "Downloads"
+    },
+    {
+      "level": 2,
+      "text": "Extensions",
+      "id": "Extensions"
+    },
+    {
+      "level": 2,
+      "text": "Intellisense - Navigation/Auto-complete",
+      "id": "Intellisense_-_Navigation.2FAuto-complete"
+    },
+    {
+      "level": 3,
+      "text": "JavaScript Intellisense",
+      "id": "JavaScript_Intellisense"
+    },
+    {
+      "level": 3,
+      "text": "PHP Intellisense",
+      "id": "PHP_Intellisense"
+    },
+    {
+      "level": 3,
+      "text": "Unit testing",
+      "id": "Unit_testing"
+    },
+    {
+      "level": 2,
+      "text": "File Sync",
+      "id": "File_Sync"
+    },
+    {
+      "level": 3,
+      "text": "One time only - first sync",
+      "id": "One_time_only_-_first_sync"
+    },
+    {
+      "level": 3,
+      "text": "Daily use",
+      "id": "Daily_use"
+    },
+    {
+      "level": 3,
+      "text": "Split settings for version control",
+      "id": "Split_settings_for_version_control"
+    },
+    {
+      "level": 2,
+      "text": "Code Formatter",
+      "id": "Code_Formatter"
+    },
+    {
+      "level": 2,
+      "text": "Code generators",
+      "id": "Code_generators"
+    },
+    {
+      "level": 2,
+      "text": "User templates",
+      "id": "User_templates"
+    }
+  ],
+  "content": [
+    {
+      "type": "paragraph",
+      "text": "Microsoft Visual Studio Code is light weight IDE/Editor. All desktops."
+    },
+    {
+      "type": "list",
+      "ordered": false,
+      "items": [
+        {
+          "text": "Download and install vscode from https://code.visualstudio.com",
+          "nested": null
+        },
+        {
+          "text": "Download and install php (8.4) command line interface (for local tests and debugging - optional)",
+          "nested": null
+        }
+      ]
+    },
+    {
+      "type": "paragraph",
+      "text": "Use BGA Extension Pack to download all of the recommended extensions with one click."
+    },
+    {
+      "type": "list",
+      "ordered": false,
+      "items": [
+        {
+          "text": "PHP Intelephense - https://marketplace.visualstudio.com/items?itemName=bmewburn.vscode-intelephense-client",
+          "nested": null
+        },
+        {
+          "text": "Or PHP IntelliSense - https://marketplace.visualstudio.com/items?itemName=zobo.php-intellisense",
+          "nested": null
+        },
+        {
+          "text": "PHP Debug - https://marketplace.visualstudio.com/items?itemName=xdebug.php-debug",
+          "nested": null
+        },
+        {
+          "text": "SQLTools - https://marketplace.visualstudio.com/items?itemName=mtxr.sqltools",
+          "nested": null
+        },
+        {
+          "text": "Prettier - code formatter - https://marketplace.visualstudio.com/items?itemName=esbenp.prettier-vscode",
+          "nested": null
+        },
+        {
+          "text": "SFTP (by Natizyskunk) - https://marketplace.visualstudio.com/items?itemName=Natizyskunk.sftp",
+          "nested": null
+        }
+      ]
+    },
+    {
+      "type": "list",
+      "ordered": false,
+      "items": [
+        {
+          "text": "Since BGA framework ditched dojo in 2025 we can rejoice and enjoy full ide support. If you try it for old dojo projects - it does not really work.",
+          "nested": null
+        }
+      ]
+    },
+    {
+      "type": "list",
+      "ordered": false,
+      "items": [
+        {
+          "text": "A good way to improve auto-complete and such is to use Typescript and SCSS, this is not for the beginners.",
+          "nested": {
+            "type": "list",
+            "ordered": false,
+            "items": [
+              {
+                "text": "Original wiki: https://en.doc.boardgamearena.com/Using_Typescript_and_Scss",
+                "nested": null
+              }
+            ]
+          }
+        }
+      ]
+    },
+    {
+      "type": "paragraph",
+      "text": "The \"_ide_helper.php\" file, included in every project, will help your IDE know the available functions of the framework. This file may be updated automatically on your FTP folder, so don't hesitate to pull it back if it misses something, it might have been updated!"
+    },
+    {
+      "type": "paragraph",
+      "text": "Option 1) You can define them as class attributes, for example if I have $this->token_types = [...] in the material file I can define them in in the class of game.php"
+    },
+    {
+      "type": "code",
+      "language": null,
+      "text": "   private array $token_types;"
+    },
+    {
+      "type": "paragraph",
+      "text": "Option 2)"
+    },
+    {
+      "type": "code",
+      "language": null,
+      "text": "  \"intelephense.diagnostics.undefinedProperties\": false"
+    },
+    {
+      "type": "paragraph",
+      "text": "If using phpunit, install it via composer somewhere in home directory, i.e."
+    },
+    {
+      "type": "code",
+      "language": null,
+      "text": "  cd /home/<yourusername>/php-composer\n  composer require --dev phpunit/phpunit ^13"
+    },
+    {
+      "type": "paragraph",
+      "text": "Then add this path to include paths in settings"
+    },
+    {
+      "type": "code",
+      "language": null,
+      "text": "  \"intelephense.environment.includePaths\": [\n      \"/home/<yourusername>/php-composer\"\n  ],"
+    },
+    {
+      "type": "paragraph",
+      "text": "See more about unit testing in Testing by developer"
+    },
+    {
+      "type": "paragraph",
+      "text": "You can set up your sync using other methods, not related to vscode (such as rsync), if you want to do that see Tools_and_tips_of_BGA_Studio#File_Sync otherwise see below:"
+    },
+    {
+      "type": "list",
+      "ordered": false,
+      "items": [
+        {
+          "text": "Install this extension https://marketplace.visualstudio.com/items?itemName=Natizyskunk.sftp (File->Preferences->Extensions ... type SFTP and make sure its by Natizyskunk)",
+          "nested": null
+        }
+      ]
+    },
+    {
+      "type": "list",
+      "ordered": false,
+      "items": [
+        {
+          "text": "Open VSCode on an empty folder that will be the local root of your project.",
+          "nested": null
+        }
+      ]
+    },
+    {
+      "type": "list",
+      "ordered": false,
+      "items": [
+        {
+          "text": "Execute Ctrl+Shift+P on Windows/Linux or Cmd+Shift+P on Mac to open the command palette, and the type/run : \"SFTP: config\" - the edit will open with json config",
+          "nested": null
+        }
+      ]
+    },
+    {
+      "type": "list",
+      "ordered": false,
+      "items": [
+        {
+          "text": "Update the json as below:",
+          "nested": null
+        }
+      ]
+    },
+    {
+      "type": "code",
+      "language": null,
+      "text": "{\n    \"name\": \"BGA\",\n    \"host\": \"1.studio.boardgamearena.com\",\n    \"protocol\": \"sftp\",\n    \"port\": 2022,\n    \"username\": \"<your SFTP username>\",\n    \"password\": \"<your SFTP password>\",\n    \"remotePath\": \"/<your project name>/\",\n    \"uploadOnSave\": true,\n    \"ignore\": [\n        \".vscode\",\n        \".git\",\n        \".DS_Store\",\n        \"package-lock.json\",\n        \"yarn.lock\",\n        \"misc\",\n        \"node_modules\",\n        \"_ide_helper.php\",\n        \"bga-framework.d.ts\",\n        \"* *\",\n        \"sync-helpers.sh\",\n        \"vendor\",\n        \".phpunit.cache\"\n    ],\n    \"syncOption\": {\n        \"skipCreate\": false, \n        \"delete\": true \n    }\n}"
+    },
+    {
+      "type": "list",
+      "ordered": false,
+      "items": [
+        {
+          "text": "syncOption delete: true - means you want to delete remote file if deleted locally",
+          "nested": null
+        },
+        {
+          "text": "syncOption skipCreate: false - means you want to add new files when added locally (false because its reverse option)",
+          "nested": null
+        },
+        {
+          "text": "remotePath - do not remove slashes, it is part of the path",
+          "nested": null
+        }
+      ]
+    },
+    {
+      "type": "paragraph",
+      "text": "- Execute Ctrl+Shift+P on Windows/Linux or Cmd+Shift+P on Mac to open the command palette, and the type/run : \"SFTP: Download Project\" ."
+    },
+    {
+      "type": "paragraph",
+      "text": "After initially downloading the project, you can add _ide_helper.php to the \"ignore\" list. Even though it is needed locally for the IDE to understand BGA-related php code, you will never need to update it."
+    },
+    {
+      "type": "paragraph",
+      "text": "You don't have to do anything else! Each time you modify/save a file in VSCode, it will upload it to the SFTP Server."
+    },
+    {
+      "type": "note",
+      "variant": "note",
+      "text": "Note: the SFTP sync may fail with a permissions error when create or delete nested folders. To fix this, execute `chmod -R 755 <your directory name>` in your terminal, then force sync to remote."
+    },
+    {
+      "type": "paragraph",
+      "text": "If you want to commit this file to version control, use private key (upload ssh key https://studio.boardgamearena.com/controlpanel ) instead and move user/password settings into vscode user settings"
+    },
+    {
+      "type": "code",
+      "language": null,
+      "text": "    \"remotefs.remote\": {\n        \"bgadev\": {\n            \"name\": \"BGA\",\n            \"host\": \"1.studio.boardgamearena.com\",\n            \"protocol\": \"sftp\",\n            \"port\": 2022,\n            \"username\": \"<yourdevusername>\",\n            \"privateKeyPath\": \"~/.ssh/id_rsa\",\n        },\n      }"
+    },
+    {
+      "type": "paragraph",
+      "text": "in project folder sftp.json (replace <yourproject> with project name)"
+    },
+    {
+      "type": "code",
+      "language": null,
+      "text": "{\n    \"remote\": \"bgadev\",\n    \"remotePath\": \"/<yourproject>/\",\n    \"uploadOnSave\": true,\n    \"ignore\": [\n        \".git\"\n    ],\n    \"syncOption\": {\n        \"skipCreate\": false, \n        \"delete\": true \n    },\n    \"watcher\": {\n        \"files\": \"**/*.{js,css}\",\n        \"autoUpload\": true,\n        \"autoDelete\": true\n    }\n}"
+    },
+    {
+      "type": "note",
+      "variant": "note",
+      "text": "Note: you don't need watcher section if you don't use code generators, but its needed if you use typescript, scss or similar code generator tools."
+    },
+    {
+      "type": "paragraph",
+      "text": "I think Prettier has better format, you can install Prettier plugin to do the formatting, for PHP add the following in package.json"
+    },
+    {
+      "type": "code",
+      "language": null,
+      "text": " \"devDependencies\": {\n     \"@prettier/plugin-php\": \"^0.22\",\n     \"prettier\": \"^3.6\"\n },\n \"prettier\": {\n   \"plugins\": [\"@prettier/plugin-php\"],\n   \"braceStyle\": \"1tbs\",\n   \"printWidth\": 140,\n   \"trailingComma\": \"none\"\n }"
+    },
+    {
+      "type": "paragraph",
+      "text": "If you want to run code generators for example for typescript or scss you can install this extension:"
+    },
+    {
+      "type": "list",
+      "ordered": false,
+      "items": [
+        {
+          "text": "https://marketplace.visualstudio.com/items?itemName=emeraldwalk.RunOnSave",
+          "nested": null
+        }
+      ]
+    },
+    {
+      "type": "paragraph",
+      "text": "In settings.json add these (example only):"
+    },
+    {
+      "type": "code",
+      "language": null,
+      "text": "   \"emeraldwalk.runonsave\": {\n       \"commands\": [\n           {\n               \"match\": \".*\\\\.ts$\",\n               \"isAsync\": true,\n               \"cmd\": \"npm run build:ts\"\n           },\n           {\n               \"match\": \".*\\\\.scss$\",\n               \"isAsync\": true,\n               \"cmd\": \"npm run build:scss\"\n           }\n       ]\n   }"
+    },
+    {
+      "type": "paragraph",
+      "text": "In this example `build:ts` and `build:scss` are scripts configured via package.json"
+    },
+    {
+      "type": "code",
+      "language": null,
+      "text": "     {\n       \"match\": \"misc/.*material\\\\.csv$\",\n       \"isAsync\": true,\n       \"cmd\": \"php7.4 ${env.HOME}/git/bga-sharedcode/misc/genmat.php ${file}\"\n     }"
+    },
+    {
+      "type": "paragraph",
+      "text": "You can define user template to avoid writing boilerplate code, here is example of php template for states (it is placed in global location php.json - you can open it from the gui File->Preferences->Configure User Snippets and type php"
+    },
+    {
+      "type": "code",
+      "language": null,
+      "text": "{\n  \"Player loop in game.php\": {\n    \"prefix\": [\"players\"],\n    \"body\": [\n      \"\\\\$players = \\\\$this->loadPlayersBasicInfos();\",\n      \"foreach (\\\\$players as \\\\$player_id => \\\\$player_info) {\",\n      \"${1}\",\n      \"}\"\n    ]\n  }\n\n}"
+    }
+  ],
+  "links": [
+    {
+      "text": "https://code.visualstudio.com",
+      "url": "https://code.visualstudio.com"
+    },
+    {
+      "text": "BGA Extension Pack",
+      "url": "https://marketplace.visualstudio.com/items?itemName=NevinFoster.bga-extension-pack&ssr=false#overview"
+    },
+    {
+      "text": "https://marketplace.visualstudio.com/items?itemName=bmewburn.vscode-intelephense-client",
+      "url": "https://marketplace.visualstudio.com/items?itemName=bmewburn.vscode-intelephense-client"
+    },
+    {
+      "text": "https://marketplace.visualstudio.com/items?itemName=zobo.php-intellisense",
+      "url": "https://marketplace.visualstudio.com/items?itemName=zobo.php-intellisense"
+    },
+    {
+      "text": "https://marketplace.visualstudio.com/items?itemName=xdebug.php-debug",
+      "url": "https://marketplace.visualstudio.com/items?itemName=xdebug.php-debug"
+    },
+    {
+      "text": "https://marketplace.visualstudio.com/items?itemName=mtxr.sqltools",
+      "url": "https://marketplace.visualstudio.com/items?itemName=mtxr.sqltools"
+    },
+    {
+      "text": "https://marketplace.visualstudio.com/items?itemName=esbenp.prettier-vscode",
+      "url": "https://marketplace.visualstudio.com/items?itemName=esbenp.prettier-vscode"
+    },
+    {
+      "text": "https://marketplace.visualstudio.com/items?itemName=Natizyskunk.sftp",
+      "url": "https://marketplace.visualstudio.com/items?itemName=Natizyskunk.sftp"
+    },
+    {
+      "text": "https://en.doc.boardgamearena.com/Using_Typescript_and_Scss",
+      "url": "https://en.doc.boardgamearena.com/Using_Typescript_and_Scss"
+    },
+    {
+      "text": "Testing by developer",
+      "url": "Testing_by_developer.html"
+    },
+    {
+      "text": "Tools_and_tips_of_BGA_Studio#File_Sync",
+      "url": "Tools_and_tips_of_BGA_Studio.html"
+    },
+    {
+      "text": "https://studio.boardgamearena.com/controlpanel",
+      "url": "https://studio.boardgamearena.com/controlpanel"
+    },
+    {
+      "text": "https://marketplace.visualstudio.com/items?itemName=emeraldwalk.RunOnSave",
+      "url": "https://marketplace.visualstudio.com/items?itemName=emeraldwalk.RunOnSave"
+    }
+  ],
+  "images": [],
+  "metadata": {
+    "extractor_version": "1.0.0",
+    "extracted_at": "2026-07-06T06:53:17.534127+00:00",
+    "word_count": 617,
+    "heading_count": 13,
+    "code_block_count": 11,
+    "table_count": 0,
+    "image_count": 0,
+    "list_count": 10
+  }
+}

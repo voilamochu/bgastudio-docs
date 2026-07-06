@@ -1,0 +1,1230 @@
+{
+  "title": "Tutorial reversi",
+  "source_file": "Tutorial_reversi.html",
+  "relative_path": "Tutorial_reversi.html",
+  "content_json_path": "content_json/Tutorial_reversi.json",
+  "headings": [
+    {
+      "level": 2,
+      "text": "Introduction",
+      "id": "Introduction"
+    },
+    {
+      "level": 3,
+      "text": "Javascript or Typescript",
+      "id": "Javascript_or_Typescript"
+    },
+    {
+      "level": 2,
+      "text": "Create your first game",
+      "id": "Create_your_first_game"
+    },
+    {
+      "level": 2,
+      "text": "Editing the game information (Optional)",
+      "id": "Editing_the_game_information_.28Optional.29"
+    },
+    {
+      "level": 4,
+      "text": "Edits to fix Errors",
+      "id": "Edits_to_fix_Errors"
+    },
+    {
+      "level": 4,
+      "text": "Test your Edits",
+      "id": "Test_your_Edits"
+    },
+    {
+      "level": 5,
+      "text": "Not working?",
+      "id": "Not_working.3F"
+    },
+    {
+      "level": 2,
+      "text": "Make sure the IDE is properly configured",
+      "id": "Make_sure_the_IDE_is_properly_configured"
+    },
+    {
+      "level": 2,
+      "text": "Make it look like Reversi",
+      "id": "Make_it_look_like_Reversi"
+    },
+    {
+      "level": 4,
+      "text": "Add the board",
+      "id": "Add_the_board"
+    },
+    {
+      "level": 4,
+      "text": "Code the Grid",
+      "id": "Code_the_Grid"
+    },
+    {
+      "level": 5,
+      "text": "Build the grid of squares",
+      "id": "Build_the_grid_of_squares"
+    },
+    {
+      "level": 5,
+      "text": "Style Those Squares",
+      "id": "Style_Those_Squares"
+    },
+    {
+      "level": 5,
+      "text": "Not Working?",
+      "id": "Not_Working.3F_2"
+    },
+    {
+      "level": 2,
+      "text": "The Tokens",
+      "id": "The_Tokens"
+    },
+    {
+      "level": 3,
+      "text": "Build the Token",
+      "id": "Build_the_Token"
+    },
+    {
+      "level": 4,
+      "text": "Add Token to img directory",
+      "id": "Add_Token_to_img_directory"
+    },
+    {
+      "level": 4,
+      "text": "Style the Tokens in .css file",
+      "id": "Style_the_Tokens_in_.css_file"
+    },
+    {
+      "level": 4,
+      "text": "Add Token Utility Method in .js file",
+      "id": "Add_Token_Utility_Method_in_.js_file"
+    },
+    {
+      "level": 5,
+      "text": "Utility Method Explanation",
+      "id": "Utility_Method_Explanation"
+    },
+    {
+      "level": 4,
+      "text": "Set Token Colors in setupNewGame in modules/php/Game.php file",
+      "id": "Set_Token_Colors_in_setupNewGame_in_modules.2Fphp.2FGame.php_file"
+    },
+    {
+      "level": 3,
+      "text": "Test the Token",
+      "id": "Test_the_Token"
+    },
+    {
+      "level": 2,
+      "text": "The database",
+      "id": "The_database"
+    },
+    {
+      "level": 3,
+      "text": "Accessing the Database",
+      "id": "Accessing_the_Database"
+    },
+    {
+      "level": 3,
+      "text": "Create Table in .sql file",
+      "id": "Create_Table_in_.sql_file"
+    },
+    {
+      "level": 3,
+      "text": "Test the Table",
+      "id": "Test_the_Table"
+    },
+    {
+      "level": 2,
+      "text": "Setup the initial game position",
+      "id": "Setup_the_initial_game_position"
+    },
+    {
+      "level": 3,
+      "text": "Initialize the Board in modules/php/Game.php file",
+      "id": "Initialize_the_Board_in_modules.2Fphp.2FGame.php_file"
+    },
+    {
+      "level": 4,
+      "text": "Board Initialization Explanation",
+      "id": "Board_Initialization_Explanation"
+    },
+    {
+      "level": 3,
+      "text": "Show the Initial Token Setup",
+      "id": "Show_the_Initial_Token_Setup"
+    },
+    {
+      "level": 3,
+      "text": "Test the Game Start",
+      "id": "Test_the_Game_Start"
+    },
+    {
+      "level": 2,
+      "text": "State Machine",
+      "id": "State_Machine"
+    },
+    {
+      "level": 3,
+      "text": "Build your States",
+      "id": "Build_your_States"
+    },
+    {
+      "level": 3,
+      "text": "Test Your States",
+      "id": "Test_Your_States"
+    },
+    {
+      "level": 2,
+      "text": "The rules",
+      "id": "The_rules"
+    },
+    {
+      "level": 2,
+      "text": "Display allowed moves",
+      "id": "Display_allowed_moves"
+    },
+    {
+      "level": 2,
+      "text": "Let's play",
+      "id": "Let.27s_play"
+    },
+    {
+      "level": 2,
+      "text": "Make the move appear automatically",
+      "id": "Make_the_move_appear_automatically"
+    },
+    {
+      "level": 2,
+      "text": "Implement the zombie mode",
+      "id": "Implement_the_zombie_mode"
+    },
+    {
+      "level": 2,
+      "text": "Add a debug function to help up test the code",
+      "id": "Add_a_debug_function_to_help_up_test_the_code"
+    },
+    {
+      "level": 2,
+      "text": "Optional: add unit tests",
+      "id": "Optional:_add_unit_tests"
+    },
+    {
+      "level": 2,
+      "text": "After the tutorial",
+      "id": "After_the_tutorial"
+    }
+  ],
+  "content": [
+    {
+      "type": "paragraph",
+      "text": "Using this tutorial, you can build a complete working game on the BGA environment: Reversi."
+    },
+    {
+      "type": "list",
+      "ordered": false,
+      "items": [
+        {
+          "text": "Read the overall presentations of the BGA Framework ( see here ).",
+          "nested": null
+        },
+        {
+          "text": "Know the rules of Reversi .",
+          "nested": null
+        },
+        {
+          "text": "Know the languages used on BGA: PHP, SQL, HTML, CSS, Javascript",
+          "nested": null
+        },
+        {
+          "text": "Setup your development environment First Steps with BGA Studio",
+          "nested": null
+        }
+      ]
+    },
+    {
+      "type": "note",
+      "variant": "note",
+      "text": "Note: If you get stuck and you need the source code for this project you can get read only access to project reversi from the Studio projects page : https://studio.boardgamearena.com/projects?game=reversi , only check \"Already published\" to see the real project. There might be some slight differences as we simplified the tutorial compared to the full production project."
+    },
+    {
+      "type": "paragraph",
+      "text": "If your not familiar with Typescript, we recommend to follow the tutorial using the Javascript version."
+    },
+    {
+      "type": "paragraph",
+      "text": "Any difference between the Javascript and the Typescript version of this tutorial will be TS outlined with this color ."
+    },
+    {
+      "type": "note",
+      "variant": "note",
+      "text": "Note: you should already have created a project following instructions in Create a new game project ."
+    },
+    {
+      "type": "list",
+      "ordered": false,
+      "items": [
+        {
+          "text": "Go to your studio Control panel , then Manage games and select your initial project. Note: there are warnings displayed about a missing BGG_ID and presentation text. You can ignore that for now.",
+          "nested": null
+        },
+        {
+          "text": "Click the Play link next to your project name. This will open the Play page and offer to create a new table for your project. Optional: click the Heart icon to add your project to your favorite games list.",
+          "nested": null
+        },
+        {
+          "text": "On the Play page, on the top of the page, make sure that your settings are \"Simple game\", \"Real time\" and \"Manual\".",
+          "nested": null
+        },
+        {
+          "text": "Click \"Create table\" to create a table of your project.",
+          "nested": null
+        },
+        {
+          "text": "For now, we are going to work with one player only, so use the (-) button to set the number of players to 2. Most of the time it is simpler to proceed with only one player during the early phase of development of your game, as it's easy and fast to start/stop games. By default the game requires 2 players, so press \"Express Start\". It will open another tab with another of your players.",
+          "nested": null
+        },
+        {
+          "text": "Reminder: Always use the \"Express Start\" button to start the game.",
+          "nested": null
+        }
+      ]
+    },
+    {
+      "type": "paragraph",
+      "text": "Thus, you can start a \"Reversi\" game, and arrive on a void, empty game. Yeah."
+    },
+    {
+      "type": "paragraph",
+      "text": "If you don't want to use TypeScript in your project, you can delete the package.json, tsconfig.json, rollup.config.mjs files and the src-disabled folder."
+    },
+    {
+      "type": "paragraph",
+      "text": "This step is optional and will fix the warnings on the project page (missing BGG_ID and presentation)."
+    },
+    {
+      "type": "list",
+      "ordered": false,
+      "items": [
+        {
+          "text": "Edit your local copy of the `gameinfos.jsonc` file:",
+          "nested": {
+            "type": "list",
+            "ordered": false,
+            "items": [
+              {
+                "text": "Change the `bgg_id` value from `0` to `2389` - that's around line 26.",
+                "nested": null
+              },
+              {
+                "text": "Add `1,` to the players array (so you can start 1-player games while testing) - that's around line 29.",
+                "nested": null
+              }
+            ]
+          }
+        },
+        {
+          "text": "Upload the `gameinfos.jsonc` file to the SFTP server (see Connect to your SFTP folder ).",
+          "nested": null
+        }
+      ]
+    },
+    {
+      "type": "list",
+      "ordered": false,
+      "items": [
+        {
+          "text": "Go back to your project page, and in the the local version, click Game page and check if the information match what you changed in the gameinfos file. [image: Studio local version block.png]",
+          "nested": null
+        }
+      ]
+    },
+    {
+      "type": "paragraph",
+      "text": "Some changes will require bypassing the cache (adding/changing images). It is often worth doing a hard refresh (Ctrl+F5) to make sure the latest version is used."
+    },
+    {
+      "type": "paragraph",
+      "text": "Try to add some invalid values in the framework names like this :"
+    },
+    {
+      "type": "paragraph",
+      "text": "The error should be underlined if your IDE is properly configured. If it is not, check Setting up BGA Development environment using VSCode"
+    },
+    {
+      "type": "paragraph",
+      "text": "You can also check if the upload works as expected, the game should now work and display the error (Undefined property: Bga\\Games\\EmptyGame\\Game::$bgaTEST ...)."
+    },
+    {
+      "type": "paragraph",
+      "text": "Let's start with the board. This will give you a good idea of how things will look and where tokens should go."
+    },
+    {
+      "type": "paragraph",
+      "text": "We will build the board in pure CSS, as it is simple shapes, and will be faster to load than an image. Later, we are going to use PNGs for tokens because they allow for transparency. We could maybe build them in CSS too, but we need an example of using images!"
+    },
+    {
+      "type": "list",
+      "ordered": false,
+      "items": [
+        {
+          "text": "edit `modules/js/Game.js` to add the `div` for your board at the beginning of the setup function.",
+          "nested": null
+        }
+      ]
+    },
+    {
+      "type": "note",
+      "variant": "note",
+      "text": "Note: If you are building this game by following the tutorial, you will have a different project name than `reversi` (i.e. `mygame.css` ). The file names in your project will be different than shown in this tutorial, replacing `reversi` with your project name. Be sure that any code (other than comments) that references `reversi` is changed to your actual project name."
+    },
+    {
+      "type": "paragraph",
+      "text": "Edit the Game.js file and replace the code after // Example to add a div on the game area with the following:"
+    },
+    {
+      "type": "code",
+      "language": null,
+      "text": "this.bga.gameArea.getElement().insertAdjacentHTML('beforeend', `\n  <div id=\"board\">\n  </div>\n`);"
+    },
+    {
+      "type": "note",
+      "variant": "note",
+      "text": "Note: example above use backticks, aka string template literals. This technique used a lot in code of games as it allows to easily create html with strings substitutions, use quotes, double quotes and newlines. If you don't know what it is check here https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Template_literals"
+    },
+    {
+      "type": "list",
+      "ordered": false,
+      "items": [
+        {
+          "text": "edit your `reversi.css` file to transform it into a visible board:",
+          "nested": null
+        }
+      ]
+    },
+    {
+      "type": "code",
+      "language": null,
+      "text": "#board {\n   width: 480px;\n   height: 480px;\n   border: 20px solid black;\n   background: black;\n   display: grid;\n   grid-template-columns: repeat(8, 1fr);\n}"
+    },
+    {
+      "type": "paragraph",
+      "text": "and remove the code in Game.js in method onEnteringState that refers to adding action buttons and remove the section under `// example of adding a div for each player\"` ."
+    },
+    {
+      "type": "paragraph",
+      "text": "Now, we need to create some HTML elements where squares are. These elements will be used as position references for the white and black tokens."
+    },
+    {
+      "type": "paragraph",
+      "text": "The board is 8 squares by 8 squares. This means we need 64 squares. To avoid writing 64 individual `div` elements on our template, we are going to generate the squares on JS `setup` ."
+    },
+    {
+      "type": "code",
+      "language": null,
+      "text": "        // Dynamically generate board\n        const board = document.getElementById('board');\n        const board_size = 8;\n        for (let x = 1; x <= board_size; x++) {\n            for (let y = 1; y <= board_size; y++) {\n                board.insertAdjacentHTML(`beforeend`, `<div id=\"square_${x}_${y}\" data-x=\"${x}\" data-y=\"${y}\" class=\"square board\"></div>`);\n                document.getElementById(`square_${x}_${y}`).addEventListener('click', e => this.onPlayDisc(x, y));\n            }        \n        }"
+    },
+    {
+      "type": "paragraph",
+      "text": "Now, to finish our work and check if everything works fine, we are going to style our square a little bit in our CSS stylesheet:"
+    },
+    {
+      "type": "code",
+      "language": null,
+      "text": "  .square {\n    width: 58px;\n    height: 58px;\n    display: flex;\n    justify-content: center;\n    align-items: center;\n    background-color: darkgreen;\n    transition: background-color 0.25s;\n  }"
+    },
+    {
+      "type": "paragraph",
+      "text": "To test the squares, you can set `background-color: red;` for testing. This allows us to see the invisible elements. (You could instead do something like `outline: 2px solid orange;` have fun and be creative)"
+    },
+    {
+      "type": "list",
+      "ordered": false,
+      "items": [
+        {
+          "text": "The display flex with center will place the disc in the center of the square.",
+          "nested": null
+        }
+      ]
+    },
+    {
+      "type": "paragraph",
+      "text": "Let's refresh and check our (beautiful) squares:"
+    },
+    {
+      "type": "paragraph",
+      "text": "Now that you know the squares are there, you can remove the test line `background-color: red;` from your `.square` class in the CSS stylesheet."
+    },
+    {
+      "type": "paragraph",
+      "text": "If the styled squares do not appear, inspect and check your css (Chrome DevTools: Application > Frames > top > Stylesheets > reversi.css)."
+    },
+    {
+      "type": "paragraph",
+      "text": "Now, our board is ready for some tokens!"
+    },
+    {
+      "type": "paragraph",
+      "text": "There are quite a few steps before the tokens will appear. You may be used to testing after every change, but that won't work well here. The token will not show until you have add styles to the css, utility method in the js,  adjusted the php file, and added the token to the board in the js file."
+    },
+    {
+      "type": "paragraph",
+      "text": "Here's a new piece of art with the tokens. We need transparency here so we are using a png file:"
+    },
+    {
+      "type": "paragraph",
+      "text": "Upload this image file `tokens.png` in your `img/` directory (use lowercase file name). NB: may need to manually upload as have found that the automatic SFTP does't seem to pick up images."
+    },
+    {
+      "type": "code",
+      "language": null,
+      "text": ".disc {\n    position: relative;\n    width: 54px;\n    height: 54px;\n    z-index: 3;\n    transform-style: preserve-3d;\n}\n.disc .disc-faces { \n    transform-style: preserve-3d;\n}\n.disc[data-color=\"000000\"] .disc-faces { \n    transform: rotateY(180deg);\n}\n\n.disc-face {\n    position: absolute;\n    width: 54px;\n    height: 54px;\n    background-image: url('img/tokens.png');\n    background-size: auto 100%;\n    backface-visibility: hidden;\n}\n.disc-face[data-side=\"white\"] { \n    background-position-x: 0%; \n    transform: rotateY(0deg);\n}\n.disc-face[data-side=\"black\"] { \n    background-position-x: 100%; \n    transform: rotateY(180deg);\n}"
+    },
+    {
+      "type": "paragraph",
+      "text": "With this CSS code, we can set and change the token color by changing the `data-color` attribute. Using data instead of a class ensures it can be only one of them (the disc cannot be black and white at the same time). We will create a disc-faces div in the disc containing 2 disc-face divs, to represent each face of the disc. It will allow us to have a nice flip animation!"
+    },
+    {
+      "type": "paragraph",
+      "text": "Now, let's make the first token appear on our board. Tokens are not visible at the beginning of the game: they appear dynamically during the game. For this reason, we are going to make them appear from our Javascript code, using a template string"
+    },
+    {
+      "type": "code",
+      "language": null,
+      "text": "        async addDiscOnBoard( x, y, playerId, animate = true )\n        {\n            const color = this.gamedatas.players[ playerId ].color;\n            const discId = `disc_${x}_${y}`;\n\n            document.getElementById(`square_${x}_${y}`).insertAdjacentHTML('beforeend', `\n                <div class=\"disc\" data-color=\"${color}\" id=\"${discId}\">\n                    <div class=\"disc-faces\">\n                        <div class=\"disc-face\" data-side=\"white\"></div>\n                        <div class=\"disc-face\" data-side=\"black\"></div>\n                    </div>\n                </div>\n            `);\n\n            if (animate) {\n                const element = document.getElementById(discId);\n                await this.animationManager.fadeIn(element, document.getElementById(`overall_player_board_${playerId}`));\n            }\n        }"
+    },
+    {
+      "type": "paragraph",
+      "text": "For this to work, you will also need to initialize the animation manager. Include the function in your .js file by updating as outlined here: BgaAnimations . Then add this in the setup function:"
+    },
+    {
+      "type": "code",
+      "language": null,
+      "text": "\n\n            this.animationManager = new BgaAnimations.Manager({\n                animationsActive: () => this.bga.gameui.bgaAnimationsActive(),\n            });"
+    },
+    {
+      "type": "list",
+      "ordered": false,
+      "items": [
+        {
+          "text": "with `element.insertAdjacentHTML` method, we create a HTML piece of code and insert it as a new child of the square div element.",
+          "nested": null
+        },
+        {
+          "text": "Immediately after, using `this.animationManager.fadeIn` BGA method, we make the disc slide in (with a fade in animation) from the player panel.",
+          "nested": null
+        }
+      ]
+    },
+    {
+      "type": "paragraph",
+      "text": "Also note the trailing comma - this is needed because there may be other functions defined after this one, making `addDiscOnBoard` just one element in an array of functions."
+    },
+    {
+      "type": "paragraph",
+      "text": "Before we can show a token, we need to set the player colors in the `setupNewGame` function in `modules/php/Game.php` :"
+    },
+    {
+      "type": "code",
+      "language": null,
+      "text": "$default_colors = [\"ffffff\", \"000000\"];"
+    },
+    {
+      "type": "note",
+      "variant": "note",
+      "text": "Note: A few lines below, you may have to remove the line `this->reattributeColorsBasedOnPreferences( $players, $gameinfos['player_colors'] );`"
+    },
+    {
+      "type": "paragraph",
+      "text": "Now, to test if everything works fine we will call the `addTokenOnBoard()` in .js file to Test"
+    },
+    {
+      "type": "code",
+      "language": null,
+      "text": "this.addDiscOnBoard(2, 2, this.bga.players.getCurrentPlayerId(), false);"
+    },
+    {
+      "type": "paragraph",
+      "text": "Now restart the game."
+    },
+    {
+      "type": "paragraph",
+      "text": "[image: Reversi3.jpg]"
+    },
+    {
+      "type": "paragraph",
+      "text": "We did most of the client-side programming, so let's have a look on the other side now. To design the database model of our game, you will need to access the database. You won't need to do anything in database UI, yet."
+    },
+    {
+      "type": "paragraph",
+      "text": "To access the database, start a game, then click \"Go to game database\" link at the bottom of our game, to access the database directly with a PhpMyAdmin instance."
+    },
+    {
+      "type": "paragraph",
+      "text": "Note : do not remove existing tables"
+    },
+    {
+      "type": "paragraph",
+      "text": "Now, you are able to create the table(s) you need for your game, and report every SQL command used in your `dbmodel.sql` file."
+    },
+    {
+      "type": "code",
+      "language": null,
+      "text": "CREATE TABLE IF NOT EXISTS `board` (\n  `board_x` smallint unsigned NOT NULL,\n  `board_y` smallint unsigned NOT NULL,\n  `board_player` int unsigned DEFAULT NULL,\n  PRIMARY KEY (`board_x`,`board_y`)\n) ENGINE=InnoDB DEFAULT CHARSET=utf8mb4;"
+    },
+    {
+      "type": "paragraph",
+      "text": "Add the above SQL to `dbmodel.sql` . Pay special attention to the backtick ``` character vs. the single quote `'` when working with SQL."
+    },
+    {
+      "type": "paragraph",
+      "text": "Now, a new database with a `board` table will be created each time we start a Reversi game. This is why after modifying our `dbmodel.sql` it's a good time to stop your current game & start a new game."
+    },
+    {
+      "type": "paragraph",
+      "text": "Note : From now on, you must launch the game with two players to get two `player_id` s within the database. Otherwise, the game will crash."
+    },
+    {
+      "type": "paragraph",
+      "text": "Under `// TODO: setup the initial game situation here` , initialize the board"
+    },
+    {
+      "type": "code",
+      "language": null,
+      "text": "list( $blackplayer_id, $whiteplayer_id ) = array_keys( $players );\n// Init the board\n$this->boardManager->initializeBoard(8, (int) $blackplayer_id, (int) $whiteplayer_id);"
+    },
+    {
+      "type": "paragraph",
+      "text": "Wait, is that all?"
+    },
+    {
+      "type": "paragraph",
+      "text": "Create a BoardManager.php file next to Game.php, and put this code in it:"
+    },
+    {
+      "type": "code",
+      "language": null,
+      "text": "<?php\ndeclare(strict_types=1);\n\nnamespace Bga\\Games\\Reversi;\n\nclass BoardManager\n{\n    public function __construct(private Game $game)\n    {\n    }\n\n    public function initializeBoard(int $boardSize, int $blackPlayerId, int $whitePlayerId): void\n    {\n        $sqlValues = [];\n        $boardSizeHalf = (int) floor($boardSize / 2);\n\n        for ($x = 1; $x <= $boardSize; $x++) {\n            for ($y = 1; $y <= $boardSize; $y++) {\n                $discValue = 'NULL';\n                if (($x === $boardSizeHalf && $y === $boardSizeHalf) || ($x === ($boardSizeHalf + 1) && $y === ($boardSizeHalf + 1))) {\n                    $discValue = (string) $whitePlayerId;\n                } elseif (($x === $boardSizeHalf && $y === ($boardSizeHalf + 1)) || ($x === ($boardSizeHalf + 1) && $y === $boardSizeHalf)) {\n                    $discValue = (string) $blackPlayerId;\n                }\n\n                $sqlValues[] = \"($x,$y,$discValue)\";\n            }\n        }\n\n        $sql = \"INSERT INTO `board` (`board_x`,`board_y`,`board_player`) VALUES \" . implode(',', $sqlValues);\n        $this->game->DbQuery($sql);\n    }\n}"
+    },
+    {
+      "type": "paragraph",
+      "text": "Once the php file is created edit the namespace and change \\Reversi to be the name of your project"
+    },
+    {
+      "type": "paragraph",
+      "text": "Before the Game __construct, add"
+    },
+    {
+      "type": "code",
+      "language": null,
+      "text": "  public BoardManager $boardManager;"
+    },
+    {
+      "type": "paragraph",
+      "text": "At the end of the Game __construct, add"
+    },
+    {
+      "type": "code",
+      "language": null,
+      "text": "  $this->boardManager = new BoardManager($this);"
+    },
+    {
+      "type": "paragraph",
+      "text": "Passing the game object to the constructor allows us to use its db functions."
+    },
+    {
+      "type": "list",
+      "ordered": false,
+      "items": [
+        {
+          "text": "We create one table entry for each square, with a `NULL` value which means \"empty square\"",
+          "nested": null
+        },
+        {
+          "text": "On 4 of the squares, we place an initial token.",
+          "nested": null
+        }
+      ]
+    },
+    {
+      "type": "paragraph",
+      "text": "After this, we set `activeNextPlayer` to make the first player active at the beginning of the game (this line is already present in the default code template)."
+    },
+    {
+      "type": "paragraph",
+      "text": "Now, we need to make these tokens appear on the client side. The first step is to return the token positions with our `getAllDatas()` PHP method. `getAllDatas()` is called during each page reload."
+    },
+    {
+      "type": "code",
+      "language": null,
+      "text": "// Get reversi board token\n$result['board'] = $this->boardManager->getOccupiedDiscs();"
+    },
+    {
+      "type": "paragraph",
+      "text": "And in the board manager, add:"
+    },
+    {
+      "type": "code",
+      "language": null,
+      "text": "    public function getOccupiedDiscs(): array\n    {\n        return $this->game->getObjectListFromDB(\n            \"SELECT `board_x` `x`, `board_y` `y`, `board_player` `player`\n             FROM `board`\n             WHERE `board_player` IS NOT NULL\"\n        );\n    }"
+    },
+    {
+      "type": "paragraph",
+      "text": "Next, you will modify the query that gets player information to also get the player's colors. Above the lines you just inserted in `getAllDatas()` notice how we've added `player_color color` to the sql query in the code below."
+    },
+    {
+      "type": "code",
+      "language": null,
+      "text": "$result[\"players\"] = $this->getCollectionFromDb(\n    \"SELECT `player_id` `id`, `player_score` `score`, `player_color` `color` FROM `player`\"\n);"
+    },
+    {
+      "type": "paragraph",
+      "text": "We are using the BGA framework's `getObjectListFromDB()` that formats the result of this SQL query in a PHP array with x, y and player attributes. We add it to the result associative array with the key `board` ."
+    },
+    {
+      "type": "paragraph",
+      "text": "This will result in a removal or edit of the previously added line `this.addDiscOnBoard(2, 2, this.bga.players.getCurrentPlayerId());`"
+    },
+    {
+      "type": "code",
+      "language": null,
+      "text": "for( var i in gamedatas.board ) {\n    const square = gamedatas.board[i];\n    \n    if( square.player !== null ) {\n        this.addDiscOnBoard( square.x, square.y, square.player );\n    }\n}"
+    },
+    {
+      "type": "paragraph",
+      "text": "The `board` entry created in `getAllDatas()` is used here as `gamedatas.board`"
+    },
+    {
+      "type": "paragraph",
+      "text": "Restart the game... and here we are:"
+    },
+    {
+      "type": "paragraph",
+      "text": "It starts to feel like Reversi here..."
+    },
+    {
+      "type": "paragraph",
+      "text": "Stop your game, again. You're about to start the core game logic."
+    },
+    {
+      "type": "paragraph",
+      "text": "[image: Reversi6.jpg]"
+    },
+    {
+      "type": "paragraph",
+      "text": "And here are the classes we need to create on the `module/php/States` folder, according to this diagram (note - PlayerTurn is replaced by PlayDisc):"
+    },
+    {
+      "type": "code",
+      "language": null,
+      "text": "<?php\n\ndeclare(strict_types=1);\n\nnamespace Bga\\Games\\Reversi\\States;\n\nuse Bga\\GameFramework\\StateType;\nuse Bga\\Games\\Reversi\\Game;\n\nclass PlayDisc extends \\Bga\\GameFramework\\States\\GameState\n{\n    public function __construct(protected Game $game) {\n        parent::__construct($game, \n            id: 10, \n            type: StateType::ACTIVE_PLAYER,\n\n            description: clienttranslate('${actplayer} must play a disc'),\n            descriptionMyTurn: clienttranslate('${you} must play a disc'),\n        );\n    }\n\n    function zombie(int $playerId) {\n    }\n}"
+    },
+    {
+      "type": "paragraph",
+      "text": "(The declare(strict_types=1) is optional but recommended for new games). The <?php at the beginning is necessary for your IDE to understand the php syntax. )"
+    },
+    {
+      "type": "paragraph",
+      "text": "NextPlayer.php:"
+    },
+    {
+      "type": "code",
+      "language": null,
+      "text": "<?php\n\ndeclare(strict_types=1);\n\nnamespace Bga\\Games\\Reversi\\States;\n\nuse Bga\\GameFramework\\StateType;\nuse Bga\\Games\\Reversi\\Game;\n\nclass NextPlayer extends \\Bga\\GameFramework\\States\\GameState\n{\n\n    public function __construct(protected Game $game) {\n        parent::__construct($game, \n            id: 90, \n            type: StateType::GAME,\n\n            updateGameProgression: true,\n        );\n    }\n}"
+    },
+    {
+      "type": "note",
+      "variant": "note",
+      "text": "Note: state ids 1 and 99 are reserved by the framework for gameSetup and gameEnd. We don't need to describe those states as the framework will take care of that for us."
+    },
+    {
+      "type": "paragraph",
+      "text": "... and start a new Reversi game."
+    },
+    {
+      "type": "paragraph",
+      "text": "[image: Reversi7.jpg]"
+    },
+    {
+      "type": "paragraph",
+      "text": "We will use the `getPossibleMoves` PHP method to:"
+    },
+    {
+      "type": "list",
+      "ordered": false,
+      "items": [
+        {
+          "text": "Indicate to the current player where she is allowed to play by returning a list of coordinates",
+          "nested": null
+        },
+        {
+          "text": "Check if the player has the right to play in the spot they choose",
+          "nested": null
+        }
+      ]
+    },
+    {
+      "type": "paragraph",
+      "text": "This is pure PHP programming here, and there are no special things from the BGA framework that can be used. This is why we won't go into details here. The overall idea is:"
+    },
+    {
+      "type": "list",
+      "ordered": false,
+      "items": [
+        {
+          "text": "Create a `getTurnedOverDiscs(x,y)` method that returns coordinates of discs that would be turned over if a token would be played at `x` , `y` .",
+          "nested": null
+        },
+        {
+          "text": "Loop through all free squares of the board and call the `getTurnedOverDiscs` method on each of them. If at least 1 token is turned over, this is a valid move.",
+          "nested": null
+        }
+      ]
+    },
+    {
+      "type": "paragraph",
+      "text": "Take it from them BoardManager.php file of the reversi project. See the introduction on how to get read-only access to the real Reversi project."
+    },
+    {
+      "type": "paragraph",
+      "text": "If you want to look into details, please look at the \"utility method\" sections of `Game.php` . If building the tutorial yourself, copy the functions under \"Utility functions\" comment from the Reversi tutorial."
+    },
+    {
+      "type": "paragraph",
+      "text": "Now we want to highlight the squares where the player can place a disc."
+    },
+    {
+      "type": "code",
+      "language": null,
+      "text": "function getArgs(int $activePlayerId): array\n{\n    return [\n        'possibleMoves' => $this->game->boardManager->getPossibleMoves($activePlayerId)\n    ];\n}"
+    },
+    {
+      "type": "paragraph",
+      "text": "Now we need to handle it on the JS side. Replace the state classes definition in the Game constructor by this:"
+    },
+    {
+      "type": "code",
+      "language": null,
+      "text": "        // Declare the State classes\n        this.playDisc = new PlayDisc(this, bga);\n        this.bga.states.register('PlayDisc', this.playDisc);"
+    },
+    {
+      "type": "paragraph",
+      "text": "So it matches the state we described in PHP. The state name is the PHP class name, that we use in register to link them."
+    },
+    {
+      "type": "code",
+      "language": null,
+      "text": "class PlayDisc {\n    constructor(game, bga) {\n        this.game = game;\n        this.bga = bga;\n    }\n\n    onEnteringState(args, isCurrentPlayerActive) {\n        this.bga.statusBar.setTitle(isCurrentPlayerActive ? \n            _('${you} must play a disc') :\n            _('${actplayer} must play a disc')\n        );\n      \n        if (isCurrentPlayerActive) {            \n            this.updatePossibleMoves(args.possibleMoves);\n        }\n    }\n}"
+    },
+    {
+      "type": "note",
+      "variant": "note",
+      "text": "Note: We set the title when entering the state, so you can now remove description/descriptionMyTurn in the PHP class that was just here for test purpose."
+    },
+    {
+      "type": "paragraph",
+      "text": "Each time we enter into a new game state, we use the `onEnteringState` Javascript method of the JS State class. This lets us use the data returned by the method above on the client side."
+    },
+    {
+      "type": "code",
+      "language": null,
+      "text": "updatePossibleMoves(possibleMoves) {\n    // Remove current possible moves\n    document.querySelectorAll('.selectable').forEach(div => div.classList.remove('selectable'));\n\n    for( let x in possibleMoves ) {\n        for( let y in possibleMoves[ x ] ) {\n            // x,y is a possible move\n            document.getElementById(`square_${x}_${y}`).classList.add('selectable');\n        }            \n    }\n                \n    this.bga.gameui.addTooltipToClass( 'selectable', '', _('Place a disc here') );\n}"
+    },
+    {
+      "type": "paragraph",
+      "text": "Here's what this does. At first, it removes all `selectable` classes currently applied with the very useful `document.querySelectorAll` method."
+    },
+    {
+      "type": "paragraph",
+      "text": "Finally, it uses the BGA framework `addTooltipToClass` method to associate a tooltip to all those highlighted squares so that players can understand their meaning."
+    },
+    {
+      "type": "paragraph",
+      "text": "To see the possible moves we need to create a CSS class ( `possibleMove` ) that can be applied to a `square` element to highlight it:"
+    },
+    {
+      "type": "code",
+      "language": null,
+      "text": ".square.selectable {\n    background-color: color-mix(in srgb, darkgreen, white 50%);\n    cursor: pointer;\n}"
+    },
+    {
+      "type": "paragraph",
+      "text": "[image: Reversi8.jpg.jpg]"
+    },
+    {
+      "type": "paragraph",
+      "text": "From now, it's better to restart a game with 2 players, because we are going to implement a complete Reversi turn. The summary of what we are going to do is:"
+    },
+    {
+      "type": "list",
+      "ordered": false,
+      "items": [
+        {
+          "text": "When we click on a square, check if it is a `possibleMove` and if so, send the move to the server.",
+          "nested": null
+        },
+        {
+          "text": "Server side, check the move is correct, apply Reversi rules and jump to next player.",
+          "nested": null
+        },
+        {
+          "text": "Client side, change the token position to reflect the move.",
+          "nested": null
+        }
+      ]
+    },
+    {
+      "type": "paragraph",
+      "text": "Remember we added this after creating the squares in the `setup` method?"
+    },
+    {
+      "type": "code",
+      "language": null,
+      "text": "document.getElementById(`square_${x}_${y}`).addEventListener('click', e => this.onPlayDisc(x, y));"
+    },
+    {
+      "type": "paragraph",
+      "text": "We need to write the \"onPlayDisc\" method, called each time someone clicks on a square."
+    },
+    {
+      "type": "code",
+      "language": null,
+      "text": "onPlayDisc(x, y) {\n        // The click does nothing when not active\n        if (!this.bga.players.isCurrentPlayerActive()) {\n            return;\n        }\n\n        if(!document.getElementById(`square_${x}_${y}`).classList.contains('selectable')) {\n            // This is not a possible move => the click does nothing\n            return;\n        }\n\n    this.bga.actions.performAction(\"actPlayDisc\", {\n        x:x,\n        y:y,\n    });\n}"
+    },
+    {
+      "type": "paragraph",
+      "text": "What we do here is:"
+    },
+    {
+      "type": "list",
+      "ordered": false,
+      "items": [
+        {
+          "text": "We check that the current player is active",
+          "nested": null
+        },
+        {
+          "text": "We check that the clicked square has the `selectable` class, otherwise we know for sure that we can't play there.",
+          "nested": null
+        },
+        {
+          "text": "Finally, we make a call to the server using BGA `bgaPerformAction` method with argument x and y. This call will check that `actPlayDisc` action is possible, according to current game state (we will add the `PossibleAction` attribute on `actPlayDisc` just after). This check is important to avoid issues if a player double clicks on a square.",
+          "nested": null
+        }
+      ]
+    },
+    {
+      "type": "paragraph",
+      "text": "Now, we have to manage this `actPlayDisc` action on the server side. Add a corresponding `actPlayDisc` method in our `PlayDisc` state class ( `PlayDisc.php` ):"
+    },
+    {
+      "type": "code",
+      "language": null,
+      "text": "#[PossibleAction]\nfunction actPlayDisc( int $x, int $y, int $activePlayerId )\n{"
+    },
+    {
+      "type": "paragraph",
+      "text": "And add `use Bga\\GameFramework\\States\\PossibleAction;` at the top of the file."
+    },
+    {
+      "type": "paragraph",
+      "text": "now, we are using the `getTurnedOverDiscs` method again to check that this move is possible:"
+    },
+    {
+      "type": "code",
+      "language": null,
+      "text": "        // Now, check if this is a possible move\n        $board = $this->game->boardManager->getBoard();\n        $turnedOverDiscs = $this->game->boardManager->getTurnedOverDiscs( $x, $y, $activePlayerId, $board );\n        \n        if( count( $turnedOverDiscs ) === 0 ) {\n            throw new SystemException(\"Impossible move\");\n        }"
+    },
+    {
+      "type": "paragraph",
+      "text": "we update the database to change the color of all turned over disc + the disc we just placed:"
+    },
+    {
+      "type": "code",
+      "language": null,
+      "text": "            // Let's place a disc at x,y and return all \"$returned\" discs to the active player\n            \n            $this->game->boardManager->applyMove($activePlayerId, $x, $y, $turnedOverDiscs);"
+    },
+    {
+      "type": "paragraph",
+      "text": "We add this part to the BoardManager before going back to our act function:"
+    },
+    {
+      "type": "code",
+      "language": null,
+      "text": "    public function applyMove(int $playerId, int $x, int $y, array $turnedOverDiscs): void\n    {\n        $positions = [];\n        foreach ($turnedOverDiscs as $turnedOver) {\n            $turnedX = (int) $turnedOver['x'];\n            $turnedY = (int) $turnedOver['y'];\n            $positions[] = \"($turnedX,$turnedY)\";\n        }\n        $positions[] = \"($x,$y)\";\n\n        $sql = \"UPDATE `board` SET `board_player` = $playerId WHERE (`board_x`, `board_y`) IN (\" . implode(',', $positions) . \")\";\n        $this->game->DbQuery($sql);\n    }"
+    },
+    {
+      "type": "paragraph",
+      "text": "define what game statistics we want to record (for more details read Game statistics: stats.json ), For this tutorial we need to edit the stats.json file and set it to the following:"
+    },
+    {
+      "type": "code",
+      "language": null,
+      "text": "{\n  \"table\": [],\n  \"player\": {\n    \"discPlayedOnCorner\": {\n      \"id\": 10,\n      \"name\": \"Discs played on a corner\",\n      \"type\": \"int\"\n    },\n    \"discPlayedOnBorder\": {\n      \"id\": 11,\n      \"name\": \"Discs played on a border\",\n      \"type\": \"int\"\n    },\n    \"discPlayedOnCenter\": {\n      \"id\": 12,\n      \"name\": \"Discs played on board center part\",\n      \"type\": \"int\"\n    },\n    \"turnedOver\": {\n      \"id\": 13,\n      \"name\": \"Number of discs turned over\",\n      \"type\": \"int\"\n    }\n  }\n}"
+    },
+    {
+      "type": "paragraph",
+      "text": "back to actPlayDisc function... we manage game statistics:"
+    },
+    {
+      "type": "code",
+      "language": null,
+      "text": "$this->bga->playerStats->inc('turnedOver', $disc_count, $activePlayerId);\n        $updatedStat = 'discPlayedOnCenter';\n        $board_size = 8;\n        if( ($x==1 && $y==1) || ($x==$board_size && $y==1) || ($x==1 && $y==$board_size) || ($x==$board_size && $y==$board_size) ) {\n            $updatedStat = 'discPlayedOnCorner';\n        } else if( $x==1 || $x==$board_size || $y==1 || $y==$board_size ) {\n            $updatedStat = 'discPlayedOnBorder';\n        }\n        $this->bga->playerStats->inc($updatedStat, 1, $activePlayerId);"
+    },
+    {
+      "type": "paragraph",
+      "text": "Notify the turned discs:"
+    },
+    {
+      "type": "code",
+      "language": null,
+      "text": "            // Notify\n            $this->bga->notify->all( \"playDisc\", clienttranslate( '${player_name} plays a disc and turns over ${returned_nbr} disc(s)' ), array(\n                'player_id' => $activePlayerId,\n                'player_name' => $this->game->getPlayerNameById($activePlayerId),\n                'returned_nbr' => count( $turnedOverDiscs ),\n                'x' => $x,\n                'y' => $y\n            ) );\n\n            $this->bga->notify->all( \"turnOverDiscs\", '', array(\n                'player_id' => $activePlayerId,\n                'turnedOver' => $turnedOverDiscs\n            ) );"
+    },
+    {
+      "type": "paragraph",
+      "text": "Then we update the scores accordingly"
+    },
+    {
+      "type": "code",
+      "language": null,
+      "text": "        $playerIds = array_keys($this->game->loadPlayersBasicInfos());\n        foreach ($playerIds as $playerId) {\n            $tokens = $this->game->boardManager->countDiscsForPlayer((int) $playerId);\n            $this->bga->playerScore->set($playerId, $tokens); // this will update the JS counter automatically\n        }"
+    },
+    {
+      "type": "paragraph",
+      "text": "In BoardManager, add:"
+    },
+    {
+      "type": "code",
+      "language": null,
+      "text": "    public function countDiscsForPlayer(int $playerId): int\n    {\n        return (int) $this->game->getUniqueValueFromDB(\"SELECT COUNT(*) FROM `board` WHERE `board_player` = $playerId\");\n    }"
+    },
+    {
+      "type": "paragraph",
+      "text": "We are using for that 2 notifications ( `playDisc` and `turnOverDiscs` that we are going to implement on client side later). Note that the description of the `playDisc` notification will be logged in the game log."
+    },
+    {
+      "type": "code",
+      "language": null,
+      "text": "        // Then, go to the next state\n        return NextPlayer::class;"
+    },
+    {
+      "type": "paragraph",
+      "text": "To make the statistics work, we have to initialize them in `stats.json` :"
+    },
+    {
+      "type": "code",
+      "language": null,
+      "text": "{\n  \"player\": {\n    \"discPlayedOnCorner\": {\n      \"id\": 10,\n      \"name\": \"Discs played on a corner\",\n      \"type\": \"int\"\n    },\n    \"discPlayedOnBorder\": {\n      \"id\": 11,\n      \"name\": \"Discs played on a border\",\n      \"type\": \"int\"\n    },\n    \"discPlayedOnCenter\": {\n      \"id\": 12,\n      \"name\": \"Discs played on board center part\",\n      \"type\": \"int\"\n    },\n    \"turnedOver\": {\n      \"id\": 13,\n      \"name\": \"Number of discs turned over\",\n      \"type\": \"int\"\n    }\n  }\n}"
+    },
+    {
+      "type": "paragraph",
+      "text": "A last thing to do on the server side is to activate the next player when we enter the `NextPlayer` game state (in the `modules/php/States/NextPlayer.php` file):"
+    },
+    {
+      "type": "code",
+      "language": null,
+      "text": "    function onEnteringState(): void\n    {\n        // Active next player\n        $player_id = intval($this->game->activeNextPlayer());\n\n        // Check if both player has at least 1 discs, and if there are free squares to play\n        $player_to_discs = $this->game->getCollectionFromDb( \"SELECT board_player, COUNT( board_x )\n                                                       FROM board\n                                                       GROUP BY board_player\", true );\n\n        if( ! isset( $player_to_discs[ null ] ) )\n        {\n            // Index 0 has not been set => there's no more free place on the board !\n            // => end of the game\n            return ST_END_GAME;\n        }\n        else if( ! isset( $player_to_discs[ $player_id ] ) )\n        {\n            // Active player has no more disc on the board => he looses immediately\n            return ST_END_GAME;\n        }\n        \n        // Can this player play?\n\n        $possibleMoves = $this->game->getPossibleMoves( $player_id );\n        if( count( $possibleMoves ) == 0 )\n        {\n\n            // This player can't play\n            // Can his opponent play ?\n            $opponent_id = (int)$this->game->getUniqueValueFromDb( \"SELECT player_id FROM player WHERE player_id!='$player_id' \" );\n            if( count( $this->game->getPossibleMoves( $opponent_id ) ) == 0 )\n            {\n                // Nobody can move => end of the game\n                return ST_END_GAME;\n            }\n            else\n            {            \n                // => pass his turn\n                return NextPlayer::class;\n            }\n        }\n        else\n        {\n            // This player can play. Give him some extra time\n            $this->game->giveExtraTime( $player_id );\n            return PlayDisc::class;\n        }\n    }"
+    },
+    {
+      "type": "paragraph",
+      "text": "Now, when we play a token, the rules are checked and the token appears in the database."
+    },
+    {
+      "type": "paragraph",
+      "text": "Of course, as we don't manage notifications on client side, we need to press F5 after each move to see the changes on the board."
+    },
+    {
+      "type": "paragraph",
+      "text": "Now, what we have to do is process the notifications sent by the server and make the move appear on the interface."
+    },
+    {
+      "type": "code",
+      "language": null,
+      "text": "        setupNotifications() {\n            console.log( 'notifications subscriptions setup' );\n\n            // automatically listen to the notifications, based on the `notif_xxx` function on this class.\n            this.bga.notifications.setupPromiseNotifications();\n        }"
+    },
+    {
+      "type": "paragraph",
+      "text": "We will associate each of our 3 notifications with a method prefixed with `notif_` ."
+    },
+    {
+      "type": "code",
+      "language": null,
+      "text": "        async notif_playDisc(args) {\n            // Remove current possible moves (makes the board more clear)\n            document.querySelectorAll('.possibleMove').forEach(div => div.classList.remove('possibleMove'));\n        \n            await this.addDiscOnBoard( args.x, args.y, args.player_id );\n        }"
+    },
+    {
+      "type": "paragraph",
+      "text": "No surprise here, we re-used some existing stuff to:"
+    },
+    {
+      "type": "list",
+      "ordered": false,
+      "items": [
+        {
+          "text": "Remove the highlighted squares.",
+          "nested": null
+        },
+        {
+          "text": "Add a new disc on board, coming from player panel. That's where the async await part of `addDiscOnBoard` becomes useful.",
+          "nested": null
+        }
+      ]
+    },
+    {
+      "type": "paragraph",
+      "text": "Now, here's the method that handles the `turnOverDiscs` notification:"
+    },
+    {
+      "type": "code",
+      "language": null,
+      "text": "        async animateTurnOverDisc(disc, targetColor) {\n            const squareDiv = document.getElementById(`square_${disc.x}_${disc.y}`);\n            const discDiv = document.getElementById(`disc_${disc.x}_${disc.y}`);\n            \n            squareDiv.classList.add('flip-animation');\n            await this.bga.gameui.wait(500); // for the flip animation to finish\n\n\n            discDiv.dataset.color = targetColor;\n\n            const parallelAnimations = [{\n                keyframes: [ // flip the disc\n                    { transform: `rotateY(180deg)` },\n                    { transform: `rotateY(0deg)` },\n                ]\n            }, {\n                keyframes: [ // lift the disc\n                    { transform: `translate(0, -12px) scale(1.2)`, offset: 0.5 },\n                ]\n            }];\n\n            await this.animationManager.slideAndAttach(discDiv, squareDiv, { duration: 1000, parallelAnimations });\n            \n            squareDiv.classList.remove('flip-animation');\n            await this.bga.gameui.wait(500); // for the flip animation removal to finish\n        }\n        \n        async notif_turnOverDiscs(args) {\n            // Get the color of the player who is returning the discs\n            const targetColor = this.gamedatas.players[ args.player_id ].color;\n\n            // wait for the animations of all turned discs to be over before considering the notif done\n            await Promise.all(\n                args.turnedOver.map(disc => \n                    this.animateTurnOverDisc(disc, targetColor)\n                )\n            );\n        }"
+    },
+    {
+      "type": "paragraph",
+      "text": "The list of the discs to be turned over has been made available by our server side code in `args.turnedOver` (see previous paragraph). We loop through all these discs, and trigger a single disc animation using `animateTurnOverDisc` . This function creates a complex animation using BgaAnimations for the disc in parameter."
+    },
+    {
+      "type": "paragraph",
+      "text": "When a player leave the table, a Zombie (bot) will play for the leaver, so the table can continue. For that, we write code in the zombieTurn function."
+    },
+    {
+      "type": "paragraph",
+      "text": "Add this at the end of your PlayDisc.php file :"
+    },
+    {
+      "type": "code",
+      "language": null,
+      "text": "    function zombie(int $playerId) {\n        // Zombie level 1\n        $possibleMoves = $this->game->boardManager->getPossibleMoves($playerId);\n        // transform the 2 dimensional array into a flat array of possible [$x, $y]\n        $possibleMovesArray = [];\n        foreach($possibleMoves as $x => $ys) {\n            foreach($ys as $y => $valid) {\n                $possibleMovesArray[] = [$x, $y];\n            }\n        }\n\n        $zombieChoice = $this->getRandomZombieChoice($possibleMovesArray);\n        return $this->actPlayDisc($zombieChoice[0], $zombieChoice[1], $playerId);\n    }"
+    },
+    {
+      "type": "paragraph",
+      "text": "And that's it ! Everytime a leaver should be playing, the Zombie will random play one of the possible moves, and the remaining player will be able to play the next move."
+    },
+    {
+      "type": "paragraph",
+      "text": "Add this at the end of your Game.php file :"
+    },
+    {
+      "type": "code",
+      "language": null,
+      "text": "\n\n    function debug_playAutomatically(int $moves = 50) {\n        $this->bga->debug->playUntil(fn(int $count) => $count === $moves);\n    }\n\n    function debug_playToEndGame() {\n        $this->debug_playAutomatically(64); // reversi max moves is under 64 for the standard size board\n    }"
+    },
+    {
+      "type": "paragraph",
+      "text": "This function plays automatically until we reach the end of the game. The functions starting with \"debug_\" can be triggered in the Studio with a special menu. It uses the tool `$this->debug->playUntil` that will trigger zombie actions, but you could put any code in the debug function for the tests you need."
+    },
+    {
+      "type": "paragraph",
+      "text": "You can create as many debug function as you like!"
+    },
+    {
+      "type": "paragraph",
+      "text": "Follow the instruction on https://en.doc.boardgamearena.com/Testing_by_developer#PHP to setup phpunit and create the first Reversi unit tests that are given as examples there."
+    },
+    {
+      "type": "paragraph",
+      "text": "You might want to check another tutorial, or start working on your first real project !"
+    }
+  ],
+  "links": [
+    {
+      "text": "see here",
+      "url": "Studio.html"
+    },
+    {
+      "text": "rules of Reversi",
+      "url": "http://en.wikipedia.org/wiki/Reversi#Rules"
+    },
+    {
+      "text": "First Steps with BGA Studio",
+      "url": "http://en.doc.boardgamearena.com/First_steps_with_BGA_Studio"
+    },
+    {
+      "text": "https://studio.boardgamearena.com/projects?game=reversi",
+      "url": "https://studio.boardgamearena.com/projects?game=reversi"
+    },
+    {
+      "text": "Create a new game project",
+      "url": "First_steps_with_BGA_Studio.html"
+    },
+    {
+      "text": "studio Control panel",
+      "url": "https://studio.boardgamearena.com/controlpanel"
+    },
+    {
+      "text": "Connect to your SFTP folder",
+      "url": "First_steps_with_BGA_Studio.html"
+    },
+    {
+      "text": "Studio local version block.png",
+      "url": "File:Studio_local_version_block.png.html"
+    },
+    {
+      "text": "Setting up BGA Development environment using VSCode",
+      "url": "Setting_up_BGA_Development_environment_using_VSCode.html"
+    },
+    {
+      "text": "https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Template_literals",
+      "url": "https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Template_literals"
+    },
+    {
+      "text": "BgaAnimations",
+      "url": "BgaAnimations.html"
+    },
+    {
+      "text": "Reversi3.jpg",
+      "url": "File:Reversi3.jpg.html"
+    },
+    {
+      "text": "Reversi6.jpg",
+      "url": "File:Reversi6.jpg.html"
+    },
+    {
+      "text": "Reversi7.jpg",
+      "url": "File:Reversi7.jpg.html"
+    },
+    {
+      "text": "Reversi8.jpg.jpg",
+      "url": "File:Reversi8.jpg.jpg.html"
+    },
+    {
+      "text": "Game statistics: stats.json",
+      "url": "Game_statistics:_stats.json.html"
+    },
+    {
+      "text": "https://en.doc.boardgamearena.com/Testing_by_developer#PHP",
+      "url": "https://en.doc.boardgamearena.com/Testing_by_developer#PHP"
+    }
+  ],
+  "images": [
+    {
+      "src": "/images/thumb/1/1a/Studio_local_version_block.png/300px-Studio_local_version_block.png",
+      "alt": "Studio local version block.png"
+    },
+    {
+      "src": "/images/3/38/Reversi3.jpg",
+      "alt": "Reversi3.jpg"
+    },
+    {
+      "src": "/images/3/31/Reversi6.jpg",
+      "alt": "Reversi6.jpg"
+    },
+    {
+      "src": "/images/1/13/Reversi7.jpg",
+      "alt": "Reversi7.jpg"
+    },
+    {
+      "src": "/images/1/1e/Reversi8.jpg.jpg",
+      "alt": "Reversi8.jpg.jpg"
+    }
+  ],
+  "metadata": {
+    "extractor_version": "1.0.0",
+    "extracted_at": "2026-07-06T06:53:17.688363+00:00",
+    "word_count": 3996,
+    "heading_count": 42,
+    "code_block_count": 44,
+    "table_count": 0,
+    "image_count": 5,
+    "list_count": 14
+  }
+}

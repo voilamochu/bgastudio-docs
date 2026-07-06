@@ -1,0 +1,842 @@
+{
+  "title": "Tools and tips of BGA Studio",
+  "source_file": "Tools_and_tips_of_BGA_Studio.html",
+  "relative_path": "Tools_and_tips_of_BGA_Studio.html",
+  "content_json_path": "content_json/Tools_and_tips_of_BGA_Studio.json",
+  "headings": [
+    {
+      "level": 2,
+      "text": "Server Tools and Tips",
+      "id": "Server_Tools_and_Tips"
+    },
+    {
+      "level": 3,
+      "text": "Starting a game in one click",
+      "id": "Starting_a_game_in_one_click"
+    },
+    {
+      "level": 3,
+      "text": "Stopping a game in one click",
+      "id": "Stopping_a_game_in_one_click"
+    },
+    {
+      "level": 3,
+      "text": "Switching between users",
+      "id": "Switching_between_users"
+    },
+    {
+      "level": 3,
+      "text": "Access to game database and Logs",
+      "id": "Access_to_game_database_and_Logs"
+    },
+    {
+      "level": 3,
+      "text": "Save & restore state",
+      "id": "Save_.26_restore_state"
+    },
+    {
+      "level": 3,
+      "text": "Input/Output debugging section",
+      "id": "Input.2FOutput_debugging_section"
+    },
+    {
+      "level": 3,
+      "text": "Zombify a player",
+      "id": "Zombify_a_player"
+    },
+    {
+      "level": 3,
+      "text": "Stopping Hanging Game",
+      "id": "Stopping_Hanging_Game"
+    },
+    {
+      "level": 2,
+      "text": "Desktop and Web Tools",
+      "id": "Desktop_and_Web_Tools"
+    },
+    {
+      "level": 3,
+      "text": "Code Editors and IDEs",
+      "id": "Code_Editors_and_IDEs"
+    },
+    {
+      "level": 4,
+      "text": "Visual Studio Code",
+      "id": "Visual_Studio_Code"
+    },
+    {
+      "level": 4,
+      "text": "Eclipse For PHP Developers",
+      "id": "Eclipse_For_PHP_Developers"
+    },
+    {
+      "level": 4,
+      "text": "Gedit (Ubuntu)",
+      "id": "Gedit_.28Ubuntu.29"
+    },
+    {
+      "level": 3,
+      "text": "File Sync",
+      "id": "File_Sync"
+    },
+    {
+      "level": 4,
+      "text": "File Sync on Windows",
+      "id": "File_Sync_on_Windows"
+    },
+    {
+      "level": 4,
+      "text": "File Sync on Linux",
+      "id": "File_Sync_on_Linux"
+    },
+    {
+      "level": 5,
+      "text": "Option 1 - Nautilus (file manager)",
+      "id": "Option_1_-_Nautilus_.28file_manager.29"
+    },
+    {
+      "level": 5,
+      "text": "Option 2 - sshfs and rsync",
+      "id": "Option_2_-_sshfs_and_rsync"
+    },
+    {
+      "level": 5,
+      "text": "Option 3 - lftp",
+      "id": "Option_3_-_lftp"
+    },
+    {
+      "level": 3,
+      "text": "Debuggers",
+      "id": "Debuggers"
+    },
+    {
+      "level": 3,
+      "text": "Version Control",
+      "id": "Version_Control"
+    },
+    {
+      "level": 3,
+      "text": "PHP CLI",
+      "id": "PHP_CLI"
+    },
+    {
+      "level": 3,
+      "text": "Image Manipulation",
+      "id": "Image_Manipulation"
+    },
+    {
+      "level": 4,
+      "text": "ImageMagick",
+      "id": "ImageMagick"
+    },
+    {
+      "level": 4,
+      "text": "Gimp",
+      "id": "Gimp"
+    },
+    {
+      "level": 4,
+      "text": "Shrinking",
+      "id": "Shrinking"
+    },
+    {
+      "level": 4,
+      "text": "PDF Scrapper",
+      "id": "PDF_Scrapper"
+    },
+    {
+      "level": 3,
+      "text": "Restore project to Original template",
+      "id": "Restore_project_to_Original_template"
+    },
+    {
+      "level": 3,
+      "text": "Rename/Copy project",
+      "id": "Rename.2FCopy_project"
+    },
+    {
+      "level": 3,
+      "text": "BGA Workbench",
+      "id": "BGA_Workbench"
+    },
+    {
+      "level": 3,
+      "text": "Testing and validation tools",
+      "id": "Testing_and_validation_tools"
+    },
+    {
+      "level": 3,
+      "text": "State machine diagram generation tool",
+      "id": "State_machine_diagram_generation_tool"
+    },
+    {
+      "level": 2,
+      "text": "Other useful tools",
+      "id": "Other_useful_tools"
+    },
+    {
+      "level": 2,
+      "text": "Client Tips",
+      "id": "Client_Tips"
+    },
+    {
+      "level": 3,
+      "text": "Speed up game re-loading by disabling Input/Output debug section",
+      "id": "Speed_up_game_re-loading_by_disabling_Input.2FOutput_debug_section"
+    },
+    {
+      "level": 3,
+      "text": "Speed up CSS development and layout",
+      "id": "Speed_up_CSS_development_and_layout"
+    }
+  ],
+  "content": [
+    {
+      "type": "paragraph",
+      "text": "To start a game:"
+    },
+    {
+      "type": "list",
+      "ordered": false,
+      "items": [
+        {
+          "text": "Go to Play now and configure game type: Simple game -> Turn-based -> Manual",
+          "nested": null
+        },
+        {
+          "text": "Select your game and click on \"Create\".",
+          "nested": null
+        },
+        {
+          "text": "If you want to play a game with 3 players, specify that you want a maximum of 3 players at this table.",
+          "nested": null
+        },
+        {
+          "text": "Click on \"Express Start\".",
+          "nested": null
+        }
+      ]
+    },
+    {
+      "type": "list",
+      "ordered": false,
+      "items": [
+        {
+          "text": "Click on the \"menú\" icon on the top right of the screen.",
+          "nested": null
+        },
+        {
+          "text": "Click on \"Express Stop\" (\"Quit this game\" if playing a solo game).",
+          "nested": null
+        }
+      ]
+    },
+    {
+      "type": "paragraph",
+      "text": "When running a game on Studio, you can use the little red arrow near each player's name to open a new tab with this player's perspective. You can also modify the URL to view the table as any user you want (changing &testuser=myid in the URL), allowing to easily test as a spectator."
+    },
+    {
+      "type": "paragraph",
+      "text": "At the bottom of the game area, there is section without a title containing 3 useful links:"
+    },
+    {
+      "type": "code",
+      "language": null,
+      "text": " Go to game database • BGA request&SQL logs • BGA unexpected exceptions logs"
+    },
+    {
+      "type": "list",
+      "ordered": false,
+      "items": [
+        {
+          "text": "\"Go to game database\" link is an immediate access to the PhpMyAdmin tool to view/edit the tables of the current game",
+          "nested": null
+        },
+        {
+          "text": "BGA request&SQL logs - link to your studio PHP log - all tables, all severities. Anything you print using debugging and tracing functions from PHP and some framework logs",
+          "nested": null
+        },
+        {
+          "text": "BGA unexpected exceptions logs - same log as above but only severity warning and higher",
+          "nested": null
+        }
+      ]
+    },
+    {
+      "type": "paragraph",
+      "text": "See Practical debugging for more info about it."
+    },
+    {
+      "type": "paragraph",
+      "text": "Using links of this section, you can save the complete current (database) state of your game, then restore it later."
+    },
+    {
+      "type": "paragraph",
+      "text": "We provide you 3 \"slots\": 1, 2 and 3. This way, you can save 3 different game situations."
+    },
+    {
+      "type": "list",
+      "ordered": false,
+      "items": [
+        {
+          "text": "the \"restore\" function does not work anymore when the game is over.",
+          "nested": null
+        },
+        {
+          "text": "a saved situation from a given table cannot be restored in another table.",
+          "nested": null
+        },
+        {
+          "text": "when you \"restore\" a situation, the current browser page is refreshed to reflect the updated game situation, but you have to refresh you other tabs/pages manually.",
+          "nested": null
+        }
+      ]
+    },
+    {
+      "type": "paragraph",
+      "text": "This section shows you:"
+    },
+    {
+      "type": "list",
+      "ordered": false,
+      "items": [
+        {
+          "text": "The AJAX calls made by your game interface to the game server. AJAX calls (outputs) begins with \">\"",
+          "nested": null
+        },
+        {
+          "text": "The notifications received by your game interface. Notifications (inputs) begins with \"<\".",
+          "nested": null
+        }
+      ]
+    },
+    {
+      "type": "note",
+      "variant": "note",
+      "text": "Note: if you click on some notification title, you can resend it immediately to the user interface."
+    },
+    {
+      "type": "paragraph",
+      "text": "Using the red arrow, go to the player view and select Quit game (make sure you're playing in friendly mode to avoid your studio accounts to go to 0 karma while testing zombie)."
+    },
+    {
+      "type": "paragraph",
+      "text": "If game is hanging and you cannot enter it to stop you can type this URL (replace 12345 with your table number), which should bring you to a place where you can stop it without entering:"
+    },
+    {
+      "type": "code",
+      "language": null,
+      "text": " https://studio.boardgamearena.com/#!table?table=12345"
+    },
+    {
+      "type": "paragraph",
+      "text": "Microsoft Visual Studio Code is light weight IDE/Editor. All desktops. https://code.visualstudio.com"
+    },
+    {
+      "type": "paragraph",
+      "text": "Eclipse PHP package can be starting point for development you need. You may also want to install Tern JS plugins to understand dojo style JS. All desktops. https://projects.eclipse.org/projects/tools.pdt"
+    },
+    {
+      "type": "paragraph",
+      "text": "Edit TPL To edit TPL with HTML code highlightings in Gedit under Ubuntu:"
+    },
+    {
+      "type": "code",
+      "language": null,
+      "text": "    sudo gedit /usr/share/gtksourceview-3.0/language-specs/html.lang"
+    },
+    {
+      "type": "paragraph",
+      "text": "then find 'globs' section, and change:"
+    },
+    {
+      "type": "code",
+      "language": null,
+      "text": "    <property name=\"globs\">*.html;*.htm;*.tpl</property>"
+    },
+    {
+      "type": "note",
+      "variant": "note",
+      "text": "NOTE: If you use VS Code you don't need to use methods below, use one of the sync methods provided by VS Code extensios. See Setting up BGA Development environment using VSCode"
+    },
+    {
+      "type": "paragraph",
+      "text": "Install WinSCP . Map a remote directory to a local one and enable continuous sync (one way). You need SFTP password you get when you registered dev account (or ssh key)."
+    },
+    {
+      "type": "paragraph",
+      "text": "You can just use Nautilus \"connect to a server\" function with URL sftp://1.studio.boardgamearena.com:2022 Then you'll get a mounted local folder mapping your studio folder and you can use any editor you like without further need for sync. Downside - if connection goes down you cannot work on source code, no local copy."
+    },
+    {
+      "type": "paragraph",
+      "text": "This setup will sync in the background (continuous sync) when file is saved, after you set it up and start just save your files and they be on server before you can hit refresh. You need to install \"sshfs\" first. This is linux script:"
+    },
+    {
+      "type": "code",
+      "language": null,
+      "text": "#!/bin/bash\nBASEDIR=`dirname $0`\nREMOTE=$BASEDIR/remote\n\n\n#mount remote\nfusermount -u $REMOTE #this unmounts dir\n#this asssumes your default ssh key is uploaded to studio\nsshfs -p 2022 [email protected]: $REMOTE\n\n\n#this starts auto-sync from local to remote mount\nkillall lsyncd\nLOCAL=$BASEDIR/workspace\n\n#for every game you can do something like this\nGAME=mygamenamehere\nlsyncd -delay 1 -rsync $LOCAL/$GAME/ $REMOTE/$GAME"
+    },
+    {
+      "type": "paragraph",
+      "text": "This can be able run on startup, so you don't have to do anything manually. However sshfs is not very stable you have to kill and restart it sometimes. And remote goes away sometimes due to connection issues with studio. In this case its handy to have a local copy, which is what lsyncd for."
+    },
+    {
+      "type": "code",
+      "language": null,
+      "text": "rsync -vlrt $LOCAL/$GAME/ $REMOTE/$GAME"
+    },
+    {
+      "type": "note",
+      "variant": "note",
+      "text": "Note: is insecure way of running sshfs (password will go away, set up using ssh key S.V.P.) echo LongDevPassword | sshfs -p 2022 -o password_stdin ..."
+    },
+    {
+      "type": "paragraph",
+      "text": "lftp is a fast command-line file transfer program. It supports parallel threads, transferring multiple files at a time."
+    },
+    {
+      "type": "list",
+      "ordered": false,
+      "items": [
+        {
+          "text": "Linux: Install using your package manager, for example: sudo apt-get install lftp",
+          "nested": null
+        },
+        {
+          "text": "Mac: Install Homebrew , then install lftp using brew install lftp",
+          "nested": null
+        }
+      ]
+    },
+    {
+      "type": "paragraph",
+      "text": "To upload your project to BGA studio, use the \"mirror\" command like this:"
+    },
+    {
+      "type": "paragraph",
+      "text": "Be sure to include the trailing / after both directory names."
+    },
+    {
+      "type": "paragraph",
+      "text": "This is one time sync (unless I am missing something this does not do continious sync?)"
+    },
+    {
+      "type": "paragraph",
+      "text": "Browser is the best tool for JS/HTML5 debugging, see Practical debugging for details."
+    },
+    {
+      "type": "paragraph",
+      "text": "Studio provides svn for you code on server, there are some limited abilities there to see history and restore. I recommend to also keep your code in another repository, which allows keeping more fine-grained history and can simplify collaboration."
+    },
+    {
+      "type": "paragraph",
+      "text": "Other option is to host source code on github. If you do, the convention is to use github.com/<yourname>/bga-<yourgame>. It is recommended to add the boardgamearena tag and add your repo to the list on the BGA_Code_Sharing page."
+    },
+    {
+      "type": "paragraph",
+      "text": "You can also configure github to automatically deploy to BGA whenever you push to a branch. See this forum post for instructions."
+    },
+    {
+      "type": "paragraph",
+      "text": "Its handy to have php cli (command line) tools install to run php locally, so you can test some stuff without deployment cycle, or create some scripts that generate code or markup."
+    },
+    {
+      "type": "paragraph",
+      "text": "Handy set of image manipulation command line tools, useful to for example to stitch together bunch of images and re-size, to use as sprite (in Stock component for example). I.e. you got a graphics file from publisher where every tile is 600x600 PNG file in separate file. You want .jpg instead of .png to make it not like 20Mb, and combine all images in one column and re-size to 128x128:"
+    },
+    {
+      "type": "code",
+      "language": null,
+      "text": "/usr/bin/montage  `ls Tiles*.png` -tile 1 -geometry 128x128+0+0 out/tiles128.jpg"
+    },
+    {
+      "type": "paragraph",
+      "text": "The order of the images will match the 'ls' order. If needed change the filenames if you need a specific order."
+    },
+    {
+      "type": "paragraph",
+      "text": "GUI tool, very complex but will do ALL what you possibly need to do with game graphics"
+    },
+    {
+      "type": "paragraph",
+      "text": "Shrink images without loss of quality https://tinypng.com/ or http://www.iloveimg.com/"
+    },
+    {
+      "type": "paragraph",
+      "text": "extract images from PDF file (i.e. game rulebook) :"
+    },
+    {
+      "type": "paragraph",
+      "text": "http://www.extractpdf.com/"
+    },
+    {
+      "type": "paragraph",
+      "text": "You can restore your project with default project using Studio Control Panel. I.e go to https://studio.boardgamearena.com/studio find your project click on it's link, find Override text in the control panel."
+    },
+    {
+      "type": "list",
+      "ordered": false,
+      "items": [
+        {
+          "text": "Use words EmptyGame as second project.",
+          "nested": null
+        },
+        {
+          "text": "Use your own project name (with capital/s) as first project.",
+          "nested": null
+        },
+        {
+          "text": "Press Go (or whatever button named)",
+          "nested": null
+        }
+      ]
+    },
+    {
+      "type": "paragraph",
+      "text": "You can now override your project with any other project using Studio Control Panel."
+    },
+    {
+      "type": "paragraph",
+      "text": "Alternatively there is a script available in sharedcode project to do the renaming which can be called in command line if you have php command line installed. You need to have php clt (command line interface) installed, then you can download script and run it."
+    },
+    {
+      "type": "paragraph",
+      "text": "Usage:"
+    },
+    {
+      "type": "code",
+      "language": null,
+      "text": "php bgaprojectrename.php <originalProjectPath> <copyOfProjectRenamedPath>"
+    },
+    {
+      "type": "paragraph",
+      "text": "Example on how to call it in command line  if you project name is \"heartsmyproject\""
+    },
+    {
+      "type": "code",
+      "language": null,
+      "text": "php8.4 git/bga-sharedcode/tools/bgaprojectrename.php remote/hearts/ remote/heartsmyproject/"
+    },
+    {
+      "type": "paragraph",
+      "text": "Unofficial/unsupported PHP library providing tools to help manage BGA Studio projects including deployment and test utilities. https://github.com/danielholmes/bga-workbench"
+    },
+    {
+      "type": "list",
+      "ordered": false,
+      "items": [
+        {
+          "text": "Run static analysis on your project to detect common problem and translation issues - project check - available from control panel - manage games - <your project> - Check project (blue button left middle)",
+          "nested": null
+        },
+        {
+          "text": "Check if web feature is supported https://caniuse.com/",
+          "nested": null
+        },
+        {
+          "text": "PHP: https://phpcodechecker.com/",
+          "nested": null
+        },
+        {
+          "text": "JS: http://esprima.org/demo/validate.html",
+          "nested": null
+        },
+        {
+          "text": "CSS: http://jigsaw.w3.org/css-validator/",
+          "nested": null
+        }
+      ]
+    },
+    {
+      "type": "paragraph",
+      "text": "You can easily generate a state machine diagram from your states.inc.php using the dot language ( https://graphviz.org/ ) via a PHP script."
+    },
+    {
+      "type": "list",
+      "ordered": false,
+      "items": [
+        {
+          "text": "download the php script from the bga-sharedcode git repo located here https://github.com/elaskavaia/bga-sharedcode/blob/master/misc/generate_state_diagram.php and place it into your project root (on the same level as states.inc.php)",
+          "nested": null
+        },
+        {
+          "text": "run the script locally: \"php.exe generate_state_diagram.php > graph.dot\"",
+          "nested": null
+        },
+        {
+          "text": "open the generated dot file for visualization in visual studio code using the \"Graphviz Interactive Preview\" extension",
+          "nested": null
+        },
+        {
+          "text": "alternatively install graphiz ( https://graphviz.org/download/ ) and generate an image file by running the following command \"dot -Tpng -o graph.png graph.dot\"",
+          "nested": null
+        }
+      ]
+    },
+    {
+      "type": "paragraph",
+      "text": "Here is an example of running the generation script on the hearts game from the tutorial:"
+    },
+    {
+      "type": "paragraph",
+      "text": "Legend:"
+    },
+    {
+      "type": "list",
+      "ordered": false,
+      "items": [
+        {
+          "text": "states of type GAME appear in yellow",
+          "nested": null
+        },
+        {
+          "text": "states of type ACTIVE_PLAYER appear in blue",
+          "nested": null
+        },
+        {
+          "text": "states of type MULTIPLE_ACTIVE_PLAYER appear in green",
+          "nested": null
+        }
+      ]
+    },
+    {
+      "type": "paragraph",
+      "text": "Once you have this state machine, you can use it to generate boilerplate code using the BGA State Machine Generator"
+    },
+    {
+      "type": "list",
+      "ordered": false,
+      "items": [
+        {
+          "text": "Website with bunch of textures and sounds http://www.grsites.com/archive/textures/",
+          "nested": null
+        },
+        {
+          "text": "Shrink images without loss of quality https://tinypng.com/ or http://www.iloveimg.com/ (recommended by Gregory Isabelli)",
+          "nested": null
+        },
+        {
+          "text": "CSS shapes https://css-tricks.com/examples/ShapesOfCSS/",
+          "nested": null
+        },
+        {
+          "text": "PDF Scraper - extract images - http://www.extractpdf.com/",
+          "nested": null
+        },
+        {
+          "text": "Hexagonal Grids (from Red Blob Games) - https://www.redblobgames.com/grids/hexagons/",
+          "nested": null
+        },
+        {
+          "text": "CSS tools (shades, shapes, textures) - https://dev.to/lissy93/super-useful-css-resources-1ba3",
+          "nested": null
+        },
+        {
+          "text": "Color blind pallette https://jfly.uni-koeln.de/color/ https://mikemol.github.io/technique/colorblind/2018/02/11/color-safe-palette.html",
+          "nested": null
+        },
+        {
+          "text": "CSS stroked text https://blog.logrocket.com/create-beautiful-stroked-text-css/",
+          "nested": null
+        },
+        {
+          "text": "CSS box model and SVG images https://www.freecodecamp.org/news/how-to-use-css-box-model-and-style-svg-images/",
+          "nested": null
+        }
+      ]
+    },
+    {
+      "type": "paragraph",
+      "text": "Development UI have few sections for debugging only, such as 'Input/Output debugging section'. Loading this data will significantly slow down your reload. I did some profiling and my reloading (i.e. F5) took 14 seconds, 12 of which it was dealing with loading this section. If you not using it you can disable it. In your JavaScript code, in the begging of 'setup' method add this code"
+    },
+    {
+      "type": "code",
+      "language": null,
+      "text": "        dojo.destroy('debug_output');"
+    },
+    {
+      "type": "paragraph",
+      "text": "That should get rid of this section and overhead associated with loading it (it may have some other side-effects, I have not explored all of them)"
+    },
+    {
+      "type": "paragraph",
+      "text": "Syncing files to server and refreshing is relative fast but still can take up to 20 seconds which is annoying. If you working a lot on css/images/layout you can speed it up by copying html in some state of the game to your local folder. I.e. in your  project folder create directory misc/ and save your html as misc/test.html and changing path to css to load from local disk (and it will load your images to from local disk as well). I.e. find something like"
+    },
+    {
+      "type": "code",
+      "language": null,
+      "text": " <link rel=\"stylesheet\" type=\"text/css\" href=\"http://1.studio.boardgamearena.com:8081/data/themereleases/151226-1240/games/mygame/999999-9999/mygame.css\"/>"
+    },
+    {
+      "type": "paragraph",
+      "text": "and replace with"
+    },
+    {
+      "type": "code",
+      "language": null,
+      "text": "  <link rel=\"stylesheet\" type=\"text/css\" href=\"../mygame.css\"/>"
+    },
+    {
+      "type": "paragraph",
+      "text": "You project structure will look like this"
+    },
+    {
+      "type": "code",
+      "language": null,
+      "text": "mygame\n  img/ <-- your images\n  mygame.css  <-- your original css\n  ...\n  misc/\n    test.html <-- your test html"
+    },
+    {
+      "type": "paragraph",
+      "text": "It is a bit tricky to save html exact state, if you do save as it also pulls all resources sometimes."
+    }
+  ],
+  "links": [
+    {
+      "text": "Practical debugging",
+      "url": "Practical_debugging.html"
+    },
+    {
+      "text": "https://code.visualstudio.com",
+      "url": "https://code.visualstudio.com"
+    },
+    {
+      "text": "https://projects.eclipse.org/projects/tools.pdt",
+      "url": "https://projects.eclipse.org/projects/tools.pdt"
+    },
+    {
+      "text": "Setting up BGA Development environment using VSCode",
+      "url": "Setting_up_BGA_Development_environment_using_VSCode.html"
+    },
+    {
+      "text": "WinSCP",
+      "url": "http://winscp.net/"
+    },
+    {
+      "text": "sftp://1.studio.boardgamearena.com:2022",
+      "url": "sftp://1.studio.boardgamearena.com:2022"
+    },
+    {
+      "text": "[email protected]",
+      "url": "cdn-cgi/l/email-protection.html"
+    },
+    {
+      "text": "lftp",
+      "url": "https://lftp.yar.ru/"
+    },
+    {
+      "text": "Homebrew",
+      "url": "https://brew.sh/"
+    },
+    {
+      "text": "boardgamearena",
+      "url": "https://github.com/topics/boardgamearena"
+    },
+    {
+      "text": "BGA_Code_Sharing",
+      "url": "BGA_Code_Sharing.html"
+    },
+    {
+      "text": "this forum post",
+      "url": "https://forum.boardgamearena.com/viewtopic.php?f=12&t=13370&start=10#p59537"
+    },
+    {
+      "text": "https://tinypng.com/",
+      "url": "https://tinypng.com/"
+    },
+    {
+      "text": "http://www.iloveimg.com/",
+      "url": "http://www.iloveimg.com/"
+    },
+    {
+      "text": "http://www.extractpdf.com/",
+      "url": "http://www.extractpdf.com/"
+    },
+    {
+      "text": "https://studio.boardgamearena.com/studio",
+      "url": "https://studio.boardgamearena.com/studio"
+    },
+    {
+      "text": "https://github.com/danielholmes/bga-workbench",
+      "url": "https://github.com/danielholmes/bga-workbench"
+    },
+    {
+      "text": "https://caniuse.com/",
+      "url": "https://caniuse.com/"
+    },
+    {
+      "text": "https://phpcodechecker.com/",
+      "url": "https://phpcodechecker.com/"
+    },
+    {
+      "text": "http://esprima.org/demo/validate.html",
+      "url": "http://esprima.org/demo/validate.html"
+    },
+    {
+      "text": "http://jigsaw.w3.org/css-validator/",
+      "url": "http://jigsaw.w3.org/css-validator/"
+    },
+    {
+      "text": "https://graphviz.org/",
+      "url": "https://graphviz.org/"
+    },
+    {
+      "text": "https://github.com/elaskavaia/bga-sharedcode/blob/master/misc/generate_state_diagram.php",
+      "url": "https://github.com/elaskavaia/bga-sharedcode/blob/master/misc/generate_state_diagram.php"
+    },
+    {
+      "text": "https://graphviz.org/download/",
+      "url": "https://graphviz.org/download/"
+    },
+    {
+      "text": "BGA State Machine Generator",
+      "url": "https://github.com/xmakina/bga-statemachinegenerator"
+    },
+    {
+      "text": "http://www.grsites.com/archive/textures/",
+      "url": "http://www.grsites.com/archive/textures/"
+    },
+    {
+      "text": "https://css-tricks.com/examples/ShapesOfCSS/",
+      "url": "https://css-tricks.com/examples/ShapesOfCSS/"
+    },
+    {
+      "text": "https://www.redblobgames.com/grids/hexagons/",
+      "url": "https://www.redblobgames.com/grids/hexagons/"
+    },
+    {
+      "text": "https://dev.to/lissy93/super-useful-css-resources-1ba3",
+      "url": "https://dev.to/lissy93/super-useful-css-resources-1ba3"
+    },
+    {
+      "text": "https://jfly.uni-koeln.de/color/",
+      "url": "https://jfly.uni-koeln.de/color/"
+    },
+    {
+      "text": "https://mikemol.github.io/technique/colorblind/2018/02/11/color-safe-palette.html",
+      "url": "https://mikemol.github.io/technique/colorblind/2018/02/11/color-safe-palette.html"
+    },
+    {
+      "text": "https://blog.logrocket.com/create-beautiful-stroked-text-css/",
+      "url": "https://blog.logrocket.com/create-beautiful-stroked-text-css/"
+    },
+    {
+      "text": "https://www.freecodecamp.org/news/how-to-use-css-box-model-and-style-svg-images/",
+      "url": "https://www.freecodecamp.org/news/how-to-use-css-box-model-and-style-svg-images/"
+    },
+    {
+      "text": "http://1.studio.boardgamearena.com:8081/data/themereleases/151226-1240/games/mygame/999999-9999/mygame.css",
+      "url": "http://1.studio.boardgamearena.com:8081/data/themereleases/151226-1240/games/mygame/999999-9999/mygame.css"
+    }
+  ],
+  "images": [],
+  "metadata": {
+    "extractor_version": "1.0.0",
+    "extracted_at": "2026-07-06T06:53:17.605079+00:00",
+    "word_count": 1345,
+    "heading_count": 37,
+    "code_block_count": 13,
+    "table_count": 0,
+    "image_count": 0,
+    "list_count": 11
+  }
+}

@@ -1,0 +1,358 @@
+{
+  "title": "BGA Undo policy",
+  "source_file": "BGA_Undo_policy.html",
+  "relative_path": "BGA_Undo_policy.html",
+  "content_json_path": "content_json/BGA_Undo_policy.json",
+  "headings": [
+    {
+      "level": 1,
+      "text": "What you must NEVER do",
+      "id": "What_you_must_NEVER_do"
+    },
+    {
+      "level": 1,
+      "text": "When to propose to Undo?",
+      "id": "When_to_propose_to_Undo.3F"
+    },
+    {
+      "level": 2,
+      "text": "About Undo to avoid \"misclick\"",
+      "id": "About_Undo_to_avoid_.22misclick.22"
+    },
+    {
+      "level": 2,
+      "text": "About Undo to take back moves from a complex series of actions",
+      "id": "About_Undo_to_take_back_moves_from_a_complex_series_of_actions"
+    },
+    {
+      "level": 1,
+      "text": "How to implement Undo",
+      "id": "How_to_implement_Undo"
+    },
+    {
+      "level": 2,
+      "text": "How does undoSavePoint/undoRestorepoint works?",
+      "id": "How_does_undoSavePoint.2FundoRestorepoint_works.3F"
+    },
+    {
+      "level": 2,
+      "text": "Adding simple Undo action to your game",
+      "id": "Adding_simple_Undo_action_to_your_game"
+    },
+    {
+      "level": 3,
+      "text": "Step 1: Declare in gameinfos",
+      "id": "Step_1:_Declare_in_gameinfos"
+    },
+    {
+      "level": 3,
+      "text": "Step 2: Insert savepoint",
+      "id": "Step_2:_Insert_savepoint"
+    },
+    {
+      "level": 3,
+      "text": "Step 3: Create undo action in server",
+      "id": "Step_3:_Create_undo_action_in_server"
+    },
+    {
+      "level": 3,
+      "text": "Step 4: Create undo action in client",
+      "id": "Step_4:_Create_undo_action_in_client"
+    },
+    {
+      "level": 3,
+      "text": "Step 5: Make it fancy",
+      "id": "Step_5:_Make_it_fancy"
+    }
+  ],
+  "content": [
+    {
+      "type": "paragraph",
+      "text": "Introducing \"Undo\" features in games can lead to bugs and/or bad interface design."
+    },
+    {
+      "type": "paragraph",
+      "text": "When you are restoring a game situation A from a game situation B:"
+    },
+    {
+      "type": "list",
+      "ordered": false,
+      "items": [
+        {
+          "text": "The Undo action must never change the active player . In other words, if player X clicks on \"Undo\", it must NOT make player Y active.",
+          "nested": null
+        },
+        {
+          "text": "If several players did game actions between A and B, you must NEVER provide an undo. In other words, an \"Undo\" action must NEVER force another player to redo some moves.",
+          "nested": null
+        },
+        {
+          "text": "No hidden (or private) information must have been revealed between A and B.",
+          "nested": null
+        },
+        {
+          "text": "No random event with a visible effect must have been triggered between A and B. This includes cards shuffling, dice roll, elements picking, ...",
+          "nested": null
+        }
+      ]
+    },
+    {
+      "type": "paragraph",
+      "text": "As a rule of thumb, on BGA we advise you to not undo moves."
+    },
+    {
+      "type": "paragraph",
+      "text": "In many cases, proposing an \"Undo\" means also adding an extra step, which is not good for the game interface."
+    },
+    {
+      "type": "list",
+      "ordered": false,
+      "items": [
+        {
+          "text": "To allow players to take back a move following a \"misclick\" that may ruin their game.",
+          "nested": null
+        },
+        {
+          "text": "To allow players to take back a very complex series of actions.",
+          "nested": null
+        }
+      ]
+    },
+    {
+      "type": "paragraph",
+      "text": "In most cases, you don't need this: players must pay attention :)"
+    },
+    {
+      "type": "list",
+      "ordered": false,
+      "items": [
+        {
+          "text": "If the zone to click is very small , or close to other zones, misclicks may happened frequently. Note that if this only happens on mobile, you can propose the Undo to mobile users only.",
+          "nested": null
+        },
+        {
+          "text": "If there is already another step after the step you want to undo. In this case, adding an \"Undo\" does not add an extra step.",
+          "nested": null
+        },
+        {
+          "text": "If you are in the middle of a real \"game action\". For example, on Chess, it is normal to allow to undo the selection of a piece in order to select another one, as the move hasn't been done already.",
+          "nested": null
+        },
+        {
+          "text": "The action done by the player is obviously a mistake (in this case, please also consider adding a confirmation before the action).",
+          "nested": null
+        }
+      ]
+    },
+    {
+      "type": "paragraph",
+      "text": "On the contrary, you must be reluctant to add an Undo if:"
+    },
+    {
+      "type": "list",
+      "ordered": false,
+      "items": [
+        {
+          "text": "This adds an extra step.",
+          "nested": null
+        },
+        {
+          "text": "The game action is clear and the zone to click is large.",
+          "nested": null
+        }
+      ]
+    },
+    {
+      "type": "paragraph",
+      "text": "To conclude: we may allow a player to undo a move caused by a \"misclick\", but we shouldn't allow a player to undo a bad move he plays consciously."
+    },
+    {
+      "type": "paragraph",
+      "text": "Games with a complex serie of actions are an \"exception\" to BGA Undo policy."
+    },
+    {
+      "type": "paragraph",
+      "text": "However, in some games, it is commonly admitted that players are allowed to take back a move. The typical example is a complex strategy game with a long serie of actions during your turn. \"Through the Ages\" or \"Tzolk'in\" are 2 good examples."
+    },
+    {
+      "type": "note",
+      "variant": "note",
+      "text": "Note: in this situation it is also possible to use client side undo, instead of server side, see \"Russian Railroads\" for example (implemented using setClientState method)."
+    },
+    {
+      "type": "paragraph",
+      "text": "There are 2 ways to implement Undo:"
+    },
+    {
+      "type": "list",
+      "ordered": false,
+      "items": [
+        {
+          "text": "The framework undoSavePoint/undoRestorepoint methods, documented here .",
+          "nested": null
+        },
+        {
+          "text": "Your own method.",
+          "nested": null
+        }
+      ]
+    },
+    {
+      "type": "paragraph",
+      "text": "As a rule of thumb, it is way better to use your own method to provide an Undo. The reasons are:"
+    },
+    {
+      "type": "list",
+      "ordered": false,
+      "items": [
+        {
+          "text": "The framework method is quite heavy to use (it saves the WHOLE situation). To cancel a simple move, it is way more efficient for you to execute the opposite move.",
+          "nested": null
+        },
+        {
+          "text": "The framework method is doing a full \"reset\" of the game interface. It is way more smooth and clear to play the opposite move from a player point of view.",
+          "nested": null
+        },
+        {
+          "text": "The framework Undo provides only ONE save point. If you want to provide a complex Undo (i.e.: the possibility to undo all the previous steps one by one), you must implement it by yourself.",
+          "nested": null
+        }
+      ]
+    },
+    {
+      "type": "paragraph",
+      "text": "However, the framework is very handy to use (only 2 methods), so this should be your first choice if some moves are very difficult to reverse on client side."
+    },
+    {
+      "type": "paragraph",
+      "text": "The undoSavePoint method makes a full copy of the game database state."
+    },
+    {
+      "type": "list",
+      "ordered": false,
+      "items": [
+        {
+          "text": "restores the game database",
+          "nested": null
+        },
+        {
+          "text": "removes all your game HTML + the player panels",
+          "nested": null
+        },
+        {
+          "text": "restores the game HTML + the player panels according to their state at the initial game loading",
+          "nested": null
+        },
+        {
+          "text": "calls your \"setup\" method",
+          "nested": null
+        }
+      ]
+    },
+    {
+      "type": "paragraph",
+      "text": "Important : because undoRestorePoint is calling your \"setup\" method, you must ensure that your whole game state can be restored from there. In particular, all your member variables must be initialized inside the \"setup\" method (and not only in the constructor !)."
+    },
+    {
+      "type": "paragraph",
+      "text": "Add  'db_undo_support' => true in gamesinfo.inc.php"
+    },
+    {
+      "type": "paragraph",
+      "text": "Determine where you want to save the undo state. Must be single active player state"
+    },
+    {
+      "type": "list",
+      "ordered": false,
+      "items": [
+        {
+          "text": "Begging of new user turn",
+          "nested": null
+        },
+        {
+          "text": "Every time new information revealed such as",
+          "nested": {
+            "type": "list",
+            "ordered": false,
+            "items": [
+              {
+                "text": "dice roll",
+                "nested": null
+              },
+              {
+                "text": "card is drawn",
+                "nested": null
+              },
+              {
+                "text": "anything else hidden is shown",
+                "nested": null
+              }
+            ]
+          }
+        }
+      ]
+    },
+    {
+      "type": "paragraph",
+      "text": "Insert"
+    },
+    {
+      "type": "code",
+      "language": null,
+      "text": "$this->undoSavepoint();"
+    },
+    {
+      "type": "paragraph",
+      "text": "in game.game.php"
+    },
+    {
+      "type": "code",
+      "language": null,
+      "text": "   #[CheckAction(false)] // do not do checkAction - its on purpose - do not need to add undo as possible action to every state\n   function actUndo() {\n       $this->undoRestorePoint();\n   }"
+    },
+    {
+      "type": "paragraph",
+      "text": "in game.js add this to onUpdateActionButton regardless of state but inside isCurrenPlayerAction"
+    },
+    {
+      "type": "code",
+      "language": null,
+      "text": "\t\t\tthis.addActionButton('button_undo', _('Undo'), () => this.onUndo(), undefined, undefined, 'red');"
+    },
+    {
+      "type": "paragraph",
+      "text": "and onUndo would be like this"
+    },
+    {
+      "type": "code",
+      "language": null,
+      "text": "    onUndo: function (event) {\n      const action = \"actUndo\";\n      this.ajaxcall(\n        \"/\" + this.game_name + \"/\" + this.game_name + \"/\" + action + \".html\",\n        [],\n        this,\n        (result) => {},\n        (err) => {\n          if (err) return;\n          this.setMainTitle(_(\"Undo requested...\"));\n          dojo.empty(\"generalactions\");\n        },\n        true\n      );\n    },"
+    },
+    {
+      "type": "paragraph",
+      "text": "If you want you can add extra styling to the Undo button such as it will appeat at right of all buttons in game.css"
+    },
+    {
+      "type": "code",
+      "language": null,
+      "text": "#button_undo {\n    float: right;\n    background-color: red;\n    background-image: none;\n}"
+    }
+  ],
+  "links": [
+    {
+      "text": "documented here",
+      "url": "Main_game_logic:_yourgamename.game.php.html"
+    }
+  ],
+  "images": [],
+  "metadata": {
+    "extractor_version": "1.0.0",
+    "extracted_at": "2026-07-06T06:53:17.234954+00:00",
+    "word_count": 459,
+    "heading_count": 12,
+    "code_block_count": 5,
+    "table_count": 0,
+    "image_count": 0,
+    "list_count": 8
+  }
+}

@@ -1,0 +1,305 @@
+{
+  "title": "First steps with BGA Studio",
+  "source_file": "First_steps_with_BGA_Studio.html",
+  "relative_path": "First_steps_with_BGA_Studio.html",
+  "content_json_path": "content_json/First_steps_with_BGA_Studio.json",
+  "headings": [
+    {
+      "level": 2,
+      "text": "Connect to the BGA Studio website",
+      "id": "Connect_to_the_BGA_Studio_website"
+    },
+    {
+      "level": 2,
+      "text": "Create a new game project",
+      "id": "Create_a_new_game_project"
+    },
+    {
+      "level": 2,
+      "text": "Set up dev environment ide, editor and File Sync",
+      "id": "Set_up_dev_environment_ide.2C_editor_and_File_Sync"
+    },
+    {
+      "level": 2,
+      "text": "Let's code!",
+      "id": "Let.27s_code.21"
+    },
+    {
+      "level": 2,
+      "text": "Commit your changes",
+      "id": "Commit_your_changes"
+    },
+    {
+      "level": 2,
+      "text": "That's all!",
+      "id": "That.27s_all.21"
+    }
+  ],
+  "content": [
+    {
+      "type": "paragraph",
+      "text": "Go to BGA Studio website: http://studio.boardgamearena.com"
+    },
+    {
+      "type": "paragraph",
+      "text": "If you don't have account see How to join BGA developer team?"
+    },
+    {
+      "type": "paragraph",
+      "text": "You can do most of the projects-related operations from \"Control Panel / Manage games\". In particular, you can create a new project automatically from there."
+    },
+    {
+      "type": "list",
+      "ordered": false,
+      "items": [
+        {
+          "text": "Click on your profile icon on the top right of any page.",
+          "nested": null
+        },
+        {
+          "text": "Click on the Control Panel button on the top right. This is only visible if you are on a developer account.",
+          "nested": null
+        },
+        {
+          "text": "Click on the \"Manage Games\" button on the left side of the page.",
+          "nested": null
+        }
+      ]
+    },
+    {
+      "type": "paragraph",
+      "text": "Your first \"game\" should be one of the tutorials, so your project name should be something like \"tutorialbob\". Type \"0\" for Board Game Geek ID and click the \"Create Project\" button. The new project will appear after you refresh the page."
+    },
+    {
+      "type": "paragraph",
+      "text": "For reference top bar studio links"
+    },
+    {
+      "type": "list",
+      "ordered": false,
+      "items": [
+        {
+          "text": "AVAILABLE LICENSES - list of all available licenses (not public domain) - https://studio.boardgamearena.com/licensing",
+          "nested": null
+        },
+        {
+          "text": "STUDIO PROJECTS - list of all registered studio projects - https://studio.boardgamearena.com/projects",
+          "nested": null
+        },
+        {
+          "text": "CONTROL PANEL - manage projects - https://studio.boardgamearena.com/controlpanel . Note: the control panel is accessible from the player popup menu (top right), with the gear and bargraph blue icon next to the player icon.",
+          "nested": null
+        }
+      ]
+    },
+    {
+      "type": "paragraph",
+      "text": "From the initial email from the Studio you get:"
+    },
+    {
+      "type": "list",
+      "ordered": false,
+      "items": [
+        {
+          "text": "the name of the SFTP server to connect to",
+          "nested": null
+        },
+        {
+          "text": "your SFTP login and password",
+          "nested": null
+        }
+      ]
+    },
+    {
+      "type": "note",
+      "variant": "note",
+      "text": "Note: this is NOT the same login/password as dev account, find email that talks about SFTP specifically"
+    },
+    {
+      "type": "list",
+      "ordered": false,
+      "items": [
+        {
+          "text": "Your projects will be listed in the \"home\" folder. If you have already created a new game project, you should see a folder with the project name be in your \"home\" folder.",
+          "nested": null
+        },
+        {
+          "text": "If you want to see tutorial projects in your folder, go to https://studio.boardgamearena.com/projects , select \"Already published\", search \"Reversi\" or any project name you want to look at, then click the \"[Get readonly access]\" link  of this game. Once you've clicked this link, the game folder will be visible in your \"home\" FTP folder, in read-only.",
+          "nested": null
+        },
+        {
+          "text": "Connect to the SFTP server using your SFTP login and password, through your favourite SFTP client software or use IDE integraton (see File Sync or Setting_up_BGA_Development_environment_using_VSCode ). Make sure to download the remote project folder into a local folder.",
+          "nested": null
+        },
+        {
+          "text": "If you are not sure what editor to use see Code editors and IDE ,",
+          "nested": null
+        },
+        {
+          "text": "Note: You have to setup AUTOMATED sync between your folder and remote folder, manually ftp'ing files would be no-starter.",
+          "nested": null
+        },
+        {
+          "text": "Note: You can also upload your ssh key via studio control panel to avoid password exchange https://studio.boardgamearena.com/controlpanel",
+          "nested": null
+        }
+      ]
+    },
+    {
+      "type": "paragraph",
+      "text": "Now, you can try to launch a new game on BGA Studio from the \"Play now\" menu entry, as you would do on Board Game Arena website."
+    },
+    {
+      "type": "list",
+      "ordered": true,
+      "items": [
+        {
+          "text": "To launch your game from Studio go to CONTROL PANEL -> Manage games -> <your_game> -> <your_game_page> -> Play (see how to access control panel above). You can also use link https://studio.boardgamearena.com/studiogame?game= <your_game>",
+          "nested": null
+        },
+        {
+          "text": "Press Create to create a table",
+          "nested": null
+        },
+        {
+          "text": "Select number of players and select Training mode in game configuration panel",
+          "nested": null
+        },
+        {
+          "text": "Click Express start . Do not use \"Start game\" buttons in studio - it adds unnecessary complexity of logging it from multiple accounts. When using Express start your game launches with the maximum number of players specified using your own dev player accounts (dev0, dev1, dev2, etc). If you don't see Express start button make sure you are in Manual mode for game creation. Note: for Solo mode you do actually want to use Start Game instead of Express start, the latter has some issues (warnings).",
+          "nested": null
+        },
+        {
+          "text": "Game will open with an empty canvas: in the game zone you just have an empty div for player tables, and a fake counter space on each player panel.",
+          "nested": null
+        },
+        {
+          "text": "Switch to your SFTP home folder, go into your game folder. Edit the <your_game>.js file (tutorial: modules/js/Game.js), and add a sentence in the HTML part of the line `this.getGameAreaElement().insertAdjacentHTML` , then save (this assumes you mount or sync the folder).",
+          "nested": null
+        },
+        {
+          "text": "Go back to your browser and refresh, check that the game zone has updated.",
+          "nested": null
+        },
+        {
+          "text": "Click the red arrow next to a test account's name in the player panel to view the game from that player's account [image: Change active player.jpg]",
+          "nested": null
+        },
+        {
+          "text": "Open the menu (three-line \"hamburger\" icon at the upper right) and choose 'Express STOP'. The game ends automatically and you are brought back to the table screen for this ended game.",
+          "nested": null
+        }
+      ]
+    },
+    {
+      "type": "paragraph",
+      "text": "Then you can modify the provided skeleton and begin to develop your game :)"
+    },
+    {
+      "type": "paragraph",
+      "text": "Committing uploads your changes on BGA's revision control system. This is an extra assurance not to lose your code, and to have the possibility to get a previous version of your code if you need to backtrack. It also helps us to follow your progress (we get an email when you commit). So you should commit from time to time, when you hit some landmark in your development."
+    },
+    {
+      "type": "list",
+      "ordered": true,
+      "items": [
+        {
+          "text": "Enter your commit comment (such as 'My first commit') then hit the 'Submit' button;",
+          "nested": null
+        },
+        {
+          "text": "Check the log for errors, it should end with the following lines:",
+          "nested": null
+        }
+      ]
+    },
+    {
+      "type": "code",
+      "language": null,
+      "text": " Transmitting file data .\n Committed revision #revision number#.\n HAL says: done."
+    },
+    {
+      "type": "note",
+      "variant": "note",
+      "text": "NOTE: committing the code is currently not working until admin commits it manually the first time. Even if it does you cannot automatically deal with this version control system except for committing. Therefore its recommended to use another means of storing the code in version control system, such as local git repo or github, see Version Control"
+    },
+    {
+      "type": "paragraph",
+      "text": "Now you know about the basics of updating your game on BGA Studio and testing your changes."
+    },
+    {
+      "type": "paragraph",
+      "text": "For links to tutorials and ALL studio documentation see Studio ."
+    }
+  ],
+  "links": [
+    {
+      "text": "http://studio.boardgamearena.com",
+      "url": "http://studio.boardgamearena.com"
+    },
+    {
+      "text": "How to join BGA developer team?",
+      "url": "How_to_join_BGA_developer_team.html"
+    },
+    {
+      "text": "https://studio.boardgamearena.com/licensing",
+      "url": "https://studio.boardgamearena.com/licensing"
+    },
+    {
+      "text": "https://studio.boardgamearena.com/projects",
+      "url": "https://studio.boardgamearena.com/projects"
+    },
+    {
+      "text": "https://studio.boardgamearena.com/controlpanel",
+      "url": "https://studio.boardgamearena.com/controlpanel"
+    },
+    {
+      "text": "File Sync",
+      "url": "Tools_and_tips_of_BGA_Studio.html"
+    },
+    {
+      "text": "Setting_up_BGA_Development_environment_using_VSCode",
+      "url": "Setting_up_BGA_Development_environment_using_VSCode.html"
+    },
+    {
+      "text": "Code editors and IDE",
+      "url": "Tools_and_tips_of_BGA_Studio.html"
+    },
+    {
+      "text": "https://studio.boardgamearena.com/studiogame?game=",
+      "url": "https://studio.boardgamearena.com/studiogame?game="
+    },
+    {
+      "text": "Change active player.jpg",
+      "url": "File:Change_active_player.jpg.html"
+    },
+    {
+      "text": "revision control",
+      "url": "http://en.wikipedia.org/wiki/Revision_control"
+    },
+    {
+      "text": "Version Control",
+      "url": "Tools_and_tips_of_BGA_Studio.html"
+    },
+    {
+      "text": "Studio",
+      "url": "Studio.html"
+    }
+  ],
+  "images": [
+    {
+      "src": "/images/0/03/Change_active_player.jpg",
+      "alt": "Change active player.jpg"
+    }
+  ],
+  "metadata": {
+    "extractor_version": "1.0.0",
+    "extracted_at": "2026-07-06T06:53:17.327195+00:00",
+    "word_count": 321,
+    "heading_count": 6,
+    "code_block_count": 1,
+    "table_count": 0,
+    "image_count": 1,
+    "list_count": 6
+  }
+}

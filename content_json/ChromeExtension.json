@@ -1,0 +1,754 @@
+{
+  "title": "ChromeExtension",
+  "source_file": "ChromeExtension.html",
+  "relative_path": "ChromeExtension.html",
+  "content_json_path": "content_json/ChromeExtension.json",
+  "headings": [
+    {
+      "level": 2,
+      "text": "List of current games",
+      "id": "List_of_current_games"
+    },
+    {
+      "level": 2,
+      "text": "Settings",
+      "id": "Settings"
+    },
+    {
+      "level": 2,
+      "text": "Advanced home page settings",
+      "id": "Advanced_home_page_settings"
+    },
+    {
+      "level": 2,
+      "text": "Dark Mode",
+      "id": "Dark_Mode"
+    },
+    {
+      "level": 2,
+      "text": "Hide friend's activities in game log",
+      "id": "Hide_friend.27s_activities_in_game_log"
+    },
+    {
+      "level": 2,
+      "text": "Fast start button",
+      "id": "Fast_start_button"
+    },
+    {
+      "level": 2,
+      "text": "Navigation menu",
+      "id": "Navigation_menu"
+    },
+    {
+      "level": 2,
+      "text": "Floating menu",
+      "id": "Floating_menu"
+    },
+    {
+      "level": 2,
+      "text": "Deleting a game",
+      "id": "Deleting_a_game"
+    },
+    {
+      "level": 2,
+      "text": "Hide general chat",
+      "id": "Hide_general_chat"
+    },
+    {
+      "level": 2,
+      "text": "Mute a player in game chat",
+      "id": "Mute_a_player_in_game_chat"
+    },
+    {
+      "level": 2,
+      "text": "Custom CSS code",
+      "id": "Custom_CSS_code"
+    }
+  ],
+  "content": [
+    {
+      "type": "paragraph",
+      "text": "An extension for Google Chrome , Firefox and Opera brought to you by Flavien and Christophe ."
+    },
+    {
+      "type": "paragraph",
+      "text": "The Firefox extension is also compatible with Firefox Mobile on Android devices."
+    },
+    {
+      "type": "paragraph",
+      "text": "If you have a problem, a suggestion, or just want to leave a nice note, you can write to us on the forum here"
+    },
+    {
+      "type": "paragraph",
+      "text": "If you've activated automatic table tracking (see next chapter), then the extension icon shows you the number of games you're currently expected to play."
+    },
+    {
+      "type": "paragraph",
+      "text": "You'll also find a list of pending invitations, as well as the tournaments you've entered."
+    },
+    {
+      "type": "paragraph",
+      "text": "The \"settings\" tab lets you access some of the extension's parameters:"
+    },
+    {
+      "type": "list",
+      "ordered": false,
+      "items": [
+        {
+          "text": "Miscellaneous parameters : [image: Misc params en.png]",
+          "nested": {
+            "type": "list",
+            "ordered": true,
+            "items": [
+              {
+                "text": "Choice of language (English, French or German). Please contact us if you'd like to help us add another language!",
+                "nested": null
+              },
+              {
+                "text": "A parameter to redirect the website links to the classic lobby instead of the new one.",
+                "nested": null
+              },
+              {
+                "text": "A setting to hide games you can't play when you want to play in Arena mode. By default, BGA grays out these games.",
+                "nested": null
+              },
+              {
+                "text": "A parameter to replace the default \"wood\" background by a solid-color background.",
+                "nested": null
+              },
+              {
+                "text": "A parameter to change the behavior of the newsfeed, if it's activated the newsfeed contains only the messages of my groups.",
+                "nested": null
+              },
+              {
+                "text": "A setting to force player names to be displayed in chat windows (by default, player names are hidden in private chats, and your name is hidden in game chats).",
+                "nested": null
+              },
+              {
+                "text": "The last parameter lets you choose the type of emoticons you want to use in dark mode.",
+                "nested": null
+              }
+            ]
+          }
+        },
+        {
+          "text": "Notifications: [image: Notifications parameters en.png]",
+          "nested": {
+            "type": "list",
+            "ordered": true,
+            "items": [
+              {
+                "text": "A parameter to enable or disable automatic tracking of the state of tables you are on. If this option is enabled, then the extension will be able to tell you when it's your turn to play at one of the tables you're at, but you'll always be seen as connected by other players. If this option is disabled, then the extension won't be able to tell you when it's your turn to play, but other players will only see you logged in if you're actually on the site.",
+                "nested": null
+              },
+              {
+                "text": "When the tracking is enable, you can activate a sound notification ...",
+                "nested": null
+              },
+              {
+                "text": "... and associate the mp3 you prefer for this notification.",
+                "nested": null
+              },
+              {
+                "text": "A parameter to disable flashing colors in the list of tables displayed by the extension.",
+                "nested": null
+              },
+              {
+                "text": "The last parameter allows you to disable the animation that is added by default by BGA to the browser tabs when it's your turn to play on a table.",
+                "nested": null
+              }
+            ]
+          }
+        },
+        {
+          "text": "Game parameters: [image: Game parameters en.png]",
+          "nested": {
+            "type": "list",
+            "ordered": true,
+            "items": [
+              {
+                "text": "A parameter to show / hide your friends' activity in the game logs",
+                "nested": null
+              },
+              {
+                "text": "A parameter to show / hide the ELO score of the players in games.",
+                "nested": null
+              },
+              {
+                "text": "A parameter to hide the chat bar in the game interface, so that it is only displayed when the mouse hovers over it.",
+                "nested": null
+              },
+              {
+                "text": "A setting to hide timestamps in the game history.",
+                "nested": null
+              },
+              {
+                "text": "A setting to deactivate the vertical bar added by the extension in some games, enabling navigation between players' boards.",
+                "nested": null
+              }
+            ]
+          }
+        },
+        {
+          "text": "Home page settings : Parameters to select the elements that you want to display on the home page of the site. An advanced mode lets you define a template in HTML format (see next chapter).",
+          "nested": null
+        },
+        {
+          "text": "Game in progress page settings:",
+          "nested": {
+            "type": "list",
+            "ordered": false,
+            "items": [
+              {
+                "text": "Parameters to select the elements that you want to display on the 'Game in progress' page.",
+                "nested": null
+              },
+              {
+                "text": "Parameter to display the tables with more colors.",
+                "nested": null
+              }
+            ]
+          }
+        },
+        {
+          "text": "Fast table creation. The extension adds a button in the lobby games to quickly start a table using the last settings used. [image: Fast start en.png] [image: Fast create en.png]",
+          "nested": {
+            "type": "list",
+            "ordered": true,
+            "items": [
+              {
+                "text": "Activate / deactivate feature",
+                "nested": null
+              },
+              {
+                "text": "Set whether the table should be automatically opened to other players after creation.",
+                "nested": null
+              },
+              {
+                "text": "Setting whether to exclude players stronger than you",
+                "nested": null
+              },
+              {
+                "text": "Setting to exclude players with bad Karma (< 75%)",
+                "nested": null
+              }
+            ]
+          }
+        },
+        {
+          "text": "Hidden games: Offer the possibility to undo the deletion of a game (see \"Deleting a game\" chapter).",
+          "nested": null
+        },
+        {
+          "text": "Ignored players: override player blocking in chat (see “Ignoring a player in \"Mute a player in game chat” chapter)",
+          "nested": null
+        }
+      ]
+    },
+    {
+      "type": "paragraph",
+      "text": "By activating the advanced home page configuration, you can enter HTML code to place the elements you want exactly where you want them."
+    },
+    {
+      "type": "paragraph",
+      "text": "But by default, when you activate advanced mode, the extension offers you HTML code containing all possible elements. You can use this code as a starting point, deleting elements you don't need, moving elements around etc..."
+    },
+    {
+      "type": "paragraph",
+      "text": "And if you've got an idea but can't write the HTML code for it, don't be frustrated - come and talk about it on the forum here ;)"
+    },
+    {
+      "type": "table",
+      "headers": [
+        "Code HTML",
+        "Description"
+      ],
+      "rows": [
+        [
+          "<div id='bgaext-tournaments'></div>",
+          "Tournaments list"
+        ],
+        [
+          "<div id='bgaext-games-recent'></div>",
+          "New games list"
+        ],
+        [
+          "<div id='bgaext-games-popular'></div>",
+          "Popular games list"
+        ],
+        [
+          "<div id='bgaext-games-suggested'></div",
+          "Recommended games list"
+        ],
+        [
+          "<div id='bgaext-achievements'></div>",
+          "Achievements"
+        ],
+        [
+          "<div id='bgaext-leaderboard'></div>",
+          "Hall of fame"
+        ],
+        [
+          "<div id='bgaext-newsfeed'></div>",
+          "Newfeed"
+        ],
+        [
+          "<div id='bgaext-service-status'></div>",
+          "Service status"
+        ],
+        [
+          "<div id='bgaext-games-classic'></div>",
+          "Discover our Classics"
+        ],
+        [
+          "<div id='bgaext-playmore'></div>",
+          "Play more!"
+        ],
+        [
+          "<div id='bgaext-partners-events'></div>",
+          "\"News & Events\" area"
+        ]
+      ]
+    },
+    {
+      "type": "paragraph",
+      "text": "You can potentially write any HTML code, but the extension defines the following styles to help you:"
+    },
+    {
+      "type": "list",
+      "ordered": false,
+      "items": [
+        {
+          "text": "<div class='bgaext-flex-col'> : the elements in this DIV will be placed in columns, one below the other, with a small margin to separate them.",
+          "nested": null
+        },
+        {
+          "text": "<div class='bgaext-flex-row'> : the elements in this DIV will be placed in line, across the entire page width, trying to respect the optimal size for each element.",
+          "nested": null
+        },
+        {
+          "text": "<div class='bgaext-flex-row-distribution'> : the elements in this DIV have all the same width, but you will certainly need to set a width for this DIV.",
+          "nested": null
+        }
+      ]
+    },
+    {
+      "type": "paragraph",
+      "text": "Example containing nearly all possible elements."
+    },
+    {
+      "type": "list",
+      "ordered": false,
+      "items": [
+        {
+          "text": "First column: Tournaments",
+          "nested": null
+        },
+        {
+          "text": "Second column: An area with two rows",
+          "nested": {
+            "type": "list",
+            "ordered": false,
+            "items": [
+              {
+                "text": "The first row contains a list of new games, popular games and recommended games.",
+                "nested": null
+              },
+              {
+                "text": "The second row contains the \"Achievments\" and the \"Hall of fame\"",
+                "nested": null
+              }
+            ]
+          }
+        },
+        {
+          "text": "Third column: News feed and service status",
+          "nested": null
+        }
+      ]
+    },
+    {
+      "type": "paragraph",
+      "text": "A second line with two columns contains :"
+    },
+    {
+      "type": "list",
+      "ordered": false,
+      "items": [
+        {
+          "text": "First column: The list of classic games",
+          "nested": null
+        },
+        {
+          "text": "Second column: “Play more!” area",
+          "nested": null
+        }
+      ]
+    },
+    {
+      "type": "code",
+      "language": null,
+      "text": "<div class='bgaext-flex-col'>\n\t<div class='bgaext-flex-row'>\n\t\t<div id='bgaext-tournaments'></div>\n\t\t<div class='bgaext-flex-col'>\n\t\t\t<div class='bgaext-flex-row'>\n\t\t\t\t<div id='bgaext-games-recent'></div>\n\t\t\t\t<div id='bgaext-games-popular'></div>\n\t\t\t\t<div id='bgaext-games-suggested'></div>\n\t\t\t</div>\n\t\t\t<div class='bgaext-flex-row'>\n\t\t\t\t<div id='bgaext-achievements'></div>\n\t\t\t\t<div id='bgaext-leaderboard'></div>\n\t\t\t</div>\n\t\t</div>\n\t\t<div class='bgaext-flex-col'>\n\t\t\t<div id='bgaext-newsfeed'></div>\n\t\t\t<div id='bgaext-service-status'></div>\n\t\t</div>\n\t</div>\n\t<div class='bgaext-flex-row'>\n\t\t<div id='bgaext-games-classic'></div>\n\t\t<div id='bgaext-playmore'></div>\n\t</div>\n</div>"
+    },
+    {
+      "type": "paragraph",
+      "text": "A simpler example with fewer elements"
+    },
+    {
+      "type": "code",
+      "language": null,
+      "text": "<div class='bgaext-flex-row'>\n\t<div id='bgaext-newsfeed'></div>\n\t<div id='bgaext-tournaments'></div>\n\t<div id='bgaext-games-recent'></div>\n\t<div id='bgaext-games-popular'></div>\n</div>"
+    },
+    {
+      "type": "paragraph",
+      "text": "My favorite display"
+    },
+    {
+      "type": "code",
+      "language": null,
+      "text": "<style>\n#bgaext-achievements { width: 600px; }\n#bgaext-newsfeed .bga-homepage-newsfeed { max-height: 1050px; overflow: auto; }\n#bgaext-partners-events { flex-grow: 0.4; }\n</style>\n\n<div class='bgaext-flex-col'>\n  <div class='bgaext-flex-row'>\n    <div class='bgaext-flex-col'>\n      <div class='bgaext-flex-row-distribution'>\n        <div id='bgaext-games-recent'></div>\n        <div id='bgaext-games-suggested'></div>\n      </div>\n      <div id='bgaext-achievements'></div>\n    </div>\n    <div class='bgaext-flex-col'>\n      <div id='bgaext-newsfeed'></div>\n      <div id='bgaext-service-status'></div>\n    </div>\n  </div>\n  <div class='bgaext-flex-row'>\n    <div id='bgaext-games-classic'></div>\n    <div id='bgaext-partners-events'></div>\n    <div id='bgaext-playmore'></div>\n  </div>\n</div>"
+    },
+    {
+      "type": "paragraph",
+      "text": "Tips"
+    },
+    {
+      "type": "code",
+      "language": null,
+      "text": "<style>\n#bgaext-newsfeed .bga-homepage-newsfeed {\n\tmax-height: 900px;\n\toverflow: auto;\n}\n</style>\n<div class='bgaext-flex-row'>\n\t<div id='bgaext-newsfeed'></div>\n\t<div id='bgaext-tournaments'></div>\n</div>"
+    },
+    {
+      "type": "paragraph",
+      "text": "or like this to truncate the content:"
+    },
+    {
+      "type": "code",
+      "language": null,
+      "text": "<style>\n#bgaext-newsfeed .bga-homepage-newsfeed {\n\tmax-height: 900px;\n\toverflow: hidden;\n}\n</style>\n<div class='bgaext-flex-row'>\n\t<div id='bgaext-newsfeed'></div>\n\t<div id='bgaext-tournaments'></div>\n</div>"
+    },
+    {
+      "type": "paragraph",
+      "text": "To limit the height of the \"Hall of fame\", you can use the following code :"
+    },
+    {
+      "type": "code",
+      "language": null,
+      "text": "<style>\n#bgaext-leaderboard .bga-ranked-player-list {\n\tmax-height: 525px;\n\toverflow: hidden;\n}\n</style>"
+    },
+    {
+      "type": "paragraph",
+      "text": "This icon in the top right-hand corner of the screen activates the dark mode for the entire site."
+    },
+    {
+      "type": "paragraph",
+      "text": "When you are in a game, it is displayed by default with the settings you have chosen for the site, but you can customise the game theme by selecting a color."
+    },
+    {
+      "type": "paragraph",
+      "text": "The extension allow you to stop displaying your friend's activity in the game log."
+    },
+    {
+      "type": "paragraph",
+      "text": "The extension add a \"Fast start\" in the games in the lobby."
+    },
+    {
+      "type": "paragraph",
+      "text": "This button can also automatically open the created table to other players, which can be configured in the extension's options and menu."
+    },
+    {
+      "type": "paragraph",
+      "text": "In games where this is of interest, the extension adds a vertical menu on the left-hand side for quick navigation between the players' boards. In some games, there are also shortcuts to key elements of the game, such as the main board."
+    },
+    {
+      "type": "paragraph",
+      "text": "This menu can be activated or deactivated in the game settings."
+    },
+    {
+      "type": "paragraph",
+      "text": "If you're playing on a small screen, it could be a good idea to save space by hiding the game log and player panels."
+    },
+    {
+      "type": "paragraph",
+      "text": "The extension adds a button for 'deleting' a game. This button appears next to the button for starting the game in the list of games."
+    },
+    {
+      "type": "paragraph",
+      "text": "It is possible to recover a deleted game by the \"settings\" tab of the extension popup."
+    },
+    {
+      "type": "paragraph",
+      "text": "An icon in the top right-hand corner of the screen allows you to show or hide the general chat."
+    },
+    {
+      "type": "paragraph",
+      "text": "In the game chat popup, the extension adds a new icon that lets you mute a player."
+    },
+    {
+      "type": "paragraph",
+      "text": "This feature is designed to let you ignore a toxic player and finish the game in peace, but it doesn't report the user's behavior to Board Game Arena."
+    },
+    {
+      "type": "paragraph",
+      "text": "By going to the extension options (right-click on the extension icon, then “Options”), you can change the style of the site to your liking via the “Custom CSS” tab."
+    },
+    {
+      "type": "paragraph",
+      "text": "It's also a way to change the default colors of dark mode if you want!"
+    },
+    {
+      "type": "code",
+      "language": null,
+      "text": "body {\n  --header-icons-color: #01c4ca;\n\n  --blue-10: #003b85;\n  --blue-50: #7289da;\n  --blue-70: #009aa0;\n  --blue-80: #11a9bb;\n  --blue-90: #11a9bb;\n\n  --red-10: #993333;\n  --red-30: #ca0000;\n  --red-50: #ff0000;\n  --red-80: #ff6565;\n\n  --green-10: #1b3b2d;\n  --green-30: #01663a;\n  --green-50: #009e0a;\n\n  --yellow-10: #996300;\n\n  --violet-60: #5a4275;\n  --violet-80: #8f5fbd;\n\n  --orange-10: #383b1b;\n  --orange-30: #8a5d0f;\n}"
+    }
+  ],
+  "links": [
+    {
+      "text": "Google Chrome",
+      "url": "https://chrome.google.com/webstore/detail/bga-chrome-extension/kchnhmpeopknjdjejognciimepllkacb"
+    },
+    {
+      "text": "Firefox",
+      "url": "https://addons.mozilla.org/addon/board-game-arena-bga-extension/"
+    },
+    {
+      "text": "Opera",
+      "url": "https://addons.opera.com/extensions/details/board-game-arena-bga-extension/"
+    },
+    {
+      "text": "Flavien",
+      "url": "https://boardgamearena.com/player?id=84278471"
+    },
+    {
+      "text": "Christophe",
+      "url": "https://boardgamearena.com/player?id=85644210"
+    },
+    {
+      "text": "here",
+      "url": "https://boardgamearena.com/forum/viewtopic.php?t=30509"
+    },
+    {
+      "text": "Popup dark.png",
+      "url": "File:Popup_dark.png.html"
+    },
+    {
+      "text": "/File:Popup_dark.png",
+      "url": "File:Popup_dark.png.html"
+    },
+    {
+      "text": "Misc params en.png",
+      "url": "File:Misc_params_en.png.html"
+    },
+    {
+      "text": "/File:Misc_params_en.png",
+      "url": "File:Misc_params_en.png.html"
+    },
+    {
+      "text": "Notifications parameters en.png",
+      "url": "File:Notifications_parameters_en.png.html"
+    },
+    {
+      "text": "/File:Notifications_parameters_en.png",
+      "url": "File:Notifications_parameters_en.png.html"
+    },
+    {
+      "text": "Game parameters en.png",
+      "url": "File:Game_parameters_en.png.html"
+    },
+    {
+      "text": "/File:Game_parameters_en.png",
+      "url": "File:Game_parameters_en.png.html"
+    },
+    {
+      "text": "Fast start en.png",
+      "url": "File:Fast_start_en.png.html"
+    },
+    {
+      "text": "/File:Fast_start_en.png",
+      "url": "File:Fast_start_en.png.html"
+    },
+    {
+      "text": "Fast create en.png",
+      "url": "File:Fast_create_en.png.html"
+    },
+    {
+      "text": "/File:Fast_create_en.png",
+      "url": "File:Fast_create_en.png.html"
+    },
+    {
+      "text": "Dark mode off.png",
+      "url": "File:Dark_mode_off.png.html"
+    },
+    {
+      "text": "/File:Dark_mode_off.png",
+      "url": "File:Dark_mode_off.png.html"
+    },
+    {
+      "text": "Dark mode on.png",
+      "url": "File:Dark_mode_on.png.html"
+    },
+    {
+      "text": "/File:Dark_mode_on.png",
+      "url": "File:Dark_mode_on.png.html"
+    },
+    {
+      "text": "/File:Dark_mode_color.png",
+      "url": "File:Dark_mode_color.png.html"
+    },
+    {
+      "text": "Friends activity pref en.png",
+      "url": "File:Friends_activity_pref_en.png.html"
+    },
+    {
+      "text": "/File:Friends_activity_pref_en.png",
+      "url": "File:Friends_activity_pref_en.png.html"
+    },
+    {
+      "text": "Side menu.png",
+      "url": "File:Side_menu.png.html"
+    },
+    {
+      "text": "/File:Side_menu.png",
+      "url": "File:Side_menu.png.html"
+    },
+    {
+      "text": "Sidemenu pref en.png",
+      "url": "File:Sidemenu_pref_en.png.html"
+    },
+    {
+      "text": "/File:Sidemenu_pref_en.png",
+      "url": "File:Sidemenu_pref_en.png.html"
+    },
+    {
+      "text": "Floatingmenu pref en.png",
+      "url": "File:Floatingmenu_pref_en.png.html"
+    },
+    {
+      "text": "/File:Floatingmenu_pref_en.png",
+      "url": "File:Floatingmenu_pref_en.png.html"
+    },
+    {
+      "text": "Floatingmenu.png",
+      "url": "File:Floatingmenu.png.html"
+    },
+    {
+      "text": "/File:Floatingmenu.png",
+      "url": "File:Floatingmenu.png.html"
+    },
+    {
+      "text": "Delete game.png",
+      "url": "File:Delete_game.png.html"
+    },
+    {
+      "text": "/File:Delete_game.png",
+      "url": "File:Delete_game.png.html"
+    },
+    {
+      "text": "Delete game options en.png",
+      "url": "File:Delete_game_options_en.png.html"
+    },
+    {
+      "text": "/File:Delete_game_options_en.png",
+      "url": "File:Delete_game_options_en.png.html"
+    },
+    {
+      "text": "Chat.png",
+      "url": "File:Chat.png.html"
+    },
+    {
+      "text": "/File:Chat.png",
+      "url": "File:Chat.png.html"
+    },
+    {
+      "text": "Mute icon.png",
+      "url": "File:Mute_icon.png.html"
+    },
+    {
+      "text": "/File:Mute_icon.png",
+      "url": "File:Mute_icon.png.html"
+    }
+  ],
+  "images": [
+    {
+      "src": "/images/thumb/b/b3/Popup_dark.png/300px-Popup_dark.png",
+      "alt": "Popup dark.png"
+    },
+    {
+      "src": "/images/thumb/6/68/Misc_params_en.png/480px-Misc_params_en.png",
+      "alt": "Misc params en.png"
+    },
+    {
+      "src": "/images/thumb/2/2a/Notifications_parameters_en.png/480px-Notifications_parameters_en.png",
+      "alt": "Notifications parameters en.png"
+    },
+    {
+      "src": "/images/thumb/8/83/Game_parameters_en.png/480px-Game_parameters_en.png",
+      "alt": "Game parameters en.png"
+    },
+    {
+      "src": "/images/thumb/e/e0/Fast_start_en.png/480px-Fast_start_en.png",
+      "alt": "Fast start en.png"
+    },
+    {
+      "src": "/images/thumb/1/17/Fast_create_en.png/480px-Fast_create_en.png",
+      "alt": "Fast create en.png"
+    },
+    {
+      "src": "/images/b/b6/Dark_mode_off.png",
+      "alt": "Dark mode off.png"
+    },
+    {
+      "src": "/images/6/6a/Dark_mode_on.png",
+      "alt": "Dark mode on.png"
+    },
+    {
+      "src": "/images/thumb/1/15/Dark_mode_color.png/300px-Dark_mode_color.png",
+      "alt": ""
+    },
+    {
+      "src": "/images/thumb/7/78/Friends_activity_pref_en.png/364px-Friends_activity_pref_en.png",
+      "alt": "Friends activity pref en.png"
+    },
+    {
+      "src": "/images/thumb/a/a0/Side_menu.png/300px-Side_menu.png",
+      "alt": "Side menu.png"
+    },
+    {
+      "src": "/images/thumb/1/17/Sidemenu_pref_en.png/500px-Sidemenu_pref_en.png",
+      "alt": "Sidemenu pref en.png"
+    },
+    {
+      "src": "/images/thumb/d/d6/Floatingmenu_pref_en.png/500px-Floatingmenu_pref_en.png",
+      "alt": "Floatingmenu pref en.png"
+    },
+    {
+      "src": "/images/4/4a/Floatingmenu.png",
+      "alt": "Floatingmenu.png"
+    },
+    {
+      "src": "/images/thumb/1/19/Delete_game.png/300px-Delete_game.png",
+      "alt": "Delete game.png"
+    },
+    {
+      "src": "/images/7/70/Delete_game_options_en.png",
+      "alt": "Delete game options en.png"
+    },
+    {
+      "src": "/images/c/c7/Chat.png",
+      "alt": "Chat.png"
+    },
+    {
+      "src": "/images/9/98/Mute_icon.png",
+      "alt": "Mute icon.png"
+    }
+  ],
+  "metadata": {
+    "extractor_version": "1.0.0",
+    "extracted_at": "2026-07-06T06:53:17.263595+00:00",
+    "word_count": 766,
+    "heading_count": 12,
+    "code_block_count": 7,
+    "table_count": 1,
+    "image_count": 18,
+    "list_count": 4
+  }
+}

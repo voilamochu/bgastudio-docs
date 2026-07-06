@@ -1,0 +1,443 @@
+{
+  "title": "Post-release phase",
+  "source_file": "Post-release_phase.html",
+  "relative_path": "Post-release_phase.html",
+  "content_json_path": "content_json/Post-release_phase.json",
+  "headings": [
+    {
+      "level": 2,
+      "text": "Bugs reporting",
+      "id": "Bugs_reporting"
+    },
+    {
+      "level": 2,
+      "text": "Documentation for Bug Reports",
+      "id": "Documentation_for_Bug_Reports"
+    },
+    {
+      "level": 2,
+      "text": "How to submit changes?",
+      "id": "How_to_submit_changes.3F"
+    },
+    {
+      "level": 2,
+      "text": "What can be modified after release?",
+      "id": "What_can_be_modified_after_release.3F"
+    },
+    {
+      "level": 3,
+      "text": "Changes that breaks the games in progress",
+      "id": "Changes_that_breaks_the_games_in_progress"
+    },
+    {
+      "level": 3,
+      "text": "Updating game options",
+      "id": "Updating_game_options"
+    },
+    {
+      "level": 3,
+      "text": "Updating Statistics",
+      "id": "Updating_Statistics"
+    },
+    {
+      "level": 3,
+      "text": "Updating the database schema",
+      "id": "Updating_the_database_schema"
+    },
+    {
+      "level": 3,
+      "text": "Updating string to be translated",
+      "id": "Updating_string_to_be_translated"
+    },
+    {
+      "level": 3,
+      "text": "Tell the community about your changes :)",
+      "id": "Tell_the_community_about_your_changes_:.29"
+    },
+    {
+      "level": 3,
+      "text": "Major changes",
+      "id": "Major_changes"
+    },
+    {
+      "level": 2,
+      "text": "Avoiding version mismatches",
+      "id": "Avoiding_version_mismatches"
+    }
+  ],
+  "content": [
+    {
+      "type": "paragraph",
+      "text": "Your game is now on BGA: congrats!"
+    },
+    {
+      "type": "paragraph",
+      "text": "Don't be afraid: you're still allowed to modify your game. You just have to pay attention to the points below."
+    },
+    {
+      "type": "paragraph",
+      "text": "Bugs are reported on the BGA bugs page ."
+    },
+    {
+      "type": "paragraph",
+      "text": "You can provide a wiki page for the attention of bug reporters."
+    },
+    {
+      "type": "paragraph",
+      "text": "You will be presented with an \"Edit bug clarifications Wiki page\" button, where you can edit the page."
+    },
+    {
+      "type": "paragraph",
+      "text": "There are steps to make your changes visible on BGA (from your game Control Panel, i.e. https://studio.boardgamearena.com/studiogame?game=mygamename ):"
+    },
+    {
+      "type": "list",
+      "ordered": false,
+      "items": [
+        {
+          "text": "In Build a new release version section",
+          "nested": {
+            "type": "list",
+            "ordered": false,
+            "items": [
+              {
+                "text": "Enter some notes about the release (i.e. fixed bug xxx, added feature yyy)",
+                "nested": null
+              },
+              {
+                "text": "Press \"Commit & build a new version now\"",
+                "nested": null
+              },
+              {
+                "text": "Do not dismiss the build dialog right away, make sure it does not have Errors. If there are error build has failed.",
+                "nested": null
+              }
+            ]
+          }
+        },
+        {
+          "text": "Deploy your new version in production",
+          "nested": {
+            "type": "list",
+            "ordered": false,
+            "items": [
+              {
+                "text": "Find your newly build version (should be latest, but check release note to make sure)",
+                "nested": null
+              },
+              {
+                "text": "Press \"Deploy to production\" button",
+                "nested": null
+              },
+              {
+                "text": "Do not dismiss the deploy dialog right away, make sure it does not have Errors. If there are error the deploy has failed.",
+                "nested": null
+              }
+            ]
+          }
+        },
+        {
+          "text": "To check - the version of deployed game should be updated in \"Online version\" of control panel and also in section Credits page of the running game",
+          "nested": null
+        },
+        {
+          "text": "Go to Group page of your game and post update anouncement (usually using release notes from the deployment)",
+          "nested": null
+        }
+      ]
+    },
+    {
+      "type": "note",
+      "variant": "note",
+      "text": "Note: if your game is very popular it will be pretty drammatic if it breaks, you can use two tricks to help your users"
+    },
+    {
+      "type": "list",
+      "ordered": false,
+      "items": [
+        {
+          "text": "Disable / lock table creation for new deploy",
+          "nested": null
+        },
+        {
+          "text": "Force players to refresh after new deploy",
+          "nested": null
+        }
+      ]
+    },
+    {
+      "type": "paragraph",
+      "text": "Everything can be modified. BUT, some items requires a special attention, and you must inform us in some cases:"
+    },
+    {
+      "type": "paragraph",
+      "text": "Some changes will break the games in progress at the moment the release/the hotfix will be performed. Each time you make a change, you should ask you the question \"it is safe to make this change in a game in progress\", and if the answer is \"no\" you have to inform us."
+    },
+    {
+      "type": "list",
+      "ordered": false,
+      "items": [
+        {
+          "text": "Changes in the database schema of the game (dbmodel.sql).",
+          "nested": null
+        },
+        {
+          "text": "New global variable or game option accessed during the game (if it's only used during setup, it should be safe).",
+          "nested": null
+        },
+        {
+          "text": "Change ID of existing game states (adding new game states is fine).",
+          "nested": null
+        },
+        {
+          "text": "Changing flow of game states (for example, if you change 1 -> 2 -> 3 -> 4 to 1 -> 3 -> 2 -> 4, players at state 2 will skip state 3)",
+          "nested": null
+        }
+      ]
+    },
+    {
+      "type": "paragraph",
+      "text": "Of course, as a rule of thumb, you should avoid to introduce changes that break a game in progress. Sometimes however, you do not have any other choice. In this case:"
+    },
+    {
+      "type": "list",
+      "ordered": false,
+      "items": [
+        {
+          "text": "Try to group all your updates in one version, thus we won't have to block your game several times.",
+          "nested": null
+        },
+        {
+          "text": "Tell us explicitly that you introduce some update that can break games in progress so we can block the game during a short time.",
+          "nested": null
+        }
+      ]
+    },
+    {
+      "type": "note",
+      "variant": "note",
+      "text": "Note: in the near future, we will introduce the possibility for you to block/unblock a game directly from your Control Panel in order to perform all the process by yourself."
+    },
+    {
+      "type": "list",
+      "ordered": false,
+      "items": [
+        {
+          "text": "If you add options, you should let us know which value should be used for the arena mode, so that we can update the arena configuration.",
+          "nested": null
+        },
+        {
+          "text": "If you remove an option or change a option ID, it will break the arena configuration and prevent creating new arena games, so you should let us know so that we can synchronize to update the configuration at the same time as you deploy the new version.",
+          "nested": null
+        },
+        {
+          "text": "Do not change option IDs once the game is in production, it will break ongoing games and audience option statistics.",
+          "nested": null
+        }
+      ]
+    },
+    {
+      "type": "paragraph",
+      "text": "You should be careful when updating a statistics:"
+    },
+    {
+      "type": "list",
+      "ordered": false,
+      "items": [
+        {
+          "text": "If you want to add a new statistic, please be aware that for ongoing games this statistic won't always be correct since it has not been counted from the start of that game.",
+          "nested": null
+        },
+        {
+          "text": "If you want to update a statistic, please update it and do not remove/create another one. Otherwise, the statistic won't keep the same ID and players will lose all the historical statistics data.",
+          "nested": null
+        },
+        {
+          "text": "If your game is published on BGA, please don't remove any statistics (historical data will be lost).",
+          "nested": null
+        }
+      ]
+    },
+    {
+      "type": "paragraph",
+      "text": "If you want to update the database schema of the game (dbmodel.sql) and your game is already open to everyone on BGA (from BETA onwards), you should inform us before releasing the new version (see \" changes that breaks the games in progress \")."
+    },
+    {
+      "type": "code",
+      "language": null,
+      "text": " function upgradeTableDb( $from_version ){\n \n if( $from_version <= YYMMDDHHMM ){ // where your CURRENT version in production has number YYMMDD-HHMM\n \n           // You DB schema update request.\n           // Note: all tables names should be prefixed by \"DBPREFIX_\" to be compatible with the applyDbUpgradeToAllDB method you should use below\n           $sql = \"CREATE TABLE DBPREFIX_xxxxxxx ....\";\n \n           // The method below is applying your DB schema update request to all tables, including the BGA framework utility tables like \"zz_replayXXXX\" or \"zz_savepointXXXX\".\n           // You should really use this request, in conjunction with \"DBPREFIX_\" in your $sql, so ALL tables are updated. All utility tables MUST have the same schema than the main table, otherwise the game may be blocked.\n           self::applyDbUpgradeToAllDB( $sql ); \n }}"
+    },
+    {
+      "type": "paragraph",
+      "text": "Note1: of course you need to change your dbmodel.sql accordingly, so that new games get your updated scheme."
+    },
+    {
+      "type": "list",
+      "ordered": false,
+      "items": [
+        {
+          "text": "if your game is already open to everyone on BGA (from BETA onwards), it may be worth contacting us before, so we can stop the realtime games during the update (this way, only turn based games are concerned by the DB live upgrade).",
+          "nested": null
+        },
+        {
+          "text": "if you can avoid it... try to avoid it :)",
+          "nested": null
+        }
+      ]
+    },
+    {
+      "type": "paragraph",
+      "text": "Note3: testing on the studio is possible by following the following procedure:"
+    },
+    {
+      "type": "list",
+      "ordered": false,
+      "items": [
+        {
+          "text": "make sure the current state of your project is correctly committed",
+          "nested": null
+        },
+        {
+          "text": "revert to the revision currently in production using the version control tools (\"Display commit log\" -> find the revision matching the current version in production, then \"Overwrite working copy with this revision\" to get back the matching code)",
+          "nested": null
+        },
+        {
+          "text": "launch a game with this code",
+          "nested": null
+        },
+        {
+          "text": "revert to your code latest version using the version control tools (use \"Overwrite working copy with this revision\" with \"head\" for the revision)",
+          "nested": null
+        },
+        {
+          "text": "access the game database",
+          "nested": null
+        },
+        {
+          "text": "in the \"global\" table, find the row with id 300. Its value is 999999999 by default on the studio. Change it to the current production version number",
+          "nested": null
+        },
+        {
+          "text": "hit refresh to reload your game page. Your upgradeTableDb() function will be run and the global value will be updated again to the studio value",
+          "nested": null
+        },
+        {
+          "text": "check the database to see if your changes have been correctly applied.",
+          "nested": null
+        }
+      ]
+    },
+    {
+      "type": "paragraph",
+      "text": "Note4: consider that if your game has some undo support capability through \"db_undo_support\": true, in the gameinfos.jsonc, calling the undoRestorePoint() could restore to a prior game version and the upgradeTableDb() could be called again. In that case, it's better to secure the SQL Alter Table Request with something like:"
+    },
+    {
+      "type": "code",
+      "language": null,
+      "text": "      function upgradeTableDb( $from_version ){\n        if( $from_version <= YYMMDDHHMM )\n        {\n          // ! important ! Use DBPREFIX_<table_name> for all tables\n          // test first the new column existance since it can exists from a previous call to upgradeTableDb while an undo was performed\n          $result = self::getUniqueValueFromDB(\"SHOW COLUMNS FROM tablename LIKE 'new_column'\");\n          if (empty($result))\n              self::applyDbUpgradeToAllDB(\"ALTER TABLE DBPREFIX_tablename ADD `new_column` tinyint(4)  unsigned NOT NULL DEFAULT '0';\");\n        }\n      }"
+    },
+    {
+      "type": "paragraph",
+      "text": "When you update a string that has been marked to be translatable, please keep in mind that all current translations done by the BGA community will be lost."
+    },
+    {
+      "type": "list",
+      "ordered": false,
+      "items": [
+        {
+          "text": "Is it just an English misspelling? In this case, it is better to fix the English translation of the string than the original string to be translated.",
+          "nested": null
+        },
+        {
+          "text": "Has the meaning of the string changed? If yes, you HAVE to change the original string in order to invalidate all translations that has been done already.",
+          "nested": null
+        },
+        {
+          "text": "Is there a similar string already used elsewhere in my game? In this case, you'd better use it again to enjoy immediately all translations already available.",
+          "nested": null
+        }
+      ]
+    },
+    {
+      "type": "paragraph",
+      "text": "The player's community is always happy to know that someone is taking care of their preferred game :)"
+    },
+    {
+      "type": "paragraph",
+      "text": "When you fix a bug or add something, do not hesitate to tell the players about this in this group: you'll get the \"thank you\" you deserved :)"
+    },
+    {
+      "type": "paragraph",
+      "text": "If you do some major changes to your game like:"
+    },
+    {
+      "type": "list",
+      "ordered": false,
+      "items": [
+        {
+          "text": "Introducing a new expansion.",
+          "nested": null
+        },
+        {
+          "text": "Major code rewriting/refactoring.",
+          "nested": null
+        }
+      ]
+    },
+    {
+      "type": "paragraph",
+      "text": "... please tell us. In this case, we can:"
+    },
+    {
+      "type": "list",
+      "ordered": false,
+      "items": [
+        {
+          "text": "Make your game back from \"gold\" to \"public beta\", to incite player to report bugs.",
+          "nested": null
+        },
+        {
+          "text": "And eventually, publish a news about it :)",
+          "nested": null
+        }
+      ]
+    },
+    {
+      "type": "paragraph",
+      "text": "Be advised about the timing of deployments: Your new PHP backend code takes effect immediately , but your new JS/HTML/CSS frontend code does not take effect unless current players reload the page (F5). This can lead to unexpected behavior and difficult-to-reproduce bugs caused by old JS client code interacting with new PHP server code."
+    }
+  ],
+  "links": [
+    {
+      "text": "BGA bugs page",
+      "url": "https://boardgamearena.com/bugs"
+    },
+    {
+      "text": "https://studio.boardgamearena.com/studiogame?game=mygamename",
+      "url": "https://studio.boardgamearena.com/studiogame?game=mygamename"
+    },
+    {
+      "text": "Disable / lock table creation for new deploy",
+      "url": "https://en.doc.boardgamearena.com/BGA_Studio_Cookbook#Disable_/_lock_table_creation_for_new_deploy"
+    },
+    {
+      "text": "Force players to refresh after new deploy",
+      "url": "https://en.doc.boardgamearena.com/BGA_Studio_Cookbook#Force_players_to_refresh_after_new_deploy"
+    },
+    {
+      "text": "changes that breaks the games in progress",
+      "url": "#Changes_that_breaks_the_games_in_progress"
+    }
+  ],
+  "images": [],
+  "metadata": {
+    "extractor_version": "1.0.0",
+    "extracted_at": "2026-07-06T06:53:17.498570+00:00",
+    "word_count": 699,
+    "heading_count": 12,
+    "code_block_count": 2,
+    "table_count": 0,
+    "image_count": 0,
+    "list_count": 11
+  }
+}

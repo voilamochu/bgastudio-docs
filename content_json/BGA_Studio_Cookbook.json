@@ -1,0 +1,1567 @@
+{
+  "title": "BGA Studio Cookbook",
+  "source_file": "BGA_Studio_Cookbook.html",
+  "relative_path": "BGA_Studio_Cookbook.html",
+  "content_json_path": "content_json/BGA_Studio_Cookbook.json",
+  "headings": [
+    {
+      "level": 2,
+      "text": "Visual Effects, Layout and Animation",
+      "id": "Visual_Effects.2C_Layout_and_Animation"
+    },
+    {
+      "level": 3,
+      "text": "DOM manipulations",
+      "id": "DOM_manipulations"
+    },
+    {
+      "level": 4,
+      "text": "Create pieces dynamically (using string concatenation)",
+      "id": "Create_pieces_dynamically_.28using_string_concatenation.29"
+    },
+    {
+      "level": 4,
+      "text": "Create all pieces statically",
+      "id": "Create_all_pieces_statically"
+    },
+    {
+      "level": 4,
+      "text": "Use player color in template",
+      "id": "Use_player_color_in_template"
+    },
+    {
+      "level": 3,
+      "text": "Animation",
+      "id": "Animation"
+    },
+    {
+      "level": 4,
+      "text": "Attach to new parent without destroying the object",
+      "id": "Attach_to_new_parent_without_destroying_the_object"
+    },
+    {
+      "level": 4,
+      "text": "Animation on oversurface",
+      "id": "Animation_on_oversurface"
+    },
+    {
+      "level": 4,
+      "text": "Scroll element into view",
+      "id": "Scroll_element_into_view"
+    },
+    {
+      "level": 3,
+      "text": "Logs",
+      "id": "Logs"
+    },
+    {
+      "level": 4,
+      "text": "Inject images and styled html in the log",
+      "id": "Inject_images_and_styled_html_in_the_log"
+    },
+    {
+      "level": 5,
+      "text": "Definethis.bgaFormatText()method",
+      "id": "Define_this.bgaFormatText.28.29_method"
+    },
+    {
+      "level": 5,
+      "text": "Use:formatFunctionoption provided bydojo.string.substitute",
+      "id": "Use_:formatFunction_option_provided_by_dojo.string.substitute"
+    },
+    {
+      "level": 5,
+      "text": "Usetransformargument ofdojo.string.substitute",
+      "id": "Use_transform_argument_of_dojo.string.substitute"
+    },
+    {
+      "level": 4,
+      "text": "Processing logs on re-loading",
+      "id": "Processing_logs_on_re-loading"
+    },
+    {
+      "level": 4,
+      "text": "Overriding format_string_recursive to inject HTML into log, including adding tooltips to log",
+      "id": "Overriding_format_string_recursive_to_inject_HTML_into_log.2C_including_adding_tooltips_to_log"
+    },
+    {
+      "level": 3,
+      "text": "Images and Icons",
+      "id": "Images_and_Icons"
+    },
+    {
+      "level": 4,
+      "text": "Accessing images from js",
+      "id": "Accessing_images_from_js"
+    },
+    {
+      "level": 4,
+      "text": "High-Definition Graphics",
+      "id": "High-Definition_Graphics"
+    },
+    {
+      "level": 4,
+      "text": "Using CSS to create different colors of game pieces if you have only white piece",
+      "id": "Using_CSS_to_create_different_colors_of_game_pieces_if_you_have_only_white_piece"
+    },
+    {
+      "level": 4,
+      "text": "Adding Image buttons",
+      "id": "Adding_Image_buttons"
+    },
+    {
+      "level": 3,
+      "text": "Scale to fit for big boards",
+      "id": "Scale_to_fit_for_big_boards"
+    },
+    {
+      "level": 3,
+      "text": "Dynamic tooltips",
+      "id": "Dynamic_tooltips"
+    },
+    {
+      "level": 3,
+      "text": "Cool realistic shadow effect with CSS",
+      "id": "Cool_realistic_shadow_effect_with_CSS"
+    },
+    {
+      "level": 4,
+      "text": "Rectangles and circles",
+      "id": "Rectangles_and_circles"
+    },
+    {
+      "level": 4,
+      "text": "Irregular Shapes",
+      "id": "Irregular_Shapes"
+    },
+    {
+      "level": 4,
+      "text": "Shadows with clip-path",
+      "id": "Shadows_with_clip-path"
+    },
+    {
+      "level": 3,
+      "text": "Using the CSS classes from the state machine",
+      "id": "Using_the_CSS_classes_from_the_state_machine"
+    },
+    {
+      "level": 2,
+      "text": "Game Model and Database design",
+      "id": "Game_Model_and_Database_design"
+    },
+    {
+      "level": 3,
+      "text": "Database for The euro game",
+      "id": "Database_for_The_euro_game"
+    },
+    {
+      "level": 3,
+      "text": "Database for The card game",
+      "id": "Database_for_The_card_game"
+    },
+    {
+      "level": 2,
+      "text": "Game Elements",
+      "id": "Game_Elements"
+    },
+    {
+      "level": 3,
+      "text": "Resource",
+      "id": "Resource"
+    },
+    {
+      "level": 4,
+      "text": "Representation in Database",
+      "id": "Representation_in_Database"
+    },
+    {
+      "level": 4,
+      "text": "Representation in Material File (material.inc.php)",
+      "id": "Representation_in_Material_File_.28material.inc.php.29"
+    },
+    {
+      "level": 4,
+      "text": "HTML Representation",
+      "id": "HTML_Representation"
+    },
+    {
+      "level": 4,
+      "text": "JavaScript Handling",
+      "id": "JavaScript_Handling"
+    },
+    {
+      "level": 4,
+      "text": "Graphic Representation (.css)",
+      "id": "Graphic_Representation_.28.css.29"
+    },
+    {
+      "level": 4,
+      "text": "Selection and Actions",
+      "id": "Selection_and_Actions"
+    },
+    {
+      "level": 3,
+      "text": "Meeple",
+      "id": "Meeple"
+    },
+    {
+      "level": 4,
+      "text": "Representation in Database",
+      "id": "Representation_in_Database_2"
+    },
+    {
+      "level": 4,
+      "text": "Representation in Material File (material.inc.php)",
+      "id": "Representation_in_Material_File_.28material.inc.php.29_2"
+    },
+    {
+      "level": 4,
+      "text": "HTML Representation",
+      "id": "HTML_Representation_2"
+    },
+    {
+      "level": 4,
+      "text": "JavaScript Handling",
+      "id": "JavaScript_Handling_2"
+    },
+    {
+      "level": 4,
+      "text": "Graphic Representation (.css)",
+      "id": "Graphic_Representation_.28.css.29_2"
+    },
+    {
+      "level": 4,
+      "text": "Selection and Actions",
+      "id": "Selection_and_Actions_2"
+    },
+    {
+      "level": 3,
+      "text": "Dice",
+      "id": "Dice"
+    },
+    {
+      "level": 4,
+      "text": "Representation in Database",
+      "id": "Representation_in_Database_3"
+    },
+    {
+      "level": 4,
+      "text": "Representation in Material File (material.inc.php)",
+      "id": "Representation_in_Material_File_.28material.inc.php.29_3"
+    },
+    {
+      "level": 4,
+      "text": "HTML Representation",
+      "id": "HTML_Representation_3"
+    },
+    {
+      "level": 4,
+      "text": "JavaScript Handling (.js)",
+      "id": "JavaScript_Handling_.28.js.29"
+    },
+    {
+      "level": 4,
+      "text": "Graphic Representation (.css)",
+      "id": "Graphic_Representation_.28.css.29_3"
+    },
+    {
+      "level": 4,
+      "text": "Selection and Actions",
+      "id": "Selection_and_Actions_3"
+    },
+    {
+      "level": 3,
+      "text": "Card",
+      "id": "Card"
+    },
+    {
+      "level": 4,
+      "text": "Representation in Database",
+      "id": "Representation_in_Database_4"
+    },
+    {
+      "level": 4,
+      "text": "Representation in Material",
+      "id": "Representation_in_Material"
+    },
+    {
+      "level": 4,
+      "text": "HTML Representation",
+      "id": "HTML_Representation_4"
+    },
+    {
+      "level": 4,
+      "text": "JavaScript Handling (.js)",
+      "id": "JavaScript_Handling_.28.js.29_2"
+    },
+    {
+      "level": 4,
+      "text": "Graphic Representation (.css)",
+      "id": "Graphic_Representation_.28.css.29_4"
+    },
+    {
+      "level": 4,
+      "text": "Selection and Actions",
+      "id": "Selection_and_Actions_4"
+    },
+    {
+      "level": 4,
+      "text": "Card Layouts",
+      "id": "Card_Layouts"
+    },
+    {
+      "level": 3,
+      "text": "Hex Tiles",
+      "id": "Hex_Tiles"
+    },
+    {
+      "level": 3,
+      "text": "Tetris Tiles",
+      "id": "Tetris_Tiles"
+    },
+    {
+      "level": 3,
+      "text": "Track",
+      "id": "Track"
+    },
+    {
+      "level": 2,
+      "text": "Code Organization",
+      "id": "Code_Organization"
+    },
+    {
+      "level": 3,
+      "text": "Creating a test class to run PHP locally",
+      "id": "Creating_a_test_class_to_run_PHP_locally"
+    },
+    {
+      "level": 3,
+      "text": "Avoiding code in dojo declare style",
+      "id": "Avoiding_code_in_dojo_declare_style"
+    },
+    {
+      "level": 3,
+      "text": "Frameworks and Preprocessors",
+      "id": "Frameworks_and_Preprocessors"
+    },
+    {
+      "level": 3,
+      "text": "PHP Migration",
+      "id": "PHP_Migration"
+    },
+    {
+      "level": 2,
+      "text": "Backend",
+      "id": "Backend"
+    },
+    {
+      "level": 3,
+      "text": "Assigning Player Order",
+      "id": "Assigning_Player_Order"
+    },
+    {
+      "level": 2,
+      "text": "Assorted Stuff",
+      "id": "Assorted_Stuff"
+    },
+    {
+      "level": 3,
+      "text": "Out-of-turn actions: Un-pass",
+      "id": "Out-of-turn_actions:_Un-pass"
+    },
+    {
+      "level": 3,
+      "text": "Multi Step Interactions: Select Worker/Place Worker - Using Selection",
+      "id": "Multi_Step_Interactions:_Select_Worker.2FPlace_Worker_-_Using_Selection"
+    },
+    {
+      "level": 3,
+      "text": "Multi Step Interactions: Select Worker/Place Worker - Using Client States",
+      "id": "Multi_Step_Interactions:_Select_Worker.2FPlace_Worker_-_Using_Client_States"
+    },
+    {
+      "level": 3,
+      "text": "Action Stack - Using Client States",
+      "id": "Action_Stack_-_Using_Client_States"
+    },
+    {
+      "level": 3,
+      "text": "Action Stack - Using Server States",
+      "id": "Action_Stack_-_Using_Server_States"
+    },
+    {
+      "level": 3,
+      "text": "Custom error/exception handling in JavaScript",
+      "id": "Custom_error.2Fexception_handling_in_JavaScript"
+    },
+    {
+      "level": 3,
+      "text": "Force players to refresh after new deploy",
+      "id": "Force_players_to_refresh_after_new_deploy"
+    },
+    {
+      "level": 3,
+      "text": "Disable / lock table creation for new deploy",
+      "id": "Disable_.2F_lock_table_creation_for_new_deploy"
+    },
+    {
+      "level": 3,
+      "text": "Local Storage",
+      "id": "Local_Storage"
+    },
+    {
+      "level": 2,
+      "text": "Algorithms",
+      "id": "Algorithms"
+    },
+    {
+      "level": 3,
+      "text": "Generate permutations in lexicographic order",
+      "id": "Generate_permutations_in_lexicographic_order"
+    }
+  ],
+  "content": [
+    {
+      "type": "paragraph",
+      "text": "This page is a cookbook of design and implementation recipes for BGA Studio framework. For tooling and usage recipes see Tools and tips of BGA Studio . If you have your own recipes feel free to edit this page."
+    },
+    {
+      "type": "paragraph",
+      "text": "Ingredients: ggg.js"
+    },
+    {
+      "type": "code",
+      "language": null,
+      "text": "  div = `<div class='meeple_${color}'></div>`;"
+    },
+    {
+      "type": "paragraph",
+      "text": "Ingredients: ggg_ggg.tpl, ggg.css, ggg.view.php (optional)"
+    },
+    {
+      "type": "list",
+      "ordered": false,
+      "items": [
+        {
+          "text": "Create ALL game pieces in html template (.tpl)",
+          "nested": null
+        },
+        {
+          "text": "ALL pieces should have unique id, and it should be meaningful, i.e. meeple_red_1",
+          "nested": null
+        },
+        {
+          "text": "Do not use inline styling",
+          "nested": null
+        },
+        {
+          "text": "Id of player's specific pieces should use some sort of 'color' identification, since player id cannot be used in static layout, you can use english color name, hex 6 char value, or color \"number\" (1,2,3...)",
+          "nested": null
+        },
+        {
+          "text": "Pieces should have separated class for its color, type, etc, so it can be easily styled in groups. In example below you now can style all meeples, all red meeples or all red tokens, or all \"first\" meeples",
+          "nested": null
+        }
+      ]
+    },
+    {
+      "type": "paragraph",
+      "text": "ggg.tpl:"
+    },
+    {
+      "type": "code",
+      "language": null,
+      "text": " \n  <div id=\"home_red\" class=\"home_red home\">\n     <div id=\"meeple_red_1\" class=\"meeple red n1\"></div>\n     <div id=\"meeple_red_2\" class=\"meeple red n2\"></div>\n  </div>"
+    },
+    {
+      "type": "paragraph",
+      "text": "ggg.css:"
+    },
+    {
+      "type": "code",
+      "language": null,
+      "text": ".meeple {\n\twidth: 32px;\n\theight: 39px;\n\tbackground-image: url(img/78_64_stand_meeples.png);\n\tbackground-size: 352px;\n}\n\n.meeple.red {\n\tbackground-position: 30% 0%;\n}"
+    },
+    {
+      "type": "list",
+      "ordered": false,
+      "items": [
+        {
+          "text": "There should be straight forward mapping between server id and js id (or 1:1)",
+          "nested": null
+        },
+        {
+          "text": "You place objects in different zones of the layout, and setup css to take care of layout",
+          "nested": null
+        }
+      ]
+    },
+    {
+      "type": "code",
+      "language": null,
+      "text": ".home .meeple{\n   display: inline-block;\n}"
+    },
+    {
+      "type": "list",
+      "ordered": false,
+      "items": [
+        {
+          "text": "If you need to have a temporary object that look like original you can use dojo.clone (and change id to some temp id)",
+          "nested": null
+        },
+        {
+          "text": "If there is lots of repetition or zone grid you can use template generator, but inject style declaration in css instead of inline style for flexibility",
+          "nested": null
+        }
+      ]
+    },
+    {
+      "type": "note",
+      "variant": "note",
+      "text": "Note:"
+    },
+    {
+      "type": "list",
+      "ordered": false,
+      "items": [
+        {
+          "text": "If you use this model you cannot use premade js components such as Stock and Zone",
+          "nested": null
+        },
+        {
+          "text": "You have to use alternative methods of animation (slightly altered) since default method will leave object with inline style attributes which you don't need",
+          "nested": null
+        }
+      ]
+    },
+    {
+      "type": "note",
+      "variant": "note",
+      "text": "NOTE: view.php is deprecated, its best to generate html from .js"
+    },
+    {
+      "type": "paragraph",
+      "text": ".view.php:"
+    },
+    {
+      "type": "code",
+      "language": null,
+      "text": "    function build_page($viewArgs) {\n        // Get players & players number\n        $players = $this->game->loadPlayersBasicInfos();\n        $players_nbr = count($players);\n        /**\n         * ********* Place your code below: ***********\n         */\n        \n        // Set PCOLOR to the current player color hex\n        $cplayer = $this->getCurrentPlayerId();\n        if (array_key_exists($cplayer, $players)) { // may be not set if spectator\n            $player_color = $players [$cplayer] ['player_color'];\n        } else {\n            $player_color = 'ffffff'; // spectator\n        }\n        $this->tpl ['PCOLOR'] = $player_color;"
+    },
+    {
+      "type": "paragraph",
+      "text": "BGA function attachToNewParent for some reason destroys the original, if you want similar function that does not you can use this ggg.js"
+    },
+    {
+      "type": "code",
+      "language": null,
+      "text": "        /**\n         * This method will attach mobile to a new_parent without destroying, unlike original attachToNewParent which destroys mobile and\n         * all its connectors (onClick, etc)\n         */\n        attachToNewParentNoDestroy: function (mobile_in, new_parent_in, relation, place_position) {\n\n            const mobile = $(mobile_in);\n            const new_parent = $(new_parent_in);\n\n            var src = dojo.position(mobile);\n            if (place_position)\n                mobile.style.position = place_position;\n            dojo.place(mobile, new_parent, relation);\n            mobile.offsetTop;//force re-flow\n            var tgt = dojo.position(mobile);\n            var box = dojo.marginBox(mobile);\n            var cbox = dojo.contentBox(mobile);\n            var left = box.l + src.x - tgt.x;\n            var top = box.t + src.y - tgt.y;\n\n            mobile.style.position = \"absolute\";\n            mobile.style.left = left + \"px\";\n            mobile.style.top = top + \"px\";\n            box.l += box.w - cbox.w;\n            box.t += box.h - cbox.h;\n            mobile.offsetTop;//force re-flow\n            return box;\n        },"
+    },
+    {
+      "type": "paragraph",
+      "text": "If you use non-absolute position for your game elements (i.e you use layouts) - you cannot really use BGA animation functions. After years of fidding with different options I use techique which I call animation on oversurface that works when parents use different zoom, rotation, etc"
+    },
+    {
+      "type": "list",
+      "ordered": false,
+      "items": [
+        {
+          "text": "You need another layer on top of everything - oversurface",
+          "nested": null
+        },
+        {
+          "text": "We create copy of the object on oversurface - to move",
+          "nested": null
+        },
+        {
+          "text": "We move the real object on final position - but make it invisible for now",
+          "nested": null
+        },
+        {
+          "text": "We move the phantom to final position applying required zoom and rotation (using css animation), then destroy it",
+          "nested": null
+        },
+        {
+          "text": "When animation is done we make original object visible in new position",
+          "nested": null
+        }
+      ]
+    },
+    {
+      "type": "paragraph",
+      "text": "The code is bit complex it can be found here"
+    },
+    {
+      "type": "paragraph",
+      "text": "Game using it: century, ultimaterailroads"
+    },
+    {
+      "type": "paragraph",
+      "text": "Ingredients: game.js"
+    },
+    {
+      "type": "code",
+      "language": null,
+      "text": "    scrollIntoViewAfter: function (node, delay) {\n      if (this.instantaneousMode || this.inSetup) {\n        return;\n      }\n      if (typeof g_replayFrom != \"undefined\") {\n        $(node).scrollIntoView();\n        return;\n      }\n      if (!delay) delay = 0;\n      setTimeout(() => {\n        $(node).scrollIntoView({ behavior: \"smooth\", block: \"center\" });\n      }, delay);\n    },"
+    },
+    {
+      "type": "paragraph",
+      "text": "So you want nice pictures in the game log. What do you do? The first idea that comes to mind is to send html from php in notifications (see method above)."
+    },
+    {
+      "type": "list",
+      "ordered": false,
+      "items": [
+        {
+          "text": "It's bad architecture. ui elements leak into the server, and now you have to manage the ui in multiple places.",
+          "nested": null
+        },
+        {
+          "text": "If you decided to change something in the ui in future version, replay logs for old games and tutorials may not work, since they use stored notifications.",
+          "nested": null
+        },
+        {
+          "text": "Log previews for old games become unreadable. (This is the log state before you enter the game replay, which is useful for troubleshooting and game analysis.)",
+          "nested": null
+        },
+        {
+          "text": "It's more data to transfer and store in the db.",
+          "nested": null
+        },
+        {
+          "text": "It's a nightmare for translators.",
+          "nested": null
+        }
+      ]
+    },
+    {
+      "type": "paragraph",
+      "text": "So what else can you do? You can use client side log injection to intercept log arguments (which come from the server) and replace them with html on the client side. Here are three different method you can use to achieve this."
+    },
+    {
+      "type": "paragraph",
+      "text": "Ingredients: ggg.js, ggg.game.php"
+    },
+    {
+      "type": "paragraph",
+      "text": "ggg.js"
+    },
+    {
+      "type": "code",
+      "language": null,
+      "text": " \n\n        /** Declare this function to inject html into log items. */\n\n        bgaFormatText : function(log, args) {\n            try {\n                if (log && args && !args.processed) {\n                    args.processed = true;\n                    \n\n                    // list of special keys we want to replace with images\n                    const keys = ['place_name','token_name'];\n                    \n                  \n                    for (let i in keys) {\n                        const key = keys[i];\n                        if (args[key]) args[key] = this.getTokenDiv(key, args);                            \n\n                    }\n                }\n            } catch (e) {\n                console.error(log,args,\"Exception thrown\", e.stack);\n            }\n            return { log, args };\n        },"
+    },
+    {
+      "type": "note",
+      "variant": "warning",
+      "text": "Important: In the bgaFormatText method, the 'args' parameter will only contain arguments passed to it from the notify method in Game.php (see below)."
+    },
+    {
+      "type": "code",
+      "language": null,
+      "text": "        getTokenDiv : function(key, args) {\n            // ... implement whatever html you want here, example from sharedcode.js\n            var token_id = args[key];\n            var item_type = getPart(token_id,0);\n            var logid = \"log\" + (this.globalid++) + \"_\" + token_id;\n            switch (item_type) {\n                case 'wcube':\n                    var tokenDiv = this.format_block('jstpl_resource_log', {\n                        \"id\" : logid,\n                        \"type\" : \"wcube\",\n                        \"color\" : getPart(token_id,1),\n                    });\n                    return tokenDiv;\n             \n                case 'meeple':\n                    if ($(token_id)) {\n                        var clone = dojo.clone($(token_id));\n    \n                        dojo.attr(clone, \"id\", logid);\n                        this.stripPosition(clone);\n                        dojo.addClass(clone, \"logitem\");\n                        return clone.outerHTML;\n                    }\n                    break;\n     \n                default:\n                    break;\n            }\n\n            return \"'\" + this.clienttranslate_string(this.getTokenName(token_id)) + \"'\";\n       },\n       getTokenName : function(key) {\n           return this.gamedatas.token_types[key].name; // get name for the key, from static table for example\n       },"
+    },
+    {
+      "type": "paragraph",
+      "text": "Note that in this case the server simply injects token_id as a name, and the client substitutes it for the translated name or the picture."
+    },
+    {
+      "type": "code",
+      "language": null,
+      "text": "          $this->bga->notify->all('playerLog', clienttranslate('Game moves ${token_name}'), ['token_name'=>$token_id]);"
+    },
+    {
+      "type": "note",
+      "variant": "warning",
+      "text": "Important: As noted above, only arguments actually passed by this method are available to the args parameter received in the client-side bgaFormatText method."
+    },
+    {
+      "type": "code",
+      "language": null,
+      "text": "          $this->bga->notify->all('tokenPlaced', clienttranslate('Player placed ${token_name}'), array(\n             'token_name' => $token_id,\n             'zone_played' => $zone);"
+    },
+    {
+      "type": "paragraph",
+      "text": "This will output \"Player placed ${token_name}\" in the log, and if we subscribe to a notification method activated by the \"tokenPlaced\" event in the client-side code, that method can make use of the 'zone_played' argument."
+    },
+    {
+      "type": "code",
+      "language": null,
+      "text": "           $this->bga->notify->all('tokenPlaced', clienttranslate('Player placed ${token_name}'), array(\n              'token_name' => $token_id,\n              'zone_played' => $zone,\n              'preserve' => [ 'zone_played' ]\n           );"
+    },
+    {
+      "type": "paragraph",
+      "text": "Now you can use zone_played in bgaFormatText even in historical logs."
+    },
+    {
+      "type": "paragraph",
+      "text": "Ingredients: ggg.js, ggg.game.php, ggg_ggg.tpl, ggg.css"
+    },
+    {
+      "type": "note",
+      "variant": "warning",
+      "text": "WARNING: using this method on an already advanced project will require you to go through all your notifications to change keys !"
+    },
+    {
+      "type": "paragraph",
+      "text": "First of all, you need to define your formatting function in the ggg.js file:"
+    },
+    {
+      "type": "code",
+      "language": null,
+      "text": "[[ggg.js]]\n        getTokenDiv : function(value, key) {\n            //This is only an example implementation, you need to write your own.\n            //The method should return HTML code\n            switch (key) {\n                case 'html_injected_argument1':\n                    return this.format_block('jstpl_HTMLLogElement1',{value: value});\n                case 'html_injected_argument2':\n                    return this.format_block('jstpl_HTMLLogElement2',{value: value});\n                ...\n            }\n       }"
+    },
+    {
+      "type": "paragraph",
+      "text": "Obviously you need to define the appropriate templates in the ggg_ggg.tpl file:"
+    },
+    {
+      "type": "code",
+      "language": null,
+      "text": "[[ggg_ggg.tpl]]\nlet jstpl_HTMLLogElement1 = '<div class=\"log-element log-element-1-${value}\"></div>';\nlet jstpl_HTMLLogElement2 = '<div class=\"log-element log-element-2-${value}\"></div>';\n..."
+    },
+    {
+      "type": "paragraph",
+      "text": "And the appropriate classes in ggg.css."
+    },
+    {
+      "type": "code",
+      "language": null,
+      "text": "[[ggg.js]]\ndefine([\n    \"dojo\", \"dojo/_base/declare\",\n    \"dojo/aspect\",                 //MUST BE IN THIRD POSITION (see below)\n    \"ebg/core/gamegui\",\n    \"ebg/counter\",\n], function (dojo, declare, aspect) {\n..."
+    },
+    {
+      "type": "paragraph",
+      "text": "And you also need to add the following code in your `contructor` method in the ggg.js:"
+    },
+    {
+      "type": "code",
+      "language": null,
+      "text": "[[ggg.js]]\n        constructor: function(){"
+    },
+    {
+      "type": "code",
+      "language": null,
+      "text": "            // ... skipped code ...\n            let gameObject = this;            //Needed as the this object in aspect.before will not refer to the game object in which the formatting function resides\n            aspect.before(dojo.string, \"substitute\", function(template, map, transform) {      //This allows you to modify the arguments of the dojo.string.substitute method before they're actually passed to it\n                return [template, map, transform, gameObject];\n            });"
+    },
+    {
+      "type": "paragraph",
+      "text": "Now you're all set to inject HTML in your logs. To actually achieve this, you must specify the function name with the key like so:"
+    },
+    {
+      "type": "code",
+      "language": null,
+      "text": "[[ggg.game.php]]\n$this->bga->notify->all(\"notificationName\", clienttranslate(\"This log message contains ${plainTextArgument} and the following will receive HTML injection: ${html_injected_argument1:getTokenDiv}\"), [\n    \"plainTextArgument\" => \"some plain text here\",\n    \"html_injected_argument1\" => \"some value used by getTokenDiv\",\n]);"
+    },
+    {
+      "type": "paragraph",
+      "text": "You're not limited writing only one function, you can write as many functions as you like, and have them each inject a specific type of HTML. You just need to specify the relevant function name after the column in the substitution key."
+    },
+    {
+      "type": "paragraph",
+      "text": "Ingredients: ggg.js, ggg.game.php, ggg_ggg.tpl, ggg.css"
+    },
+    {
+      "type": "note",
+      "variant": "warning",
+      "text": "WARNING: This method will be applied to all strings that go through dojo.string.substitute. As such you must take extra care not to substitute keys that may be used by the framework (i.e. ${id}). In order to do so, a good practise would be to prefix all keys that need substitution with a trigram of the game name."
+    },
+    {
+      "type": "code",
+      "language": null,
+      "text": "[[ggg.js]]\n        getTokenDiv : function(value, key) {\n            //This is only an example implementation, you need to write your own.\n            //The method should return HTML code\n            switch (key) {\n                case 'html_injected_argument1':\n                    return this.format_block('jstpl_HTMLLogElement1',{value: value});\n                case 'html_injected_argument2':\n                    return this.format_block('jstpl_HTMLLogElement2',{value: value});\n                ...\n                default:\n                    return value; //Needed otherwise regular strings won't appear since since the value isn't returned by the function\n            }\n        }"
+    },
+    {
+      "type": "paragraph",
+      "text": "The templates must be defined in the ggg_ggg.tpl file and the corresponding CSS classes in the ggg.css file."
+    },
+    {
+      "type": "code",
+      "language": null,
+      "text": "[[ggg.js]]\ndefine([\n    \"dojo\", \"dojo/_base/declare\",\n    \"dojo/aspect\",                 //MUST BE IN THIRD POSITION (see below)\n    \"ebg/core/gamegui\",\n    \"ebg/counter\",\n], function (dojo, declare, aspect) {\n..."
+    },
+    {
+      "type": "paragraph",
+      "text": "And the following code to the `constructor` method in ggg.js:"
+    },
+    {
+      "type": "code",
+      "language": null,
+      "text": "[[ggg.js]]\n        constructor: function(){\n            // ... skipped code ...\n            let transformFunction = dojo.hitch(this, \"getTokenDiv\");          //Needed as the this object in aspect.before will not refer to the game object in which the formatting function resides\n            aspect.before(dojo.string, \"substitute\", function(template, map, transform) {\n                if (undefined === transform) {    //Check for a transform function presence, just in case\n                    return [template, map, transformFunction];\n                }\n            });"
+    },
+    {
+      "type": "paragraph",
+      "text": "Then you're all set for log injection, no need to change anything on the PHP side."
+    },
+    {
+      "type": "paragraph",
+      "text": "You rarely need to process logs when reloading, but if you want to do something fancy you may have to do it after logs are loaded. Logs are loaded asyncronously so you have to listen for logs to be fully loaded. Unfortunately there is no direct way of doing it so this is the hack."
+    },
+    {
+      "type": "paragraph",
+      "text": "Ingredients: ggg.js"
+    },
+    {
+      "type": "code",
+      "language": null,
+      "text": "\t\t\t/*\n  \t\t\t* [Undocumented] Override BGA framework functions to call onLoadingLogsComplete when loading is done\n                        @Override\n   \t\t\t*/\n\t\t\tsetLoader: function(image_progress, logs_progress) {\n\t\t\t\tthis.inherited(arguments); // required, this is \"super()\" call, do not remove\n\t\t\t\t//console.log(\"loader\", image_progress, logs_progress)\n\t\t\t\tif (!this.isLoadingLogsComplete && logs_progress >= 100) {\n\t\t\t\t\tthis.isLoadingLogsComplete = true; // this is to prevent from calling this more then once\n\t\t\t\t\tthis.onLoadingLogsComplete();\n\t\t\t\t}\n\t\t\t},\n\n\t\t\tonLoadingLogsComplete: function() {\n\t\t\t\tconsole.log('Loading logs complete');\n\t\t\t\t// do something here\n\t\t\t},"
+    },
+    {
+      "type": "paragraph",
+      "text": "Ingredients: ggg.js"
+    },
+    {
+      "type": "code",
+      "language": null,
+      "text": "return this.logInject(text);"
+    },
+    {
+      "type": "paragraph",
+      "text": "The purpose of logInject() is to catch pre-coded text from your notifications, siphon out the meaningful info so that you can manipulate it on the front end, and then replace that pre-coded text in the log with whatever html you desire, as well as adding a tooltip to the element you're injecting. Here is a simplified version of logInject():"
+    },
+    {
+      "type": "code",
+      "language": null,
+      "text": "logInject: function (log_entry) {\n    const card_regex = /\\[\\w+-*\\w* *\\w*\\(\\d+\\)\\]/g;    // this will catch a card name in the log formatted like so: [card_name(card_type_arg)] -You may need to adjust the regex to catch your card names\n    const cards_to_replace = log_entry.matchAll(card_regex);\n    for (let card of cards_to_replace) {\n        const match = card[0];\n        const left_parenthesis = match.indexOf('(');\n        const card_type_arg = match.slice(left_parenthesis+1, match.length-2);\n        const card_span = this.getHTMLForLog(card_type_arg, 'card');\n        log_entry = log_entry.replace(match, card_span);\n    }\n    return log_entry;\n}"
+    },
+    {
+      "type": "paragraph",
+      "text": "getHTMLForLog() takes the card_type_arg and uses it to create the <span> to be injected into the log that you can then attach a tooltip to:"
+    },
+    {
+      "type": "code",
+      "language": null,
+      "text": "getHTMLForLog: function (item, type) {   // in this example, item refers to the card_type_arg\n    switch(type) {\n        case 'card':\n            this.log_span_num++; // adds a unique num to the span id so that duplicate card names in the log have unique ids\n            const card_name = this.gamedatas['cards'][item]['description'];  // or wherever you store your translated card name\n            const item_type = 'card_tt';\n            return `<span id=\"${this.log_span_num}_item_${item}\" class=\"${item_type} item_tooltip\">${card_name}</span>`;\n    }\n}"
+    },
+    {
+      "type": "paragraph",
+      "text": "If you only want to add some HTML to your log and don't care about the tooltips, you can remove the item_tooltip class from the above and stop here. If you want tooltips, you'll need a function to add them:"
+    },
+    {
+      "type": "code",
+      "language": null,
+      "text": "addTooltipsToLog: function() {\n    const item_elements = dojo.query('.item_tooltip:not(.tt_processed)');\n    Array.from(item_elements).forEach(ele => {\n        const ele_id = ele.id;\n        ele.classList.add('tt_processed');  // prevents tooltips being re-added to previous log entries\n        if (ele.classList.contains('card_tt')) {\n            const card_type_arg = ele_id.slice(-3).replace(/^\\D+/g, '');  // extracts the card_type_arg from the span id\n            this.cardTooltip(ele_id, card_type_arg)\n        }\n    });\n}"
+    },
+    {
+      "type": "paragraph",
+      "text": "cardTooltip() is just however you want to create and add your tooltip. Mine is below:"
+    },
+    {
+      "type": "code",
+      "language": null,
+      "text": "cardTooltip: function (ele, card_type_arg) {\n    const card = this.gamedatas.cards[card_type_arg];\n    const bg_pos = card['x_y'];\n    const skill = dojo.string.substitute(\"${skill}\", { skill: card['skill'] });\n    const description = dojo.string.substitute(\"${description}\", { description: card['description'] });\n    const html = `<div style=\"margin-bottom: 5px; display: inline;\"><strong>${description}</strong></div>\n                  <span style=\"font-size: 10px; margin-left: 5px;\">${skill}</span>\n                  <div class=\"asset asset_tt\" style=\"background-position: -${bg_pos[0]}% -${bg_pos[1]}%; margin-bottom: 5px;\"></div>`;\n    this.addTooltipHTML(ele, html, 1000);\n}"
+    },
+    {
+      "type": "paragraph",
+      "text": "And finally, you need to connect addTooltipsToLog. Using the new promise-based notifications you can supply the `onEnd` param like"
+    },
+    {
+      "type": "code",
+      "language": null,
+      "text": "this.bgaSetupPromiseNotifications({ onEnd: this.addTooltipsToLog.bind(this) });"
+    },
+    {
+      "type": "paragraph",
+      "text": "Or, if you're not using them, you can attach to the notifqueue so it is called whenever the log is updated like"
+    },
+    {
+      "type": "code",
+      "language": null,
+      "text": "dojo.connect(this.notifqueue, 'addToLog', () => {\n    this.addTooltipsToLog();\n});"
+    },
+    {
+      "type": "paragraph",
+      "text": "You can expand this to cover multiple types of tooltips. For example, I have it set up for cards: formatted in log as [card_name(card_type_arg)], hexes: formatted as {pitch_name(pitch_type_arg)}, objectives: formatted as ==objective_name(objective_type_arg)==, etc."
+    },
+    {
+      "type": "paragraph",
+      "text": "Ingredients: Game.js"
+    },
+    {
+      "type": "code",
+      "language": null,
+      "text": " \n     const my_img = `<img src=\"${this.bga.images.getImgUrl('cards.jpg')}\"/>`;"
+    },
+    {
+      "type": "paragraph",
+      "text": "Some users will have screens which can display text and images at a greater resolution than the usual 72 dpi, e.g. the \"Retina\" screens on the 5k iMac, all iPads, and high-DPI screens on laptops from many manufacturers. If you can get art assets at this size, they will make your game look extra beautiful. You could just use large graphics and scale them down, but that would increase the download time and bandwidth for users who can't display them. Instead, a good way is to prepare a separate graphics file at exactly twice the size you would use otherwise, and add \"@2x\" at the end of the filename, e.g. if pieces.png is 240x320, then [email protected] is 480x640."
+    },
+    {
+      "type": "code",
+      "language": null,
+      "text": ".piece {\n    position: absolute;\n    background-image: url('img/pieces.png');\n    background-size:240px 320px;\n    z-index: 10;\n}\n@media (-webkit-min-device-pixel-ratio: 2), (min-device-pixel-ratio: 2), (min-resolution: 192dpi)\n{\n    .piece {\n        background-image: url('img/[email protected]');\n    }\n}"
+    },
+    {
+      "type": "paragraph",
+      "text": "Secondly, in your setup function in javascript, you must ensure than only the appropriate one version of the file gets pre-loaded (otherwise you more than waste the bandwidth saved by maintaining the standard-resolution file). Note that the media query is the same in both cases:"
+    },
+    {
+      "type": "code",
+      "language": null,
+      "text": "            var isRetina = \"(-webkit-min-device-pixel-ratio: 2), (min-device-pixel-ratio: 2), (min-resolution: 192dpi)\";\n            if (window.matchMedia(isRetina).matches)\n            {\n                this.dontPreloadImage( 'pieces.png' );\n                this.dontPreloadImage( 'board.jpg' );\n            }\n            else\n            {\n                this.dontPreloadImage( '[email protected]' );\n                this.dontPreloadImage( '[email protected]' );\n            }"
+    },
+    {
+      "type": "code",
+      "language": null,
+      "text": "background-color: #${color}; \nbackground-blend-mode: multiply;\nbackground-image: url( 'img/mypiece.png');\nmask: url('img/mypiece.png');\n-webkit-mask: url('img/mypiece.png');"
+    },
+    {
+      "type": "paragraph",
+      "text": "where ${color} - is color you want"
+    },
+    {
+      "type": "paragraph",
+      "text": "Its pretty trivial but just in case you need a working function:"
+    },
+    {
+      "type": "code",
+      "language": null,
+      "text": "                addImageActionButton: function (id, div_html, handler) { // div_html is string not node\n                    this.statusBar.addActionButton(div_html, handler, { id }); \n                    dojo.addClass(id, \"bgaimagebutton\"); // add css class to do more styling\n                    return $(id); // return node for chaining\n                },"
+    },
+    {
+      "type": "paragraph",
+      "text": "Example of usage:"
+    },
+    {
+      "type": "code",
+      "language": null,
+      "text": "    this.addImageActionButton('button_coin',\"<div class='coin'></div>\", ()=>{ alert('Ha!'); });"
+    },
+    {
+      "type": "paragraph",
+      "text": "Ingredients: ggg_ggg.tpl, ggg.js"
+    },
+    {
+      "type": "paragraph",
+      "text": "Lets say you have huge game board, and lets say you want it to be 1400px wide. Besides the board there will be side bar which is 240 and trim. My display is 1920 wide so it fits, but there is big chance other people won't have that width. What do you do?"
+    },
+    {
+      "type": "list",
+      "ordered": false,
+      "items": [
+        {
+          "text": "If board does not fit you want scale whole thing down, the best way is probably use viewport (see https://en.doc.boardgamearena.com/Your_game_mobile_version )",
+          "nested": null
+        },
+        {
+          "text": "You can leave the board as is and make sure it is scrollable horizonatally",
+          "nested": null
+        },
+        {
+          "text": "You add custom scale just for the board (can add user controls  - and hook to transform: scale())",
+          "nested": null
+        }
+      ]
+    },
+    {
+      "type": "paragraph",
+      "text": "I tried to auto-scale but this just does work, too many variables - browser zoom, viewport, custom bga scaling, devicePixelRatio - all create some impossible coctail of zooming... Here is scaling functing for custom user scaling"
+    },
+    {
+      "type": "code",
+      "language": null,
+      "text": "   <div id=\"thething\" class=\"thething\">\n            ... everything else you declare ...\n   </div>"
+    },
+    {
+      "type": "paragraph",
+      "text": "ggg.js:"
+    },
+    {
+      "type": "code",
+      "language": null,
+      "text": "    onZoomPlus: function() {\n       this.setZoom(this.zoom + 0.1);\n    },\n    onZoomMinus: function() {\n       this.setZoom(this.zoom - 0.1);\n    },\n\n    setZoom: function (zoom) {\n      zoom = parseInt(zoom) || 0;\n      if (zoom === 0 || zoom < 0.1 || zoom > 10) {\n        zoom = 1;\n      }\n      this.zoom = zoom;\n      var inner = document.getElementById(\"thething\");\n\n      if (zoom == 1) {\n        inner.style.removeProperty(\"transform\");\n        inner.style.removeProperty(\"width\");\n      } else {\n        inner.style.transform = \"scale(\" + zoom + \")\";\n        inner.style.transformOrigin = \"0 0\";\n        inner.style.width = 100 / zoom + \"%\";\n      }\n      localStorage.setItem(`${this.game_name}_zoom`, \"\" + this.zoom);\n      this.onScreenWidthChange();\n    },"
+    },
+    {
+      "type": "paragraph",
+      "text": "If you really need a dynamic tooltip you can use this technique. (Only use it if the static tooltips provided by the BGA framework are not sufficient.)"
+    },
+    {
+      "type": "code",
+      "language": null,
+      "text": "           new dijit.Tooltip({\n               connectId: [\"divItemId\"],\n               getContent: function(matchedNode){\n                   return \"... calculated ...\"; \n               }\n           });"
+    },
+    {
+      "type": "paragraph",
+      "text": "This is an out-of-the-box djit.Tooltip. It has a getContent method which is called dynamically."
+    },
+    {
+      "type": "paragraph",
+      "text": "dijit.Tooltip"
+    },
+    {
+      "type": "paragraph",
+      "text": "It is often nice to have a drop shadow around tiles and tokens, to separate them from the table visually. It is very easy to add a shadow to rectangular elements, just add this to your css:"
+    },
+    {
+      "type": "code",
+      "language": null,
+      "text": ".xxx-tile {\n    box-shadow: 3px 3px 3px #000000a0;\n}"
+    },
+    {
+      "type": "paragraph",
+      "text": "box-shadow obeys border-radius of the element, so it will look good for rounded rectangles, and hence also circles (if border-radius is set appropriately)."
+    },
+    {
+      "type": "paragraph",
+      "text": "If you wish to make a shadow effect for game pieces that are not a rectangle, but your game pieces are drawn from rectangles in a PNG image, you can apply the shadow to the piece using any art package and save it inside the image. This usually will yield the best performance. Remember to account for the size of the shadow when you lay out images in the sprite sheet."
+    },
+    {
+      "type": "paragraph",
+      "text": "For instance:"
+    },
+    {
+      "type": "code",
+      "language": null,
+      "text": ".xxx-token {\n    filter: drop-shadow(0px 0px 1px #000000);\n}"
+    },
+    {
+      "type": "paragraph",
+      "text": "Beware that some browsers still do not always draw drop-shadow correctly. In particular, Safari frequently leaves bits of shadow behind when objects move around the screen. In Chrome, shadows sometimes flicker badly if another element is animating close by. Some of these correctness issues can be solved by adding isolation: isolate; will-change: filter; to affected elements, but this significantly affects redraw performance."
+    },
+    {
+      "type": "paragraph",
+      "text": "gameoptions.inc.php"
+    },
+    {
+      "type": "code",
+      "language": null,
+      "text": "100 => array(\n\t\t\t'name' => totranslate('Shadows'),\n\t\t\t'needReload' => true, // after user changes this preference game interface would auto-reload\n\t\t\t'values' => array(\n\t\t\t\t\t1 => array( 'name' => totranslate( 'Enabled' ), 'cssPref' => '' ),\n\t\t\t\t\t2 => array( 'name' => totranslate( 'Disabled' ), 'cssPref' => 'no-shadow' )\n\t\t\t)\n\t),"
+    },
+    {
+      "type": "paragraph",
+      "text": "[game].css"
+    },
+    {
+      "type": "code",
+      "language": null,
+      "text": ".no-shadow * {\n\tfilter: none !important; \n} "
+    },
+    {
+      "type": "paragraph",
+      "text": "For some reason, a shadow will not work together with clip-path on one element. To use both clip-path (when for example using .svg to cut out cardboard components from your .jpg spritesheet) and drop-shadow, you need to wrap the element into another one, and apply drop-shadow to the outer one, and clip-path to the inner one."
+    },
+    {
+      "type": "code",
+      "language": null,
+      "text": "<div class='my-token-wrap'>\n  <div class='my-token'>\n  </div>\n</div>"
+    },
+    {
+      "type": "code",
+      "language": null,
+      "text": ".my-token-wrap {\n    filter: drop-shadow(0px 0px 1px #000000);\n}\n.my-token-wrap .my-token {\n    clip-path: url(#my-token-path);\n}"
+    },
+    {
+      "type": "paragraph",
+      "text": "If you need to hide or show stuff depending on the state of your game, you can of course use javascript, but CSS is hand enough for that.  The #overall-content element does change class depending on the game state.  For instance, if you are in state playerTurn , it will have the class gamestate_playerTurn ."
+    },
+    {
+      "type": "code",
+      "language": null,
+      "text": "#discard_pile { display: none }\n.gamestate_playerTurn #discard_pile { display: block }"
+    },
+    {
+      "type": "paragraph",
+      "text": "This can be used if you want to change sizing of elements, position, layout or visual appearance."
+    },
+    {
+      "type": "paragraph",
+      "text": "Lets say we have a game with workers, dice, tokens, board, resources, money and vp. Workers and dice can be placed in various zones on the board, and you can get resources, money, tokens and vp in your home zone. Also tokens can be flipped or not flipped."
+    },
+    {
+      "type": "paragraph",
+      "text": "Now lets try to map it, we have"
+    },
+    {
+      "type": "list",
+      "ordered": false,
+      "items": [
+        {
+          "text": "(meeple,zone)",
+          "nested": null
+        },
+        {
+          "text": "(die, zone, sideup)",
+          "nested": null
+        },
+        {
+          "text": "(resource cube/money token/vp token,player home zone)",
+          "nested": null
+        },
+        {
+          "text": "(token, player home zone, flip state)",
+          "nested": null
+        }
+      ]
+    },
+    {
+      "type": "paragraph",
+      "text": "We can notice that resource and money are uncountable, and don't need to be track individually so we can replace our mapping to"
+    },
+    {
+      "type": "list",
+      "ordered": false,
+      "items": [
+        {
+          "text": "(resource type/money,player home zone, count)",
+          "nested": null
+        }
+      ]
+    },
+    {
+      "type": "paragraph",
+      "text": "And vp stored already for us in player table, so we can remove it from that list."
+    },
+    {
+      "type": "paragraph",
+      "text": "So the piece mapping for non-grid based games can be in most case represented by (string: token_key, string: token_location, int: token_state), example of such database schema can be found here: dbmodel.sql and class implementing access to it here table.game.php ."
+    },
+    {
+      "type": "code",
+      "language": null,
+      "text": "CREATE TABLE IF NOT EXISTS `token` (\n `token_key` varchar(32) NOT NULL,\n `token_location` varchar(32) NOT NULL,\n `token_state` int(10),\n PRIMARY KEY (`token_key`)\n) ENGINE=InnoDB DEFAULT CHARSET=utf8;"
+    },
+    {
+      "type": "table",
+      "headers": [
+        "token_key",
+        "token_location",
+        "token_state"
+      ],
+      "rows": [
+        [
+          "meeple_red_1",
+          "home_red",
+          "0"
+        ],
+        [
+          "dice_black_2",
+          "board_guard",
+          "1"
+        ],
+        [
+          "dice_green_1",
+          "board_action_mayor",
+          "3"
+        ],
+        [
+          "bread",
+          "home_red",
+          "5"
+        ]
+      ]
+    },
+    {
+      "type": "paragraph",
+      "text": "Now how we represent resource counters such as bread? Using same table from we simply add special counter token for bread and use state to indicate the count. Note to keep first column unique we have to add player identification for that counter, i.e. ff0000 is red player."
+    },
+    {
+      "type": "table",
+      "headers": [
+        "token_key",
+        "token_location",
+        "token_state"
+      ],
+      "rows": [
+        [
+          "bread_ff0000",
+          "tableau_ff0000",
+          "5"
+        ]
+      ]
+    },
+    {
+      "type": "paragraph",
+      "text": "See php module for this table here https://github.com/elaskavaia/bga-sharedcode/blob/master/modules/tokens.php"
+    },
+    {
+      "type": "code",
+      "language": null,
+      "text": "CREATE TABLE IF NOT EXISTS `resource` (\n `player_id` int(10) unsigned NOT NULL,\n `resource_key` varchar(32) NOT NULL,\n `resource_count` int(10) signed NOT NULL,\n PRIMARY KEY (`player_id`,`resource_key`)\n) ENGINE=InnoDB DEFAULT CHARSET=utf8;"
+    },
+    {
+      "type": "code",
+      "language": null,
+      "text": "ALTER TABLE resource ADD CONSTRAINT fk_player_id FOREIGN KEY (player_id) REFERENCES player(player_id);"
+    },
+    {
+      "type": "table",
+      "headers": [
+        "player_id",
+        "resource_key",
+        "resource_count"
+      ],
+      "rows": [
+        [
+          "123456",
+          "bread",
+          "5"
+        ]
+      ]
+    },
+    {
+      "type": "paragraph",
+      "text": "This version is similar to \"card\" table from hearts tutorial, you can also use exact cards database schema and Deck implementation for most purposes (even you not dealing with cards)."
+    },
+    {
+      "type": "code",
+      "language": null,
+      "text": "CREATE TABLE IF NOT EXISTS `token` (\n `token_id` int(10) unsigned NOT NULL AUTO_INCREMENT,\n `token_type` varchar(16) NOT NULL,\n `token_arg` int(11) NOT NULL,\n `token_location` varchar(32) NOT NULL,\n `token_state` int(10),\n PRIMARY KEY (`token_id`)\n) ENGINE=InnoDB DEFAULT CHARSET=utf8;"
+    },
+    {
+      "type": "table",
+      "headers": [
+        "token_id",
+        "token_type",
+        "token_arg",
+        "token_location",
+        "token_state"
+      ],
+      "rows": [
+        [
+          "22",
+          "meeple",
+          "123456",
+          "home_123456",
+          "0"
+        ],
+        [
+          "23",
+          "dice",
+          "2",
+          "board_guard",
+          "1"
+        ],
+        [
+          "26",
+          "dice",
+          "1",
+          "board_action_mayor",
+          "3"
+        ],
+        [
+          "49",
+          "bread",
+          "0",
+          "home_123456",
+          "5"
+        ]
+      ]
+    },
+    {
+      "type": "paragraph",
+      "text": "Advantages of this would be is a bit more straightforward to do some queries in db, disadvantage its hard to read (as you can compare with previous example, you cannot just look at say, ah I know what it means). Another questionable advantage is it allows you to do id randomisation, so it hard to do crafted queries to cheat, the down side of that you cannot understand it either, and handcraft db states for debugging or testing."
+    },
+    {
+      "type": "paragraph",
+      "text": "Lets say you have a standard card game, player have hidden cards in hand, you can draw card from draw deck, play card on tableau and discard to discard pile. We have to design database for such game."
+    },
+    {
+      "type": "list",
+      "ordered": false,
+      "items": [
+        {
+          "text": "Framework handles state machine transition, so you don't have to worry about database design for that (i.e. who's turn it is, what phase of the game we are at, you still have to design it but part of state machine step)",
+          "nested": null
+        },
+        {
+          "text": "Also framework supports basic player information, color, order around the table, basic scoring, etc, so you don't have to worry about it either",
+          "nested": null
+        },
+        {
+          "text": "The only thing you need in our database is state of the \"board\", which is \"where each pieces is, and in what state\", or (position,rotation) pair.",
+          "nested": null
+        }
+      ]
+    },
+    {
+      "type": "paragraph",
+      "text": "Lets see what we have for that:"
+    },
+    {
+      "type": "list",
+      "ordered": false,
+      "items": [
+        {
+          "text": "The card state is very simple, its usually \"face up/face down\", \"tapped/untapped\", \"right side up/up side down\"",
+          "nested": null
+        },
+        {
+          "text": "As position go we never need real coordinates x,y,z. We need to know what \"zone\" card was, and depending on the zone it may sometimes need an extra \"z\" or \"x\" as card order. The zone position usually static or irrelevant.",
+          "nested": null
+        },
+        {
+          "text": "So our model is: we have cards, which have some attributes, at any given point in time they belong to a \"zone\", and can also have order and state",
+          "nested": null
+        },
+        {
+          "text": "Now for mapping we should consider what information changes and what information is static, later is always candidate for material file",
+          "nested": null
+        },
+        {
+          "text": "For dynamic information we should try to reduce amount of fields we need",
+          "nested": {
+            "type": "list",
+            "ordered": false,
+            "items": [
+              {
+                "text": "we need at least a field for card, so its one",
+                "nested": null
+              },
+              {
+                "text": "we need to know what zone cards belong to, its 2",
+                "nested": null
+              },
+              {
+                "text": "and we have possibly few other fields, if you look closely at you game you may find out that most of the zone only need one attribute at a time, i.e. draw pile always have cards face down, hand always face up, also for hand and discard order does not matter at all (but for draw it does matter). So in majority of cases we can get away with one single extra integer field representing state or order",
+                "nested": null
+              }
+            ]
+          }
+        },
+        {
+          "text": "In real database both card and zone will be integers as primary keys referring to additional tables, but in our case its total overkill, so they can be strings as easily",
+          "nested": null
+        }
+      ]
+    },
+    {
+      "type": "paragraph",
+      "text": "Variant 1: Minimalistic"
+    },
+    {
+      "type": "code",
+      "language": null,
+      "text": "CREATE TABLE IF NOT EXISTS `card` (\n  `card_key` varchar(32) unsigned NOT NULL,\n  `card_location` varchar(32) NOT NULL,\n  `card_state` int(11) NOT NULL,\n  PRIMARY KEY (`card_id`)\n) ENGINE=InnoDB DEFAULT CHARSET=utf8 AUTO_INCREMENT=1 ;"
+    },
+    {
+      "type": "paragraph",
+      "text": "Variant 2: More normalised"
+    },
+    {
+      "type": "code",
+      "language": null,
+      "text": "CREATE TABLE IF NOT EXISTS `card` (\n  `card_id` int(10) unsigned NOT NULL AUTO_INCREMENT,\n  `card_type` varchar(16) NOT NULL,\n  `card_type_arg` int(11) NOT NULL,\n  `card_location` varchar(16) NOT NULL,\n  `card_location_arg` int(11) NOT NULL,\n  PRIMARY KEY (`card_id`)\n) ENGINE=InnoDB DEFAULT CHARSET=utf8 AUTO_INCREMENT=1 ;"
+    },
+    {
+      "type": "note",
+      "variant": "note",
+      "text": "Note: if you using this schema, some zones/locations have special semantic. The 'hand' location is actually multiple locations - one per player, but player id is encoded as card_location_arg. If 'hand' in your game is ordered, visible or can have some other card states, you cannot use hand location (replacement is hand_<player_id> or hand_<color_id>)"
+    },
+    {
+      "type": "paragraph",
+      "text": "A game resource, such as \"wood,\" is usually infinite and represented by a count allocated to a specific player or supply."
+    },
+    {
+      "type": "paragraph",
+      "text": "For a working example, you can check out: CodePen Example (ui only)."
+    },
+    {
+      "type": "paragraph",
+      "text": "In a minimalistic \"tokens\" database, it would look like this (e.g., the red player has 3 wood):"
+    },
+    {
+      "type": "table",
+      "headers": [
+        "token_key",
+        "token_location",
+        "token_state"
+      ],
+      "rows": [
+        [
+          "wood_ff0000",
+          "",
+          "3"
+        ],
+        [
+          "wood_supply",
+          "",
+          "40"
+        ]
+      ]
+    },
+    {
+      "type": "paragraph",
+      "text": "The second row you need to store the resource in the supply (if it's counted)."
+    },
+    {
+      "type": "paragraph",
+      "text": "Its not recommened to extend player table to store this information."
+    },
+    {
+      "type": "paragraph",
+      "text": "In the material file, you can define some information about resources. For instance, you can specify that it's of type \"resource\" and call it \"Wood\" in English, along with a tooltip:"
+    },
+    {
+      "type": "code",
+      "language": null,
+      "text": "$this->token_types = [\n  ...\n  'wood' => [\n     'name' => clienttranslate('Wood'),\n     'tooltip' => clienttranslate('Game resource used for building houses'),\n     'type' => 'resource',\n     'max' => 40\n  ]\n];"
+    },
+    {
+      "type": "paragraph",
+      "text": "In HTML, this would look something like this within the player panel. Using the data attribute instead of a CDATA value is much more flexible:"
+    },
+    {
+      "type": "code",
+      "language": null,
+      "text": "<div id=\"wood_ff0000\" class=\"resource wood\" data-value=\"3\"></div>"
+    },
+    {
+      "type": "paragraph",
+      "text": "When you get the object from the server, one of the tokens will be sent in the array like this:"
+    },
+    {
+      "type": "code",
+      "language": null,
+      "text": "token = {\n  key: 'wood_ff0000',\n  location: '-',\n  state: '3'\n}"
+    }
+  ],
+  "links": [
+    {
+      "text": "Tools and tips of BGA Studio",
+      "url": "Tools_and_tips_of_BGA_Studio.html"
+    },
+    {
+      "text": "Clientloginjection.png",
+      "url": "File:Clientloginjection.png.html"
+    },
+    {
+      "text": "below",
+      "url": "#Including_your_own_JavaScript_module_(II)"
+    },
+    {
+      "text": "[email protected]",
+      "url": "cdn-cgi/l/email-protection.html"
+    },
+    {
+      "text": "https://en.doc.boardgamearena.com/Your_game_mobile_version",
+      "url": "https://en.doc.boardgamearena.com/Your_game_mobile_version"
+    },
+    {
+      "text": "dijit.Tooltip",
+      "url": "https://dojotoolkit.org/reference-guide/1.10/dijit/Tooltip.html"
+    },
+    {
+      "text": "dbmodel.sql",
+      "url": "https://github.com/elaskavaia/bga-sharedcode/blob/master/dbmodel.sql"
+    },
+    {
+      "text": "table.game.php",
+      "url": "https://github.com/elaskavaia/bga-sharedcode/blob/master/modules/tokens.php"
+    },
+    {
+      "text": "https://github.com/elaskavaia/bga-sharedcode/blob/master/modules/tokens.php",
+      "url": "https://github.com/elaskavaia/bga-sharedcode/blob/master/modules/tokens.php"
+    },
+    {
+      "text": "CodePen Example",
+      "url": "https://codepen.io/VictoriaLa/pen/emYgLzR"
+    },
+    {
+      "text": "BGA_Studio_Cookbook#Inject_icon_images_in_the_log",
+      "url": "BGA_Studio_Cookbook.html"
+    },
+    {
+      "text": "https://codepen.io/VictoriaLa/pen/emYgLzR",
+      "url": "https://codepen.io/VictoriaLa/pen/emYgLzR"
+    },
+    {
+      "text": "https://codepen.io/VictoriaLa/pen/QWBBbwz",
+      "url": "https://codepen.io/VictoriaLa/pen/QWBBbwz"
+    },
+    {
+      "text": "BGA_Code_Sharing",
+      "url": "BGA_Code_Sharing.html"
+    },
+    {
+      "text": "Deck",
+      "url": "Deck.html"
+    },
+    {
+      "text": "BgaCards",
+      "url": "BgaCards.html"
+    },
+    {
+      "text": "Stock",
+      "url": "Stock.html"
+    },
+    {
+      "text": "https://codepen.io/VictoriaLa/pen/mdMzRxa",
+      "url": "https://codepen.io/VictoriaLa/pen/mdMzRxa"
+    },
+    {
+      "text": "Anti-Stock",
+      "url": "Anti-Stock.html"
+    },
+    {
+      "text": "https://thoun.github.io/bga-cards/demo/index.html",
+      "url": "https://thoun.github.io/bga-cards/demo/index.html"
+    },
+    {
+      "text": "https://codepen.io/VictoriaLa/pen/OJmoZGw",
+      "url": "https://codepen.io/VictoriaLa/pen/OJmoZGw"
+    },
+    {
+      "text": "https://en.doc.boardgamearena.com/Testing_by_developer#PHP",
+      "url": "https://en.doc.boardgamearena.com/Testing_by_developer#PHP"
+    },
+    {
+      "text": "Using Typescript and Scss",
+      "url": "Using_Typescript_and_Scss.html"
+    },
+    {
+      "text": "Using Vue",
+      "url": "Using_Vue.html"
+    },
+    {
+      "text": "https://getrector.com/",
+      "url": "https://getrector.com/"
+    },
+    {
+      "text": "Game database model",
+      "url": "https://en.doc.boardgamearena.com/Game_database_model:_dbmodel.sql#The_player_table"
+    },
+    {
+      "text": "sharedcode.js",
+      "url": "https://github.com/elaskavaia/bga-sharedcode/blob/master/sharedcode.js"
+    },
+    {
+      "text": "Force-refresh.png",
+      "url": "File:Force-refresh.png.html"
+    },
+    {
+      "text": "Reload-required.png",
+      "url": "File:Reload-required.png.html"
+    },
+    {
+      "text": "https://developer.mozilla.org/docs/Web/API/Window/localStorage",
+      "url": "https://developer.mozilla.org/docs/Web/API/Window/localStorage"
+    },
+    {
+      "text": "generator function",
+      "url": "https://www.php.net/manual/en/language.generators.syntax.php"
+    }
+  ],
+  "images": [
+    {
+      "src": "/images/5/5e/Clientloginjection.png",
+      "alt": "Clientloginjection.png"
+    },
+    {
+      "src": "/images/thumb/1/13/Force-refresh.png/950px-Force-refresh.png",
+      "alt": "Force-refresh.png"
+    },
+    {
+      "src": "/images/thumb/f/f0/Reload-required.png/500px-Reload-required.png",
+      "alt": "Reload-required.png"
+    }
+  ],
+  "metadata": {
+    "extractor_version": "1.0.0",
+    "extracted_at": "2026-07-06T06:53:17.180594+00:00",
+    "word_count": 3673,
+    "heading_count": 83,
+    "code_block_count": 54,
+    "table_count": 5,
+    "image_count": 3,
+    "list_count": 11
+  }
+}

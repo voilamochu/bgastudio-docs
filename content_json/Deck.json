@@ -1,0 +1,704 @@
+{
+  "title": "Deck",
+  "source_file": "Deck.html",
+  "relative_path": "Deck.html",
+  "content_json_path": "content_json/Deck.json",
+  "headings": [
+    {
+      "level": 2,
+      "text": "Using Deck: Hearts example",
+      "id": "Using_Deck:_Hearts_example"
+    },
+    {
+      "level": 2,
+      "text": "Deck overview",
+      "id": "Deck_overview"
+    },
+    {
+      "level": 3,
+      "text": "The 5 properties of each card",
+      "id": "The_5_properties_of_each_card"
+    },
+    {
+      "level": 3,
+      "text": "Create a new Deck component",
+      "id": "Create_a_new_Deck_component"
+    },
+    {
+      "level": 3,
+      "text": "Simple examples using Deck",
+      "id": "Simple_examples_using_Deck"
+    },
+    {
+      "level": 2,
+      "text": "Deck component reference",
+      "id": "Deck_component_reference"
+    },
+    {
+      "level": 3,
+      "text": "Initializing Deck component",
+      "id": "Initializing_Deck_component"
+    },
+    {
+      "level": 3,
+      "text": "Card standard format",
+      "id": "Card_standard_format"
+    },
+    {
+      "level": 3,
+      "text": "Picking cards",
+      "id": "Picking_cards"
+    },
+    {
+      "level": 3,
+      "text": "Moving cards",
+      "id": "Moving_cards"
+    },
+    {
+      "level": 3,
+      "text": "Get cards informations",
+      "id": "Get_cards_informations"
+    },
+    {
+      "level": 3,
+      "text": "Shuffling",
+      "id": "Shuffling"
+    },
+    {
+      "level": 3,
+      "text": "Auto-reshuffle",
+      "id": "Auto-reshuffle"
+    }
+  ],
+  "content": [
+    {
+      "type": "paragraph",
+      "text": "\"Deck\" is one of the most useful component on the PHP side. With \"Deck\", you can manage the cards in your game on the server side."
+    },
+    {
+      "type": "list",
+      "ordered": false,
+      "items": [
+        {
+          "text": "Place cards in a pile, shuffle cards, draw cards one by one or many at a time.",
+          "nested": null
+        },
+        {
+          "text": "\"Auto-reshuffle\" the discard pile into the deck when the deck is empty.",
+          "nested": null
+        },
+        {
+          "text": "Move cards between different locations: hands of players, the table, etc.",
+          "nested": null
+        }
+      ]
+    },
+    {
+      "type": "paragraph",
+      "text": "The Deck component is extensively used in the sample Hearts card game. You will find in \"hearts.game.php\" that the object \"$this->cards\" is used many times."
+    },
+    {
+      "type": "paragraph",
+      "text": "With Deck component, you manage all cards of your game."
+    },
+    {
+      "type": "paragraph",
+      "text": "Using the Deck component, each card will have 5 properties:"
+    },
+    {
+      "type": "list",
+      "ordered": false,
+      "items": [
+        {
+          "text": "id : This is the unique ID of each card.",
+          "nested": null
+        },
+        {
+          "text": "type and type_arg : These two values define the type of your card (i.e., what sort of card is this?).",
+          "nested": null
+        },
+        {
+          "text": "location and location_arg : These two values define where the card is at now.",
+          "nested": null
+        }
+      ]
+    },
+    {
+      "type": "paragraph",
+      "text": "The id, type, and type_arg properties are constants throughout the game. location and location_arg change when your cards move from one place to another in the game area."
+    },
+    {
+      "type": "paragraph",
+      "text": "type and type_arg defines the type of your card."
+    },
+    {
+      "type": "paragraph",
+      "text": "You can use these two values as you like to make sure you will be able to identify the different cards in the game. See usage of \"type\" and \"type_arg\" below."
+    },
+    {
+      "type": "list",
+      "ordered": false,
+      "items": [
+        {
+          "text": "In Hearts , \"type\" represents the color (suite) of the card (1 to 4) and \"type_arg\" is the value of the card (1, 2, ... 10, J, Q, K).",
+          "nested": null
+        },
+        {
+          "text": "In Seasons , \"type\" represents the type of the card (e.g., 1 is Amulet of Air, 2 is Amulet of Fire, etc...). type_arg is not used.",
+          "nested": null
+        },
+        {
+          "text": "In Takenoko , a Deck component is used for objective cards. \"type\" is the kind of objective (irrigation/panda/plot) and \"type_arg\" is the ID of the specific objective to realize (e.g., \"green bamboo x4\"). Note that a second Deck component is used in Takenoko to manage the \"garden plot\" pile.",
+          "nested": null
+        }
+      ]
+    },
+    {
+      "type": "paragraph",
+      "text": "location and location_arg define where a card is at now. location is a short string, and location_arg is an integer."
+    },
+    {
+      "type": "paragraph",
+      "text": "There are 3 special 'location' values that Deck manages automatically. You can choose to use these locations or not, depending on your needs:"
+    },
+    {
+      "type": "list",
+      "ordered": false,
+      "items": [
+        {
+          "text": "'deck': the 'deck' location is a standard draw deck. Cards are placed face down in a stack and are drawn in sequential order during the game. 'location_arg' is used to specify where the card is located within the stack (the card with the highest location_arg value is the next to be drawn).",
+          "nested": null
+        },
+        {
+          "text": "'hand': the 'hand' location represents cards in a player's hand. 'location_arg' is set to the ID of each player.",
+          "nested": null
+        },
+        {
+          "text": "'discard': the 'discard' location is used for discard piles. Card in 'discard' may be reshuffled into the deck if needed (see \"autoreshuffle\").",
+          "nested": null
+        }
+      ]
+    },
+    {
+      "type": "note",
+      "variant": "tip",
+      "text": "Tips: using the Deck component, you will use generic properties (\"location\", \"type_arg\",...) for specific purposes in your game. Thus, during the design step before realizing your game, take a few minutes to write down the exact meaning of each of these generic properties in the context of your game."
+    },
+    {
+      "type": "paragraph",
+      "text": "For each Deck component in your game, you need to create a dedicated table in the SQL database. This table has a standard format. In practice, if you just want to have a Deck component named \"card\", you can copy/paste the following into your \"dbmodel.sql\" file:"
+    },
+    {
+      "type": "code",
+      "language": null,
+      "text": "CREATE TABLE IF NOT EXISTS `card` (\n  `card_id` int(10) unsigned NOT NULL AUTO_INCREMENT,\n  `card_type` varchar(16) NOT NULL,\n  `card_type_arg` int(11) NOT NULL,\n  `card_location` varchar(16) NOT NULL,\n  `card_location_arg` int(11) NOT NULL,\n  PRIMARY KEY (`card_id`)\n) ENGINE=InnoDB DEFAULT CHARSET=utf8 AUTO_INCREMENT=1 ;"
+    },
+    {
+      "type": "note",
+      "variant": "note",
+      "text": "Note: the database schema of this table does not have to be exactly what is listed above. You can increase the size of the fields or add more fields. For additional fields you just have to do manual queries."
+    },
+    {
+      "type": "paragraph",
+      "text": "Once you have done this (and restarted your game), you can declare the Deck component in your PHP code in your class constructor. For Hearts for example, I added to the \"Hearts()\" method:"
+    },
+    {
+      "type": "code",
+      "language": null,
+      "text": "        $this->cards = $this->deckFactory->createDeck('card');"
+    },
+    {
+      "type": "paragraph",
+      "text": "Note that we specify \"card\" here: the name of our previously created table. This means you can create several \"Deck\" components with multiple tables:"
+    },
+    {
+      "type": "code",
+      "language": null,
+      "text": "        $this->firstKindCards = $this->deckFactory->createDeck( \"first_kind_card\" );\n        $this->secondKindCards = $this->deckFactory->createDeck( \"second_kind_card\" );"
+    },
+    {
+      "type": "paragraph",
+      "text": "Most of the time this is not useful; a Deck component should manage all objects of the same kind (i.e., all cards in the game). Note that you need to create a table for each \"Deck\", table name should be \"first_kind_card\" but the fields must remain \"card_id\", \"card_type\" and so on."
+    },
+    {
+      "type": "paragraph",
+      "text": "The \"Deck\" component provides a fast way to initialize all your cards at once: createCards. Here is how it is used for \"Hearts\":"
+    },
+    {
+      "type": "paragraph",
+      "text": "As you can see, \"createCards\" takes a description of all cards of the game. For each type of card, you have to specify its \"type\", \"type_arg\" and the number of cards to create (\"nbr\"). \"createCards\" create all cards and place them into the \"deck\" location (as specified in the second argument)."
+    },
+    {
+      "type": "paragraph",
+      "text": "(Most examples are from \"Hearts\" game)"
+    },
+    {
+      "type": "code",
+      "language": null,
+      "text": "     // In \"getAllDatas', we need to send to the current player all the cards he has in hand:\n     $result['hand'] = $this->cards->getCardsInLocation( 'hand', $player_id );"
+    },
+    {
+      "type": "code",
+      "language": null,
+      "text": "     // At some time we want to check if all the cards (52) are in player's hands:\n     if( $this->cards->countCardInLocation( 'hand' ) == 52 )\n           // do something"
+    },
+    {
+      "type": "code",
+      "language": null,
+      "text": "     // When a player plays a card in front of him on the table:\n     $this->cards->moveCard( $card_id, 'cardsontable', $player_id );\n\n     // Note the use of the custom location 'cardsontable' here to keep track of cards on the table."
+    },
+    {
+      "type": "code",
+      "language": null,
+      "text": "     // This is a new hand: let's gather all cards from everywhere in the deck:\n     $this->cards->moveAllCardsInLocation( null, \"deck\" );\n\n     // And then shuffle the deck\n     $this->cards->shuffle( 'deck' );\n\n     // And then deal 13 cards to each player\n     // Deal 13 cards to each players\n     // Create deck, shuffle it and give 13 initial cards\n     $players = $this->loadPlayersBasicInfos();\n     foreach( $players as $player_id => $player )\n     {\n        $cards = $this->cards->pickCards( 13, 'deck', $player_id );\n           \n        // Notify player about his cards\n        $this->bga->notify->player( $player_id, 'newHand', '', array( \n            'cards' => $cards\n         ) );\n     }  \n\n     // Note the use of \"notify->player\" instead of \"notify->all\": new cards is a private information ;)  "
+    },
+    {
+      "type": "paragraph",
+      "text": "init( $table_name )"
+    },
+    {
+      "type": "paragraph",
+      "text": "Argument:"
+    },
+    {
+      "type": "list",
+      "ordered": false,
+      "items": [
+        {
+          "text": "table_name: name of the DB table used by this Deck component.",
+          "nested": null
+        }
+      ]
+    },
+    {
+      "type": "paragraph",
+      "text": "Must be called before any other Deck method."
+    },
+    {
+      "type": "paragraph",
+      "text": "HINT: Create the deck object with $this->deckFactory->createDeck in the constructor or you will get \"$this->cards\" as an invalid reference later."
+    },
+    {
+      "type": "code",
+      "language": null,
+      "text": "\tfunction Hearts( )\n\t{\n        (...)\n        \n        $this->cards = $this->deckFactory->createDeck('card');\n\t}"
+    },
+    {
+      "type": "paragraph",
+      "text": "createCards( $cards, $location='deck', $location_arg=null )"
+    },
+    {
+      "type": "paragraph",
+      "text": "\"cards\" describe all cards that need to be created. \"cards\" is an array with the following format:"
+    },
+    {
+      "type": "code",
+      "language": null,
+      "text": "   // Create 1 card of type \"1\" with type_arg=99,\n   //  and 4 cards of type \"2\" with type_arg=12,\n   //  and 2 cards of type \"3\" with type_arg=33\n\n   $cards = array(\n        array( 'type' => 1, 'type_arg' => 99, 'nbr' => 1 ),\n        array( 'type' => 2, 'type_arg' => 12, 'nbr' => 4 ),\n        array( 'type' => 3, 'type_arg' => 33, 'nbr' => 2 )\n        ...\n   );"
+    },
+    {
+      "type": "note",
+      "variant": "note",
+      "text": "Note: During the \"createCards\" process, Deck generates unique IDs for all card items."
+    },
+    {
+      "type": "paragraph",
+      "text": "If \"$location\" and \"$location_arg\" arguments are not set, newly created cards are placed in the \"deck\" location. If \"location\" (and optionally location_arg) is specified, cards are created for this specific location."
+    },
+    {
+      "type": "paragraph",
+      "text": "HINT: Be sure to do the createCards in setupNewGame. Doing createCards in the constructor will throw database errors."
+    },
+    {
+      "type": "paragraph",
+      "text": "When Deck component methods are returning one or several cards, the following format is used:"
+    },
+    {
+      "type": "code",
+      "language": null,
+      "text": "array(\n   'id' => ..,          // the card ID\n   'type' => ..,        // the card type\n   'type_arg' => ..,    // the card type argument\n   'location' => ..,    // the card location\n   'location_arg' => .. // the card location argument\n);"
+    },
+    {
+      "type": "paragraph",
+      "text": "pickCard( $location, $player_id )"
+    },
+    {
+      "type": "paragraph",
+      "text": "Return the card picked or \"null\" if there are no more card in given location."
+    },
+    {
+      "type": "paragraph",
+      "text": "This method supports auto-reshuffle (see \"auto-reshuffle\" below)."
+    },
+    {
+      "type": "paragraph",
+      "text": "Pick \"$nbr\" cards from a \"pile\" location (ex: \"deck\") and place them in the \"hand\" of specified player."
+    },
+    {
+      "type": "paragraph",
+      "text": "Note that the number of cards picked can be less than \"$nbr\" in case there are not enough cards in the pile location."
+    },
+    {
+      "type": "paragraph",
+      "text": "pickCardForLocation( $from_location, $to_location, $location_arg=0 )"
+    },
+    {
+      "type": "list",
+      "ordered": false,
+      "items": [
+        {
+          "text": "from_location is the \"pile\" style location from where you are picking a card.",
+          "nested": null
+        },
+        {
+          "text": "to_location is the location where you will place the card picked.",
+          "nested": null
+        },
+        {
+          "text": "if \"location_arg\" is specified, the card picked will be set with this \"location_arg\".",
+          "nested": null
+        }
+      ]
+    },
+    {
+      "type": "paragraph",
+      "text": "This method supports auto-reshuffle (see \"auto-reshuffle\" below)."
+    },
+    {
+      "type": "paragraph",
+      "text": "This method is similar to 'pickCards', except that you can pick cards for any sort of location and not only the \"hand\" location."
+    },
+    {
+      "type": "list",
+      "ordered": false,
+      "items": [
+        {
+          "text": "from_location is the \"pile\" style location from where you are picking some cards.",
+          "nested": null
+        },
+        {
+          "text": "to_location is the location where you will place the cards picked.",
+          "nested": null
+        },
+        {
+          "text": "if \"location_arg\" is specified, the cards picked will be set with this \"location_arg\".",
+          "nested": null
+        },
+        {
+          "text": "if \"no_deck_reform\" is set to \"true\", the auto-reshuffle feature is disabled during this method call.",
+          "nested": null
+        }
+      ]
+    },
+    {
+      "type": "paragraph",
+      "text": "This method supports auto-reshuffle (see \"auto-reshuffle\" below)."
+    },
+    {
+      "type": "paragraph",
+      "text": "moveCard( $card_id, $location, $location_arg=0 )"
+    },
+    {
+      "type": "list",
+      "ordered": false,
+      "items": [
+        {
+          "text": "card_id: ID of the card to move.",
+          "nested": null
+        },
+        {
+          "text": "location: location where to move the card.",
+          "nested": null
+        },
+        {
+          "text": "location_arg: if specified, location_arg where to move the card. If not specified \"location_arg\" will be set to 0.",
+          "nested": null
+        }
+      ]
+    },
+    {
+      "type": "paragraph",
+      "text": "moveCards( $cards, $location, $location_arg=0 )"
+    },
+    {
+      "type": "list",
+      "ordered": false,
+      "items": [
+        {
+          "text": "cards: an array of IDs of cards to move.",
+          "nested": null
+        },
+        {
+          "text": "location: location where to move the cards.",
+          "nested": null
+        },
+        {
+          "text": "location_arg: if specified, location_arg where to move the cards. If not specified \"location_arg\" will be set to 0.",
+          "nested": null
+        }
+      ]
+    },
+    {
+      "type": "paragraph",
+      "text": "insertCard( $card_id, $location, $location_arg )"
+    },
+    {
+      "type": "paragraph",
+      "text": "If location_arg place is already taken, increment all cards after location_arg in order to insert new card at this precise location."
+    },
+    {
+      "type": "paragraph",
+      "text": "insertCardOnExtremePosition( $card_id, $location, $bOnTop )"
+    },
+    {
+      "type": "paragraph",
+      "text": "(note: Filling an empty location this way with N cards creates \"location_arg\"s from 1 to N if \"$bOnTop\" is true and -1 to -N if \"$bOnTop\" is false. This can cause off-by-one errors for code intended to run on a deck generated by \"shuffle( $location )\" which generates \"location_arg\"s from 0 to N - 1.)"
+    },
+    {
+      "type": "paragraph",
+      "text": "Move all cards in specified \"from\" location to given location."
+    },
+    {
+      "type": "list",
+      "ordered": false,
+      "items": [
+        {
+          "text": "from_location: where to take the cards. If null, cards from all locations will be move.",
+          "nested": null
+        },
+        {
+          "text": "to_location: where to put the cards",
+          "nested": null
+        },
+        {
+          "text": "from_location_arg (optional): if specified, only cards with given \"location_arg\" are moved.",
+          "nested": null
+        },
+        {
+          "text": "to_location_arg (optional): if specified, cards moved \"location_arg\" is set to given value. Otherwise \"location_arg\" is set to 0.",
+          "nested": null
+        }
+      ]
+    },
+    {
+      "type": "note",
+      "variant": "note",
+      "text": "Note: if you want to keep \"location_arg\" untouched, you should use \"moveAllCardsInLocationKeepOrder\" below."
+    },
+    {
+      "type": "paragraph",
+      "text": "Move all cards in specified \"from\" location to given \"to\" location. This method does not modify the \"location_arg\" of cards."
+    },
+    {
+      "type": "paragraph",
+      "text": "Move specified card at the top of the \"discard\" location."
+    },
+    {
+      "type": "paragraph",
+      "text": "getCard( $card_id )"
+    },
+    {
+      "type": "paragraph",
+      "text": "Return null if this card is not found."
+    },
+    {
+      "type": "paragraph",
+      "text": "Get specific cards information."
+    },
+    {
+      "type": "paragraph",
+      "text": "If some cards are not found or if some card IDs are specified multiple times, the method throws an (unexpected) Exception."
+    },
+    {
+      "type": "paragraph",
+      "text": "Get all cards in specific location, as an array. Return an empty array if the location is empty."
+    },
+    {
+      "type": "list",
+      "ordered": false,
+      "items": [
+        {
+          "text": "location (string): the location where to get the cards.",
+          "nested": null
+        },
+        {
+          "text": "location_arg (optional): if specified, return only cards with the specified \"location_arg\".",
+          "nested": null
+        },
+        {
+          "text": "order_by (optional): if specified, returned cards are ordered by the given database field. Example: \"card_id\" or \"card_type\".",
+          "nested": null
+        }
+      ]
+    },
+    {
+      "type": "paragraph",
+      "text": "Using the \"order_by\" parameter changes the resulting array. Without parameter you get an associative array with the \"card_id\", with the paramter you get a simple indexed array."
+    },
+    {
+      "type": "paragraph",
+      "text": "Return the number of cards in specified location."
+    },
+    {
+      "type": "list",
+      "ordered": false,
+      "items": [
+        {
+          "text": "location (string): the location where to count the cards.",
+          "nested": null
+        },
+        {
+          "text": "location_arg (optional): if specified, count only cards with the specified \"location_arg\".",
+          "nested": null
+        }
+      ]
+    },
+    {
+      "type": "paragraph",
+      "text": "countCardsInLocations()"
+    },
+    {
+      "type": "paragraph",
+      "text": "The method returns an associative array with the format \"location\" => \"number of cards\"."
+    },
+    {
+      "type": "code",
+      "language": null,
+      "text": "  array(\n    'deck' => 12,\n    'hand' => 21,\n    'discard' => 54,\n    'ontable' => 3\n  );"
+    },
+    {
+      "type": "paragraph",
+      "text": "countCardsByLocationArgs( $location )"
+    },
+    {
+      "type": "paragraph",
+      "text": "The method returns an associative array with the format \"location_arg\" => \"number of cards\"."
+    },
+    {
+      "type": "code",
+      "language": null,
+      "text": "    countCardsByLocationArgs( 'hand' );\n    \n    // Result:\n    array(\n        122345 => 5,    // player 122345 has 5 cards in hand\n        123456 => 4     // and player 123456 has 4 cards in hand\n    );"
+    },
+    {
+      "type": "paragraph",
+      "text": "getPlayerHand( $player_id )"
+    },
+    {
+      "type": "note",
+      "variant": "note",
+      "text": "Note: This is an alias for: getCardsInLocation( \"hand\", $player_id )"
+    },
+    {
+      "type": "paragraph",
+      "text": "Get the card on top of the given (\"pile\" style) location, or null if the location is empty."
+    },
+    {
+      "type": "paragraph",
+      "text": "getCardsOnTop( $nbr, $location )"
+    },
+    {
+      "type": "paragraph",
+      "text": "The method return an array with at most \"$nbr\" elements (or a void array if there is no card in this location)."
+    },
+    {
+      "type": "paragraph",
+      "text": "getExtremePosition( $bGetMax ,$location )"
+    },
+    {
+      "type": "paragraph",
+      "text": "Get the position of cards at the top of the given location / at the bottom of the given location."
+    },
+    {
+      "type": "paragraph",
+      "text": "If bGetMax=true, return the location of the top card of the pile."
+    },
+    {
+      "type": "paragraph",
+      "text": "getCardsOfType( $type, $type_arg=null )"
+    },
+    {
+      "type": "paragraph",
+      "text": "Return an array of cards, or an empty array if there is no cards of the specified type."
+    },
+    {
+      "type": "list",
+      "ordered": false,
+      "items": [
+        {
+          "text": "type: the type of cards",
+          "nested": null
+        },
+        {
+          "text": "type_arg: if specified, return only cards with the specified \"type_arg\".",
+          "nested": null
+        }
+      ]
+    },
+    {
+      "type": "paragraph",
+      "text": "getCardsOfTypeInLocation( $type, $type_arg=null, $location, $location_arg = null )"
+    },
+    {
+      "type": "paragraph",
+      "text": "Return an array of cards, or an empty array if there is no cards of the specified type."
+    },
+    {
+      "type": "list",
+      "ordered": false,
+      "items": [
+        {
+          "text": "type: the type of cards",
+          "nested": null
+        },
+        {
+          "text": "type_arg: if specified, return only cards with the specified \"type_arg\".",
+          "nested": null
+        },
+        {
+          "text": "location (string): the location where to get the cards.",
+          "nested": null
+        },
+        {
+          "text": "location_arg (optional): if specified, return only cards with the specified \"location_arg\".",
+          "nested": null
+        }
+      ]
+    },
+    {
+      "type": "paragraph",
+      "text": "shuffle( $location )"
+    },
+    {
+      "type": "paragraph",
+      "text": "Shuffle only works on locations where cards are on a \"pile\" (ex: \"deck\")."
+    },
+    {
+      "type": "paragraph",
+      "text": "To enable auto-reshuffle you must do \" `$this->cards->autoreshuffle = true` \" during the setup of the component (often in the _construct function when you init() the Deck object)."
+    },
+    {
+      "type": "paragraph",
+      "text": "If you need to notify players when the deck is shuffled, you can setup a callback method using this feature:"
+    },
+    {
+      "type": "paragraph",
+      "text": "If you need to use other locations than \"deck\" and \"discard\" for auto-reshuffle feature, you can configure it this way:"
+    },
+    {
+      "type": "paragraph",
+      "text": "(replace 'deck' and 'discard' with your custom locations)."
+    }
+  ],
+  "links": [],
+  "images": [],
+  "metadata": {
+    "extractor_version": "1.0.0",
+    "extracted_at": "2026-07-06T06:53:17.317172+00:00",
+    "word_count": 1648,
+    "heading_count": 13,
+    "code_block_count": 12,
+    "table_count": 0,
+    "image_count": 0,
+    "list_count": 14
+  }
+}
