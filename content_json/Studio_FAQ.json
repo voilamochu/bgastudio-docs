@@ -3,146 +3,189 @@
   "source_file": "Studio_FAQ.html",
   "relative_path": "Studio_FAQ.html",
   "content_json_path": "content_json/Studio_FAQ.json",
-  "headings": [
+  "sections": [
     {
-      "level": 2,
-      "text": "What is the PHP reference version?",
-      "id": "What_is_the_PHP_reference_version.3F"
-    },
-    {
-      "level": 2,
-      "text": "What should I use to access the files through SFTP?",
-      "id": "What_should_I_use_to_access_the_files_through_SFTP.3F"
-    },
-    {
-      "level": 2,
-      "text": "I can't edit the files in my game directory, it looks like they are readonly. What's happening?",
-      "id": "I_can.27t_edit_the_files_in_my_game_directory.2C_it_looks_like_they_are_readonly._What.27s_happening.3F"
-    },
-    {
-      "level": 2,
-      "text": "What is the working language on BGA studio?",
-      "id": "What_is_the_working_language_on_BGA_studio.3F"
-    },
-    {
-      "level": 2,
-      "text": "How can I provide translation in my language?",
-      "id": "How_can_I_provide_translation_in_my_language.3F"
-    },
-    {
-      "level": 2,
-      "text": "I updated the images in the 'img' folder of my game, but they don't show?",
-      "id": "I_updated_the_images_in_the_.27img.27_folder_of_my_game.2C_but_they_don.27t_show.3F"
-    },
-    {
-      "level": 2,
-      "text": "I added some game options / some game statistics / some game infos but they don't show?",
-      "id": "I_added_some_game_options_.2F_some_game_statistics_.2F_some_game_infos_but_they_don.27t_show.3F"
-    },
-    {
-      "level": 2,
-      "text": "Should I use images free from copyright?",
-      "id": "Should_I_use_images_free_from_copyright.3F"
-    },
-    {
-      "level": 2,
-      "text": "I registered on Studio but did not receive email",
-      "id": "I_registered_on_Studio_but_did_not_receive_email"
-    },
-    {
-      "level": 2,
-      "text": "How to fix a bug in existing game",
-      "id": "How_to_fix_a_bug_in_existing_game"
-    }
-  ],
-  "content": [
-    {
-      "type": "paragraph",
-      "text": "This is a place where we will collect and answer frequently asked questions."
-    },
-    {
-      "type": "paragraph",
-      "text": "Your game module should be compatible with PHP 8.4. Some other version information can be found here https://en.doc.boardgamearena.com/Studio_file_reference#software_versions ."
-    },
-    {
-      "type": "paragraph",
-      "text": "There is a lot of tools to do that. Use the one you are the most comfortable with."
-    },
-    {
-      "type": "paragraph",
-      "text": "On Windows, there is for example the WinSCP client ."
-    },
-    {
-      "type": "paragraph",
-      "text": "You can lose access sometimes if you add another developer as read/write or admin."
-    },
-    {
-      "type": "paragraph",
-      "text": "Maybe there is a maintenance operation underway."
-    },
-    {
-      "type": "paragraph",
-      "text": "If you are still an admin for your game, re-add yourself as admin - it restores your permissions."
-    },
-    {
-      "type": "paragraph",
-      "text": "Working language is English ."
-    },
-    {
-      "type": "paragraph",
-      "text": "Comments must be written in English."
-    },
-    {
-      "type": "paragraph",
-      "text": "The community will translate the game in all language after the game release with the collaborative translation interface can be used to translate into other languages."
-    },
-    {
-      "type": "paragraph",
-      "text": "Concerning game_box.png, game_icon.png and publisher.png : You must use \"Reload game box image\" function from \"Control Panel / Manage Games / Your game\" to make your change visible. After game is released (alpha) these images should be updated using meta-data manager"
-    },
-    {
-      "type": "paragraph",
-      "text": "When you modify one of these 3 files, you need to use the corresponding update action from \"Control Panel / Manage Games / Your Game\" in order we can take this information into account."
-    },
-    {
-      "type": "paragraph",
-      "text": "If you are developing a game in the public domain, yes (or you can make your own if you feel it's better)."
-    },
-    {
-      "type": "paragraph",
-      "text": "You can also used shared images provided by boardgame arena - logos, some action buttons, card, meeples, decks."
-    },
-    {
-      "type": "paragraph",
-      "text": "If you did not get email, search for \"Welcome on BGA Studio\" in your email client (just like that), it sometimes ends up in junk folder."
-    },
-    {
-      "type": "paragraph",
-      "text": "You can get the welcome email re-sent from the login page using the \"Welcome email not received?\" link. In case of a persistent issue, you can file a support request from the studio support page ."
-    },
-    {
-      "type": "list",
-      "ordered": false,
-      "items": [
+      "heading": null,
+      "content": [
         {
-          "text": "First, you need to join the dev team and create a first tutorial game. Without this, you won't be able to understand the code or debug: https://en.doc.boardgamearena.com/How_to_join_BGA_developer_team",
-          "nested": null
+          "type": "paragraph",
+          "text": "This is a place where we will collect and answer frequently asked questions."
+        }
+      ]
+    },
+    {
+      "heading": {
+        "level": 2,
+        "text": "What is the PHP reference version?",
+        "id": "What_is_the_PHP_reference_version.3F"
+      },
+      "content": [
+        {
+          "type": "paragraph",
+          "text": "Your game module should be compatible with PHP 8.4. Some other version information can be found here https://en.doc.boardgamearena.com/Studio_file_reference#software_versions ."
+        }
+      ]
+    },
+    {
+      "heading": {
+        "level": 2,
+        "text": "What should I use to access the files through SFTP?",
+        "id": "What_should_I_use_to_access_the_files_through_SFTP.3F"
+      },
+      "content": [
+        {
+          "type": "paragraph",
+          "text": "There is a lot of tools to do that. Use the one you are the most comfortable with."
         },
         {
-          "text": "Then you need to contact the original developer and make sure they want your help. The original developer is listed in the credits (if it says \"developed by BGA,\" it was the original team). If you cannot get in contact with them, ask on the General channel on the dev Discord. Fixing bugs in old games is not always a good idea - you will likely break something else.",
-          "nested": null
+          "type": "paragraph",
+          "text": "On Windows, there is for example the WinSCP client ."
+        }
+      ]
+    },
+    {
+      "heading": {
+        "level": 2,
+        "text": "I can't edit the files in my game directory, it looks like they are readonly. What's happening?",
+        "id": "I_can.27t_edit_the_files_in_my_game_directory.2C_it_looks_like_they_are_readonly._What.27s_happening.3F"
+      },
+      "content": [
+        {
+          "type": "paragraph",
+          "text": "You can lose access sometimes if you add another developer as read/write or admin."
         },
         {
-          "text": "If you get a \"no\" answer, don't give up. There is a big list of abandoned games that may need volunteers, and there are always publishers asking for volunteers for their games (or you can just check the licenses we have). More about licensed games can be found here: https://en.doc.boardgamearena.com/Create_a_game_in_BGA_Studio:_Complete_Walkthrough#Select_a_First_Game",
-          "nested": null
+          "type": "paragraph",
+          "text": "Maybe there is a maintenance operation underway."
         },
         {
-          "text": "Finally, to actually start working on a game: on the project list http://studio.boardgamearena.com/#!projects , find the game (you may have to check the \"Already published\" button) and request read-only access. Then use the project you created during the tutorial (or create a new one) and use the Copy feature to copy the code of that project into yours. In the control panel of YOUR new project, it's in the right bottom.",
-          "nested": null
+          "type": "paragraph",
+          "text": "If you are still an admin for your game, re-add yourself as admin - it restores your permissions."
+        }
+      ]
+    },
+    {
+      "heading": {
+        "level": 2,
+        "text": "What is the working language on BGA studio?",
+        "id": "What_is_the_working_language_on_BGA_studio.3F"
+      },
+      "content": [
+        {
+          "type": "paragraph",
+          "text": "Working language is English ."
         },
         {
-          "text": "If you lost in any of these steps ask fellow developers on dev Discord (link is on main wiki https://en.doc.boardgamearena.com/Studio#Other_resources )",
-          "nested": null
+          "type": "paragraph",
+          "text": "Comments must be written in English."
+        }
+      ]
+    },
+    {
+      "heading": {
+        "level": 2,
+        "text": "How can I provide translation in my language?",
+        "id": "How_can_I_provide_translation_in_my_language.3F"
+      },
+      "content": [
+        {
+          "type": "paragraph",
+          "text": "The community will translate the game in all language after the game release with the collaborative translation interface can be used to translate into other languages."
+        }
+      ]
+    },
+    {
+      "heading": {
+        "level": 2,
+        "text": "I updated the images in the 'img' folder of my game, but they don't show?",
+        "id": "I_updated_the_images_in_the_.27img.27_folder_of_my_game.2C_but_they_don.27t_show.3F"
+      },
+      "content": [
+        {
+          "type": "paragraph",
+          "text": "Concerning game_box.png, game_icon.png and publisher.png : You must use \"Reload game box image\" function from \"Control Panel / Manage Games / Your game\" to make your change visible. After game is released (alpha) these images should be updated using meta-data manager"
+        }
+      ]
+    },
+    {
+      "heading": {
+        "level": 2,
+        "text": "I added some game options / some game statistics / some game infos but they don't show?",
+        "id": "I_added_some_game_options_.2F_some_game_statistics_.2F_some_game_infos_but_they_don.27t_show.3F"
+      },
+      "content": [
+        {
+          "type": "paragraph",
+          "text": "When you modify one of these 3 files, you need to use the corresponding update action from \"Control Panel / Manage Games / Your Game\" in order we can take this information into account."
+        }
+      ]
+    },
+    {
+      "heading": {
+        "level": 2,
+        "text": "Should I use images free from copyright?",
+        "id": "Should_I_use_images_free_from_copyright.3F"
+      },
+      "content": [
+        {
+          "type": "paragraph",
+          "text": "If you are developing a game in the public domain, yes (or you can make your own if you feel it's better)."
+        },
+        {
+          "type": "paragraph",
+          "text": "You can also used shared images provided by boardgame arena - logos, some action buttons, card, meeples, decks."
+        }
+      ]
+    },
+    {
+      "heading": {
+        "level": 2,
+        "text": "I registered on Studio but did not receive email",
+        "id": "I_registered_on_Studio_but_did_not_receive_email"
+      },
+      "content": [
+        {
+          "type": "paragraph",
+          "text": "If you did not get email, search for \"Welcome on BGA Studio\" in your email client (just like that), it sometimes ends up in junk folder."
+        },
+        {
+          "type": "paragraph",
+          "text": "You can get the welcome email re-sent from the login page using the \"Welcome email not received?\" link. In case of a persistent issue, you can file a support request from the studio support page ."
+        }
+      ]
+    },
+    {
+      "heading": {
+        "level": 2,
+        "text": "How to fix a bug in existing game",
+        "id": "How_to_fix_a_bug_in_existing_game"
+      },
+      "content": [
+        {
+          "type": "list",
+          "ordered": false,
+          "items": [
+            {
+              "text": "First, you need to join the dev team and create a first tutorial game. Without this, you won't be able to understand the code or debug: https://en.doc.boardgamearena.com/How_to_join_BGA_developer_team",
+              "nested": null
+            },
+            {
+              "text": "Then you need to contact the original developer and make sure they want your help. The original developer is listed in the credits (if it says \"developed by BGA,\" it was the original team). If you cannot get in contact with them, ask on the General channel on the dev Discord. Fixing bugs in old games is not always a good idea - you will likely break something else.",
+              "nested": null
+            },
+            {
+              "text": "If you get a \"no\" answer, don't give up. There is a big list of abandoned games that may need volunteers, and there are always publishers asking for volunteers for their games (or you can just check the licenses we have). More about licensed games can be found here: https://en.doc.boardgamearena.com/Create_a_game_in_BGA_Studio:_Complete_Walkthrough#Select_a_First_Game",
+              "nested": null
+            },
+            {
+              "text": "Finally, to actually start working on a game: on the project list http://studio.boardgamearena.com/#!projects , find the game (you may have to check the \"Already published\" button) and request read-only access. Then use the project you created during the tutorial (or create a new one) and use the Copy feature to copy the code of that project into yours. In the control panel of YOUR new project, it's in the right bottom.",
+              "nested": null
+            },
+            {
+              "text": "If you lost in any of these steps ask fellow developers on dev Discord (link is on main wiki https://en.doc.boardgamearena.com/Studio#Other_resources )",
+              "nested": null
+            }
+          ]
         }
       ]
     }
@@ -180,7 +223,7 @@
   "images": [],
   "metadata": {
     "extractor_version": "1.0.0",
-    "extracted_at": "2026-07-06T06:53:17.574672+00:00",
+    "extracted_at": "2026-07-06T08:38:33.683526+00:00",
     "word_count": 313,
     "heading_count": 10,
     "code_block_count": 0,

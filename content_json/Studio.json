@@ -3,518 +3,576 @@
   "source_file": "Studio.html",
   "relative_path": "Studio.html",
   "content_json_path": "content_json/Studio.json",
-  "headings": [
+  "sections": [
     {
-      "level": 2,
-      "text": "What is Board Game Arena Studio?",
-      "id": "What_is_Board_Game_Arena_Studio.3F"
-    },
-    {
-      "level": 2,
-      "text": "Discover BGA Studio in 5 presentations",
-      "id": "Discover_BGA_Studio_in_5_presentations"
-    },
-    {
-      "level": 2,
-      "text": "How to join the BGA developer team?",
-      "id": "How_to_join_the_BGA_developer_team.3F"
-    },
-    {
-      "level": 2,
-      "text": "Great, I'm in! ... How should I start?",
-      "id": "Great.2C_I.27m_in.21_..._How_should_I_start.3F"
-    },
-    {
-      "level": 2,
-      "text": "BGA Studio documentation",
-      "id": "BGA_Studio_documentation"
-    },
-    {
-      "level": 3,
-      "text": "BGA Studio Framework reference",
-      "id": "BGA_Studio_Framework_reference"
-    },
-    {
-      "level": 4,
-      "text": "Game logic (Server side)",
-      "id": "Game_logic_.28Server_side.29"
-    },
-    {
-      "level": 4,
-      "text": "Game interface (Client side)",
-      "id": "Game_interface_.28Client_side.29"
-    },
-    {
-      "level": 4,
-      "text": "Other components",
-      "id": "Other_components"
-    },
-    {
-      "level": 3,
-      "text": "BGA Studio game components reference",
-      "id": "BGA_Studio_game_components_reference"
-    },
-    {
-      "level": 3,
-      "text": "BGA Studio user guide",
-      "id": "BGA_Studio_user_guide"
-    },
-    {
-      "level": 2,
-      "text": "Software Versions",
-      "id": "Software_Versions"
-    },
-    {
-      "level": 3,
-      "text": "PHP Extensions Used",
-      "id": "PHP_Extensions_Used"
-    },
-    {
-      "level": 2,
-      "text": "Other resources",
-      "id": "Other_resources"
-    }
-  ],
-  "content": [
-    {
-      "type": "paragraph",
-      "text": "[image: Bga studio small.jpg]"
-    },
-    {
-      "type": "paragraph",
-      "text": "Board Game Arena Studio is a platform to build online board game adaptations using the Board Game Arena platform."
-    },
-    {
-      "type": "paragraph",
-      "text": "BGA Studio website: https://studio.boardgamearena.com"
-    },
-    {
-      "type": "paragraph",
-      "text": "Why, how, what... to start discovering BGA Studio, we prepared 5 \"powerpoint\" presentations for you:"
-    },
-    {
-      "type": "list",
-      "ordered": false,
-      "items": [
+      "heading": null,
+      "content": [
         {
-          "text": "5 reasons why you should use BGA Studio for your online board game (or ‎Download as PDF )",
-          "nested": null
-        },
-        {
-          "text": "The 8 steps to create a board game on Board Game Arena (or Download as PDF )",
-          "nested": null
-        },
-        {
-          "text": "The BGA Framework at a glance (or Download as PDF )",
-          "nested": null
-        },
-        {
-          "text": "Focus on BGA game state machine (or Download as PDF )",
-          "nested": null
-        },
-        {
-          "text": "BGA developers guidelines (or ‎Download as PDF )",
-          "nested": null
+          "type": "paragraph",
+          "text": "[image: Bga studio small.jpg]"
         }
       ]
     },
     {
-      "type": "paragraph",
-      "text": "Please see this page: How to join BGA developer team?"
-    },
-    {
-      "type": "paragraph",
-      "text": "If you didn't already, check the presentations at the top of this page to get the basics."
-    },
-    {
-      "type": "paragraph",
-      "text": "After that, we strongly advise you to take one of these game creation tutorials:"
-    },
-    {
-      "type": "list",
-      "ordered": false,
-      "items": [
+      "heading": {
+        "level": 2,
+        "text": "What is Board Game Arena Studio?",
+        "id": "What_is_Board_Game_Arena_Studio.3F"
+      },
+      "content": [
         {
-          "text": "Tutorial reversi ( recommended , closest to the actual BGA implementation and maintained by the BGA team) - an abstract strategy game played on an 8×8 uncheckered board for 2 players",
-          "nested": null
+          "type": "paragraph",
+          "text": "Board Game Arena Studio is a platform to build online board game adaptations using the Board Game Arena platform."
         },
         {
-          "text": "Tutorial hearts - a card game for 4 players",
-          "nested": null
+          "type": "paragraph",
+          "text": "BGA Studio website: https://studio.boardgamearena.com"
         }
       ]
     },
     {
-      "type": "paragraph",
-      "text": "Then start editing files and see what happens! ;)"
-    },
-    {
-      "type": "list",
-      "ordered": false,
-      "items": [
+      "heading": {
+        "level": 2,
+        "text": "Discover BGA Studio in 5 presentations",
+        "id": "Discover_BGA_Studio_in_5_presentations"
+      },
+      "content": [
         {
-          "text": "Create a game in BGA Studio: Complete Walkthrough",
-          "nested": null
+          "type": "paragraph",
+          "text": "Why, how, what... to start discovering BGA Studio, we prepared 5 \"powerpoint\" presentations for you:"
+        },
+        {
+          "type": "list",
+          "ordered": false,
+          "items": [
+            {
+              "text": "5 reasons why you should use BGA Studio for your online board game (or ‎Download as PDF )",
+              "nested": null
+            },
+            {
+              "text": "The 8 steps to create a board game on Board Game Arena (or Download as PDF )",
+              "nested": null
+            },
+            {
+              "text": "The BGA Framework at a glance (or Download as PDF )",
+              "nested": null
+            },
+            {
+              "text": "Focus on BGA game state machine (or Download as PDF )",
+              "nested": null
+            },
+            {
+              "text": "BGA developers guidelines (or ‎Download as PDF )",
+              "nested": null
+            }
+          ]
         }
       ]
     },
     {
-      "type": "paragraph",
-      "text": "If you have any questions, please check out the Studio FAQ or Contact BGA Studio ."
-    },
-    {
-      "type": "code",
-      "language": null,
-      "text": " \"Category:Studio\" white rabbit "
-    },
-    {
-      "type": "paragraph",
-      "text": "That is if you want to search for white rabbit"
-    },
-    {
-      "type": "paragraph",
-      "text": "This part of the documentation focuses on the development framework itself: functions and methods available to build your game."
-    },
-    {
-      "type": "list",
-      "ordered": false,
-      "items": [
+      "heading": {
+        "level": 2,
+        "text": "How to join the BGA developer team?",
+        "id": "How_to_join_the_BGA_developer_team.3F"
+      },
+      "content": [
         {
-          "text": "Main game logic: Game.php",
-          "nested": null
-        },
-        {
-          "text": "Your game state classes: States directory",
-          "nested": null
-        },
-        {
-          "text": "Game database model: dbmodel.sql",
-          "nested": null
-        },
-        {
-          "text": "Game material description: material.inc.php",
-          "nested": null
-        },
-        {
-          "text": "Game statistics: stats.json",
-          "nested": null
+          "type": "paragraph",
+          "text": "Please see this page: How to join BGA developer team?"
         }
       ]
     },
     {
-      "type": "list",
-      "ordered": false,
-      "items": [
+      "heading": {
+        "level": 2,
+        "text": "Great, I'm in! ... How should I start?",
+        "id": "Great.2C_I.27m_in.21_..._How_should_I_start.3F"
+      },
+      "content": [
         {
-          "text": "Game interface logic: Game.js",
-          "nested": null
+          "type": "paragraph",
+          "text": "If you didn't already, check the presentations at the top of this page to get the basics."
         },
         {
-          "text": "Game art: img directory",
-          "nested": null
+          "type": "paragraph",
+          "text": "After that, we strongly advise you to take one of these game creation tutorials:"
         },
         {
-          "text": "Game interface stylesheet: yourgamename.css",
-          "nested": null
+          "type": "list",
+          "ordered": false,
+          "items": [
+            {
+              "text": "Tutorial reversi ( recommended , closest to the actual BGA implementation and maintained by the BGA team) - an abstract strategy game played on an 8×8 uncheckered board for 2 players",
+              "nested": null
+            },
+            {
+              "text": "Tutorial hearts - a card game for 4 players",
+              "nested": null
+            }
+          ]
         },
         {
-          "text": "Game layout: view and template: yourgamename.view.php and yourgamename_yourgamename.tpl",
-          "nested": null
+          "type": "paragraph",
+          "text": "Then start editing files and see what happens! ;)"
         },
         {
-          "text": "Your game mobile version",
-          "nested": null
+          "type": "list",
+          "ordered": false,
+          "items": [
+            {
+              "text": "Create a game in BGA Studio: Complete Walkthrough",
+              "nested": null
+            }
+          ]
+        },
+        {
+          "type": "paragraph",
+          "text": "If you have any questions, please check out the Studio FAQ or Contact BGA Studio ."
+        },
+        {
+          "type": "code",
+          "language": null,
+          "text": " \"Category:Studio\" white rabbit "
+        },
+        {
+          "type": "paragraph",
+          "text": "That is if you want to search for white rabbit"
         }
       ]
     },
     {
-      "type": "list",
-      "ordered": false,
-      "items": [
+      "heading": {
+        "level": 2,
+        "text": "BGA Studio documentation",
+        "id": "BGA_Studio_documentation"
+      },
+      "content": []
+    },
+    {
+      "heading": {
+        "level": 3,
+        "text": "BGA Studio Framework reference",
+        "id": "BGA_Studio_Framework_reference"
+      },
+      "content": [
         {
-          "text": "Translations (how to make your game translatable)",
-          "nested": null
-        },
-        {
-          "text": "Game Options and Preferences",
-          "nested": null
-        },
-        {
-          "text": "Game meta-information: gameinfos.jsonc",
-          "nested": null
-        },
-        {
-          "text": "Game replay",
-          "nested": null
+          "type": "paragraph",
+          "text": "This part of the documentation focuses on the development framework itself: functions and methods available to build your game."
         }
       ]
     },
     {
-      "type": "paragraph",
-      "text": "Game components are useful tools you can use in your game adaptations."
-    },
-    {
-      "type": "list",
-      "ordered": false,
-      "items": [
+      "heading": {
+        "level": 4,
+        "text": "Game logic (Server side)",
+        "id": "Game_logic_.28Server_side.29"
+      },
+      "content": [
         {
-          "text": "Counter : a JS component to manage a counter that can increase/decrease (ex: player's score).",
-          "nested": null
-        },
-        {
-          "text": "Scrollmap : a JS component to manage a scrollable game area (useful when the game area can be infinite. Examples:  Saboteur or Takenoko games).",
-          "nested": null
-        },
-        {
-          "text": "Stock : a JS component to manage and display a set of game elements displayed at a position.",
-          "nested": null
-        },
-        {
-          "text": "Zone : a JS component to manage a zone of the board where several game elements can come and leave, but should be well displayed together (See for example: token's places at Can't Stop).",
-          "nested": null
-        },
-        {
-          "text": "Draggable : a JS component to manage drag'n'drop actions.",
-          "nested": null
-        },
-        {
-          "text": "ExpandableSection : a JS component to manage a rectangular block of HTML than can be displayed/hidden.",
-          "nested": null
-        },
-        {
-          "text": "Anti-Stock : Code snippets in vanilla JS/HTML5 to do what stock does (that is if you cannot beat Stock into submission)",
-          "nested": null
-        },
-        {
-          "text": "bga-animations : a JS component for animations.",
-          "nested": null
-        },
-        {
-          "text": "bga-cards : a JS component for cards.",
-          "nested": null
-        },
-        {
-          "text": "bga-dice : a JS component for dice.",
-          "nested": null
-        },
-        {
-          "text": "bga-autofit : a JS component to make text fit on a fixed size div.",
-          "nested": null
-        },
-        {
-          "text": "bga-score-sheet : a JS component to help you display an animated score sheet at the end of the game.",
-          "nested": null
+          "type": "list",
+          "ordered": false,
+          "items": [
+            {
+              "text": "Main game logic: Game.php",
+              "nested": null
+            },
+            {
+              "text": "Your game state classes: States directory",
+              "nested": null
+            },
+            {
+              "text": "Game database model: dbmodel.sql",
+              "nested": null
+            },
+            {
+              "text": "Game material description: material.inc.php",
+              "nested": null
+            },
+            {
+              "text": "Game statistics: stats.json",
+              "nested": null
+            }
+          ]
         }
       ]
     },
     {
-      "type": "paragraph",
-      "text": "PHP:"
-    },
-    {
-      "type": "list",
-      "ordered": false,
-      "items": [
+      "heading": {
+        "level": 4,
+        "text": "Game interface (Client side)",
+        "id": "Game_interface_.28Client_side.29"
+      },
+      "content": [
         {
-          "text": "Deck : a PHP component to manage cards (deck, hands, picking cards, moving cards, shuffle deck, ...)",
-          "nested": null
-        },
-        {
-          "text": "PlayerCounter and TableCounter : php component to manager counters",
-          "nested": null
+          "type": "list",
+          "ordered": false,
+          "items": [
+            {
+              "text": "Game interface logic: Game.js",
+              "nested": null
+            },
+            {
+              "text": "Game art: img directory",
+              "nested": null
+            },
+            {
+              "text": "Game interface stylesheet: yourgamename.css",
+              "nested": null
+            },
+            {
+              "text": "Game layout: view and template: yourgamename.view.php and yourgamename_yourgamename.tpl",
+              "nested": null
+            },
+            {
+              "text": "Your game mobile version",
+              "nested": null
+            }
+          ]
         }
       ]
     },
     {
-      "type": "paragraph",
-      "text": "This part of the documentation is a user guide for the BGA Studio online development environment."
-    },
-    {
-      "type": "list",
-      "ordered": false,
-      "items": [
+      "heading": {
+        "level": 4,
+        "text": "Other components",
+        "id": "Other_components"
+      },
+      "content": [
         {
-          "text": "BGA game Lifecycle",
-          "nested": null
-        },
-        {
-          "text": "BGA Game licenses",
-          "nested": null
-        },
-        {
-          "text": "Create a game in BGA Studio: Complete Walkthrough",
-          "nested": null
-        },
-        {
-          "text": "Pre-release checklist - Go throught this list if you think you done development",
-          "nested": null
-        },
-        {
-          "text": "Post-release phase",
-          "nested": null
+          "type": "list",
+          "ordered": false,
+          "items": [
+            {
+              "text": "Translations (how to make your game translatable)",
+              "nested": null
+            },
+            {
+              "text": "Game Options and Preferences",
+              "nested": null
+            },
+            {
+              "text": "Game meta-information: gameinfos.jsonc",
+              "nested": null
+            },
+            {
+              "text": "Game replay",
+              "nested": null
+            }
+          ]
         }
       ]
     },
     {
-      "type": "paragraph",
-      "text": "Tools and Advice"
+      "heading": {
+        "level": 3,
+        "text": "BGA Studio game components reference",
+        "id": "BGA_Studio_game_components_reference"
+      },
+      "content": [
+        {
+          "type": "paragraph",
+          "text": "Game components are useful tools you can use in your game adaptations."
+        },
+        {
+          "type": "list",
+          "ordered": false,
+          "items": [
+            {
+              "text": "Counter : a JS component to manage a counter that can increase/decrease (ex: player's score).",
+              "nested": null
+            },
+            {
+              "text": "Scrollmap : a JS component to manage a scrollable game area (useful when the game area can be infinite. Examples:  Saboteur or Takenoko games).",
+              "nested": null
+            },
+            {
+              "text": "Stock : a JS component to manage and display a set of game elements displayed at a position.",
+              "nested": null
+            },
+            {
+              "text": "Zone : a JS component to manage a zone of the board where several game elements can come and leave, but should be well displayed together (See for example: token's places at Can't Stop).",
+              "nested": null
+            },
+            {
+              "text": "Draggable : a JS component to manage drag'n'drop actions.",
+              "nested": null
+            },
+            {
+              "text": "ExpandableSection : a JS component to manage a rectangular block of HTML than can be displayed/hidden.",
+              "nested": null
+            },
+            {
+              "text": "Anti-Stock : Code snippets in vanilla JS/HTML5 to do what stock does (that is if you cannot beat Stock into submission)",
+              "nested": null
+            },
+            {
+              "text": "bga-animations : a JS component for animations.",
+              "nested": null
+            },
+            {
+              "text": "bga-cards : a JS component for cards.",
+              "nested": null
+            },
+            {
+              "text": "bga-dice : a JS component for dice.",
+              "nested": null
+            },
+            {
+              "text": "bga-autofit : a JS component to make text fit on a fixed size div.",
+              "nested": null
+            },
+            {
+              "text": "bga-score-sheet : a JS component to help you display an animated score sheet at the end of the game.",
+              "nested": null
+            }
+          ]
+        },
+        {
+          "type": "paragraph",
+          "text": "PHP:"
+        },
+        {
+          "type": "list",
+          "ordered": false,
+          "items": [
+            {
+              "text": "Deck : a PHP component to manage cards (deck, hands, picking cards, moving cards, shuffle deck, ...)",
+              "nested": null
+            },
+            {
+              "text": "PlayerCounter and TableCounter : php component to manager counters",
+              "nested": null
+            }
+          ]
+        }
+      ]
     },
     {
-      "type": "list",
-      "ordered": false,
-      "items": [
+      "heading": {
+        "level": 3,
+        "text": "BGA Studio user guide",
+        "id": "BGA_Studio_user_guide"
+      },
+      "content": [
         {
-          "text": "BGA Studio Guidelines",
-          "nested": null
+          "type": "paragraph",
+          "text": "This part of the documentation is a user guide for the BGA Studio online development environment."
         },
         {
-          "text": "Tutorials checklist",
-          "nested": null
+          "type": "list",
+          "ordered": false,
+          "items": [
+            {
+              "text": "BGA game Lifecycle",
+              "nested": null
+            },
+            {
+              "text": "BGA Game licenses",
+              "nested": null
+            },
+            {
+              "text": "Create a game in BGA Studio: Complete Walkthrough",
+              "nested": null
+            },
+            {
+              "text": "Pre-release checklist - Go throught this list if you think you done development",
+              "nested": null
+            },
+            {
+              "text": "Post-release phase",
+              "nested": null
+            }
+          ]
         },
         {
-          "text": "I wish I knew this when I started - one liners on most common missed features, mistakes, etc with further doc references",
-          "nested": null
+          "type": "paragraph",
+          "text": "Tools and Advice"
         },
         {
-          "text": "Tools and tips of BGA Studio - Tips and instructions on setting up development environment",
-          "nested": {
-            "type": "list",
-            "ordered": false,
-            "items": [
-              {
-                "text": "Setting up BGA Development environment using VSCode",
-                "nested": null
-              },
-              {
-                "text": "Practical debugging - Tips focused on debugging",
-                "nested": null
-              },
-              {
-                "text": "Testing by developer",
-                "nested": null
-              },
-              {
-                "text": "Studio logs - Instructions for log access",
-                "nested": null
-              },
-              {
-                "text": "Troubleshooting - Most common \"I am really stuck\" situations",
-                "nested": null
+          "type": "list",
+          "ordered": false,
+          "items": [
+            {
+              "text": "BGA Studio Guidelines",
+              "nested": null
+            },
+            {
+              "text": "Tutorials checklist",
+              "nested": null
+            },
+            {
+              "text": "I wish I knew this when I started - one liners on most common missed features, mistakes, etc with further doc references",
+              "nested": null
+            },
+            {
+              "text": "Tools and tips of BGA Studio - Tips and instructions on setting up development environment",
+              "nested": {
+                "type": "list",
+                "ordered": false,
+                "items": [
+                  {
+                    "text": "Setting up BGA Development environment using VSCode",
+                    "nested": null
+                  },
+                  {
+                    "text": "Practical debugging - Tips focused on debugging",
+                    "nested": null
+                  },
+                  {
+                    "text": "Testing by developer",
+                    "nested": null
+                  },
+                  {
+                    "text": "Studio logs - Instructions for log access",
+                    "nested": null
+                  },
+                  {
+                    "text": "Troubleshooting - Most common \"I am really stuck\" situations",
+                    "nested": null
+                  }
+                ]
               }
-            ]
-          }
-        },
-        {
-          "text": "Production issues reporting tool",
-          "nested": null
-        },
-        {
-          "text": "BGA Studio Cookbook - Tips and instructions on using API's, libraries and frameworks",
-          "nested": {
-            "type": "list",
-            "ordered": false,
-            "items": [
-              {
-                "text": "Using Vue - work-in-progress guide on using the modern framework Vue.js to create a game",
-                "nested": null
-              },
-              {
-                "text": "Using Typescript and Scss - How to auto-build Typescript and SCSS files to make your code cleaner",
-                "nested": null
-              },
-              {
-                "text": "Bots and Artificial Intelligence - How to add AI/Bots to the game",
-                "nested": null
-              },
-              {
-                "text": "Using AI for BGA game development - Shared resources about setting up AI agents",
-                "nested": null
+            },
+            {
+              "text": "Production issues reporting tool",
+              "nested": null
+            },
+            {
+              "text": "BGA Studio Cookbook - Tips and instructions on using API's, libraries and frameworks",
+              "nested": {
+                "type": "list",
+                "ordered": false,
+                "items": [
+                  {
+                    "text": "Using Vue - work-in-progress guide on using the modern framework Vue.js to create a game",
+                    "nested": null
+                  },
+                  {
+                    "text": "Using Typescript and Scss - How to auto-build Typescript and SCSS files to make your code cleaner",
+                    "nested": null
+                  },
+                  {
+                    "text": "Bots and Artificial Intelligence - How to add AI/Bots to the game",
+                    "nested": null
+                  },
+                  {
+                    "text": "Using AI for BGA game development - Shared resources about setting up AI agents",
+                    "nested": null
+                  }
+                ]
               }
-            ]
-          }
+            },
+            {
+              "text": "BGA Studio Migration Guide - Migration tips from older version of studio framework",
+              "nested": null
+            },
+            {
+              "text": "Studio FAQ",
+              "nested": null
+            }
+          ]
         },
         {
-          "text": "BGA Studio Migration Guide - Migration tips from older version of studio framework",
-          "nested": null
+          "type": "paragraph",
+          "text": "Sharing"
         },
         {
-          "text": "Studio FAQ",
-          "nested": null
+          "type": "list",
+          "ordered": false,
+          "items": [
+            {
+              "text": "Common board game elements image resources - Dice, meeples, cubes, etc",
+              "nested": null
+            },
+            {
+              "text": "BGA Code Sharing - Shared resources, projects on git hub, common code, other links",
+              "nested": null
+            }
+          ]
         }
       ]
     },
     {
-      "type": "paragraph",
-      "text": "Sharing"
-    },
-    {
-      "type": "list",
-      "ordered": false,
-      "items": [
+      "heading": {
+        "level": 2,
+        "text": "Software Versions",
+        "id": "Software_Versions"
+      },
+      "content": [
         {
-          "text": "Common board game elements image resources - Dice, meeples, cubes, etc",
-          "nested": null
+          "type": "paragraph",
+          "text": "Versions currently used by BGA framework:"
         },
         {
-          "text": "BGA Code Sharing - Shared resources, projects on git hub, common code, other links",
-          "nested": null
+          "type": "list",
+          "ordered": false,
+          "items": [
+            {
+              "text": "Dojo Toolkit 1.15 - deprecated, avoid at all cost",
+              "nested": null
+            },
+            {
+              "text": "PHP: 8.4",
+              "nested": null
+            },
+            {
+              "text": "SQL: MySQL 5.7 (prod) - on studio 8.0",
+              "nested": null
+            },
+            {
+              "text": "JS/CSS/HTML: limited by what minimization tools support: JS minimization",
+              "nested": null
+            },
+            {
+              "text": "Font Awesome: 4.7 https://fontawesome.com/v4.7/icons/ (available as `<i class=\"fa fa-clock\" />` )",
+              "nested": null
+            },
+            {
+              "text": "Font Awesome: 6.4.0 https://fontawesome.com/v6/search?o=r&m=free (available as `<i class=\"fa6 fa6-clock\" />` )",
+              "nested": null
+            }
+          ]
         }
       ]
     },
     {
-      "type": "paragraph",
-      "text": "Versions currently used by BGA framework:"
-    },
-    {
-      "type": "list",
-      "ordered": false,
-      "items": [
+      "heading": {
+        "level": 3,
+        "text": "PHP Extensions Used",
+        "id": "PHP_Extensions_Used"
+      },
+      "content": [
         {
-          "text": "Dojo Toolkit 1.15 - deprecated, avoid at all cost",
-          "nested": null
-        },
-        {
-          "text": "PHP: 8.4",
-          "nested": null
-        },
-        {
-          "text": "SQL: MySQL 5.7 (prod) - on studio 8.0",
-          "nested": null
-        },
-        {
-          "text": "JS/CSS/HTML: limited by what minimization tools support: JS minimization",
-          "nested": null
-        },
-        {
-          "text": "Font Awesome: 4.7 https://fontawesome.com/v4.7/icons/ (available as `<i class=\"fa fa-clock\" />` )",
-          "nested": null
-        },
-        {
-          "text": "Font Awesome: 6.4.0 https://fontawesome.com/v6/search?o=r&m=free (available as `<i class=\"fa6 fa6-clock\" />` )",
-          "nested": null
+          "type": "paragraph",
+          "text": "The following PHP extensions are - as of Apr 1, 2026 - in use in BGA Studio:"
         }
       ]
     },
     {
-      "type": "paragraph",
-      "text": "The following PHP extensions are - as of Apr 1, 2026 - in use in BGA Studio:"
-    },
-    {
-      "type": "paragraph",
-      "text": "Development forum"
-    },
-    {
-      "type": "paragraph",
-      "text": "DISCORD chat server/room invite link https://discord.gg/YxEUacY if it does not work check this topic https://forum.boardgamearena.com/viewtopic.php?f=12&t=17403&hilit=discord"
-    },
-    {
-      "type": "paragraph",
-      "text": "BGA Mainsite releases https://en.boardgamearena.com/forum/viewtopic.php?t=23289&start=100"
+      "heading": {
+        "level": 2,
+        "text": "Other resources",
+        "id": "Other_resources"
+      },
+      "content": [
+        {
+          "type": "paragraph",
+          "text": "Development forum"
+        },
+        {
+          "type": "paragraph",
+          "text": "DISCORD chat server/room invite link https://discord.gg/YxEUacY if it does not work check this topic https://forum.boardgamearena.com/viewtopic.php?f=12&t=17403&hilit=discord"
+        },
+        {
+          "type": "paragraph",
+          "text": "BGA Mainsite releases https://en.boardgamearena.com/forum/viewtopic.php?t=23289&start=100"
+        }
+      ]
     }
   ],
   "links": [
     {
-      "text": "Bga studio small.jpg",
+      "text": "[image: Bga studio small.jpg]",
       "url": "File:Bga_studio_small.jpg.html"
     },
     {
@@ -814,20 +872,15 @@
       "url": "https://en.boardgamearena.com/forum/viewtopic.php?t=23289&start=100"
     }
   ],
-  "images": [
-    {
-      "src": "/images/thumb/e/ec/Bga_studio_small.jpg/300px-Bga_studio_small.jpg",
-      "alt": "Bga studio small.jpg"
-    }
-  ],
+  "images": [],
   "metadata": {
     "extractor_version": "1.0.0",
-    "extracted_at": "2026-07-06T06:53:17.570541+00:00",
+    "extracted_at": "2026-07-06T08:38:33.678961+00:00",
     "word_count": 217,
     "heading_count": 14,
     "code_block_count": 1,
     "table_count": 0,
-    "image_count": 1,
+    "image_count": 0,
     "list_count": 12
   }
 }

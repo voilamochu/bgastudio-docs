@@ -3,1339 +3,1723 @@
   "source_file": "BGA_Studio_Migration_Guide.html",
   "relative_path": "BGA_Studio_Migration_Guide.html",
   "content_json_path": "content_json/BGA_Studio_Migration_Guide.json",
-  "headings": [
+  "sections": [
     {
-      "level": 2,
-      "text": "Overview",
-      "id": "Overview"
-    },
-    {
-      "level": 2,
-      "text": "Structural changes",
-      "id": "Structural_changes"
-    },
-    {
-      "level": 2,
-      "text": "IDE Support",
-      "id": "IDE_Support"
-    },
-    {
-      "level": 2,
-      "text": "Game configuration",
-      "id": "Game_configuration"
-    },
-    {
-      "level": 3,
-      "text": "User preferences",
-      "id": "User_preferences"
-    },
-    {
-      "level": 4,
-      "text": "Instant cssPref on user preferences",
-      "id": "Instant_cssPref_on_user_preferences"
-    },
-    {
-      "level": 3,
-      "text": "Game options",
-      "id": "Game_options"
-    },
-    {
-      "level": 2,
-      "text": "Server parts (php, sql, etc)",
-      "id": "Server_parts_.28php.2C_sql.2C_etc.29"
-    },
-    {
-      "level": 3,
-      "text": "PHP migration",
-      "id": "PHP_migration"
-    },
-    {
-      "level": 3,
-      "text": "Namespaced game class",
-      "id": "Namespaced_game_class"
-    },
-    {
-      "level": 3,
-      "text": "Material",
-      "id": "Material"
-    },
-    {
-      "level": 3,
-      "text": "Autowire game actions",
-      "id": "Autowire_game_actions"
-    },
-    {
-      "level": 3,
-      "text": "Notifications",
-      "id": "Notifications"
-    },
-    {
-      "level": 4,
-      "text": "Notification Decorators",
-      "id": "Notification_Decorators"
-    },
-    {
-      "level": 4,
-      "text": "Notification args consistency",
-      "id": "Notification_args_consistency"
-    },
-    {
-      "level": 3,
-      "text": "Deprecated getGameName",
-      "id": "Deprecated_getGameName"
-    },
-    {
-      "level": 3,
-      "text": "State Management Functions",
-      "id": "State_Management_Functions"
-    },
-    {
-      "level": 3,
-      "text": "Player Information Functions",
-      "id": "Player_Information_Functions"
-    },
-    {
-      "level": 3,
-      "text": "Game Mode Functions",
-      "id": "Game_Mode_Functions"
-    },
-    {
-      "level": 3,
-      "text": "Exception Classes",
-      "id": "Exception_Classes"
-    },
-    {
-      "level": 3,
-      "text": "Namespace for Base Classes",
-      "id": "Namespace_for_Base_Classes"
-    },
-    {
-      "level": 3,
-      "text": "Deprecated APP_* Classes",
-      "id": "Deprecated_APP_.2A_Classes"
-    },
-    {
-      "level": 3,
-      "text": "Deprecated translation functions",
-      "id": "Deprecated_translation_functions"
-    },
-    {
-      "level": 3,
-      "text": "Deprecated getNew",
-      "id": "Deprecated_getNew"
-    },
-    {
-      "level": 3,
-      "text": "Stats",
-      "id": "Stats"
-    },
-    {
-      "level": 3,
-      "text": "Legacy",
-      "id": "Legacy"
-    },
-    {
-      "level": 3,
-      "text": "Any Globals",
-      "id": "Any_Globals"
-    },
-    {
-      "level": 3,
-      "text": "Server Counters",
-      "id": "Server_Counters"
-    },
-    {
-      "level": 3,
-      "text": "Updated Zombie Mode documentation and recommendations",
-      "id": "Updated_Zombie_Mode_documentation_and_recommendations"
-    },
-    {
-      "level": 3,
-      "text": "View and template files: deprecated",
-      "id": "View_and_template_files:_deprecated"
-    },
-    {
-      "level": 4,
-      "text": "Forbid access to global BGA variables and direct DB access on action/view files",
-      "id": "Forbid_access_to_global_BGA_variables_and_direct_DB_access_on_action.2Fview_files"
-    },
-    {
-      "level": 3,
-      "text": "States",
-      "id": "States"
-    },
-    {
-      "level": 4,
-      "text": "If still using states.php",
-      "id": "If_still_using_states.php"
-    },
-    {
-      "level": 2,
-      "text": "Client parts (js, html, css)",
-      "id": "Client_parts_.28js.2C_html.2C_css.29"
-    },
-    {
-      "level": 3,
-      "text": "Main class",
-      "id": "Main_class"
-    },
-    {
-      "level": 3,
-      "text": "Deprecated ajaxcall",
-      "id": "Deprecated_ajaxcall"
-    },
-    {
-      "level": 3,
-      "text": "New this.bga.* API Structure",
-      "id": "New_this.bga..2A_API_Structure"
-    },
-    {
-      "level": 4,
-      "text": "Player Functions (this.bga.players)",
-      "id": "Player_Functions_.28this.bga.players.29"
-    },
-    {
-      "level": 4,
-      "text": "State Functions (this.bga.states)",
-      "id": "State_Functions_.28this.bga.states.29"
-    },
-    {
-      "level": 4,
-      "text": "Status Bar Functions (this.bga.statusBar)",
-      "id": "Status_Bar_Functions_.28this.bga.statusBar.29"
-    },
-    {
-      "level": 4,
-      "text": "Action Functions (this.bga.actions)",
-      "id": "Action_Functions_.28this.bga.actions.29"
-    },
-    {
-      "level": 4,
-      "text": "Dialog Functions (this.bga.dialogs)",
-      "id": "Dialog_Functions_.28this.bga.dialogs.29"
-    },
-    {
-      "level": 4,
-      "text": "Image Functions (this.bga.images)",
-      "id": "Image_Functions_.28this.bga.images.29"
-    },
-    {
-      "level": 4,
-      "text": "Game Area Functions (this.bga.gameArea)",
-      "id": "Game_Area_Functions_.28this.bga.gameArea.29"
-    },
-    {
-      "level": 4,
-      "text": "Player Panel Functions (this.bga.playerPanels)",
-      "id": "Player_Panel_Functions_.28this.bga.playerPanels.29"
-    },
-    {
-      "level": 4,
-      "text": "User Preferences (this.bga.userPreferences)",
-      "id": "User_Preferences_.28this.bga.userPreferences.29"
-    },
-    {
-      "level": 4,
-      "text": "Notification Functions (this.bga.notifications)",
-      "id": "Notification_Functions_.28this.bga.notifications.29"
-    },
-    {
-      "level": 4,
-      "text": "Animation Functions (this.bga.gameui)",
-      "id": "Animation_Functions_.28this.bga.gameui.29"
-    },
-    {
-      "level": 3,
-      "text": "Access to DOM elements",
-      "id": "Access_to_DOM_elements"
-    },
-    {
-      "level": 3,
-      "text": "Notification setup",
-      "id": "Notification_setup"
-    },
-    {
-      "level": 3,
-      "text": "Status bar manipulation",
-      "id": "Status_bar_manipulation"
-    },
-    {
-      "level": 3,
-      "text": "Dojo usage",
-      "id": "Dojo_usage"
-    },
-    {
-      "level": 3,
-      "text": "Sound loading",
-      "id": "Sound_loading"
-    },
-    {
-      "level": 3,
-      "text": "Formatting of log message using bgaFormatText",
-      "id": "Formatting_of_log_message_using_bgaFormatText"
-    },
-    {
-      "level": 3,
-      "text": "Automata player panel",
-      "id": "Automata_player_panel"
-    },
-    {
-      "level": 3,
-      "text": "New JS libraries",
-      "id": "New_JS_libraries"
-    },
-    {
-      "level": 3,
-      "text": "CSS imports",
-      "id": "CSS_imports"
-    },
-    {
-      "level": 3,
-      "text": "Future support of dark mode",
-      "id": "Future_support_of_dark_mode"
-    }
-  ],
-  "content": [
-    {
-      "type": "paragraph",
-      "text": "This page is only for people who started long time ago and now need to re-write older projects into more modern versions. Also if you trying to fix older game you may have to look here."
-    },
-    {
-      "type": "paragraph",
-      "text": "See announcement here https://studio.boardgamearena.com/forum/viewtopic.php?f=12&t=45248"
-    },
-    {
-      "type": "paragraph",
-      "text": "gameoptions.inc.php => gameoptions.json, gamepreferences.json"
-    },
-    {
-      "type": "paragraph",
-      "text": "Now options and preferences are 2 json files, follow Migration steps on this page https://en.doc.boardgamearena.com/Options_and_preferences:_gameoptions.json,_gamepreferences.json#Migration"
-    },
-    {
-      "type": "paragraph",
-      "text": "When building the game with this file you will see deprecation warning: The file gameoptions.inc.php is deprecated. click \"Reload game options configuration\" to generate the JSON content you can then put on a gameoptions.json and gamepreferences.json file. Then you can safely delete the gameoptions.inc.php file."
-    },
-    {
-      "type": "paragraph",
-      "text": "Move and refactor, see section Namespaced game class"
-    },
-    {
-      "type": "paragraph",
-      "text": "See section Autowire game actions"
-    },
-    {
-      "type": "paragraph",
-      "text": "See section Removal of view and template"
-    },
-    {
-      "type": "paragraph",
-      "text": "File still there. Deprecated keys designer , artist , year , presentation , tags , complexity , strategy , luck , diplomacy , is_beta are no longer in use. Please remove these keys and use the Game Metadata Manager instead."
-    },
-    {
-      "type": "paragraph",
-      "text": "material.inc.php => optional"
-    },
-    {
-      "type": "paragraph",
-      "text": "states.inc.php => modules/php/States"
-    },
-    {
-      "type": "paragraph",
-      "text": "stats.inc.php => stats.json"
-    },
-    {
-      "type": "paragraph",
-      "text": "<gamename>.js"
-    },
-    {
-      "type": "paragraph",
-      "text": "A new _ide_helper.php file is now provided in every project dir, allowing IDE to provide syntax error highlighting for the framework functions. This file is regularly updated to match the latest framework updates."
-    },
-    {
-      "type": "paragraph",
-      "text": "📌 Sync the files from the FTP dir to your local copy to benefit from it. Most of the IDE like Visual Studio Code should handle _ide_helper.php if you already followed https://en.doc.boardgamearena.com/Setting_up_BGA_Development_environment_using_VSCode"
-    },
-    {
-      "type": "paragraph",
-      "text": "Access to user preferences and listener: https://en.doc.boardgamearena.com/Game_interface_logic:_yourgamename.js#User_preferences"
-    },
-    {
-      "type": "list",
-      "ordered": false,
-      "items": [
+      "heading": null,
+      "content": [
         {
-          "text": "If you had a custom function called `setupPreferences()` reading the <select> values, you can now use `onGameUserPreferenceChanged` instead.",
-          "nested": null
+          "type": "paragraph",
+          "text": "This page is only for people who started long time ago and now need to re-write older projects into more modern versions. Also if you trying to fix older game you may have to look here."
+        }
+      ]
+    },
+    {
+      "heading": {
+        "level": 2,
+        "text": "Overview",
+        "id": "Overview"
+      },
+      "content": [
+        {
+          "type": "paragraph",
+          "text": "See announcement here https://studio.boardgamearena.com/forum/viewtopic.php?f=12&t=45248"
+        }
+      ]
+    },
+    {
+      "heading": {
+        "level": 2,
+        "text": "Structural changes",
+        "id": "Structural_changes"
+      },
+      "content": [
+        {
+          "type": "paragraph",
+          "text": "gameoptions.inc.php => gameoptions.json, gamepreferences.json"
         },
         {
-          "text": "If you had a copy of the user preferences on a DB table, it's not needed anymore. Remove all support of writing to this table. Replace access to this table with",
-          "nested": null
-        }
-      ]
-    },
-    {
-      "type": "code",
-      "language": null,
-      "text": "       $pref = $this->userPreferences->get($playerId, $prefCode) ?? $defaultValue;"
-    },
-    {
-      "type": "list",
-      "ordered": false,
-      "items": [
-        {
-          "text": "If you used $this->player_preferences - replace the use with use of proper API",
-          "nested": null
-        }
-      ]
-    },
-    {
-      "type": "paragraph",
-      "text": "A reload is not needed anymore to apply cssPref on a user preference change."
-    },
-    {
-      "type": "paragraph",
-      "text": "New functions to access the table options (game options) without hassle"
-    },
-    {
-      "type": "paragraph",
-      "text": "📌"
-    },
-    {
-      "type": "list",
-      "ordered": false,
-      "items": [
-        {
-          "text": "Remove declaration of game options  from \" `initGameStateLabels` \"",
-          "nested": null
+          "type": "paragraph",
+          "text": "Now options and preferences are 2 json files, follow Migration steps on this page https://en.doc.boardgamearena.com/Options_and_preferences:_gameoptions.json,_gamepreferences.json#Migration"
         },
         {
-          "text": "Instead of using `$this->getGameStateValue` or `$this->gamestate->table_globals` use",
-          "nested": null
-        }
-      ]
-    },
-    {
-      "type": "code",
-      "language": null,
-      "text": "$this->tableOptions->get(int $optionId)"
-    },
-    {
-      "type": "paragraph",
-      "text": "This new object can also return the Real-time/Turn-based setting: https://en.doc.boardgamearena.com/Main_game_logic:_Game.php#Reflexion_time"
-    },
-    {
-      "type": "paragraph",
-      "text": "Oct 2025: The migration was made from PHP7.4 to PHP8.4 new syntax and functions."
-    },
-    {
-      "type": "paragraph",
-      "text": "📌"
-    },
-    {
-      "type": "list",
-      "ordered": false,
-      "items": [
-        {
-          "text": "Replace all `self::` to `$this->` - The new project template has been updated to remove this bad practice (that may be unsupported in a future PHP version)",
-          "nested": null
-        }
-      ]
-    },
-    {
-      "type": "list",
-      "ordered": false,
-      "items": [
-        {
-          "text": "Add `declare(strict_types=1);` to all .php files and fix compiler warnings (if you use IDE it will detect it before upload).",
-          "nested": null
-        }
-      ]
-    },
-    {
-      "type": "paragraph",
-      "text": "Game class from <gamename>.game.php are now namespaced (and moved to modules/php/Game.php) and can autoload other classes of the same namespace"
-    },
-    {
-      "type": "paragraph",
-      "text": "📌 The class file should be moved to modules/php/Game.php and adopted"
-    },
-    {
-      "type": "list",
-      "ordered": false,
-      "items": [
-        {
-          "text": "Move YourGameName.game.php to modules/php (create this dir if does not exists)",
-          "nested": null
+          "type": "paragraph",
+          "text": "When building the game with this file you will see deprecation warning: The file gameoptions.inc.php is deprecated. click \"Reload game options configuration\" to generate the JSON content you can then put on a gameoptions.json and gamepreferences.json file. Then you can safely delete the gameoptions.inc.php file."
         },
         {
-          "text": "Rename to Game.php",
-          "nested": null
+          "type": "paragraph",
+          "text": "Move and refactor, see section Namespaced game class"
         },
         {
-          "text": "Find the place below the copyright and add",
-          "nested": null
-        }
-      ]
-    },
-    {
-      "type": "code",
-      "language": null,
-      "text": "     declare(strict_types=1);\n     namespace Bga\\Games\\YourGameName;"
-    },
-    {
-      "type": "list",
-      "ordered": false,
-      "items": [
-        {
-          "text": "Remove",
-          "nested": null
-        }
-      ]
-    },
-    {
-      "type": "code",
-      "language": null,
-      "text": " require_once APP_GAMEMODULE_PATH . \"module/table/table.game.php\";"
-    },
-    {
-      "type": "list",
-      "ordered": false,
-      "items": [
-        {
-          "text": "Find you class declaration change YouGameName to Game (verbatim) and change extends",
-          "nested": null
-        }
-      ]
-    },
-    {
-      "type": "code",
-      "language": null,
-      "text": "  class Game extends \\Bga\\GameFramework\\Table"
-    },
-    {
-      "type": "list",
-      "ordered": false,
-      "items": [
-        {
-          "text": "All references to non-namespaced classes in this file should be defined on top of the file with \"use\", for example \"use \\BgaUserException;\" as it is this non-namespaced exception is used in the zombieTurn function.",
-          "nested": null
-        }
-      ]
-    },
-    {
-      "type": "list",
-      "ordered": false,
-      "items": [
-        {
-          "text": "All includes with relative path will need to be updated too.",
-          "nested": null
-        }
-      ]
-    },
-    {
-      "type": "list",
-      "ordered": false,
-      "items": [
-        {
-          "text": "The material.inc.php to have be moved and included directly (see below)",
-          "nested": null
-        }
-      ]
-    },
-    {
-      "type": "paragraph",
-      "text": "Multiple functions of \"Table\" base class are now deprecated, see how to migrate in corresponding section"
-    },
-    {
-      "type": "list",
-      "ordered": false,
-      "items": [
-        {
-          "text": "notifyAllPlayers",
-          "nested": null
+          "type": "paragraph",
+          "text": "See section Autowire game actions"
         },
         {
-          "text": "notifyPlayer",
-          "nested": null
+          "type": "paragraph",
+          "text": "See section Removal of view and template"
         },
         {
-          "text": "mysql_fetch_assoc",
-          "nested": {
-            "type": "list",
-            "ordered": false,
-            "items": [
+          "type": "paragraph",
+          "text": "File still there. Deprecated keys designer , artist , year , presentation , tags , complexity , strategy , luck , diplomacy , is_beta are no longer in use. Please remove these keys and use the Game Metadata Manager instead."
+        },
+        {
+          "type": "paragraph",
+          "text": "material.inc.php => optional"
+        },
+        {
+          "type": "paragraph",
+          "text": "states.inc.php => modules/php/States"
+        },
+        {
+          "type": "paragraph",
+          "text": "stats.inc.php => stats.json"
+        },
+        {
+          "type": "paragraph",
+          "text": "<gamename>.js"
+        }
+      ]
+    },
+    {
+      "heading": {
+        "level": 2,
+        "text": "IDE Support",
+        "id": "IDE_Support"
+      },
+      "content": [
+        {
+          "type": "paragraph",
+          "text": "A new _ide_helper.php file is now provided in every project dir, allowing IDE to provide syntax error highlighting for the framework functions. This file is regularly updated to match the latest framework updates."
+        },
+        {
+          "type": "paragraph",
+          "text": "📌 Sync the files from the FTP dir to your local copy to benefit from it. Most of the IDE like Visual Studio Code should handle _ide_helper.php if you already followed https://en.doc.boardgamearena.com/Setting_up_BGA_Development_environment_using_VSCode"
+        }
+      ]
+    },
+    {
+      "heading": {
+        "level": 2,
+        "text": "Game configuration",
+        "id": "Game_configuration"
+      },
+      "content": []
+    },
+    {
+      "heading": {
+        "level": 3,
+        "text": "User preferences",
+        "id": "User_preferences"
+      },
+      "content": [
+        {
+          "type": "paragraph",
+          "text": "Access to user preferences and listener: https://en.doc.boardgamearena.com/Game_interface_logic:_yourgamename.js#User_preferences"
+        },
+        {
+          "type": "list",
+          "ordered": false,
+          "items": [
+            {
+              "text": "If you had a custom function called `setupPreferences()` reading the <select> values, you can now use `onGameUserPreferenceChanged` instead.",
+              "nested": null
+            },
+            {
+              "text": "If you had a copy of the user preferences on a DB table, it's not needed anymore. Remove all support of writing to this table. Replace access to this table with",
+              "nested": null
+            }
+          ]
+        },
+        {
+          "type": "code",
+          "language": null,
+          "text": "       $pref = $this->userPreferences->get($playerId, $prefCode) ?? $defaultValue;"
+        },
+        {
+          "type": "list",
+          "ordered": false,
+          "items": [
+            {
+              "text": "If you used $this->player_preferences - replace the use with use of proper API",
+              "nested": null
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "heading": {
+        "level": 4,
+        "text": "Instant cssPref on user preferences",
+        "id": "Instant_cssPref_on_user_preferences"
+      },
+      "content": [
+        {
+          "type": "paragraph",
+          "text": "A reload is not needed anymore to apply cssPref on a user preference change."
+        }
+      ]
+    },
+    {
+      "heading": {
+        "level": 3,
+        "text": "Game options",
+        "id": "Game_options"
+      },
+      "content": [
+        {
+          "type": "paragraph",
+          "text": "New functions to access the table options (game options) without hassle"
+        },
+        {
+          "type": "paragraph",
+          "text": "📌"
+        },
+        {
+          "type": "list",
+          "ordered": false,
+          "items": [
+            {
+              "text": "Remove declaration of game options  from \" `initGameStateLabels` \"",
+              "nested": null
+            },
+            {
+              "text": "Instead of using `$this->getGameStateValue` or `$this->gamestate->table_globals` use",
+              "nested": null
+            }
+          ]
+        },
+        {
+          "type": "code",
+          "language": null,
+          "text": "$this->tableOptions->get(int $optionId)"
+        },
+        {
+          "type": "paragraph",
+          "text": "This new object can also return the Real-time/Turn-based setting: https://en.doc.boardgamearena.com/Main_game_logic:_Game.php#Reflexion_time"
+        }
+      ]
+    },
+    {
+      "heading": {
+        "level": 2,
+        "text": "Server parts (php, sql, etc)",
+        "id": "Server_parts_.28php.2C_sql.2C_etc.29"
+      },
+      "content": []
+    },
+    {
+      "heading": {
+        "level": 3,
+        "text": "PHP migration",
+        "id": "PHP_migration"
+      },
+      "content": [
+        {
+          "type": "paragraph",
+          "text": "Oct 2025: The migration was made from PHP7.4 to PHP8.4 new syntax and functions."
+        },
+        {
+          "type": "paragraph",
+          "text": "📌"
+        },
+        {
+          "type": "list",
+          "ordered": false,
+          "items": [
+            {
+              "text": "Replace all `self::` to `$this->` - The new project template has been updated to remove this bad practice (that may be unsupported in a future PHP version)",
+              "nested": null
+            }
+          ]
+        },
+        {
+          "type": "list",
+          "ordered": false,
+          "items": [
+            {
+              "text": "Add `declare(strict_types=1);` to all .php files and fix compiler warnings (if you use IDE it will detect it before upload).",
+              "nested": null
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "heading": {
+        "level": 3,
+        "text": "Namespaced game class",
+        "id": "Namespaced_game_class"
+      },
+      "content": [
+        {
+          "type": "paragraph",
+          "text": "Game class from <gamename>.game.php are now namespaced (and moved to modules/php/Game.php) and can autoload other classes of the same namespace"
+        },
+        {
+          "type": "paragraph",
+          "text": "📌 The class file should be moved to modules/php/Game.php and adopted"
+        },
+        {
+          "type": "list",
+          "ordered": false,
+          "items": [
+            {
+              "text": "Move YourGameName.game.php to modules/php (create this dir if does not exists)",
+              "nested": null
+            },
+            {
+              "text": "Rename to Game.php",
+              "nested": null
+            },
+            {
+              "text": "Find the place below the copyright and add",
+              "nested": null
+            }
+          ]
+        },
+        {
+          "type": "code",
+          "language": null,
+          "text": "     declare(strict_types=1);\n     namespace Bga\\Games\\YourGameName;"
+        },
+        {
+          "type": "list",
+          "ordered": false,
+          "items": [
+            {
+              "text": "Remove",
+              "nested": null
+            }
+          ]
+        },
+        {
+          "type": "code",
+          "language": null,
+          "text": " require_once APP_GAMEMODULE_PATH . \"module/table/table.game.php\";"
+        },
+        {
+          "type": "list",
+          "ordered": false,
+          "items": [
+            {
+              "text": "Find you class declaration change YouGameName to Game (verbatim) and change extends",
+              "nested": null
+            }
+          ]
+        },
+        {
+          "type": "code",
+          "language": null,
+          "text": "  class Game extends \\Bga\\GameFramework\\Table"
+        },
+        {
+          "type": "list",
+          "ordered": false,
+          "items": [
+            {
+              "text": "All references to non-namespaced classes in this file should be defined on top of the file with \"use\", for example \"use \\BgaUserException;\" as it is this non-namespaced exception is used in the zombieTurn function.",
+              "nested": null
+            }
+          ]
+        },
+        {
+          "type": "list",
+          "ordered": false,
+          "items": [
+            {
+              "text": "All includes with relative path will need to be updated too.",
+              "nested": null
+            }
+          ]
+        },
+        {
+          "type": "list",
+          "ordered": false,
+          "items": [
+            {
+              "text": "The material.inc.php to have be moved and included directly (see below)",
+              "nested": null
+            }
+          ]
+        },
+        {
+          "type": "paragraph",
+          "text": "Multiple functions of \"Table\" base class are now deprecated, see how to migrate in corresponding section"
+        },
+        {
+          "type": "list",
+          "ordered": false,
+          "items": [
+            {
+              "text": "notifyAllPlayers",
+              "nested": null
+            },
+            {
+              "text": "notifyPlayer",
+              "nested": null
+            },
+            {
+              "text": "mysql_fetch_assoc",
+              "nested": {
+                "type": "list",
+                "ordered": false,
+                "items": [
+                  {
+                    "text": "Deprecation warning:  mysql_fetch_assoc function detected. It is deprecated, and may be removed someday. Please replace it by standard framework DB functions!",
+                    "nested": null
+                  }
+                ]
+              }
+            },
+            {
+              "text": "Table (class access without namespace)",
+              "nested": null
+            },
+            {
+              "text": "isMutiactiveState (misspelled version)",
+              "nested": null
+            },
+            {
+              "text": "State management functions (getState, state, getPrivateState)",
+              "nested": null
+            },
+            {
+              "text": "Player information functions (getActivePlayerName, getCurrentPlayerName, getCurrentPlayerColor)",
+              "nested": null
+            },
+            {
+              "text": "Game mode functions (isAsync, isRealtime)",
+              "nested": null
+            },
+            {
+              "text": "Exception classes (feException, BgaUserException, etc.)",
+              "nested": null
+            },
+            {
+              "text": "...",
+              "nested": null
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "heading": {
+        "level": 3,
+        "text": "Material",
+        "id": "Material"
+      },
+      "content": [
+        {
+          "type": "paragraph",
+          "text": "Material file material.inc.php is now optional. You can define all your material directly in php class. If you still like to keep it, and using namespaced Game.php you have to move it to subfolder and include directly Game material description: material.inc.php#Move it to modules/php"
+        }
+      ]
+    },
+    {
+      "heading": {
+        "level": 3,
+        "text": "Autowire game actions",
+        "id": "Autowire_game_actions"
+      },
+      "content": [
+        {
+          "type": "paragraph",
+          "text": "Simplify the action calls by removing <gamename>.action.php file"
+        },
+        {
+          "type": "paragraph",
+          "text": "📌 Autowired actions needs to start with \"act\", so it's risky to change them (if you change all actions names in the states.php, game, action and JS file, Real-time players will call the old name until they refresh. So, it needs to be done in two steps with duplicates on back side, or to be deployed when there is no Realt-time table running."
+        },
+        {
+          "type": "paragraph",
+          "text": "Deprecation warning: Actions detected on .action.php file. You can now use Auto-wired actions to avoid pass-through functions in .action.php file. If you transform your project to use only auto-wired actions, you can then delete the .action.php file."
+        }
+      ]
+    },
+    {
+      "heading": {
+        "level": 3,
+        "text": "Notifications",
+        "id": "Notifications"
+      },
+      "content": [
+        {
+          "type": "paragraph",
+          "text": "Functions notifyAllPlayers and notifyPlayer from main game.php are deprecated"
+        }
+      ]
+    },
+    {
+      "heading": {
+        "level": 4,
+        "text": "Notification Decorators",
+        "id": "Notification_Decorators"
+      },
+      "content": [
+        {
+          "type": "paragraph",
+          "text": "New notify function that handles decorators, reducing the duplicate code on notification args."
+        }
+      ]
+    },
+    {
+      "heading": {
+        "level": 4,
+        "text": "Notification args consistency",
+        "id": "Notification_args_consistency"
+      },
+      "content": [
+        {
+          "type": "paragraph",
+          "text": "Previously, when you sent an arg that was transformed by format_string_recursive or bgaFormatText, the args object was mutated and you got the transformed value in the notif_ handler."
+        },
+        {
+          "type": "code",
+          "language": null,
+          "text": "[\n 'roundNumber' => $roundNumber, // number, to update the round counter\n 'round_number' => $roundNumber, // number that will be transformed to string by bgaFormatText, when shown in bold in the logs\n]"
+        },
+        {
+          "type": "paragraph",
+          "text": "📌 Do not duplicate the value, as the notif_ handler will now get unmutated args"
+        }
+      ]
+    },
+    {
+      "heading": {
+        "level": 3,
+        "text": "Deprecated getGameName",
+        "id": "Deprecated_getGameName"
+      },
+      "content": [
+        {
+          "type": "paragraph",
+          "text": "The getGameName() function is now useless in the Game PHP file and can be deleted"
+        },
+        {
+          "type": "paragraph",
+          "text": "Deprecation warning: getGameName function detected. It is deprecated. You can delete it, it is not used anymore"
+        }
+      ]
+    },
+    {
+      "heading": {
+        "level": 3,
+        "text": "State Management Functions",
+        "id": "State_Management_Functions"
+      },
+      "content": [
+        {
+          "type": "paragraph",
+          "text": "Several state-related functions have been deprecated in favor of more explicit methods:"
+        },
+        {
+          "type": "list",
+          "ordered": false,
+          "items": [
+            {
+              "text": "Replace `$this->gamestate->state()` with `$this->getCurrentMainState()` or `$this->getCurrentState(int $playerId)`",
+              "nested": null
+            },
+            {
+              "text": "Replace `$this->getState()` with `$this->getCurrentMainStateId()` or `$this->getCurrentStateId(int $playerId)`",
+              "nested": null
+            },
+            {
+              "text": "Replace `$this->getPrivateState($playerId)` with `$this->getCurrentState($playerId)`",
+              "nested": null
+            },
+            {
+              "text": "Replace `$this->gamestate->states` access with `$this->getCurrentMainState()` or `$this->getCurrentState(int $playerId)`",
+              "nested": null
+            },
+            {
+              "text": "Replace `$this->isMutiactiveState()` (misspelled) with `$this->isMultiactiveState()`",
+              "nested": null
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "heading": {
+        "level": 3,
+        "text": "Player Information Functions",
+        "id": "Player_Information_Functions"
+      },
+      "content": [
+        {
+          "type": "paragraph",
+          "text": "Several functions for getting player information are deprecated in favor of more flexible methods:"
+        },
+        {
+          "type": "list",
+          "ordered": false,
+          "items": [
+            {
+              "text": "Replace `$this->getActivePlayerName()` with `$this->getPlayerNameById($activePlayerId)` using $activePlayerId magic parameter",
+              "nested": null
+            },
+            {
+              "text": "Replace `$this->getCurrentPlayerName()` with `$this->getPlayerNameById($currentPlayerId)` using $currentPlayerId magic parameter",
+              "nested": null
+            },
+            {
+              "text": "Replace `$this->getCurrentPlayerColor()` with `$this->getPlayerColorById($currentPlayerId)` using $currentPlayerId magic parameter",
+              "nested": null
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "heading": {
+        "level": 3,
+        "text": "Game Mode Functions",
+        "id": "Game_Mode_Functions"
+      },
+      "content": [
+        {
+          "type": "paragraph",
+          "text": "Functions to check game mode (turn-based vs real-time) have been moved to tableOptions:"
+        },
+        {
+          "type": "list",
+          "ordered": false,
+          "items": [
+            {
+              "text": "Replace `$this->isAsync()` with `$this->tableOptions->isTurnBased()`",
+              "nested": null
+            },
+            {
+              "text": "Replace `$this->isRealtime()` with `$this->tableOptions->isRealTime()`",
+              "nested": null
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "heading": {
+        "level": 3,
+        "text": "Exception Classes",
+        "id": "Exception_Classes"
+      },
+      "content": [
+        {
+          "type": "paragraph",
+          "text": "Old exception classes are deprecated in favor of namespaced versions:"
+        },
+        {
+          "type": "list",
+          "ordered": false,
+          "items": [
+            {
+              "text": "Replace `feException` with `\\Bga\\GameFramework\\UserException` , `\\Bga\\GameFramework\\SystemException` , or `\\Bga\\GameFramework\\VisibleSystemException` depending on your need",
+              "nested": null
+            },
+            {
+              "text": "Replace `BgaUserException` with `\\Bga\\GameFramework\\UserException`",
+              "nested": null
+            },
+            {
+              "text": "Replace `BgaSystemException` with `\\Bga\\GameFramework\\SystemException`",
+              "nested": null
+            },
+            {
+              "text": "Replace `BgaVisibleSystemException` with `\\Bga\\GameFramework\\VisibleSystemException`",
+              "nested": null
+            },
+            {
+              "text": "Remove usage of `FEX_NOCODE` constant - new exception classes don't need error codes",
+              "nested": null
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "heading": {
+        "level": 3,
+        "text": "Namespace for Base Classes",
+        "id": "Namespace_for_Base_Classes"
+      },
+      "content": [
+        {
+          "type": "paragraph",
+          "text": "Old class references without namespaces are deprecated:"
+        },
+        {
+          "type": "list",
+          "ordered": false,
+          "items": [
+            {
+              "text": "Replace `extends Table` with `extends \\Bga\\GameFramework\\Table`",
+              "nested": null
+            },
+            {
+              "text": "Replace `Deck` with `\\Bga\\GameFramework\\Components\\Deck`",
+              "nested": null
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "heading": {
+        "level": 3,
+        "text": "Deprecated APP_* Classes",
+        "id": "Deprecated_APP_.2A_Classes"
+      },
+      "content": [
+        {
+          "type": "paragraph",
+          "text": "Deprecation warning:"
+        },
+        {
+          "type": "paragraph",
+          "text": "We recommend you to use composition instead of extend:"
+        },
+        {
+          "type": "paragraph",
+          "text": "If it's too complicated, at least replace APP_Object/APP_GameClass by APP_DbObject as APP_Object/APP_GameClass may be removed soon and don't contain anything more than APP_DbObject."
+        },
+        {
+          "type": "code",
+          "language": null,
+          "text": "class Tokens extends APP_GameClass {  "
+        },
+        {
+          "type": "paragraph",
+          "text": "becomes:"
+        },
+        {
+          "type": "code",
+          "language": null,
+          "text": "class Tokens extends \\APP_DbObject { "
+        }
+      ]
+    },
+    {
+      "heading": {
+        "level": 3,
+        "text": "Deprecated translation functions",
+        "id": "Deprecated_translation_functions"
+      },
+      "content": [
+        {
+          "type": "paragraph",
+          "text": "On php side translation story is simplified"
+        },
+        {
+          "type": "list",
+          "ordered": false,
+          "items": [
+            {
+              "text": "totranslate function is not longer needed and can be replaced with clienttranslate",
+              "nested": null
+            },
+            {
+              "text": "$this->_() (or self::_()) can also be replaced with clienttranslate when use for non parameterized strings (but not in deprecated <game>.view.php file):",
+              "nested": null
+            }
+          ]
+        },
+        {
+          "type": "code",
+          "language": null,
+          "text": " throw new UserException(clienttranslate('You must choose 3 cards'));"
+        },
+        {
+          "type": "paragraph",
+          "text": "UserException is also handling parameterized strings like the notify functions."
+        },
+        {
+          "type": "paragraph",
+          "text": "See Translations"
+        }
+      ]
+    },
+    {
+      "heading": {
+        "level": 3,
+        "text": "Deprecated getNew",
+        "id": "Deprecated_getNew"
+      },
+      "content": [
+        {
+          "type": "paragraph",
+          "text": "Function getNew that was only used to create new deck object is now deprecated, use $this->deckFactory->createDeck( ) instead"
+        }
+      ]
+    },
+    {
+      "heading": {
+        "level": 3,
+        "text": "Stats",
+        "id": "Stats"
+      },
+      "content": [
+        {
+          "type": "paragraph",
+          "text": "The stats function such as initStat, setStat and getStat are also deprecated in favor of access via the objects `$this->tableStats and $this->playerStats` See https://en.doc.boardgamearena.com/index.php?title=Main_game_logic:_Game.php#Game_statistics"
+        }
+      ]
+    },
+    {
+      "heading": {
+        "level": 3,
+        "text": "Legacy",
+        "id": "Legacy"
+      },
+      "content": [
+        {
+          "type": "paragraph",
+          "text": "New object to access the legacy functions, removing the need to manually decode the JSON result when getting the values."
+        },
+        {
+          "type": "paragraph",
+          "text": "📌 Use $this->legacy->actionname instead of $this->actionnameLegacy and remove JSON decoding on getters"
+        }
+      ]
+    },
+    {
+      "heading": {
+        "level": 3,
+        "text": "Any Globals",
+        "id": "Any_Globals"
+      },
+      "content": [
+        {
+          "type": "paragraph",
+          "text": "New database table and API to handle any type variables instead of numerical values only"
+        },
+        {
+          "type": "paragraph",
+          "text": "📌 If you had custom tables just for that you can drop them and use standard table"
+        }
+      ]
+    },
+    {
+      "heading": {
+        "level": 3,
+        "text": "Server Counters",
+        "id": "Server_Counters"
+      },
+      "content": [
+        {
+          "type": "paragraph",
+          "text": "2 new counter classes have been added to easily handle the various counters your game might have. You also have 2 prebuilt counters: playerScore and playerScoreAux, to handle the scoring values, so you don't need to update manually the DB when setting the scores."
+        },
+        {
+          "type": "paragraph",
+          "text": "📌 Replace setting player_score/player_score_aux using db queries with use of $this->playerScore and $this->playerScoreAux. Remove the notifications, or part of notifications, updating the player panel score counter (if you had some custom notification you may still need them)."
+        }
+      ]
+    },
+    {
+      "heading": {
+        "level": 3,
+        "text": "Updated Zombie Mode documentation and recommendations",
+        "id": "Updated_Zombie_Mode_documentation_and_recommendations"
+      },
+      "content": [
+        {
+          "type": "paragraph",
+          "text": "We now recommend making the zombie player playing randomly, instead of passing as a default. A new \"Zombie Mode level\" field has been added to the Game Metadata Manager, to indicated the Zombie Mode you implemented in your game."
+        }
+      ]
+    },
+    {
+      "heading": {
+        "level": 3,
+        "text": "View and template files: deprecated",
+        "id": "View_and_template_files:_deprecated"
+      },
+      "content": [
+        {
+          "type": "paragraph",
+          "text": "<gamename>.view.php, <gamename>_<gamename>.tpl are now optional and are not generated anymore on a new project. The new project templates demonstrate how to work without them."
+        },
+        {
+          "type": "code",
+          "language": null,
+          "text": "this.getGameAreaElement().insertAdjacentHTML('beforeend', `\n  <span>${_('My translated text')}</span><div id=\"player-tables\"></div>\n`);\n "
+        },
+        {
+          "type": "paragraph",
+          "text": "See more in #Access template elements"
+        }
+      ]
+    },
+    {
+      "heading": {
+        "level": 4,
+        "text": "Forbid access to global BGA variables and direct DB access on action/view files",
+        "id": "Forbid_access_to_global_BGA_variables_and_direct_DB_access_on_action.2Fview_files"
+      },
+      "content": [
+        {
+          "type": "paragraph",
+          "text": "If you did not remove action and view files, you cannot longer use some stuff in them, such $g_user global and db access functions."
+        },
+        {
+          "type": "paragraph",
+          "text": "📌 Replace $g_user->get_id() by $this-> getCurrentPlayerId()"
+        }
+      ]
+    },
+    {
+      "heading": {
+        "level": 3,
+        "text": "States",
+        "id": "States"
+      },
+      "content": [
+        {
+          "type": "paragraph",
+          "text": "There is now a way to describe each game state in a State class, that will handle all logic and description of the state. It helps splitting the code into multiple files, instead of one big Game.php file."
+        },
+        {
+          "type": "paragraph",
+          "text": "📌 Create a State class for each state of the game (except 1 and 99 if they are still described in states.inc.php), move the state definition in it, and adapt the \"st\", \"arg\", \"actXXX\" and \"zombie\" functions in the class. When all classes are migrated, you can remove the states.inc.php file in the FTP folder."
+        }
+      ]
+    },
+    {
+      "heading": {
+        "level": 4,
+        "text": "If still using states.php",
+        "id": "If_still_using_states.php"
+      },
+      "content": [
+        {
+          "type": "paragraph",
+          "text": "The new class GameStateBuilder helps you build the state machine, allowing auto-completion, and avoid typo errors on state types. Complete example: 📌 https://en.doc.boardgamearena.com/Your_game_state_machine:_states.inc.php"
+        },
+        {
+          "type": "paragraph",
+          "text": "📌 Replace the array definition by GameStateBuilder use. You can remove the declaration of states 1 and 99."
+        }
+      ]
+    },
+    {
+      "heading": {
+        "level": 2,
+        "text": "Client parts (js, html, css)",
+        "id": "Client_parts_.28js.2C_html.2C_css.29"
+      },
+      "content": []
+    },
+    {
+      "heading": {
+        "level": 3,
+        "text": "Main class",
+        "id": "Main_class"
+      },
+      "content": [
+        {
+          "type": "paragraph",
+          "text": "File is moved from yourgamename.js to modules/js/Game.js and has a different structure https://en.doc.boardgamearena.com/Game_interface_logic:_Game.js It won't be easy to convert this, maybe best just to use old one which still works, but move when you write a new game."
+        }
+      ]
+    },
+    {
+      "heading": {
+        "level": 3,
+        "text": "Deprecated ajaxcall",
+        "id": "Deprecated_ajaxcall"
+      },
+      "content": [
+        {
+          "type": "paragraph",
+          "text": "Introduced function bgaPerformAction to replace ajaxcall and checkAction combination, with a simpler syntax:"
+        },
+        {
+          "type": "paragraph",
+          "text": "Deprecation warning: The `ajaxcall` function is deprecated, check the `bgaPerformAction` function ."
+        }
+      ]
+    },
+    {
+      "heading": {
+        "level": 3,
+        "text": "New this.bga.* API Structure",
+        "id": "New_this.bga..2A_API_Structure"
+      },
+      "content": [
+        {
+          "type": "paragraph",
+          "text": "Many client-side functions have been reorganized into namespaced objects under `this.bga` for better organization and discoverability:"
+        }
+      ]
+    },
+    {
+      "heading": {
+        "level": 4,
+        "text": "Player Functions (this.bga.players)",
+        "id": "Player_Functions_.28this.bga.players.29"
+      },
+      "content": [
+        {
+          "type": "paragraph",
+          "text": "📌"
+        },
+        {
+          "type": "list",
+          "ordered": false,
+          "items": [
+            {
+              "text": "Replace `this.isSpectator` with `this.bga.players.isCurrentPlayerSpectator()`",
+              "nested": null
+            },
+            {
+              "text": "Replace `this.isCurrentPlayerActive()` with `this.bga.players.isCurrentPlayerActive()`",
+              "nested": null
+            },
+            {
+              "text": "Replace `this.isPlayerActive(player_id)` with `this.bga.players.isPlayerActive(player_id)`",
+              "nested": null
+            },
+            {
+              "text": "Replace `this.getActivePlayers()` with `this.bga.players.getActivePlayerIds()`",
+              "nested": null
+            },
+            {
+              "text": "Replace `this.getActivePlayerId()` with `this.bga.players.getActivePlayerId()`",
+              "nested": null
+            },
+            {
+              "text": "Replace `this.getFormattedPlayerName(...)` with `this.bga.players.getFormattedPlayerName(...)`",
+              "nested": null
+            },
+            {
+              "text": "Replace `this.addAutomataPlayerPanel(...)` with `this.bga.players.addAutomataPlayerPanel(...)`",
+              "nested": null
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "heading": {
+        "level": 4,
+        "text": "State Functions (this.bga.states)",
+        "id": "State_Functions_.28this.bga.states.29"
+      },
+      "content": [
+        {
+          "type": "paragraph",
+          "text": "📌"
+        },
+        {
+          "type": "list",
+          "ordered": false,
+          "items": [
+            {
+              "text": "Replace `this.on_client_state` with `this.bga.states.isOnClientState()`",
+              "nested": null
+            },
+            {
+              "text": "Replace `this.setClientState(stateName, args)` with `this.bga.states.setClientState(stateName, args)`",
+              "nested": null
+            },
+            {
+              "text": "Replace `this.restoreServerGameState()` with `this.bga.states.restoreServerGameState()`",
+              "nested": null
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "heading": {
+        "level": 4,
+        "text": "Status Bar Functions (this.bga.statusBar)",
+        "id": "Status_Bar_Functions_.28this.bga.statusBar.29"
+      },
+      "content": [
+        {
+          "type": "paragraph",
+          "text": "📌"
+        },
+        {
+          "type": "list",
+          "ordered": false,
+          "items": [
+            {
+              "text": "Replace `this.updatePageTitle()` with `this.bga.statusBar.setTitle(title, args)`",
+              "nested": null
+            },
+            {
+              "text": "Replace `this.removeActionButtons()` with `this.bga.statusBar.removeActionButtons()`",
+              "nested": null
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "heading": {
+        "level": 4,
+        "text": "Action Functions (this.bga.actions)",
+        "id": "Action_Functions_.28this.bga.actions.29"
+      },
+      "content": [
+        {
+          "type": "paragraph",
+          "text": "📌"
+        },
+        {
+          "type": "list",
+          "ordered": false,
+          "items": [
+            {
+              "text": "Replace `this.checkAction(action, nomessage)` with `this.bga.actions.checkAction(action, nomessage)`",
+              "nested": null
+            },
+            {
+              "text": "Replace `this.checkPossibleActions(action)` with `this.bga.actions.checkPossibleActions(action)`",
+              "nested": null
+            },
+            {
+              "text": "Replace `this.bgaPerformAction(...)` with `this.bga.actions.performAction(...)` - Note: catch result is now `{ message, args }` instead of just `message`",
+              "nested": null
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "heading": {
+        "level": 4,
+        "text": "Dialog Functions (this.bga.dialogs)",
+        "id": "Dialog_Functions_.28this.bga.dialogs.29"
+      },
+      "content": [
+        {
+          "type": "paragraph",
+          "text": "📌"
+        },
+        {
+          "type": "list",
+          "ordered": false,
+          "items": [
+            {
+              "text": "Replace `this.showMoveUnauthorized()` with `this.bga.dialogs.showMoveUnauthorized()`",
+              "nested": null
+            },
+            {
+              "text": "Replace `this.showMessage(msg, type)` with `this.bga.dialogs.showMessage(msg, type)`",
+              "nested": null
+            },
+            {
+              "text": "Replace `this.confirmationDialog(text, callback, callback_cancel)` with `this.bga.dialogs.confirmation(text)` - Note: now returns a Promise instead of using callbacks",
+              "nested": null
+            },
+            {
+              "text": "Replace `this.multipleChoiceDialog(text, choices, callback)` with `this.bga.dialogs.multipleChoice(text, choices)` - Note: now returns a Promise instead of using callbacks",
+              "nested": null
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "heading": {
+        "level": 4,
+        "text": "Image Functions (this.bga.images)",
+        "id": "Image_Functions_.28this.bga.images.29"
+      },
+      "content": [
+        {
+          "type": "paragraph",
+          "text": "📌"
+        },
+        {
+          "type": "list",
+          "ordered": false,
+          "items": [
+            {
+              "text": "Replace `this.dontPreloadImage(image)` with `this.bga.images.dontPreloadImage(image)` or `this.bga.images.dontPreloadImages([...])`",
+              "nested": null
+            },
+            {
+              "text": "Replace `this.ensureSpecificGameImageLoading(imagelist)` with `this.bga.images.preloadImage(image)` or `this.bga.images.preloadImages([...])`",
+              "nested": null
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "heading": {
+        "level": 4,
+        "text": "Game Area Functions (this.bga.gameArea)",
+        "id": "Game_Area_Functions_.28this.bga.gameArea.29"
+      },
+      "content": [
+        {
+          "type": "paragraph",
+          "text": "📌"
+        },
+        {
+          "type": "list",
+          "ordered": false,
+          "items": [
+            {
+              "text": "Replace `this.getGameAreaElement()` with `this.bga.gameArea.getElement()`",
+              "nested": null
+            },
+            {
+              "text": "Replace `this.addLastTurnBanner(message, args)` with `this.bga.gameArea.addLastTurnBanner(message, args)`",
+              "nested": null
+            },
+            {
+              "text": "Replace `this.removeLastTurnBanner()` with `this.bga.gameArea.removeLastTurnBanner()`",
+              "nested": null
+            },
+            {
+              "text": "Replace `this.addWinConditionBanner(message, args)` with `this.bga.gameArea.addWinConditionBanner(message, args)`",
+              "nested": null
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "heading": {
+        "level": 4,
+        "text": "Player Panel Functions (this.bga.playerPanels)",
+        "id": "Player_Panel_Functions_.28this.bga.playerPanels.29"
+      },
+      "content": [
+        {
+          "type": "paragraph",
+          "text": "📌"
+        },
+        {
+          "type": "list",
+          "ordered": false,
+          "items": [
+            {
+              "text": "Replace `this.getPlayerPanelElement(playerId)` with `this.bga.playerPanels.getElement(playerId)`",
+              "nested": null
+            },
+            {
+              "text": "Replace `this.scoreCtrl[player_id]` with `this.bga.playerPanels.getScoreCounter(player_id)`",
+              "nested": null
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "heading": {
+        "level": 4,
+        "text": "User Preferences (this.bga.userPreferences)",
+        "id": "User_Preferences_.28this.bga.userPreferences.29"
+      },
+      "content": [
+        {
+          "type": "paragraph",
+          "text": "📌"
+        },
+        {
+          "type": "list",
+          "ordered": false,
+          "items": [
+            {
+              "text": "Replace `this.getGameUserPreference(pref_id)` with `this.bga.userPreferences.get(pref_id)`",
+              "nested": null
+            },
+            {
+              "text": "Replace `this.setGameUserPreference(pref_id, value)` with `this.bga.userPreferences.set(pref_id, value)`",
+              "nested": null
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "heading": {
+        "level": 4,
+        "text": "Notification Functions (this.bga.notifications)",
+        "id": "Notification_Functions_.28this.bga.notifications.29"
+      },
+      "content": [
+        {
+          "type": "paragraph",
+          "text": "📌"
+        },
+        {
+          "type": "list",
+          "ordered": false,
+          "items": [
+            {
+              "text": "Replace `this.bgaSetupPromiseNotifications(...)` with `this.bga.notifications.setupPromiseNotifications(...)`",
+              "nested": null
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "heading": {
+        "level": 4,
+        "text": "Animation Functions (this.bga.gameui)",
+        "id": "Animation_Functions_.28this.bga.gameui.29"
+      },
+      "content": [
+        {
+          "type": "paragraph",
+          "text": "📌"
+        },
+        {
+          "type": "list",
+          "ordered": false,
+          "items": [
+            {
+              "text": "Replace `this.instantaneousMode` with `this.bga.gameui.bgaAnimationsActive()` - Note: logic is reversed (instantaneousMode was true when animations should be skipped, bgaAnimationsActive() returns true when animations should play)",
+              "nested": null
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "heading": {
+        "level": 3,
+        "text": "Access to DOM elements",
+        "id": "Access_to_DOM_elements"
+      },
+      "content": [
+        {
+          "type": "paragraph",
+          "text": "New functions getPlayerPanelElement(player_id) and this.getGameAreaElement()"
+        },
+        {
+          "type": "paragraph",
+          "text": "https://en.doc.boardgamearena.com/Game_interface_logic:_Game.js#Adding_stuff_to_player%27s_panel"
+        }
+      ]
+    },
+    {
+      "heading": {
+        "level": 3,
+        "text": "Notification setup",
+        "id": "Notification_setup"
+      },
+      "content": [
+        {
+          "type": "paragraph",
+          "text": "Notifications can now be automatically scanned and called without needing to register them one by one. They'll handle Promises, so they end synchronously when the Promise resolves."
+        },
+        {
+          "type": "paragraph",
+          "text": "https://en.doc.boardgamearena.com/Game_interface_logic:_Game.js#Notifications"
+        },
+        {
+          "type": "paragraph",
+          "text": "A new utility function has been added to support Promises for old Dojo animations"
+        },
+        {
+          "type": "paragraph",
+          "text": "📌 Dojo.subscribe calls in setupNotifications must be removed if using promise-based notification setup. Notif_ function should be async and return a Promise, make sure they wait for the expected amount of time if the sync setup was using a numerical duration"
+        }
+      ]
+    },
+    {
+      "heading": {
+        "level": 3,
+        "text": "Status bar manipulation",
+        "id": "Status_bar_manipulation"
+      },
+      "content": [
+        {
+          "type": "paragraph",
+          "text": "Function to change the title from the JS"
+        },
+        {
+          "type": "paragraph",
+          "text": "https://en.doc.boardgamearena.com/Game_interface_logic:_yourgamename.js#Title_bar"
+        },
+        {
+          "type": "paragraph",
+          "text": "This also includes a new function to create action buttons, that are more screen-reader compatible than the previous version. The new button parameters also allow you to set a confirm popin or an autoclick for confirmation buttons"
+        }
+      ]
+    },
+    {
+      "heading": {
+        "level": 3,
+        "text": "Dojo usage",
+        "id": "Dojo_usage"
+      },
+      "content": [
+        {
+          "type": "paragraph",
+          "text": "Dojo usage has been reduced to minimum in the new project template and the doc, as native JS is now able to do almost the same things, with better performance and more knowledge for newcomers of the native (vanilla) JS."
+        },
+        {
+          "type": "table",
+          "headers": [
+            {
+              "text": "Dojo API"
+            },
+            {
+              "text": "Category"
+            },
+            {
+              "text": "Description"
+            },
+            {
+              "text": "Vanilla JS Replacement"
+            }
+          ],
+          "rows": [
+            [
               {
-                "text": "Deprecation warning:  mysql_fetch_assoc function detected. It is deprecated, and may be removed someday. Please replace it by standard framework DB functions!",
-                "nested": null
+                "text": "dojo.byId(\"id\")"
+              },
+              {
+                "text": "DOM Selection"
+              },
+              {
+                "text": "Selects a single DOM element by its ID."
+              },
+              {
+                "text": "document.getElementById(\"id\")"
+              }
+            ],
+            [
+              {
+                "text": "dojo.query(\"selector\")"
+              },
+              {
+                "text": "DOM Selection"
+              },
+              {
+                "text": "Selects a collection of DOM elements using CSS selectors."
+              },
+              {
+                "text": "document.querySelectorAll(\"selector\")ordocument.querySelector(\"selector\")"
+              }
+            ],
+            [
+              {
+                "text": "dojo.connect(node, \"onclick\", fn)"
+              },
+              {
+                "text": "Event Handling"
+              },
+              {
+                "text": "Connects an event handler to a DOM element."
+              },
+              {
+                "text": "node.addEventListener(\"click\", fn)"
+              }
+            ],
+            [
+              {
+                "text": "dojo.disconnect(handle)"
+              },
+              {
+                "text": "Event Handling"
+              },
+              {
+                "text": "Removes an event handler created withdojo.connect."
+              },
+              {
+                "text": "handle.remove()for event listeners, ornode.removeEventListener(\"click\", fn)"
+              }
+            ],
+            [
+              {
+                "text": "dojo.stopEvent(evt)"
+              },
+              {
+                "text": "Event Handling"
+              },
+              {
+                "text": "Prevents propagation and default action for an event."
+              },
+              {
+                "text": "evt.preventDefault(); evt.stopPropagation();"
+              }
+            ],
+            [
+              {
+                "text": "dojo.place(node, parent, \"last\")"
+              },
+              {
+                "text": "DOM Manipulation"
+              },
+              {
+                "text": "Places a DOM node inside a parent node at a specific position."
+              },
+              {
+                "text": "parent.appendChild(node), when using raw htmlparent.insertAdjacentHTML('beforeend', html)"
+              }
+            ],
+            [
+              {
+                "text": "dojo.create(\"tag\", props, parent)"
+              },
+              {
+                "text": "DOM Manipulation"
+              },
+              {
+                "text": "Creates a new DOM element with optional properties."
+              },
+              {
+                "text": "document.createElement(\"tag\"), then set properties and useparent.appendChild()"
+              }
+            ],
+            [
+              {
+                "text": "dojo.style(node, \"color\", \"red\")"
+              },
+              {
+                "text": "Styling"
+              },
+              {
+                "text": "Sets an inline CSS property on a DOM node.CAUTION:dojo.style(node, \"left\")(and \"right\", \"width\", etc) return lengths in pixels as numbers, not the set CSS style."
+              },
+              {
+                "text": "node.style.color = \"red\""
+              }
+            ],
+            [
+              {
+                "text": "dojo.hasClass(node, \"className\")"
+              },
+              {
+                "text": "Styling"
+              },
+              {
+                "text": "Checks if a DOM node has a specific CSS class."
+              },
+              {
+                "text": "node.classList.contains(\"className\")"
+              }
+            ],
+            [
+              {
+                "text": "dojo.addClass(node, \"className\")"
+              },
+              {
+                "text": "Styling"
+              },
+              {
+                "text": "Adds a CSS class to a DOM node."
+              },
+              {
+                "text": "node.classList.add(\"className\")"
+              }
+            ],
+            [
+              {
+                "text": "dojo.removeClass(node, \"className\")"
+              },
+              {
+                "text": "Styling"
+              },
+              {
+                "text": "Removes a CSS class from a DOM node."
+              },
+              {
+                "text": "node.classList.remove(\"className\")"
+              }
+            ],
+            [
+              {
+                "text": "dojo.forEach(array, fn)"
+              },
+              {
+                "text": "Array Utilities"
+              },
+              {
+                "text": "Iterates over an array."
+              },
+              {
+                "text": "array.forEach(fn)"
+              }
+            ],
+            [
+              {
+                "text": "dojo.map(array, fn)"
+              },
+              {
+                "text": "Array Utilities"
+              },
+              {
+                "text": "Transforms an array by applying a function to each element."
+              },
+              {
+                "text": "array.map(fn)"
+              }
+            ],
+            [
+              {
+                "text": "dojo.fadeOut, dojo.fadeIn"
+              },
+              {
+                "text": "Animations"
+              },
+              {
+                "text": "Various animations"
+              },
+              {
+                "text": "Usehttps://en.doc.boardgamearena.com/BgaAnimationsor CSS animations"
+              }
+            ],
+            [
+              {
+                "text": "dojo.hitch(this, \"functionName\")"
+              },
+              {
+                "text": "Variable scoping"
+              },
+              {
+                "text": "Bindsthis(or other variable) in a callback"
+              },
+              {
+                "text": "functionName.bind(this)"
+              }
+            ],
+            [
+              {
+                "text": "dojo.destroy(node)"
+              },
+              {
+                "text": "DOM Manipulation"
+              },
+              {
+                "text": "Destroys a DOM element"
+              },
+              {
+                "text": "node.remove()"
+              }
+            ],
+            [
+              {
+                "text": "dojo.indexof(array,value)"
+              },
+              {
+                "text": "Array Utilities"
+              },
+              {
+                "text": "index of the item in the array,"
+              },
+              {
+                "text": "array.indexof(value) or array.indexof(test)"
+              }
+            ],
+            [
+              {
+                "text": "dojo.string.substitute"
+              },
+              {
+                "text": "String Utilities"
+              },
+              {
+                "text": "template substitution"
+              },
+              {
+                "text": "Use JS template strings, i.e. ``. Note: not suitable for translations if variables are used inside"
               }
             ]
-          }
-        },
-        {
-          "text": "Table (class access without namespace)",
-          "nested": null
-        },
-        {
-          "text": "isMutiactiveState (misspelled version)",
-          "nested": null
-        },
-        {
-          "text": "State management functions (getState, state, getPrivateState)",
-          "nested": null
-        },
-        {
-          "text": "Player information functions (getActivePlayerName, getCurrentPlayerName, getCurrentPlayerColor)",
-          "nested": null
-        },
-        {
-          "text": "Game mode functions (isAsync, isRealtime)",
-          "nested": null
-        },
-        {
-          "text": "Exception classes (feException, BgaUserException, etc.)",
-          "nested": null
-        },
-        {
-          "text": "...",
-          "nested": null
+          ]
         }
       ]
     },
     {
-      "type": "paragraph",
-      "text": "Material file material.inc.php is now optional. You can define all your material directly in php class. If you still like to keep it, and using namespaced Game.php you have to move it to subfolder and include directly Game material description: material.inc.php#Move it to modules/php"
-    },
-    {
-      "type": "paragraph",
-      "text": "Simplify the action calls by removing <gamename>.action.php file"
-    },
-    {
-      "type": "paragraph",
-      "text": "📌 Autowired actions needs to start with \"act\", so it's risky to change them (if you change all actions names in the states.php, game, action and JS file, Real-time players will call the old name until they refresh. So, it needs to be done in two steps with duplicates on back side, or to be deployed when there is no Realt-time table running."
-    },
-    {
-      "type": "paragraph",
-      "text": "Deprecation warning: Actions detected on .action.php file. You can now use Auto-wired actions to avoid pass-through functions in .action.php file. If you transform your project to use only auto-wired actions, you can then delete the .action.php file."
-    },
-    {
-      "type": "paragraph",
-      "text": "Functions notifyAllPlayers and notifyPlayer from main game.php are deprecated"
-    },
-    {
-      "type": "paragraph",
-      "text": "New notify function that handles decorators, reducing the duplicate code on notification args."
-    },
-    {
-      "type": "paragraph",
-      "text": "Previously, when you sent an arg that was transformed by format_string_recursive or bgaFormatText, the args object was mutated and you got the transformed value in the notif_ handler."
-    },
-    {
-      "type": "code",
-      "language": null,
-      "text": "[\n 'roundNumber' => $roundNumber, // number, to update the round counter\n 'round_number' => $roundNumber, // number that will be transformed to string by bgaFormatText, when shown in bold in the logs\n]"
-    },
-    {
-      "type": "paragraph",
-      "text": "📌 Do not duplicate the value, as the notif_ handler will now get unmutated args"
-    },
-    {
-      "type": "paragraph",
-      "text": "The getGameName() function is now useless in the Game PHP file and can be deleted"
-    },
-    {
-      "type": "paragraph",
-      "text": "Deprecation warning: getGameName function detected. It is deprecated. You can delete it, it is not used anymore"
-    },
-    {
-      "type": "paragraph",
-      "text": "Several state-related functions have been deprecated in favor of more explicit methods:"
-    },
-    {
-      "type": "list",
-      "ordered": false,
-      "items": [
+      "heading": {
+        "level": 3,
+        "text": "Sound loading",
+        "id": "Sound_loading"
+      },
+      "content": [
         {
-          "text": "Replace `$this->gamestate->state()` with `$this->getCurrentMainState()` or `$this->getCurrentState(int $playerId)`",
-          "nested": null
+          "type": "paragraph",
+          "text": "New functions load/play have been added for the sounds:"
         },
         {
-          "text": "Replace `$this->getState()` with `$this->getCurrentMainStateId()` or `$this->getCurrentStateId(int $playerId)`",
-          "nested": null
-        },
-        {
-          "text": "Replace `$this->getPrivateState($playerId)` with `$this->getCurrentState($playerId)`",
-          "nested": null
-        },
-        {
-          "text": "Replace `$this->gamestate->states` access with `$this->getCurrentMainState()` or `$this->getCurrentState(int $playerId)`",
-          "nested": null
-        },
-        {
-          "text": "Replace `$this->isMutiactiveState()` (misspelled) with `$this->isMultiactiveState()`",
-          "nested": null
+          "type": "paragraph",
+          "text": "📌 Replace template loading of sounds and global function playSound"
         }
       ]
     },
     {
-      "type": "paragraph",
-      "text": "Several functions for getting player information are deprecated in favor of more flexible methods:"
-    },
-    {
-      "type": "list",
-      "ordered": false,
-      "items": [
+      "heading": {
+        "level": 3,
+        "text": "Formatting of log message using bgaFormatText",
+        "id": "Formatting_of_log_message_using_bgaFormatText"
+      },
+      "content": [
         {
-          "text": "Replace `$this->getActivePlayerName()` with `$this->getPlayerNameById($activePlayerId)` using $activePlayerId magic parameter",
-          "nested": null
-        },
-        {
-          "text": "Replace `$this->getCurrentPlayerName()` with `$this->getPlayerNameById($currentPlayerId)` using $currentPlayerId magic parameter",
-          "nested": null
-        },
-        {
-          "text": "Replace `$this->getCurrentPlayerColor()` with `$this->getPlayerColorById($currentPlayerId)` using $currentPlayerId magic parameter",
-          "nested": null
+          "type": "paragraph",
+          "text": "This function, if defined, will allow you to insert HTML in the logs without overriding format_string_recursive. Example: 📌 https://en.doc.boardgamearena.com/BGA_Studio_Cookbook#Define_this.bgaFormatText%28%29_method"
         }
       ]
     },
     {
-      "type": "paragraph",
-      "text": "Functions to check game mode (turn-based vs real-time) have been moved to tableOptions:"
-    },
-    {
-      "type": "list",
-      "ordered": false,
-      "items": [
+      "heading": {
+        "level": 3,
+        "text": "Automata player panel",
+        "id": "Automata_player_panel"
+      },
+      "content": [
         {
-          "text": "Replace `$this->isAsync()` with `$this->tableOptions->isTurnBased()`",
-          "nested": null
-        },
-        {
-          "text": "Replace `$this->isRealtime()` with `$this->tableOptions->isRealTime()`",
-          "nested": null
+          "type": "paragraph",
+          "text": "A new framework function to add a player panel for your game automas https://en.doc.boardgamearena.com/Game_interface_logic:_yourgamename.js#Adding_a_player_panel_for_an_automata"
         }
       ]
     },
     {
-      "type": "paragraph",
-      "text": "Old exception classes are deprecated in favor of namespaced versions:"
-    },
-    {
-      "type": "list",
-      "ordered": false,
-      "items": [
+      "heading": {
+        "level": 3,
+        "text": "New JS libraries",
+        "id": "New_JS_libraries"
+      },
+      "content": [
         {
-          "text": "Replace `feException` with `\\Bga\\GameFramework\\UserException` , `\\Bga\\GameFramework\\SystemException` , or `\\Bga\\GameFramework\\VisibleSystemException` depending on your need",
-          "nested": null
-        },
-        {
-          "text": "Replace `BgaUserException` with `\\Bga\\GameFramework\\UserException`",
-          "nested": null
-        },
-        {
-          "text": "Replace `BgaSystemException` with `\\Bga\\GameFramework\\SystemException`",
-          "nested": null
-        },
-        {
-          "text": "Replace `BgaVisibleSystemException` with `\\Bga\\GameFramework\\VisibleSystemException`",
-          "nested": null
-        },
-        {
-          "text": "Remove usage of `FEX_NOCODE` constant - new exception classes don't need error codes",
-          "nested": null
+          "type": "paragraph",
+          "text": "New JS libraries are created to help you design your games, especially for components that you will find on numerous games. See Studio#BGA Studio game components reference"
         }
       ]
     },
     {
-      "type": "paragraph",
-      "text": "Old class references without namespaces are deprecated:"
-    },
-    {
-      "type": "list",
-      "ordered": false,
-      "items": [
+      "heading": {
+        "level": 3,
+        "text": "CSS imports",
+        "id": "CSS_imports"
+      },
+      "content": [
         {
-          "text": "Replace `extends Table` with `extends \\Bga\\GameFramework\\Table`",
-          "nested": null
+          "type": "paragraph",
+          "text": "Default BGA imports are auto-included, if you find this code and comment in .css you can delete it"
         },
         {
-          "text": "Replace `Deck` with `\\Bga\\GameFramework\\Components\\Deck`",
-          "nested": null
+          "type": "code",
+          "language": null,
+          "text": " @import url(../../../css/csslayer.css);\n /* Note: you must not use any @import directive other than this one */"
         }
       ]
     },
     {
-      "type": "paragraph",
-      "text": "Deprecation warning:"
-    },
-    {
-      "type": "paragraph",
-      "text": "We recommend you to use composition instead of extend:"
-    },
-    {
-      "type": "paragraph",
-      "text": "If it's too complicated, at least replace APP_Object/APP_GameClass by APP_DbObject as APP_Object/APP_GameClass may be removed soon and don't contain anything more than APP_DbObject."
-    },
-    {
-      "type": "code",
-      "language": null,
-      "text": "class Tokens extends APP_GameClass {  "
-    },
-    {
-      "type": "paragraph",
-      "text": "becomes:"
-    },
-    {
-      "type": "code",
-      "language": null,
-      "text": "class Tokens extends \\APP_DbObject { "
-    },
-    {
-      "type": "paragraph",
-      "text": "On php side translation story is simplified"
-    },
-    {
-      "type": "list",
-      "ordered": false,
-      "items": [
+      "heading": {
+        "level": 3,
+        "text": "Future support of dark mode",
+        "id": "Future_support_of_dark_mode"
+      },
+      "content": [
         {
-          "text": "totranslate function is not longer needed and can be replaced with clienttranslate",
-          "nested": null
-        },
-        {
-          "text": "$this->_() (or self::_()) can also be replaced with clienttranslate when use for non parameterized strings (but not in deprecated <game>.view.php file):",
-          "nested": null
+          "type": "paragraph",
+          "text": "BGA doesn't support dark mode yet. To have some games compatible when we do, we added a theme data tag you can use as described here:"
         }
       ]
-    },
-    {
-      "type": "code",
-      "language": null,
-      "text": " throw new UserException(clienttranslate('You must choose 3 cards'));"
-    },
-    {
-      "type": "paragraph",
-      "text": "UserException is also handling parameterized strings like the notify functions."
-    },
-    {
-      "type": "paragraph",
-      "text": "See Translations"
-    },
-    {
-      "type": "paragraph",
-      "text": "Function getNew that was only used to create new deck object is now deprecated, use $this->deckFactory->createDeck( ) instead"
-    },
-    {
-      "type": "paragraph",
-      "text": "The stats function such as initStat, setStat and getStat are also deprecated in favor of access via the objects `$this->tableStats and $this->playerStats` See https://en.doc.boardgamearena.com/index.php?title=Main_game_logic:_Game.php#Game_statistics"
-    },
-    {
-      "type": "paragraph",
-      "text": "New object to access the legacy functions, removing the need to manually decode the JSON result when getting the values."
-    },
-    {
-      "type": "paragraph",
-      "text": "📌 Use $this->legacy->actionname instead of $this->actionnameLegacy and remove JSON decoding on getters"
-    },
-    {
-      "type": "paragraph",
-      "text": "New database table and API to handle any type variables instead of numerical values only"
-    },
-    {
-      "type": "paragraph",
-      "text": "📌 If you had custom tables just for that you can drop them and use standard table"
-    },
-    {
-      "type": "paragraph",
-      "text": "2 new counter classes have been added to easily handle the various counters your game might have. You also have 2 prebuilt counters: playerScore and playerScoreAux, to handle the scoring values, so you don't need to update manually the DB when setting the scores."
-    },
-    {
-      "type": "paragraph",
-      "text": "📌 Replace setting player_score/player_score_aux using db queries with use of $this->playerScore and $this->playerScoreAux. Remove the notifications, or part of notifications, updating the player panel score counter (if you had some custom notification you may still need them)."
-    },
-    {
-      "type": "paragraph",
-      "text": "We now recommend making the zombie player playing randomly, instead of passing as a default. A new \"Zombie Mode level\" field has been added to the Game Metadata Manager, to indicated the Zombie Mode you implemented in your game."
-    },
-    {
-      "type": "paragraph",
-      "text": "<gamename>.view.php, <gamename>_<gamename>.tpl are now optional and are not generated anymore on a new project. The new project templates demonstrate how to work without them."
-    },
-    {
-      "type": "code",
-      "language": null,
-      "text": "this.getGameAreaElement().insertAdjacentHTML('beforeend', `\n  <span>${_('My translated text')}</span><div id=\"player-tables\"></div>\n`);\n "
-    },
-    {
-      "type": "paragraph",
-      "text": "See more in #Access template elements"
-    },
-    {
-      "type": "paragraph",
-      "text": "If you did not remove action and view files, you cannot longer use some stuff in them, such $g_user global and db access functions."
-    },
-    {
-      "type": "paragraph",
-      "text": "📌 Replace $g_user->get_id() by $this-> getCurrentPlayerId()"
-    },
-    {
-      "type": "paragraph",
-      "text": "There is now a way to describe each game state in a State class, that will handle all logic and description of the state. It helps splitting the code into multiple files, instead of one big Game.php file."
-    },
-    {
-      "type": "paragraph",
-      "text": "📌 Create a State class for each state of the game (except 1 and 99 if they are still described in states.inc.php), move the state definition in it, and adapt the \"st\", \"arg\", \"actXXX\" and \"zombie\" functions in the class. When all classes are migrated, you can remove the states.inc.php file in the FTP folder."
-    },
-    {
-      "type": "paragraph",
-      "text": "The new class GameStateBuilder helps you build the state machine, allowing auto-completion, and avoid typo errors on state types. Complete example: 📌 https://en.doc.boardgamearena.com/Your_game_state_machine:_states.inc.php"
-    },
-    {
-      "type": "paragraph",
-      "text": "📌 Replace the array definition by GameStateBuilder use. You can remove the declaration of states 1 and 99."
-    },
-    {
-      "type": "paragraph",
-      "text": "File is moved from yourgamename.js to modules/js/Game.js and has a different structure https://en.doc.boardgamearena.com/Game_interface_logic:_Game.js It won't be easy to convert this, maybe best just to use old one which still works, but move when you write a new game."
-    },
-    {
-      "type": "paragraph",
-      "text": "Introduced function bgaPerformAction to replace ajaxcall and checkAction combination, with a simpler syntax:"
-    },
-    {
-      "type": "paragraph",
-      "text": "Deprecation warning: The `ajaxcall` function is deprecated, check the `bgaPerformAction` function ."
-    },
-    {
-      "type": "paragraph",
-      "text": "Many client-side functions have been reorganized into namespaced objects under `this.bga` for better organization and discoverability:"
-    },
-    {
-      "type": "paragraph",
-      "text": "📌"
-    },
-    {
-      "type": "list",
-      "ordered": false,
-      "items": [
-        {
-          "text": "Replace `this.isSpectator` with `this.bga.players.isCurrentPlayerSpectator()`",
-          "nested": null
-        },
-        {
-          "text": "Replace `this.isCurrentPlayerActive()` with `this.bga.players.isCurrentPlayerActive()`",
-          "nested": null
-        },
-        {
-          "text": "Replace `this.isPlayerActive(player_id)` with `this.bga.players.isPlayerActive(player_id)`",
-          "nested": null
-        },
-        {
-          "text": "Replace `this.getActivePlayers()` with `this.bga.players.getActivePlayerIds()`",
-          "nested": null
-        },
-        {
-          "text": "Replace `this.getActivePlayerId()` with `this.bga.players.getActivePlayerId()`",
-          "nested": null
-        },
-        {
-          "text": "Replace `this.getFormattedPlayerName(...)` with `this.bga.players.getFormattedPlayerName(...)`",
-          "nested": null
-        },
-        {
-          "text": "Replace `this.addAutomataPlayerPanel(...)` with `this.bga.players.addAutomataPlayerPanel(...)`",
-          "nested": null
-        }
-      ]
-    },
-    {
-      "type": "paragraph",
-      "text": "📌"
-    },
-    {
-      "type": "list",
-      "ordered": false,
-      "items": [
-        {
-          "text": "Replace `this.on_client_state` with `this.bga.states.isOnClientState()`",
-          "nested": null
-        },
-        {
-          "text": "Replace `this.setClientState(stateName, args)` with `this.bga.states.setClientState(stateName, args)`",
-          "nested": null
-        },
-        {
-          "text": "Replace `this.restoreServerGameState()` with `this.bga.states.restoreServerGameState()`",
-          "nested": null
-        }
-      ]
-    },
-    {
-      "type": "paragraph",
-      "text": "📌"
-    },
-    {
-      "type": "list",
-      "ordered": false,
-      "items": [
-        {
-          "text": "Replace `this.updatePageTitle()` with `this.bga.statusBar.setTitle(title, args)`",
-          "nested": null
-        },
-        {
-          "text": "Replace `this.removeActionButtons()` with `this.bga.statusBar.removeActionButtons()`",
-          "nested": null
-        }
-      ]
-    },
-    {
-      "type": "paragraph",
-      "text": "📌"
-    },
-    {
-      "type": "list",
-      "ordered": false,
-      "items": [
-        {
-          "text": "Replace `this.checkAction(action, nomessage)` with `this.bga.actions.checkAction(action, nomessage)`",
-          "nested": null
-        },
-        {
-          "text": "Replace `this.checkPossibleActions(action)` with `this.bga.actions.checkPossibleActions(action)`",
-          "nested": null
-        },
-        {
-          "text": "Replace `this.bgaPerformAction(...)` with `this.bga.actions.performAction(...)` - Note: catch result is now `{ message, args }` instead of just `message`",
-          "nested": null
-        }
-      ]
-    },
-    {
-      "type": "paragraph",
-      "text": "📌"
-    },
-    {
-      "type": "list",
-      "ordered": false,
-      "items": [
-        {
-          "text": "Replace `this.showMoveUnauthorized()` with `this.bga.dialogs.showMoveUnauthorized()`",
-          "nested": null
-        },
-        {
-          "text": "Replace `this.showMessage(msg, type)` with `this.bga.dialogs.showMessage(msg, type)`",
-          "nested": null
-        },
-        {
-          "text": "Replace `this.confirmationDialog(text, callback, callback_cancel)` with `this.bga.dialogs.confirmation(text)` - Note: now returns a Promise instead of using callbacks",
-          "nested": null
-        },
-        {
-          "text": "Replace `this.multipleChoiceDialog(text, choices, callback)` with `this.bga.dialogs.multipleChoice(text, choices)` - Note: now returns a Promise instead of using callbacks",
-          "nested": null
-        }
-      ]
-    },
-    {
-      "type": "paragraph",
-      "text": "📌"
-    },
-    {
-      "type": "list",
-      "ordered": false,
-      "items": [
-        {
-          "text": "Replace `this.dontPreloadImage(image)` with `this.bga.images.dontPreloadImage(image)` or `this.bga.images.dontPreloadImages([...])`",
-          "nested": null
-        },
-        {
-          "text": "Replace `this.ensureSpecificGameImageLoading(imagelist)` with `this.bga.images.preloadImage(image)` or `this.bga.images.preloadImages([...])`",
-          "nested": null
-        }
-      ]
-    },
-    {
-      "type": "paragraph",
-      "text": "📌"
-    },
-    {
-      "type": "list",
-      "ordered": false,
-      "items": [
-        {
-          "text": "Replace `this.getGameAreaElement()` with `this.bga.gameArea.getElement()`",
-          "nested": null
-        },
-        {
-          "text": "Replace `this.addLastTurnBanner(message, args)` with `this.bga.gameArea.addLastTurnBanner(message, args)`",
-          "nested": null
-        },
-        {
-          "text": "Replace `this.removeLastTurnBanner()` with `this.bga.gameArea.removeLastTurnBanner()`",
-          "nested": null
-        },
-        {
-          "text": "Replace `this.addWinConditionBanner(message, args)` with `this.bga.gameArea.addWinConditionBanner(message, args)`",
-          "nested": null
-        }
-      ]
-    },
-    {
-      "type": "paragraph",
-      "text": "📌"
-    },
-    {
-      "type": "list",
-      "ordered": false,
-      "items": [
-        {
-          "text": "Replace `this.getPlayerPanelElement(playerId)` with `this.bga.playerPanels.getElement(playerId)`",
-          "nested": null
-        },
-        {
-          "text": "Replace `this.scoreCtrl[player_id]` with `this.bga.playerPanels.getScoreCounter(player_id)`",
-          "nested": null
-        }
-      ]
-    },
-    {
-      "type": "paragraph",
-      "text": "📌"
-    },
-    {
-      "type": "list",
-      "ordered": false,
-      "items": [
-        {
-          "text": "Replace `this.getGameUserPreference(pref_id)` with `this.bga.userPreferences.get(pref_id)`",
-          "nested": null
-        },
-        {
-          "text": "Replace `this.setGameUserPreference(pref_id, value)` with `this.bga.userPreferences.set(pref_id, value)`",
-          "nested": null
-        }
-      ]
-    },
-    {
-      "type": "paragraph",
-      "text": "📌"
-    },
-    {
-      "type": "list",
-      "ordered": false,
-      "items": [
-        {
-          "text": "Replace `this.bgaSetupPromiseNotifications(...)` with `this.bga.notifications.setupPromiseNotifications(...)`",
-          "nested": null
-        }
-      ]
-    },
-    {
-      "type": "paragraph",
-      "text": "📌"
-    },
-    {
-      "type": "list",
-      "ordered": false,
-      "items": [
-        {
-          "text": "Replace `this.instantaneousMode` with `this.bga.gameui.bgaAnimationsActive()` - Note: logic is reversed (instantaneousMode was true when animations should be skipped, bgaAnimationsActive() returns true when animations should play)",
-          "nested": null
-        }
-      ]
-    },
-    {
-      "type": "paragraph",
-      "text": "New functions getPlayerPanelElement(player_id) and this.getGameAreaElement()"
-    },
-    {
-      "type": "paragraph",
-      "text": "https://en.doc.boardgamearena.com/Game_interface_logic:_Game.js#Adding_stuff_to_player%27s_panel"
-    },
-    {
-      "type": "paragraph",
-      "text": "Notifications can now be automatically scanned and called without needing to register them one by one. They'll handle Promises, so they end synchronously when the Promise resolves."
-    },
-    {
-      "type": "paragraph",
-      "text": "https://en.doc.boardgamearena.com/Game_interface_logic:_Game.js#Notifications"
-    },
-    {
-      "type": "paragraph",
-      "text": "A new utility function has been added to support Promises for old Dojo animations"
-    },
-    {
-      "type": "paragraph",
-      "text": "📌 Dojo.subscribe calls in setupNotifications must be removed if using promise-based notification setup. Notif_ function should be async and return a Promise, make sure they wait for the expected amount of time if the sync setup was using a numerical duration"
-    },
-    {
-      "type": "paragraph",
-      "text": "Function to change the title from the JS"
-    },
-    {
-      "type": "paragraph",
-      "text": "https://en.doc.boardgamearena.com/Game_interface_logic:_yourgamename.js#Title_bar"
-    },
-    {
-      "type": "paragraph",
-      "text": "This also includes a new function to create action buttons, that are more screen-reader compatible than the previous version. The new button parameters also allow you to set a confirm popin or an autoclick for confirmation buttons"
-    },
-    {
-      "type": "paragraph",
-      "text": "Dojo usage has been reduced to minimum in the new project template and the doc, as native JS is now able to do almost the same things, with better performance and more knowledge for newcomers of the native (vanilla) JS."
-    },
-    {
-      "type": "table",
-      "headers": [
-        "Dojo API",
-        "Category",
-        "Description",
-        "Vanilla JS Replacement"
-      ],
-      "rows": [
-        [
-          "dojo.byId(\"id\")",
-          "DOM Selection",
-          "Selects a single DOM element by its ID.",
-          "document.getElementById(\"id\")"
-        ],
-        [
-          "dojo.query(\"selector\")",
-          "DOM Selection",
-          "Selects a collection of DOM elements using CSS selectors.",
-          "document.querySelectorAll(\"selector\")ordocument.querySelector(\"selector\")"
-        ],
-        [
-          "dojo.connect(node, \"onclick\", fn)",
-          "Event Handling",
-          "Connects an event handler to a DOM element.",
-          "node.addEventListener(\"click\", fn)"
-        ],
-        [
-          "dojo.disconnect(handle)",
-          "Event Handling",
-          "Removes an event handler created withdojo.connect.",
-          "handle.remove()for event listeners, ornode.removeEventListener(\"click\", fn)"
-        ],
-        [
-          "dojo.stopEvent(evt)",
-          "Event Handling",
-          "Prevents propagation and default action for an event.",
-          "evt.preventDefault(); evt.stopPropagation();"
-        ],
-        [
-          "dojo.place(node, parent, \"last\")",
-          "DOM Manipulation",
-          "Places a DOM node inside a parent node at a specific position.",
-          "parent.appendChild(node), when using raw htmlparent.insertAdjacentHTML('beforeend', html)"
-        ],
-        [
-          "dojo.create(\"tag\", props, parent)",
-          "DOM Manipulation",
-          "Creates a new DOM element with optional properties.",
-          "document.createElement(\"tag\"), then set properties and useparent.appendChild()"
-        ],
-        [
-          "dojo.style(node, \"color\", \"red\")",
-          "Styling",
-          "Sets an inline CSS property on a DOM node.CAUTION:dojo.style(node, \"left\")(and \"right\", \"width\", etc) return lengths in pixels as numbers, not the set CSS style.",
-          "node.style.color = \"red\""
-        ],
-        [
-          "dojo.hasClass(node, \"className\")",
-          "Styling",
-          "Checks if a DOM node has a specific CSS class.",
-          "node.classList.contains(\"className\")"
-        ],
-        [
-          "dojo.addClass(node, \"className\")",
-          "Styling",
-          "Adds a CSS class to a DOM node.",
-          "node.classList.add(\"className\")"
-        ],
-        [
-          "dojo.removeClass(node, \"className\")",
-          "Styling",
-          "Removes a CSS class from a DOM node.",
-          "node.classList.remove(\"className\")"
-        ],
-        [
-          "dojo.forEach(array, fn)",
-          "Array Utilities",
-          "Iterates over an array.",
-          "array.forEach(fn)"
-        ],
-        [
-          "dojo.map(array, fn)",
-          "Array Utilities",
-          "Transforms an array by applying a function to each element.",
-          "array.map(fn)"
-        ],
-        [
-          "dojo.fadeOut, dojo.fadeIn",
-          "Animations",
-          "Various animations",
-          "Usehttps://en.doc.boardgamearena.com/BgaAnimationsor CSS animations"
-        ],
-        [
-          "dojo.hitch(this, \"functionName\")",
-          "Variable scoping",
-          "Bindsthis(or other variable) in a callback",
-          "functionName.bind(this)"
-        ],
-        [
-          "dojo.destroy(node)",
-          "DOM Manipulation",
-          "Destroys a DOM element",
-          "node.remove()"
-        ],
-        [
-          "dojo.indexof(array,value)",
-          "Array Utilities",
-          "index of the item in the array,",
-          "array.indexof(value) or array.indexof(test)"
-        ],
-        [
-          "dojo.string.substitute",
-          "String Utilities",
-          "template substitution",
-          "Use JS template strings, i.e. ``. Note: not suitable for translations if variables are used inside"
-        ]
-      ]
-    },
-    {
-      "type": "paragraph",
-      "text": "New functions load/play have been added for the sounds:"
-    },
-    {
-      "type": "paragraph",
-      "text": "📌 Replace template loading of sounds and global function playSound"
-    },
-    {
-      "type": "paragraph",
-      "text": "This function, if defined, will allow you to insert HTML in the logs without overriding format_string_recursive. Example: 📌 https://en.doc.boardgamearena.com/BGA_Studio_Cookbook#Define_this.bgaFormatText%28%29_method"
-    },
-    {
-      "type": "paragraph",
-      "text": "A new framework function to add a player panel for your game automas https://en.doc.boardgamearena.com/Game_interface_logic:_yourgamename.js#Adding_a_player_panel_for_an_automata"
-    },
-    {
-      "type": "paragraph",
-      "text": "New JS libraries are created to help you design your games, especially for components that you will find on numerous games. See Studio#BGA Studio game components reference"
-    },
-    {
-      "type": "paragraph",
-      "text": "Default BGA imports are auto-included, if you find this code and comment in .css you can delete it"
-    },
-    {
-      "type": "code",
-      "language": null,
-      "text": " @import url(../../../css/csslayer.css);\n /* Note: you must not use any @import directive other than this one */"
-    },
-    {
-      "type": "paragraph",
-      "text": "BGA doesn't support dark mode yet. To have some games compatible when we do, we added a theme data tag you can use as described here:"
     }
   ],
   "links": [
@@ -1439,7 +1823,7 @@
   "images": [],
   "metadata": {
     "extractor_version": "1.0.0",
-    "extracted_at": "2026-07-06T06:53:17.226772+00:00",
+    "extracted_at": "2026-07-06T08:38:33.346740+00:00",
     "word_count": 1602,
     "heading_count": 58,
     "code_block_count": 11,

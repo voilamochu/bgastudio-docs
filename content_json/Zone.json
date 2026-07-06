@@ -3,328 +3,367 @@
   "source_file": "Zone.html",
   "relative_path": "Zone.html",
   "content_json_path": "content_json/Zone.json",
-  "headings": [
+  "sections": [
     {
-      "level": 2,
-      "text": "Zone in action",
-      "id": "Zone_in_action"
-    },
-    {
-      "level": 2,
-      "text": "How to use Zone",
-      "id": "How_to_use_Zone"
-    },
-    {
-      "level": 2,
-      "text": "Patterns: positioning items within your zone",
-      "id": "Patterns:_positioning_items_within_your_zone"
-    },
-    {
-      "level": 3,
-      "text": "grid",
-      "id": "grid"
-    },
-    {
-      "level": 3,
-      "text": "diagonal",
-      "id": "diagonal"
-    },
-    {
-      "level": 3,
-      "text": "verticalfit",
-      "id": "verticalfit"
-    },
-    {
-      "level": 3,
-      "text": "horizontalfit",
-      "id": "horizontalfit"
-    },
-    {
-      "level": 3,
-      "text": "ellipticalfit",
-      "id": "ellipticalfit"
-    },
-    {
-      "level": 3,
-      "text": "custom",
-      "id": "custom"
-    }
-  ],
-  "content": [
-    {
-      "type": "paragraph",
-      "text": "The Zone component is meant to organise items of the same type inside a predefined space."
-    },
-    {
-      "type": "paragraph",
-      "text": "If you want to see how Zone works, please try \"Can't Stop\" or \"Niagara\" on BGA, or watch a game in progress or game replay."
-    },
-    {
-      "type": "paragraph",
-      "text": "In Niagara, it is used to display the canoes over the circles going down the river (custom mode)."
-    },
-    {
-      "type": "paragraph",
-      "text": "At first, don't forget to add \"ebg/zone\" as a dependency:"
-    },
-    {
-      "type": "code",
-      "language": null,
-      "text": "const [zone] = await importDojoLibs(['ebg/zone']);"
-    },
-    {
-      "type": "paragraph",
-      "text": "Then, declare a new variable in your class for the Zone object:"
-    },
-    {
-      "type": "code",
-      "language": null,
-      "text": "        constructor(){\n        console.log('yourgame constructor');\n              \n        // Zone control        \t\n        this.myZone = new ebg.zone();"
-    },
-    {
-      "type": "paragraph",
-      "text": "Now, in your template file, you must add a div that will host this zone:"
-    },
-    {
-      "type": "code",
-      "language": null,
-      "text": "    <div id=\"my_zone\"></div>"
-    },
-    {
-      "type": "paragraph",
-      "text": "And set its width (and optionally, height and position) in CSS:"
-    },
-    {
-      "type": "code",
-      "language": null,
-      "text": "\n\n#my_zone {\n  width: 100px;\n}"
-    },
-    {
-      "type": "paragraph",
-      "text": "Then in your Javascript setup, attach your Zone component to the div and define its properties :"
-    },
-    {
-      "type": "code",
-      "language": null,
-      "text": "            zone.create( this.bga.gameui, 'my_zone', <item_width>, <item_height> );\n            zone.setPattern( <mode> );"
-    },
-    {
-      "type": "list",
-      "ordered": false,
-      "items": [
+      "heading": null,
+      "content": [
         {
-          "text": "<item_width> is an integer for the width of the objects you want to organise in the zone",
-          "nested": null
-        },
-        {
-          "text": "<item_height> is an integer for the height of the objects you want to organise in the zone",
-          "nested": null
-        },
-        {
-          "text": "<mode> is one of 'grid' (objects will be put on lines from top left to bottom right, wrapping when there is not enough space left on the line, relatively to the width you have defined) 'diagonal' (objects will be organised on a top left to bottom right diagonal, overlapping each other) or 'custom' (objects will be organised depending upon their number and the coordinates that you provide - see below)",
-          "nested": null
+          "type": "paragraph",
+          "text": "The Zone component is meant to organise items of the same type inside a predefined space."
         }
       ]
     },
     {
-      "type": "paragraph",
-      "text": "Since the width of the Zone is defined statically, beware of not letting items overflow on small screens. If you need a design-responsive component, consider using the Stock component instead."
-    },
-    {
-      "type": "paragraph",
-      "text": "After creating an object that you want to add to the zone as a classic HTML template (dojo.place / this.format_block), you can simply use:"
-    },
-    {
-      "type": "code",
-      "language": null,
-      "text": "   zone.placeInZone( <object_id>, <weight> );"
-    },
-    {
-      "type": "list",
-      "ordered": false,
-      "items": [
+      "heading": {
+        "level": 2,
+        "text": "Zone in action",
+        "id": "Zone_in_action"
+      },
+      "content": [
         {
-          "text": "<object_id> is the string identifier for your object 'my_object_id'",
-          "nested": null
+          "type": "paragraph",
+          "text": "If you want to see how Zone works, please try \"Can't Stop\" or \"Niagara\" on BGA, or watch a game in progress or game replay."
         },
         {
-          "text": "<weight> is an optional parameter used to sort items",
-          "nested": null
+          "type": "paragraph",
+          "text": "In Niagara, it is used to display the canoes over the circles going down the river (custom mode)."
         }
       ]
     },
     {
-      "type": "paragraph",
-      "text": "To remove an item, use:"
-    },
-    {
-      "type": "code",
-      "language": null,
-      "text": "   zone.removeFromZone( <object_id>, <destroy?>, <to> );"
-    },
-    {
-      "type": "list",
-      "ordered": false,
-      "items": [
+      "heading": {
+        "level": 2,
+        "text": "How to use Zone",
+        "id": "How_to_use_Zone"
+      },
+      "content": [
         {
-          "text": "<object_id> is the string identifier for your object 'my_object_id'",
-          "nested": null
+          "type": "paragraph",
+          "text": "At first, don't forget to add \"ebg/zone\" as a dependency:"
         },
         {
-          "text": "<destroy?> is a boolean indicating if the object should be destroyed after being removed",
-          "nested": null
+          "type": "code",
+          "language": null,
+          "text": "const [zone] = await importDojoLibs(['ebg/zone']);"
         },
         {
-          "text": "<to> is the destination the object must be slided to when being removed (before being eventually destroyed)",
-          "nested": null
+          "type": "paragraph",
+          "text": "Then, declare a new variable in your class for the Zone object:"
+        },
+        {
+          "type": "code",
+          "language": null,
+          "text": "        constructor(){\n        console.log('yourgame constructor');\n              \n        // Zone control        \t\n        this.myZone = new ebg.zone();"
+        },
+        {
+          "type": "paragraph",
+          "text": "Now, in your template file, you must add a div that will host this zone:"
+        },
+        {
+          "type": "code",
+          "language": null,
+          "text": "    <div id=\"my_zone\"></div>"
+        },
+        {
+          "type": "paragraph",
+          "text": "And set its width (and optionally, height and position) in CSS:"
+        },
+        {
+          "type": "code",
+          "language": null,
+          "text": "\n\n#my_zone {\n  width: 100px;\n}"
+        },
+        {
+          "type": "paragraph",
+          "text": "Then in your Javascript setup, attach your Zone component to the div and define its properties :"
+        },
+        {
+          "type": "code",
+          "language": null,
+          "text": "            zone.create( this.bga.gameui, 'my_zone', <item_width>, <item_height> );\n            zone.setPattern( <mode> );"
+        },
+        {
+          "type": "list",
+          "ordered": false,
+          "items": [
+            {
+              "text": "<item_width> is an integer for the width of the objects you want to organise in the zone",
+              "nested": null
+            },
+            {
+              "text": "<item_height> is an integer for the height of the objects you want to organise in the zone",
+              "nested": null
+            },
+            {
+              "text": "<mode> is one of 'grid' (objects will be put on lines from top left to bottom right, wrapping when there is not enough space left on the line, relatively to the width you have defined) 'diagonal' (objects will be organised on a top left to bottom right diagonal, overlapping each other) or 'custom' (objects will be organised depending upon their number and the coordinates that you provide - see below)",
+              "nested": null
+            }
+          ]
+        },
+        {
+          "type": "paragraph",
+          "text": "Since the width of the Zone is defined statically, beware of not letting items overflow on small screens. If you need a design-responsive component, consider using the Stock component instead."
+        },
+        {
+          "type": "paragraph",
+          "text": "After creating an object that you want to add to the zone as a classic HTML template (dojo.place / this.format_block), you can simply use:"
+        },
+        {
+          "type": "code",
+          "language": null,
+          "text": "   zone.placeInZone( <object_id>, <weight> );"
+        },
+        {
+          "type": "list",
+          "ordered": false,
+          "items": [
+            {
+              "text": "<object_id> is the string identifier for your object 'my_object_id'",
+              "nested": null
+            },
+            {
+              "text": "<weight> is an optional parameter used to sort items",
+              "nested": null
+            }
+          ]
+        },
+        {
+          "type": "paragraph",
+          "text": "To remove an item, use:"
+        },
+        {
+          "type": "code",
+          "language": null,
+          "text": "   zone.removeFromZone( <object_id>, <destroy?>, <to> );"
+        },
+        {
+          "type": "list",
+          "ordered": false,
+          "items": [
+            {
+              "text": "<object_id> is the string identifier for your object 'my_object_id'",
+              "nested": null
+            },
+            {
+              "text": "<destroy?> is a boolean indicating if the object should be destroyed after being removed",
+              "nested": null
+            },
+            {
+              "text": "<to> is the destination the object must be slided to when being removed (before being eventually destroyed)",
+              "nested": null
+            }
+          ]
+        },
+        {
+          "type": "paragraph",
+          "text": "You can also:"
+        },
+        {
+          "type": "list",
+          "ordered": false,
+          "items": [
+            {
+              "text": "remove all items from the zone (and destroy them) using zone.removeAll();",
+              "nested": null
+            },
+            {
+              "text": "get the number of items in your zone using zone.getItemNumber();",
+              "nested": null
+            },
+            {
+              "text": "get an array of the ids of all the items using zone.getAllItems();",
+              "nested": null
+            }
+          ]
         }
       ]
     },
     {
-      "type": "paragraph",
-      "text": "You can also:"
-    },
-    {
-      "type": "list",
-      "ordered": false,
-      "items": [
+      "heading": {
+        "level": 2,
+        "text": "Patterns: positioning items within your zone",
+        "id": "Patterns:_positioning_items_within_your_zone"
+      },
+      "content": [
         {
-          "text": "remove all items from the zone (and destroy them) using zone.removeAll();",
-          "nested": null
+          "type": "paragraph",
+          "text": "full source is available here : https://x.boardgamearena.net/data/themereleases/220811-1000/js/modules/zone.js"
         },
         {
-          "text": "get the number of items in your zone using zone.getItemNumber();",
-          "nested": null
+          "type": "code",
+          "language": null,
+          "text": "  zone.setPattern('pattern_name')  // ...where 'pattern_name' is actually one of the many pre-formatted patterns of the package"
         },
         {
-          "text": "get an array of the ids of all the items using zone.getAllItems();",
-          "nested": null
+          "type": "paragraph",
+          "text": "The patterns that are currently available as part of the ebg/zone package are:"
+        },
+        {
+          "type": "list",
+          "ordered": false,
+          "items": [
+            {
+              "text": "'grid' (which is the default, if you never actually call setPattern)",
+              "nested": null
+            },
+            {
+              "text": "'diagonal'",
+              "nested": null
+            },
+            {
+              "text": "'verticalfit'",
+              "nested": null
+            },
+            {
+              "text": "'horizontalfit'",
+              "nested": null
+            },
+            {
+              "text": "'ellipticalfit'",
+              "nested": null
+            },
+            {
+              "text": "'custom'",
+              "nested": null
+            }
+          ]
         }
       ]
     },
     {
-      "type": "paragraph",
-      "text": "full source is available here : https://x.boardgamearena.net/data/themereleases/220811-1000/js/modules/zone.js"
-    },
-    {
-      "type": "code",
-      "language": null,
-      "text": "  zone.setPattern('pattern_name')  // ...where 'pattern_name' is actually one of the many pre-formatted patterns of the package"
-    },
-    {
-      "type": "paragraph",
-      "text": "The patterns that are currently available as part of the ebg/zone package are:"
-    },
-    {
-      "type": "list",
-      "ordered": false,
-      "items": [
+      "heading": {
+        "level": 3,
+        "text": "grid",
+        "id": "grid"
+      },
+      "content": [
         {
-          "text": "'grid' (which is the default, if you never actually call setPattern)",
-          "nested": null
+          "type": "paragraph",
+          "text": "This is the default pattern for all zones when they are created. With enough horizontal space to fit all items in the zone, this pattern will simply arrange the items in a single horizontal row (as in the first zone in the image below)."
         },
         {
-          "text": "'diagonal'",
-          "nested": null
+          "type": "code",
+          "language": null,
+          "text": "dojo.style('grid_zone_2', 'max-width', '175px');"
         },
         {
-          "text": "'verticalfit'",
-          "nested": null
-        },
-        {
-          "text": "'horizontalfit'",
-          "nested": null
-        },
-        {
-          "text": "'ellipticalfit'",
-          "nested": null
-        },
-        {
-          "text": "'custom'",
-          "nested": null
+          "type": "paragraph",
+          "text": "[image: Zone grid.jpg]"
         }
       ]
     },
     {
-      "type": "paragraph",
-      "text": "This is the default pattern for all zones when they are created. With enough horizontal space to fit all items in the zone, this pattern will simply arrange the items in a single horizontal row (as in the first zone in the image below)."
+      "heading": {
+        "level": 3,
+        "text": "diagonal",
+        "id": "diagonal"
+      },
+      "content": [
+        {
+          "type": "paragraph",
+          "text": "This pattern is great for creating the illusion of stacks (e.g., decks, counters, etc), because it will place each successive item in the zone a certain number of pixels below, and that same number of pixels to the right of the previous item in the zone. The exact number of pixels that are used for these offsets are controlled by the zone object attribute 'item_margin' (which defaults to 5, as in the first zone in the image below). The behavior of this pattern does not appear to be affected by whether or not the zone is allotted enough horizontal or vertical space to display all items, as is demonstrated in the second zone of the image below, which was allotted less vertical and horizontal space (49px by 49px) than is required for displaying just one of the components (50px by 50px)."
+        },
+        {
+          "type": "code",
+          "language": null,
+          "text": "// For the third diagonal example:\nthis.zone.diagonal_zone_3.item_margin = 2;\n\n// For the fourth diagonal example (with enough margin to fully display each component):\nthis.zone.diagonal_zone_4.item_margin = 36;"
+        },
+        {
+          "type": "paragraph",
+          "text": "[image: Zone diagonal.jpg]"
+        }
+      ]
     },
     {
-      "type": "code",
-      "language": null,
-      "text": "dojo.style('grid_zone_2', 'max-width', '175px');"
+      "heading": {
+        "level": 3,
+        "text": "verticalfit",
+        "id": "verticalfit"
+      },
+      "content": [
+        {
+          "type": "paragraph",
+          "text": "This pattern is useful if you want all items in your zone to be arranged in a single column, regardless of whether there is enough space to display each item fully. In the first zone in the image below, no min-height or max-height was set for the zone (thus, the zone has the max-height of its first component), so all items were stacked upward on top of the original component, with item_margin (5px by default) vertical distance between each component, similar to how it was done for the diagonal pattern zones."
+        },
+        {
+          "type": "code",
+          "language": null,
+          "text": "// For the second verticalfit example, with overlap:\ndojo.style('verticalfit_zone_2', 'max-height', '100px');\n\n// For the third verticalfit example, with just enough space to display all components:\n// (component height = 50px, multiplied by 5 components = 250px)\ndojo.style('verticalfit_zone_3', 'min-height', '250px');"
+        },
+        {
+          "type": "paragraph",
+          "text": "[image: Zone verticalfit 1.jpg]"
+        },
+        {
+          "type": "paragraph",
+          "text": "[image: Zone verticalfit 2.jpg]"
+        }
+      ]
     },
     {
-      "type": "paragraph",
-      "text": "[image: Zone grid.jpg]"
+      "heading": {
+        "level": 3,
+        "text": "horizontalfit",
+        "id": "horizontalfit"
+      },
+      "content": [
+        {
+          "type": "paragraph",
+          "text": "This pattern is useful if you want all items in your zone to be arranged in a single row, regardless of whether there is enough space to display each item fully. If the width of this type of zone is not explicitly set, then it will be assumed to be then same as its parent element (which could lead to the items being centered within another one of your divs, as in the first zone of the image below)."
+        },
+        {
+          "type": "code",
+          "language": null,
+          "text": "// For the second horizontalfit example:\ndojo.style('horizontalfit_zone_2', 'max-width', '100px');\n\n// For the third horizontalfit example:\ndojo.style('horizontalfit_zone_3', 'min-width', '250px');"
+        },
+        {
+          "type": "paragraph",
+          "text": "And, just as in the example for the default of this pattern, if the allotted horizontal space for the zone is greater than what is required by the items, then the row of items will be centered within the 'min-width' of the zone (as shown in the fourth zone of the image below, which has a max-width of 450px)."
+        }
+      ]
     },
     {
-      "type": "paragraph",
-      "text": "This pattern is great for creating the illusion of stacks (e.g., decks, counters, etc), because it will place each successive item in the zone a certain number of pixels below, and that same number of pixels to the right of the previous item in the zone. The exact number of pixels that are used for these offsets are controlled by the zone object attribute 'item_margin' (which defaults to 5, as in the first zone in the image below). The behavior of this pattern does not appear to be affected by whether or not the zone is allotted enough horizontal or vertical space to display all items, as is demonstrated in the second zone of the image below, which was allotted less vertical and horizontal space (49px by 49px) than is required for displaying just one of the components (50px by 50px)."
+      "heading": {
+        "level": 3,
+        "text": "ellipticalfit",
+        "id": "ellipticalfit"
+      },
+      "content": [
+        {
+          "type": "paragraph",
+          "text": "This pattern will arrange all items in the zone in a circular (or elliptical) arrangement, with equal radial distance between each item. With enough vertical and horizontal space to fit all items in the zone into a single non-overlapping circle, this pattern will do just that."
+        },
+        {
+          "type": "paragraph",
+          "text": "However, if the zone is not allotted enough vertical and horizontal space to fully display each zone item in a single circle, then the items that do not fit into the original circle will begin to form an additional concentric circle around the original circle."
+        },
+        {
+          "type": "paragraph",
+          "text": "In this second circle, items *will* overlap if there is not enough space for them all to be fully displayed."
+        }
+      ]
     },
     {
-      "type": "code",
-      "language": null,
-      "text": "// For the third diagonal example:\nthis.zone.diagonal_zone_3.item_margin = 2;\n\n// For the fourth diagonal example (with enough margin to fully display each component):\nthis.zone.diagonal_zone_4.item_margin = 36;"
-    },
-    {
-      "type": "paragraph",
-      "text": "[image: Zone diagonal.jpg]"
-    },
-    {
-      "type": "paragraph",
-      "text": "This pattern is useful if you want all items in your zone to be arranged in a single column, regardless of whether there is enough space to display each item fully. In the first zone in the image below, no min-height or max-height was set for the zone (thus, the zone has the max-height of its first component), so all items were stacked upward on top of the original component, with item_margin (5px by default) vertical distance between each component, similar to how it was done for the diagonal pattern zones."
-    },
-    {
-      "type": "code",
-      "language": null,
-      "text": "// For the second verticalfit example, with overlap:\ndojo.style('verticalfit_zone_2', 'max-height', '100px');\n\n// For the third verticalfit example, with just enough space to display all components:\n// (component height = 50px, multiplied by 5 components = 250px)\ndojo.style('verticalfit_zone_3', 'min-height', '250px');"
-    },
-    {
-      "type": "paragraph",
-      "text": "[image: Zone verticalfit 1.jpg]"
-    },
-    {
-      "type": "paragraph",
-      "text": "[image: Zone verticalfit 2.jpg]"
-    },
-    {
-      "type": "paragraph",
-      "text": "This pattern is useful if you want all items in your zone to be arranged in a single row, regardless of whether there is enough space to display each item fully. If the width of this type of zone is not explicitly set, then it will be assumed to be then same as its parent element (which could lead to the items being centered within another one of your divs, as in the first zone of the image below)."
-    },
-    {
-      "type": "code",
-      "language": null,
-      "text": "// For the second horizontalfit example:\ndojo.style('horizontalfit_zone_2', 'max-width', '100px');\n\n// For the third horizontalfit example:\ndojo.style('horizontalfit_zone_3', 'min-width', '250px');"
-    },
-    {
-      "type": "paragraph",
-      "text": "And, just as in the example for the default of this pattern, if the allotted horizontal space for the zone is greater than what is required by the items, then the row of items will be centered within the 'min-width' of the zone (as shown in the fourth zone of the image below, which has a max-width of 450px)."
-    },
-    {
-      "type": "paragraph",
-      "text": "This pattern will arrange all items in the zone in a circular (or elliptical) arrangement, with equal radial distance between each item. With enough vertical and horizontal space to fit all items in the zone into a single non-overlapping circle, this pattern will do just that."
-    },
-    {
-      "type": "paragraph",
-      "text": "However, if the zone is not allotted enough vertical and horizontal space to fully display each zone item in a single circle, then the items that do not fit into the original circle will begin to form an additional concentric circle around the original circle."
-    },
-    {
-      "type": "paragraph",
-      "text": "In this second circle, items *will* overlap if there is not enough space for them all to be fully displayed."
-    },
-    {
-      "type": "paragraph",
-      "text": "If you want complete control on how your objects are laid out inside the Zone, you can determine their coordinates after their number when being added to the zone."
-    },
-    {
-      "type": "paragraph",
-      "text": "Here is how to do it, when defining your Zone properties in the javascript setup:"
-    },
-    {
-      "type": "code",
-      "language": null,
-      "text": "                this.zone.setPattern( 'custom' );\n                \n                this.zone.itemIdToCoords = function( i, control_width ) {\n                    if( i%8==0 )\n                    {   return {  x:1,y:19, w:60, h:30 }; }\n                    else if( i%8==1 )\n                    {   return {  x:30,y:38, w:60, h:30 }; }\n                    else if( i%8==2 )\n                    {   return {  x:42,y:8, w:60, h:30 }; }\n                    else if( i%8==3 )\n                    {   return {  x:5,y:58, w:60, h:30 }; }\n                    else if( i%8==4 )\n                    {   return {  x:5,y:24, w:60, h:30 }; }\n                    else if( i%8==5 )\n                    {   return {  x:35,y:43, w:60, h:30 }; }\n                    else if( i%8==6 )\n                    {   return {  x:47,y:13, w:60, h:30 }; }\n                    else if( i%8==7 )\n                    {   return {  x:10,y:63, w:60, h:30 }; }\n                };"
+      "heading": {
+        "level": 3,
+        "text": "custom",
+        "id": "custom"
+      },
+      "content": [
+        {
+          "type": "paragraph",
+          "text": "If you want complete control on how your objects are laid out inside the Zone, you can determine their coordinates after their number when being added to the zone."
+        },
+        {
+          "type": "paragraph",
+          "text": "Here is how to do it, when defining your Zone properties in the javascript setup:"
+        },
+        {
+          "type": "code",
+          "language": null,
+          "text": "                this.zone.setPattern( 'custom' );\n                \n                this.zone.itemIdToCoords = function( i, control_width ) {\n                    if( i%8==0 )\n                    {   return {  x:1,y:19, w:60, h:30 }; }\n                    else if( i%8==1 )\n                    {   return {  x:30,y:38, w:60, h:30 }; }\n                    else if( i%8==2 )\n                    {   return {  x:42,y:8, w:60, h:30 }; }\n                    else if( i%8==3 )\n                    {   return {  x:5,y:58, w:60, h:30 }; }\n                    else if( i%8==4 )\n                    {   return {  x:5,y:24, w:60, h:30 }; }\n                    else if( i%8==5 )\n                    {   return {  x:35,y:43, w:60, h:30 }; }\n                    else if( i%8==6 )\n                    {   return {  x:47,y:13, w:60, h:30 }; }\n                    else if( i%8==7 )\n                    {   return {  x:10,y:63, w:60, h:30 }; }\n                };"
+        }
+      ]
     }
   ],
   "links": [
@@ -333,48 +372,31 @@
       "url": "https://x.boardgamearena.net/data/themereleases/220811-1000/js/modules/zone.js"
     },
     {
-      "text": "Zone grid.jpg",
+      "text": "[image: Zone grid.jpg]",
       "url": "File:Zone_grid.jpg.html"
     },
     {
-      "text": "Zone diagonal.jpg",
+      "text": "[image: Zone diagonal.jpg]",
       "url": "File:Zone_diagonal.jpg.html"
     },
     {
-      "text": "Zone verticalfit 1.jpg",
+      "text": "[image: Zone verticalfit 1.jpg]",
       "url": "File:Zone_verticalfit_1.jpg.html"
     },
     {
-      "text": "Zone verticalfit 2.jpg",
+      "text": "[image: Zone verticalfit 2.jpg]",
       "url": "File:Zone_verticalfit_2.jpg.html"
     }
   ],
-  "images": [
-    {
-      "src": "/images/9/95/Zone_grid.jpg",
-      "alt": "Zone grid.jpg"
-    },
-    {
-      "src": "/images/2/25/Zone_diagonal.jpg",
-      "alt": "Zone diagonal.jpg"
-    },
-    {
-      "src": "/images/5/57/Zone_verticalfit_1.jpg",
-      "alt": "Zone verticalfit 1.jpg"
-    },
-    {
-      "src": "/images/6/68/Zone_verticalfit_2.jpg",
-      "alt": "Zone verticalfit 2.jpg"
-    }
-  ],
+  "images": [],
   "metadata": {
     "extractor_version": "1.0.0",
-    "extracted_at": "2026-07-06T06:53:17.729847+00:00",
+    "extracted_at": "2026-07-06T08:38:33.811567+00:00",
     "word_count": 1036,
     "heading_count": 9,
     "code_block_count": 13,
     "table_count": 0,
-    "image_count": 4,
+    "image_count": 0,
     "list_count": 5
   }
 }

@@ -3,71 +3,75 @@
   "source_file": "I_wish_I_knew_this_when_I_started.html",
   "relative_path": "I_wish_I_knew_this_when_I_started.html",
   "content_json_path": "content_json/I_wish_I_knew_this_when_I_started.json",
-  "headings": [],
-  "content": [
+  "sections": [
     {
-      "type": "paragraph",
-      "text": "This page contains most \"I wish I knew this before...\" moments (in regards to BGA studio game development). One line per statement please with doc references. Docs link can be outside of BGA wiki. Most of this is already documented on BGA wiki in details, search wiki or google for generic subject to find more info."
-    },
-    {
-      "type": "list",
-      "ordered": false,
-      "items": [
+      "heading": null,
+      "content": [
         {
-          "text": "Browser caches images and css, to force re-cache use Ctrl+F5 or Ctrl+Shift+R, and sometimes it's not enough so go to the web console > Network > check \"disable cache\"",
-          "nested": null
+          "type": "paragraph",
+          "text": "This page contains most \"I wish I knew this before...\" moments (in regards to BGA studio game development). One line per statement please with doc references. Docs link can be outside of BGA wiki. Most of this is already documented on BGA wiki in details, search wiki or google for generic subject to find more info."
         },
         {
-          "text": "Browser has powerful embeded dev tools for inspection of dom, css and js, you can debug js right in browser (F12)",
-          "nested": null
-        },
-        {
-          "text": "You don't have to login with another dev account to play test the game under development, little colored arrows on studio player panel switch between test accounts",
-          "nested": null
-        },
-        {
-          "text": "You can run PHP functions from debug menu if they are prefixed with `debug_`",
-          "nested": null
-        },
-        {
-          "text": "You can change style of elements (css) depending on their parent, sibling or other properties of the element",
-          "nested": null
-        },
-        {
-          "text": "You cannot save php state in global variables between actions, all data has to be stored in db",
-          "nested": null
-        },
-        {
-          "text": "Ajax actions in BGA do not use the traditional request-response model of a normal application. The ajax response does not contain any payload and instead you must send a notification ($this->bga->notify->all) to communicate the response to appropriate players.",
-          "nested": null
-        },
-        {
-          "text": "Almost every change you make to the game via sending notifications must also be included in getAllDatas (e.g., in case a player loads/refreshes the game during the middle of play).",
-          "nested": null
-        },
-        {
-          "text": "You can easily scale elements by using \"em\" as unit for width/height and varying font-size, i.e. .meeple {width: 2em;height: 2.5em;font-size: 20px;}",
-          "nested": null
-        },
-        {
-          "text": "You can access your javascript methods / properties in the browser console using gameui.GameModule.<yourMethod> (or gameui.<yourMethod> for older games not using JS modules, i.e. not using `modules/js/Game.js` )",
-          "nested": null
-        },
-        {
-          "text": "To interactively debug JS issues you can put debugger; statement in your code, enable dev tools (F12) and reload. It will hit breakpoint.",
-          "nested": null
-        },
-        {
-          "text": "To quickly try a fix you can edit css, js and html directly in browser dev tool window, no reload required (just don't forget to copy it back to your code after)",
-          "nested": null
-        },
-        {
-          "text": "To spell check all your translatable strings use Project Check from control panel - it will generate all strings, you can cut & paste this in online spell checker (or just use Firefox - it has embedded spell checker).",
-          "nested": null
-        },
-        {
-          "text": "To remove inline style property from dom node $(token).style.removeProperty(\"position\"); or dojo.style('token', 'position', null);",
-          "nested": null
+          "type": "list",
+          "ordered": false,
+          "items": [
+            {
+              "text": "Browser caches images and css, to force re-cache use Ctrl+F5 or Ctrl+Shift+R, and sometimes it's not enough so go to the web console > Network > check \"disable cache\"",
+              "nested": null
+            },
+            {
+              "text": "Browser has powerful embeded dev tools for inspection of dom, css and js, you can debug js right in browser (F12)",
+              "nested": null
+            },
+            {
+              "text": "You don't have to login with another dev account to play test the game under development, little colored arrows on studio player panel switch between test accounts",
+              "nested": null
+            },
+            {
+              "text": "You can run PHP functions from debug menu if they are prefixed with `debug_`",
+              "nested": null
+            },
+            {
+              "text": "You can change style of elements (css) depending on their parent, sibling or other properties of the element",
+              "nested": null
+            },
+            {
+              "text": "You cannot save php state in global variables between actions, all data has to be stored in db",
+              "nested": null
+            },
+            {
+              "text": "Ajax actions in BGA do not use the traditional request-response model of a normal application. The ajax response does not contain any payload and instead you must send a notification ($this->bga->notify->all) to communicate the response to appropriate players.",
+              "nested": null
+            },
+            {
+              "text": "Almost every change you make to the game via sending notifications must also be included in getAllDatas (e.g., in case a player loads/refreshes the game during the middle of play).",
+              "nested": null
+            },
+            {
+              "text": "You can easily scale elements by using \"em\" as unit for width/height and varying font-size, i.e. .meeple {width: 2em;height: 2.5em;font-size: 20px;}",
+              "nested": null
+            },
+            {
+              "text": "You can access your javascript methods / properties in the browser console using gameui.GameModule.<yourMethod> (or gameui.<yourMethod> for older games not using JS modules, i.e. not using `modules/js/Game.js` )",
+              "nested": null
+            },
+            {
+              "text": "To interactively debug JS issues you can put debugger; statement in your code, enable dev tools (F12) and reload. It will hit breakpoint.",
+              "nested": null
+            },
+            {
+              "text": "To quickly try a fix you can edit css, js and html directly in browser dev tool window, no reload required (just don't forget to copy it back to your code after)",
+              "nested": null
+            },
+            {
+              "text": "To spell check all your translatable strings use Project Check from control panel - it will generate all strings, you can cut & paste this in online spell checker (or just use Firefox - it has embedded spell checker).",
+              "nested": null
+            },
+            {
+              "text": "To remove inline style property from dom node $(token).style.removeProperty(\"position\"); or dojo.style('token', 'position', null);",
+              "nested": null
+            }
+          ]
         }
       ]
     }
@@ -76,7 +80,7 @@
   "images": [],
   "metadata": {
     "extractor_version": "1.0.0",
-    "extracted_at": "2026-07-06T06:53:17.419799+00:00",
+    "extracted_at": "2026-07-06T08:38:33.537987+00:00",
     "word_count": 56,
     "heading_count": 0,
     "code_block_count": 0,

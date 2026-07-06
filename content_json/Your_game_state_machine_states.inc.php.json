@@ -3,783 +3,892 @@
   "source_file": "Your_game_state_machine_states.inc.php.html",
   "relative_path": "Your_game_state_machine_states.inc.php.html",
   "content_json_path": "content_json/Your_game_state_machine_states.inc.php.json",
-  "headings": [
+  "sections": [
     {
-      "level": 2,
-      "text": "Overall structure",
-      "id": "Overall_structure"
-    },
-    {
-      "level": 2,
-      "text": "Syntax",
-      "id": "Syntax"
-    },
-    {
-      "level": 3,
-      "text": "id",
-      "id": "id"
-    },
-    {
-      "level": 3,
-      "text": "name",
-      "id": "name"
-    },
-    {
-      "level": 3,
-      "text": "type",
-      "id": "type"
-    },
-    {
-      "level": 3,
-      "text": "description",
-      "id": "description"
-    },
-    {
-      "level": 3,
-      "text": "descriptionmyturn",
-      "id": "descriptionmyturn"
-    },
-    {
-      "level": 3,
-      "text": "action",
-      "id": "action"
-    },
-    {
-      "level": 3,
-      "text": "transitions",
-      "id": "transitions"
-    },
-    {
-      "level": 3,
-      "text": "possibleactions",
-      "id": "possibleactions"
-    },
-    {
-      "level": 3,
-      "text": "args",
-      "id": "args"
-    },
-    {
-      "level": 4,
-      "text": "Naming and API conventions",
-      "id": "Naming_and_API_conventions"
-    },
-    {
-      "level": 4,
-      "text": "Other usages",
-      "id": "Other_usages"
-    },
-    {
-      "level": 4,
-      "text": "Private info in args",
-      "id": "Private_info_in_args"
-    },
-    {
-      "level": 4,
-      "text": "Flag to indicate a skipped state",
-      "id": "Flag_to_indicate_a_skipped_state"
-    },
-    {
-      "level": 4,
-      "text": "Translations in args",
-      "id": "Translations_in_args"
-    },
-    {
-      "level": 3,
-      "text": "updateGameProgression",
-      "id": "updateGameProgression"
-    },
-    {
-      "level": 3,
-      "text": "initialprivate",
-      "id": "initialprivate"
-    },
-    {
-      "level": 2,
-      "text": "Implementation Notes",
-      "id": "Implementation_Notes"
-    },
-    {
-      "level": 3,
-      "text": "End Score state",
-      "id": "End_Score_state"
-    },
-    {
-      "level": 3,
-      "text": "Private parallel states",
-      "id": "Private_parallel_states"
-    },
-    {
-      "level": 3,
-      "text": "Client States",
-      "id": "Client_States"
-    },
-    {
-      "level": 3,
-      "text": "Using Named Constants for States",
-      "id": "Using_Named_Constants_for_States"
-    },
-    {
-      "level": 3,
-      "text": "Example of MULTIPLE_ACTIVE_PLAYER state",
-      "id": "Example_of_MULTIPLE_ACTIVE_PLAYER_state"
-    },
-    {
-      "level": 3,
-      "text": "Difference between Single active and Multi active states",
-      "id": "Difference_between_Single_active_and_Multi_active_states"
-    },
-    {
-      "level": 3,
-      "text": "Designing states",
-      "id": "Designing_states"
-    },
-    {
-      "level": 3,
-      "text": "Complete examples",
-      "id": "Complete_examples"
-    }
-  ],
-  "content": [
-    {
-      "type": "paragraph",
-      "text": "IMPORTANT NOTE: This file is deprecated, you shouldn't need to change it if you use State classes . See the Reversi tutorial for an example."
-    },
-    {
-      "type": "note",
-      "variant": "warning",
-      "text": "Important: to understand the game state machine, it's recommended that you read this presentation first:"
-    },
-    {
-      "type": "paragraph",
-      "text": "The machine states are described by a PHP associative array."
-    },
-    {
-      "type": "code",
-      "language": null,
-      "text": "use Bga\\GameFramework\\GameStateBuilder;\nuse Bga\\GameFramework\\StateType;\n\n$machinestates = [\n    // only keep this line if your initial state is not 2. In that case, uncomment and replace '2' by your first state id.\n    // 1 => GameStateBuilder::gameSetup(2)->build(),\n\n    2 => GameStateBuilder::create()\n        ->name('playerTurn')\n        ->description(clienttranslate('${actplayer} must play a card or pass'))\n        ->descriptionmyturn(clienttranslate('${you} must play a card or pass'))\n        ->type(StateType::ACTIVE_PLAYER)\n        ->args('argPlayerTurn')\n        ->possibleactions([\n            // these actions are called from the front with bgaPerformAction, and matched to the function on the game.php file\n            'actPlayCard', \n            'actPass',\n        ])\n        ->transitions([\n            'playCard' => 3, \n            'pass' => 3,\n        ])\n        ->build(),\n    ),"
-    },
-    {
-      "type": "paragraph",
-      "text": "The keys determine game state IDs (in the example above: 1 and 2)."
-    },
-    {
-      "type": "paragraph",
-      "text": "ID=1 is reserved for the first game state and should not be used (and you must not modify it)."
-    },
-    {
-      "type": "note",
-      "variant": "note",
-      "text": "Note: you may use any ID, even an ID greater than 100. But you cannot use 1 or 99."
-    },
-    {
-      "type": "paragraph",
-      "text": "Note³: When a game is in prod and you change the ID of a state, all active games (including many turn based) will behave unpredictably."
-    },
-    {
-      "type": "paragraph",
-      "text": "( Mandatory )"
-    },
-    {
-      "type": "paragraph",
-      "text": "Several game states can share the same name; however, this is not recommended."
-    },
-    {
-      "type": "paragraph",
-      "text": "PHP example:"
-    },
-    {
-      "type": "code",
-      "language": null,
-      "text": "\n\n// Get current game state\n$state = $this->gamestate->state();\nif( $state['name'] == 'myGameState' )\n{\n...\n}"
-    },
-    {
-      "type": "paragraph",
-      "text": "JS example:"
-    },
-    {
-      "type": "code",
-      "language": null,
-      "text": "        onEnteringState: function( stateName, args )\n        {\n            console.log( 'Entering state: '+stateName );\n            \n            switch( stateName )\n            case 'myGameState':\n            \n                // Do some stuff at the beginning at this game state\n                ....\n                \n                break;"
-    },
-    {
-      "type": "paragraph",
-      "text": "( Mandatory )"
-    },
-    {
-      "type": "list",
-      "ordered": false,
-      "items": [
+      "heading": null,
+      "content": [
         {
-          "text": "StateType::ACTIVE_PLAYER : 1 player is active and must play. ('activeplayer' if using the old array notation)",
-          "nested": null
+          "type": "paragraph",
+          "text": "IMPORTANT NOTE: This file is deprecated, you shouldn't need to change it if you use State classes . See the Reversi tutorial for an example."
         },
         {
-          "text": "StateType::MULTIPLE_ACTIVE_PLAYER : 1..N players can be active and must play. ('multipleactiveplayer' if using the old array notation)",
-          "nested": null
-        },
-        {
-          "text": "StateType::PRIVATE (during multiactive states players can independently move to different private parallel states. ('private' if using the old array notation) See more details here .",
-          "nested": null
-        },
-        {
-          "text": "StateType::GAME (No player is active. This is a transitional state to do something automatic specified by the game rules.) ('game' if using the old array notation)",
-          "nested": null
+          "type": "note",
+          "variant": "warning",
+          "text": "Important: to understand the game state machine, it's recommended that you read this presentation first:"
         }
       ]
     },
     {
-      "type": "paragraph",
-      "text": "( Mandatory )"
-    },
-    {
-      "type": "paragraph",
-      "text": "When a string is specified as a description, you must use \"clienttranslate\" in order for the string to be translated on the client side:"
-    },
-    {
-      "type": "code",
-      "language": null,
-      "text": " \t\t.description(clienttranslate('${actplayer} must play a card or pass'))"
-    },
-    {
-      "type": "paragraph",
-      "text": "In the description string, you can use ${actplayer} to refer to the active player."
-    },
-    {
-      "type": "paragraph",
-      "text": "Example of custom field:"
-    },
-    {
-      "type": "code",
-      "language": null,
-      "text": "\n\nIn states.inc.php:\n        .description(clienttranslate('${actplayer} must choose ${nbr} identical energies'))\n        .args('argMyArgumentMethod')\n\nIn mygame.game.php:\n    function argMyArgumentMethod(): array\n    {\n        return [\n            'nbr' => 2  // In this case ${nbr} in the description will be replaced by \"2\"\n        ];    \n    }"
-    },
-    {
-      "type": "note",
-      "variant": "note",
-      "text": "Note: You may specify an empty string ( ) here if it never happens that the game remains in this state (i.e., if this state immediately jumps to another state when activated)."
-    },
-    {
-      "type": "paragraph",
-      "text": "( Mandatory when the state type is ACTIVE_PLAYER or MULTIPLE_ACTIVE_PLAYER)"
-    },
-    {
-      "type": "paragraph",
-      "text": "In general, we have this situation:"
-    },
-    {
-      "type": "code",
-      "language": null,
-      "text": "        .description(clienttranslate('${actplayer} can take some actions'))\n        .descriptionmyturn(clienttranslate('${you} can take some actions'))"
-    },
-    {
-      "type": "note",
-      "variant": "note",
-      "text": "Note: you can use ${you} in descriptionmyturn so the description will display \"You\" instead of the name of the player."
-    },
-    {
-      "type": "paragraph",
-      "text": "I.e."
-    },
-    {
-      "type": "code",
-      "language": null,
-      "text": ".descriptionmyturn(clienttranslate('${you} can follow action of ${otherplayer}'))"
-    },
-    {
-      "type": "paragraph",
-      "text": "And this will have to be state arguments for this"
-    },
-    {
-      "type": "code",
-      "language": null,
-      "text": "    function arg_playerTurnFollow(){\n        return ['otherplayer'=> $this->getLeaderPlayerName(),\n                'otherplayer_id'=> $this->getLeaderPlayerId()\n        ];\n    }"
-    },
-    {
-      "type": "paragraph",
-      "text": "( Mandatory when the state type is GAME)"
-    },
-    {
-      "type": "paragraph",
-      "text": "Example: In states.inc.php:"
-    },
-    {
-      "type": "code",
-      "language": null,
-      "text": "        .type(StateType::GAME)\n        .action('stGameTurnNextPlayer')"
-    },
-    {
-      "type": "paragraph",
-      "text": "In Game.php:"
-    },
-    {
-      "type": "code",
-      "language": null,
-      "text": "    function stGameTurnNextPlayer() {\n        $player_id = (int)$this->getActivePlayerId();\n        $next_player_id = (int)$this->getPlayerAfter($player_id);\n        $this->giveExtraTime($next_player_id);\n        $this->incStat(1, 'turns_number', $next_player_id);\n        $this->incStat(1, 'turns_number');\n        $this->gamestate->changeActivePlayer($next_player_id);\n        $this->gamestate->nextState('next');\n    }"
-    },
-    {
-      "type": "paragraph",
-      "text": "Usually, for a GAME state type, the action method is used to perform automatic functions specified by the rules (for example: check victory conditions, deal cards for a new round, go to the next player, etc.) and then jump to another game state."
-    },
-    {
-      "type": "note",
-      "variant": "note",
-      "text": "Note: this field CAN be used for player states to set something up; e.g., for MULTIPLE_ACTIVE_PLAYER states, it can make all players active."
-    },
-    {
-      "type": "code",
-      "language": null,
-      "text": "        .type(StateType::MULTIPLE_ACTIVE_PLAYER)\n        .action('stMultiPlayerInit')"
-    },
-    {
-      "type": "paragraph",
-      "text": "in mygame.game.php:"
-    },
-    {
-      "type": "code",
-      "language": null,
-      "text": "    function stMultiPlayerInit() {\n        $this->gamestate->setAllPlayersMultiactive();\n    }"
-    },
-    {
-      "type": "paragraph",
-      "text": "( Mandatory )"
-    },
-    {
-      "type": "paragraph",
-      "text": "Example:"
-    },
-    {
-      "type": "code",
-      "language": null,
-      "text": "        .name('myGameState')\n        .transitions([\n            'nextPlayer' => 27,\n            'endRound' => 39,\n        ])\n        ....\n    }"
-    },
-    {
-      "type": "paragraph",
-      "text": "In the example above, if \"myGameState\" is the current active game state, I can jump to the game state with ID 27 or the game state with ID 39."
-    },
-    {
-      "type": "code",
-      "language": null,
-      "text": "In mygame.game.php:\n    $this->gamestate->nextState( \"nextPlayer\" );"
-    },
-    {
-      "type": "note",
-      "variant": "warning",
-      "text": "Important: \"nextPlayer\" is the name of the transition, and NOT the name of the target game state. Multiple transitions can lead to the same game state."
-    },
-    {
-      "type": "paragraph",
-      "text": "Example:"
-    },
-    {
-      "type": "code",
-      "language": null,
-      "text": "In states.inc.php:\n    .transitions([\"\" => 27])\n\nIn mygame.game.php:\n    $this->gamestate->nextState(  );     // We don't need to specify a transition as there is only one here"
-    },
-    {
-      "type": "paragraph",
-      "text": "( Mandatory when the game state is ACTIVE_PLAYER or MULTIPLE_ACTIVE_PLAYER)"
-    },
-    {
-      "type": "paragraph",
-      "text": "Example:"
-    },
-    {
-      "type": "code",
-      "language": null,
-      "text": "In states.game.php:\n       \t.possibleactions([ 'actPlayCard', 'actPass' ])\n\nIn Game.php:\n        function actPlayCard( ...)\n        {\n             $this->checkAction( \"actPlayCard\" );    // Will fail if \"actPlayCard\" is not specified in \"possibleactions\" in the current game state.\n\n            ....\n\nIn mygame.js:\n        playCard: function( ... )\n        {\n            if( this.checkAction( \"actPlayCard\" ) ) // Will fail if \"actPlayCard\" is not specified in \"possibleactions\" in the current game state.\n            {  return ;   }\n// or \n        playCard: function( ... )\n        {\n            if( this.bgaPerformAction( \"actPlayCard\", { id} ) ) // Will not trigger if \"actPlayCard\" is not specified in \"possibleactions\" in the current game state.\n            {  return ;   }\n\n            ...."
-    },
-    {
-      "type": "paragraph",
-      "text": "(optional)"
-    },
-    {
-      "type": "paragraph",
-      "text": "Example 1: in Reversi , the list of possible moves during the playerTurn state."
-    },
-    {
-      "type": "paragraph",
-      "text": "Example 3: in Can't Stop , the list of possible die combinations to be displayed to the active player so that he can choose from among them."
-    },
-    {
-      "type": "paragraph",
-      "text": "Thus, this data can be transmitted to the clients and used by the clients to display it. It should always be an associative array."
-    },
-    {
-      "type": "paragraph",
-      "text": "In states.inc.php, we specify an args argument for gamestate playerTurn :"
-    },
-    {
-      "type": "code",
-      "language": null,
-      "text": "    10 => GameStateBuilder::create()\n        ->name('playerTurn')\n        ->description(clienttranslate('${actplayer} must play a disc'))\n        ->descriptionmyturn(clienttranslate('${you} must play a disc'))\n        ->type(StateType::ACTIVE_PLAYER)\n        ->args('argPlayerTurn')    // <==== HERE\n        ->possibleactions([ 'actPlayDisc' ])\n        ->transitions([ \"playDisc\" => 11, \"zombiePass\" => 11 ])\n    ),"
-    },
-    {
-      "type": "paragraph",
-      "text": "It corresponds to a argPlayerTurn method in our PHP code (reversi.game.php):"
-    },
-    {
-      "type": "code",
-      "language": null,
-      "text": "    function argPlayerTurn(): array {\n        return [\n            'possibleMoves' => $this->getPossibleMoves(),\n        ];\n    }"
-    },
-    {
-      "type": "paragraph",
-      "text": "Then, when we enter into the playerTurn game state on the client side, we can highlight the possible moves on the board using information returned by argPlayerTurn :"
-    },
-    {
-      "type": "code",
-      "language": null,
-      "text": "        onEnteringState: function( stateName, args )  {\n           console.log( 'Entering state: '+stateName );\n            \n            switch( stateName )  {\n            case 'playerTurn':\n                this.updatePossibleMoves( args.args.possibleMoves );\n                break;\n            }\n        },"
-    },
-    {
-      "type": "paragraph",
-      "text": "As a BGA convention, PHP methods called with \"args\" are prefixed by \"arg\" followed by state name (example: argPlayerTurn )."
-    },
-    {
-      "type": "code",
-      "language": null,
-      "text": "  //////////// Game state arguments"
-    },
-    {
-      "type": "paragraph",
-      "text": "Arg method MUST return array. Return integer or string will result in some undebuggable exceptions."
-    },
-    {
-      "type": "code",
-      "language": null,
-      "text": "   function argPlayerTurn(): array {\n       return []; // must be an array\n   }"
-    },
-    {
-      "type": "paragraph",
-      "text": "Warning : the \"args\" method is ALWAYS called before the \"action\" method so don't expect data modifications by the \"action\" method to be available in the \"args\" method! Also don't modify database in this method!"
-    },
-    {
-      "type": "paragraph",
-      "text": "If you using this function in multi-player state, you should not call getActivePlayer() either, you should send per player info:"
-    },
-    {
-      "type": "code",
-      "language": null,
-      "text": "   function argPlayerTurn(): array {\n       $res = [];\n       $players = $this->loadPlayersBasicInfos();\n       foreach ( $players as $player_id => $player_info ) {\n           $color = $player_info ['player_color'];\n           $res [$player_id] = array(\"color\"=>$color);\n       }\n       return $res;\n   }"
-    },
-    {
-      "type": "note",
-      "variant": "note",
-      "text": "Note: you never need to send player color like this, this is just an example."
-    },
-    {
-      "type": "paragraph",
-      "text": "You can use values returned by your \"args\" method to have some custom values in your \"description\"/\"descriptionmyturn\", i.e. in states.inc.php:"
-    },
-    {
-      "type": "code",
-      "language": null,
-      "text": "  .descriptionmyturn(clienttranslate('${you} must play ${color} disc'))"
-    },
-    {
-      "type": "paragraph",
-      "text": "So arg function will be something like:"
-    },
-    {
-      "type": "code",
-      "language": null,
-      "text": " function argPlayerTurn(): array {\n       return [ 'color'=>$this->getActivePlayerColor() ]; \n }"
-    },
-    {
-      "type": "paragraph",
-      "text": "You can use args also in onUpdateActionButtons function on js side, however two important notes:"
-    },
-    {
-      "type": "list",
-      "ordered": false,
-      "items": [
+      "heading": {
+        "level": 2,
+        "text": "Overall structure",
+        "id": "Overall_structure"
+      },
+      "content": [
         {
-          "text": "it is just args (not args.args like in onEnteringState )",
-          "nested": null
+          "type": "paragraph",
+          "text": "The machine states are described by a PHP associative array."
         },
         {
-          "text": "it is args of the current state, which may not be state you think it will be! This method is called during change of active player, which happens in some weird place especially during MULTIPLE_ACTIVE_PLAYER states. If you pulling your hair thinking why its \"undefined\" on js side - check the current state.",
-          "nested": null
+          "type": "code",
+          "language": null,
+          "text": "use Bga\\GameFramework\\GameStateBuilder;\nuse Bga\\GameFramework\\StateType;\n\n$machinestates = [\n    // only keep this line if your initial state is not 2. In that case, uncomment and replace '2' by your first state id.\n    // 1 => GameStateBuilder::gameSetup(2)->build(),\n\n    2 => GameStateBuilder::create()\n        ->name('playerTurn')\n        ->description(clienttranslate('${actplayer} must play a card or pass'))\n        ->descriptionmyturn(clienttranslate('${you} must play a card or pass'))\n        ->type(StateType::ACTIVE_PLAYER)\n        ->args('argPlayerTurn')\n        ->possibleactions([\n            // these actions are called from the front with bgaPerformAction, and matched to the function on the game.php file\n            'actPlayCard', \n            'actPass',\n        ])\n        ->transitions([\n            'playCard' => 3, \n            'pass' => 3,\n        ])\n        ->build(),\n    ),"
         }
       ]
     },
     {
-      "type": "paragraph",
-      "text": "By default, all data provided through this method are PUBLIC TO ALL PLAYERS. Please do not send any private data with this method, as a cheater could see it even it is not used explicitly by the game interface logic."
+      "heading": {
+        "level": 2,
+        "text": "Syntax",
+        "id": "Syntax"
+      },
+      "content": []
     },
     {
-      "type": "note",
-      "variant": "note",
-      "text": "Note: You cannot use Example 1 and Example 2 together. If you have to send private args to multiple players, use Example 2."
-    },
-    {
-      "type": "code",
-      "language": null,
-      "text": "    function argPlayerTurn(): array {\n        return array(\n            '_private' => array(          // Using \"_private\" keyword, all data inside this array will be made private\n                'active' => array(       // Using \"active\" keyword inside \"_private\", you select active player(s)\n                    'somePrivateData' => $this->getSomePrivateData()   // will be send only to active player(s)\n                )\n            ),\n            'possibleMoves' => $this->getPossibleMoves()          // will be sent to all players\n        );\n    }"
-    },
-    {
-      "type": "paragraph",
-      "text": "Inside the js file, these variables will be available through `args.args._private`. (e.g. `args.args._private.somePrivateData` -- it is not `args._private.active.somePrivateData` nor is it `args.somePrivateData`)"
-    },
-    {
-      "type": "code",
-      "language": null,
-      "text": "    function argPlayerTurn(): array  {\n        $specific_player_id = ...; // calculate some-how\n        return array(\n            '_private' => array(   // all data inside this array will be private\n                $specific_player_id => array(   // will be sent only to that player   \n                    'somePrivateData' => $this->getSomePrivateData()   \n                )\n            ),\n\n            'possibleMoves' => $this->getPossibleMoves()   // will be sent to all players\n        );\n    }"
-    },
-    {
-      "type": "note",
-      "variant": "warning",
-      "text": "IMPORTANT: in certain situations (i.e. MULTIPLE_ACTIVE_PLAYER game state) these \"private data\" features can have a significant impact on performance. Please do not use if not needed."
-    },
-    {
-      "type": "paragraph",
-      "text": "By default, The front-end will be notified of entering/leaving all states. To speed up the front-end chaining of automatically passed states, you can disable this state change notification, so the front-end doesn't trigger the preparation steps for a state that you know will be automatically skipped, and it may reduce sent args. In this case, define the _no_notify flag to true in the state args."
-    },
-    {
-      "type": "code",
-      "language": null,
-      "text": "function argPlayerTurn(): array {\n  $playableCardsIds = ...;\n  return [\n    'playableCardsIds' => $playableCardsIds,\n    '_no_notify' => count(playableCardsIds) === 0,\n  ];\n}\nfunction stPlayerTurn(): void {\n  $args = $this->argPlayerTurn();\n  if ($args['_no_notify']) {\n    $this->gamestate->nextState('next');\n  }\n}"
-    },
-    {
-      "type": "paragraph",
-      "text": "In this example, it might avoid a blinking message \"You must play a card\" (quickly replaced by the next state message) when you cannot play a card and the game automatically skips this state."
-    },
-    {
-      "type": "paragraph",
-      "text": "Note that if you play synced notifications during a skipped state, it will display the notifications on the previous state. For example, for an endScore state width description \"Computing end score...\" sending a lot of animated notifications, you should NOT use this flag so the description is visible."
-    },
-    {
-      "type": "paragraph",
-      "text": "You can do the same as in notification by adding i18n parameter, i.e"
-    },
-    {
-      "type": "code",
-      "language": null,
-      "text": "function argPlayerTurn(): array {\n return [\n      'i18n' => ['terrainName' ],\n      'terrainName' => ($this->token_types[$terrain]['name']), // this should be defined in material.inc.php and with clienttranslate \n      'terrain' => $terrain,\n   ];\n}"
-    },
-    {
-      "type": "paragraph",
-      "text": "Than you can do something like this in state:"
-    },
-    {
-      "type": "code",
-      "language": null,
-      "text": " .descriptionmyturn(clienttranslate('${you} must place a house on ${terrainName}')),"
-    },
-    {
-      "type": "paragraph",
-      "text": "See more in Translations"
-    },
-    {
-      "type": "paragraph",
-      "text": "(optional)"
-    },
-    {
-      "type": "paragraph",
-      "text": "At least one of your game states (any one) must specify \".updateGameProgression(true)\"."
-    },
-    {
-      "type": "paragraph",
-      "text": "(optional)"
-    },
-    {
-      "type": "paragraph",
-      "text": "You will often need to do some computation at the end of the game, for end score or for average stats. As you cannot modify the endGame state, it's recommended to create a state just before, that will do it."
-    },
-    {
-      "type": "code",
-      "language": null,
-      "text": "98 => GameStateBuilder::endScore()->build()"
-    },
-    {
-      "type": "paragraph",
-      "text": "For debugging purpose, you can comment this line in your states.inc.php and replace it by"
-    },
-    {
-      "type": "code",
-      "language": null,
-      "text": "    98 => GameStateBuilder::create()\n        ->name('endScore')\n        ->description('')\n        ->descriptionmyturn('')\n        ->type(StateType::ACTIVE_PLAYER)\n        ->action('stEndScore')\n        ->build(),"
-    },
-    {
-      "type": "paragraph",
-      "text": "and comment the nextState on stEndScore. Then you can run your game to the endScore state, test the result, and reload a previous state until your debugging is complete."
-    },
-    {
-      "type": "paragraph",
-      "text": "Private parallel states are useful when multiple players are active and their turn is very complex. In that case it is possible with parallel states for each player to be in a independent state."
-    },
-    {
-      "type": "list",
-      "ordered": false,
-      "items": [
+      "heading": {
+        "level": 3,
+        "text": "id",
+        "id": "id"
+      },
+      "content": [
         {
-          "text": "Moving all players to different states together - this is limiting for faster players as they need to wait other players for each separate action. The more problematic thing is that it would be hard to implement an undo feature when one player wants to change their previous action. In that case all players should be moved back to previous state which will interrupt their flow.",
-          "nested": null
+          "type": "paragraph",
+          "text": "The keys determine game state IDs (in the example above: 1 and 2)."
         },
         {
-          "text": "Using client states, by changing the state in which the player is in javascript - the problem with this approach is that players will lose their progress on browser refresh (F5). Furthermore the validation logic of specific actions should be implemented on both server side and client side and we cannot have specific args for each different action, but they should be calculated only at the beginning of the first action and possibly calculated on client side after each action, which again duplicates logic on client and server.",
-          "nested": null
+          "type": "paragraph",
+          "text": "ID=1 is reserved for the first game state and should not be used (and you must not modify it)."
+        },
+        {
+          "type": "note",
+          "variant": "note",
+          "text": "Note: you may use any ID, even an ID greater than 100. But you cannot use 1 or 99."
+        },
+        {
+          "type": "paragraph",
+          "text": "Note³: When a game is in prod and you change the ID of a state, all active games (including many turn based) will behave unpredictably."
         }
       ]
     },
     {
-      "type": "paragraph",
-      "text": "With private parallel states, each specific action can be implemented as a parallel state. Parallel states are defined with the type PRIVATE and players are moved to those private states during one master MULTIPLE_ACTIVE_PLAYER state. Lets look at the example:"
-    },
-    {
-      "type": "code",
-      "language": null,
-      "text": "    10 => GameStateBuilder::create()\n        ->name(\"playerTurn\")\n        ->description(clienttranslate('Waiting for other players to end their turn.'))\n        ->descriptionmyturn(''), // Won't be displayed anyway since each private state has its own description\n        ->type(StateType::MULTIPLE_ACTIVE_PLAYER)\n        ->initialprivate(50) // This makes this state a master multiactive state and enables private states, this is also a first private state\n        ->action(\"stPlayerTurn\")\n        ->args(\"argPlayerTurn\")\n        ->possibleactions([\"actChangeMind\"]) //this action is possible if player is not in any private state which usually happens when they are inactive\n        ->transitions([\"playersDecide\" => 11]) // this is normal next transition which will happen after all players finish their turns \n        ->build(),\n\n    50 => GameStateBuilder::create()\n        ->name(\"chooseFirst\")\n        ->descriptionmyturn(clienttranslate('${you} must make your first choice')) // just this parameter is needed. description is not needed as no player is inactive in this state\n        ->type(StateType::PRIVATE) // this state is reachable only as a private state\n        ->args(\"argChooseFirst\") //this method will be called with playerId as a parametar and is used to calculate arguments for this action for specific player\n        ->action(\"stChooseFirst\") // this method will be called with playerId as a parameter and can be used to make some changes when player enters this private state\n        ->possibleactions([\"actToSecond\"])\n        ->transitions([\n          'chooseSecond' => 51, // transition to another private state\n        ])\n        ->build(),\n   \n    51 => GameStateBuilder::create()\n        ->name(\"chooseSecond\")\n        ->descriptionmyturn(clienttranslate('${you} must make your second choice'))\n        ->type(StateType::PRIVATE)\n        ->args(\"argChooseSecond\")\n        ->possibleactions([\"actFinish\", \"actBack\"])\n        ->transitions([\n          'back' => 50,\n        ])\n        ->build(),"
-    },
-    {
-      "type": "paragraph",
-      "text": "When entering the master state it is usually useful to set some players as multiactive and initialize their private state:"
-    },
-    {
-      "type": "code",
-      "language": null,
-      "text": "    function stPlayerTurn() {\n        $this->gamestate->setAllPlayersMultiactive();\n        \n        //this is needed when starting private parallel states; players will be transitioned to initialprivate state defined in master state\n        $this->gamestate->initializePrivateStateForAllActivePlayers(); \n\n        // in some cases you can move immediately some or all players to different private states\n        if ($someCondition) {\n            //move all players to different state \n            $this->gamestate->nextPrivateStateForAllActivePlayers(\"chooseSecond\");\n            return;\n        }\n\n        if ($other condition) {\n            //move single player to different state\n            $this->gamestate->nextPrivateState($specificPlayerId, \"chooseSecond\");\n            return;\n        }\n    }"
-    },
-    {
-      "type": "paragraph",
-      "text": "When some action is done by a player, you can move them to the next private state:"
-    },
-    {
-      "type": "code",
-      "language": null,
-      "text": "    function actToSecond() {\n        $this->checkAction(\"actToSecond\");  //the action must be defined in private state; actions defined in master state are not possible\n        $this->gamestate->nextPrivateState($this->getCurrentPlayerId(), \"chooseSecond\"); //moving current player to different state\n    }"
-    },
-    {
-      "type": "paragraph",
-      "text": "Please check the detailed API here ."
-    },
-    {
-      "type": "paragraph",
-      "text": "Client state almost have nothing to do with server states, except they can simulate same experience without actually changing server states."
-    },
-    {
-      "type": "paragraph",
-      "text": "In many cases you can achive similar results by using client states vs private server states. The only caveat - when using client states during MULTIPLE_ACTIVE_PLAYER server state other player will trigger state changes (multiactive player set) which will call onUpdateActionButtons. Some measures have to be taken to preserve client state in this case."
-    },
-    {
-      "type": "paragraph",
-      "text": "Using numeric constants is prone to errors. If you want you can declare state constants as PHP named constants. This way you can use them in the states file and in Game.php as well"
-    },
-    {
-      "type": "paragraph",
-      "text": "states.inc.php:"
-    },
-    {
-      "type": "code",
-      "language": null,
-      "text": "// define contants for state ids\nif (!defined('STATE_END_GAME')) { // ensure this block is only invoked once, since it is included multiple times\n   define(\"STATE_PLAYER_TURN\", 2);\n   define(\"STATE_GAME_TURN\", 3);\n   define(\"STATE_PLAYER_TURN_CUBES\", 4);\n   define(\"STATE_END_GAME\", 99);\n}\n \n$machinestates = array(\n\n   ...\n\n    STATE_PLAYER_TURN => GameStateBuilder::create()\n        // ...\n    \t\t->transitions([\n    \t\t        \"loopback\" => STATE_PLAYER_TURN,\n    \t\t        \"playCubes\" => STATE_PLAYER_TURN_CUBES,\n    \t\t        \"pass\" => STATE_GAME_TURN,\n    \t\t])"
-    },
-    {
-      "type": "paragraph",
-      "text": "This is an example of a MULTIPLE_ACTIVE_PLAYER state:"
-    },
-    {
-      "type": "code",
-      "language": null,
-      "text": " 2 =>  GameStateBuilder::create()\n   ->name('playerTurnSetup')\n   ->type(StateType::MULTIPLE_ACTIVE_PLAYER)\n   ->description(clienttranslate('Other players must choose one Objective'))\n   ->descriptionmyturn(clienttranslate('${you} must choose one Objective card to keep'))\n   ->possibleactions([ 'actPlayKeep' ])\n   ->transitions(['next' => 5, 'loopback' => 2, ])\n   ->action('stMultiPlayerInit')\n   ->args('argplayerTurnSetup')\n   ->build(),"
-    },
-    {
-      "type": "paragraph",
-      "text": "In game.php:"
-    },
-    {
-      "type": "code",
-      "language": null,
-      "text": "   // this will make all players multiactive just before entering the state\n   function stMultiPlayerInit() {\n       $this->gamestate->setAllPlayersMultiactive();\n   }"
-    },
-    {
-      "type": "note",
-      "variant": "note",
-      "text": "Note: if you want exact this function its already defined in table class its called 'stMakeEveryoneActive'"
-    },
-    {
-      "type": "code",
-      "language": null,
-      "text": "   function actPlayKeep($cardId) {\n       $this->checkAction('actPlayKeep');\n       $player_id = $this->getCurrentPlayerId(); // CURRENT!!! not active\n       ... // some logic here\n       $this->gamestate->setPlayerNonMultiactive($player_id, 'next'); // deactivate player; if none left, transition to 'next' state\n   }"
-    },
-    {
-      "type": "paragraph",
-      "text": "In a classic ACTIVE_PLAYER state:"
-    },
-    {
-      "type": "list",
-      "ordered": false,
-      "items": [
+      "heading": {
+        "level": 3,
+        "text": "name",
+        "id": "name"
+      },
+      "content": [
         {
-          "text": "You cannot change the active player DURING the state. This is to ensure that during 1 ACTIVE_PLAYER state, only ONE player is active",
-          "nested": null
+          "type": "paragraph",
+          "text": "( Mandatory )"
         },
         {
-          "text": "As a consequence, you must set the active player BEFORE entering the ACTIVE_PLAYER state",
-          "nested": null
+          "type": "paragraph",
+          "text": "Several game states can share the same name; however, this is not recommended."
         },
         {
-          "text": "In such states on JS side onUpdateActionButtons is called before onEnteringState during game play (but after during reload, i.e. F5)",
-          "nested": null
+          "type": "paragraph",
+          "text": "PHP example:"
         },
         {
-          "text": "Finally, during onEnteringState, on JS side, the active player is signaled as active and the information is reliable and usable.",
-          "nested": null
+          "type": "code",
+          "language": null,
+          "text": "\n\n// Get current game state\n$state = $this->gamestate->state();\nif( $state['name'] == 'myGameState' )\n{\n...\n}"
+        },
+        {
+          "type": "paragraph",
+          "text": "JS example:"
+        },
+        {
+          "type": "code",
+          "language": null,
+          "text": "        onEnteringState: function( stateName, args )\n        {\n            console.log( 'Entering state: '+stateName );\n            \n            switch( stateName )\n            case 'myGameState':\n            \n                // Do some stuff at the beginning at this game state\n                ....\n                \n                break;"
         }
       ]
     },
     {
-      "type": "paragraph",
-      "text": "In a MULTIPLE_ACTIVE_PLAYER state:"
-    },
-    {
-      "type": "list",
-      "ordered": false,
-      "items": [
+      "heading": {
+        "level": 3,
+        "text": "type",
+        "id": "type"
+      },
+      "content": [
         {
-          "text": "You can (and must) change the active players DURING the state",
-          "nested": null
+          "type": "paragraph",
+          "text": "( Mandatory )"
         },
         {
-          "text": "During such a state, players can be activated/desactivated anytime during the state, giving you the maximum of possibilities.",
-          "nested": null
-        },
-        {
-          "text": "You shouldn't set active player before entering the state. But you can set it in \"state initializer\" php function (see example above stMultiPlayerInit)",
-          "nested": null
-        },
-        {
-          "text": "Finally, during onEnteringState, on JS side, the active players are NOT active yet so you must use onUpdateActionButtons to perform the client side operation which depends on a player active/inactive status.",
-          "nested": null
+          "type": "list",
+          "ordered": false,
+          "items": [
+            {
+              "text": "StateType::ACTIVE_PLAYER : 1 player is active and must play. ('activeplayer' if using the old array notation)",
+              "nested": null
+            },
+            {
+              "text": "StateType::MULTIPLE_ACTIVE_PLAYER : 1..N players can be active and must play. ('multipleactiveplayer' if using the old array notation)",
+              "nested": null
+            },
+            {
+              "text": "StateType::PRIVATE (during multiactive states players can independently move to different private parallel states. ('private' if using the old array notation) See more details here .",
+              "nested": null
+            },
+            {
+              "text": "StateType::GAME (No player is active. This is a transitional state to do something automatic specified by the game rules.) ('game' if using the old array notation)",
+              "nested": null
+            }
+          ]
         }
       ]
     },
     {
-      "type": "note",
-      "variant": "note",
-      "text": "Note: in some off cases other players can perform special actions even if they are not active, see example https://en.doc.boardgamearena.com/BGA_Studio_Cookbook#Out-of-turn_actions%3A_Un-pass . Do not abuse this technique!"
+      "heading": {
+        "level": 3,
+        "text": "description",
+        "id": "description"
+      },
+      "content": [
+        {
+          "type": "paragraph",
+          "text": "( Mandatory )"
+        },
+        {
+          "type": "paragraph",
+          "text": "When a string is specified as a description, you must use \"clienttranslate\" in order for the string to be translated on the client side:"
+        },
+        {
+          "type": "code",
+          "language": null,
+          "text": " \t\t.description(clienttranslate('${actplayer} must play a card or pass'))"
+        },
+        {
+          "type": "paragraph",
+          "text": "In the description string, you can use ${actplayer} to refer to the active player."
+        },
+        {
+          "type": "paragraph",
+          "text": "Example of custom field:"
+        },
+        {
+          "type": "code",
+          "language": null,
+          "text": "\n\nIn states.inc.php:\n        .description(clienttranslate('${actplayer} must choose ${nbr} identical energies'))\n        .args('argMyArgumentMethod')\n\nIn mygame.game.php:\n    function argMyArgumentMethod(): array\n    {\n        return [\n            'nbr' => 2  // In this case ${nbr} in the description will be replaced by \"2\"\n        ];    \n    }"
+        },
+        {
+          "type": "note",
+          "variant": "note",
+          "text": "Note: You may specify an empty string ( ) here if it never happens that the game remains in this state (i.e., if this state immediately jumps to another state when activated)."
+        }
+      ]
     },
     {
-      "type": "paragraph",
-      "text": "As a general rule you state machine should resemble \"round/turn overview\" from the game rule-book. Normally if book say its player turn and player can do multiple things during their turn it is still only one player state (plus a game to switch player), not multiple states."
+      "heading": {
+        "level": 3,
+        "text": "descriptionmyturn",
+        "id": "descriptionmyturn"
+      },
+      "content": [
+        {
+          "type": "paragraph",
+          "text": "( Mandatory when the state type is ACTIVE_PLAYER or MULTIPLE_ACTIVE_PLAYER)"
+        },
+        {
+          "type": "paragraph",
+          "text": "In general, we have this situation:"
+        },
+        {
+          "type": "code",
+          "language": null,
+          "text": "        .description(clienttranslate('${actplayer} can take some actions'))\n        .descriptionmyturn(clienttranslate('${you} can take some actions'))"
+        },
+        {
+          "type": "note",
+          "variant": "note",
+          "text": "Note: you can use ${you} in descriptionmyturn so the description will display \"You\" instead of the name of the player."
+        },
+        {
+          "type": "paragraph",
+          "text": "I.e."
+        },
+        {
+          "type": "code",
+          "language": null,
+          "text": ".descriptionmyturn(clienttranslate('${you} can follow action of ${otherplayer}'))"
+        },
+        {
+          "type": "paragraph",
+          "text": "And this will have to be state arguments for this"
+        },
+        {
+          "type": "code",
+          "language": null,
+          "text": "    function arg_playerTurnFollow(){\n        return ['otherplayer'=> $this->getLeaderPlayerName(),\n                'otherplayer_id'=> $this->getLeaderPlayerId()\n        ];\n    }"
+        }
+      ]
     },
     {
-      "type": "paragraph",
-      "text": "[image: Simplestates.png]"
+      "heading": {
+        "level": 3,
+        "text": "action",
+        "id": "action"
+      },
+      "content": [
+        {
+          "type": "paragraph",
+          "text": "( Mandatory when the state type is GAME)"
+        },
+        {
+          "type": "paragraph",
+          "text": "Example: In states.inc.php:"
+        },
+        {
+          "type": "code",
+          "language": null,
+          "text": "        .type(StateType::GAME)\n        .action('stGameTurnNextPlayer')"
+        },
+        {
+          "type": "paragraph",
+          "text": "In Game.php:"
+        },
+        {
+          "type": "code",
+          "language": null,
+          "text": "    function stGameTurnNextPlayer() {\n        $player_id = (int)$this->getActivePlayerId();\n        $next_player_id = (int)$this->getPlayerAfter($player_id);\n        $this->giveExtraTime($next_player_id);\n        $this->incStat(1, 'turns_number', $next_player_id);\n        $this->incStat(1, 'turns_number');\n        $this->gamestate->changeActivePlayer($next_player_id);\n        $this->gamestate->nextState('next');\n    }"
+        },
+        {
+          "type": "paragraph",
+          "text": "Usually, for a GAME state type, the action method is used to perform automatic functions specified by the rules (for example: check victory conditions, deal cards for a new round, go to the next player, etc.) and then jump to another game state."
+        },
+        {
+          "type": "note",
+          "variant": "note",
+          "text": "Note: this field CAN be used for player states to set something up; e.g., for MULTIPLE_ACTIVE_PLAYER states, it can make all players active."
+        },
+        {
+          "type": "code",
+          "language": null,
+          "text": "        .type(StateType::MULTIPLE_ACTIVE_PLAYER)\n        .action('stMultiPlayerInit')"
+        },
+        {
+          "type": "paragraph",
+          "text": "in mygame.game.php:"
+        },
+        {
+          "type": "code",
+          "language": null,
+          "text": "    function stMultiPlayerInit() {\n        $this->gamestate->setAllPlayersMultiactive();\n    }"
+        }
+      ]
     },
     {
-      "type": "paragraph",
-      "text": "For pair of active player/game states you can make player state first, which transitions to game state, or the other way around, you start with game state which transition to active player state, its loop in any case but depends on how you want to do \"phase\" initiazations."
+      "heading": {
+        "level": 3,
+        "text": "transitions",
+        "id": "transitions"
+      },
+      "content": [
+        {
+          "type": "paragraph",
+          "text": "( Mandatory )"
+        },
+        {
+          "type": "paragraph",
+          "text": "Example:"
+        },
+        {
+          "type": "code",
+          "language": null,
+          "text": "        .name('myGameState')\n        .transitions([\n            'nextPlayer' => 27,\n            'endRound' => 39,\n        ])\n        ....\n    }"
+        },
+        {
+          "type": "paragraph",
+          "text": "In the example above, if \"myGameState\" is the current active game state, I can jump to the game state with ID 27 or the game state with ID 39."
+        },
+        {
+          "type": "code",
+          "language": null,
+          "text": "In mygame.game.php:\n    $this->gamestate->nextState( \"nextPlayer\" );"
+        },
+        {
+          "type": "note",
+          "variant": "warning",
+          "text": "Important: \"nextPlayer\" is the name of the transition, and NOT the name of the target game state. Multiple transitions can lead to the same game state."
+        },
+        {
+          "type": "paragraph",
+          "text": "Example:"
+        },
+        {
+          "type": "code",
+          "language": null,
+          "text": "In states.inc.php:\n    .transitions([\"\" => 27])\n\nIn mygame.game.php:\n    $this->gamestate->nextState(  );     // We don't need to specify a transition as there is only one here"
+        }
+      ]
     },
     {
-      "type": "paragraph",
-      "text": "Example of simple game where player take turns"
+      "heading": {
+        "level": 3,
+        "text": "possibleactions",
+        "id": "possibleactions"
+      },
+      "content": [
+        {
+          "type": "paragraph",
+          "text": "( Mandatory when the game state is ACTIVE_PLAYER or MULTIPLE_ACTIVE_PLAYER)"
+        },
+        {
+          "type": "paragraph",
+          "text": "Example:"
+        },
+        {
+          "type": "code",
+          "language": null,
+          "text": "In states.game.php:\n       \t.possibleactions([ 'actPlayCard', 'actPass' ])\n\nIn Game.php:\n        function actPlayCard( ...)\n        {\n             $this->checkAction( \"actPlayCard\" );    // Will fail if \"actPlayCard\" is not specified in \"possibleactions\" in the current game state.\n\n            ....\n\nIn mygame.js:\n        playCard: function( ... )\n        {\n            if( this.checkAction( \"actPlayCard\" ) ) // Will fail if \"actPlayCard\" is not specified in \"possibleactions\" in the current game state.\n            {  return ;   }\n// or \n        playCard: function( ... )\n        {\n            if( this.bgaPerformAction( \"actPlayCard\", { id} ) ) // Will not trigger if \"actPlayCard\" is not specified in \"possibleactions\" in the current game state.\n            {  return ;   }\n\n            ...."
+        }
+      ]
     },
     {
-      "type": "code",
-      "language": null,
-      "text": "if ( !defined('STATE_END_GAME')) { // guard since this included multiple times\n    define(\"STATE_PLAYER_TURN\", 2);\n    define(\"STATE_GAME_TURN_NEXT_PLAYER\", 3);\n    define(\"STATE_PLAYER_GAME_END\", 4);\n    define(\"STATE_END_GAME\", 99);\n}\n\n$machinestates = [\n        // Game states \n        STATE_PLAYER_TURN => [ // main active player state \n                \"name\" => \"playerTurn\",\n                \"description\" => clienttranslate('${actplayer} must do something or pass'),\n                \"descriptionmyturn\" => clienttranslate('${you} must do something or pass'),\n                \"type\" => \"activeplayer\",\n                \"args\" => \"arg_playerTurn\",\n                \"possibleactions\" => [ \"actDSomething\",\"actPass\" ],\n                \"transitions\" => [ \"next\" => STATE_GAME_TURN_NEXT_PLAYER,\"last\" => STATE_PLAYER_GAME_END ] // \n        ],\n        STATE_GAME_TURN_NEXT_PLAYER => [ // next player state\n                \"name\" => \"gameTurnNextPlayer\",\n                \"description\" => clienttranslate('Upkeep...'),\n                \"type\" => \"game\", //\n                \"action\" => \"st_gameTurnNextPlayer\", //\n                \"updateGameProgression\" => true,\n                \"transitions\" => [ \"next\" => STATE_PLAYER_TURN,\"loopback\" => STATE_GAME_TURN_NEXT_PLAYER,\n                        \"last\" => STATE_PLAYER_GAME_END ], // TODO replace with STATE_END_GAME, its there to use undo/restore during dev\n        ],\n    \n        STATE_PLAYER_GAME_END => [ // active player state for debugging end of game\n                \"name\" => \"playerGameEnd\",\n                \"description\" => clienttranslate('${actplayer} Game Over'),\n                \"descriptionmyturn\" => clienttranslate('${you} Game Over'),\n                \"type\" => \"activeplayer\",\n                \"args\" => \"arg_playerTurn\",\n                \"possibleactions\" => [\"actEndGame\"],\n                \"transitions\" => [\"next\" => STATE_END_GAME,\"loopback\" => STATE_PLAYER_GAME_END ] // \n        ],\n\n];"
+      "heading": {
+        "level": 3,
+        "text": "args",
+        "id": "args"
+      },
+      "content": [
+        {
+          "type": "paragraph",
+          "text": "(optional)"
+        },
+        {
+          "type": "paragraph",
+          "text": "Example 1: in Reversi , the list of possible moves during the playerTurn state."
+        },
+        {
+          "type": "paragraph",
+          "text": "Example 3: in Can't Stop , the list of possible die combinations to be displayed to the active player so that he can choose from among them."
+        },
+        {
+          "type": "paragraph",
+          "text": "Thus, this data can be transmitted to the clients and used by the clients to display it. It should always be an associative array."
+        },
+        {
+          "type": "paragraph",
+          "text": "In states.inc.php, we specify an args argument for gamestate playerTurn :"
+        },
+        {
+          "type": "code",
+          "language": null,
+          "text": "    10 => GameStateBuilder::create()\n        ->name('playerTurn')\n        ->description(clienttranslate('${actplayer} must play a disc'))\n        ->descriptionmyturn(clienttranslate('${you} must play a disc'))\n        ->type(StateType::ACTIVE_PLAYER)\n        ->args('argPlayerTurn')    // <==== HERE\n        ->possibleactions([ 'actPlayDisc' ])\n        ->transitions([ \"playDisc\" => 11, \"zombiePass\" => 11 ])\n    ),"
+        },
+        {
+          "type": "paragraph",
+          "text": "It corresponds to a argPlayerTurn method in our PHP code (reversi.game.php):"
+        },
+        {
+          "type": "code",
+          "language": null,
+          "text": "    function argPlayerTurn(): array {\n        return [\n            'possibleMoves' => $this->getPossibleMoves(),\n        ];\n    }"
+        },
+        {
+          "type": "paragraph",
+          "text": "Then, when we enter into the playerTurn game state on the client side, we can highlight the possible moves on the board using information returned by argPlayerTurn :"
+        },
+        {
+          "type": "code",
+          "language": null,
+          "text": "        onEnteringState: function( stateName, args )  {\n           console.log( 'Entering state: '+stateName );\n            \n            switch( stateName )  {\n            case 'playerTurn':\n                this.updatePossibleMoves( args.args.possibleMoves );\n                break;\n            }\n        },"
+        }
+      ]
+    },
+    {
+      "heading": {
+        "level": 4,
+        "text": "Naming and API conventions",
+        "id": "Naming_and_API_conventions"
+      },
+      "content": [
+        {
+          "type": "paragraph",
+          "text": "As a BGA convention, PHP methods called with \"args\" are prefixed by \"arg\" followed by state name (example: argPlayerTurn )."
+        },
+        {
+          "type": "code",
+          "language": null,
+          "text": "  //////////// Game state arguments"
+        },
+        {
+          "type": "paragraph",
+          "text": "Arg method MUST return array. Return integer or string will result in some undebuggable exceptions."
+        },
+        {
+          "type": "code",
+          "language": null,
+          "text": "   function argPlayerTurn(): array {\n       return []; // must be an array\n   }"
+        },
+        {
+          "type": "paragraph",
+          "text": "Warning : the \"args\" method is ALWAYS called before the \"action\" method so don't expect data modifications by the \"action\" method to be available in the \"args\" method! Also don't modify database in this method!"
+        },
+        {
+          "type": "paragraph",
+          "text": "If you using this function in multi-player state, you should not call getActivePlayer() either, you should send per player info:"
+        },
+        {
+          "type": "code",
+          "language": null,
+          "text": "   function argPlayerTurn(): array {\n       $res = [];\n       $players = $this->loadPlayersBasicInfos();\n       foreach ( $players as $player_id => $player_info ) {\n           $color = $player_info ['player_color'];\n           $res [$player_id] = array(\"color\"=>$color);\n       }\n       return $res;\n   }"
+        },
+        {
+          "type": "note",
+          "variant": "note",
+          "text": "Note: you never need to send player color like this, this is just an example."
+        }
+      ]
+    },
+    {
+      "heading": {
+        "level": 4,
+        "text": "Other usages",
+        "id": "Other_usages"
+      },
+      "content": [
+        {
+          "type": "paragraph",
+          "text": "You can use values returned by your \"args\" method to have some custom values in your \"description\"/\"descriptionmyturn\", i.e. in states.inc.php:"
+        },
+        {
+          "type": "code",
+          "language": null,
+          "text": "  .descriptionmyturn(clienttranslate('${you} must play ${color} disc'))"
+        },
+        {
+          "type": "paragraph",
+          "text": "So arg function will be something like:"
+        },
+        {
+          "type": "code",
+          "language": null,
+          "text": " function argPlayerTurn(): array {\n       return [ 'color'=>$this->getActivePlayerColor() ]; \n }"
+        },
+        {
+          "type": "paragraph",
+          "text": "You can use args also in onUpdateActionButtons function on js side, however two important notes:"
+        },
+        {
+          "type": "list",
+          "ordered": false,
+          "items": [
+            {
+              "text": "it is just args (not args.args like in onEnteringState )",
+              "nested": null
+            },
+            {
+              "text": "it is args of the current state, which may not be state you think it will be! This method is called during change of active player, which happens in some weird place especially during MULTIPLE_ACTIVE_PLAYER states. If you pulling your hair thinking why its \"undefined\" on js side - check the current state.",
+              "nested": null
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "heading": {
+        "level": 4,
+        "text": "Private info in args",
+        "id": "Private_info_in_args"
+      },
+      "content": [
+        {
+          "type": "paragraph",
+          "text": "By default, all data provided through this method are PUBLIC TO ALL PLAYERS. Please do not send any private data with this method, as a cheater could see it even it is not used explicitly by the game interface logic."
+        },
+        {
+          "type": "note",
+          "variant": "note",
+          "text": "Note: You cannot use Example 1 and Example 2 together. If you have to send private args to multiple players, use Example 2."
+        },
+        {
+          "type": "code",
+          "language": null,
+          "text": "    function argPlayerTurn(): array {\n        return array(\n            '_private' => array(          // Using \"_private\" keyword, all data inside this array will be made private\n                'active' => array(       // Using \"active\" keyword inside \"_private\", you select active player(s)\n                    'somePrivateData' => $this->getSomePrivateData()   // will be send only to active player(s)\n                )\n            ),\n            'possibleMoves' => $this->getPossibleMoves()          // will be sent to all players\n        );\n    }"
+        },
+        {
+          "type": "paragraph",
+          "text": "Inside the js file, these variables will be available through `args.args._private`. (e.g. `args.args._private.somePrivateData` -- it is not `args._private.active.somePrivateData` nor is it `args.somePrivateData`)"
+        },
+        {
+          "type": "code",
+          "language": null,
+          "text": "    function argPlayerTurn(): array  {\n        $specific_player_id = ...; // calculate some-how\n        return array(\n            '_private' => array(   // all data inside this array will be private\n                $specific_player_id => array(   // will be sent only to that player   \n                    'somePrivateData' => $this->getSomePrivateData()   \n                )\n            ),\n\n            'possibleMoves' => $this->getPossibleMoves()   // will be sent to all players\n        );\n    }"
+        },
+        {
+          "type": "note",
+          "variant": "warning",
+          "text": "IMPORTANT: in certain situations (i.e. MULTIPLE_ACTIVE_PLAYER game state) these \"private data\" features can have a significant impact on performance. Please do not use if not needed."
+        }
+      ]
+    },
+    {
+      "heading": {
+        "level": 4,
+        "text": "Flag to indicate a skipped state",
+        "id": "Flag_to_indicate_a_skipped_state"
+      },
+      "content": [
+        {
+          "type": "paragraph",
+          "text": "By default, The front-end will be notified of entering/leaving all states. To speed up the front-end chaining of automatically passed states, you can disable this state change notification, so the front-end doesn't trigger the preparation steps for a state that you know will be automatically skipped, and it may reduce sent args. In this case, define the _no_notify flag to true in the state args."
+        },
+        {
+          "type": "code",
+          "language": null,
+          "text": "function argPlayerTurn(): array {\n  $playableCardsIds = ...;\n  return [\n    'playableCardsIds' => $playableCardsIds,\n    '_no_notify' => count(playableCardsIds) === 0,\n  ];\n}\nfunction stPlayerTurn(): void {\n  $args = $this->argPlayerTurn();\n  if ($args['_no_notify']) {\n    $this->gamestate->nextState('next');\n  }\n}"
+        },
+        {
+          "type": "paragraph",
+          "text": "In this example, it might avoid a blinking message \"You must play a card\" (quickly replaced by the next state message) when you cannot play a card and the game automatically skips this state."
+        },
+        {
+          "type": "paragraph",
+          "text": "Note that if you play synced notifications during a skipped state, it will display the notifications on the previous state. For example, for an endScore state width description \"Computing end score...\" sending a lot of animated notifications, you should NOT use this flag so the description is visible."
+        }
+      ]
+    },
+    {
+      "heading": {
+        "level": 4,
+        "text": "Translations in args",
+        "id": "Translations_in_args"
+      },
+      "content": [
+        {
+          "type": "paragraph",
+          "text": "You can do the same as in notification by adding i18n parameter, i.e"
+        },
+        {
+          "type": "code",
+          "language": null,
+          "text": "function argPlayerTurn(): array {\n return [\n      'i18n' => ['terrainName' ],\n      'terrainName' => ($this->token_types[$terrain]['name']), // this should be defined in material.inc.php and with clienttranslate \n      'terrain' => $terrain,\n   ];\n}"
+        },
+        {
+          "type": "paragraph",
+          "text": "Than you can do something like this in state:"
+        },
+        {
+          "type": "code",
+          "language": null,
+          "text": " .descriptionmyturn(clienttranslate('${you} must place a house on ${terrainName}')),"
+        },
+        {
+          "type": "paragraph",
+          "text": "See more in Translations"
+        }
+      ]
+    },
+    {
+      "heading": {
+        "level": 3,
+        "text": "updateGameProgression",
+        "id": "updateGameProgression"
+      },
+      "content": [
+        {
+          "type": "paragraph",
+          "text": "(optional)"
+        },
+        {
+          "type": "paragraph",
+          "text": "At least one of your game states (any one) must specify \".updateGameProgression(true)\"."
+        }
+      ]
+    },
+    {
+      "heading": {
+        "level": 3,
+        "text": "initialprivate",
+        "id": "initialprivate"
+      },
+      "content": [
+        {
+          "type": "paragraph",
+          "text": "(optional)"
+        }
+      ]
+    },
+    {
+      "heading": {
+        "level": 2,
+        "text": "Implementation Notes",
+        "id": "Implementation_Notes"
+      },
+      "content": []
+    },
+    {
+      "heading": {
+        "level": 3,
+        "text": "End Score state",
+        "id": "End_Score_state"
+      },
+      "content": [
+        {
+          "type": "paragraph",
+          "text": "You will often need to do some computation at the end of the game, for end score or for average stats. As you cannot modify the endGame state, it's recommended to create a state just before, that will do it."
+        },
+        {
+          "type": "code",
+          "language": null,
+          "text": "98 => GameStateBuilder::endScore()->build()"
+        },
+        {
+          "type": "paragraph",
+          "text": "For debugging purpose, you can comment this line in your states.inc.php and replace it by"
+        },
+        {
+          "type": "code",
+          "language": null,
+          "text": "    98 => GameStateBuilder::create()\n        ->name('endScore')\n        ->description('')\n        ->descriptionmyturn('')\n        ->type(StateType::ACTIVE_PLAYER)\n        ->action('stEndScore')\n        ->build(),"
+        },
+        {
+          "type": "paragraph",
+          "text": "and comment the nextState on stEndScore. Then you can run your game to the endScore state, test the result, and reload a previous state until your debugging is complete."
+        }
+      ]
+    },
+    {
+      "heading": {
+        "level": 3,
+        "text": "Private parallel states",
+        "id": "Private_parallel_states"
+      },
+      "content": [
+        {
+          "type": "paragraph",
+          "text": "Private parallel states are useful when multiple players are active and their turn is very complex. In that case it is possible with parallel states for each player to be in a independent state."
+        },
+        {
+          "type": "list",
+          "ordered": false,
+          "items": [
+            {
+              "text": "Moving all players to different states together - this is limiting for faster players as they need to wait other players for each separate action. The more problematic thing is that it would be hard to implement an undo feature when one player wants to change their previous action. In that case all players should be moved back to previous state which will interrupt their flow.",
+              "nested": null
+            },
+            {
+              "text": "Using client states, by changing the state in which the player is in javascript - the problem with this approach is that players will lose their progress on browser refresh (F5). Furthermore the validation logic of specific actions should be implemented on both server side and client side and we cannot have specific args for each different action, but they should be calculated only at the beginning of the first action and possibly calculated on client side after each action, which again duplicates logic on client and server.",
+              "nested": null
+            }
+          ]
+        },
+        {
+          "type": "paragraph",
+          "text": "With private parallel states, each specific action can be implemented as a parallel state. Parallel states are defined with the type PRIVATE and players are moved to those private states during one master MULTIPLE_ACTIVE_PLAYER state. Lets look at the example:"
+        },
+        {
+          "type": "code",
+          "language": null,
+          "text": "    10 => GameStateBuilder::create()\n        ->name(\"playerTurn\")\n        ->description(clienttranslate('Waiting for other players to end their turn.'))\n        ->descriptionmyturn(''), // Won't be displayed anyway since each private state has its own description\n        ->type(StateType::MULTIPLE_ACTIVE_PLAYER)\n        ->initialprivate(50) // This makes this state a master multiactive state and enables private states, this is also a first private state\n        ->action(\"stPlayerTurn\")\n        ->args(\"argPlayerTurn\")\n        ->possibleactions([\"actChangeMind\"]) //this action is possible if player is not in any private state which usually happens when they are inactive\n        ->transitions([\"playersDecide\" => 11]) // this is normal next transition which will happen after all players finish their turns \n        ->build(),\n\n    50 => GameStateBuilder::create()\n        ->name(\"chooseFirst\")\n        ->descriptionmyturn(clienttranslate('${you} must make your first choice')) // just this parameter is needed. description is not needed as no player is inactive in this state\n        ->type(StateType::PRIVATE) // this state is reachable only as a private state\n        ->args(\"argChooseFirst\") //this method will be called with playerId as a parametar and is used to calculate arguments for this action for specific player\n        ->action(\"stChooseFirst\") // this method will be called with playerId as a parameter and can be used to make some changes when player enters this private state\n        ->possibleactions([\"actToSecond\"])\n        ->transitions([\n          'chooseSecond' => 51, // transition to another private state\n        ])\n        ->build(),\n   \n    51 => GameStateBuilder::create()\n        ->name(\"chooseSecond\")\n        ->descriptionmyturn(clienttranslate('${you} must make your second choice'))\n        ->type(StateType::PRIVATE)\n        ->args(\"argChooseSecond\")\n        ->possibleactions([\"actFinish\", \"actBack\"])\n        ->transitions([\n          'back' => 50,\n        ])\n        ->build(),"
+        },
+        {
+          "type": "paragraph",
+          "text": "When entering the master state it is usually useful to set some players as multiactive and initialize their private state:"
+        },
+        {
+          "type": "code",
+          "language": null,
+          "text": "    function stPlayerTurn() {\n        $this->gamestate->setAllPlayersMultiactive();\n        \n        //this is needed when starting private parallel states; players will be transitioned to initialprivate state defined in master state\n        $this->gamestate->initializePrivateStateForAllActivePlayers(); \n\n        // in some cases you can move immediately some or all players to different private states\n        if ($someCondition) {\n            //move all players to different state \n            $this->gamestate->nextPrivateStateForAllActivePlayers(\"chooseSecond\");\n            return;\n        }\n\n        if ($other condition) {\n            //move single player to different state\n            $this->gamestate->nextPrivateState($specificPlayerId, \"chooseSecond\");\n            return;\n        }\n    }"
+        },
+        {
+          "type": "paragraph",
+          "text": "When some action is done by a player, you can move them to the next private state:"
+        },
+        {
+          "type": "code",
+          "language": null,
+          "text": "    function actToSecond() {\n        $this->checkAction(\"actToSecond\");  //the action must be defined in private state; actions defined in master state are not possible\n        $this->gamestate->nextPrivateState($this->getCurrentPlayerId(), \"chooseSecond\"); //moving current player to different state\n    }"
+        },
+        {
+          "type": "paragraph",
+          "text": "Please check the detailed API here ."
+        }
+      ]
+    },
+    {
+      "heading": {
+        "level": 3,
+        "text": "Client States",
+        "id": "Client_States"
+      },
+      "content": [
+        {
+          "type": "paragraph",
+          "text": "Client state almost have nothing to do with server states, except they can simulate same experience without actually changing server states."
+        },
+        {
+          "type": "paragraph",
+          "text": "In many cases you can achive similar results by using client states vs private server states. The only caveat - when using client states during MULTIPLE_ACTIVE_PLAYER server state other player will trigger state changes (multiactive player set) which will call onUpdateActionButtons. Some measures have to be taken to preserve client state in this case."
+        }
+      ]
+    },
+    {
+      "heading": {
+        "level": 3,
+        "text": "Using Named Constants for States",
+        "id": "Using_Named_Constants_for_States"
+      },
+      "content": [
+        {
+          "type": "paragraph",
+          "text": "Using numeric constants is prone to errors. If you want you can declare state constants as PHP named constants. This way you can use them in the states file and in Game.php as well"
+        },
+        {
+          "type": "paragraph",
+          "text": "states.inc.php:"
+        },
+        {
+          "type": "code",
+          "language": null,
+          "text": "// define contants for state ids\nif (!defined('STATE_END_GAME')) { // ensure this block is only invoked once, since it is included multiple times\n   define(\"STATE_PLAYER_TURN\", 2);\n   define(\"STATE_GAME_TURN\", 3);\n   define(\"STATE_PLAYER_TURN_CUBES\", 4);\n   define(\"STATE_END_GAME\", 99);\n}\n \n$machinestates = array(\n\n   ...\n\n    STATE_PLAYER_TURN => GameStateBuilder::create()\n        // ...\n    \t\t->transitions([\n    \t\t        \"loopback\" => STATE_PLAYER_TURN,\n    \t\t        \"playCubes\" => STATE_PLAYER_TURN_CUBES,\n    \t\t        \"pass\" => STATE_GAME_TURN,\n    \t\t])"
+        }
+      ]
+    },
+    {
+      "heading": {
+        "level": 3,
+        "text": "Example of MULTIPLE_ACTIVE_PLAYER state",
+        "id": "Example_of_MULTIPLE_ACTIVE_PLAYER_state"
+      },
+      "content": [
+        {
+          "type": "paragraph",
+          "text": "This is an example of a MULTIPLE_ACTIVE_PLAYER state:"
+        },
+        {
+          "type": "code",
+          "language": null,
+          "text": " 2 =>  GameStateBuilder::create()\n   ->name('playerTurnSetup')\n   ->type(StateType::MULTIPLE_ACTIVE_PLAYER)\n   ->description(clienttranslate('Other players must choose one Objective'))\n   ->descriptionmyturn(clienttranslate('${you} must choose one Objective card to keep'))\n   ->possibleactions([ 'actPlayKeep' ])\n   ->transitions(['next' => 5, 'loopback' => 2, ])\n   ->action('stMultiPlayerInit')\n   ->args('argplayerTurnSetup')\n   ->build(),"
+        },
+        {
+          "type": "paragraph",
+          "text": "In game.php:"
+        },
+        {
+          "type": "code",
+          "language": null,
+          "text": "   // this will make all players multiactive just before entering the state\n   function stMultiPlayerInit() {\n       $this->gamestate->setAllPlayersMultiactive();\n   }"
+        },
+        {
+          "type": "note",
+          "variant": "note",
+          "text": "Note: if you want exact this function its already defined in table class its called 'stMakeEveryoneActive'"
+        },
+        {
+          "type": "code",
+          "language": null,
+          "text": "   function actPlayKeep($cardId) {\n       $this->checkAction('actPlayKeep');\n       $player_id = $this->getCurrentPlayerId(); // CURRENT!!! not active\n       ... // some logic here\n       $this->gamestate->setPlayerNonMultiactive($player_id, 'next'); // deactivate player; if none left, transition to 'next' state\n   }"
+        }
+      ]
+    },
+    {
+      "heading": {
+        "level": 3,
+        "text": "Difference between Single active and Multi active states",
+        "id": "Difference_between_Single_active_and_Multi_active_states"
+      },
+      "content": [
+        {
+          "type": "paragraph",
+          "text": "In a classic ACTIVE_PLAYER state:"
+        },
+        {
+          "type": "list",
+          "ordered": false,
+          "items": [
+            {
+              "text": "You cannot change the active player DURING the state. This is to ensure that during 1 ACTIVE_PLAYER state, only ONE player is active",
+              "nested": null
+            },
+            {
+              "text": "As a consequence, you must set the active player BEFORE entering the ACTIVE_PLAYER state",
+              "nested": null
+            },
+            {
+              "text": "In such states on JS side onUpdateActionButtons is called before onEnteringState during game play (but after during reload, i.e. F5)",
+              "nested": null
+            },
+            {
+              "text": "Finally, during onEnteringState, on JS side, the active player is signaled as active and the information is reliable and usable.",
+              "nested": null
+            }
+          ]
+        },
+        {
+          "type": "paragraph",
+          "text": "In a MULTIPLE_ACTIVE_PLAYER state:"
+        },
+        {
+          "type": "list",
+          "ordered": false,
+          "items": [
+            {
+              "text": "You can (and must) change the active players DURING the state",
+              "nested": null
+            },
+            {
+              "text": "During such a state, players can be activated/desactivated anytime during the state, giving you the maximum of possibilities.",
+              "nested": null
+            },
+            {
+              "text": "You shouldn't set active player before entering the state. But you can set it in \"state initializer\" php function (see example above stMultiPlayerInit)",
+              "nested": null
+            },
+            {
+              "text": "Finally, during onEnteringState, on JS side, the active players are NOT active yet so you must use onUpdateActionButtons to perform the client side operation which depends on a player active/inactive status.",
+              "nested": null
+            }
+          ]
+        },
+        {
+          "type": "note",
+          "variant": "note",
+          "text": "Note: in some off cases other players can perform special actions even if they are not active, see example https://en.doc.boardgamearena.com/BGA_Studio_Cookbook#Out-of-turn_actions%3A_Un-pass . Do not abuse this technique!"
+        }
+      ]
+    },
+    {
+      "heading": {
+        "level": 3,
+        "text": "Designing states",
+        "id": "Designing_states"
+      },
+      "content": [
+        {
+          "type": "paragraph",
+          "text": "As a general rule you state machine should resemble \"round/turn overview\" from the game rule-book. Normally if book say its player turn and player can do multiple things during their turn it is still only one player state (plus a game to switch player), not multiple states."
+        },
+        {
+          "type": "paragraph",
+          "text": "[image: Simplestates.png]"
+        },
+        {
+          "type": "paragraph",
+          "text": "For pair of active player/game states you can make player state first, which transitions to game state, or the other way around, you start with game state which transition to active player state, its loop in any case but depends on how you want to do \"phase\" initiazations."
+        }
+      ]
+    },
+    {
+      "heading": {
+        "level": 3,
+        "text": "Complete examples",
+        "id": "Complete_examples"
+      },
+      "content": [
+        {
+          "type": "paragraph",
+          "text": "Example of simple game where player take turns"
+        },
+        {
+          "type": "code",
+          "language": null,
+          "text": "if ( !defined('STATE_END_GAME')) { // guard since this included multiple times\n    define(\"STATE_PLAYER_TURN\", 2);\n    define(\"STATE_GAME_TURN_NEXT_PLAYER\", 3);\n    define(\"STATE_PLAYER_GAME_END\", 4);\n    define(\"STATE_END_GAME\", 99);\n}\n\n$machinestates = [\n        // Game states \n        STATE_PLAYER_TURN => [ // main active player state \n                \"name\" => \"playerTurn\",\n                \"description\" => clienttranslate('${actplayer} must do something or pass'),\n                \"descriptionmyturn\" => clienttranslate('${you} must do something or pass'),\n                \"type\" => \"activeplayer\",\n                \"args\" => \"arg_playerTurn\",\n                \"possibleactions\" => [ \"actDSomething\",\"actPass\" ],\n                \"transitions\" => [ \"next\" => STATE_GAME_TURN_NEXT_PLAYER,\"last\" => STATE_PLAYER_GAME_END ] // \n        ],\n        STATE_GAME_TURN_NEXT_PLAYER => [ // next player state\n                \"name\" => \"gameTurnNextPlayer\",\n                \"description\" => clienttranslate('Upkeep...'),\n                \"type\" => \"game\", //\n                \"action\" => \"st_gameTurnNextPlayer\", //\n                \"updateGameProgression\" => true,\n                \"transitions\" => [ \"next\" => STATE_PLAYER_TURN,\"loopback\" => STATE_GAME_TURN_NEXT_PLAYER,\n                        \"last\" => STATE_PLAYER_GAME_END ], // TODO replace with STATE_END_GAME, its there to use undo/restore during dev\n        ],\n    \n        STATE_PLAYER_GAME_END => [ // active player state for debugging end of game\n                \"name\" => \"playerGameEnd\",\n                \"description\" => clienttranslate('${actplayer} Game Over'),\n                \"descriptionmyturn\" => clienttranslate('${you} Game Over'),\n                \"type\" => \"activeplayer\",\n                \"args\" => \"arg_playerTurn\",\n                \"possibleactions\" => [\"actEndGame\"],\n                \"transitions\" => [\"next\" => STATE_END_GAME,\"loopback\" => STATE_PLAYER_GAME_END ] // \n        ],\n\n];"
+        }
+      ]
     }
   ],
   "links": [
@@ -804,24 +913,19 @@
       "url": "https://en.doc.boardgamearena.com/BGA_Studio_Cookbook#Out-of-turn_actions%3A_Un-pass"
     },
     {
-      "text": "Simplestates.png",
+      "text": "[image: Simplestates.png]",
       "url": "File:Simplestates.png.html"
     }
   ],
-  "images": [
-    {
-      "src": "/images/7/72/Simplestates.png",
-      "alt": "Simplestates.png"
-    }
-  ],
+  "images": [],
   "metadata": {
     "extractor_version": "1.0.0",
-    "extracted_at": "2026-07-06T06:53:17.717694+00:00",
+    "extracted_at": "2026-07-06T08:38:33.801597+00:00",
     "word_count": 2749,
     "heading_count": 27,
     "code_block_count": 39,
     "table_count": 0,
-    "image_count": 1,
+    "image_count": 0,
     "list_count": 5
   }
 }

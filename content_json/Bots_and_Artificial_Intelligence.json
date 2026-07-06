@@ -3,158 +3,204 @@
   "source_file": "Bots_and_Artificial_Intelligence.html",
   "relative_path": "Bots_and_Artificial_Intelligence.html",
   "content_json_path": "content_json/Bots_and_Artificial_Intelligence.json",
-  "headings": [
+  "sections": [
     {
-      "level": 2,
-      "text": "Games",
-      "id": "Games"
-    },
-    {
-      "level": 2,
-      "text": "Techniques",
-      "id": "Techniques"
-    },
-    {
-      "level": 3,
-      "text": "Testing bot",
-      "id": "Testing_bot"
-    },
-    {
-      "level": 3,
-      "text": "JavaScript AI",
-      "id": "JavaScript_AI"
-    },
-    {
-      "level": 3,
-      "text": "Server Bot as registered game Player",
-      "id": "Server_Bot_as_registered_game_Player"
-    },
-    {
-      "level": 3,
-      "text": "Server Bot as game state action",
-      "id": "Server_Bot_as_game_state_action"
-    },
-    {
-      "level": 4,
-      "text": "Bot Player ID",
-      "id": "Bot_Player_ID"
-    },
-    {
-      "level": 4,
-      "text": "Bot Color, Order and Resources",
-      "id": "Bot_Color.2C_Order_and_Resources"
-    },
-    {
-      "level": 4,
-      "text": "Bot Actions",
-      "id": "Bot_Actions"
-    },
-    {
-      "level": 4,
-      "text": "Bot Player Panel",
-      "id": "Bot_Player_Panel"
-    },
-    {
-      "level": 4,
-      "text": "Bot Player Notifications",
-      "id": "Bot_Player_Notifications"
-    }
-  ],
-  "content": [
-    {
-      "type": "paragraph",
-      "text": "There is no framework support (now) for AI/Bots, so it is all custom stuff."
-    },
-    {
-      "type": "paragraph",
-      "text": "The following game have modes that support bots Conspiracy, Glow, Crew, Crew Deepsea, Tapestry."
-    },
-    {
-      "type": "paragraph",
-      "text": "Testing bot is actually JavaScript bot that presses on buttons on behalf of player. Its handy for testing on Studio. Recommended way of doing it is add Studio only button (together with debug bar) \"Run bot/Stop bot\", when running it can react to state changes and press stuff. Example \"Battleship\" (this only appear on Studio as this is for testing only)"
-    },
-    {
-      "type": "paragraph",
-      "text": "Currently I don't see how it is feasible, JS code requires real player connected to game and browser, so it cannot be run as AI engine"
-    },
-    {
-      "type": "paragraph",
-      "text": "This would be ideal, but currently only Can't Stop does it and no other game can use this technique"
-    },
-    {
-      "type": "paragraph",
-      "text": "This is the only feasible way in production. In addition to whatever game states are doing, it can handle fake players and simulate their moves"
-    },
-    {
-      "type": "paragraph",
-      "text": "Reserve non-exising player id for bots (i.e. 1-6). If bot needs color and order see below."
-    },
-    {
-      "type": "paragraph",
-      "text": "Create table similar player to track bots color, name, score, score_aux and possibly other stuff"
-    },
-    {
-      "type": "code",
-      "language": null,
-      "text": "CREATE TABLE IF NOT EXISTS `playerextra` (\n `player_id` int(10) unsigned NOT NULL,\n `player_name` varchar(32) NOT NULL,\n `player_avatar` varchar(10) NOT NULL,\n `player_color` varchar(6) NOT NULL,\n `player_no` int(10) NOT NULL,\n `player_score` int(10) NOT NULL DEFAULT '0',\n `player_score_aux` int(10) NOT NULL DEFAULT '0',\n `player_ai` tinyint(1) NOT NULL DEFAULT '0' COMMENT '1 = player is an AI',\n  PRIMARY KEY (`player_id`)\n) ENGINE=InnoDB DEFAULT CHARSET=utf8 ;"
-    },
-    {
-      "type": "list",
-      "ordered": false,
-      "items": [
+      "heading": null,
+      "content": [
         {
-          "text": "All actions that can be done by Bot have to have $player_id as argument and not use active player",
-          "nested": null
-        },
-        {
-          "text": "Separate code of ajax actions themselves and functional code, so function can be run from ajax action or from game state action",
-          "nested": null
-        },
-        {
-          "text": "If you using getPlayerNameById to send player_name in notification, you may have to wrap it (same for player color)",
-          "nested": null
+          "type": "paragraph",
+          "text": "There is no framework support (now) for AI/Bots, so it is all custom stuff."
         }
       ]
     },
     {
-      "type": "code",
-      "language": null,
-      "text": "   public function getPlayerName(int $player_id) {\n       if ($player_id == PLAYER_AUTOMA)\n           return _('Automa');\n       return $this->getPlayerNameById($player_id);\n   } "
-    },
-    {
-      "type": "list",
-      "ordered": false,
-      "items": [
+      "heading": {
+        "level": 2,
+        "text": "Games",
+        "id": "Games"
+      },
+      "content": [
         {
-          "text": "You may also create a function like loadPlayersBasicInfosWithBots which will return similar data as loadPlayersBasicInfos but with bots ids. Cache the result if using a lot",
-          "nested": null
+          "type": "paragraph",
+          "text": "The following game have modes that support bots Conspiracy, Glow, Crew, Crew Deepsea, Tapestry."
         }
       ]
     },
     {
-      "type": "code",
-      "language": null,
-      "text": "    function loadPlayersBasicInfosWithBots() {\n        $player_basic = $this->loadPlayersBasicInfos();\n        if ( !$this->isAutoma())\n            return $player_basic;           \n        if ( !isset($this->player_bots)) {\n            $this->player_bots = $this->getCollectionFromDb(\"SELECT * FROM playerextra\");\n        }\n        return $this->player_bots + $player_basic;\n    }"
+      "heading": {
+        "level": 2,
+        "text": "Techniques",
+        "id": "Techniques"
+      },
+      "content": []
     },
     {
-      "type": "paragraph",
-      "text": "If you want bot on player panel, use this.bga.playerPanels.addAutomataPlayerPanel"
+      "heading": {
+        "level": 3,
+        "text": "Testing bot",
+        "id": "Testing_bot"
+      },
+      "content": [
+        {
+          "type": "paragraph",
+          "text": "Testing bot is actually JavaScript bot that presses on buttons on behalf of player. Its handy for testing on Studio. Recommended way of doing it is add Studio only button (together with debug bar) \"Run bot/Stop bot\", when running it can react to state changes and press stuff. Example \"Battleship\" (this only appear on Studio as this is for testing only)"
+        }
+      ]
     },
     {
-      "type": "paragraph",
-      "text": "When you send notification with ${player_name} you also should send 'player_id' with you fake id. In additio getAllDatas() should contain record matching fake player id in players field, i.e if $player has data for fake player:"
+      "heading": {
+        "level": 3,
+        "text": "JavaScript AI",
+        "id": "JavaScript_AI"
+      },
+      "content": [
+        {
+          "type": "paragraph",
+          "text": "Currently I don't see how it is feasible, JS code requires real player connected to game and browser, so it cannot be run as AI engine"
+        }
+      ]
     },
     {
-      "type": "code",
-      "language": null,
-      "text": "   protected function getAllDatas() {\n       $result = [];\n   ...\n           $result ['players'] [$player_id] ['id'] = $player['id'];\n           $result ['players'] [$player_id] ['score'] = $player['score'];\n           $result ['players'] [$player_id] ['color'] = $player['color'];\n           $result ['players'] [$player_id] ['name'] = $player['name'];\n  ...\n       return $result;\n  }"
+      "heading": {
+        "level": 3,
+        "text": "Server Bot as registered game Player",
+        "id": "Server_Bot_as_registered_game_Player"
+      },
+      "content": [
+        {
+          "type": "paragraph",
+          "text": "This would be ideal, but currently only Can't Stop does it and no other game can use this technique"
+        }
+      ]
+    },
+    {
+      "heading": {
+        "level": 3,
+        "text": "Server Bot as game state action",
+        "id": "Server_Bot_as_game_state_action"
+      },
+      "content": [
+        {
+          "type": "paragraph",
+          "text": "This is the only feasible way in production. In addition to whatever game states are doing, it can handle fake players and simulate their moves"
+        }
+      ]
+    },
+    {
+      "heading": {
+        "level": 4,
+        "text": "Bot Player ID",
+        "id": "Bot_Player_ID"
+      },
+      "content": [
+        {
+          "type": "paragraph",
+          "text": "Reserve non-exising player id for bots (i.e. 1-6). If bot needs color and order see below."
+        }
+      ]
+    },
+    {
+      "heading": {
+        "level": 4,
+        "text": "Bot Color, Order and Resources",
+        "id": "Bot_Color.2C_Order_and_Resources"
+      },
+      "content": [
+        {
+          "type": "paragraph",
+          "text": "Create table similar player to track bots color, name, score, score_aux and possibly other stuff"
+        },
+        {
+          "type": "code",
+          "language": null,
+          "text": "CREATE TABLE IF NOT EXISTS `playerextra` (\n `player_id` int(10) unsigned NOT NULL,\n `player_name` varchar(32) NOT NULL,\n `player_avatar` varchar(10) NOT NULL,\n `player_color` varchar(6) NOT NULL,\n `player_no` int(10) NOT NULL,\n `player_score` int(10) NOT NULL DEFAULT '0',\n `player_score_aux` int(10) NOT NULL DEFAULT '0',\n `player_ai` tinyint(1) NOT NULL DEFAULT '0' COMMENT '1 = player is an AI',\n  PRIMARY KEY (`player_id`)\n) ENGINE=InnoDB DEFAULT CHARSET=utf8 ;"
+        }
+      ]
+    },
+    {
+      "heading": {
+        "level": 4,
+        "text": "Bot Actions",
+        "id": "Bot_Actions"
+      },
+      "content": [
+        {
+          "type": "list",
+          "ordered": false,
+          "items": [
+            {
+              "text": "All actions that can be done by Bot have to have $player_id as argument and not use active player",
+              "nested": null
+            },
+            {
+              "text": "Separate code of ajax actions themselves and functional code, so function can be run from ajax action or from game state action",
+              "nested": null
+            },
+            {
+              "text": "If you using getPlayerNameById to send player_name in notification, you may have to wrap it (same for player color)",
+              "nested": null
+            }
+          ]
+        },
+        {
+          "type": "code",
+          "language": null,
+          "text": "   public function getPlayerName(int $player_id) {\n       if ($player_id == PLAYER_AUTOMA)\n           return _('Automa');\n       return $this->getPlayerNameById($player_id);\n   } "
+        },
+        {
+          "type": "list",
+          "ordered": false,
+          "items": [
+            {
+              "text": "You may also create a function like loadPlayersBasicInfosWithBots which will return similar data as loadPlayersBasicInfos but with bots ids. Cache the result if using a lot",
+              "nested": null
+            }
+          ]
+        },
+        {
+          "type": "code",
+          "language": null,
+          "text": "    function loadPlayersBasicInfosWithBots() {\n        $player_basic = $this->loadPlayersBasicInfos();\n        if ( !$this->isAutoma())\n            return $player_basic;           \n        if ( !isset($this->player_bots)) {\n            $this->player_bots = $this->getCollectionFromDb(\"SELECT * FROM playerextra\");\n        }\n        return $this->player_bots + $player_basic;\n    }"
+        }
+      ]
+    },
+    {
+      "heading": {
+        "level": 4,
+        "text": "Bot Player Panel",
+        "id": "Bot_Player_Panel"
+      },
+      "content": [
+        {
+          "type": "paragraph",
+          "text": "If you want bot on player panel, use this.bga.playerPanels.addAutomataPlayerPanel"
+        }
+      ]
+    },
+    {
+      "heading": {
+        "level": 4,
+        "text": "Bot Player Notifications",
+        "id": "Bot_Player_Notifications"
+      },
+      "content": [
+        {
+          "type": "paragraph",
+          "text": "When you send notification with ${player_name} you also should send 'player_id' with you fake id. In additio getAllDatas() should contain record matching fake player id in players field, i.e if $player has data for fake player:"
+        },
+        {
+          "type": "code",
+          "language": null,
+          "text": "   protected function getAllDatas() {\n       $result = [];\n   ...\n           $result ['players'] [$player_id] ['id'] = $player['id'];\n           $result ['players'] [$player_id] ['score'] = $player['score'];\n           $result ['players'] [$player_id] ['color'] = $player['color'];\n           $result ['players'] [$player_id] ['name'] = $player['name'];\n  ...\n       return $result;\n  }"
+        }
+      ]
     }
   ],
   "links": [],
   "images": [],
   "metadata": {
     "extractor_version": "1.0.0",
-    "extracted_at": "2026-07-06T06:53:17.252701+00:00",
+    "extracted_at": "2026-07-06T08:38:33.373184+00:00",
     "word_count": 373,
     "heading_count": 11,
     "code_block_count": 4,

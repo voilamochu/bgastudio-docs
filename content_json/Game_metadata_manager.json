@@ -3,259 +3,378 @@
   "source_file": "Game_metadata_manager.html",
   "relative_path": "Game_metadata_manager.html",
   "content_json_path": "content_json/Game_metadata_manager.json",
-  "headings": [
+  "sections": [
     {
-      "level": 2,
-      "text": "Media",
-      "id": "Media"
-    },
-    {
-      "level": 2,
-      "text": "Tags",
-      "id": "Tags"
-    },
-    {
-      "level": 2,
-      "text": "Metadata",
-      "id": "Metadata"
-    },
-    {
-      "level": 6,
-      "text": "Artist(s) and Designer(s)",
-      "id": "Artist.28s.29_and_Designer.28s.29"
-    },
-    {
-      "level": 6,
-      "text": "Publication year",
-      "id": "Publication_year"
-    },
-    {
-      "level": 6,
-      "text": "Complexity",
-      "id": "Complexity"
-    },
-    {
-      "level": 6,
-      "text": "Luck",
-      "id": "Luck"
-    },
-    {
-      "level": 6,
-      "text": "Strategy",
-      "id": "Strategy"
-    },
-    {
-      "level": 6,
-      "text": "Diplomacy",
-      "id": "Diplomacy"
-    },
-    {
-      "level": 6,
-      "text": "Minimum age",
-      "id": "Minimum_age"
-    },
-    {
-      "level": 6,
-      "text": "Zombie Mode level",
-      "id": "Zombie_Mode_level"
-    },
-    {
-      "level": 6,
-      "text": "Game page warning",
-      "id": "Game_page_warning"
-    },
-    {
-      "level": 6,
-      "text": "Custom \"buy this game\" button",
-      "id": "Custom_.22buy_this_game.22_button"
-    },
-    {
-      "level": 6,
-      "text": "Description",
-      "id": "Description"
-    },
-    {
-      "level": 2,
-      "text": "Migration",
-      "id": "Migration"
-    },
-    {
-      "level": 2,
-      "text": "Access Permissions",
-      "id": "Access_Permissions"
-    },
-    {
-      "level": 2,
-      "text": "Future",
-      "id": "Future"
-    }
-  ],
-  "content": [
-    {
-      "type": "paragraph",
-      "text": "The Game Metadata Manager is the portal for managing tags and media for your games. This page exists both on Production and Studio:"
-    },
-    {
-      "type": "list",
-      "ordered": false,
-      "items": [
+      "heading": null,
+      "content": [
         {
-          "text": "Game Metadata Manager (production) - manage game tags and media once the game has reached private alpha and beyond",
-          "nested": null
+          "type": "paragraph",
+          "text": "The Game Metadata Manager is the portal for managing tags and media for your games. This page exists both on Production and Studio:"
         },
         {
-          "text": "Game Metadata Manager (studio) - manage game tags and media before the game reaches private alpha",
-          "nested": null
+          "type": "list",
+          "ordered": false,
+          "items": [
+            {
+              "text": "Game Metadata Manager (production) - manage game tags and media once the game has reached private alpha and beyond",
+              "nested": null
+            },
+            {
+              "text": "Game Metadata Manager (studio) - manage game tags and media before the game reaches private alpha",
+              "nested": null
+            }
+          ]
+        },
+        {
+          "type": "note",
+          "variant": "note",
+          "text": "Note: once your game is in private alpha, and you are using the production Game Metagata Manager, the metadata on studio is never automatically updated. On the studio game page, there is a button to pull metadata from production if you need to: \"Sync metadata from production\"."
         }
       ]
     },
     {
-      "type": "note",
-      "variant": "note",
-      "text": "Note: once your game is in private alpha, and you are using the production Game Metagata Manager, the metadata on studio is never automatically updated. On the studio game page, there is a button to pull metadata from production if you need to: \"Sync metadata from production\"."
-    },
-    {
-      "type": "paragraph",
-      "text": "Game media consists of all the images which are used to represent your game on Board Game Arena, outside of the art of the actual game."
-    },
-    {
-      "type": "paragraph",
-      "text": "Once your game first hits private alpha, the media is copied over to the production site, and from this point on, all media changes must be effectuated over there: Game Metadata Manager (production) ."
-    },
-    {
-      "type": "table",
-      "headers": [
-        "Name",
-        "Example",
-        "Description"
-      ],
-      "rows": [
-        [
-          "Box",
-          "",
-          "Required for public alphaPNGIt is displayed on the main site on the game description page and when creating a table (280x280 px).It should be a 3D image of a physical copy of the game box as it appears in an online shop.It is better to take the version of the game that is coherent with the game art used in the adaptation, and from the original publisher of the game.The background of the image must be transparent.If you don't have a 3D version of the game box, you can use the following website to create one:https://boxshot.com/3d-box/On Studio, you can only have one box image. Once deployed you can have a different box image for each language. This allows a localised image if you wish. If you don't provide a localised image, users will see the en box as a fallback."
-        ],
-        [
-          "Icon",
-          "",
-          "Required for public alphaPNGIt is the icon displayed in the lists of games and tables (50x50 px).The objective of this icon is to make the game recognizable among the other games. A good idea is to take a part of the game cover that is distinctive (ex: the game title).This one  does not have to be transparent. This image should not have a border"
-        ],
-        [
-          "Title",
-          "",
-          "Required for betaPNGmax 2MBThis is an image displayed instead of the name of the game as textMust be 2000x2000pxMust look good when overlayed on top of the game box, and must be transparentOn Studio, you can only have one title image. Once deployed you can have a different title image for each language. This allows a localised image if you wish (for example, \"Stone Age\" vs \"L'Âge de Pierre\"). If you don't provide a localised image, users will see the en title as a fallback. In this case, if the localised name differs from en, there will also be a subtitle showing the game's name in the user's locale.For guidelines on the positioning of elements of the title, see:Media:Title_guidelines.png."
-        ],
-        [
-          "Publisher",
-          "-",
-          "Optional(if there is no publisher)PNGmax 2MBIt is the logo of the publisher of the game, displayed on the game description page.Must be 280x280pxThe image can be transparent.You can have up to 2 publisher images"
-        ],
-        [
-          "Banner",
-          "",
-          "Required for betaJPGmax 2MBsize 1386x400pxshould not contain any text; representative of the atmosphere of the game such as a cover element or communication image; the box image covering the banner on the left should stand out"
-        ],
-        [
-          "Display",
-          "-",
-          "Required for releaseJPGheight between 400px and 760px, width maximum 1.5 x height;These images are displayed in a carousel on the game pagethe idea is to make players want to play the game, so it could be a zoomed card, some detail of the board, an overview of an ongoing physical game... but NOT a screenshot of the BGA adaptation since there is already the \"see game in action\" replay for thatYou can have up to 10 display images"
-        ],
-        [
-          "Major Variant",
-          "",
-          "OptionalPNGsize 280x280pxImages used to accompany major options, seeGame options and preferences"
-        ]
+      "heading": {
+        "level": 2,
+        "text": "Media",
+        "id": "Media"
+      },
+      "content": [
+        {
+          "type": "paragraph",
+          "text": "Game media consists of all the images which are used to represent your game on Board Game Arena, outside of the art of the actual game."
+        },
+        {
+          "type": "paragraph",
+          "text": "Once your game first hits private alpha, the media is copied over to the production site, and from this point on, all media changes must be effectuated over there: Game Metadata Manager (production) ."
+        },
+        {
+          "type": "table",
+          "headers": [
+            {
+              "text": "Name"
+            },
+            {
+              "text": "Example"
+            },
+            {
+              "text": "Description"
+            }
+          ],
+          "rows": [
+            [
+              {
+                "text": "Box"
+              },
+              {
+                "text": ""
+              },
+              {
+                "text": "Required for public alphaPNGIt is displayed on the main site on the game description page and when creating a table (280x280 px).It should be a 3D image of a physical copy of the game box as it appears in an online shop.It is better to take the version of the game that is coherent with the game art used in the adaptation, and from the original publisher of the game.The background of the image must be transparent.If you don't have a 3D version of the game box, you can use the following website to create one:https://boxshot.com/3d-box/On Studio, you can only have one box image. Once deployed you can have a different box image for each language. This allows a localised image if you wish. If you don't provide a localised image, users will see the en box as a fallback."
+              }
+            ],
+            [
+              {
+                "text": "Icon"
+              },
+              {
+                "text": ""
+              },
+              {
+                "text": "Required for public alphaPNGIt is the icon displayed in the lists of games and tables (50x50 px).The objective of this icon is to make the game recognizable among the other games. A good idea is to take a part of the game cover that is distinctive (ex: the game title).This one  does not have to be transparent. This image should not have a border"
+              }
+            ],
+            [
+              {
+                "text": "Title"
+              },
+              {
+                "text": ""
+              },
+              {
+                "text": "Required for betaPNGmax 2MBThis is an image displayed instead of the name of the game as textMust be 2000x2000pxMust look good when overlayed on top of the game box, and must be transparentOn Studio, you can only have one title image. Once deployed you can have a different title image for each language. This allows a localised image if you wish (for example, \"Stone Age\" vs \"L'Âge de Pierre\"). If you don't provide a localised image, users will see the en title as a fallback. In this case, if the localised name differs from en, there will also be a subtitle showing the game's name in the user's locale.For guidelines on the positioning of elements of the title, see:Media:Title_guidelines.png."
+              }
+            ],
+            [
+              {
+                "text": "Publisher"
+              },
+              {
+                "text": "-"
+              },
+              {
+                "text": "Optional(if there is no publisher)PNGmax 2MBIt is the logo of the publisher of the game, displayed on the game description page.Must be 280x280pxThe image can be transparent.You can have up to 2 publisher images"
+              }
+            ],
+            [
+              {
+                "text": "Banner"
+              },
+              {
+                "text": ""
+              },
+              {
+                "text": "Required for betaJPGmax 2MBsize 1386x400pxshould not contain any text; representative of the atmosphere of the game such as a cover element or communication image; the box image covering the banner on the left should stand out"
+              }
+            ],
+            [
+              {
+                "text": "Display"
+              },
+              {
+                "text": "-"
+              },
+              {
+                "text": "Required for releaseJPGheight between 400px and 760px, width maximum 1.5 x height;These images are displayed in a carousel on the game pagethe idea is to make players want to play the game, so it could be a zoomed card, some detail of the board, an overview of an ongoing physical game... but NOT a screenshot of the BGA adaptation since there is already the \"see game in action\" replay for thatYou can have up to 10 display images"
+              }
+            ],
+            [
+              {
+                "text": "Major Variant"
+              },
+              {
+                "text": ""
+              },
+              {
+                "text": "OptionalPNGsize 280x280pxImages used to accompany major options, seeGame options and preferences"
+              }
+            ]
+          ]
+        }
       ]
     },
     {
-      "type": "paragraph",
-      "text": "Game tags should be managed through the Game Metadata Manager."
-    },
-    {
-      "type": "paragraph",
-      "text": "After release, the tags are copied over to the production site, and from this point on, all tag changes must be effectuated over there: Game Metadata Manager (production) ."
-    },
-    {
-      "type": "paragraph",
-      "text": "Some text metadata is also managed through the Game Metadata Manager."
-    },
-    {
-      "type": "paragraph",
-      "text": "The artists and designers of the game. These should be comma-separated lists in the case there is more than one."
-    },
-    {
-      "type": "paragraph",
-      "text": "The year of first publication of the game. (Can be negative to represent BC.)"
-    },
-    {
-      "type": "paragraph",
-      "text": "Complexity of the game, from 0 (extremely simple) to 5 (extremely complex)"
-    },
-    {
-      "type": "paragraph",
-      "text": "Luck of the game, from 0 (absolutely no luck in this game) to 5 (totally luck driven)"
-    },
-    {
-      "type": "paragraph",
-      "text": "Strategy of the game, from 0 (no strategy can be setup) to 5 (totally based on strategy)"
-    },
-    {
-      "type": "paragraph",
-      "text": "Diplomacy of the game, from 0 (no interaction in this game) to 5 (totally based on interaction and discussion between players)"
-    },
-    {
-      "type": "paragraph",
-      "text": "The minimum age written on the game box to play the game. If the game box indicates \"age: 10+\", write 10."
-    },
-    {
-      "type": "paragraph",
-      "text": "See https://en.doc.boardgamearena.com/Zombie_Mode#The_different_Zombie_levels"
-    },
-    {
-      "type": "paragraph",
-      "text": "If a specific warning is needed on the game page (to discuss and validate with admins) it can be displayed from the game infos. For example for Texas Hold'em:"
-    },
-    {
-      "type": "code",
-      "language": null,
-      "text": "There is no real money involved on BGA: this game has the mechanism of Poker but is using points instead of real money."
-    },
-    {
-      "type": "paragraph",
-      "text": "By default, the \"buy this game\" button is a link to an Amazon search with the name of the game."
-    },
-    {
-      "type": "paragraph",
-      "text": "Short game presentation text that will appear on the game description page, structured as an array of paragraphs."
-    },
-    {
-      "type": "code",
-      "language": null,
-      "text": "This wonderful game is about geometric shapes!\n\nIt was awarded best triangle game of the year in 2005 and nominated for the Spiel des Jahres."
-    },
-    {
-      "type": "paragraph",
-      "text": "Metadata images used to be served from the /img folder of your game's repository. All of the image files prefixed with `game_` are now deprecated and can be deleted from the folder. Any changes to these images will not be picked up."
-    },
-    {
-      "type": "paragraph",
-      "text": "Text metadata used to be managed by changing values in gameinfos.jsonc . Any of the deprecated fields specified in this file are now ignored, and you will be warned about them when using the \"Reload game informations\" button."
-    },
-    {
-      "type": "paragraph",
-      "text": "Currently, the GMM is available to developers and maintainers."
-    },
-    {
-      "type": "paragraph",
-      "text": "The Game Metadata Manager will play an increasingly important role in managing a BGA implementation in the future."
-    },
-    {
-      "type": "list",
-      "ordered": false,
-      "items": [
+      "heading": {
+        "level": 2,
+        "text": "Tags",
+        "id": "Tags"
+      },
+      "content": [
         {
-          "text": "more metadata (such as publisher) be managed her",
-          "nested": null
+          "type": "paragraph",
+          "text": "Game tags should be managed through the Game Metadata Manager."
+        },
+        {
+          "type": "paragraph",
+          "text": "After release, the tags are copied over to the production site, and from this point on, all tag changes must be effectuated over there: Game Metadata Manager (production) ."
+        }
+      ]
+    },
+    {
+      "heading": {
+        "level": 2,
+        "text": "Metadata",
+        "id": "Metadata"
+      },
+      "content": [
+        {
+          "type": "paragraph",
+          "text": "Some text metadata is also managed through the Game Metadata Manager."
+        }
+      ]
+    },
+    {
+      "heading": {
+        "level": 6,
+        "text": "Artist(s) and Designer(s)",
+        "id": "Artist.28s.29_and_Designer.28s.29"
+      },
+      "content": [
+        {
+          "type": "paragraph",
+          "text": "The artists and designers of the game. These should be comma-separated lists in the case there is more than one."
+        }
+      ]
+    },
+    {
+      "heading": {
+        "level": 6,
+        "text": "Publication year",
+        "id": "Publication_year"
+      },
+      "content": [
+        {
+          "type": "paragraph",
+          "text": "The year of first publication of the game. (Can be negative to represent BC.)"
+        }
+      ]
+    },
+    {
+      "heading": {
+        "level": 6,
+        "text": "Complexity",
+        "id": "Complexity"
+      },
+      "content": [
+        {
+          "type": "paragraph",
+          "text": "Complexity of the game, from 0 (extremely simple) to 5 (extremely complex)"
+        }
+      ]
+    },
+    {
+      "heading": {
+        "level": 6,
+        "text": "Luck",
+        "id": "Luck"
+      },
+      "content": [
+        {
+          "type": "paragraph",
+          "text": "Luck of the game, from 0 (absolutely no luck in this game) to 5 (totally luck driven)"
+        }
+      ]
+    },
+    {
+      "heading": {
+        "level": 6,
+        "text": "Strategy",
+        "id": "Strategy"
+      },
+      "content": [
+        {
+          "type": "paragraph",
+          "text": "Strategy of the game, from 0 (no strategy can be setup) to 5 (totally based on strategy)"
+        }
+      ]
+    },
+    {
+      "heading": {
+        "level": 6,
+        "text": "Diplomacy",
+        "id": "Diplomacy"
+      },
+      "content": [
+        {
+          "type": "paragraph",
+          "text": "Diplomacy of the game, from 0 (no interaction in this game) to 5 (totally based on interaction and discussion between players)"
+        }
+      ]
+    },
+    {
+      "heading": {
+        "level": 6,
+        "text": "Minimum age",
+        "id": "Minimum_age"
+      },
+      "content": [
+        {
+          "type": "paragraph",
+          "text": "The minimum age written on the game box to play the game. If the game box indicates \"age: 10+\", write 10."
+        }
+      ]
+    },
+    {
+      "heading": {
+        "level": 6,
+        "text": "Zombie Mode level",
+        "id": "Zombie_Mode_level"
+      },
+      "content": [
+        {
+          "type": "paragraph",
+          "text": "See https://en.doc.boardgamearena.com/Zombie_Mode#The_different_Zombie_levels"
+        }
+      ]
+    },
+    {
+      "heading": {
+        "level": 6,
+        "text": "Game page warning",
+        "id": "Game_page_warning"
+      },
+      "content": [
+        {
+          "type": "paragraph",
+          "text": "If a specific warning is needed on the game page (to discuss and validate with admins) it can be displayed from the game infos. For example for Texas Hold'em:"
+        },
+        {
+          "type": "code",
+          "language": null,
+          "text": "There is no real money involved on BGA: this game has the mechanism of Poker but is using points instead of real money."
+        }
+      ]
+    },
+    {
+      "heading": {
+        "level": 6,
+        "text": "Custom \"buy this game\" button",
+        "id": "Custom_.22buy_this_game.22_button"
+      },
+      "content": [
+        {
+          "type": "paragraph",
+          "text": "By default, the \"buy this game\" button is a link to an Amazon search with the name of the game."
+        }
+      ]
+    },
+    {
+      "heading": {
+        "level": 6,
+        "text": "Description",
+        "id": "Description"
+      },
+      "content": [
+        {
+          "type": "paragraph",
+          "text": "Short game presentation text that will appear on the game description page, structured as an array of paragraphs."
+        },
+        {
+          "type": "code",
+          "language": null,
+          "text": "This wonderful game is about geometric shapes!\n\nIt was awarded best triangle game of the year in 2005 and nominated for the Spiel des Jahres."
+        }
+      ]
+    },
+    {
+      "heading": {
+        "level": 2,
+        "text": "Migration",
+        "id": "Migration"
+      },
+      "content": [
+        {
+          "type": "paragraph",
+          "text": "Metadata images used to be served from the /img folder of your game's repository. All of the image files prefixed with `game_` are now deprecated and can be deleted from the folder. Any changes to these images will not be picked up."
+        },
+        {
+          "type": "paragraph",
+          "text": "Text metadata used to be managed by changing values in gameinfos.jsonc . Any of the deprecated fields specified in this file are now ignored, and you will be warned about them when using the \"Reload game informations\" button."
+        }
+      ]
+    },
+    {
+      "heading": {
+        "level": 2,
+        "text": "Access Permissions",
+        "id": "Access_Permissions"
+      },
+      "content": [
+        {
+          "type": "paragraph",
+          "text": "Currently, the GMM is available to developers and maintainers."
+        }
+      ]
+    },
+    {
+      "heading": {
+        "level": 2,
+        "text": "Future",
+        "id": "Future"
+      },
+      "content": [
+        {
+          "type": "paragraph",
+          "text": "The Game Metadata Manager will play an increasingly important role in managing a BGA implementation in the future."
+        },
+        {
+          "type": "list",
+          "ordered": false,
+          "items": [
+            {
+              "text": "more metadata (such as publisher) be managed her",
+              "nested": null
+            }
+          ]
         }
       ]
     }
@@ -342,7 +461,7 @@
   ],
   "metadata": {
     "extractor_version": "1.0.0",
-    "extracted_at": "2026-07-06T06:53:17.403124+00:00",
+    "extracted_at": "2026-07-06T08:38:33.521953+00:00",
     "word_count": 526,
     "heading_count": 17,
     "code_block_count": 2,

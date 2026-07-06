@@ -3,281 +3,320 @@
   "source_file": "Game_database_model_dbmodel.sql.html",
   "relative_path": "Game_database_model_dbmodel.sql.html",
   "content_json_path": "content_json/Game_database_model_dbmodel.sql.json",
-  "headings": [
+  "sections": [
     {
-      "level": 2,
-      "text": "Create your schema",
-      "id": "Create_your_schema"
-    },
-    {
-      "level": 2,
-      "text": "Default tables",
-      "id": "Default_tables"
-    },
-    {
-      "level": 3,
-      "text": "Theplayertable",
-      "id": "The_player_table"
-    },
-    {
-      "level": 2,
-      "text": "CREATE TABLES",
-      "id": "CREATE_TABLES"
-    },
-    {
-      "level": 2,
-      "text": "PHP",
-      "id": "PHP"
-    },
-    {
-      "level": 2,
-      "text": "Errors Log",
-      "id": "Errors_Log"
-    },
-    {
-      "level": 2,
-      "text": "Post-release database modification",
-      "id": "Post-release_database_modification"
-    },
-    {
-      "level": 2,
-      "text": "Uses and misuses of AUTO_INCREMENT",
-      "id": "Uses_and_misuses_of_AUTO_INCREMENT"
-    },
-    {
-      "level": 2,
-      "text": "Beware of the size",
-      "id": "Beware_of_the_size"
-    }
-  ],
-  "content": [
-    {
-      "type": "paragraph",
-      "text": "In this file, you specify the database schema of your game."
-    },
-    {
-      "type": "note",
-      "variant": "note",
-      "text": "Note: you can't change the database schema during the game."
-    },
-    {
-      "type": "paragraph",
-      "text": "To build this file, we recommend you build the tables you need with the PhpMyAdmin tool (see the BGA user guide), and then export them and copy/paste the content to this file."
-    },
-    {
-      "type": "paragraph",
-      "text": "Example: Deck component, see Deck"
-    },
-    {
-      "type": "code",
-      "language": null,
-      "text": "CREATE TABLE IF NOT EXISTS `card` (\n  `card_id` int(10) unsigned NOT NULL AUTO_INCREMENT,\n  `card_type` varchar(16) NOT NULL,\n  `card_type_arg` int(11) NOT NULL,\n  `card_location` varchar(16) NOT NULL,\n  `card_location_arg` int(11) NOT NULL,\n  PRIMARY KEY (`card_id`)\n) ENGINE=InnoDB DEFAULT CHARSET=utf8 AUTO_INCREMENT=1 ;"
-    },
-    {
-      "type": "paragraph",
-      "text": "Example: Euro Game. See details on database design for euro game at BGA_Studio_Cookbook#Database_for_The_euro_game"
-    },
-    {
-      "type": "code",
-      "language": null,
-      "text": "CREATE TABLE IF NOT EXISTS `token` (\n  `token_key` varchar(32) NOT NULL,\n  `token_location` varchar(32) NOT NULL,\n  `token_state` int(10),\n  PRIMARY KEY (`token_key`)\n) ENGINE=InnoDB DEFAULT CHARSET=utf8;"
-    },
-    {
-      "type": "paragraph",
-      "text": "Rules you should follow:"
-    },
-    {
-      "type": "list",
-      "ordered": false,
-      "items": [
+      "heading": null,
+      "content": [
         {
-          "text": "Do not overcomplicate, you are dealing with games with 50-500 pieces!",
-          "nested": {
-            "type": "list",
-            "ordered": false,
-            "items": [
-              {
-                "text": "If you have 5 tables for a card game with 30 cards - it is overkill",
-                "nested": null
-              }
-            ]
-          }
+          "type": "paragraph",
+          "text": "In this file, you specify the database schema of your game."
         },
         {
-          "text": "The database should only be storing dynamic data, all static data should be stored in material file (php).",
-          "nested": {
-            "type": "list",
-            "ordered": false,
-            "items": [
-              {
-                "text": "Example: if you have cards that have power, color, and special abilities. In the database, you only need to store the card type, all the other properties should not be there. The only exception is if it changes during the game.",
-                "nested": null
-              }
-            ]
-          }
-        },
-        {
-          "text": "Columns should be permanent, independent of the game data, i.e. location, type, position, row, etc.",
-          "nested": {
-            "type": "list",
-            "ordered": false,
-            "items": [
-              {
-                "text": "Example: do not create columns such as Country1, Country2, Country3, etc.",
-                "nested": null
-              }
-            ]
-          }
-        },
-        {
-          "text": "Do not store translatable strings in the database, use an integer number of \"ident\" to access properties",
-          "nested": {
-            "type": "list",
-            "ordered": false,
-            "items": [
-              {
-                "text": "i.e. card type should be \"22\" or \"bob_cat\", instead of \"Bob's cat\"",
-                "nested": null
-              }
-            ]
-          }
-        },
-        {
-          "text": "Create a separate module in PHP to handle all database queries, do a lot of type checking to prevent SQL injections",
-          "nested": null
+          "type": "note",
+          "variant": "note",
+          "text": "Note: you can't change the database schema during the game."
         }
       ]
     },
     {
-      "type": "paragraph",
-      "text": "Example of method to handle a database query:"
-    },
-    {
-      "type": "code",
-      "language": null,
-      "text": "    // Set token state\n    function setTokenState($token_key, $state) {\n        self::checkState($state); // ensure state is number\n        self::checkKey($token_key); // ensure key is alphanum\n        $sql = \"UPDATE `{$this->table}`\";\n        $sql .= \" SET `token_state` = '$state'\";\n        $sql .= \" WHERE `token_key` = '$token_key'\"; // don't need to escape anymore since we checked key before\n        self::DbQuery($sql);\n        return $state;\n    }"
-    },
-    {
-      "type": "paragraph",
-      "text": "By default, BGA creates four tables for your game: global , stats , gamelog , and player ."
-    },
-    {
-      "type": "paragraph",
-      "text": "You may add columns to the player table. It is very practical to add simple values associated with players. NB: you must not alter existing columns created by the framework."
-    },
-    {
-      "type": "code",
-      "language": null,
-      "text": "ALTER TABLE `player` ADD `player_reserve_size` SMALLINT UNSIGNED NOT NULL DEFAULT '7';"
-    },
-    {
-      "type": "paragraph",
-      "text": "The commonly used columns of the default \"player\" table are:"
-    },
-    {
-      "type": "list",
-      "ordered": false,
-      "items": [
+      "heading": {
+        "level": 2,
+        "text": "Create your schema",
+        "id": "Create_your_schema"
+      },
+      "content": [
         {
-          "text": "player_no : the index of a player in natural playing order (starting with 1)",
-          "nested": null
+          "type": "paragraph",
+          "text": "To build this file, we recommend you build the tables you need with the PhpMyAdmin tool (see the BGA user guide), and then export them and copy/paste the content to this file."
         },
         {
-          "text": "player_id (int)",
-          "nested": null
+          "type": "paragraph",
+          "text": "Example: Deck component, see Deck"
         },
         {
-          "text": "player_name : (note: it is better to access this data with the getActivePlayerName() or loadPlayersBasicInfos() methods)",
-          "nested": null
+          "type": "code",
+          "language": null,
+          "text": "CREATE TABLE IF NOT EXISTS `card` (\n  `card_id` int(10) unsigned NOT NULL AUTO_INCREMENT,\n  `card_type` varchar(16) NOT NULL,\n  `card_type_arg` int(11) NOT NULL,\n  `card_location` varchar(16) NOT NULL,\n  `card_location_arg` int(11) NOT NULL,\n  PRIMARY KEY (`card_id`)\n) ENGINE=InnoDB DEFAULT CHARSET=utf8 AUTO_INCREMENT=1 ;"
         },
         {
-          "text": "player_score : the current score of a player (displayed in the player panel). Update this field with $this->playerScore, to update a player's score.",
-          "nested": null
+          "type": "paragraph",
+          "text": "Example: Euro Game. See details on database design for euro game at BGA_Studio_Cookbook#Database_for_The_euro_game"
         },
         {
-          "text": "player_score_aux : the secondary score, used as a tie breaker. Update this field with $this->playerScoreAux, according to tie breaking rules of the game (see also: Manage_player_scores_and_Tie_breaker )",
-          "nested": null
+          "type": "code",
+          "language": null,
+          "text": "CREATE TABLE IF NOT EXISTS `token` (\n  `token_key` varchar(32) NOT NULL,\n  `token_location` varchar(32) NOT NULL,\n  `token_state` int(10),\n  PRIMARY KEY (`token_key`)\n) ENGINE=InnoDB DEFAULT CHARSET=utf8;"
+        },
+        {
+          "type": "paragraph",
+          "text": "Rules you should follow:"
+        },
+        {
+          "type": "list",
+          "ordered": false,
+          "items": [
+            {
+              "text": "Do not overcomplicate, you are dealing with games with 50-500 pieces!",
+              "nested": {
+                "type": "list",
+                "ordered": false,
+                "items": [
+                  {
+                    "text": "If you have 5 tables for a card game with 30 cards - it is overkill",
+                    "nested": null
+                  }
+                ]
+              }
+            },
+            {
+              "text": "The database should only be storing dynamic data, all static data should be stored in material file (php).",
+              "nested": {
+                "type": "list",
+                "ordered": false,
+                "items": [
+                  {
+                    "text": "Example: if you have cards that have power, color, and special abilities. In the database, you only need to store the card type, all the other properties should not be there. The only exception is if it changes during the game.",
+                    "nested": null
+                  }
+                ]
+              }
+            },
+            {
+              "text": "Columns should be permanent, independent of the game data, i.e. location, type, position, row, etc.",
+              "nested": {
+                "type": "list",
+                "ordered": false,
+                "items": [
+                  {
+                    "text": "Example: do not create columns such as Country1, Country2, Country3, etc.",
+                    "nested": null
+                  }
+                ]
+              }
+            },
+            {
+              "text": "Do not store translatable strings in the database, use an integer number of \"ident\" to access properties",
+              "nested": {
+                "type": "list",
+                "ordered": false,
+                "items": [
+                  {
+                    "text": "i.e. card type should be \"22\" or \"bob_cat\", instead of \"Bob's cat\"",
+                    "nested": null
+                  }
+                ]
+              }
+            },
+            {
+              "text": "Create a separate module in PHP to handle all database queries, do a lot of type checking to prevent SQL injections",
+              "nested": null
+            }
+          ]
+        },
+        {
+          "type": "paragraph",
+          "text": "Example of method to handle a database query:"
+        },
+        {
+          "type": "code",
+          "language": null,
+          "text": "    // Set token state\n    function setTokenState($token_key, $state) {\n        self::checkState($state); // ensure state is number\n        self::checkKey($token_key); // ensure key is alphanum\n        $sql = \"UPDATE `{$this->table}`\";\n        $sql .= \" SET `token_state` = '$state'\";\n        $sql .= \" WHERE `token_key` = '$token_key'\"; // don't need to escape anymore since we checked key before\n        self::DbQuery($sql);\n        return $state;\n    }"
         }
       ]
     },
     {
-      "type": "list",
-      "ordered": false,
-      "items": [
+      "heading": {
+        "level": 2,
+        "text": "Default tables",
+        "id": "Default_tables"
+      },
+      "content": [
         {
-          "text": "player_table_order : gives an indication of the rank of the player by order of arrival in the lobby (starting with 1). It is not the same as player_no (which is the player order within the game). player_table_order is useful for setting custom teams if desired in a game option (for instance, 1st-2nd vs 3rd-4th). Note: player_table_order only exists during game initialization (in the setupNewGame function). It is not added as a column in the players Db table.",
-          "nested": null
+          "type": "paragraph",
+          "text": "By default, BGA creates four tables for your game: global , stats , gamelog , and player ."
         }
       ]
     },
     {
-      "type": "note",
-      "variant": "warning",
-      "text": "CAUTION: player_table_order is not guaranteed to be equal to the rank of the player in the table. For example, in a four-player game, if the table was full but the third player leaves before the game starts, the fourth player becomes the third on this table but their player_table_no is still equal to four! If another player then joins, their player_table_no will then be 5. Thus, it is essential to normalize these values first in the game setup if you wish to use them to prevent bugs at game launch. For example, if the set of player_table_order are <player A>: 3, <player B>: 2, <player C>: 5, <player D>: 7, you see that you can't read those values as ranks directly, but you can still deduce that <player B> was first on the table, then <player A>, then <player C>, and then <player D> 😉"
-    },
-    {
-      "type": "paragraph",
-      "text": "You can create tables, using engine InnoDB. See examples above on how to create tables. Pay attention to the following:"
-    },
-    {
-      "type": "list",
-      "ordered": false,
-      "items": [
+      "heading": {
+        "level": 3,
+        "text": "Theplayertable",
+        "id": "The_player_table"
+      },
+      "content": [
         {
-          "text": "Always add IF NOT EXISTS",
-          "nested": null
+          "type": "paragraph",
+          "text": "You may add columns to the player table. It is very practical to add simple values associated with players. NB: you must not alter existing columns created by the framework."
         },
         {
-          "text": "Always set ENGINE=InnoDB DEFAULT CHARSET=utf8mb4",
-          "nested": null
+          "type": "code",
+          "language": null,
+          "text": "ALTER TABLE `player` ADD `player_reserve_size` SMALLINT UNSIGNED NOT NULL DEFAULT '7';"
         },
         {
-          "text": "Define primary keys",
-          "nested": null
+          "type": "paragraph",
+          "text": "The commonly used columns of the default \"player\" table are:"
         },
         {
-          "text": "If you create NOT NULL fields after the game has gone into production, make sure you took care of the database migration",
-          "nested": null
+          "type": "list",
+          "ordered": false,
+          "items": [
+            {
+              "text": "player_no : the index of a player in natural playing order (starting with 1)",
+              "nested": null
+            },
+            {
+              "text": "player_id (int)",
+              "nested": null
+            },
+            {
+              "text": "player_name : (note: it is better to access this data with the getActivePlayerName() or loadPlayersBasicInfos() methods)",
+              "nested": null
+            },
+            {
+              "text": "player_score : the current score of a player (displayed in the player panel). Update this field with $this->playerScore, to update a player's score.",
+              "nested": null
+            },
+            {
+              "text": "player_score_aux : the secondary score, used as a tie breaker. Update this field with $this->playerScoreAux, according to tie breaking rules of the game (see also: Manage_player_scores_and_Tie_breaker )",
+              "nested": null
+            }
+          ]
+        },
+        {
+          "type": "list",
+          "ordered": false,
+          "items": [
+            {
+              "text": "player_table_order : gives an indication of the rank of the player by order of arrival in the lobby (starting with 1). It is not the same as player_no (which is the player order within the game). player_table_order is useful for setting custom teams if desired in a game option (for instance, 1st-2nd vs 3rd-4th). Note: player_table_order only exists during game initialization (in the setupNewGame function). It is not added as a column in the players Db table.",
+              "nested": null
+            }
+          ]
+        },
+        {
+          "type": "note",
+          "variant": "warning",
+          "text": "CAUTION: player_table_order is not guaranteed to be equal to the rank of the player in the table. For example, in a four-player game, if the table was full but the third player leaves before the game starts, the fourth player becomes the third on this table but their player_table_no is still equal to four! If another player then joins, their player_table_no will then be 5. Thus, it is essential to normalize these values first in the game setup if you wish to use them to prevent bugs at game launch. For example, if the set of player_table_order are <player A>: 3, <player B>: 2, <player C>: 5, <player D>: 7, you see that you can't read those values as ranks directly, but you can still deduce that <player B> was first on the table, then <player A>, then <player C>, and then <player D> 😉"
         }
       ]
     },
     {
-      "type": "paragraph",
-      "text": "Example:"
+      "heading": {
+        "level": 2,
+        "text": "CREATE TABLES",
+        "id": "CREATE_TABLES"
+      },
+      "content": [
+        {
+          "type": "paragraph",
+          "text": "You can create tables, using engine InnoDB. See examples above on how to create tables. Pay attention to the following:"
+        },
+        {
+          "type": "list",
+          "ordered": false,
+          "items": [
+            {
+              "text": "Always add IF NOT EXISTS",
+              "nested": null
+            },
+            {
+              "text": "Always set ENGINE=InnoDB DEFAULT CHARSET=utf8mb4",
+              "nested": null
+            },
+            {
+              "text": "Define primary keys",
+              "nested": null
+            },
+            {
+              "text": "If you create NOT NULL fields after the game has gone into production, make sure you took care of the database migration",
+              "nested": null
+            }
+          ]
+        },
+        {
+          "type": "paragraph",
+          "text": "Example:"
+        },
+        {
+          "type": "code",
+          "language": null,
+          "text": "`activated` BOOL NOT NULL DEFAULT 1, --  activated or not"
+        },
+        {
+          "type": "paragraph",
+          "text": "will also comment out the whole column `activated` BOOL, and that code will not be executed."
+        }
+      ]
     },
     {
-      "type": "code",
-      "language": null,
-      "text": "`activated` BOOL NOT NULL DEFAULT 1, --  activated or not"
+      "heading": {
+        "level": 2,
+        "text": "PHP",
+        "id": "PHP"
+      },
+      "content": [
+        {
+          "type": "paragraph",
+          "text": "Database initialization (filling the table created by this file) should be in the function setupNewGame() in 'Game.php'."
+        },
+        {
+          "type": "note",
+          "variant": "warning",
+          "text": "Warning: all CREATE/ALTER tables and views should be in dbmodel.sql. Do not call these queries from PHP to avoid implicit commits https://dev.mysql.com/doc/refman/5.7/en/implicit-commit.html which will cause issues. The only time you can do such queries from PHP is in the upgradeTableDb() method."
+        }
+      ]
     },
     {
-      "type": "paragraph",
-      "text": "will also comment out the whole column `activated` BOOL, and that code will not be executed."
+      "heading": {
+        "level": 2,
+        "text": "Errors Log",
+        "id": "Errors_Log"
+      },
+      "content": [
+        {
+          "type": "paragraph",
+          "text": "To trace Database creation, check the logs that you can access in /admin/studio."
+        }
+      ]
     },
     {
-      "type": "paragraph",
-      "text": "Database initialization (filling the table created by this file) should be in the function setupNewGame() in 'Game.php'."
+      "heading": {
+        "level": 2,
+        "text": "Post-release database modification",
+        "id": "Post-release_database_modification"
+      },
+      "content": [
+        {
+          "type": "paragraph",
+          "text": "If you want to modify your database schema after the first release of your game to production, then you should implement the upgradeTableDb() method, see Updating the database schema after release"
+        }
+      ]
     },
     {
-      "type": "note",
-      "variant": "warning",
-      "text": "Warning: all CREATE/ALTER tables and views should be in dbmodel.sql. Do not call these queries from PHP to avoid implicit commits https://dev.mysql.com/doc/refman/5.7/en/implicit-commit.html which will cause issues. The only time you can do such queries from PHP is in the upgradeTableDb() method."
+      "heading": {
+        "level": 2,
+        "text": "Uses and misuses of AUTO_INCREMENT",
+        "id": "Uses_and_misuses_of_AUTO_INCREMENT"
+      },
+      "content": [
+        {
+          "type": "paragraph",
+          "text": "AUTO_INCREMENT is not particularly well-named; it's best to think of it as simply guaranteeing uniqueness of a column value. Try to design your schema and model so you don't require strictly-increasing-by-one identifiers; do not assume that the next row inserted will have a value one larger than the current maximum."
+        }
+      ]
     },
     {
-      "type": "paragraph",
-      "text": "To trace Database creation, check the logs that you can access in /admin/studio."
-    },
-    {
-      "type": "paragraph",
-      "text": "If you want to modify your database schema after the first release of your game to production, then you should implement the upgradeTableDb() method, see Updating the database schema after release"
-    },
-    {
-      "type": "paragraph",
-      "text": "AUTO_INCREMENT is not particularly well-named; it's best to think of it as simply guaranteeing uniqueness of a column value. Try to design your schema and model so you don't require strictly-increasing-by-one identifiers; do not assume that the next row inserted will have a value one larger than the current maximum."
-    },
-    {
-      "type": "paragraph",
-      "text": "Please note the database size for each game is not unlimited, if size of all table (including system tables) exceeds 64Mb it will stop working. The biggest contributor to this will be gamelog and reply related tables, therefore please consider the size when designing data send for each state (args) and player's notifications."
+      "heading": {
+        "level": 2,
+        "text": "Beware of the size",
+        "id": "Beware_of_the_size"
+      },
+      "content": [
+        {
+          "type": "paragraph",
+          "text": "Please note the database size for each game is not unlimited, if size of all table (including system tables) exceeds 64Mb it will stop working. The biggest contributor to this will be gamelog and reply related tables, therefore please consider the size when designing data send for each state (args) and player's notifications."
+        }
+      ]
     }
   ],
   "links": [
@@ -305,7 +344,7 @@
   "images": [],
   "metadata": {
     "extractor_version": "1.0.0",
-    "extracted_at": "2026-07-06T06:53:17.339613+00:00",
+    "extracted_at": "2026-07-06T08:38:33.458145+00:00",
     "word_count": 664,
     "heading_count": 9,
     "code_block_count": 5,

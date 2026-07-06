@@ -3,76 +3,83 @@
   "source_file": "Draggable.html",
   "relative_path": "Draggable.html",
   "content_json_path": "content_json/Draggable.json",
-  "headings": [
+  "sections": [
     {
-      "level": 2,
-      "text": "Modern alternatives",
-      "id": "Modern_alternatives"
-    }
-  ],
-  "content": [
-    {
-      "type": "paragraph",
-      "text": "Draggable is the component that supports drag and drop."
-    },
-    {
-      "type": "code",
-      "language": null,
-      "text": "\t\tcreateMyDraggableInStock(targetDivId, allDragTargets) {\n\t\t\tvar draggableObj = new ebg.draggable();\n\t\t\tdraggableObj.create(this, targetDivId, targetDivId);\n\n\t\t\tdojo.connect(draggableObj, 'onStartDragging', this, (item_id, left, top) => {\n\t\t\t\t//console.log(\"onStart\", item_id, left, top);\n\t\t\t});\n\t\t\tdojo.connect(draggableObj, 'onDragging', this, (item_id, left, top, dx, dy) => {\n\t\t\t\t//console.log(\"onDrag\", item_id, left, top, dx, dy);\n\t\t\t\tvar targetParent = this.getDragTarget(item_id, allDragTargets, left, top);\n\t\t\t\tif (targetParent) {\n\t\t\t\t\tdojo.query(\".drag_target_hover\").removeClass(\"drag_target_hover\");\n\t\t\t\t\tdojo.addClass(targetParent, \"drag_target_hover\");\n\t\t\t\t}\n\n\t\t\t});\n\t\t\tdojo.connect(draggableObj, 'onEndDragging', this, (item_id, left, top, bDragged) => {\n\t\t\t\tif (!bDragged) return;\n\t\t\t\t//console.log(\"onDrop\", item_id, left, top, bDragged);\n\t\t\t\tvar targetParent = this.getDragTarget(item_id, allDragTargets, left, top);\n\t\t\t\tconst fromstock = this.getStockSourceByDivId(item_id);\n\t\t\t\tconst cardId = this.getStockCardIdByDivId(item_id);\n\t\t\t\tconst tostock = this.getStockByTargetId(targetParent);\n\t\t\t\tif (tostock && tostock != fromstock) {\n\t\t\t\t\tvar cardType = fromstock.getItemTypeById(cardId);\n\t\t\t\t\ttostock.addToStockWithId(cardType, cardId);\n\t\t\t\t\tfromstock.removeFromStockById(cardId);\n\t\t\t\t} else {\n\t\t\t\t\tfromstock.resetItemsPosition();\n\t\t\t\t}\n\n\t\t\t\tdojo.query(\".drag_target_hover\").removeClass(\"drag_target_hover\");\n\t\t\t});\n\t\t\treturn draggableObj;\n\t\t}"
-    },
-    {
-      "type": "paragraph",
-      "text": "Draggable it was created long time ago when HTML5 did not have such support, it probably best to use direct html5 spec now"
-    },
-    {
-      "type": "list",
-      "ordered": false,
-      "items": [
+      "heading": null,
+      "content": [
         {
-          "text": "Use pointer events Pointer Events API",
-          "nested": {
-            "type": "list",
-            "ordered": false,
-            "items": [
-              {
-                "text": "code pen https://codepen.io/VictoriaLa/pen/MWOgYYZ (works on mobile also)",
-                "nested": null
-              },
-              {
-                "text": "game: Century",
-                "nested": null
-              }
-            ]
-          }
+          "type": "paragraph",
+          "text": "Draggable is the component that supports drag and drop."
+        },
+        {
+          "type": "code",
+          "language": null,
+          "text": "\t\tcreateMyDraggableInStock(targetDivId, allDragTargets) {\n\t\t\tvar draggableObj = new ebg.draggable();\n\t\t\tdraggableObj.create(this, targetDivId, targetDivId);\n\n\t\t\tdojo.connect(draggableObj, 'onStartDragging', this, (item_id, left, top) => {\n\t\t\t\t//console.log(\"onStart\", item_id, left, top);\n\t\t\t});\n\t\t\tdojo.connect(draggableObj, 'onDragging', this, (item_id, left, top, dx, dy) => {\n\t\t\t\t//console.log(\"onDrag\", item_id, left, top, dx, dy);\n\t\t\t\tvar targetParent = this.getDragTarget(item_id, allDragTargets, left, top);\n\t\t\t\tif (targetParent) {\n\t\t\t\t\tdojo.query(\".drag_target_hover\").removeClass(\"drag_target_hover\");\n\t\t\t\t\tdojo.addClass(targetParent, \"drag_target_hover\");\n\t\t\t\t}\n\n\t\t\t});\n\t\t\tdojo.connect(draggableObj, 'onEndDragging', this, (item_id, left, top, bDragged) => {\n\t\t\t\tif (!bDragged) return;\n\t\t\t\t//console.log(\"onDrop\", item_id, left, top, bDragged);\n\t\t\t\tvar targetParent = this.getDragTarget(item_id, allDragTargets, left, top);\n\t\t\t\tconst fromstock = this.getStockSourceByDivId(item_id);\n\t\t\t\tconst cardId = this.getStockCardIdByDivId(item_id);\n\t\t\t\tconst tostock = this.getStockByTargetId(targetParent);\n\t\t\t\tif (tostock && tostock != fromstock) {\n\t\t\t\t\tvar cardType = fromstock.getItemTypeById(cardId);\n\t\t\t\t\ttostock.addToStockWithId(cardType, cardId);\n\t\t\t\t\tfromstock.removeFromStockById(cardId);\n\t\t\t\t} else {\n\t\t\t\t\tfromstock.resetItemsPosition();\n\t\t\t\t}\n\n\t\t\t\tdojo.query(\".drag_target_hover\").removeClass(\"drag_target_hover\");\n\t\t\t});\n\t\t\treturn draggableObj;\n\t\t}"
         }
       ]
     },
     {
-      "type": "list",
-      "ordered": false,
-      "items": [
+      "heading": {
+        "level": 2,
+        "text": "Modern alternatives",
+        "id": "Modern_alternatives"
+      },
+      "content": [
         {
-          "text": "Use native drag and drop HTML Drag and Drop",
-          "nested": {
-            "type": "list",
-            "ordered": false,
-            "items": [
-              {
-                "text": "code pen https://codepen.io/VictoriaLa/pen/rNGXKxj (it does not work on Mobile browsers and Chrome does not fire most of the events as of now)",
-                "nested": null
-              },
-              {
-                "text": "game: Patchwork",
-                "nested": null
+          "type": "paragraph",
+          "text": "Draggable it was created long time ago when HTML5 did not have such support, it probably best to use direct html5 spec now"
+        },
+        {
+          "type": "list",
+          "ordered": false,
+          "items": [
+            {
+              "text": "Use pointer events Pointer Events API",
+              "nested": {
+                "type": "list",
+                "ordered": false,
+                "items": [
+                  {
+                    "text": "code pen https://codepen.io/VictoriaLa/pen/MWOgYYZ (works on mobile also)",
+                    "nested": null
+                  },
+                  {
+                    "text": "game: Century",
+                    "nested": null
+                  }
+                ]
               }
-            ]
-          }
+            }
+          ]
+        },
+        {
+          "type": "list",
+          "ordered": false,
+          "items": [
+            {
+              "text": "Use native drag and drop HTML Drag and Drop",
+              "nested": {
+                "type": "list",
+                "ordered": false,
+                "items": [
+                  {
+                    "text": "code pen https://codepen.io/VictoriaLa/pen/rNGXKxj (it does not work on Mobile browsers and Chrome does not fire most of the events as of now)",
+                    "nested": null
+                  },
+                  {
+                    "text": "game: Patchwork",
+                    "nested": null
+                  }
+                ]
+              }
+            }
+          ]
+        },
+        {
+          "type": "paragraph",
+          "text": "Common drag and drop problems: https://www.codemzy.com/blog/drag-and-drop-bug-fixes"
         }
       ]
-    },
-    {
-      "type": "paragraph",
-      "text": "Common drag and drop problems: https://www.codemzy.com/blog/drag-and-drop-bug-fixes"
     }
   ],
   "links": [
@@ -92,7 +99,7 @@
   "images": [],
   "metadata": {
     "extractor_version": "1.0.0",
-    "extracted_at": "2026-07-06T06:53:17.320178+00:00",
+    "extracted_at": "2026-07-06T08:38:33.436436+00:00",
     "word_count": 153,
     "heading_count": 1,
     "code_block_count": 1,

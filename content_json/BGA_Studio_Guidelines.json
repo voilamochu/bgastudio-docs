@@ -3,1607 +3,1847 @@
   "source_file": "BGA_Studio_Guidelines.html",
   "relative_path": "BGA_Studio_Guidelines.html",
   "content_json_path": "content_json/BGA_Studio_Guidelines.json",
-  "headings": [
+  "sections": [
     {
-      "level": 1,
-      "text": "BGA Studio Guidelines (UX/UI)",
-      "id": "BGA_Studio_Guidelines_.28UX.2FUI.29"
-    },
-    {
-      "level": 2,
-      "text": "A — Layouts",
-      "id": "A_.E2.80.94_Layouts"
-    },
-    {
-      "level": 3,
-      "text": "A.1 Layout arrangement",
-      "id": "A.1_Layout_arrangement"
-    },
-    {
-      "level": 3,
-      "text": "A.2 Action Bar",
-      "id": "A.2_Action_Bar"
-    },
-    {
-      "level": 3,
-      "text": "A.3 Player panels",
-      "id": "A.3_Player_panels"
-    },
-    {
-      "level": 3,
-      "text": "A.4 Popups",
-      "id": "A.4_Popups"
-    },
-    {
-      "level": 3,
-      "text": "A.5 Clarity & Zoom",
-      "id": "A.5_Clarity_.26_Zoom"
-    },
-    {
-      "level": 2,
-      "text": "B — Usability",
-      "id": "B_.E2.80.94_Usability"
-    },
-    {
-      "level": 3,
-      "text": "B.1 Tooltips",
-      "id": "B.1_Tooltips"
-    },
-    {
-      "level": 3,
-      "text": "B.2 Forbidden actions",
-      "id": "B.2_Forbidden_actions"
-    },
-    {
-      "level": 3,
-      "text": "B.3 Undo, Reset, Restart",
-      "id": "B.3_Undo.2C_Reset.2C_Restart"
-    },
-    {
-      "level": 2,
-      "text": "C — Design",
-      "id": "C_.E2.80.94_Design"
-    },
-    {
-      "level": 3,
-      "text": "C.1 Typography & translations",
-      "id": "C.1_Typography_.26_translations"
-    },
-    {
-      "level": 3,
-      "text": "C.2 Highlights & Glowing auras",
-      "id": "C.2_Highlights_.26_Glowing_auras"
-    },
-    {
-      "level": 3,
-      "text": "C.3 Button colors and styling",
-      "id": "C.3_Button_colors_and_styling"
-    },
-    {
-      "level": 3,
-      "text": "C.4 Sizing & responsiveness",
-      "id": "C.4_Sizing_.26_responsiveness"
-    },
-    {
-      "level": 3,
-      "text": "C.5 Background & extras",
-      "id": "C.5_Background_.26_extras"
-    },
-    {
-      "level": 2,
-      "text": "D — Feedback",
-      "id": "D_.E2.80.94_Feedback"
-    },
-    {
-      "level": 3,
-      "text": "D.1 Errors & invalid actions",
-      "id": "D.1_Errors_.26_invalid_actions"
-    },
-    {
-      "level": 3,
-      "text": "D.2 Game Logs",
-      "id": "D.2_Game_Logs"
-    },
-    {
-      "level": 3,
-      "text": "D.3 Animation",
-      "id": "D.3_Animation"
-    },
-    {
-      "level": 3,
-      "text": "D.4 Sound effects",
-      "id": "D.4_Sound_effects"
-    },
-    {
-      "level": 2,
-      "text": "E — Accessibility",
-      "id": "E_.E2.80.94_Accessibility"
-    },
-    {
-      "level": 3,
-      "text": "E.1 Design for all",
-      "id": "E.1_Design_for_all"
-    },
-    {
-      "level": 3,
-      "text": "E.2 Colorblind-safe design",
-      "id": "E.2_Colorblind-safe_design"
-    },
-    {
-      "level": 3,
-      "text": "E.3 Tap targets",
-      "id": "E.3_Tap_targets"
-    },
-    {
-      "level": 3,
-      "text": "E.4 Settings & customization",
-      "id": "E.4_Settings_.26_customization"
-    },
-    {
-      "level": 2,
-      "text": "F — Technical",
-      "id": "F_.E2.80.94_Technical"
-    },
-    {
-      "level": 3,
-      "text": "F.1 Endgame & Replays",
-      "id": "F.1_Endgame_.26_Replays"
-    },
-    {
-      "level": 3,
-      "text": "F.2 Refresh & Continuity",
-      "id": "F.2_Refresh_.26_Continuity"
-    },
-    {
-      "level": 3,
-      "text": "F.3 Error handling",
-      "id": "F.3_Error_handling"
-    },
-    {
-      "level": 2,
-      "text": "Pre-release Checklist",
-      "id": "Pre-release_Checklist"
-    },
-    {
-      "level": 2,
-      "text": "Closing thoughts",
-      "id": "Closing_thoughts"
-    },
-    {
-      "level": 1,
-      "text": "BGA Studio Guidelines (Source Code)",
-      "id": "BGA_Studio_Guidelines_.28Source_Code.29"
-    },
-    {
-      "level": 2,
-      "text": "Front (JS) code",
-      "id": "Front_.28JS.29_code"
-    },
-    {
-      "level": 3,
-      "text": "Generated code",
-      "id": "Generated_code"
-    },
-    {
-      "level": 3,
-      "text": "Templates",
-      "id": "Templates"
-    },
-    {
-      "level": 2,
-      "text": "Back (PHP) code",
-      "id": "Back_.28PHP.29_code"
-    },
-    {
-      "level": 3,
-      "text": "Framework functions",
-      "id": "Framework_functions"
-    },
-    {
-      "level": 5,
-      "text": "Undocumented functions",
-      "id": "Undocumented_functions"
-    },
-    {
-      "level": 4,
-      "text": "Function override",
-      "id": "Function_override"
-    },
-    {
-      "level": 4,
-      "text": "State functions",
-      "id": "State_functions"
-    },
-    {
-      "level": 3,
-      "text": "Namespacing",
-      "id": "Namespacing"
-    },
-    {
-      "level": 3,
-      "text": "Other",
-      "id": "Other"
-    }
-  ],
-  "content": [
-    {
-      "type": "paragraph",
-      "text": "This page covers UX guidelines for games on Board Game Arena. Read the official PDF or bga.li/mRdx first. This page is an unofficial summary."
-    },
-    {
-      "type": "paragraph",
-      "text": "Use this page to validate UX before switching your game from ALPHA → BETA → RELEASE ."
-    },
-    {
-      "type": "paragraph",
-      "text": "Game should fit a square ratio and show everything the active player needs. Use vertical scroll for secondary info (other players' progress, secondary boards)."
-    },
-    {
-      "type": "list",
-      "ordered": false,
-      "items": [
+      "heading": {
+        "level": 1,
+        "text": "BGA Studio Guidelines (UX/UI)",
+        "id": "BGA_Studio_Guidelines_.28UX.2FUI.29"
+      },
+      "content": [
         {
-          "text": "Center the play area on all devices.",
-          "nested": null
+          "type": "paragraph",
+          "text": "This page covers UX guidelines for games on Board Game Arena. Read the official PDF or bga.li/mRdx first. This page is an unofficial summary."
         },
         {
-          "text": "Leave a \"no action\" margin around the board (deselect, scroll on mobile).",
-          "nested": null
-        },
-        {
-          "text": "Use HTML anchors to jump between distant sections.",
-          "nested": null
-        },
-        {
-          "text": "Use spacers / transparent whiteblocks to group pieces clearly.",
-          "nested": null
-        },
-        {
-          "text": "Keep score, turn order, and objectives accessible (button/tab/panel), not always visible.",
-          "nested": null
-        },
-        {
-          "text": "Tuck rare abilities into tooltips.",
-          "nested": null
+          "type": "paragraph",
+          "text": "Use this page to validate UX before switching your game from ALPHA → BETA → RELEASE ."
         }
       ]
     },
     {
-      "type": "paragraph",
-      "text": "❌ Don't"
+      "heading": {
+        "level": 2,
+        "text": "A — Layouts",
+        "id": "A_.E2.80.94_Layouts"
+      },
+      "content": []
     },
     {
-      "type": "list",
-      "ordered": false,
-      "items": [
+      "heading": {
+        "level": 3,
+        "text": "A.1 Layout arrangement",
+        "id": "A.1_Layout_arrangement"
+      },
+      "content": [
         {
-          "text": "Do not hide game components behind popups — you should see everything you'd see on a real table.",
-          "nested": null
+          "type": "paragraph",
+          "text": "Game should fit a square ratio and show everything the active player needs. Use vertical scroll for secondary info (other players' progress, secondary boards)."
         },
         {
-          "text": "Do not place \"always accessible\" info permanently on the player panels.",
-          "nested": null
+          "type": "list",
+          "ordered": false,
+          "items": [
+            {
+              "text": "Center the play area on all devices.",
+              "nested": null
+            },
+            {
+              "text": "Leave a \"no action\" margin around the board (deselect, scroll on mobile).",
+              "nested": null
+            },
+            {
+              "text": "Use HTML anchors to jump between distant sections.",
+              "nested": null
+            },
+            {
+              "text": "Use spacers / transparent whiteblocks to group pieces clearly.",
+              "nested": null
+            },
+            {
+              "text": "Keep score, turn order, and objectives accessible (button/tab/panel), not always visible.",
+              "nested": null
+            },
+            {
+              "text": "Tuck rare abilities into tooltips.",
+              "nested": null
+            }
+          ]
         },
         {
-          "text": "Do not add in-game logos or branding that isn't part of the actual game.",
-          "nested": null
+          "type": "paragraph",
+          "text": "❌ Don't"
         },
         {
-          "text": "Do not scatter related info (e.g. resources) across three corners.",
-          "nested": null
+          "type": "list",
+          "ordered": false,
+          "items": [
+            {
+              "text": "Do not hide game components behind popups — you should see everything you'd see on a real table.",
+              "nested": null
+            },
+            {
+              "text": "Do not place \"always accessible\" info permanently on the player panels.",
+              "nested": null
+            },
+            {
+              "text": "Do not add in-game logos or branding that isn't part of the actual game.",
+              "nested": null
+            },
+            {
+              "text": "Do not scatter related info (e.g. resources) across three corners.",
+              "nested": null
+            }
+          ]
+        },
+        {
+          "type": "note",
+          "variant": "note",
+          "text": "Note: Layout mantra: Central = shared actions. Top/Bottom = global info. Panels = private resources."
         }
       ]
     },
     {
-      "type": "note",
-      "variant": "note",
-      "text": "Note: Layout mantra: Central = shared actions. Top/Bottom = global info. Panels = private resources."
-    },
-    {
-      "type": "paragraph",
-      "text": "The Action Bar always shows the current state: turn in progress, who we're waiting for, or what the player can do."
-    },
-    {
-      "type": "paragraph",
-      "text": "✔️ Do"
-    },
-    {
-      "type": "list",
-      "ordered": false,
-      "items": [
+      "heading": {
+        "level": 3,
+        "text": "A.2 Action Bar",
+        "id": "A.2_Action_Bar"
+      },
+      "content": [
         {
-          "text": "Center main awaited actions (Play card, End turn, Confirm move).",
-          "nested": null
+          "type": "paragraph",
+          "text": "The Action Bar always shows the current state: turn in progress, who we're waiting for, or what the player can do."
         },
         {
-          "text": "Place secondary/greyed-out actions next to them.",
-          "nested": null
+          "type": "paragraph",
+          "text": "✔️ Do"
         },
         {
-          "text": "Put cancel / undo / remove on the right, visually separated from forward actions.",
-          "nested": null
+          "type": "list",
+          "ordered": false,
+          "items": [
+            {
+              "text": "Center main awaited actions (Play card, End turn, Confirm move).",
+              "nested": null
+            },
+            {
+              "text": "Place secondary/greyed-out actions next to them.",
+              "nested": null
+            },
+            {
+              "text": "Put cancel / undo / remove on the right, visually separated from forward actions.",
+              "nested": null
+            },
+            {
+              "text": "Use the Action Bar for: actions targeting another player, Pass/End turn/time-related actions, auction phases, and small resource exchanges without dedicated board space.",
+              "nested": null
+            },
+            {
+              "text": "Keep it to max 4 buttons + context so it doesn't overflow on mobile.",
+              "nested": null
+            }
+          ]
         },
         {
-          "text": "Use the Action Bar for: actions targeting another player, Pass/End turn/time-related actions, auction phases, and small resource exchanges without dedicated board space.",
-          "nested": null
+          "type": "paragraph",
+          "text": "❌ Don't"
         },
         {
-          "text": "Keep it to max 4 buttons + context so it doesn't overflow on mobile.",
-          "nested": null
+          "type": "list",
+          "ordered": false,
+          "items": [
+            {
+              "text": "Do not replace board-component actions with Action Bar buttons — players should act on the board like in real life.",
+              "nested": null
+            },
+            {
+              "text": "Do not stick custom buttons next to BGA's built-in buttons (replay controls, etc.).",
+              "nested": null
+            },
+            {
+              "text": "Do not let cancel actions visually compete with main actions.",
+              "nested": null
+            },
+            {
+              "text": "Do not show \"Round in progress\" text inside the bar — display it on the table or as flavor text of the current action.",
+              "nested": null
+            }
+          ]
+        },
+        {
+          "type": "paragraph",
+          "text": "Example: Wingspan shows the current round as flavor text under the action bar."
+        },
+        {
+          "type": "paragraph",
+          "text": "→ See C.3 for button colors."
         }
       ]
     },
     {
-      "type": "paragraph",
-      "text": "❌ Don't"
-    },
-    {
-      "type": "list",
-      "ordered": false,
-      "items": [
+      "heading": {
+        "level": 3,
+        "text": "A.3 Player panels",
+        "id": "A.3_Player_panels"
+      },
+      "content": [
         {
-          "text": "Do not replace board-component actions with Action Bar buttons — players should act on the board like in real life.",
-          "nested": null
+          "type": "paragraph",
+          "text": "Player panels let anyone glance at: who's playing, color, score, turn order, and resources gained."
         },
         {
-          "text": "Do not stick custom buttons next to BGA's built-in buttons (replay controls, etc.).",
-          "nested": null
+          "type": "list",
+          "ordered": false,
+          "items": [
+            {
+              "text": "Keep panels compact — a 4-player game on mobile must not occupy more than ¼ of the screen .",
+              "nested": null
+            },
+            {
+              "text": "Offer HTML anchor shortcuts to jump to a player's main components.",
+              "nested": null
+            }
+          ]
         },
         {
-          "text": "Do not let cancel actions visually compete with main actions.",
-          "nested": null
+          "type": "paragraph",
+          "text": "❌ Don't"
         },
         {
-          "text": "Do not show \"Round in progress\" text inside the bar — display it on the table or as flavor text of the current action.",
-          "nested": null
+          "type": "list",
+          "ordered": false,
+          "items": [
+            {
+              "text": "Do not put settings, titles, round numbers, or other redundant info in panels.",
+              "nested": null
+            },
+            {
+              "text": "Do not put always-accessible info (score, objectives) only on player panels.",
+              "nested": null
+            }
+          ]
+        },
+        {
+          "type": "paragraph",
+          "text": "[image: Ux-04-player-panel.jpg]"
         }
       ]
     },
     {
-      "type": "paragraph",
-      "text": "Example: Wingspan shows the current round as flavor text under the action bar."
-    },
-    {
-      "type": "paragraph",
-      "text": "→ See C.3 for button colors."
-    },
-    {
-      "type": "paragraph",
-      "text": "Player panels let anyone glance at: who's playing, color, score, turn order, and resources gained."
-    },
-    {
-      "type": "list",
-      "ordered": false,
-      "items": [
+      "heading": {
+        "level": 3,
+        "text": "A.4 Popups",
+        "id": "A.4_Popups"
+      },
+      "content": [
         {
-          "text": "Keep panels compact — a 4-player game on mobile must not occupy more than ¼ of the screen .",
-          "nested": null
+          "type": "paragraph",
+          "text": "✔️ Do"
         },
         {
-          "text": "Offer HTML anchor shortcuts to jump to a player's main components.",
-          "nested": null
+          "type": "list",
+          "ordered": false,
+          "items": [
+            {
+              "text": "Reserve automatic popups for tutorials only .",
+              "nested": null
+            },
+            {
+              "text": "Make any required popup skippable on click/touch/timer.",
+              "nested": null
+            },
+            {
+              "text": "Use the game wiki for rules, hints, scoring tips, helpers.",
+              "nested": null
+            }
+          ]
+        },
+        {
+          "type": "paragraph",
+          "text": "[image: Ux-06-wiki.jpg]"
+        },
+        {
+          "type": "list",
+          "ordered": false,
+          "items": [
+            {
+              "text": "Do not block game flow with popups (forbidden).",
+              "nested": null
+            },
+            {
+              "text": "Do not use popups mid-game — only allowed for between-round/stage scoring.",
+              "nested": null
+            }
+          ]
+        },
+        {
+          "type": "paragraph",
+          "text": "Example: area around popup clickable - should be used to close it"
+        },
+        {
+          "type": "paragraph",
+          "text": "→ See B.1 for non-blocking alternatives."
         }
       ]
     },
     {
-      "type": "paragraph",
-      "text": "❌ Don't"
-    },
-    {
-      "type": "list",
-      "ordered": false,
-      "items": [
+      "heading": {
+        "level": 3,
+        "text": "A.5 Clarity & Zoom",
+        "id": "A.5_Clarity_.26_Zoom"
+      },
+      "content": [
         {
-          "text": "Do not put settings, titles, round numbers, or other redundant info in panels.",
-          "nested": null
+          "type": "paragraph",
+          "text": "Use vertical space and good layout instead of zoom controls."
         },
         {
-          "text": "Do not put always-accessible info (score, objectives) only on player panels.",
-          "nested": null
+          "type": "list",
+          "ordered": false,
+          "items": [
+            {
+              "text": "Design so the core game is fully playable at 100% scale .",
+              "nested": null
+            },
+            {
+              "text": "Trust browser zoom: Ctrl+wheel on desktop, pinch on mobile.",
+              "nested": null
+            }
+          ]
+        },
+        {
+          "type": "paragraph",
+          "text": "❌ Don't"
+        },
+        {
+          "type": "list",
+          "ordered": false,
+          "items": [
+            {
+              "text": "Do not add zoom buttons unless absolutely necessary (large secondary boards, very text-heavy cards like Ticket to Ride).",
+              "nested": null
+            }
+          ]
+        },
+        {
+          "type": "paragraph",
+          "text": "If you must add zoom buttons:"
+        },
+        {
+          "type": "list",
+          "ordered": false,
+          "items": [
+            {
+              "text": "+ (plus): zoom in",
+              "nested": null
+            },
+            {
+              "text": "– (minus): zoom out",
+              "nested": null
+            },
+            {
+              "text": "🏠 Home: reset to default",
+              "nested": null
+            }
+          ]
         }
       ]
     },
     {
-      "type": "paragraph",
-      "text": "[image: Ux-04-player-panel.jpg]"
+      "heading": {
+        "level": 2,
+        "text": "B — Usability",
+        "id": "B_.E2.80.94_Usability"
+      },
+      "content": []
     },
     {
-      "type": "paragraph",
-      "text": "✔️ Do"
-    },
-    {
-      "type": "list",
-      "ordered": false,
-      "items": [
+      "heading": {
+        "level": 3,
+        "text": "B.1 Tooltips",
+        "id": "B.1_Tooltips"
+      },
+      "content": [
         {
-          "text": "Reserve automatic popups for tutorials only .",
-          "nested": null
+          "type": "paragraph",
+          "text": "Tooltips add insight, not duplication."
         },
         {
-          "text": "Make any required popup skippable on click/touch/timer.",
-          "nested": null
+          "type": "list",
+          "ordered": false,
+          "items": [
+            {
+              "text": "Add extra detail beyond what's on screen (translatable text, hints about when to use).",
+              "nested": null
+            },
+            {
+              "text": "Use them to zoom into small text/icons on large game boards.",
+              "nested": null
+            },
+            {
+              "text": "Close tooltips when the user taps away on mobile.",
+              "nested": null
+            }
+          ]
         },
         {
-          "text": "Use the game wiki for rules, hints, scoring tips, helpers.",
-          "nested": null
+          "type": "paragraph",
+          "text": "❌ Don't"
+        },
+        {
+          "type": "list",
+          "ordered": false,
+          "items": [
+            {
+              "text": "Do not show the same info twice the same way.",
+              "nested": null
+            },
+            {
+              "text": "Do not add a tooltip that's just a zoomed-in copy of an already-visible card — that's a sign your components are mis-sized.",
+              "nested": null
+            }
+          ]
+        },
+        {
+          "type": "paragraph",
+          "text": "Example: Ticket to Ride hover tooltips name cards/decks without distraction."
+        },
+        {
+          "type": "paragraph",
+          "text": "Example: Altered shows minimal default info, with full detail on hover."
         }
       ]
     },
     {
-      "type": "paragraph",
-      "text": "[image: Ux-06-wiki.jpg]"
-    },
-    {
-      "type": "list",
-      "ordered": false,
-      "items": [
+      "heading": {
+        "level": 3,
+        "text": "B.2 Forbidden actions",
+        "id": "B.2_Forbidden_actions"
+      },
+      "content": [
         {
-          "text": "Do not block game flow with popups (forbidden).",
-          "nested": null
+          "type": "paragraph",
+          "text": "✔️ Do"
         },
         {
-          "text": "Do not use popups mid-game — only allowed for between-round/stage scoring.",
-          "nested": null
+          "type": "list",
+          "ordered": false,
+          "items": [
+            {
+              "text": "Grey out / disable actions that exist but aren't currently available.",
+              "nested": null
+            }
+          ]
+        },
+        {
+          "type": "paragraph",
+          "text": "❌ Don't"
+        },
+        {
+          "type": "list",
+          "ordered": false,
+          "items": [
+            {
+              "text": "Do not show disabled buttons for actions that are never relevant in the current context — just hide them.",
+              "nested": null
+            }
+          ]
         }
       ]
     },
     {
-      "type": "paragraph",
-      "text": "Example: area around popup clickable - should be used to close it"
-    },
-    {
-      "type": "paragraph",
-      "text": "→ See B.1 for non-blocking alternatives."
-    },
-    {
-      "type": "paragraph",
-      "text": "Use vertical space and good layout instead of zoom controls."
-    },
-    {
-      "type": "list",
-      "ordered": false,
-      "items": [
+      "heading": {
+        "level": 3,
+        "text": "B.3 Undo, Reset, Restart",
+        "id": "B.3_Undo.2C_Reset.2C_Restart"
+      },
+      "content": [
         {
-          "text": "Design so the core game is fully playable at 100% scale .",
-          "nested": null
+          "type": "paragraph",
+          "text": "BGA philosophy: fast, fluid, intuitive. Use these controls sparingly."
         },
         {
-          "text": "Trust browser zoom: Ctrl+wheel on desktop, pinch on mobile.",
-          "nested": null
+          "type": "list",
+          "ordered": false,
+          "items": [
+            {
+              "text": "Use Confirm buttons for impactful, irreversible actions (end turn, discard, commit resources).",
+              "nested": null
+            },
+            {
+              "text": "Prefer timed confirmation (5–8s) over undo.",
+              "nested": null
+            },
+            {
+              "text": "Offer one Restart Turn for the whole turn when rules allow, not per-micro-action undo.",
+              "nested": null
+            },
+            {
+              "text": "Allow \"Undo last move\" only when a turn has more than 2 actions .",
+              "nested": null
+            }
+          ]
+        },
+        {
+          "type": "paragraph",
+          "text": "❌ Don't"
+        },
+        {
+          "type": "list",
+          "ordered": false,
+          "items": [
+            {
+              "text": "Do not add an Undo button for every action — multiplies validation steps, slows the game.",
+              "nested": null
+            },
+            {
+              "text": "Do not layer Undo on top of Reset on top of Confirm — over-validation.",
+              "nested": null
+            },
+            {
+              "text": "Do not use Undo to paper over misclicks — fix the layout instead (bigger targets, clearer highlights).",
+              "nested": null
+            }
+          ]
         }
       ]
     },
     {
-      "type": "paragraph",
-      "text": "❌ Don't"
+      "heading": {
+        "level": 2,
+        "text": "C — Design",
+        "id": "C_.E2.80.94_Design"
+      },
+      "content": []
     },
     {
-      "type": "list",
-      "ordered": false,
-      "items": [
+      "heading": {
+        "level": 3,
+        "text": "C.1 Typography & translations",
+        "id": "C.1_Typography_.26_translations"
+      },
+      "content": [
         {
-          "text": "Do not add zoom buttons unless absolutely necessary (large secondary boards, very text-heavy cards like Ticket to Ride).",
-          "nested": null
+          "type": "paragraph",
+          "text": "Clarity beats style."
+        },
+        {
+          "type": "list",
+          "ordered": false,
+          "items": [
+            {
+              "text": "Use the default BGA font.",
+              "nested": null
+            },
+            {
+              "text": "Use clean sans-serif if you must change.",
+              "nested": null
+            },
+            {
+              "text": "Maintain good line spacing.",
+              "nested": null
+            },
+            {
+              "text": "Make all text translatable via BGA's translation system.",
+              "nested": null
+            },
+            {
+              "text": "Support LTR and RTL languages — test alignment & mirroring.",
+              "nested": null
+            },
+            {
+              "text": "Ensure your font supports accents/diacritics (é, ñ, ü).",
+              "nested": null
+            },
+            {
+              "text": "Meet WCAG AA contrast.",
+              "nested": null
+            },
+            {
+              "text": "Test on a phone — what's readable on a 27\" monitor may not be on mobile.",
+              "nested": null
+            }
+          ]
+        },
+        {
+          "type": "paragraph",
+          "text": "❌ Don't"
+        },
+        {
+          "type": "list",
+          "ordered": false,
+          "items": [
+            {
+              "text": "Do not use decorative or themed fonts (hard to read, licensing risk, missing glyphs).",
+              "nested": null
+            },
+            {
+              "text": "Do not mix multiple fonts for \"theme.\"",
+              "nested": null
+            },
+            {
+              "text": "Do not embed text directly into images without alt-text.",
+              "nested": null
+            }
+          ]
         }
       ]
     },
     {
-      "type": "paragraph",
-      "text": "If you must add zoom buttons:"
-    },
-    {
-      "type": "list",
-      "ordered": false,
-      "items": [
+      "heading": {
+        "level": 3,
+        "text": "C.2 Highlights & Glowing auras",
+        "id": "C.2_Highlights_.26_Glowing_auras"
+      },
+      "content": [
         {
-          "text": "+ (plus): zoom in",
-          "nested": null
+          "type": "paragraph",
+          "text": "Players should never wonder \"what do I click?\""
         },
         {
-          "text": "– (minus): zoom out",
-          "nested": null
+          "type": "list",
+          "ordered": false,
+          "items": [
+            {
+              "text": "Highlight valid options so the awaited action is obvious.",
+              "nested": null
+            },
+            {
+              "text": "Show consequences visually before the player commits.",
+              "nested": null
+            }
+          ]
         },
         {
-          "text": "🏠 Home: reset to default",
-          "nested": null
+          "type": "paragraph",
+          "text": "Example of highlighting valid options on the table."
         }
       ]
     },
     {
-      "type": "paragraph",
-      "text": "Tooltips add insight, not duplication."
-    },
-    {
-      "type": "list",
-      "ordered": false,
-      "items": [
+      "heading": {
+        "level": 3,
+        "text": "C.3 Button colors and styling",
+        "id": "C.3_Button_colors_and_styling"
+      },
+      "content": [
         {
-          "text": "Add extra detail beyond what's on screen (translatable text, hints about when to use).",
-          "nested": null
+          "type": "paragraph",
+          "text": "Button colors are a shared language across BGA. Mandatory for consistency."
         },
         {
-          "text": "Use them to zoom into small text/icons on large game boards.",
-          "nested": null
+          "type": "table",
+          "headers": [
+            {
+              "text": "Color"
+            },
+            {
+              "text": "Meaning"
+            },
+            {
+              "text": "statusBar.addActionButton"
+            }
+          ],
+          "rows": [
+            [
+              {
+                "text": "🔵Blue"
+              },
+              {
+                "text": "Advance, confirm, move forward"
+              },
+              {
+                "text": "primary"
+              }
+            ],
+            [
+              {
+                "text": "🔴Red"
+              },
+              {
+                "text": "Cancel, undo, stop, exit"
+              },
+              {
+                "text": "alert"
+              }
+            ],
+            [
+              {
+                "text": "⚪White / Transparent"
+              },
+              {
+                "text": "Optional/side actions"
+              },
+              {
+                "text": "secondary"
+              }
+            ],
+            [
+              {
+                "text": "⚫Grey"
+              },
+              {
+                "text": "Disabled, completed, unavailable"
+              },
+              {
+                "text": "(disabled state of any of the above)"
+              }
+            ]
+          ]
         },
         {
-          "text": "Close tooltips when the user taps away on mobile.",
-          "nested": null
+          "type": "paragraph",
+          "text": "✔️ Do"
+        },
+        {
+          "type": "list",
+          "ordered": false,
+          "items": [
+            {
+              "text": "Display usernames in their assigned player color.",
+              "nested": null
+            },
+            {
+              "text": "Outline player-color text so it stays visible (e.g. yellow on white).",
+              "nested": null
+            },
+            {
+              "text": "Test player colors on both light and dark backgrounds.",
+              "nested": null
+            },
+            {
+              "text": "Take any extra colors from game components (cards, tiles, tokens), not UI buttons.",
+              "nested": null
+            }
+          ]
+        },
+        {
+          "type": "paragraph",
+          "text": "❌ Don't"
+        },
+        {
+          "type": "list",
+          "ordered": false,
+          "items": [
+            {
+              "text": "Do not reassign blue/red/grey for game-specific meaning.",
+              "nested": null
+            },
+            {
+              "text": "Do not tint UI buttons to match the game's theme.",
+              "nested": null
+            }
+          ]
+        },
+        {
+          "type": "note",
+          "variant": "note",
+          "text": "Note: Think of button colors as traffic lights : blue = go, red = stop, grey = unavailable."
         }
       ]
     },
     {
-      "type": "paragraph",
-      "text": "❌ Don't"
-    },
-    {
-      "type": "list",
-      "ordered": false,
-      "items": [
+      "heading": {
+        "level": 3,
+        "text": "C.4 Sizing & responsiveness",
+        "id": "C.4_Sizing_.26_responsiveness"
+      },
+      "content": [
         {
-          "text": "Do not show the same info twice the same way.",
-          "nested": null
+          "type": "paragraph",
+          "text": "✔️ Do"
         },
         {
-          "text": "Do not add a tooltip that's just a zoomed-in copy of an already-visible card — that's a sign your components are mis-sized.",
-          "nested": null
+          "type": "list",
+          "ordered": false,
+          "items": [
+            {
+              "text": "Keep the main play area centered on every device.",
+              "nested": null
+            },
+            {
+              "text": "Use fluid layouts that expand/contract to fit available space.",
+              "nested": null
+            },
+            {
+              "text": "Leave margins around the board (prevents mobile misclicks).",
+              "nested": null
+            },
+            {
+              "text": "On desktop/tablet: show the entire board when possible.",
+              "nested": null
+            },
+            {
+              "text": "On mobile (vertical): stack secondary elements below the main action zone.",
+              "nested": null
+            },
+            {
+              "text": "Make everything readable and usable at 100% scale.",
+              "nested": null
+            },
+            {
+              "text": "Add HTML anchors / jump-links for vertical layouts.",
+              "nested": null
+            }
+          ]
+        },
+        {
+          "type": "paragraph",
+          "text": "❌ Don't"
+        },
+        {
+          "type": "list",
+          "ordered": false,
+          "items": [
+            {
+              "text": "Do not use fixed-width designs.",
+              "nested": null
+            },
+            {
+              "text": "Do not rely on zoom for legibility.",
+              "nested": null
+            },
+            {
+              "text": "Do not let layout break when players zoom in/out.",
+              "nested": null
+            },
+            {
+              "text": "Do not make any interactive element smaller than 32×32px (see E.3 ).",
+              "nested": null
+            }
+          ]
+        },
+        {
+          "type": "paragraph",
+          "text": "Reference implementation: bga-jump-to demo"
         }
       ]
     },
     {
-      "type": "paragraph",
-      "text": "Example: Ticket to Ride hover tooltips name cards/decks without distraction."
-    },
-    {
-      "type": "paragraph",
-      "text": "Example: Altered shows minimal default info, with full detail on hover."
-    },
-    {
-      "type": "paragraph",
-      "text": "✔️ Do"
-    },
-    {
-      "type": "list",
-      "ordered": false,
-      "items": [
+      "heading": {
+        "level": 3,
+        "text": "C.5 Background & extras",
+        "id": "C.5_Background_.26_extras"
+      },
+      "content": [
         {
-          "text": "Grey out / disable actions that exist but aren't currently available.",
-          "nested": null
+          "type": "paragraph",
+          "text": "The background is the table surface your game sits on."
+        },
+        {
+          "type": "list",
+          "ordered": false,
+          "items": [
+            {
+              "text": "Use thematic, modern backgrounds (subtle playmat look).",
+              "nested": null
+            },
+            {
+              "text": "Add slight texture or pattern.",
+              "nested": null
+            },
+            {
+              "text": "Apply a touch of blur so components remain the visual focus.",
+              "nested": null
+            },
+            {
+              "text": "Prioritize contrast against the game's components.",
+              "nested": null
+            }
+          ]
+        },
+        {
+          "type": "paragraph",
+          "text": "❌ Don't"
+        },
+        {
+          "type": "list",
+          "ordered": false,
+          "items": [
+            {
+              "text": "Do not use pure flat colors.",
+              "nested": null
+            },
+            {
+              "text": "Do not use sharp, busy, detailed backgrounds that compete with the game.",
+              "nested": null
+            },
+            {
+              "text": "Do not let the background reduce component visibility.",
+              "nested": null
+            }
+          ]
         }
       ]
     },
     {
-      "type": "paragraph",
-      "text": "❌ Don't"
+      "heading": {
+        "level": 2,
+        "text": "D — Feedback",
+        "id": "D_.E2.80.94_Feedback"
+      },
+      "content": []
     },
     {
-      "type": "list",
-      "ordered": false,
-      "items": [
+      "heading": {
+        "level": 3,
+        "text": "D.1 Errors & invalid actions",
+        "id": "D.1_Errors_.26_invalid_actions"
+      },
+      "content": [
         {
-          "text": "Do not show disabled buttons for actions that are never relevant in the current context — just hide them.",
-          "nested": null
+          "type": "paragraph",
+          "text": "Silence is never acceptable. Every failed action must say why."
+        },
+        {
+          "type": "list",
+          "ordered": false,
+          "items": [
+            {
+              "text": "Use a short shake, grey-out, or tooltip on failure.",
+              "nested": null
+            },
+            {
+              "text": "Show concise plain-text errors: \"You don't have enough resources.\"",
+              "nested": null
+            },
+            {
+              "text": "Pair color with icons or text (don't rely on red alone).",
+              "nested": null
+            }
+          ]
+        },
+        {
+          "type": "paragraph",
+          "text": "❌ Don't"
+        },
+        {
+          "type": "list",
+          "ordered": false,
+          "items": [
+            {
+              "text": "Do not leave the player guessing.",
+              "nested": null
+            },
+            {
+              "text": "Do not use color alone — colorblind users won't see it.",
+              "nested": null
+            }
+          ]
         }
       ]
     },
     {
-      "type": "paragraph",
-      "text": "BGA philosophy: fast, fluid, intuitive. Use these controls sparingly."
-    },
-    {
-      "type": "list",
-      "ordered": false,
-      "items": [
+      "heading": {
+        "level": 3,
+        "text": "D.2 Game Logs",
+        "id": "D.2_Game_Logs"
+      },
+      "content": [
         {
-          "text": "Use Confirm buttons for impactful, irreversible actions (end turn, discard, commit resources).",
-          "nested": null
+          "type": "paragraph",
+          "text": "Logs are the narration of the match. Critical for asynchronous games."
         },
         {
-          "text": "Prefer timed confirmation (5–8s) over undo.",
-          "nested": null
+          "type": "list",
+          "ordered": false,
+          "items": [
+            {
+              "text": "Log every major action: card plays, moves, resource changes, eliminations.",
+              "nested": null
+            },
+            {
+              "text": "Always say who acted and what changed.",
+              "nested": null
+            },
+            {
+              "text": "Use icons, colors, formatting for fast scanning.",
+              "nested": null
+            },
+            {
+              "text": "Provide alt-text for graphic components inside logs.",
+              "nested": null
+            },
+            {
+              "text": "Group small simultaneous actions into a one-liner.",
+              "nested": null
+            },
+            {
+              "text": "Log automated/forced actions too.",
+              "nested": null
+            }
+          ]
         },
         {
-          "text": "Offer one Restart Turn for the whole turn when rules allow, not per-micro-action undo.",
-          "nested": null
+          "type": "paragraph",
+          "text": "❌ Don't"
         },
         {
-          "text": "Allow \"Undo last move\" only when a turn has more than 2 actions .",
-          "nested": null
+          "type": "list",
+          "ordered": false,
+          "items": [
+            {
+              "text": "Do not write walls of text or use oversized images that break log flow.",
+              "nested": null
+            },
+            {
+              "text": "Do not hide who did the action.",
+              "nested": null
+            }
+          ]
+        },
+        {
+          "type": "paragraph",
+          "text": "Good:"
+        },
+        {
+          "type": "list",
+          "ordered": false,
+          "items": [
+            {
+              "text": "\"Marianna placed [red tile] on [central board] (+2 points).\"",
+              "nested": null
+            },
+            {
+              "text": "\"Alex drew 2 [train cards].\"",
+              "nested": null
+            }
+          ]
+        },
+        {
+          "type": "paragraph",
+          "text": "Bad:"
+        },
+        {
+          "type": "list",
+          "ordered": false,
+          "items": [
+            {
+              "text": "\"+2 points\"",
+              "nested": null
+            },
+            {
+              "text": "\"Card drawn\"",
+              "nested": null
+            }
+          ]
         }
       ]
     },
     {
-      "type": "paragraph",
-      "text": "❌ Don't"
-    },
-    {
-      "type": "list",
-      "ordered": false,
-      "items": [
+      "heading": {
+        "level": 3,
+        "text": "D.3 Animation",
+        "id": "D.3_Animation"
+      },
+      "content": [
         {
-          "text": "Do not add an Undo button for every action — multiplies validation steps, slows the game.",
-          "nested": null
+          "type": "paragraph",
+          "text": "Animations explain what moved, where it went, why it matters ."
         },
         {
-          "text": "Do not layer Undo on top of Reset on top of Confirm — over-validation.",
-          "nested": null
+          "type": "list",
+          "ordered": false,
+          "items": [
+            {
+              "text": "Use animations for: cards entering a hand, tokens moving, score count-up.",
+              "nested": null
+            },
+            {
+              "text": "Keep regular animations at 0.5s , max 0.8s .",
+              "nested": null
+            },
+            {
+              "text": "Batch repetitive updates (don't show 50 tiny +1 animations).",
+              "nested": null
+            }
+          ]
         },
         {
-          "text": "Do not use Undo to paper over misclicks — fix the layout instead (bigger targets, clearer highlights).",
-          "nested": null
+          "type": "paragraph",
+          "text": "❌ Don't"
+        },
+        {
+          "type": "list",
+          "ordered": false,
+          "items": [
+            {
+              "text": "Do not animate trivial updates one by one.",
+              "nested": null
+            },
+            {
+              "text": "Do not use looping, bouncing, or glowing animations as decoration.",
+              "nested": null
+            }
+          ]
+        },
+        {
+          "type": "paragraph",
+          "text": "→ See BGA animation library ."
         }
       ]
     },
     {
-      "type": "paragraph",
-      "text": "Clarity beats style."
-    },
-    {
-      "type": "list",
-      "ordered": false,
-      "items": [
+      "heading": {
+        "level": 3,
+        "text": "D.4 Sound effects",
+        "id": "D.4_Sound_effects"
+      },
+      "content": [
         {
-          "text": "Use the default BGA font.",
-          "nested": null
+          "type": "paragraph",
+          "text": "Sound is a bonus, not a requirement."
         },
         {
-          "text": "Use clean sans-serif if you must change.",
-          "nested": null
+          "type": "list",
+          "ordered": false,
+          "items": [
+            {
+              "text": "Keep volume below the BGA default.",
+              "nested": null
+            },
+            {
+              "text": "Keep sounds short, sharp, purposeful.",
+              "nested": null
+            },
+            {
+              "text": "Always pair sound with a visual cue.",
+              "nested": null
+            }
+          ]
         },
         {
-          "text": "Maintain good line spacing.",
-          "nested": null
+          "type": "paragraph",
+          "text": "❌ Don't"
         },
         {
-          "text": "Make all text translatable via BGA's translation system.",
-          "nested": null
-        },
-        {
-          "text": "Support LTR and RTL languages — test alignment & mirroring.",
-          "nested": null
-        },
-        {
-          "text": "Ensure your font supports accents/diacritics (é, ñ, ü).",
-          "nested": null
-        },
-        {
-          "text": "Meet WCAG AA contrast.",
-          "nested": null
-        },
-        {
-          "text": "Test on a phone — what's readable on a 27\" monitor may not be on mobile.",
-          "nested": null
+          "type": "list",
+          "ordered": false,
+          "items": [
+            {
+              "text": "Do not add long looping soundtracks.",
+              "nested": null
+            },
+            {
+              "text": "Do not let any action be communicated by sound only .",
+              "nested": null
+            },
+            {
+              "text": "Do not surprise players with loud audio.",
+              "nested": null
+            }
+          ]
         }
       ]
     },
     {
-      "type": "paragraph",
-      "text": "❌ Don't"
+      "heading": {
+        "level": 2,
+        "text": "E — Accessibility",
+        "id": "E_.E2.80.94_Accessibility"
+      },
+      "content": []
     },
     {
-      "type": "list",
-      "ordered": false,
-      "items": [
+      "heading": {
+        "level": 3,
+        "text": "E.1 Design for all",
+        "id": "E.1_Design_for_all"
+      },
+      "content": [
         {
-          "text": "Do not use decorative or themed fonts (hard to read, licensing risk, missing glyphs).",
-          "nested": null
+          "type": "paragraph",
+          "text": "✔️ Do"
         },
         {
-          "text": "Do not mix multiple fonts for \"theme.\"",
-          "nested": null
+          "type": "list",
+          "ordered": false,
+          "items": [
+            {
+              "text": "Pair colors with icons, textures, or shapes.",
+              "nested": null
+            },
+            {
+              "text": "Meet contrast ratio 4.5:1 minimum.",
+              "nested": null
+            },
+            {
+              "text": "Label every button, icon, and interactive element (screen readers).",
+              "nested": null
+            },
+            {
+              "text": "Use bold shapes, clear outlines, strong contrast to differentiate pieces.",
+              "nested": null
+            }
+          ]
         },
         {
-          "text": "Do not embed text directly into images without alt-text.",
-          "nested": null
+          "type": "paragraph",
+          "text": "❌ Don't"
+        },
+        {
+          "type": "list",
+          "ordered": false,
+          "items": [
+            {
+              "text": "Do not rely on color alone.",
+              "nested": null
+            },
+            {
+              "text": "Do not use flashing or rapidly alternating visuals.",
+              "nested": null
+            },
+            {
+              "text": "Do not depend on fine details or subtle shading to differentiate components.",
+              "nested": null
+            }
+          ]
         }
       ]
     },
     {
-      "type": "paragraph",
-      "text": "Players should never wonder \"what do I click?\""
-    },
-    {
-      "type": "list",
-      "ordered": false,
-      "items": [
+      "heading": {
+        "level": 3,
+        "text": "E.2 Colorblind-safe design",
+        "id": "E.2_Colorblind-safe_design"
+      },
+      "content": [
         {
-          "text": "Highlight valid options so the awaited action is obvious.",
-          "nested": null
+          "type": "paragraph",
+          "text": "✔️ Do"
         },
         {
-          "text": "Show consequences visually before the player commits.",
-          "nested": null
+          "type": "list",
+          "ordered": false,
+          "items": [
+            {
+              "text": "Add unique shapes/symbols/outlines per pawn or token color.",
+              "nested": null
+            },
+            {
+              "text": "Place small icons in card corners (or patterns) so suits are recognizable without hue.",
+              "nested": null
+            },
+            {
+              "text": "Meet WCAG AA for text and icons.",
+              "nested": null
+            },
+            {
+              "text": "Outline player-color names so yellow doesn't vanish on white.",
+              "nested": null
+            }
+          ]
+        },
+        {
+          "type": "paragraph",
+          "text": "❌ Don't"
+        },
+        {
+          "type": "list",
+          "ordered": false,
+          "items": [
+            {
+              "text": "Do not assume players perceive color differences.",
+              "nested": null
+            }
+          ]
         }
       ]
     },
     {
-      "type": "paragraph",
-      "text": "Example of highlighting valid options on the table."
-    },
-    {
-      "type": "paragraph",
-      "text": "Button colors are a shared language across BGA. Mandatory for consistency."
-    },
-    {
-      "type": "table",
-      "headers": [
-        "Color",
-        "Meaning",
-        "statusBar.addActionButton"
-      ],
-      "rows": [
-        [
-          "🔵Blue",
-          "Advance, confirm, move forward",
-          "primary"
-        ],
-        [
-          "🔴Red",
-          "Cancel, undo, stop, exit",
-          "alert"
-        ],
-        [
-          "⚪White / Transparent",
-          "Optional/side actions",
-          "secondary"
-        ],
-        [
-          "⚫Grey",
-          "Disabled, completed, unavailable",
-          "(disabled state of any of the above)"
-        ]
-      ]
-    },
-    {
-      "type": "paragraph",
-      "text": "✔️ Do"
-    },
-    {
-      "type": "list",
-      "ordered": false,
-      "items": [
+      "heading": {
+        "level": 3,
+        "text": "E.3 Tap targets",
+        "id": "E.3_Tap_targets"
+      },
+      "content": [
         {
-          "text": "Display usernames in their assigned player color.",
-          "nested": null
+          "type": "paragraph",
+          "text": "✔️ Do"
         },
         {
-          "text": "Outline player-color text so it stays visible (e.g. yellow on white).",
-          "nested": null
+          "type": "list",
+          "ordered": false,
+          "items": [
+            {
+              "text": "Minimum 32×32px for any interactive element.",
+              "nested": null
+            },
+            {
+              "text": "Aim for 40–44px (greatly reduces mis-taps).",
+              "nested": null
+            },
+            {
+              "text": "Leave spacing between buttons, tokens, cards.",
+              "nested": null
+            },
+            {
+              "text": "Group many options into expandable menus or secondary panels.",
+              "nested": null
+            },
+            {
+              "text": "When space runs out, add scrolling — don't shrink components.",
+              "nested": null
+            }
+          ]
         },
         {
-          "text": "Test player colors on both light and dark backgrounds.",
-          "nested": null
+          "type": "paragraph",
+          "text": "❌ Don't"
         },
         {
-          "text": "Take any extra colors from game components (cards, tiles, tokens), not UI buttons.",
-          "nested": null
+          "type": "list",
+          "ordered": false,
+          "items": [
+            {
+              "text": "Do not cram small icons into tight clusters.",
+              "nested": null
+            },
+            {
+              "text": "Do not shrink components below the minimum to fit.",
+              "nested": null
+            }
+          ]
         }
       ]
     },
     {
-      "type": "paragraph",
-      "text": "❌ Don't"
-    },
-    {
-      "type": "list",
-      "ordered": false,
-      "items": [
+      "heading": {
+        "level": 3,
+        "text": "E.4 Settings & customization",
+        "id": "E.4_Settings_.26_customization"
+      },
+      "content": [
         {
-          "text": "Do not reassign blue/red/grey for game-specific meaning.",
-          "nested": null
+          "type": "paragraph",
+          "text": "✔️ Do"
         },
         {
-          "text": "Do not tint UI buttons to match the game's theme.",
-          "nested": null
+          "type": "list",
+          "ordered": false,
+          "items": [
+            {
+              "text": "Put all game settings in BGA's standard settings menu .",
+              "nested": null
+            },
+            {
+              "text": "Reuse existing BGA controls.",
+              "nested": null
+            },
+            {
+              "text": "Offer per-game options only where relevant: animation speed, tooltip detail, sound on/off.",
+              "nested": null
+            }
+          ]
+        },
+        {
+          "type": "paragraph",
+          "text": "❌ Don't"
+        },
+        {
+          "type": "list",
+          "ordered": false,
+          "items": [
+            {
+              "text": "Do not build custom settings UI (the platform is phasing those out).",
+              "nested": null
+            },
+            {
+              "text": "Do not duplicate controls already available globally.",
+              "nested": null
+            }
+          ]
         }
       ]
     },
     {
-      "type": "note",
-      "variant": "note",
-      "text": "Note: Think of button colors as traffic lights : blue = go, red = stop, grey = unavailable."
+      "heading": {
+        "level": 2,
+        "text": "F — Technical",
+        "id": "F_.E2.80.94_Technical"
+      },
+      "content": []
     },
     {
-      "type": "paragraph",
-      "text": "✔️ Do"
-    },
-    {
-      "type": "list",
-      "ordered": false,
-      "items": [
+      "heading": {
+        "level": 3,
+        "text": "F.1 Endgame & Replays",
+        "id": "F.1_Endgame_.26_Replays"
+      },
+      "content": [
         {
-          "text": "Keep the main play area centered on every device.",
-          "nested": null
+          "type": "paragraph",
+          "text": "✔️ Do"
         },
         {
-          "text": "Use fluid layouts that expand/contract to fit available space.",
-          "nested": null
+          "type": "list",
+          "ordered": false,
+          "items": [
+            {
+              "text": "Make replays flow without interruption.",
+              "nested": null
+            },
+            {
+              "text": "Keep animations skippable and playable at minimum speed.",
+              "nested": null
+            },
+            {
+              "text": "Keep logs and highlights in sync with each replayed action.",
+              "nested": null
+            },
+            {
+              "text": "Match the scoring pay-off to game length — long games deserve a longer reveal.",
+              "nested": null
+            },
+            {
+              "text": "Use synchronous notifications per scoring step and `this.displayScoring` for points animations.",
+              "nested": null
+            }
+          ]
         },
         {
-          "text": "Leave margins around the board (prevents mobile misclicks).",
-          "nested": null
+          "type": "paragraph",
+          "text": "❌ Don't"
         },
         {
-          "text": "On desktop/tablet: show the entire board when possible.",
-          "nested": null
-        },
-        {
-          "text": "On mobile (vertical): stack secondary elements below the main action zone.",
-          "nested": null
-        },
-        {
-          "text": "Make everything readable and usable at 100% scale.",
-          "nested": null
-        },
-        {
-          "text": "Add HTML anchors / jump-links for vertical layouts.",
-          "nested": null
+          "type": "list",
+          "ordered": false,
+          "items": [
+            {
+              "text": "Do not put blocking popups in replays.",
+              "nested": null
+            },
+            {
+              "text": "Do not drop the final score instantly at the end of a long game.",
+              "nested": null
+            }
+          ]
         }
       ]
     },
     {
-      "type": "paragraph",
-      "text": "❌ Don't"
-    },
-    {
-      "type": "list",
-      "ordered": false,
-      "items": [
+      "heading": {
+        "level": 3,
+        "text": "F.2 Refresh & Continuity",
+        "id": "F.2_Refresh_.26_Continuity"
+      },
+      "content": [
         {
-          "text": "Do not use fixed-width designs.",
-          "nested": null
+          "type": "paragraph",
+          "text": "A refresh should feel invisible."
         },
         {
-          "text": "Do not rely on zoom for legibility.",
-          "nested": null
+          "type": "list",
+          "ordered": false,
+          "items": [
+            {
+              "text": "Restore the exact game state after refresh (no missing/corrupted info).",
+              "nested": null
+            },
+            {
+              "text": "Restore temporary UI: whose turn it is, pending actions, selected components.",
+              "nested": null
+            },
+            {
+              "text": "Treat the server as the source of truth for all critical state.",
+              "nested": null
+            },
+            {
+              "text": "Expect disconnect/reconnect as normal — BGA may do it at any time.",
+              "nested": null
+            }
+          ]
         },
         {
-          "text": "Do not let layout break when players zoom in/out.",
-          "nested": null
+          "type": "paragraph",
+          "text": "❌ Don't"
         },
         {
-          "text": "Do not make any interactive element smaller than 32×32px (see E.3 ).",
-          "nested": null
+          "type": "list",
+          "ordered": false,
+          "items": [
+            {
+              "text": "Do not store critical state in client-only memory.",
+              "nested": null
+            },
+            {
+              "text": "Do not rely on session continuity hacks.",
+              "nested": null
+            }
+          ]
         }
       ]
     },
     {
-      "type": "paragraph",
-      "text": "Reference implementation: bga-jump-to demo"
-    },
-    {
-      "type": "paragraph",
-      "text": "The background is the table surface your game sits on."
-    },
-    {
-      "type": "list",
-      "ordered": false,
-      "items": [
+      "heading": {
+        "level": 3,
+        "text": "F.3 Error handling",
+        "id": "F.3_Error_handling"
+      },
+      "content": [
         {
-          "text": "Use thematic, modern backgrounds (subtle playmat look).",
-          "nested": null
+          "type": "paragraph",
+          "text": "✔️ Do"
         },
         {
-          "text": "Add slight texture or pattern.",
-          "nested": null
+          "type": "list",
+          "ordered": false,
+          "items": [
+            {
+              "text": "Handle disconnects and dropped actions without breaking flow.",
+              "nested": null
+            },
+            {
+              "text": "Show players short, friendly messages explaining what went wrong.",
+              "nested": null
+            },
+            {
+              "text": "Log precise error details to the developer console.",
+              "nested": null
+            },
+            {
+              "text": "Isolate the error to the affected action.",
+              "nested": null
+            }
+          ]
         },
         {
-          "text": "Apply a touch of blur so components remain the visual focus.",
-          "nested": null
+          "type": "paragraph",
+          "text": "❌ Don't"
         },
         {
-          "text": "Prioritize contrast against the game's components.",
-          "nested": null
+          "type": "list",
+          "ordered": false,
+          "items": [
+            {
+              "text": "Do not crash the game on invalid input.",
+              "nested": null
+            },
+            {
+              "text": "Do not expose raw server logs or stack traces to players.",
+              "nested": null
+            },
+            {
+              "text": "Do not block the whole table because of one failed request.",
+              "nested": null
+            }
+          ]
         }
       ]
     },
     {
-      "type": "paragraph",
-      "text": "❌ Don't"
-    },
-    {
-      "type": "list",
-      "ordered": false,
-      "items": [
+      "heading": {
+        "level": 2,
+        "text": "Pre-release Checklist",
+        "id": "Pre-release_Checklist"
+      },
+      "content": [
         {
-          "text": "Do not use pure flat colors.",
-          "nested": null
+          "type": "paragraph",
+          "text": "Version 1.0.0 — May 22, 2026"
         },
         {
-          "text": "Do not use sharp, busy, detailed backgrounds that compete with the game.",
-          "nested": null
-        },
-        {
-          "text": "Do not let the background reduce component visibility.",
-          "nested": null
+          "type": "table",
+          "headers": [
+            {
+              "text": "#"
+            },
+            {
+              "text": "Check"
+            }
+          ],
+          "rows": [
+            [
+              {
+                "text": "1"
+              },
+              {
+                "text": "Layout centers and scales on all devices."
+              }
+            ],
+            [
+              {
+                "text": "2"
+              },
+              {
+                "text": "Action Bar ≤ 4 buttons, never replaces components."
+              }
+            ],
+            [
+              {
+                "text": "3"
+              },
+              {
+                "text": "Tooltips: clear, translatable, useful."
+              }
+            ],
+            [
+              {
+                "text": "4"
+              },
+              {
+                "text": "Buttons follow BGA standards (blue = forward, red = cancel)."
+              }
+            ],
+            [
+              {
+                "text": "5"
+              },
+              {
+                "text": "No blocking popups mid-game."
+              }
+            ],
+            [
+              {
+                "text": "6"
+              },
+              {
+                "text": "Animations: quick, smooth, informative."
+              }
+            ],
+            [
+              {
+                "text": "7"
+              },
+              {
+                "text": "All tap/click targets ≥ 32px."
+              }
+            ],
+            [
+              {
+                "text": "8"
+              },
+              {
+                "text": "Colorblind-safe icons in place."
+              }
+            ],
+            [
+              {
+                "text": "9"
+              },
+              {
+                "text": "Endgame shows breakdown + replay option."
+              }
+            ],
+            [
+              {
+                "text": "10"
+              },
+              {
+                "text": "Game state restores cleanly after refresh."
+              }
+            ]
+          ]
         }
       ]
     },
     {
-      "type": "paragraph",
-      "text": "Silence is never acceptable. Every failed action must say why."
-    },
-    {
-      "type": "list",
-      "ordered": false,
-      "items": [
+      "heading": {
+        "level": 2,
+        "text": "Closing thoughts",
+        "id": "Closing_thoughts"
+      },
+      "content": [
         {
-          "text": "Use a short shake, grey-out, or tooltip on failure.",
-          "nested": null
+          "type": "list",
+          "ordered": false,
+          "items": [
+            {
+              "text": "Alpha: gather usability feedback.",
+              "nested": null
+            },
+            {
+              "text": "Beta: listen to the crowd — confusion spots = redesign spots.",
+              "nested": null
+            },
+            {
+              "text": "Iterate: small UX tweaks = big retention gains.",
+              "nested": null
+            },
+            {
+              "text": "Watch metrics: if players stall at a phase, that's your design flag.",
+              "nested": null
+            }
+          ]
         },
         {
-          "text": "Show concise plain-text errors: \"You don't have enough resources.\"",
-          "nested": null
-        },
-        {
-          "text": "Pair color with icons or text (don't rely on red alone).",
-          "nested": null
+          "type": "paragraph",
+          "text": "Play other BGA games with similar mechanics — get inspired, challenge your assumptions, and treat UX as a key part of design, not an afterthought."
         }
       ]
     },
     {
-      "type": "paragraph",
-      "text": "❌ Don't"
-    },
-    {
-      "type": "list",
-      "ordered": false,
-      "items": [
+      "heading": {
+        "level": 1,
+        "text": "BGA Studio Guidelines (Source Code)",
+        "id": "BGA_Studio_Guidelines_.28Source_Code.29"
+      },
+      "content": [
         {
-          "text": "Do not leave the player guessing.",
-          "nested": null
+          "type": "paragraph",
+          "text": "Make your code as easy to read and understand as possible: clearly named functions and variables, comments when necessary, ..."
         },
         {
-          "text": "Do not use color alone — colorblind users won't see it.",
-          "nested": null
+          "type": "paragraph",
+          "text": "In case you drop the support for a project, another developer should be able to follow up on your code and understand it easily."
         }
       ]
     },
     {
-      "type": "paragraph",
-      "text": "Logs are the narration of the match. Critical for asynchronous games."
+      "heading": {
+        "level": 2,
+        "text": "Front (JS) code",
+        "id": "Front_.28JS.29_code"
+      },
+      "content": []
     },
     {
-      "type": "list",
-      "ordered": false,
-      "items": [
+      "heading": {
+        "level": 3,
+        "text": "Generated code",
+        "id": "Generated_code"
+      },
+      "content": [
         {
-          "text": "Log every major action: card plays, moves, resource changes, eliminations.",
-          "nested": null
-        },
-        {
-          "text": "Always say who acted and what changed.",
-          "nested": null
-        },
-        {
-          "text": "Use icons, colors, formatting for fast scanning.",
-          "nested": null
-        },
-        {
-          "text": "Provide alt-text for graphic components inside logs.",
-          "nested": null
-        },
-        {
-          "text": "Group small simultaneous actions into a one-liner.",
-          "nested": null
-        },
-        {
-          "text": "Log automated/forced actions too.",
-          "nested": null
+          "type": "paragraph",
+          "text": "Generated code (SCSS, Typescript) is tolerated, as long as you provide both source files and built files, ideally with build tools. The build file should not be minimized, as someone taking over your project might not know the source language, and will the work on the built file ignoring the source file. Build tools are useful if he wants to continue the project with your source files."
         }
       ]
     },
     {
-      "type": "paragraph",
-      "text": "❌ Don't"
-    },
-    {
-      "type": "list",
-      "ordered": false,
-      "items": [
+      "heading": {
+        "level": 3,
+        "text": "Templates",
+        "id": "Templates"
+      },
+      "content": [
         {
-          "text": "Do not write walls of text or use oversized images that break log flow.",
-          "nested": null
-        },
-        {
-          "text": "Do not hide who did the action.",
-          "nested": null
+          "type": "paragraph",
+          "text": "Use of .tpl file and view.php is deprecated and forbidden for new projects."
         }
       ]
     },
     {
-      "type": "paragraph",
-      "text": "Good:"
-    },
-    {
-      "type": "list",
-      "ordered": false,
-      "items": [
+      "heading": {
+        "level": 2,
+        "text": "Back (PHP) code",
+        "id": "Back_.28PHP.29_code"
+      },
+      "content": [
         {
-          "text": "\"Marianna placed [red tile] on [central board] (+2 points).\"",
-          "nested": null
-        },
-        {
-          "text": "\"Alex drew 2 [train cards].\"",
-          "nested": null
+          "type": "paragraph",
+          "text": "Game name and option names should be Capitalized."
         }
       ]
     },
     {
-      "type": "paragraph",
-      "text": "Bad:"
+      "heading": {
+        "level": 3,
+        "text": "Framework functions",
+        "id": "Framework_functions"
+      },
+      "content": []
     },
     {
-      "type": "list",
-      "ordered": false,
-      "items": [
+      "heading": {
+        "level": 5,
+        "text": "Undocumented functions",
+        "id": "Undocumented_functions"
+      },
+      "content": [
         {
-          "text": "\"+2 points\"",
-          "nested": null
-        },
-        {
-          "text": "\"Card drawn\"",
-          "nested": null
+          "type": "paragraph",
+          "text": "Do not use undocumented functions. They may change or be deleted without warning, and your game will not work anymore. Any change on documented function will be avoided as much as possible, and will be notified."
         }
       ]
     },
     {
-      "type": "paragraph",
-      "text": "Animations explain what moved, where it went, why it matters ."
-    },
-    {
-      "type": "list",
-      "ordered": false,
-      "items": [
+      "heading": {
+        "level": 4,
+        "text": "Function override",
+        "id": "Function_override"
+      },
+      "content": [
         {
-          "text": "Use animations for: cards entering a hand, tokens moving, score count-up.",
-          "nested": null
+          "type": "paragraph",
+          "text": "Do not override framework functions. Use a wrapper instead."
         },
         {
-          "text": "Keep regular animations at 0.5s , max 0.8s .",
-          "nested": null
+          "type": "code",
+          "language": null,
+          "text": "public function getPlayerNameById($player_id) { // same name as the framework function = override\n  if ($player_id == 0) {\n    return 'Automata';\n  } else {\n    return parent::getPlayerNameById($player_id);\n  } \n}"
         },
         {
-          "text": "Batch repetitive updates (don't show 50 tiny +1 animations).",
-          "nested": null
+          "type": "paragraph",
+          "text": "Better :"
+        },
+        {
+          "type": "code",
+          "language": null,
+          "text": "public function myGameGetPlayerNameById($player_id) { // // different name = wrapper\n  if ($player_id == 0) {\n    return 'Automata';\n  } else {\n    return $this->getPlayerNameById($player_id);\n  } \n}"
         }
       ]
     },
     {
-      "type": "paragraph",
-      "text": "❌ Don't"
-    },
-    {
-      "type": "list",
-      "ordered": false,
-      "items": [
+      "heading": {
+        "level": 4,
+        "text": "State functions",
+        "id": "State_functions"
+      },
+      "content": [
         {
-          "text": "Do not animate trivial updates one by one.",
-          "nested": null
+          "type": "paragraph",
+          "text": "States functions should be prefixed \"st\""
         },
         {
-          "text": "Do not use looping, bouncing, or glowing animations as decoration.",
-          "nested": null
+          "type": "paragraph",
+          "text": "Action functions should be prefixed \"act\""
         }
       ]
     },
     {
-      "type": "paragraph",
-      "text": "→ See BGA animation library ."
-    },
-    {
-      "type": "paragraph",
-      "text": "Sound is a bonus, not a requirement."
-    },
-    {
-      "type": "list",
-      "ordered": false,
-      "items": [
+      "heading": {
+        "level": 3,
+        "text": "Namespacing",
+        "id": "Namespacing"
+      },
+      "content": [
         {
-          "text": "Keep volume below the BGA default.",
-          "nested": null
+          "type": "paragraph",
+          "text": "The classes should be namespaced following the PSR-4 norm. That means you won't need to require the classes, as BGA will be able to autoload them."
         },
         {
-          "text": "Keep sounds short, sharp, purposeful.",
-          "nested": null
-        },
-        {
-          "text": "Always pair sound with a visual cue.",
-          "nested": null
+          "type": "code",
+          "language": null,
+          "text": "<?php\ndeclare(strict_types=1);\nnamespace Bga\\Games\\<mygame>\\PowerCard;\nclass PowerCardManager {"
         }
       ]
     },
     {
-      "type": "paragraph",
-      "text": "❌ Don't"
-    },
-    {
-      "type": "list",
-      "ordered": false,
-      "items": [
+      "heading": {
+        "level": 3,
+        "text": "Other",
+        "id": "Other"
+      },
+      "content": [
         {
-          "text": "Do not add long looping soundtracks.",
-          "nested": null
+          "type": "paragraph",
+          "text": ".action.php shouldn’t be used anymore, auto-wiring should be used instead."
         },
         {
-          "text": "Do not let any action be communicated by sound only .",
-          "nested": null
+          "type": "paragraph",
+          "text": "Example :"
         },
         {
-          "text": "Do not surprise players with loud audio.",
-          "nested": null
+          "type": "code",
+          "language": null,
+          "text": "$args = $this->argPlayCards();\nif (!in_array($cardId, $args['selectableCardsIds'])) { throw new \\BgaUserException(...); }"
+        },
+        {
+          "type": "paragraph",
+          "text": "Don’t use `@` to ignore the errors of a function call."
         }
       ]
-    },
-    {
-      "type": "paragraph",
-      "text": "✔️ Do"
-    },
-    {
-      "type": "list",
-      "ordered": false,
-      "items": [
-        {
-          "text": "Pair colors with icons, textures, or shapes.",
-          "nested": null
-        },
-        {
-          "text": "Meet contrast ratio 4.5:1 minimum.",
-          "nested": null
-        },
-        {
-          "text": "Label every button, icon, and interactive element (screen readers).",
-          "nested": null
-        },
-        {
-          "text": "Use bold shapes, clear outlines, strong contrast to differentiate pieces.",
-          "nested": null
-        }
-      ]
-    },
-    {
-      "type": "paragraph",
-      "text": "❌ Don't"
-    },
-    {
-      "type": "list",
-      "ordered": false,
-      "items": [
-        {
-          "text": "Do not rely on color alone.",
-          "nested": null
-        },
-        {
-          "text": "Do not use flashing or rapidly alternating visuals.",
-          "nested": null
-        },
-        {
-          "text": "Do not depend on fine details or subtle shading to differentiate components.",
-          "nested": null
-        }
-      ]
-    },
-    {
-      "type": "paragraph",
-      "text": "✔️ Do"
-    },
-    {
-      "type": "list",
-      "ordered": false,
-      "items": [
-        {
-          "text": "Add unique shapes/symbols/outlines per pawn or token color.",
-          "nested": null
-        },
-        {
-          "text": "Place small icons in card corners (or patterns) so suits are recognizable without hue.",
-          "nested": null
-        },
-        {
-          "text": "Meet WCAG AA for text and icons.",
-          "nested": null
-        },
-        {
-          "text": "Outline player-color names so yellow doesn't vanish on white.",
-          "nested": null
-        }
-      ]
-    },
-    {
-      "type": "paragraph",
-      "text": "❌ Don't"
-    },
-    {
-      "type": "list",
-      "ordered": false,
-      "items": [
-        {
-          "text": "Do not assume players perceive color differences.",
-          "nested": null
-        }
-      ]
-    },
-    {
-      "type": "paragraph",
-      "text": "✔️ Do"
-    },
-    {
-      "type": "list",
-      "ordered": false,
-      "items": [
-        {
-          "text": "Minimum 32×32px for any interactive element.",
-          "nested": null
-        },
-        {
-          "text": "Aim for 40–44px (greatly reduces mis-taps).",
-          "nested": null
-        },
-        {
-          "text": "Leave spacing between buttons, tokens, cards.",
-          "nested": null
-        },
-        {
-          "text": "Group many options into expandable menus or secondary panels.",
-          "nested": null
-        },
-        {
-          "text": "When space runs out, add scrolling — don't shrink components.",
-          "nested": null
-        }
-      ]
-    },
-    {
-      "type": "paragraph",
-      "text": "❌ Don't"
-    },
-    {
-      "type": "list",
-      "ordered": false,
-      "items": [
-        {
-          "text": "Do not cram small icons into tight clusters.",
-          "nested": null
-        },
-        {
-          "text": "Do not shrink components below the minimum to fit.",
-          "nested": null
-        }
-      ]
-    },
-    {
-      "type": "paragraph",
-      "text": "✔️ Do"
-    },
-    {
-      "type": "list",
-      "ordered": false,
-      "items": [
-        {
-          "text": "Put all game settings in BGA's standard settings menu .",
-          "nested": null
-        },
-        {
-          "text": "Reuse existing BGA controls.",
-          "nested": null
-        },
-        {
-          "text": "Offer per-game options only where relevant: animation speed, tooltip detail, sound on/off.",
-          "nested": null
-        }
-      ]
-    },
-    {
-      "type": "paragraph",
-      "text": "❌ Don't"
-    },
-    {
-      "type": "list",
-      "ordered": false,
-      "items": [
-        {
-          "text": "Do not build custom settings UI (the platform is phasing those out).",
-          "nested": null
-        },
-        {
-          "text": "Do not duplicate controls already available globally.",
-          "nested": null
-        }
-      ]
-    },
-    {
-      "type": "paragraph",
-      "text": "✔️ Do"
-    },
-    {
-      "type": "list",
-      "ordered": false,
-      "items": [
-        {
-          "text": "Make replays flow without interruption.",
-          "nested": null
-        },
-        {
-          "text": "Keep animations skippable and playable at minimum speed.",
-          "nested": null
-        },
-        {
-          "text": "Keep logs and highlights in sync with each replayed action.",
-          "nested": null
-        },
-        {
-          "text": "Match the scoring pay-off to game length — long games deserve a longer reveal.",
-          "nested": null
-        },
-        {
-          "text": "Use synchronous notifications per scoring step and `this.displayScoring` for points animations.",
-          "nested": null
-        }
-      ]
-    },
-    {
-      "type": "paragraph",
-      "text": "❌ Don't"
-    },
-    {
-      "type": "list",
-      "ordered": false,
-      "items": [
-        {
-          "text": "Do not put blocking popups in replays.",
-          "nested": null
-        },
-        {
-          "text": "Do not drop the final score instantly at the end of a long game.",
-          "nested": null
-        }
-      ]
-    },
-    {
-      "type": "paragraph",
-      "text": "A refresh should feel invisible."
-    },
-    {
-      "type": "list",
-      "ordered": false,
-      "items": [
-        {
-          "text": "Restore the exact game state after refresh (no missing/corrupted info).",
-          "nested": null
-        },
-        {
-          "text": "Restore temporary UI: whose turn it is, pending actions, selected components.",
-          "nested": null
-        },
-        {
-          "text": "Treat the server as the source of truth for all critical state.",
-          "nested": null
-        },
-        {
-          "text": "Expect disconnect/reconnect as normal — BGA may do it at any time.",
-          "nested": null
-        }
-      ]
-    },
-    {
-      "type": "paragraph",
-      "text": "❌ Don't"
-    },
-    {
-      "type": "list",
-      "ordered": false,
-      "items": [
-        {
-          "text": "Do not store critical state in client-only memory.",
-          "nested": null
-        },
-        {
-          "text": "Do not rely on session continuity hacks.",
-          "nested": null
-        }
-      ]
-    },
-    {
-      "type": "paragraph",
-      "text": "✔️ Do"
-    },
-    {
-      "type": "list",
-      "ordered": false,
-      "items": [
-        {
-          "text": "Handle disconnects and dropped actions without breaking flow.",
-          "nested": null
-        },
-        {
-          "text": "Show players short, friendly messages explaining what went wrong.",
-          "nested": null
-        },
-        {
-          "text": "Log precise error details to the developer console.",
-          "nested": null
-        },
-        {
-          "text": "Isolate the error to the affected action.",
-          "nested": null
-        }
-      ]
-    },
-    {
-      "type": "paragraph",
-      "text": "❌ Don't"
-    },
-    {
-      "type": "list",
-      "ordered": false,
-      "items": [
-        {
-          "text": "Do not crash the game on invalid input.",
-          "nested": null
-        },
-        {
-          "text": "Do not expose raw server logs or stack traces to players.",
-          "nested": null
-        },
-        {
-          "text": "Do not block the whole table because of one failed request.",
-          "nested": null
-        }
-      ]
-    },
-    {
-      "type": "paragraph",
-      "text": "Version 1.0.0 — May 22, 2026"
-    },
-    {
-      "type": "table",
-      "headers": [
-        "#",
-        "Check"
-      ],
-      "rows": [
-        [
-          "1",
-          "Layout centers and scales on all devices."
-        ],
-        [
-          "2",
-          "Action Bar ≤ 4 buttons, never replaces components."
-        ],
-        [
-          "3",
-          "Tooltips: clear, translatable, useful."
-        ],
-        [
-          "4",
-          "Buttons follow BGA standards (blue = forward, red = cancel)."
-        ],
-        [
-          "5",
-          "No blocking popups mid-game."
-        ],
-        [
-          "6",
-          "Animations: quick, smooth, informative."
-        ],
-        [
-          "7",
-          "All tap/click targets ≥ 32px."
-        ],
-        [
-          "8",
-          "Colorblind-safe icons in place."
-        ],
-        [
-          "9",
-          "Endgame shows breakdown + replay option."
-        ],
-        [
-          "10",
-          "Game state restores cleanly after refresh."
-        ]
-      ]
-    },
-    {
-      "type": "list",
-      "ordered": false,
-      "items": [
-        {
-          "text": "Alpha: gather usability feedback.",
-          "nested": null
-        },
-        {
-          "text": "Beta: listen to the crowd — confusion spots = redesign spots.",
-          "nested": null
-        },
-        {
-          "text": "Iterate: small UX tweaks = big retention gains.",
-          "nested": null
-        },
-        {
-          "text": "Watch metrics: if players stall at a phase, that's your design flag.",
-          "nested": null
-        }
-      ]
-    },
-    {
-      "type": "paragraph",
-      "text": "Play other BGA games with similar mechanics — get inspired, challenge your assumptions, and treat UX as a key part of design, not an afterthought."
-    },
-    {
-      "type": "paragraph",
-      "text": "Make your code as easy to read and understand as possible: clearly named functions and variables, comments when necessary, ..."
-    },
-    {
-      "type": "paragraph",
-      "text": "In case you drop the support for a project, another developer should be able to follow up on your code and understand it easily."
-    },
-    {
-      "type": "paragraph",
-      "text": "Generated code (SCSS, Typescript) is tolerated, as long as you provide both source files and built files, ideally with build tools. The build file should not be minimized, as someone taking over your project might not know the source language, and will the work on the built file ignoring the source file. Build tools are useful if he wants to continue the project with your source files."
-    },
-    {
-      "type": "paragraph",
-      "text": "Use of .tpl file and view.php is deprecated and forbidden for new projects."
-    },
-    {
-      "type": "paragraph",
-      "text": "Game name and option names should be Capitalized."
-    },
-    {
-      "type": "paragraph",
-      "text": "Do not use undocumented functions. They may change or be deleted without warning, and your game will not work anymore. Any change on documented function will be avoided as much as possible, and will be notified."
-    },
-    {
-      "type": "paragraph",
-      "text": "Do not override framework functions. Use a wrapper instead."
-    },
-    {
-      "type": "code",
-      "language": null,
-      "text": "public function getPlayerNameById($player_id) { // same name as the framework function = override\n  if ($player_id == 0) {\n    return 'Automata';\n  } else {\n    return parent::getPlayerNameById($player_id);\n  } \n}"
-    },
-    {
-      "type": "paragraph",
-      "text": "Better :"
-    },
-    {
-      "type": "code",
-      "language": null,
-      "text": "public function myGameGetPlayerNameById($player_id) { // // different name = wrapper\n  if ($player_id == 0) {\n    return 'Automata';\n  } else {\n    return $this->getPlayerNameById($player_id);\n  } \n}"
-    },
-    {
-      "type": "paragraph",
-      "text": "States functions should be prefixed \"st\""
-    },
-    {
-      "type": "paragraph",
-      "text": "Action functions should be prefixed \"act\""
-    },
-    {
-      "type": "paragraph",
-      "text": "The classes should be namespaced following the PSR-4 norm. That means you won't need to require the classes, as BGA will be able to autoload them."
-    },
-    {
-      "type": "code",
-      "language": null,
-      "text": "<?php\ndeclare(strict_types=1);\nnamespace Bga\\Games\\<mygame>\\PowerCard;\nclass PowerCardManager {"
-    },
-    {
-      "type": "paragraph",
-      "text": ".action.php shouldn’t be used anymore, auto-wiring should be used instead."
-    },
-    {
-      "type": "paragraph",
-      "text": "Example :"
-    },
-    {
-      "type": "code",
-      "language": null,
-      "text": "$args = $this->argPlayCards();\nif (!in_array($cardId, $args['selectableCardsIds'])) { throw new \\BgaUserException(...); }"
-    },
-    {
-      "type": "paragraph",
-      "text": "Don’t use `@` to ignore the errors of a function call."
     }
   ],
   "links": [
@@ -1620,11 +1860,11 @@
       "url": "#C.3_Button_colors_and_styling"
     },
     {
-      "text": "Ux-04-player-panel.jpg",
+      "text": "[image: Ux-04-player-panel.jpg]",
       "url": "File:Ux-04-player-panel.jpg.html"
     },
     {
-      "text": "Ux-06-wiki.jpg",
+      "text": "[image: Ux-06-wiki.jpg]",
       "url": "File:Ux-06-wiki.jpg.html"
     },
     {
@@ -1644,24 +1884,15 @@
       "url": "https://en.doc.boardgamearena.com/BgaAnimations"
     }
   ],
-  "images": [
-    {
-      "src": "/images/0/01/Ux-04-player-panel.jpg",
-      "alt": "Ux-04-player-panel.jpg"
-    },
-    {
-      "src": "/images/6/67/Ux-06-wiki.jpg",
-      "alt": "Ux-06-wiki.jpg"
-    }
-  ],
+  "images": [],
   "metadata": {
     "extractor_version": "1.0.0",
-    "extracted_at": "2026-07-06T06:53:17.202602+00:00",
+    "extracted_at": "2026-07-06T08:38:33.321462+00:00",
     "word_count": 728,
     "heading_count": 44,
     "code_block_count": 4,
     "table_count": 2,
-    "image_count": 2,
+    "image_count": 0,
     "list_count": 51
   }
 }

@@ -3,68 +3,79 @@
   "source_file": "Game_replay.html",
   "relative_path": "Game_replay.html",
   "content_json_path": "content_json/Game_replay.json",
-  "headings": [
+  "sections": [
     {
-      "level": 3,
-      "text": "Preview Videos",
-      "id": "Preview_Videos"
-    },
-    {
-      "level": 3,
-      "text": "Hiding UI elements from preview video",
-      "id": "Hiding_UI_elements_from_preview_video"
-    }
-  ],
-  "content": [
-    {
-      "type": "paragraph",
-      "text": "Game replay is managed by the framework. You do not need to do anything special about it in your code, except taking care of updating the client interface through the framework notification system (and not for example, by using the callback function of an ajaxcall / the promise of the bgaPerformAction method)."
-    },
-    {
-      "type": "list",
-      "ordered": false,
-      "items": [
+      "heading": null,
+      "content": [
         {
-          "text": "The static files for the game at the time of the game start are archived",
-          "nested": null
+          "type": "paragraph",
+          "text": "Game replay is managed by the framework. You do not need to do anything special about it in your code, except taking care of updating the client interface through the framework notification system (and not for example, by using the callback function of an ajaxcall / the promise of the bgaPerformAction method)."
         },
         {
-          "text": "All notifications sent to the browser are added to the archive",
-          "nested": null
+          "type": "list",
+          "ordered": false,
+          "items": [
+            {
+              "text": "The static files for the game at the time of the game start are archived",
+              "nested": null
+            },
+            {
+              "text": "All notifications sent to the browser are added to the archive",
+              "nested": null
+            },
+            {
+              "text": "When replaying, the static files are loaded in the browser, then notifications are sent back to replay the game moves.",
+              "nested": null
+            }
+          ]
         },
         {
-          "text": "When replaying, the static files are loaded in the browser, then notifications are sent back to replay the game moves.",
-          "nested": null
+          "type": "paragraph",
+          "text": "So in essence, the replay works like an exact recording."
         }
       ]
     },
     {
-      "type": "paragraph",
-      "text": "So in essence, the replay works like an exact recording."
+      "heading": {
+        "level": 3,
+        "text": "Preview Videos",
+        "id": "Preview_Videos"
+      },
+      "content": [
+        {
+          "type": "paragraph",
+          "text": "Example games are periodically selected from which videos are generated to show off the game on the game panel."
+        }
+      ]
     },
     {
-      "type": "paragraph",
-      "text": "Example games are periodically selected from which videos are generated to show off the game on the game panel."
-    },
-    {
-      "type": "paragraph",
-      "text": "Some games have pop-up modals which are displayed in some cases, these should be hidden for the replay video so you can show off the gameplay right from the game page!"
-    },
-    {
-      "type": "paragraph",
-      "text": "Previews are generated with a query variable set `target=video` . You can check for this query param in the following way:"
-    },
-    {
-      "type": "code",
-      "language": null,
-      "text": "const searchParams = new URLSearchParams(window.location.search);\nif (searchParams) {\n    const target = searchParams.get('target');\n    if (target === \"video\") {\n        // Hide modal popups...\n    }\n}"
+      "heading": {
+        "level": 3,
+        "text": "Hiding UI elements from preview video",
+        "id": "Hiding_UI_elements_from_preview_video"
+      },
+      "content": [
+        {
+          "type": "paragraph",
+          "text": "Some games have pop-up modals which are displayed in some cases, these should be hidden for the replay video so you can show off the gameplay right from the game page!"
+        },
+        {
+          "type": "paragraph",
+          "text": "Previews are generated with a query variable set `target=video` . You can check for this query param in the following way:"
+        },
+        {
+          "type": "code",
+          "language": null,
+          "text": "const searchParams = new URLSearchParams(window.location.search);\nif (searchParams) {\n    const target = searchParams.get('target');\n    if (target === \"video\") {\n        // Hide modal popups...\n    }\n}"
+        }
+      ]
     }
   ],
   "links": [],
   "images": [],
   "metadata": {
     "extractor_version": "1.0.0",
-    "extracted_at": "2026-07-06T06:53:17.406006+00:00",
+    "extracted_at": "2026-07-06T08:38:33.524913+00:00",
     "word_count": 156,
     "heading_count": 2,
     "code_block_count": 1,

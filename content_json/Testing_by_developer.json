@@ -3,206 +3,247 @@
   "source_file": "Testing_by_developer.html",
   "relative_path": "Testing_by_developer.html",
   "content_json_path": "content_json/Testing_by_developer.json",
-  "headings": [
+  "sections": [
     {
-      "level": 2,
-      "text": "Manual Testing on BGA",
-      "id": "Manual_Testing_on_BGA"
-    },
-    {
-      "level": 2,
-      "text": "Manual Testing locally",
-      "id": "Manual_Testing_locally"
-    },
-    {
-      "level": 2,
-      "text": "Automated Testing",
-      "id": "Automated_Testing"
-    },
-    {
-      "level": 3,
-      "text": "JavaScript",
-      "id": "JavaScript"
-    },
-    {
-      "level": 3,
-      "text": "PHP",
-      "id": "PHP"
-    },
-    {
-      "level": 4,
-      "text": "Install PHPunit",
-      "id": "Install_PHPunit"
-    },
-    {
-      "level": 4,
-      "text": "Setup minimal files",
-      "id": "Setup_minimal_files"
-    },
-    {
-      "level": 4,
-      "text": "Create first tests",
-      "id": "Create_first_tests"
-    },
-    {
-      "level": 4,
-      "text": "Running the tests",
-      "id": "Running_the_tests"
-    },
-    {
-      "level": 2,
-      "text": "Play testing on studio",
-      "id": "Play_testing_on_studio"
-    }
-  ],
-  "content": [
-    {
-      "type": "paragraph",
-      "text": "When you develop a game you obviously have to test it, this page collects the info about testing in one place"
-    },
-    {
-      "type": "paragraph",
-      "text": "For manual testing the most important things to know are:"
-    },
-    {
-      "type": "list",
-      "ordered": false,
-      "items": [
+      "heading": null,
+      "content": [
         {
-          "text": "how to start/stop game in one click",
-          "nested": null
-        },
-        {
-          "text": "how to switch between players in one click",
-          "nested": null
-        },
-        {
-          "text": "how to save/restore the game state",
-          "nested": null
-        },
-        {
-          "text": "how to construct the game state automatically",
-          "nested": null
+          "type": "paragraph",
+          "text": "When you develop a game you obviously have to test it, this page collects the info about testing in one place"
         }
       ]
     },
     {
-      "type": "paragraph",
-      "text": "All of these described here https://en.doc.boardgamearena.com/Tools_and_tips_of_BGA_Studio"
+      "heading": {
+        "level": 2,
+        "text": "Manual Testing on BGA",
+        "id": "Manual_Testing_on_BGA"
+      },
+      "content": [
+        {
+          "type": "paragraph",
+          "text": "For manual testing the most important things to know are:"
+        },
+        {
+          "type": "list",
+          "ordered": false,
+          "items": [
+            {
+              "text": "how to start/stop game in one click",
+              "nested": null
+            },
+            {
+              "text": "how to switch between players in one click",
+              "nested": null
+            },
+            {
+              "text": "how to save/restore the game state",
+              "nested": null
+            },
+            {
+              "text": "how to construct the game state automatically",
+              "nested": null
+            }
+          ]
+        },
+        {
+          "type": "paragraph",
+          "text": "All of these described here https://en.doc.boardgamearena.com/Tools_and_tips_of_BGA_Studio"
+        }
+      ]
     },
     {
-      "type": "paragraph",
-      "text": "HTML/CSS At this era the file sync is almost instant so you do not save much by doing this locally, however if internet is a challenge - here are some tips https://en.doc.boardgamearena.com/Tools_and_tips_of_BGA_Studio#Speed_up_CSS_development_and_layout"
+      "heading": {
+        "level": 2,
+        "text": "Manual Testing locally",
+        "id": "Manual_Testing_locally"
+      },
+      "content": [
+        {
+          "type": "paragraph",
+          "text": "HTML/CSS At this era the file sync is almost instant so you do not save much by doing this locally, however if internet is a challenge - here are some tips https://en.doc.boardgamearena.com/Tools_and_tips_of_BGA_Studio#Speed_up_CSS_development_and_layout"
+        }
+      ]
     },
     {
-      "type": "paragraph",
-      "text": "I did not try for pure java script, it works for typescript. You need dev dependency on mocha, jsdom and sinon and some other build tools. Typescript code lives in src/. Test code lives in src/tests/. Tests have their own src/tests/tsconfig.json File src/tests/setup.ts contains framework and global stubs that tests need. The config is very verbose so I did not copy it here, if interested check project \"dojoless\" or bga-dojoless on github ( https://github.com/elaskavaia/bga-dojoless )."
+      "heading": {
+        "level": 2,
+        "text": "Automated Testing",
+        "id": "Automated_Testing"
+      },
+      "content": []
     },
     {
-      "type": "paragraph",
-      "text": "Install PHPunit via composer somewhere in home directory, i.e."
+      "heading": {
+        "level": 3,
+        "text": "JavaScript",
+        "id": "JavaScript"
+      },
+      "content": [
+        {
+          "type": "paragraph",
+          "text": "I did not try for pure java script, it works for typescript. You need dev dependency on mocha, jsdom and sinon and some other build tools. Typescript code lives in src/. Test code lives in src/tests/. Tests have their own src/tests/tsconfig.json File src/tests/setup.ts contains framework and global stubs that tests need. The config is very verbose so I did not copy it here, if interested check project \"dojoless\" or bga-dojoless on github ( https://github.com/elaskavaia/bga-dojoless )."
+        }
+      ]
     },
     {
-      "type": "code",
-      "language": null,
-      "text": "  cd /home/<yourusername>/php-composer\n  composer require --dev phpunit/phpunit ^13"
+      "heading": {
+        "level": 3,
+        "text": "PHP",
+        "id": "PHP"
+      },
+      "content": []
     },
     {
-      "type": "paragraph",
-      "text": "We don't want the phpunit cache to be sync/commited, so add `\".phpunit.cache\"` to sftp.json ignore list. You can push the unit tests to the FTP, no need to ignore them. If someone maintains your game in the future, he willl be able to use them to make sure nothing breaks on an update! If you have a .gitignore, add `.phpunit.cache` to it."
+      "heading": {
+        "level": 4,
+        "text": "Install PHPunit",
+        "id": "Install_PHPunit"
+      },
+      "content": [
+        {
+          "type": "paragraph",
+          "text": "Install PHPunit via composer somewhere in home directory, i.e."
+        },
+        {
+          "type": "code",
+          "language": null,
+          "text": "  cd /home/<yourusername>/php-composer\n  composer require --dev phpunit/phpunit ^13"
+        },
+        {
+          "type": "paragraph",
+          "text": "We don't want the phpunit cache to be sync/commited, so add `\".phpunit.cache\"` to sftp.json ignore list. You can push the unit tests to the FTP, no need to ignore them. If someone maintains your game in the future, he willl be able to use them to make sure nothing breaks on an update! If you have a .gitignore, add `.phpunit.cache` to it."
+        },
+        {
+          "type": "code",
+          "language": null,
+          "text": " phpunit() {\n /home/<yourusername>/php-composer/vendor/bin/phpunit \\\n   -c \"$PWD/phpunit.xml.dist\" \\\n   --bootstrap \"$PWD/tests/bootstrap.php\" \\\n   \"$@\"\n }"
+        },
+        {
+          "type": "paragraph",
+          "text": "With that, on a new terminal you will be able to run the tests with one of the following commands at the root of your project :"
+        },
+        {
+          "type": "code",
+          "language": null,
+          "text": " phpunit\n phpunit tests/BoardManagerTest.php\n phpunit --filter testGivesExtraTime"
+        }
+      ]
     },
     {
-      "type": "code",
-      "language": null,
-      "text": " phpunit() {\n /home/<yourusername>/php-composer/vendor/bin/phpunit \\\n   -c \"$PWD/phpunit.xml.dist\" \\\n   --bootstrap \"$PWD/tests/bootstrap.php\" \\\n   \"$@\"\n }"
+      "heading": {
+        "level": 4,
+        "text": "Setup minimal files",
+        "id": "Setup_minimal_files"
+      },
+      "content": [
+        {
+          "type": "paragraph",
+          "text": "Create these files:"
+        },
+        {
+          "type": "code",
+          "language": null,
+          "text": "<?xml version=\"1.0\" encoding=\"UTF-8\"?>\n<phpunit xmlns:xsi=\"http://www.w3.org/2001/XMLSchema-instance\"\n         xsi:noNamespaceSchemaLocation=\"vendor/phpunit/phpunit/phpunit.xsd\"\n         bootstrap=\"tests/bootstrap.php\"\n         colors=\"true\"\n         cacheDirectory=\".phpunit.cache\">\n  <testsuites>\n    <testsuite name=\"Reversi\">\n      <directory>tests</directory>\n    </testsuite>\n  </testsuites>\n</phpunit>"
+        },
+        {
+          "type": "paragraph",
+          "text": "(replace Reversi by your project name)"
+        },
+        {
+          "type": "code",
+          "language": null,
+          "text": "<?php\n\ndeclare(strict_types=1);\n\nrequire_once __DIR__ . '/stubs/BgaFrameworkStubs.php';\n\n$autoload = __DIR__ . '/../vendor/autoload.php';\nif (file_exists($autoload)) {\n    require_once $autoload;\n}\n\nspl_autoload_register(static function (string $class): void {\n    $prefix = 'Bga\\\\Games\\\\Reversi\\\\';\n\n    if (!str_starts_with($class, $prefix)) {\n        return;\n    }\n\n    $relativeClass = substr($class, strlen($prefix));\n    $path = __DIR__ . '/../modules/php/' . str_replace('\\\\', '/', $relativeClass) . '.php';\n\n    if (file_exists($path)) {\n        require_once $path;\n    }\n});"
+        },
+        {
+          "type": "paragraph",
+          "text": "(replace Reversi by your project name)"
+        },
+        {
+          "type": "paragraph",
+          "text": "That is where you stub framework classes and methods, example here BgaFrameworkStubs.php"
+        }
+      ]
     },
     {
-      "type": "paragraph",
-      "text": "With that, on a new terminal you will be able to run the tests with one of the following commands at the root of your project :"
+      "heading": {
+        "level": 4,
+        "text": "Create first tests",
+        "id": "Create_first_tests"
+      },
+      "content": [
+        {
+          "type": "paragraph",
+          "text": "Example of tests for Reversi:"
+        },
+        {
+          "type": "code",
+          "language": null,
+          "text": "<?php\n\ndeclare(strict_types=1);\n\nnamespace Tests;\n\nuse Bga\\Games\\Reversi\\BoardManager;\nuse Bga\\Games\\Reversi\\Game;\nuse PHPUnit\\Framework\\TestCase;\n\nfinal class BoardManagerTest extends TestCase\n{\n    public function testGetPossibleMovesOnInitialBoardForBlackPlayer(): void\n    {\n        $board = $this->createEmptyBoard(8);\n        $board[4][4] = 2;\n        $board[5][5] = 2;\n        $board[4][5] = 1;\n        $board[5][4] = 1;\n\n        $game = $this->createGame(8);\n        $boardManager = $this->createBoardManager($game, $board);\n\n        $moves = $boardManager->getPossibleMoves(1);\n\n        self::assertSame(\n            [\n                3 => [4 => true],\n                4 => [3 => true],\n                5 => [6 => true],\n                6 => [5 => true],\n            ],\n            $moves,\n        );\n    }\n\n    public function testGetPossibleMovesReturnsEmptyArrayWhenNoMoveExists(): void\n    {\n        $board = $this->createEmptyBoard(4);\n        for ($x = 1; $x <= 4; $x++) {\n            for ($y = 1; $y <= 4; $y++) {\n                $board[$x][$y] = 1;\n            }\n        }\n\n        $game = $this->createGame(4);\n        $boardManager = $this->createBoardManager($game, $board);\n\n        self::assertSame([], $boardManager->getPossibleMoves(2));\n    }\n\n    private function createGame(int $boardSize): Game\n    {\n        $game = $this->createStub(Game::class);\n        $game->method('getBoardSize')->willReturn($boardSize);\n\n        return $game;\n    }\n\n    private function createBoardManager(Game $game, array $board): BoardManager\n    {\n        return new class ($game, $board) extends BoardManager {\n            public function __construct(Game $game, private array $board)\n            {\n                parent::__construct($game);\n            }\n\n            public function getBoard(): array\n            {\n                return $this->board;\n            }\n        };\n    }\n\n    private function createEmptyBoard(int $size): array\n    {\n        $board = [];\n        for ($x = 1; $x <= $size; $x++) {\n            $board[$x] = [];\n            for ($y = 1; $y <= $size; $y++) {\n                $board[$x][$y] = null;\n            }\n        }\n\n        return $board;\n    }\n}"
+        },
+        {
+          "type": "paragraph",
+          "text": "tests/States/NextPlayerTest.php"
+        },
+        {
+          "type": "code",
+          "language": null,
+          "text": "<?php\n\ndeclare(strict_types=1);\n\nnamespace Tests\\States;\n\nuse Bga\\Games\\Reversi\\BoardManager;\nuse Bga\\Games\\Reversi\\Game;\nuse Bga\\Games\\Reversi\\States\\NextPlayer;\nuse PHPUnit\\Framework\\TestCase;\n\nfinal class NextPlayerTest extends TestCase\n{\n    public function testReturnsEndScoreWhenNoFreeSquareLeft(): void\n    {\n        $game = $this->createGame();\n        $this->attachBoardManager($game, $this->createBoardManagerStub(0, []));\n\n        $state = new NextPlayer($game);\n\n        self::assertSame('Bga\\\\Games\\\\Reversi\\\\States\\\\EndScore', $state->onEnteringState());\n    }\n\n    public function testGivesExtraTimeAndReturnsPlayDiscWhenPlayerCanMove(): void\n    {\n        $game = $this->createGameMock();\n        $game->expects(self::once())\n            ->method('giveExtraTime')\n            ->with(1, null);\n        $this->attachBoardManager($game, $this->createBoardManagerStub(5, [1 => 4, 2 => 4], [1 => [4 => [3 => true]]]));\n\n        $state = new NextPlayer($game);\n\n        self::assertSame('Bga\\\\Games\\\\Reversi\\\\States\\\\PlayDisc', $state->onEnteringState());\n    }\n\n    private function createGame(int $activePlayerId = 1, int $playerAfterId = 2): Game\n    {\n        $game = $this->createStub(Game::class);\n        $game->method('activeNextPlayer')->willReturn($activePlayerId);\n        $game->method('getPlayerAfter')->willReturn($playerAfterId);\n\n        return $game;\n    }\n\n    private function createGameMock(int $activePlayerId = 1, int $playerAfterId = 2): Game\n    {\n        $game = $this->getMockBuilder(Game::class)\n            ->disableOriginalConstructor()\n            ->onlyMethods(['activeNextPlayer', 'getPlayerAfter', 'giveExtraTime'])\n            ->getMock();\n        $game->method('activeNextPlayer')->willReturn($activePlayerId);\n        $game->method('getPlayerAfter')->willReturn($playerAfterId);\n\n        return $game;\n    }\n\n    private function createBoardManagerStub(int $freeSquares, array $discsByPlayer, array $possibleMovesByPlayer = []): BoardManager\n    {\n        $boardManager = $this->createStub(BoardManager::class);\n        $boardManager->method('countFreeSquares')->willReturn($freeSquares);\n        $boardManager->method('getDiscCountsByPlayer')->willReturn($discsByPlayer);\n        $boardManager->method('getPossibleMoves')->willReturnCallback(\n            static fn (int $playerId): array => $possibleMovesByPlayer[$playerId] ?? []\n        );\n\n        return $boardManager;\n    }\n\n    private function attachBoardManager(Game $game, BoardManager $boardManager): void\n    {\n        $game->boardManager = $boardManager;\n    }\n}"
+        }
+      ]
     },
     {
-      "type": "code",
-      "language": null,
-      "text": " phpunit\n phpunit tests/BoardManagerTest.php\n phpunit --filter testGivesExtraTime"
+      "heading": {
+        "level": 4,
+        "text": "Running the tests",
+        "id": "Running_the_tests"
+      },
+      "content": [
+        {
+          "type": "paragraph",
+          "text": "Run the tests using"
+        },
+        {
+          "type": "code",
+          "language": null,
+          "text": " phpunit"
+        },
+        {
+          "type": "paragraph",
+          "text": "If you want to run a single test file"
+        },
+        {
+          "type": "code",
+          "language": null,
+          "text": " phpunit tests/BoardManagerTest.php"
+        },
+        {
+          "type": "paragraph",
+          "text": "If you want to run a single test"
+        },
+        {
+          "type": "code",
+          "language": null,
+          "text": " phpunit --filter testGivesExtraTime"
+        },
+        {
+          "type": "paragraph",
+          "text": "If you came here from Reversi Tutorial, go back to it https://en.doc.boardgamearena.com/Tutorial_reversi#Optional:_add_unit_tests"
+        }
+      ]
     },
     {
-      "type": "paragraph",
-      "text": "Create these files:"
-    },
-    {
-      "type": "code",
-      "language": null,
-      "text": "<?xml version=\"1.0\" encoding=\"UTF-8\"?>\n<phpunit xmlns:xsi=\"http://www.w3.org/2001/XMLSchema-instance\"\n         xsi:noNamespaceSchemaLocation=\"vendor/phpunit/phpunit/phpunit.xsd\"\n         bootstrap=\"tests/bootstrap.php\"\n         colors=\"true\"\n         cacheDirectory=\".phpunit.cache\">\n  <testsuites>\n    <testsuite name=\"Reversi\">\n      <directory>tests</directory>\n    </testsuite>\n  </testsuites>\n</phpunit>"
-    },
-    {
-      "type": "paragraph",
-      "text": "(replace Reversi by your project name)"
-    },
-    {
-      "type": "code",
-      "language": null,
-      "text": "<?php\n\ndeclare(strict_types=1);\n\nrequire_once __DIR__ . '/stubs/BgaFrameworkStubs.php';\n\n$autoload = __DIR__ . '/../vendor/autoload.php';\nif (file_exists($autoload)) {\n    require_once $autoload;\n}\n\nspl_autoload_register(static function (string $class): void {\n    $prefix = 'Bga\\\\Games\\\\Reversi\\\\';\n\n    if (!str_starts_with($class, $prefix)) {\n        return;\n    }\n\n    $relativeClass = substr($class, strlen($prefix));\n    $path = __DIR__ . '/../modules/php/' . str_replace('\\\\', '/', $relativeClass) . '.php';\n\n    if (file_exists($path)) {\n        require_once $path;\n    }\n});"
-    },
-    {
-      "type": "paragraph",
-      "text": "(replace Reversi by your project name)"
-    },
-    {
-      "type": "paragraph",
-      "text": "That is where you stub framework classes and methods, example here BgaFrameworkStubs.php"
-    },
-    {
-      "type": "paragraph",
-      "text": "Example of tests for Reversi:"
-    },
-    {
-      "type": "code",
-      "language": null,
-      "text": "<?php\n\ndeclare(strict_types=1);\n\nnamespace Tests;\n\nuse Bga\\Games\\Reversi\\BoardManager;\nuse Bga\\Games\\Reversi\\Game;\nuse PHPUnit\\Framework\\TestCase;\n\nfinal class BoardManagerTest extends TestCase\n{\n    public function testGetPossibleMovesOnInitialBoardForBlackPlayer(): void\n    {\n        $board = $this->createEmptyBoard(8);\n        $board[4][4] = 2;\n        $board[5][5] = 2;\n        $board[4][5] = 1;\n        $board[5][4] = 1;\n\n        $game = $this->createGame(8);\n        $boardManager = $this->createBoardManager($game, $board);\n\n        $moves = $boardManager->getPossibleMoves(1);\n\n        self::assertSame(\n            [\n                3 => [4 => true],\n                4 => [3 => true],\n                5 => [6 => true],\n                6 => [5 => true],\n            ],\n            $moves,\n        );\n    }\n\n    public function testGetPossibleMovesReturnsEmptyArrayWhenNoMoveExists(): void\n    {\n        $board = $this->createEmptyBoard(4);\n        for ($x = 1; $x <= 4; $x++) {\n            for ($y = 1; $y <= 4; $y++) {\n                $board[$x][$y] = 1;\n            }\n        }\n\n        $game = $this->createGame(4);\n        $boardManager = $this->createBoardManager($game, $board);\n\n        self::assertSame([], $boardManager->getPossibleMoves(2));\n    }\n\n    private function createGame(int $boardSize): Game\n    {\n        $game = $this->createStub(Game::class);\n        $game->method('getBoardSize')->willReturn($boardSize);\n\n        return $game;\n    }\n\n    private function createBoardManager(Game $game, array $board): BoardManager\n    {\n        return new class ($game, $board) extends BoardManager {\n            public function __construct(Game $game, private array $board)\n            {\n                parent::__construct($game);\n            }\n\n            public function getBoard(): array\n            {\n                return $this->board;\n            }\n        };\n    }\n\n    private function createEmptyBoard(int $size): array\n    {\n        $board = [];\n        for ($x = 1; $x <= $size; $x++) {\n            $board[$x] = [];\n            for ($y = 1; $y <= $size; $y++) {\n                $board[$x][$y] = null;\n            }\n        }\n\n        return $board;\n    }\n}"
-    },
-    {
-      "type": "paragraph",
-      "text": "tests/States/NextPlayerTest.php"
-    },
-    {
-      "type": "code",
-      "language": null,
-      "text": "<?php\n\ndeclare(strict_types=1);\n\nnamespace Tests\\States;\n\nuse Bga\\Games\\Reversi\\BoardManager;\nuse Bga\\Games\\Reversi\\Game;\nuse Bga\\Games\\Reversi\\States\\NextPlayer;\nuse PHPUnit\\Framework\\TestCase;\n\nfinal class NextPlayerTest extends TestCase\n{\n    public function testReturnsEndScoreWhenNoFreeSquareLeft(): void\n    {\n        $game = $this->createGame();\n        $this->attachBoardManager($game, $this->createBoardManagerStub(0, []));\n\n        $state = new NextPlayer($game);\n\n        self::assertSame('Bga\\\\Games\\\\Reversi\\\\States\\\\EndScore', $state->onEnteringState());\n    }\n\n    public function testGivesExtraTimeAndReturnsPlayDiscWhenPlayerCanMove(): void\n    {\n        $game = $this->createGameMock();\n        $game->expects(self::once())\n            ->method('giveExtraTime')\n            ->with(1, null);\n        $this->attachBoardManager($game, $this->createBoardManagerStub(5, [1 => 4, 2 => 4], [1 => [4 => [3 => true]]]));\n\n        $state = new NextPlayer($game);\n\n        self::assertSame('Bga\\\\Games\\\\Reversi\\\\States\\\\PlayDisc', $state->onEnteringState());\n    }\n\n    private function createGame(int $activePlayerId = 1, int $playerAfterId = 2): Game\n    {\n        $game = $this->createStub(Game::class);\n        $game->method('activeNextPlayer')->willReturn($activePlayerId);\n        $game->method('getPlayerAfter')->willReturn($playerAfterId);\n\n        return $game;\n    }\n\n    private function createGameMock(int $activePlayerId = 1, int $playerAfterId = 2): Game\n    {\n        $game = $this->getMockBuilder(Game::class)\n            ->disableOriginalConstructor()\n            ->onlyMethods(['activeNextPlayer', 'getPlayerAfter', 'giveExtraTime'])\n            ->getMock();\n        $game->method('activeNextPlayer')->willReturn($activePlayerId);\n        $game->method('getPlayerAfter')->willReturn($playerAfterId);\n\n        return $game;\n    }\n\n    private function createBoardManagerStub(int $freeSquares, array $discsByPlayer, array $possibleMovesByPlayer = []): BoardManager\n    {\n        $boardManager = $this->createStub(BoardManager::class);\n        $boardManager->method('countFreeSquares')->willReturn($freeSquares);\n        $boardManager->method('getDiscCountsByPlayer')->willReturn($discsByPlayer);\n        $boardManager->method('getPossibleMoves')->willReturnCallback(\n            static fn (int $playerId): array => $possibleMovesByPlayer[$playerId] ?? []\n        );\n\n        return $boardManager;\n    }\n\n    private function attachBoardManager(Game $game, BoardManager $boardManager): void\n    {\n        $game->boardManager = $boardManager;\n    }\n}"
-    },
-    {
-      "type": "paragraph",
-      "text": "Run the tests using"
-    },
-    {
-      "type": "code",
-      "language": null,
-      "text": " phpunit"
-    },
-    {
-      "type": "paragraph",
-      "text": "If you want to run a single test file"
-    },
-    {
-      "type": "code",
-      "language": null,
-      "text": " phpunit tests/BoardManagerTest.php"
-    },
-    {
-      "type": "paragraph",
-      "text": "If you want to run a single test"
-    },
-    {
-      "type": "code",
-      "language": null,
-      "text": " phpunit --filter testGivesExtraTime"
-    },
-    {
-      "type": "paragraph",
-      "text": "If you came here from Reversi Tutorial, go back to it https://en.doc.boardgamearena.com/Tutorial_reversi#Optional:_add_unit_tests"
-    },
-    {
-      "type": "paragraph",
-      "text": "To play test on studio you can use your test accounts dev0... dev9. You can give some of these account to other people just make sure you change the password. You should not encourage other people who are not developers to create studio account, this is against bga policy."
+      "heading": {
+        "level": 2,
+        "text": "Play testing on studio",
+        "id": "Play_testing_on_studio"
+      },
+      "content": [
+        {
+          "type": "paragraph",
+          "text": "To play test on studio you can use your test accounts dev0... dev9. You can give some of these account to other people just make sure you change the password. You should not encourage other people who are not developers to create studio account, this is against bga policy."
+        }
+      ]
     }
   ],
   "links": [
@@ -230,7 +271,7 @@
   "images": [],
   "metadata": {
     "extractor_version": "1.0.0",
-    "extracted_at": "2026-07-06T06:53:17.594512+00:00",
+    "extracted_at": "2026-07-06T08:38:33.701852+00:00",
     "word_count": 818,
     "heading_count": 10,
     "code_block_count": 10,

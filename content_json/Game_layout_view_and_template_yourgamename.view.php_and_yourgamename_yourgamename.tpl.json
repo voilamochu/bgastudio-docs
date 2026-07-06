@@ -3,326 +3,367 @@
   "source_file": "Game_layout_view_and_template_yourgamename.view.php_and_yourgamename_yourgamename.tpl.html",
   "relative_path": "Game_layout_view_and_template_yourgamename.view.php_and_yourgamename_yourgamename.tpl.html",
   "content_json_path": "content_json/Game_layout_view_and_template_yourgamename.view.php_and_yourgamename_yourgamename.tpl.json",
-  "headings": [
+  "sections": [
     {
-      "level": 2,
-      "text": "Purpose of this file",
-      "id": "Purpose_of_this_file"
-    },
-    {
-      "level": 2,
-      "text": "Overview",
-      "id": "Overview"
-    },
-    {
-      "level": 2,
-      "text": "Template system",
-      "id": "Template_system"
-    },
-    {
-      "level": 2,
-      "text": "Variables",
-      "id": "Variables"
-    },
-    {
-      "level": 2,
-      "text": "Template Blocks",
-      "id": "Template_Blocks"
-    },
-    {
-      "level": 2,
-      "text": "Nested blocks",
-      "id": "Nested_blocks"
-    },
-    {
-      "level": 2,
-      "text": "Conditional blocks",
-      "id": "Conditional_blocks"
-    },
-    {
-      "level": 2,
-      "text": "Javascript templates",
-      "id": "Javascript_templates"
-    },
-    {
-      "level": 2,
-      "text": "How to access game information from .view.php",
-      "id": "How_to_access_game_information_from_.view.php"
-    },
-    {
-      "level": 3,
-      "text": "Access current player id",
-      "id": "Access_current_player_id"
-    },
-    {
-      "level": 3,
-      "text": "Access game object",
-      "id": "Access_game_object"
-    },
-    {
-      "level": 3,
-      "text": "Access spectator status",
-      "id": "Access_spectator_status"
-    }
-  ],
-  "content": [
-    {
-      "type": "paragraph",
-      "text": "IMPORTANT NOTE: These files are deprecated, you shouldn't need to use it if you generate the template from the JS file. See the Reversi tutorial for an example of in JS template."
-    },
-    {
-      "type": "paragraph",
-      "text": "[image: Bga-pages-from-templates.PNG]"
-    },
-    {
-      "type": "paragraph",
-      "text": "These files work together to provide the HTML layout of your game."
-    },
-    {
-      "type": "paragraph",
-      "text": "In .tpl file you can directly write raw HTML that will be displayed by the browser."
-    },
-    {
-      "type": "code",
-      "language": null,
-      "text": "  <div id=\"myhand_wrap\" class=\"whiteblock\">\n    <h3>{MY_HAND}</h3>\n    <div id=\"myhand\">\n    </div>\n  </div>"
-    },
-    {
-      "type": "paragraph",
-      "text": "Things in curly braces are template variables. You cannot put any english text directly there."
-    },
-    {
-      "type": "paragraph",
-      "text": "You shouldn't try to setup the current game situation in the view: this is the role of your Javascript code. Why? Because you'll have to write Javascript code to put game elements in place anyway, and you don't want to write it twice :)"
-    },
-    {
-      "type": "list",
-      "ordered": false,
-      "items": [
+      "heading": {
+        "level": 2,
+        "text": "Purpose of this file",
+        "id": "Purpose_of_this_file"
+      },
+      "content": [
         {
-          "text": "The overall layout of your game interface (what is displayed where).",
-          "nested": null
-        },
-        {
-          "text": "The board and fixed elements on the board (ex: places for cards, squares, ...).",
-          "nested": null
-        },
-        {
-          "text": "The tokens which are always on the board (but JS code may move them around during setup)",
-          "nested": null
+          "type": "paragraph",
+          "text": "IMPORTANT NOTE: These files are deprecated, you shouldn't need to use it if you generate the template from the JS file. See the Reversi tutorial for an example of in JS template."
         }
       ]
     },
     {
-      "type": "paragraph",
-      "text": "Example of things that shouldn't be generate by your view:"
-    },
-    {
-      "type": "list",
-      "ordered": false,
-      "items": [
+      "heading": {
+        "level": 2,
+        "text": "Overview",
+        "id": "Overview"
+      },
+      "content": [
         {
-          "text": "Game elements that come and go from the game area.",
-          "nested": null
+          "type": "paragraph",
+          "text": "[image: Bga-pages-from-templates.PNG]"
         },
         {
-          "text": "Game elements that normally hidden from players (other players cards, cards in the deck).",
-          "nested": null
+          "type": "paragraph",
+          "text": "These files work together to provide the HTML layout of your game."
+        },
+        {
+          "type": "paragraph",
+          "text": "In .tpl file you can directly write raw HTML that will be displayed by the browser."
+        },
+        {
+          "type": "code",
+          "language": null,
+          "text": "  <div id=\"myhand_wrap\" class=\"whiteblock\">\n    <h3>{MY_HAND}</h3>\n    <div id=\"myhand\">\n    </div>\n  </div>"
+        },
+        {
+          "type": "paragraph",
+          "text": "Things in curly braces are template variables. You cannot put any english text directly there."
+        },
+        {
+          "type": "paragraph",
+          "text": "You shouldn't try to setup the current game situation in the view: this is the role of your Javascript code. Why? Because you'll have to write Javascript code to put game elements in place anyway, and you don't want to write it twice :)"
+        },
+        {
+          "type": "list",
+          "ordered": false,
+          "items": [
+            {
+              "text": "The overall layout of your game interface (what is displayed where).",
+              "nested": null
+            },
+            {
+              "text": "The board and fixed elements on the board (ex: places for cards, squares, ...).",
+              "nested": null
+            },
+            {
+              "text": "The tokens which are always on the board (but JS code may move them around during setup)",
+              "nested": null
+            }
+          ]
+        },
+        {
+          "type": "paragraph",
+          "text": "Example of things that shouldn't be generate by your view:"
+        },
+        {
+          "type": "list",
+          "ordered": false,
+          "items": [
+            {
+              "text": "Game elements that come and go from the game area.",
+              "nested": null
+            },
+            {
+              "text": "Game elements that normally hidden from players (other players cards, cards in the deck).",
+              "nested": null
+            }
+          ]
         }
       ]
     },
     {
-      "type": "paragraph",
-      "text": "BGA is using the phplib template system, used for example in PHPbb forums."
-    },
-    {
-      "type": "paragraph",
-      "text": "In your template (.tpl) file, you can use variables. Then in your view (.view.php) file, you fill these variables with values."
-    },
-    {
-      "type": "paragraph",
-      "text": "This is example of how to assign values to these variables in .view.php:"
-    },
-    {
-      "type": "code",
-      "language": null,
-      "text": "\n\n   // Display a translated version of \"My hand\" at the place of the variable in the template\n   $this->tpl['MY_HAND'] = self::_(\"My hand\");\n\n   // Display some raw HTML material at the place of the variable\n   $this->tpl['MY_HAND'] = self::raw( \"<div class='myhand_icon'></div>\" );"
-    },
-    {
-      "type": "note",
-      "variant": "warning",
-      "text": "WARNING: do not use a variable called {id} as it will interfere with action buttons."
-    },
-    {
-      "type": "note",
-      "variant": "warning",
-      "text": "WARNING: do not use a variable called {ID} as it could receive unexpected values."
-    },
-    {
-      "type": "paragraph",
-      "text": "Using \"blocks\", you can repeat a piece of HTML from your template several time."
-    },
-    {
-      "type": "code",
-      "language": null,
-      "text": "\n\n(in reversi_reversi.tpl)\n\n<div id=\"board\">\n    <!-- BEGIN square -->\n        <div id=\"square_{X}_{Y}\" class=\"square\" style=\"left: {LEFT}px; top: {TOP}px;\"></div>\n    <!-- END square -->\n    \n    <div id=\"discs\">\n    </div>\n</div>\n\n(in reversi.view.php)\n\n $this->page->begin_block( \"reversi_reversi\", \"square\" );\n        \n $hor_scale = 64.8;\n $ver_scale = 64.4;\n for( $x=1; $x<=8; $x++ ) {\n    for( $y=1; $y<=8; $y++ ) {\n       $this->page->insert_block( \"square\", array(\n         'X' => $x,\n         'Y' => $y,\n         'LEFT' => round( ($x-1)*$hor_scale+10 ),\n         'TOP' => round( ($y-1)*$ver_scale+7 )\n        ) );\n    }        \n }"
-    },
-    {
-      "type": "paragraph",
-      "text": "Explanations:"
-    },
-    {
-      "type": "list",
-      "ordered": false,
-      "items": [
+      "heading": {
+        "level": 2,
+        "text": "Template system",
+        "id": "Template_system"
+      },
+      "content": [
         {
-          "text": "You specify a block in your template file, using \"BEGIN\" and \"END\" keywords as xml comment. In the example above, we are creating a block named \"square\".",
-          "nested": null
-        },
-        {
-          "text": "In your view, you declare your block using \"begin_block\" method.",
-          "nested": null
-        },
-        {
-          "text": "Then, you can insert as many block as you want to, using \"insert_block\" method.",
-          "nested": null
+          "type": "paragraph",
+          "text": "BGA is using the phplib template system, used for example in PHPbb forums."
         }
       ]
     },
     {
-      "type": "paragraph",
-      "text": "The insert_block method takes 2 parameters:"
-    },
-    {
-      "type": "list",
-      "ordered": false,
-      "items": [
+      "heading": {
+        "level": 2,
+        "text": "Variables",
+        "id": "Variables"
+      },
+      "content": [
         {
-          "text": "the name of the block to insert.",
-          "nested": null
+          "type": "paragraph",
+          "text": "In your template (.tpl) file, you can use variables. Then in your view (.view.php) file, you fill these variables with values."
         },
         {
-          "text": "an associative array you can use to assign values to template variables of this block. In the example above, there are 4 parameters in the block (X, Y, LEFT and TOP).",
-          "nested": null
+          "type": "paragraph",
+          "text": "This is example of how to assign values to these variables in .view.php:"
+        },
+        {
+          "type": "code",
+          "language": null,
+          "text": "\n\n   // Display a translated version of \"My hand\" at the place of the variable in the template\n   $this->tpl['MY_HAND'] = self::_(\"My hand\");\n\n   // Display some raw HTML material at the place of the variable\n   $this->tpl['MY_HAND'] = self::raw( \"<div class='myhand_icon'></div>\" );"
+        },
+        {
+          "type": "note",
+          "variant": "warning",
+          "text": "WARNING: do not use a variable called {id} as it will interfere with action buttons."
+        },
+        {
+          "type": "note",
+          "variant": "warning",
+          "text": "WARNING: do not use a variable called {ID} as it could receive unexpected values."
         }
       ]
     },
     {
-      "type": "paragraph",
-      "text": "You can use nested blocks. In the example below, we are going to add a mini-board for each player of the game, with 4 card places on each of it:"
+      "heading": {
+        "level": 2,
+        "text": "Template Blocks",
+        "id": "Template_Blocks"
+      },
+      "content": [
+        {
+          "type": "paragraph",
+          "text": "Using \"blocks\", you can repeat a piece of HTML from your template several time."
+        },
+        {
+          "type": "code",
+          "language": null,
+          "text": "\n\n(in reversi_reversi.tpl)\n\n<div id=\"board\">\n    <!-- BEGIN square -->\n        <div id=\"square_{X}_{Y}\" class=\"square\" style=\"left: {LEFT}px; top: {TOP}px;\"></div>\n    <!-- END square -->\n    \n    <div id=\"discs\">\n    </div>\n</div>\n\n(in reversi.view.php)\n\n $this->page->begin_block( \"reversi_reversi\", \"square\" );\n        \n $hor_scale = 64.8;\n $ver_scale = 64.4;\n for( $x=1; $x<=8; $x++ ) {\n    for( $y=1; $y<=8; $y++ ) {\n       $this->page->insert_block( \"square\", array(\n         'X' => $x,\n         'Y' => $y,\n         'LEFT' => round( ($x-1)*$hor_scale+10 ),\n         'TOP' => round( ($y-1)*$ver_scale+7 )\n        ) );\n    }        \n }"
+        },
+        {
+          "type": "paragraph",
+          "text": "Explanations:"
+        },
+        {
+          "type": "list",
+          "ordered": false,
+          "items": [
+            {
+              "text": "You specify a block in your template file, using \"BEGIN\" and \"END\" keywords as xml comment. In the example above, we are creating a block named \"square\".",
+              "nested": null
+            },
+            {
+              "text": "In your view, you declare your block using \"begin_block\" method.",
+              "nested": null
+            },
+            {
+              "text": "Then, you can insert as many block as you want to, using \"insert_block\" method.",
+              "nested": null
+            }
+          ]
+        },
+        {
+          "type": "paragraph",
+          "text": "The insert_block method takes 2 parameters:"
+        },
+        {
+          "type": "list",
+          "ordered": false,
+          "items": [
+            {
+              "text": "the name of the block to insert.",
+              "nested": null
+            },
+            {
+              "text": "an associative array you can use to assign values to template variables of this block. In the example above, there are 4 parameters in the block (X, Y, LEFT and TOP).",
+              "nested": null
+            }
+          ]
+        }
+      ]
     },
     {
-      "type": "paragraph",
-      "text": "ggg_ggg.tpl file:"
+      "heading": {
+        "level": 2,
+        "text": "Nested blocks",
+        "id": "Nested_blocks"
+      },
+      "content": [
+        {
+          "type": "paragraph",
+          "text": "You can use nested blocks. In the example below, we are going to add a mini-board for each player of the game, with 4 card places on each of it:"
+        },
+        {
+          "type": "paragraph",
+          "text": "ggg_ggg.tpl file:"
+        },
+        {
+          "type": "code",
+          "language": null,
+          "text": "<!-- BEGIN player -->\n    <div class=\"miniboard\" id=\"miniboard_{PLAYER_ID}\">\n\n        <div class=\"card_places\">\n            <!-- BEGIN card_place -->\n            <div id=\"card_place_{PLAYER_ID}_{PLACE_ID}\">\n            </div>\n            <!-- END card_place -->\n        </div>\n\n    </div>\n<!-- END player -->\n "
+        },
+        {
+          "type": "paragraph",
+          "text": "ggg.view.php file:"
+        },
+        {
+          "type": "code",
+          "language": null,
+          "text": "$this->page->begin_block( \"mygame_mygame.tpl\", \"card_place\" ); // Nested block must be declared first\n$this->page->begin_block( \"mygame_mygame.tpl\", \"player\" );\n\nforeach( $players as $player_id => $player ) {\n    // Important: nested block must be reset here, otherwise the second player miniboard will\n    //  have 8 card_place, the third will have 12 card_place, and so one...\n    $this->page->reset_subblocks( 'card_place' ); \n\n    for( $i=1; $i<=4; $i++ ) {\n       $this->page->insert_block( \"card_place\", array( \n             'PLAYER_ID' => $player_id,\n             'PLACE_ID' => $i\n          )\n       );\n    }\n\n    $this->page->insert_block( 'player', array( 'PLAYER_ID' => $player_id );\n}"
+        }
+      ]
     },
     {
-      "type": "code",
-      "language": null,
-      "text": "<!-- BEGIN player -->\n    <div class=\"miniboard\" id=\"miniboard_{PLAYER_ID}\">\n\n        <div class=\"card_places\">\n            <!-- BEGIN card_place -->\n            <div id=\"card_place_{PLAYER_ID}_{PLACE_ID}\">\n            </div>\n            <!-- END card_place -->\n        </div>\n\n    </div>\n<!-- END player -->\n "
+      "heading": {
+        "level": 2,
+        "text": "Conditional blocks",
+        "id": "Conditional_blocks"
+      },
+      "content": [
+        {
+          "type": "paragraph",
+          "text": "There is no if blocks but you can just have 2 blocks and make one to be \"empty\" i.e."
+        },
+        {
+          "type": "code",
+          "language": null,
+          "text": "            <!-- BEGIN a -->\n            <div id=\"something\"></div>\n            <!-- END a -->\n            <!-- BEGIN not_a -->\n            <div id=\"something_else\"></div>\n            <!-- END not_a -->"
+        },
+        {
+          "type": "paragraph",
+          "text": "code in view.php"
+        },
+        {
+          "type": "code",
+          "language": null,
+          "text": "    if ($condition_a) {\n      // hide not_a\n      $this->page->begin_block(\"mygame_mygame.tpl\", \"not_a\");\n      $this->page->insert_template( \"not_a\", '', []);\n    } else {\n     // hide a\n      $this->page->begin_block(\"mygame_mygame.tpl\", \"a\");\n      $this->page->insert_template( \"a\", '', []);\n    }"
+        },
+        {
+          "type": "note",
+          "variant": "note",
+          "text": "Note: if you need variable in these block do the insert_block on one that stays as usual"
+        }
+      ]
     },
     {
-      "type": "paragraph",
-      "text": "ggg.view.php file:"
+      "heading": {
+        "level": 2,
+        "text": "Javascript templates",
+        "id": "Javascript_templates"
+      },
+      "content": [
+        {
+          "type": "paragraph",
+          "text": "For game elements that come and go from the game area, we suggest you to define a Javascript template."
+        },
+        {
+          "type": "paragraph",
+          "text": "A Javascript template is defined in your template file like this:"
+        },
+        {
+          "type": "code",
+          "language": null,
+          "text": "<script type=\"text/javascript\">\n\n// Templates\n\nvar jstpl_disc='<div class=\"disc disccolor_${color}\" id=\"disc_${xy}\"></div>';\n\n</script>  "
+        },
+        {
+          "type": "note",
+          "variant": "note",
+          "text": "Note: a section for javascript templates is already available at the end of your template skeleton file."
+        },
+        {
+          "type": "code",
+          "language": null,
+          "text": "    dojo.place( this.format_block( 'jstpl_disc', {\n           xy: x+''+y,\n           color: color\n    } ) , 'discs' );"
+        },
+        {
+          "type": "note",
+          "variant": "warning",
+          "text": "WARNING: always use lowercase for substitution variables in your Javascript templates, in order to avoid collision with phplib template variables (in particular, do not use ${ID})."
+        }
+      ]
     },
     {
-      "type": "code",
-      "language": null,
-      "text": "$this->page->begin_block( \"mygame_mygame.tpl\", \"card_place\" ); // Nested block must be declared first\n$this->page->begin_block( \"mygame_mygame.tpl\", \"player\" );\n\nforeach( $players as $player_id => $player ) {\n    // Important: nested block must be reset here, otherwise the second player miniboard will\n    //  have 8 card_place, the third will have 12 card_place, and so one...\n    $this->page->reset_subblocks( 'card_place' ); \n\n    for( $i=1; $i<=4; $i++ ) {\n       $this->page->insert_block( \"card_place\", array( \n             'PLAYER_ID' => $player_id,\n             'PLACE_ID' => $i\n          )\n       );\n    }\n\n    $this->page->insert_block( 'player', array( 'PLAYER_ID' => $player_id );\n}"
+      "heading": {
+        "level": 2,
+        "text": "How to access game information from .view.php",
+        "id": "How_to_access_game_information_from_.view.php"
+      },
+      "content": [
+        {
+          "type": "paragraph",
+          "text": "From your .view.php, you can access the following:"
+        }
+      ]
     },
     {
-      "type": "paragraph",
-      "text": "There is no if blocks but you can just have 2 blocks and make one to be \"empty\" i.e."
+      "heading": {
+        "level": 3,
+        "text": "Access current player id",
+        "id": "Access_current_player_id"
+      },
+      "content": [
+        {
+          "type": "code",
+          "language": null,
+          "text": "  $current_player_id = $this->getCurrentPlayerId();"
+        }
+      ]
     },
     {
-      "type": "code",
-      "language": null,
-      "text": "            <!-- BEGIN a -->\n            <div id=\"something\"></div>\n            <!-- END a -->\n            <!-- BEGIN not_a -->\n            <div id=\"something_else\"></div>\n            <!-- END not_a -->"
+      "heading": {
+        "level": 3,
+        "text": "Access game object",
+        "id": "Access_game_object"
+      },
+      "content": [
+        {
+          "type": "paragraph",
+          "text": "In your view file, `\"$this->game\"` contains an instance of your main game class."
+        },
+        {
+          "type": "code",
+          "language": null,
+          "text": "\n\n   // Access to some game elements description described in your \"material.inc.php\":\n   $my_cards_types = $this->game->card_types;\n\n   // Access to any (public) method defined in my .game.php file:\n   $result = $this->game->myMethod();"
+        }
+      ]
     },
     {
-      "type": "paragraph",
-      "text": "code in view.php"
-    },
-    {
-      "type": "code",
-      "language": null,
-      "text": "    if ($condition_a) {\n      // hide not_a\n      $this->page->begin_block(\"mygame_mygame.tpl\", \"not_a\");\n      $this->page->insert_template( \"not_a\", '', []);\n    } else {\n     // hide a\n      $this->page->begin_block(\"mygame_mygame.tpl\", \"a\");\n      $this->page->insert_template( \"a\", '', []);\n    }"
-    },
-    {
-      "type": "note",
-      "variant": "note",
-      "text": "Note: if you need variable in these block do the insert_block on one that stays as usual"
-    },
-    {
-      "type": "paragraph",
-      "text": "For game elements that come and go from the game area, we suggest you to define a Javascript template."
-    },
-    {
-      "type": "paragraph",
-      "text": "A Javascript template is defined in your template file like this:"
-    },
-    {
-      "type": "code",
-      "language": null,
-      "text": "<script type=\"text/javascript\">\n\n// Templates\n\nvar jstpl_disc='<div class=\"disc disccolor_${color}\" id=\"disc_${xy}\"></div>';\n\n</script>  "
-    },
-    {
-      "type": "note",
-      "variant": "note",
-      "text": "Note: a section for javascript templates is already available at the end of your template skeleton file."
-    },
-    {
-      "type": "code",
-      "language": null,
-      "text": "    dojo.place( this.format_block( 'jstpl_disc', {\n           xy: x+''+y,\n           color: color\n    } ) , 'discs' );"
-    },
-    {
-      "type": "note",
-      "variant": "warning",
-      "text": "WARNING: always use lowercase for substitution variables in your Javascript templates, in order to avoid collision with phplib template variables (in particular, do not use ${ID})."
-    },
-    {
-      "type": "paragraph",
-      "text": "From your .view.php, you can access the following:"
-    },
-    {
-      "type": "code",
-      "language": null,
-      "text": "  $current_player_id = $this->getCurrentPlayerId();"
-    },
-    {
-      "type": "paragraph",
-      "text": "In your view file, `\"$this->game\"` contains an instance of your main game class."
-    },
-    {
-      "type": "code",
-      "language": null,
-      "text": "\n\n   // Access to some game elements description described in your \"material.inc.php\":\n   $my_cards_types = $this->game->card_types;\n\n   // Access to any (public) method defined in my .game.php file:\n   $result = $this->game->myMethod();"
-    },
-    {
-      "type": "paragraph",
-      "text": "For spectators (players who are not part of the game but just spectating it) you must be careful of displaying all public information, but no private information."
+      "heading": {
+        "level": 3,
+        "text": "Access spectator status",
+        "id": "Access_spectator_status"
+      },
+      "content": [
+        {
+          "type": "paragraph",
+          "text": "For spectators (players who are not part of the game but just spectating it) you must be careful of displaying all public information, but no private information."
+        }
+      ]
     }
   ],
   "links": [
     {
-      "text": "Bga-pages-from-templates.PNG",
+      "text": "[image: Bga-pages-from-templates.PNG]",
       "url": "File:Bga-pages-from-templates.PNG.html"
     }
   ],
-  "images": [
-    {
-      "src": "/images/thumb/0/01/Bga-pages-from-templates.PNG/700px-Bga-pages-from-templates.PNG",
-      "alt": "Bga-pages-from-templates.PNG"
-    }
-  ],
+  "images": [],
   "metadata": {
     "extractor_version": "1.0.0",
-    "extracted_at": "2026-07-06T06:53:17.386331+00:00",
+    "extracted_at": "2026-07-06T08:38:33.505703+00:00",
     "word_count": 743,
     "heading_count": 12,
     "code_block_count": 11,
     "table_count": 0,
-    "image_count": 1,
+    "image_count": 0,
     "list_count": 4
   }
 }

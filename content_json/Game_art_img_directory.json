@@ -3,417 +3,471 @@
   "source_file": "Game_art_img_directory.html",
   "relative_path": "Game_art_img_directory.html",
   "content_json_path": "content_json/Game_art_img_directory.json",
-  "headings": [
+  "sections": [
     {
-      "level": 2,
-      "text": "What assets to request from publisher",
-      "id": "What_assets_to_request_from_publisher"
-    },
-    {
-      "level": 2,
-      "text": "Metadata images",
-      "id": "Metadata_images"
-    },
-    {
-      "level": 2,
-      "text": "Game art",
-      "id": "Game_art"
-    },
-    {
-      "level": 3,
-      "text": "Images naming constraints",
-      "id": "Images_naming_constraints"
-    },
-    {
-      "level": 3,
-      "text": "Images loading",
-      "id": "Images_loading"
-    },
-    {
-      "level": 3,
-      "text": "Images format",
-      "id": "Images_format"
-    },
-    {
-      "level": 3,
-      "text": "Webp",
-      "id": "Webp"
-    },
-    {
-      "level": 3,
-      "text": "Use background-size",
-      "id": "Use_background-size"
-    },
-    {
-      "level": 3,
-      "text": "Use CSS Sprites",
-      "id": "Use_CSS_Sprites"
-    },
-    {
-      "level": 3,
-      "text": "Shrink images",
-      "id": "Shrink_images"
-    },
-    {
-      "level": 2,
-      "text": "Image Manipulation Tools",
-      "id": "Image_Manipulation_Tools"
-    },
-    {
-      "level": 3,
-      "text": "Examples",
-      "id": "Examples"
-    },
-    {
-      "level": 3,
-      "text": "Online tools",
-      "id": "Online_tools"
-    },
-    {
-      "level": 3,
-      "text": "Community Provided",
-      "id": "Community_Provided"
-    }
-  ],
-  "content": [
-    {
-      "type": "paragraph",
-      "text": "Requesting graphics assets is a 2nd thing you should do after getting the game license."
-    },
-    {
-      "type": "list",
-      "ordered": false,
-      "items": [
+      "heading": {
+        "level": 2,
+        "text": "What assets to request from publisher",
+        "id": "What_assets_to_request_from_publisher"
+      },
+      "content": [
         {
-          "text": "Graphic assets of printed SQUARE materials (cards, boards) in common formats (pdf, jpg, png). PDF cannot have watermarks, cut or bleed marks.",
-          "nested": null
+          "type": "paragraph",
+          "text": "Requesting graphics assets is a 2nd thing you should do after getting the game license."
         },
         {
-          "text": "Graphic assets non NON-SQUARE tokens (i.e hex) in PNG (because it needs transparent bg)",
-          "nested": null
-        },
-        {
-          "text": "Graphic assets of game non-flat resources (minis, dice, etc) as were used in rulebook in \"contents of the game\" in PNG (best one per file)",
-          "nested": null
-        },
-        {
-          "text": "For all assets that have text on them (numbers don't count): We need ENGLISH or NO TEXT version. We can overlay translated text on graphics if no text version is provided.",
-          "nested": null
-        },
-        {
-          "text": "You can also ask game meta data images such as box and banners, but this can be done later (see below for meta data images)",
-          "nested": null
+          "type": "list",
+          "ordered": false,
+          "items": [
+            {
+              "text": "Graphic assets of printed SQUARE materials (cards, boards) in common formats (pdf, jpg, png). PDF cannot have watermarks, cut or bleed marks.",
+              "nested": null
+            },
+            {
+              "text": "Graphic assets non NON-SQUARE tokens (i.e hex) in PNG (because it needs transparent bg)",
+              "nested": null
+            },
+            {
+              "text": "Graphic assets of game non-flat resources (minis, dice, etc) as were used in rulebook in \"contents of the game\" in PNG (best one per file)",
+              "nested": null
+            },
+            {
+              "text": "For all assets that have text on them (numbers don't count): We need ENGLISH or NO TEXT version. We can overlay translated text on graphics if no text version is provided.",
+              "nested": null
+            },
+            {
+              "text": "You can also ask game meta data images such as box and banners, but this can be done later (see below for meta data images)",
+              "nested": null
+            }
+          ]
         }
       ]
     },
     {
-      "type": "paragraph",
-      "text": "Game metadata images are images of game box, banner, title, etc. These images are no longer stored in project directory."
-    },
-    {
-      "type": "paragraph",
-      "text": "You must upload in img directory all images of your game interface."
-    },
-    {
-      "type": "paragraph",
-      "text": "To be correctly deployed your images file names should not contain spaces or parentheses."
-    },
-    {
-      "type": "paragraph",
-      "text": "Be careful : by default, ALL images of your img root directory are loaded on a player's browser when he loads the game. For this reason, don't publish images that are not useful in your img, or it will slow down the game load. You can put them in a subdirectory of img, that won't be preloaded by default, for example images used only if an expansion is activated.."
-    },
-    {
-      "type": "paragraph",
-      "text": "General recommendation it to have no more than dozen of image files, 2Mb max each. However if there is heavy game resources specific to a player (i.e. player board of specific color or set of cards) it is better to separate them and \"don't pre-load\" since in any given game only some of them will be used."
-    },
-    {
-      "type": "paragraph",
-      "text": "You can use these image formats while building your game interface:"
-    },
-    {
-      "type": "paragraph",
-      "text": "webp images"
-    },
-    {
-      "type": "paragraph",
-      "text": "should be used whenever possible. It's lightweight and handles transparency."
-    },
-    {
-      "type": "paragraph",
-      "text": "jpg images"
-    },
-    {
-      "type": "paragraph",
-      "text": "should be used for non-transparent images. Jpg are usually lighter than pngs, so please choose Jpg for big pictures (ex: game board, cards) when you don't need transparency to accelerate game load. You don't need transparency for rounded card corners, it can be done using css."
-    },
-    {
-      "type": "paragraph",
-      "text": "png images"
-    },
-    {
-      "type": "paragraph",
-      "text": "should be used for images with transparency, such as non-square tokens, meeples, etc (combined into sprite)."
-    },
-    {
-      "type": "paragraph",
-      "text": "gif images"
-    },
-    {
-      "type": "paragraph",
-      "text": "can be used for animated images. This is not recommended to use gif animated images as they can upset players, but for some specific interface element this could be useful."
-    },
-    {
-      "type": "paragraph",
-      "text": "svg images"
-    },
-    {
-      "type": "paragraph",
-      "text": "svg images can be really efficient for icons or abstract images. Note: consider also using font awesome for icons instead of separate asset file."
-    },
-    {
-      "type": "paragraph",
-      "text": "png and jpg images are automatically converted to webp during deployment. Webp's are lighter weight."
-    },
-    {
-      "type": "paragraph",
-      "text": "In rare cases, this can cause a problem because the conversion is lossy. The best solution is to create webp manually from your png/jpg file, to make sure your web pfile is valid, and use it instead of the png/jpg file."
-    },
-    {
-      "type": "paragraph",
-      "text": "In order to allow for players to use the browser zoom without your images becoming pixelated, it's recommended to use higher resolution images than needed for the normal display of your interface, and to use the css property background-size to fit the image to the size you need for your interface."
-    },
-    {
-      "type": "paragraph",
-      "text": "To limit the number of images load and make the game load faster, you must use CSS sprites, i.e. you must gather several images in a single one. However, there are limitations. Do not make any CSS image sprite with dimensions that exceed 4096x4096 pixels or it will not work on mobile devices (Android max texture size is 4096 pixels, test your own browser at WebGL Report )."
-    },
-    {
-      "type": "list",
-      "ordered": false,
-      "items": [
+      "heading": {
+        "level": 2,
+        "text": "Metadata images",
+        "id": "Metadata_images"
+      },
+      "content": [
         {
-          "text": "CSS sprites (W3C documentation) .",
-          "nested": null
-        },
-        {
-          "text": "Game interface stylesheet: yourgamename.css",
-          "nested": null
+          "type": "paragraph",
+          "text": "Game metadata images are images of game box, banner, title, etc. These images are no longer stored in project directory."
         }
       ]
     },
     {
-      "type": "note",
-      "variant": "warning",
-      "text": "Important: the maximum image size should be 4096x4096 (otherwise, some devices may not display parts of the image, see https://stackoverflow.com/questions/34682482/what-is-the-maximum-sprite-sheet-size-i-can-use-for-android-devices )"
-    },
-    {
-      "type": "list",
-      "ordered": false,
-      "items": [
+      "heading": {
+        "level": 2,
+        "text": "Game art",
+        "id": "Game_art"
+      },
+      "content": [
         {
-          "text": "Sprite Generator https://www.toptal.com/developers/css/sprite-generator/",
-          "nested": null
-        },
-        {
-          "text": "Another Sprite Generator https://www.finalparsec.com/tools/sprite_sheet_maker",
-          "nested": null
+          "type": "paragraph",
+          "text": "You must upload in img directory all images of your game interface."
         }
       ]
     },
     {
-      "type": "paragraph",
-      "text": "If you get high resolution images from publisher you need to shrink them since web display requires much lower resolution than printing."
+      "heading": {
+        "level": 3,
+        "text": "Images naming constraints",
+        "id": "Images_naming_constraints"
+      },
+      "content": [
+        {
+          "type": "paragraph",
+          "text": "To be correctly deployed your images file names should not contain spaces or parentheses."
+        }
+      ]
     },
     {
-      "type": "list",
-      "ordered": false,
-      "items": [
+      "heading": {
+        "level": 3,
+        "text": "Images loading",
+        "id": "Images_loading"
+      },
+      "content": [
         {
-          "text": "Shrink images size without visible loss of quality",
-          "nested": {
-            "type": "list",
-            "ordered": false,
-            "items": [
-              {
-                "text": "Offline tool for PNG: https://pngquant.org/",
-                "nested": null
-              },
-              {
-                "text": "Online tools for PNG/JPG: https://tinypng.com/ or http://www.iloveimg.com/ or https://squoosh.app/",
-                "nested": null
-              },
-              {
-                "text": "Online tool for SVG: https://jakearchibald.github.io/svgomg/",
-                "nested": null
+          "type": "paragraph",
+          "text": "Be careful : by default, ALL images of your img root directory are loaded on a player's browser when he loads the game. For this reason, don't publish images that are not useful in your img, or it will slow down the game load. You can put them in a subdirectory of img, that won't be preloaded by default, for example images used only if an expansion is activated.."
+        },
+        {
+          "type": "paragraph",
+          "text": "General recommendation it to have no more than dozen of image files, 2Mb max each. However if there is heavy game resources specific to a player (i.e. player board of specific color or set of cards) it is better to separate them and \"don't pre-load\" since in any given game only some of them will be used."
+        }
+      ]
+    },
+    {
+      "heading": {
+        "level": 3,
+        "text": "Images format",
+        "id": "Images_format"
+      },
+      "content": [
+        {
+          "type": "paragraph",
+          "text": "You can use these image formats while building your game interface:"
+        },
+        {
+          "type": "paragraph",
+          "text": "webp images"
+        },
+        {
+          "type": "paragraph",
+          "text": "should be used whenever possible. It's lightweight and handles transparency."
+        },
+        {
+          "type": "paragraph",
+          "text": "jpg images"
+        },
+        {
+          "type": "paragraph",
+          "text": "should be used for non-transparent images. Jpg are usually lighter than pngs, so please choose Jpg for big pictures (ex: game board, cards) when you don't need transparency to accelerate game load. You don't need transparency for rounded card corners, it can be done using css."
+        },
+        {
+          "type": "paragraph",
+          "text": "png images"
+        },
+        {
+          "type": "paragraph",
+          "text": "should be used for images with transparency, such as non-square tokens, meeples, etc (combined into sprite)."
+        },
+        {
+          "type": "paragraph",
+          "text": "gif images"
+        },
+        {
+          "type": "paragraph",
+          "text": "can be used for animated images. This is not recommended to use gif animated images as they can upset players, but for some specific interface element this could be useful."
+        },
+        {
+          "type": "paragraph",
+          "text": "svg images"
+        },
+        {
+          "type": "paragraph",
+          "text": "svg images can be really efficient for icons or abstract images. Note: consider also using font awesome for icons instead of separate asset file."
+        }
+      ]
+    },
+    {
+      "heading": {
+        "level": 3,
+        "text": "Webp",
+        "id": "Webp"
+      },
+      "content": [
+        {
+          "type": "paragraph",
+          "text": "png and jpg images are automatically converted to webp during deployment. Webp's are lighter weight."
+        },
+        {
+          "type": "paragraph",
+          "text": "In rare cases, this can cause a problem because the conversion is lossy. The best solution is to create webp manually from your png/jpg file, to make sure your web pfile is valid, and use it instead of the png/jpg file."
+        }
+      ]
+    },
+    {
+      "heading": {
+        "level": 3,
+        "text": "Use background-size",
+        "id": "Use_background-size"
+      },
+      "content": [
+        {
+          "type": "paragraph",
+          "text": "In order to allow for players to use the browser zoom without your images becoming pixelated, it's recommended to use higher resolution images than needed for the normal display of your interface, and to use the css property background-size to fit the image to the size you need for your interface."
+        }
+      ]
+    },
+    {
+      "heading": {
+        "level": 3,
+        "text": "Use CSS Sprites",
+        "id": "Use_CSS_Sprites"
+      },
+      "content": [
+        {
+          "type": "paragraph",
+          "text": "To limit the number of images load and make the game load faster, you must use CSS sprites, i.e. you must gather several images in a single one. However, there are limitations. Do not make any CSS image sprite with dimensions that exceed 4096x4096 pixels or it will not work on mobile devices (Android max texture size is 4096 pixels, test your own browser at WebGL Report )."
+        },
+        {
+          "type": "list",
+          "ordered": false,
+          "items": [
+            {
+              "text": "CSS sprites (W3C documentation) .",
+              "nested": null
+            },
+            {
+              "text": "Game interface stylesheet: yourgamename.css",
+              "nested": null
+            }
+          ]
+        },
+        {
+          "type": "note",
+          "variant": "warning",
+          "text": "Important: the maximum image size should be 4096x4096 (otherwise, some devices may not display parts of the image, see https://stackoverflow.com/questions/34682482/what-is-the-maximum-sprite-sheet-size-i-can-use-for-android-devices )"
+        },
+        {
+          "type": "list",
+          "ordered": false,
+          "items": [
+            {
+              "text": "Sprite Generator https://www.toptal.com/developers/css/sprite-generator/",
+              "nested": null
+            },
+            {
+              "text": "Another Sprite Generator https://www.finalparsec.com/tools/sprite_sheet_maker",
+              "nested": null
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "heading": {
+        "level": 3,
+        "text": "Shrink images",
+        "id": "Shrink_images"
+      },
+      "content": [
+        {
+          "type": "paragraph",
+          "text": "If you get high resolution images from publisher you need to shrink them since web display requires much lower resolution than printing."
+        },
+        {
+          "type": "list",
+          "ordered": false,
+          "items": [
+            {
+              "text": "Shrink images size without visible loss of quality",
+              "nested": {
+                "type": "list",
+                "ordered": false,
+                "items": [
+                  {
+                    "text": "Offline tool for PNG: https://pngquant.org/",
+                    "nested": null
+                  },
+                  {
+                    "text": "Online tools for PNG/JPG: https://tinypng.com/ or http://www.iloveimg.com/ or https://squoosh.app/",
+                    "nested": null
+                  },
+                  {
+                    "text": "Online tool for SVG: https://jakearchibald.github.io/svgomg/",
+                    "nested": null
+                  }
+                ]
               }
-            ]
-          }
+            }
+          ]
         }
       ]
     },
     {
-      "type": "paragraph",
-      "text": "You have no choice but to use one of the image manipulating tools to create a successful game adaptation, you would have to deal with"
-    },
-    {
-      "type": "list",
-      "ordered": false,
-      "items": [
+      "heading": {
+        "level": 2,
+        "text": "Image Manipulation Tools",
+        "id": "Image_Manipulation_Tools"
+      },
+      "content": [
         {
-          "text": "Converting to supported formats",
-          "nested": null
+          "type": "paragraph",
+          "text": "You have no choice but to use one of the image manipulating tools to create a successful game adaptation, you would have to deal with"
         },
         {
-          "text": "Adding transparency",
-          "nested": null
+          "type": "list",
+          "ordered": false,
+          "items": [
+            {
+              "text": "Converting to supported formats",
+              "nested": null
+            },
+            {
+              "text": "Adding transparency",
+              "nested": null
+            },
+            {
+              "text": "Stitching",
+              "nested": null
+            },
+            {
+              "text": "Shrinking with no quality loss",
+              "nested": null
+            },
+            {
+              "text": "Resizing",
+              "nested": null
+            }
+          ]
         },
         {
-          "text": "Stitching",
-          "nested": null
+          "type": "paragraph",
+          "text": "For that you need a good tools, recommended tools (if you know more add them here)"
         },
         {
-          "text": "Shrinking with no quality loss",
-          "nested": null
+          "type": "list",
+          "ordered": false,
+          "items": [
+            {
+              "text": "Gimp (all platforms) - general GUI image editor",
+              "nested": null
+            },
+            {
+              "text": "Paint.net (Windows) - general GUI image editor",
+              "nested": null
+            },
+            {
+              "text": "ImageMagic (All platforms) - https://www.imagemagick.org/script/download.php - command line image editor, great for mass manipulations and scripting",
+              "nested": null
+            }
+          ]
         },
         {
-          "text": "Resizing",
-          "nested": null
+          "type": "paragraph",
+          "text": "AI tools are very good at editing photos with minimal prompting too."
         }
       ]
     },
     {
-      "type": "paragraph",
-      "text": "For that you need a good tools, recommended tools (if you know more add them here)"
-    },
-    {
-      "type": "list",
-      "ordered": false,
-      "items": [
+      "heading": {
+        "level": 3,
+        "text": "Examples",
+        "id": "Examples"
+      },
+      "content": [
         {
-          "text": "Gimp (all platforms) - general GUI image editor",
-          "nested": null
+          "type": "paragraph",
+          "text": "PDF to png convertion (linux)"
         },
         {
-          "text": "Paint.net (Windows) - general GUI image editor",
-          "nested": null
+          "type": "code",
+          "language": null,
+          "text": "gs -sDEVICE=pngalpha   -o output.png -r600 -dDownScaleFactor=3 input.pdf "
         },
         {
-          "text": "ImageMagic (All platforms) - https://www.imagemagick.org/script/download.php - command line image editor, great for mass manipulations and scripting",
-          "nested": null
+          "type": "paragraph",
+          "text": "PDF to jpg using image magic and cropping page"
+        },
+        {
+          "type": "code",
+          "language": null,
+          "text": "montage -colorspace sRGB -density 300 -geometry 452x+0+0 -tile 5 -crop 82x87%+130+126 input.pdf  output.jpg"
+        },
+        {
+          "type": "paragraph",
+          "text": "PSD Extraction (image magic - CMYK to sRBG - one layer per file)"
+        },
+        {
+          "type": "code",
+          "language": null,
+          "text": "for i in *.psd; do  convert  $i -profile /usr/share/color/icc/colord/sRGB.icc   `basename $i .psd`.png; done;"
+        },
+        {
+          "type": "paragraph",
+          "text": "Tiling - The order of the images will match the 'ls' order. If needed change the filenames if you need a specific order."
+        },
+        {
+          "type": "code",
+          "language": null,
+          "text": "montage -colorspace sRGB -density 300 *.png -tile 6 -background transparent ../tokens.png"
+        },
+        {
+          "type": "paragraph",
+          "text": "PDF scrabber (linux) - extract all graphics file from pdf"
+        },
+        {
+          "type": "code",
+          "language": null,
+          "text": "pdfimages my.pdf prefix-"
         }
       ]
     },
     {
-      "type": "paragraph",
-      "text": "AI tools are very good at editing photos with minimal prompting too."
-    },
-    {
-      "type": "paragraph",
-      "text": "PDF to png convertion (linux)"
-    },
-    {
-      "type": "code",
-      "language": null,
-      "text": "gs -sDEVICE=pngalpha   -o output.png -r600 -dDownScaleFactor=3 input.pdf "
-    },
-    {
-      "type": "paragraph",
-      "text": "PDF to jpg using image magic and cropping page"
-    },
-    {
-      "type": "code",
-      "language": null,
-      "text": "montage -colorspace sRGB -density 300 -geometry 452x+0+0 -tile 5 -crop 82x87%+130+126 input.pdf  output.jpg"
-    },
-    {
-      "type": "paragraph",
-      "text": "PSD Extraction (image magic - CMYK to sRBG - one layer per file)"
-    },
-    {
-      "type": "code",
-      "language": null,
-      "text": "for i in *.psd; do  convert  $i -profile /usr/share/color/icc/colord/sRGB.icc   `basename $i .psd`.png; done;"
-    },
-    {
-      "type": "paragraph",
-      "text": "Tiling - The order of the images will match the 'ls' order. If needed change the filenames if you need a specific order."
-    },
-    {
-      "type": "code",
-      "language": null,
-      "text": "montage -colorspace sRGB -density 300 *.png -tile 6 -background transparent ../tokens.png"
-    },
-    {
-      "type": "paragraph",
-      "text": "PDF scrabber (linux) - extract all graphics file from pdf"
-    },
-    {
-      "type": "code",
-      "language": null,
-      "text": "pdfimages my.pdf prefix-"
-    },
-    {
-      "type": "paragraph",
-      "text": "PSD extraction (adobe file format)"
-    },
-    {
-      "type": "code",
-      "language": null,
-      "text": "https://www.photopea.com/"
-    },
-    {
-      "type": "paragraph",
-      "text": "Seamless background (for tiled background wallpaper)"
-    },
-    {
-      "type": "code",
-      "language": null,
-      "text": "https://www.imgonline.com.ua/eng/make-seamless-texture.php"
-    },
-    {
-      "type": "paragraph",
-      "text": "Download game assets from tabletop simulator"
-    },
-    {
-      "type": "code",
-      "language": null,
-      "text": "https://www.npmjs.com/package/ttsbackup"
-    },
-    {
-      "type": "list",
-      "ordered": false,
-      "items": [
+      "heading": {
+        "level": 3,
+        "text": "Online tools",
+        "id": "Online_tools"
+      },
+      "content": [
         {
-          "text": "This python script shows how to make card sprite images for BGA from a one-card-per-page pdf:",
-          "nested": {
-            "type": "list",
-            "ordered": false,
-            "items": [
-              {
-                "text": "reads the pages from a pdf document",
-                "nested": null
-              },
-              {
-                "text": "crops each pages to exclude bleed etc.",
-                "nested": null
-              },
-              {
-                "text": "removes duplicate images based on a difference in histograms",
-                "nested": null
-              },
-              {
-                "text": "converts to a target resolution",
-                "nested": null
-              },
-              {
-                "text": "assembles the resulting images into a single one given a number of rows and columns",
-                "nested": null
-              },
-              {
-                "text": "saves as any format that Pillow supports (e.g. jpg or png)",
-                "nested": null
+          "type": "paragraph",
+          "text": "PSD extraction (adobe file format)"
+        },
+        {
+          "type": "code",
+          "language": null,
+          "text": "https://www.photopea.com/"
+        },
+        {
+          "type": "paragraph",
+          "text": "Seamless background (for tiled background wallpaper)"
+        },
+        {
+          "type": "code",
+          "language": null,
+          "text": "https://www.imgonline.com.ua/eng/make-seamless-texture.php"
+        },
+        {
+          "type": "paragraph",
+          "text": "Download game assets from tabletop simulator"
+        },
+        {
+          "type": "code",
+          "language": null,
+          "text": "https://www.npmjs.com/package/ttsbackup"
+        }
+      ]
+    },
+    {
+      "heading": {
+        "level": 3,
+        "text": "Community Provided",
+        "id": "Community_Provided"
+      },
+      "content": [
+        {
+          "type": "list",
+          "ordered": false,
+          "items": [
+            {
+              "text": "This python script shows how to make card sprite images for BGA from a one-card-per-page pdf:",
+              "nested": {
+                "type": "list",
+                "ordered": false,
+                "items": [
+                  {
+                    "text": "reads the pages from a pdf document",
+                    "nested": null
+                  },
+                  {
+                    "text": "crops each pages to exclude bleed etc.",
+                    "nested": null
+                  },
+                  {
+                    "text": "removes duplicate images based on a difference in histograms",
+                    "nested": null
+                  },
+                  {
+                    "text": "converts to a target resolution",
+                    "nested": null
+                  },
+                  {
+                    "text": "assembles the resulting images into a single one given a number of rows and columns",
+                    "nested": null
+                  },
+                  {
+                    "text": "saves as any format that Pillow supports (e.g. jpg or png)",
+                    "nested": null
+                  }
+                ]
               }
-            ]
-          }
+            }
+          ]
         }
       ]
     }
@@ -487,7 +541,7 @@
   "images": [],
   "metadata": {
     "extractor_version": "1.0.0",
-    "extracted_at": "2026-07-06T06:53:17.333747+00:00",
+    "extracted_at": "2026-07-06T08:38:33.451989+00:00",
     "word_count": 732,
     "heading_count": 14,
     "code_block_count": 8,

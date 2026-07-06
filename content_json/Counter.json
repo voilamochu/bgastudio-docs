@@ -3,113 +3,135 @@
   "source_file": "Counter.html",
   "relative_path": "Counter.html",
   "content_json_path": "content_json/Counter.json",
-  "headings": [
+  "sections": [
     {
-      "level": 2,
-      "text": "Dependency",
-      "id": "Dependency"
+      "heading": null,
+      "content": [
+        {
+          "type": "paragraph",
+          "text": "This is very simple control that allow to set/get numeric value from inner html of div/span, and provides animation on from/to value.  It is used for the built-in score counter of the player panels."
+        }
+      ]
     },
     {
-      "level": 2,
-      "text": "Setup a counter",
-      "id": "Setup_a_counter"
+      "heading": {
+        "level": 2,
+        "text": "Dependency",
+        "id": "Dependency"
+      },
+      "content": [
+        {
+          "type": "paragraph",
+          "text": "The counter is loaded by default by BGA, as it is used for the score display, so you don't need to import it."
+        }
+      ]
     },
     {
-      "level": 2,
-      "text": "API",
-      "id": "API"
+      "heading": {
+        "level": 2,
+        "text": "Setup a counter",
+        "id": "Setup_a_counter"
+      },
+      "content": [
+        {
+          "type": "code",
+          "language": null,
+          "text": "var counter = new ebg.counter();\ncounter.create(targetId);"
+        },
+        {
+          "type": "paragraph",
+          "text": "Where targetId either string or dom element, which already exists in the template, which will be used to display the counter value. For example:"
+        },
+        {
+          "type": "code",
+          "language": null,
+          "text": "  <span id=\"my_counter\"></span>"
+        },
+        {
+          "type": "paragraph",
+          "text": "In reality you will have a counter per player, so probably want to create a counter per player, in this case target Id can be 'hand_size_player_' + player_id and you create it in the loop for all players and store as class member. See example below on how to inject per-player sections."
+        }
+      ]
     },
     {
-      "level": 2,
-      "text": "Players panels",
-      "id": "Players_panels"
+      "heading": {
+        "level": 2,
+        "text": "API",
+        "id": "API"
+      },
+      "content": [
+        {
+          "type": "paragraph",
+          "text": "create(target, settings?)associate counter with existing target DOM element target is the DOM element or element idsettings can define:value: the initial value of the counter (null to disable)tableCounter: the name of the TableCounter on PHP side, to update automatically on change (seePlayerCounter and TableCounter)playerCounter and playerId: the name of the PlayerCounter on PHP side, and the playerId it is associated to, to update automatically on change (seePlayerCounter and TableCounter)"
+        },
+        {
+          "type": "paragraph",
+          "text": "getValue()return current value"
+        },
+        {
+          "type": "paragraph",
+          "text": "incValue(by);increment value by \"by\" and animate from previous value"
+        },
+        {
+          "type": "paragraph",
+          "text": "setValue(value);set value, no animation"
+        },
+        {
+          "type": "paragraph",
+          "text": "toValue(value);set value with animation"
+        },
+        {
+          "type": "paragraph",
+          "text": "disable()Sets the value to \"-\". Note it just changes display value once, it does not actually disable it, i.e. if you set it again, it will be shown again"
+        },
+        {
+          "type": "paragraph",
+          "text": "speedDuration of the animation, default is 100"
+        },
+        {
+          "type": "paragraph",
+          "text": "const x = new ebg.counter() x.speed = 300; // to make it slower"
+        }
+      ]
     },
     {
-      "level": 3,
-      "text": "Adding stuff to player's panel",
-      "id": "Adding_stuff_to_player.27s_panel"
-    }
-  ],
-  "content": [
-    {
-      "type": "paragraph",
-      "text": "This is very simple control that allow to set/get numeric value from inner html of div/span, and provides animation on from/to value.  It is used for the built-in score counter of the player panels."
+      "heading": {
+        "level": 2,
+        "text": "Players panels",
+        "id": "Players_panels"
+      },
+      "content": []
     },
     {
-      "type": "paragraph",
-      "text": "The counter is loaded by default by BGA, as it is used for the score display, so you don't need to import it."
-    },
-    {
-      "type": "code",
-      "language": null,
-      "text": "var counter = new ebg.counter();\ncounter.create(targetId);"
-    },
-    {
-      "type": "paragraph",
-      "text": "Where targetId either string or dom element, which already exists in the template, which will be used to display the counter value. For example:"
-    },
-    {
-      "type": "code",
-      "language": null,
-      "text": "  <span id=\"my_counter\"></span>"
-    },
-    {
-      "type": "paragraph",
-      "text": "In reality you will have a counter per player, so probably want to create a counter per player, in this case target Id can be 'hand_size_player_' + player_id and you create it in the loop for all players and store as class member. See example below on how to inject per-player sections."
-    },
-    {
-      "type": "paragraph",
-      "text": "create(target, settings?)associate counter with existing target DOM element target is the DOM element or element idsettings can define:value: the initial value of the counter (null to disable)tableCounter: the name of the TableCounter on PHP side, to update automatically on change (seePlayerCounter and TableCounter)playerCounter and playerId: the name of the PlayerCounter on PHP side, and the playerId it is associated to, to update automatically on change (seePlayerCounter and TableCounter)"
-    },
-    {
-      "type": "paragraph",
-      "text": "getValue()return current value"
-    },
-    {
-      "type": "paragraph",
-      "text": "incValue(by);increment value by \"by\" and animate from previous value"
-    },
-    {
-      "type": "paragraph",
-      "text": "setValue(value);set value, no animation"
-    },
-    {
-      "type": "paragraph",
-      "text": "toValue(value);set value with animation"
-    },
-    {
-      "type": "paragraph",
-      "text": "disable()Sets the value to \"-\". Note it just changes display value once, it does not actually disable it, i.e. if you set it again, it will be shown again"
-    },
-    {
-      "type": "paragraph",
-      "text": "speedDuration of the animation, default is 100"
-    },
-    {
-      "type": "paragraph",
-      "text": "const x = new ebg.counter() x.speed = 300; // to make it slower"
-    },
-    {
-      "type": "paragraph",
-      "text": "First, create a new JS template string function and variables to hold your counter(s) in your template (tpl) file."
-    },
-    {
-      "type": "code",
-      "language": null,
-      "text": "    stone_counters: {};\n\n    getPlayerBoardTemplate(player) {\n      return \n      `<div class=\"cp_board\">\n         <div id=\"stoneicon_p${player.player_id}\" class=\"gmk_stoneicon gmk_stoneicon_${player.player_color}\"></div>\n         <span id=\"stonecount_p${player.player_id}\">0</span>\n       </div>`;\n    }"
-    },
-    {
-      "type": "paragraph",
-      "text": "Then, add this piece of code in the setup function of your JS file to add this template to each player panel:"
-    },
-    {
-      "type": "code",
-      "language": null,
-      "text": "            for( var player_id in gamedatas.players )   {\n                var player = gamedatas.players[player_id];\n                         \n                // Setting up players boards if needed\n                var player_board_div = this.bga.playerPanels.getElement(player_id);\n                player_board_div.insertAdjacentHTML('beforeend', this.getPlayerBoardTemplate(player));\n\n                // create counter per player\n                this.stone_counters[player_id] = new ebg.counter();\n                this.stone_counters[player_id].create( 'stonecount_p'+player_id );\n            }"
-    },
-    {
-      "type": "paragraph",
-      "text": "Often, you have to distinguish between the current player and other players. In this case, create another JS template (ex: getCurrentPlayerBoardTemplate) and use it where `player_id` is different than `this.players.getCurrentPlayerId` ."
+      "heading": {
+        "level": 3,
+        "text": "Adding stuff to player's panel",
+        "id": "Adding_stuff_to_player.27s_panel"
+      },
+      "content": [
+        {
+          "type": "paragraph",
+          "text": "First, create a new JS template string function and variables to hold your counter(s) in your template (tpl) file."
+        },
+        {
+          "type": "code",
+          "language": null,
+          "text": "    stone_counters: {};\n\n    getPlayerBoardTemplate(player) {\n      return \n      `<div class=\"cp_board\">\n         <div id=\"stoneicon_p${player.player_id}\" class=\"gmk_stoneicon gmk_stoneicon_${player.player_color}\"></div>\n         <span id=\"stonecount_p${player.player_id}\">0</span>\n       </div>`;\n    }"
+        },
+        {
+          "type": "paragraph",
+          "text": "Then, add this piece of code in the setup function of your JS file to add this template to each player panel:"
+        },
+        {
+          "type": "code",
+          "language": null,
+          "text": "            for( var player_id in gamedatas.players )   {\n                var player = gamedatas.players[player_id];\n                         \n                // Setting up players boards if needed\n                var player_board_div = this.bga.playerPanels.getElement(player_id);\n                player_board_div.insertAdjacentHTML('beforeend', this.getPlayerBoardTemplate(player));\n\n                // create counter per player\n                this.stone_counters[player_id] = new ebg.counter();\n                this.stone_counters[player_id].create( 'stonecount_p'+player_id );\n            }"
+        },
+        {
+          "type": "paragraph",
+          "text": "Often, you have to distinguish between the current player and other players. In this case, create another JS template (ex: getCurrentPlayerBoardTemplate) and use it where `player_id` is different than `this.players.getCurrentPlayerId` ."
+        }
+      ]
     }
   ],
   "links": [
@@ -121,7 +143,7 @@
   "images": [],
   "metadata": {
     "extractor_version": "1.0.0",
-    "extracted_at": "2026-07-06T06:53:17.284569+00:00",
+    "extracted_at": "2026-07-06T08:38:33.403946+00:00",
     "word_count": 402,
     "heading_count": 5,
     "code_block_count": 4,

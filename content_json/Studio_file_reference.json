@@ -3,210 +3,277 @@
   "source_file": "Studio_file_reference.html",
   "relative_path": "Studio_file_reference.html",
   "content_json_path": "content_json/Studio_file_reference.json",
-  "headings": [
+  "sections": [
     {
-      "level": 3,
-      "text": "software versions",
-      "id": "software_versions"
-    },
-    {
-      "level": 3,
-      "text": "img/",
-      "id": "img.2F"
-    },
-    {
-      "level": 3,
-      "text": "gameinfos.jsonc",
-      "id": "gameinfos.jsonc"
-    },
-    {
-      "level": 3,
-      "text": "dbmodel.sql",
-      "id": "dbmodel.sql"
-    },
-    {
-      "level": 3,
-      "text": "gameoptions.json, gamepreferences.json",
-      "id": "gameoptions.json.2C_gamepreferences.json"
-    },
-    {
-      "level": 3,
-      "text": "<gamename>.css",
-      "id": ".3Cgamename.3E.css"
-    },
-    {
-      "level": 3,
-      "text": "modules/php/Game.php",
-      "id": "modules.2Fphp.2FGame.php"
-    },
-    {
-      "level": 3,
-      "text": "modules/js/Game.js",
-      "id": "modules.2Fjs.2FGame.js"
-    },
-    {
-      "level": 3,
-      "text": "<gamename>.view.php, <gamename>_<gamename>.tpl",
-      "id": ".3Cgamename.3E.view.php.2C_.3Cgamename.3E_.3Cgamename.3E.tpl"
-    },
-    {
-      "level": 3,
-      "text": "material.inc.php",
-      "id": "material.inc.php"
-    },
-    {
-      "level": 3,
-      "text": "modules/php/States",
-      "id": "modules.2Fphp.2FStates"
-    },
-    {
-      "level": 3,
-      "text": "states.inc.php",
-      "id": "states.inc.php"
-    },
-    {
-      "level": 3,
-      "text": "stats.json",
-      "id": "stats.json"
-    },
-    {
-      "level": 3,
-      "text": "modules/",
-      "id": "modules.2F"
-    },
-    {
-      "level": 3,
-      "text": "misc/",
-      "id": "misc.2F"
-    },
-    {
-      "level": 3,
-      "text": "<other files>",
-      "id": ".3Cother_files.3E"
-    }
-  ],
-  "content": [
-    {
-      "type": "paragraph",
-      "text": "This is a quick reference for the files used to implement a game. For more information, follow the wiki links."
-    },
-    {
-      "type": "paragraph",
-      "text": "See Studio#Software_Versions"
-    },
-    {
-      "type": "paragraph",
-      "text": "This directory contains the images for your game (the game art)."
-    },
-    {
-      "type": "paragraph",
-      "text": "See Game art: img directory"
-    },
-    {
-      "type": "paragraph",
-      "text": "In this file you describe the meta-information for your game: game name, publisher name, number of player, etc..."
-    },
-    {
-      "type": "paragraph",
-      "text": "File for creating specific database tables that you will need to persist data during the game (for example a table for cards)."
-    },
-    {
-      "type": "paragraph",
-      "text": "See Game database model: dbmodel.sql"
-    },
-    {
-      "type": "paragraph",
-      "text": "File for describing your game options (or game variants)."
-    },
-    {
-      "type": "paragraph",
-      "text": "See Options_and_preferences: gameoptions.json, gamepreferences.json ."
-    },
-    {
-      "type": "paragraph",
-      "text": "CSS styles specific to your game."
-    },
-    {
-      "type": "paragraph",
-      "text": "See Game interface stylesheet: yourgamename.css ."
-    },
-    {
-      "type": "paragraph",
-      "text": "This is the main file for your game logic. Here you initialize the game, persist data, implement the rules and notify changes to the client interface."
-    },
-    {
-      "type": "paragraph",
-      "text": "See Main game logic: Game.php ."
-    },
-    {
-      "type": "paragraph",
-      "text": "This is the main file for your game interface. Here you will define:"
-    },
-    {
-      "type": "list",
-      "ordered": false,
-      "items": [
+      "heading": null,
+      "content": [
         {
-          "text": "which actions on the page will generate calls to the server",
-          "nested": null
-        },
-        {
-          "text": "what happens when you get a notification for change from the server and how it will show in the browser.",
-          "nested": null
+          "type": "paragraph",
+          "text": "This is a quick reference for the files used to implement a game. For more information, follow the wiki links."
         }
       ]
     },
     {
-      "type": "paragraph",
-      "text": "When this file changes you need to do simple reloading of currently running game (F5)."
+      "heading": {
+        "level": 3,
+        "text": "software versions",
+        "id": "software_versions"
+      },
+      "content": [
+        {
+          "type": "paragraph",
+          "text": "See Studio#Software_Versions"
+        }
+      ]
     },
     {
-      "type": "paragraph",
-      "text": "IMPORTANT NOTE: These files are deprecated, you shouldn't need to use it if you generate the template from the JS file."
+      "heading": {
+        "level": 3,
+        "text": "img/",
+        "id": "img.2F"
+      },
+      "content": [
+        {
+          "type": "paragraph",
+          "text": "This directory contains the images for your game (the game art)."
+        },
+        {
+          "type": "paragraph",
+          "text": "See Game art: img directory"
+        }
+      ]
     },
     {
-      "type": "paragraph",
-      "text": "When this file changes you need to do simple reloading of currently running game (F5)."
+      "heading": {
+        "level": 3,
+        "text": "gameinfos.jsonc",
+        "id": "gameinfos.jsonc"
+      },
+      "content": [
+        {
+          "type": "paragraph",
+          "text": "In this file you describe the meta-information for your game: game name, publisher name, number of player, etc..."
+        }
+      ]
     },
     {
-      "type": "paragraph",
-      "text": "IMPORTANT NOTE: This file is deprecated, see the dedicated page about it for more information."
+      "heading": {
+        "level": 3,
+        "text": "dbmodel.sql",
+        "id": "dbmodel.sql"
+      },
+      "content": [
+        {
+          "type": "paragraph",
+          "text": "File for creating specific database tables that you will need to persist data during the game (for example a table for cards)."
+        },
+        {
+          "type": "paragraph",
+          "text": "See Game database model: dbmodel.sql"
+        }
+      ]
     },
     {
-      "type": "paragraph",
-      "text": "When this file changes reloading is not required, however if your js side using some data from there (which it should) do simple reloading of currently running game (F5) ."
+      "heading": {
+        "level": 3,
+        "text": "gameoptions.json, gamepreferences.json",
+        "id": "gameoptions.json.2C_gamepreferences.json"
+      },
+      "content": [
+        {
+          "type": "paragraph",
+          "text": "File for describing your game options (or game variants)."
+        },
+        {
+          "type": "paragraph",
+          "text": "See Options_and_preferences: gameoptions.json, gamepreferences.json ."
+        }
+      ]
     },
     {
-      "type": "paragraph",
-      "text": "The classes describing the states of your game."
+      "heading": {
+        "level": 3,
+        "text": "<gamename>.css",
+        "id": ".3Cgamename.3E.css"
+      },
+      "content": [
+        {
+          "type": "paragraph",
+          "text": "CSS styles specific to your game."
+        },
+        {
+          "type": "paragraph",
+          "text": "See Game interface stylesheet: yourgamename.css ."
+        }
+      ]
     },
     {
-      "type": "paragraph",
-      "text": "IMPORTANT NOTE: This file is deprecated, you shouldn't need to change it if you use State classes"
+      "heading": {
+        "level": 3,
+        "text": "modules/php/Game.php",
+        "id": "modules.2Fphp.2FGame.php"
+      },
+      "content": [
+        {
+          "type": "paragraph",
+          "text": "This is the main file for your game logic. Here you initialize the game, persist data, implement the rules and notify changes to the client interface."
+        },
+        {
+          "type": "paragraph",
+          "text": "See Main game logic: Game.php ."
+        }
+      ]
     },
     {
-      "type": "paragraph",
-      "text": "When this file changes it requires simple reloading, however if changes are breaking it requires to start a new game."
+      "heading": {
+        "level": 3,
+        "text": "modules/js/Game.js",
+        "id": "modules.2Fjs.2FGame.js"
+      },
+      "content": [
+        {
+          "type": "paragraph",
+          "text": "This is the main file for your game interface. Here you will define:"
+        },
+        {
+          "type": "list",
+          "ordered": false,
+          "items": [
+            {
+              "text": "which actions on the page will generate calls to the server",
+              "nested": null
+            },
+            {
+              "text": "what happens when you get a notification for change from the server and how it will show in the browser.",
+              "nested": null
+            }
+          ]
+        },
+        {
+          "type": "paragraph",
+          "text": "When this file changes you need to do simple reloading of currently running game (F5)."
+        }
+      ]
     },
     {
-      "type": "paragraph",
-      "text": "File used to list statistics that you want to update during the game to be presented to players at the end of the game."
+      "heading": {
+        "level": 3,
+        "text": "<gamename>.view.php, <gamename>_<gamename>.tpl",
+        "id": ".3Cgamename.3E.view.php.2C_.3Cgamename.3E_.3Cgamename.3E.tpl"
+      },
+      "content": [
+        {
+          "type": "paragraph",
+          "text": "IMPORTANT NOTE: These files are deprecated, you shouldn't need to use it if you generate the template from the JS file."
+        },
+        {
+          "type": "paragraph",
+          "text": "When this file changes you need to do simple reloading of currently running game (F5)."
+        }
+      ]
     },
     {
-      "type": "paragraph",
-      "text": "See Game statistics: stats.json ."
+      "heading": {
+        "level": 3,
+        "text": "material.inc.php",
+        "id": "material.inc.php"
+      },
+      "content": [
+        {
+          "type": "paragraph",
+          "text": "IMPORTANT NOTE: This file is deprecated, see the dedicated page about it for more information."
+        },
+        {
+          "type": "paragraph",
+          "text": "When this file changes reloading is not required, however if your js side using some data from there (which it should) do simple reloading of currently running game (F5) ."
+        }
+      ]
     },
     {
-      "type": "paragraph",
-      "text": "Modules directory can contain additional php files which can be included in main game.php via include or require. It also can contain addition js files. This directory is checked in version control."
+      "heading": {
+        "level": 3,
+        "text": "modules/php/States",
+        "id": "modules.2Fphp.2FStates"
+      },
+      "content": [
+        {
+          "type": "paragraph",
+          "text": "The classes describing the states of your game."
+        }
+      ]
     },
     {
-      "type": "paragraph",
-      "text": "Directory containing files you would like to keep with project but not needed on production server. This directory is checked in version control. Total limit is 1 Mb for this directory."
+      "heading": {
+        "level": 3,
+        "text": "states.inc.php",
+        "id": "states.inc.php"
+      },
+      "content": [
+        {
+          "type": "paragraph",
+          "text": "IMPORTANT NOTE: This file is deprecated, you shouldn't need to change it if you use State classes"
+        },
+        {
+          "type": "paragraph",
+          "text": "When this file changes it requires simple reloading, however if changes are breaking it requires to start a new game."
+        }
+      ]
     },
     {
-      "type": "paragraph",
-      "text": "You can use other files but they won't be checked in source control and published in production. That includes any additional .js or .php files. If you need them use modules/ directory."
+      "heading": {
+        "level": 3,
+        "text": "stats.json",
+        "id": "stats.json"
+      },
+      "content": [
+        {
+          "type": "paragraph",
+          "text": "File used to list statistics that you want to update during the game to be presented to players at the end of the game."
+        },
+        {
+          "type": "paragraph",
+          "text": "See Game statistics: stats.json ."
+        }
+      ]
+    },
+    {
+      "heading": {
+        "level": 3,
+        "text": "modules/",
+        "id": "modules.2F"
+      },
+      "content": [
+        {
+          "type": "paragraph",
+          "text": "Modules directory can contain additional php files which can be included in main game.php via include or require. It also can contain addition js files. This directory is checked in version control."
+        }
+      ]
+    },
+    {
+      "heading": {
+        "level": 3,
+        "text": "misc/",
+        "id": "misc.2F"
+      },
+      "content": [
+        {
+          "type": "paragraph",
+          "text": "Directory containing files you would like to keep with project but not needed on production server. This directory is checked in version control. Total limit is 1 Mb for this directory."
+        }
+      ]
+    },
+    {
+      "heading": {
+        "level": 3,
+        "text": "<other files>",
+        "id": ".3Cother_files.3E"
+      },
+      "content": [
+        {
+          "type": "paragraph",
+          "text": "You can use other files but they won't be checked in source control and published in production. That includes any additional .js or .php files. If you need them use modules/ directory."
+        }
+      ]
     }
   ],
   "links": [
@@ -242,7 +309,7 @@
   "images": [],
   "metadata": {
     "extractor_version": "1.0.0",
-    "extracted_at": "2026-07-06T06:53:17.579849+00:00",
+    "extracted_at": "2026-07-06T08:38:33.687735+00:00",
     "word_count": 419,
     "heading_count": 16,
     "code_block_count": 0,

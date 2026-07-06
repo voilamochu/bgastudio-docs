@@ -3,124 +3,128 @@
   "source_file": "Common_board_game_elements_image_resources.html",
   "relative_path": "Common_board_game_elements_image_resources.html",
   "content_json_path": "content_json/Common_board_game_elements_image_resources.json",
-  "headings": [],
-  "content": [
+  "sections": [
     {
-      "type": "paragraph",
-      "text": "A lot of games need common image elements. You can find a lot of image assets online or directly from the publisher."
-    },
-    {
-      "type": "paragraph",
-      "text": "[image: 25 25 wooden tokens.png]"
-    },
-    {
-      "type": "paragraph",
-      "text": "[image: 30 30 meeple.png]"
-    },
-    {
-      "type": "paragraph",
-      "text": "[image: 30 30 wooden cubes.png]"
-    },
-    {
-      "type": "paragraph",
-      "text": "[image: 37 60 hexaedrons.png]"
-    },
-    {
-      "type": "paragraph",
-      "text": "[image: 64 64 dice.jpg]"
-    },
-    {
-      "type": "paragraph",
-      "text": "[image: Hand.png]"
-    },
-    {
-      "type": "paragraph",
-      "text": "[image: Refuse.png]"
-    },
-    {
-      "type": "paragraph",
-      "text": "Also check out images below created by Fabian \"Viking\" Jakobsson under Creative Commons license:"
-    },
-    {
-      "type": "paragraph",
-      "text": "[image: Meeple top.png]"
-    },
-    {
-      "type": "paragraph",
-      "text": "[image: Cube top.png]"
-    },
-    {
-      "type": "paragraph",
-      "text": "[image: Castle top.png]"
-    },
-    {
-      "type": "paragraph",
-      "text": "[image: House top.png]"
-    },
-    {
-      "type": "paragraph",
-      "text": "[image: Cylinder top.png]"
-    },
-    {
-      "type": "paragraph",
-      "text": "(These were created using https://www.me.uk/cards/ )"
-    },
-    {
-      "type": "paragraph",
-      "text": "https://x.boardgamearena.net/data/others/cards/FULLREZ_CARDS_DESIGN_NORMAL.jpg"
-    },
-    {
-      "type": "paragraph",
-      "text": "https://x.boardgamearena.net/data/others/cards/FULLREZ_CARDS_ORIGINAL_NORMAL.jpg"
+      "heading": null,
+      "content": [
+        {
+          "type": "paragraph",
+          "text": "A lot of games need common image elements. You can find a lot of image assets online or directly from the publisher."
+        },
+        {
+          "type": "paragraph",
+          "text": "[image: 25 25 wooden tokens.png]"
+        },
+        {
+          "type": "paragraph",
+          "text": "[image: 30 30 meeple.png]"
+        },
+        {
+          "type": "paragraph",
+          "text": "[image: 30 30 wooden cubes.png]"
+        },
+        {
+          "type": "paragraph",
+          "text": "[image: 37 60 hexaedrons.png]"
+        },
+        {
+          "type": "paragraph",
+          "text": "[image: 64 64 dice.jpg]"
+        },
+        {
+          "type": "paragraph",
+          "text": "[image: Hand.png]"
+        },
+        {
+          "type": "paragraph",
+          "text": "[image: Refuse.png]"
+        },
+        {
+          "type": "paragraph",
+          "text": "Also check out images below created by Fabian \"Viking\" Jakobsson under Creative Commons license:"
+        },
+        {
+          "type": "paragraph",
+          "text": "[image: Meeple top.png]"
+        },
+        {
+          "type": "paragraph",
+          "text": "[image: Cube top.png]"
+        },
+        {
+          "type": "paragraph",
+          "text": "[image: Castle top.png]"
+        },
+        {
+          "type": "paragraph",
+          "text": "[image: House top.png]"
+        },
+        {
+          "type": "paragraph",
+          "text": "[image: Cylinder top.png]"
+        },
+        {
+          "type": "paragraph",
+          "text": "(These were created using https://www.me.uk/cards/ )"
+        },
+        {
+          "type": "paragraph",
+          "text": "https://x.boardgamearena.net/data/others/cards/FULLREZ_CARDS_DESIGN_NORMAL.jpg"
+        },
+        {
+          "type": "paragraph",
+          "text": "https://x.boardgamearena.net/data/others/cards/FULLREZ_CARDS_ORIGINAL_NORMAL.jpg"
+        }
+      ]
     }
   ],
   "links": [
     {
-      "text": "25 25 wooden tokens.png",
+      "text": "[image: 25 25 wooden tokens.png]",
       "url": "File:25_25_wooden_tokens.png.html"
     },
     {
-      "text": "30 30 meeple.png",
+      "text": "[image: 30 30 meeple.png]",
       "url": "File:30_30_meeple.png.html"
     },
     {
-      "text": "30 30 wooden cubes.png",
+      "text": "[image: 30 30 wooden cubes.png]",
       "url": "File:30_30_wooden_cubes.png.html"
     },
     {
-      "text": "37 60 hexaedrons.png",
+      "text": "[image: 37 60 hexaedrons.png]",
       "url": "File:37_60_hexaedrons.png.html"
     },
     {
-      "text": "64 64 dice.jpg",
+      "text": "[image: 64 64 dice.jpg]",
       "url": "File:64_64_dice.jpg.html"
     },
     {
-      "text": "Hand.png",
+      "text": "[image: Hand.png]",
       "url": "File:Hand.png.html"
     },
     {
-      "text": "Refuse.png",
+      "text": "[image: Refuse.png]",
       "url": "File:Refuse.png.html"
     },
     {
-      "text": "Meeple top.png",
+      "text": "[image: Meeple top.png]",
       "url": "File:Meeple_top.png.html"
     },
     {
-      "text": "Cube top.png",
+      "text": "[image: Cube top.png]",
       "url": "File:Cube_top.png.html"
     },
     {
-      "text": "Castle top.png",
+      "text": "[image: Castle top.png]",
       "url": "File:Castle_top.png.html"
     },
     {
-      "text": "House top.png",
+      "text": "[image: House top.png]",
       "url": "File:House_top.png.html"
     },
     {
-      "text": "Cylinder top.png",
+      "text": "[image: Cylinder top.png]",
       "url": "File:Cylinder_top.png.html"
     },
     {
@@ -136,64 +140,15 @@
       "url": "https://x.boardgamearena.net/data/others/cards/FULLREZ_CARDS_ORIGINAL_NORMAL.jpg"
     }
   ],
-  "images": [
-    {
-      "src": "/images/0/05/25_25_wooden_tokens.png",
-      "alt": "25 25 wooden tokens.png"
-    },
-    {
-      "src": "/images/4/4c/30_30_meeple.png",
-      "alt": "30 30 meeple.png"
-    },
-    {
-      "src": "/images/0/08/30_30_wooden_cubes.png",
-      "alt": "30 30 wooden cubes.png"
-    },
-    {
-      "src": "/images/2/20/37_60_hexaedrons.png",
-      "alt": "37 60 hexaedrons.png"
-    },
-    {
-      "src": "/images/c/c5/64_64_dice.jpg",
-      "alt": "64 64 dice.jpg"
-    },
-    {
-      "src": "/images/a/a7/Hand.png",
-      "alt": "Hand.png"
-    },
-    {
-      "src": "/images/f/ff/Refuse.png",
-      "alt": "Refuse.png"
-    },
-    {
-      "src": "/images/2/23/Meeple_top.png",
-      "alt": "Meeple top.png"
-    },
-    {
-      "src": "/images/1/14/Cube_top.png",
-      "alt": "Cube top.png"
-    },
-    {
-      "src": "/images/0/0a/Castle_top.png",
-      "alt": "Castle top.png"
-    },
-    {
-      "src": "/images/7/78/House_top.png",
-      "alt": "House top.png"
-    },
-    {
-      "src": "/images/8/8b/Cylinder_top.png",
-      "alt": "Cylinder top.png"
-    }
-  ],
+  "images": [],
   "metadata": {
     "extractor_version": "1.0.0",
-    "extracted_at": "2026-07-06T06:53:17.267137+00:00",
+    "extracted_at": "2026-07-06T08:38:33.388962+00:00",
     "word_count": 85,
     "heading_count": 0,
     "code_block_count": 0,
     "table_count": 0,
-    "image_count": 12,
+    "image_count": 0,
     "list_count": 0
   }
 }

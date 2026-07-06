@@ -13,7 +13,7 @@ import sys
 import time
 from datetime import datetime, timezone
 from pathlib import Path
-from typing import Any, Optional
+from typing import Optional
 from urllib.parse import urlparse
 
 from bs4 import BeautifulSoup, Tag
@@ -77,24 +77,45 @@ def get_page_title(soup: BeautifulSoup) -> str:
 
 
 def get_article_content(soup: BeautifulSoup) -> Optional[Tag]:
-    """Find the main article container in a cleaned HTML document."""
-    container = soup.find("div", class_="article")
-    return container if isinstance(container, Tag) else None
+    """Find the main article container in a cleaned HTML document.
+    
+    Uses a fallback strategy to find content containers in order of specificity.
+    """
+    selectors = [
+        ("article", None),
+        ("main", None),
+        ("div", "article"),
+        ("div", "content"),
+    ]
+    
+    for tag_name, class_name in selectors:
+        if class_name:
+            container = soup.find(tag_name, class_=class_name)
+        else:
+            container = soup.find(tag_name)
+        if isinstance(container, Tag):
+            return container
+    
+    max_div = _find_largest_content_div(soup)
+    if max_div:
+        return max_div
+    
+    body = soup.find("body")
+    return body if isinstance(body, Tag) else None
 
 
-def collect_headings(article: Tag) -> list[dict]:
-    """Collect all headings from the article, preserving order."""
-    headings: list[dict] = []
-    for tag in article.find_all(["h1", "h2", "h3", "h4", "h5", "h6"]):
-        level = int(tag.name[1])
-        text = tag.get_text(strip=True)
-        heading_id = tag.get("id", "")
-        if not heading_id:
-            span = tag.find("span", id=True)
-            if span:
-                heading_id = span.get("id", "")
-        headings.append({"level": level, "text": text, "id": heading_id})
-    return headings
+def _find_largest_content_div(soup: BeautifulSoup) -> Optional[Tag]:
+    """Find the largest div containing documentation-like content."""
+    max_text_len = 0
+    best_div = None
+    
+    for div in soup.find_all("div"):
+        text = div.get_text(strip=True)
+        if len(text) > max_text_len and len(text) > 100:
+            max_text_len = len(text)
+            best_div = div
+    
+    return best_div
 
 
 def extract_inline_text(element: Tag) -> str:
@@ -179,20 +200,29 @@ def process_code_block(pre: Tag) -> dict:
     return {"type": "code", "language": language, "text": text}
 
 
-def process_row(cells: list[Tag], is_header: bool = False) -> list[str]:
-    """Extract text from a list of table cells."""
-    return [cell.get_text(strip=True) for cell in cells]
+def process_row(cells: list[Tag], is_header: bool = False) -> list[dict]:
+    """Extract text from a list of table cells, preserving span attributes."""
+    result: list[dict] = []
+    for cell in cells:
+        cell_data = {"text": cell.get_text(strip=True)}
+        rowspan = cell.get("rowspan")
+        colspan = cell.get("colspan")
+        if rowspan:
+            cell_data["rowspan"] = int(rowspan)
+        if colspan:
+            cell_data["colspan"] = int(colspan)
+        result.append(cell_data)
+    return result
 
 
 def process_table(table: Tag) -> dict:
     """Process a <table> into a structurally representative content entry.
 
     Captures headers (from thead) and rows (from tbody).
-    Merged cells are represented with an empty string when span information
-    is not explicit in the markup.
+    Preserves rowspan and colspan attributes on cells.
     """
-    headers: list[str] = []
-    rows: list[list[str]] = []
+    headers: list[dict] = []
+    rows: list[list[dict]] = []
 
     thead = table.find("thead")
     tbody = table.find("tbody")
@@ -224,15 +254,15 @@ def process_table(table: Tag) -> dict:
             pass
 
         for cells in remaining_rows:
-            row_texts = [cell.get_text(strip=True) for cell in cells]
-            if any(row_texts):
-                rows.append(row_texts)
+            row_cells = process_row(cells)
+            if any(c.get("text") for c in row_cells):
+                rows.append(row_cells)
     else:
         # Fallback: collect all rows as data rows.
         for tr in table.find_all("tr"):
-            row_texts = [cell.get_text(strip=True) for cell in tr.find_all(["td", "th"])]
-            if any(row_texts):
-                rows.append(row_texts)
+            row_cells = process_row(tr.find_all(["td", "th"]))
+            if any(c.get("text") for c in row_cells):
+                rows.append(row_cells)
 
     return {"type": "table", "headers": headers, "rows": rows}
 
@@ -364,6 +394,86 @@ def count_words(text: str) -> int:
     return len(text.split())
 
 
+def count_words_in_sections(sections: list[dict]) -> int:
+    """Count words in all section contents."""
+    total = 0
+    for section in sections:
+        for item in section.get("content", []):
+            total += count_words(item.get("text", ""))
+    return total
+
+
+def count_element_type(sections: list[dict], element_type: str) -> int:
+    """Count elements of a given type across all sections."""
+    total = 0
+    for section in sections:
+        for item in section.get("content", []):
+            if item.get("type") == element_type:
+                total += 1
+            if item.get("type") == "list":
+                total += count_elements_in_nested_list(item, element_type)
+    return total
+
+
+def count_elements_in_nested_list(list_item: dict, element_type: str) -> int:
+    """Recursively count elements in nested list items."""
+    total = 0
+    for item in list_item.get("items", []):
+        if item.get("type") == element_type:
+            total += 1
+        nested = item.get("nested")
+        if nested and nested.get("type") == "list":
+            total += count_elements_in_nested_list(nested, element_type)
+    return total
+
+
+def extract_sections_with_content(article: Tag) -> list[dict]:
+    """Extract sections where each section contains a heading and its associated content.
+    
+    Preserves document hierarchy by associating content blocks with the heading
+    under which they appear. Content before the first heading is placed in an
+    initial section with no heading.
+    """
+    sections: list[dict] = []
+    current_heading: Optional[dict] = None
+    current_content: list[dict] = []
+
+    for child in article.children:
+        if not isinstance(child, Tag):
+            continue
+
+        if child.name in ["h1", "h2", "h3", "h4", "h5", "h6"]:
+            if current_heading is not None or current_content:
+                sections.append({
+                    "heading": current_heading,
+                    "content": current_content,
+                })
+                current_content = []
+
+            level = int(child.name[1])
+            text = child.get_text(strip=True)
+            heading_id = child.get("id", "")
+            if not heading_id:
+                span = child.find("span", id=True)
+                if span:
+                    heading_id = span.get("id", "")
+            current_heading = {"level": level, "text": text, "id": heading_id}
+        elif child.name == "p" and not child.get_text(strip=True) and not child.find_all("img"):
+            continue
+        else:
+            element = process_element(child)
+            if element:
+                current_content.append(element)
+
+    if current_heading is not None or current_content:
+        sections.append({
+            "heading": current_heading,
+            "content": current_content,
+        })
+
+    return sections
+
+
 def extract_page(
     html_path: Path,
     project_root: Path,
@@ -391,9 +501,8 @@ def extract_page(
         return None
 
     title = get_page_title(soup)
-    headings = collect_headings(article)
+    sections = extract_sections_with_content(article)
 
-    content: list[dict] = []
     links: list[dict] = []
     images: list[dict] = []
     seen_links: set[tuple[str, str]] = set()
@@ -402,13 +511,6 @@ def extract_page(
     for child in article.children:
         if not isinstance(child, Tag):
             continue
-
-        # Skip empty paragraph wrappers used for spacing.
-        if child.name == "p" and not child.get_text(strip=True) and not child.find_all("img"):
-            continue
-
-        # Collect links and images before processing the element so that
-        # text extraction mutations do not destroy the original tree.
         for a_tag in child.find_all("a", href=True, recursive=True):
             href = a_tag.get("href", "").strip()
             if not href:
@@ -435,20 +537,12 @@ def extract_page(
                 seen_images.add(key)
                 images.append({"src": src, "alt": alt})
 
-        element = process_element(child)
-        if element:
-            content.append(element)
-
-    # Compute document-level metadata.
-    all_content_text = " ".join(
-        item.get("text", "") for item in content if "text" in item
-    )
-    word_count = count_words(all_content_text)
-    code_block_count = sum(1 for item in content if item.get("type") == "code")
-    table_count = sum(1 for item in content if item.get("type") == "table")
+    word_count = count_words_in_sections(sections)
+    code_block_count = count_element_type(sections, "code")
+    table_count = count_element_type(sections, "table")
     image_count = len(images)
-    heading_count = len(headings)
-    list_count = sum(1 for item in content if item.get("type") == "list")
+    heading_count = sum(1 for s in sections if s.get("heading"))
+    list_count = count_element_type(sections, "list")
 
     rel_path = html_path.relative_to(clean_html_dir)
     output_rel = CONTENT_JSON_DIR / rel_path.with_suffix(".json")
@@ -458,8 +552,7 @@ def extract_page(
         "source_file": html_path.name,
         "relative_path": str(rel_path).replace("\\", "/"),
         "content_json_path": str(output_rel).replace("\\", "/"),
-        "headings": headings,
-        "content": content,
+        "sections": sections,
         "links": links,
         "images": images,
         "metadata": {

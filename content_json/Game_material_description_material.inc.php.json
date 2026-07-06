@@ -3,185 +3,214 @@
   "source_file": "Game_material_description_material.inc.php.html",
   "relative_path": "Game_material_description_material.inc.php.html",
   "content_json_path": "content_json/Game_material_description_material.inc.php.json",
-  "headings": [
+  "sections": [
     {
-      "level": 2,
-      "text": "Overview",
-      "id": "Overview"
+      "heading": {
+        "level": 2,
+        "text": "Overview",
+        "id": "Overview"
+      },
+      "content": [
+        {
+          "type": "paragraph",
+          "text": "IMPORTANT NOTE : This file is not generated anymore by default, but you can still create it (the name is important as only a `material.inc.php` file at the root of your project will be automatically loaded) to describe the material of your game."
+        },
+        {
+          "type": "paragraph",
+          "text": "This file is included by the constructor of your main game logic (yourgame.game.php), and then the variables defined here are accessible everywhere in your game logic file (and also view.php file)."
+        }
+      ]
     },
     {
-      "level": 2,
-      "text": "Definition",
-      "id": "Definition"
+      "heading": {
+        "level": 2,
+        "text": "Definition",
+        "id": "Definition"
+      },
+      "content": [
+        {
+          "type": "paragraph",
+          "text": "Example from \"Eminent Domain\":"
+        },
+        {
+          "type": "code",
+          "language": null,
+          "text": "$this->token_types = [\n 'card_role_survey' => [\n   'type' => 'card_role',\n   'name' => clienttranslate(\"Survey\"),\n   'tooltip' => clienttranslate(\"ACTION: Draw 2 Cards<br/><br/>ROLE: Look at <div class='icon survey'></div> - 1 planet cards, keep 1<br/> <span class='yellow'>Leader:</span> Look at 1 additional card\"),\n   'b'=>0,\n   'p'=>'',\n   'i'=>'S',\n   'v'=>0,\n   'a'=>'dd',\n   'r'=>'S', \n   'l'=>'v',\n  ],\n\n 'card_tech_1_51' => [\n   'type' => 'tech',\n   'name' => clienttranslate(\"Improved Trade\"),\n   'b' => 3,\n   'p' => 'E',\n   'i' => 'TP',\n   'v' => 0,\n   'a' => 'i',\n   'side' => 0,\n   'tooltip' => clienttranslate(\"Collect 1 Influence from the supply.\"),\n ],\n\n...\n];"
+        },
+        {
+          "type": "paragraph",
+          "text": "So this defines all info about cards, including types, names, tooltips (to be show on client), rules, payment cost, etc."
+        },
+        {
+          "type": "code",
+          "language": null,
+          "text": "if (!defined('TAPESTRY')) { // guard since this included multiple times\n    define(\"TAPESTRY\", 0);\n    define(\"TRACK_EXPLORATION\", 1);\n    define(\"TRACK_SCIENCE\", 2);\n    define(\"TRACK_MILITARY\", 3);\n    define(\"TRACK_TECHNOLOGY\", 4);\n}"
+        }
+      ]
     },
     {
-      "level": 2,
-      "text": "Access",
-      "id": "Access"
+      "heading": {
+        "level": 2,
+        "text": "Access",
+        "id": "Access"
+      },
+      "content": []
     },
     {
-      "level": 3,
-      "text": "Data fields",
-      "id": "Data_fields"
+      "heading": {
+        "level": 3,
+        "text": "Data fields",
+        "id": "Data_fields"
+      },
+      "content": [
+        {
+          "type": "paragraph",
+          "text": "To access this in PHP side:"
+        },
+        {
+          "type": "code",
+          "language": null,
+          "text": " $type = $this->token_types['card_tech_1_51']['type'];"
+        },
+        {
+          "type": "paragraph",
+          "text": "To access on JS side you have to send all variables from material file via getAllDatas first:"
+        },
+        {
+          "type": "code",
+          "language": null,
+          "text": "   protected function getAllDatas() {\n       $result = array ();\n       $result ['token_types'] = $this->token_types;\n       ...\n       return $result;\n   }\n "
+        },
+        {
+          "type": "paragraph",
+          "text": "Then you can access it in similar way:"
+        },
+        {
+          "type": "code",
+          "language": null,
+          "text": " var type = this.gamedatas.token_types['card_tech_1_51'].type; // not translatable\n var name = _(this.gamedatas.token_types['card_tech_1_51'].name); // to be shown to user (NOI18N)"
+        },
+        {
+          "type": "paragraph",
+          "text": "To send this in notification from PHP side:"
+        },
+        {
+          "type": "code",
+          "language": null,
+          "text": " $this->notifyAllUsers('gainCard',clienttranslate('player gains ${card_name}'), [\n      'i18n'=>['card_name'],\n      'card_id' => $card_id,\n      'card_name' => $this->token_types[$card_id]['name']\n ]);"
+        }
+      ]
     },
     {
-      "level": 3,
-      "text": "PHP constants",
-      "id": "PHP_constants"
+      "heading": {
+        "level": 3,
+        "text": "PHP constants",
+        "id": "PHP_constants"
+      },
+      "content": [
+        {
+          "type": "paragraph",
+          "text": "If you also want to access constants in JS side, you can send them via getAllData like this"
+        },
+        {
+          "type": "code",
+          "language": null,
+          "text": "       $cc = get_defined_constants(true)['user'];\n       $result['constants']=$cc; // this will be all constants though, you may have to filter some stuff out for security reasons"
+        },
+        {
+          "type": "paragraph",
+          "text": "Alternately you can include a material.inc.php in local php file and call this method to print constants in JS format, then include this file in JS, you may have to synchronize this manually, but its better for auto-complete also."
+        },
+        {
+          "type": "code",
+          "language": null,
+          "text": "       // this needs to be run locally after including materal file (see example in testing below)\n       $cc = get_defined_constants(true)['user'];\n       foreach ($cc as $key => $value) {          \n           print (\"const $key = $value;\\n\");\n       }"
+        }
+      ]
     },
     {
-      "level": 2,
-      "text": "Testing",
-      "id": "Testing"
+      "heading": {
+        "level": 2,
+        "text": "Testing",
+        "id": "Testing"
+      },
+      "content": [
+        {
+          "type": "paragraph",
+          "text": "If you screw up your material file such as by missing some brackets, it is very hard to diagnose. But you can test it locally like this:"
+        },
+        {
+          "type": "code",
+          "language": null,
+          "text": "<?php\nclass material_test {\n    function __construct() {\n        include '../material.inc.php';\n        var_dump($this->token_types); // whatever your var\n    }\n}\n// stub\nfunction clienttranslate($x) { return $x; }\n\nnew material_test();"
+        }
+      ]
     },
     {
-      "level": 2,
-      "text": "Adjusting material",
-      "id": "Adjusting_material"
+      "heading": {
+        "level": 2,
+        "text": "Adjusting material",
+        "id": "Adjusting_material"
+      },
+      "content": [
+        {
+          "type": "paragraph",
+          "text": "In rare cases expansions of the game changes the materials of the original game. In such cases (for example, the same card was re-printed with a different text/rules), can you keep same card and have material adjust based on selected game options? It is possible with some trickery."
+        },
+        {
+          "type": "code",
+          "language": null,
+          "text": "    /**\n     * This is called before every action, unlike constructor this method has initialized state of the table so it can\n     * access db\n     *\n     * @Override\n     */\n    protected function initTable() {\n        // this fiddles with material file depending on the extension selected\n        $this->adjustMaterial();\n    }\n\n    function adjustMaterial($force = false) {\n        if ( !$force && $this->token_types_adjusted)\n            return;\n        $this->token_types_adjusted = true;\n        ... // fiddle with data in material file\n    }"
+        },
+        {
+          "type": "paragraph",
+          "text": "To adjust material itself - you can do it in any number of ways I personally use this method: for modified values I specify key posfix that match my game option, and adjustment function re-write my keys, for example"
+        },
+        {
+          "type": "code",
+          "language": null,
+          "text": " 'card_tech_1_51' => [\n   'name' => clienttranslate(\"Improved Trade\"),\n   'name@e3' => clienttranslate(\"Much Improved Trade\"),\n   'cost' => 3,\n   'cost@p2' => 2"
+        },
+        {
+          "type": "paragraph",
+          "text": "In this example if player selects game expansion 3, the key name@e2 would override key name, and if there is 2 players, cost@p2 will override cost. If you need exact code, check adjustMaterial in Ultimate Railroads"
+        },
+        {
+          "type": "code",
+          "language": null,
+          "text": "$this->decks = array (\n        'g' => array ('id' => 'green','name' => clienttranslate('Green'),'num' => 1 ),\n        'r' => array ('id' => 'red','name' => clienttranslate('Red'),'num' => 3 ),\n        'v' => array ('id' => 'violet','name' => clienttranslate('Violet'),'num' => 4 ),\n        'y' => array ('id' => 'yellow','name' => clienttranslate('Yellow'),'num' => 2 ) )\n;\n    \n$this->dcolor_map = array();\n// reverse map\nforeach ($this->decks as $info) {\n    $this->dcolor_map[$info['num']]=$info['id'];\n}"
+        }
+      ]
     },
     {
-      "level": 2,
-      "text": "Move it to modules/php",
-      "id": "Move_it_to_modules.2Fphp"
-    }
-  ],
-  "content": [
-    {
-      "type": "paragraph",
-      "text": "IMPORTANT NOTE : This file is not generated anymore by default, but you can still create it (the name is important as only a `material.inc.php` file at the root of your project will be automatically loaded) to describe the material of your game."
-    },
-    {
-      "type": "paragraph",
-      "text": "This file is included by the constructor of your main game logic (yourgame.game.php), and then the variables defined here are accessible everywhere in your game logic file (and also view.php file)."
-    },
-    {
-      "type": "paragraph",
-      "text": "Example from \"Eminent Domain\":"
-    },
-    {
-      "type": "code",
-      "language": null,
-      "text": "$this->token_types = [\n 'card_role_survey' => [\n   'type' => 'card_role',\n   'name' => clienttranslate(\"Survey\"),\n   'tooltip' => clienttranslate(\"ACTION: Draw 2 Cards<br/><br/>ROLE: Look at <div class='icon survey'></div> - 1 planet cards, keep 1<br/> <span class='yellow'>Leader:</span> Look at 1 additional card\"),\n   'b'=>0,\n   'p'=>'',\n   'i'=>'S',\n   'v'=>0,\n   'a'=>'dd',\n   'r'=>'S', \n   'l'=>'v',\n  ],\n\n 'card_tech_1_51' => [\n   'type' => 'tech',\n   'name' => clienttranslate(\"Improved Trade\"),\n   'b' => 3,\n   'p' => 'E',\n   'i' => 'TP',\n   'v' => 0,\n   'a' => 'i',\n   'side' => 0,\n   'tooltip' => clienttranslate(\"Collect 1 Influence from the supply.\"),\n ],\n\n...\n];"
-    },
-    {
-      "type": "paragraph",
-      "text": "So this defines all info about cards, including types, names, tooltips (to be show on client), rules, payment cost, etc."
-    },
-    {
-      "type": "code",
-      "language": null,
-      "text": "if (!defined('TAPESTRY')) { // guard since this included multiple times\n    define(\"TAPESTRY\", 0);\n    define(\"TRACK_EXPLORATION\", 1);\n    define(\"TRACK_SCIENCE\", 2);\n    define(\"TRACK_MILITARY\", 3);\n    define(\"TRACK_TECHNOLOGY\", 4);\n}"
-    },
-    {
-      "type": "paragraph",
-      "text": "To access this in PHP side:"
-    },
-    {
-      "type": "code",
-      "language": null,
-      "text": " $type = $this->token_types['card_tech_1_51']['type'];"
-    },
-    {
-      "type": "paragraph",
-      "text": "To access on JS side you have to send all variables from material file via getAllDatas first:"
-    },
-    {
-      "type": "code",
-      "language": null,
-      "text": "   protected function getAllDatas() {\n       $result = array ();\n       $result ['token_types'] = $this->token_types;\n       ...\n       return $result;\n   }\n "
-    },
-    {
-      "type": "paragraph",
-      "text": "Then you can access it in similar way:"
-    },
-    {
-      "type": "code",
-      "language": null,
-      "text": " var type = this.gamedatas.token_types['card_tech_1_51'].type; // not translatable\n var name = _(this.gamedatas.token_types['card_tech_1_51'].name); // to be shown to user (NOI18N)"
-    },
-    {
-      "type": "paragraph",
-      "text": "To send this in notification from PHP side:"
-    },
-    {
-      "type": "code",
-      "language": null,
-      "text": " $this->notifyAllUsers('gainCard',clienttranslate('player gains ${card_name}'), [\n      'i18n'=>['card_name'],\n      'card_id' => $card_id,\n      'card_name' => $this->token_types[$card_id]['name']\n ]);"
-    },
-    {
-      "type": "paragraph",
-      "text": "If you also want to access constants in JS side, you can send them via getAllData like this"
-    },
-    {
-      "type": "code",
-      "language": null,
-      "text": "       $cc = get_defined_constants(true)['user'];\n       $result['constants']=$cc; // this will be all constants though, you may have to filter some stuff out for security reasons"
-    },
-    {
-      "type": "paragraph",
-      "text": "Alternately you can include a material.inc.php in local php file and call this method to print constants in JS format, then include this file in JS, you may have to synchronize this manually, but its better for auto-complete also."
-    },
-    {
-      "type": "code",
-      "language": null,
-      "text": "       // this needs to be run locally after including materal file (see example in testing below)\n       $cc = get_defined_constants(true)['user'];\n       foreach ($cc as $key => $value) {          \n           print (\"const $key = $value;\\n\");\n       }"
-    },
-    {
-      "type": "paragraph",
-      "text": "If you screw up your material file such as by missing some brackets, it is very hard to diagnose. But you can test it locally like this:"
-    },
-    {
-      "type": "code",
-      "language": null,
-      "text": "<?php\nclass material_test {\n    function __construct() {\n        include '../material.inc.php';\n        var_dump($this->token_types); // whatever your var\n    }\n}\n// stub\nfunction clienttranslate($x) { return $x; }\n\nnew material_test();"
-    },
-    {
-      "type": "paragraph",
-      "text": "In rare cases expansions of the game changes the materials of the original game. In such cases (for example, the same card was re-printed with a different text/rules), can you keep same card and have material adjust based on selected game options? It is possible with some trickery."
-    },
-    {
-      "type": "code",
-      "language": null,
-      "text": "    /**\n     * This is called before every action, unlike constructor this method has initialized state of the table so it can\n     * access db\n     *\n     * @Override\n     */\n    protected function initTable() {\n        // this fiddles with material file depending on the extension selected\n        $this->adjustMaterial();\n    }\n\n    function adjustMaterial($force = false) {\n        if ( !$force && $this->token_types_adjusted)\n            return;\n        $this->token_types_adjusted = true;\n        ... // fiddle with data in material file\n    }"
-    },
-    {
-      "type": "paragraph",
-      "text": "To adjust material itself - you can do it in any number of ways I personally use this method: for modified values I specify key posfix that match my game option, and adjustment function re-write my keys, for example"
-    },
-    {
-      "type": "code",
-      "language": null,
-      "text": " 'card_tech_1_51' => [\n   'name' => clienttranslate(\"Improved Trade\"),\n   'name@e3' => clienttranslate(\"Much Improved Trade\"),\n   'cost' => 3,\n   'cost@p2' => 2"
-    },
-    {
-      "type": "paragraph",
-      "text": "In this example if player selects game expansion 3, the key name@e2 would override key name, and if there is 2 players, cost@p2 will override cost. If you need exact code, check adjustMaterial in Ultimate Railroads"
-    },
-    {
-      "type": "code",
-      "language": null,
-      "text": "$this->decks = array (\n        'g' => array ('id' => 'green','name' => clienttranslate('Green'),'num' => 1 ),\n        'r' => array ('id' => 'red','name' => clienttranslate('Red'),'num' => 3 ),\n        'v' => array ('id' => 'violet','name' => clienttranslate('Violet'),'num' => 4 ),\n        'y' => array ('id' => 'yellow','name' => clienttranslate('Yellow'),'num' => 2 ) )\n;\n    \n$this->dcolor_map = array();\n// reverse map\nforeach ($this->decks as $info) {\n    $this->dcolor_map[$info['num']]=$info['id'];\n}"
-    },
-    {
-      "type": "paragraph",
-      "text": "You can move the file to any modules/php folder/subfolder, but it will not be included automatically, you'll need to import it."
-    },
-    {
-      "type": "code",
-      "language": null,
-      "text": "class Game extends Table {\n    private array $DECKS; // so the IDE knows you define an array called DECKS on the material file\n    \n\tfunction __construct()\n\t{\n        parent::__construct();\n\n        require 'material.inc.php'; // your material.inc.php in modules/php folder contains $this->DECKS = [...]\n\n        $this->initGameStateLabels([]);\n\t}\n\n    protected function getAllDatas(): array\n    {\n        // ...\n        // use it the same way\n        $result['DECKS'] = $this->DECKS;\n  \n        return $result;\n    }"
-    },
-    {
-      "type": "note",
-      "variant": "note",
-      "text": "Note: this way, you can use any file name and even split you material in multiple files if you want to."
+      "heading": {
+        "level": 2,
+        "text": "Move it to modules/php",
+        "id": "Move_it_to_modules.2Fphp"
+      },
+      "content": [
+        {
+          "type": "paragraph",
+          "text": "You can move the file to any modules/php folder/subfolder, but it will not be included automatically, you'll need to import it."
+        },
+        {
+          "type": "code",
+          "language": null,
+          "text": "class Game extends Table {\n    private array $DECKS; // so the IDE knows you define an array called DECKS on the material file\n    \n\tfunction __construct()\n\t{\n        parent::__construct();\n\n        require 'material.inc.php'; // your material.inc.php in modules/php folder contains $this->DECKS = [...]\n\n        $this->initGameStateLabels([]);\n\t}\n\n    protected function getAllDatas(): array\n    {\n        // ...\n        // use it the same way\n        $result['DECKS'] = $this->DECKS;\n  \n        return $result;\n    }"
+        },
+        {
+          "type": "note",
+          "variant": "note",
+          "text": "Note: this way, you can use any file name and even split you material in multiple files if you want to."
+        }
+      ]
     }
   ],
   "links": [],
   "images": [],
   "metadata": {
     "extractor_version": "1.0.0",
-    "extracted_at": "2026-07-06T06:53:17.389611+00:00",
+    "extracted_at": "2026-07-06T08:38:33.509848+00:00",
     "word_count": 828,
     "heading_count": 8,
     "code_block_count": 13,

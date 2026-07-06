@@ -3,65 +3,114 @@
   "source_file": "BGA_game_Lifecycle.html",
   "relative_path": "BGA_game_Lifecycle.html",
   "content_json_path": "content_json/BGA_game_Lifecycle.json",
-  "headings": [
+  "sections": [
     {
-      "level": 3,
-      "text": "See also",
-      "id": "See_also"
-    }
-  ],
-  "content": [
-    {
-      "type": "paragraph",
-      "text": "Here's a summary of the different steps you would follow when developing a game with BGA Studio."
-    },
-    {
-      "type": "table",
-      "headers": [
-        "Step",
-        "How to reach this step",
-        "What happens during this step?"
-      ],
-      "rows": [
-        [
-          "Initial",
-          "How to join BGA developer team?",
-          "You can choose to join an existing team / create a new project"
-        ],
-        [
-          "Assigned",
-          "You choose a game",
-          "You can start the development of the game"
-        ],
-        [
-          "Pre-alpha",
-          "You've started to write some code",
-          "You develop the game. During this phase, we can assist you with the framework and give you some advice."
-        ],
-        [
-          "Alpha",
-          "FollowPre-release_checklist, then tell us that your development is finished",
-          "\"BGA review\": we are reviewing your game and checking that it respectsBGA guidelines. If not, we will ask you (and help you) to fix it.Publisher review: the publisher, the designer, we and you can test the game together and separately. We help you to take into account remarks from the publisher and the designer.Alpha testers can play and review the game and give ratings and approvals. You can invite directly non-alpha testers to play a game, after that they will be able to play the game by themselves but they cannot give approvals."
-        ],
-        [
-          "Public beta",
-          "The adaptationshould be approved by the publisherwhile receiving enough approvals from reviewers before requesting beta.Having 10+ approvals is recommended, but if the game is well-received (preferably game rating ≥4.5) and there are no pending bugs and issues the game may pass as administrative discretion.",
-          "All players can play! During the first days, it is common that some bugs are reported by players, and you can fix them following the instructions inPost-release phase."
-        ],
-        [
-          "Gold",
-          "The game is stable on BGAThe publisher must send a mail to[email protected]to request the official release",
-          "We find together a good launch date for the game, we announce the game on BGA news. Congrats! You can still modify and optimize things following the instructions inPost-release phase."
-        ]
+      "heading": null,
+      "content": [
+        {
+          "type": "paragraph",
+          "text": "Here's a summary of the different steps you would follow when developing a game with BGA Studio."
+        },
+        {
+          "type": "table",
+          "headers": [
+            {
+              "text": "Step"
+            },
+            {
+              "text": "How to reach this step"
+            },
+            {
+              "text": "What happens during this step?"
+            }
+          ],
+          "rows": [
+            [
+              {
+                "text": "Initial"
+              },
+              {
+                "text": "How to join BGA developer team?"
+              },
+              {
+                "text": "You can choose to join an existing team / create a new project"
+              }
+            ],
+            [
+              {
+                "text": "Assigned"
+              },
+              {
+                "text": "You choose a game"
+              },
+              {
+                "text": "You can start the development of the game"
+              }
+            ],
+            [
+              {
+                "text": "Pre-alpha"
+              },
+              {
+                "text": "You've started to write some code"
+              },
+              {
+                "text": "You develop the game. During this phase, we can assist you with the framework and give you some advice."
+              }
+            ],
+            [
+              {
+                "text": "Alpha"
+              },
+              {
+                "text": "FollowPre-release_checklist, then tell us that your development is finished"
+              },
+              {
+                "text": "\"BGA review\": we are reviewing your game and checking that it respectsBGA guidelines. If not, we will ask you (and help you) to fix it.Publisher review: the publisher, the designer, we and you can test the game together and separately. We help you to take into account remarks from the publisher and the designer.Alpha testers can play and review the game and give ratings and approvals. You can invite directly non-alpha testers to play a game, after that they will be able to play the game by themselves but they cannot give approvals."
+              }
+            ],
+            [
+              {
+                "text": "Public beta"
+              },
+              {
+                "text": "The adaptationshould be approved by the publisherwhile receiving enough approvals from reviewers before requesting beta.Having 10+ approvals is recommended, but if the game is well-received (preferably game rating ≥4.5) and there are no pending bugs and issues the game may pass as administrative discretion."
+              },
+              {
+                "text": "All players can play! During the first days, it is common that some bugs are reported by players, and you can fix them following the instructions inPost-release phase."
+              }
+            ],
+            [
+              {
+                "text": "Gold"
+              },
+              {
+                "text": "The game is stable on BGAThe publisher must send a mail to[email protected]to request the official release"
+              },
+              {
+                "text": "We find together a good launch date for the game, we announce the game on BGA news. Congrats! You can still modify and optimize things following the instructions inPost-release phase."
+              }
+            ]
+          ]
+        }
       ]
     },
     {
-      "type": "list",
-      "ordered": false,
-      "items": [
+      "heading": {
+        "level": 3,
+        "text": "See also",
+        "id": "See_also"
+      },
+      "content": [
         {
-          "text": "Announcement of the alpha review process",
-          "nested": null
+          "type": "list",
+          "ordered": false,
+          "items": [
+            {
+              "text": "Announcement of the alpha review process",
+              "nested": null
+            }
+          ]
         }
       ]
     }
@@ -95,7 +144,7 @@
   "images": [],
   "metadata": {
     "extractor_version": "1.0.0",
-    "extracted_at": "2026-07-06T06:53:17.153969+00:00",
+    "extracted_at": "2026-07-06T08:38:33.271979+00:00",
     "word_count": 17,
     "heading_count": 1,
     "code_block_count": 0,

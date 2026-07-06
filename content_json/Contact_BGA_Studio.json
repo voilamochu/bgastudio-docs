@@ -3,284 +3,306 @@
   "source_file": "Contact_BGA_Studio.html",
   "relative_path": "Contact_BGA_Studio.html",
   "content_json_path": "content_json/Contact_BGA_Studio.json",
-  "headings": [
+  "sections": [
     {
-      "level": 2,
-      "text": "Purpose",
-      "id": "Purpose"
-    },
-    {
-      "level": 2,
-      "text": "Studio Accounts Management",
-      "id": "Studio_Accounts_Management"
-    },
-    {
-      "level": 2,
-      "text": "Studio Games Management",
-      "id": "Studio_Games_Management"
-    },
-    {
-      "level": 2,
-      "text": "Help with Game development or setup",
-      "id": "Help_with_Game_development_or_setup"
-    },
-    {
-      "level": 2,
-      "text": "Help with Game assets or licenses",
-      "id": "Help_with_Game_assets_or_licenses"
-    },
-    {
-      "level": 2,
-      "text": "Last resort",
-      "id": "Last_resort"
-    }
-  ],
-  "content": [
-    {
-      "type": "paragraph",
-      "text": "This page is to find solutions for technical issues or manual steps related to games development on BGA Studio."
-    },
-    {
-      "type": "paragraph",
-      "text": "If you are a publisher and you could not reach BGA via the channel above you can go Developer discord server and ask for developers on #looking-for-developers channel (invite link at the bottom)."
-    },
-    {
-      "type": "paragraph",
-      "text": "BGA player account is not the same as studio account (even if you name them the same)."
-    },
-    {
-      "type": "list",
-      "ordered": false,
-      "items": [
+      "heading": {
+        "level": 2,
+        "text": "Purpose",
+        "id": "Purpose"
+      },
+      "content": [
         {
-          "text": "Create studio account https://studio.boardgamearena.com (if you already logged in logout first)",
-          "nested": null
+          "type": "paragraph",
+          "text": "This page is to find solutions for technical issues or manual steps related to games development on BGA Studio."
         },
         {
-          "text": "Resend welcome email (original) https://studio.boardgamearena.com/account?page=welcomeemail",
-          "nested": {
-            "type": "list",
-            "ordered": false,
-            "items": [
-              {
-                "text": "Same if you forgot database or ftp account",
-                "nested": null
-              },
-              {
-                "text": "Still cannot get email, tried searching in junk for BGA, contact studio via https://studio.boardgamearena.com/support",
-                "nested": null
-              }
-            ]
-          }
-        },
-        {
-          "text": "Forgot password https://studio.boardgamearena.com/account?page=lostpassword",
-          "nested": null
-        },
-        {
-          "text": "Cannot ftp",
-          "nested": {
-            "type": "list",
-            "ordered": false,
-            "items": [
-              {
-                "text": "See section \"Help with Game development or setup\"",
-                "nested": null
-              }
-            ]
-          }
-        },
-        {
-          "text": "Upload ssh key https://studio.boardgamearena.com/controlpanel",
-          "nested": null
+          "type": "paragraph",
+          "text": "If you are a publisher and you could not reach BGA via the channel above you can go Developer discord server and ask for developers on #looking-for-developers channel (invite link at the bottom)."
         }
       ]
     },
     {
-      "type": "list",
-      "ordered": false,
-      "items": [
+      "heading": {
+        "level": 2,
+        "text": "Studio Accounts Management",
+        "id": "Studio_Accounts_Management"
+      },
+      "content": [
         {
-          "text": "Game management control panel located in Gear link if you click on your Account circle, direct link https://studio.boardgamearena.com/controlpanel",
-          "nested": {
-            "type": "list",
-            "ordered": false,
-            "items": [
-              {
-                "text": "This allows to create projects, delete projects and manage projects",
-                "nested": null
+          "type": "paragraph",
+          "text": "BGA player account is not the same as studio account (even if you name them the same)."
+        },
+        {
+          "type": "list",
+          "ordered": false,
+          "items": [
+            {
+              "text": "Create studio account https://studio.boardgamearena.com (if you already logged in logout first)",
+              "nested": null
+            },
+            {
+              "text": "Resend welcome email (original) https://studio.boardgamearena.com/account?page=welcomeemail",
+              "nested": {
+                "type": "list",
+                "ordered": false,
+                "items": [
+                  {
+                    "text": "Same if you forgot database or ftp account",
+                    "nested": null
+                  },
+                  {
+                    "text": "Still cannot get email, tried searching in junk for BGA, contact studio via https://studio.boardgamearena.com/support",
+                    "nested": null
+                  }
+                ]
               }
-            ]
-          }
-        },
-        {
-          "text": "Access to other project's source code",
-          "nested": {
-            "type": "list",
-            "ordered": false,
-            "items": [
-              {
-                "text": "Any developer can add themselves to a project as read-only from https://studio.boardgamearena.com/projects page (almost any project).",
-                "nested": null
-              },
-              {
-                "text": "If project is not there - its either does not have bgg id, already published (in this case check radio button on this page) or was not developed on studio (some old games).",
-                "nested": null
-              },
-              {
-                "text": "You can also try to use direct link https://studio.boardgamearena.com/gamepanel?game=template (replace template with game name in the link)",
-                "nested": null
-              },
-              {
-                "text": "If you prefer github see https://en.doc.boardgamearena.com/BGA_Code_Sharing",
-                "nested": null
+            },
+            {
+              "text": "Forgot password https://studio.boardgamearena.com/account?page=lostpassword",
+              "nested": null
+            },
+            {
+              "text": "Cannot ftp",
+              "nested": {
+                "type": "list",
+                "ordered": false,
+                "items": [
+                  {
+                    "text": "See section \"Help with Game development or setup\"",
+                    "nested": null
+                  }
+                ]
               }
-            ]
-          }
-        },
-        {
-          "text": "Access to frontend",
-          "nested": {
-            "type": "list",
-            "ordered": false,
-            "items": [
-              {
-                "text": "Even if you cannot get source access via studio, you can see the java code, css and images asset by using Browser dev tools, see Practical_debugging",
-                "nested": null
-              }
-            ]
-          }
-        },
-        {
-          "text": "Push game to Alpha or Beta",
-          "nested": {
-            "type": "list",
-            "ordered": false,
-            "items": [
-              {
-                "text": "You cannot do it yourself, you have to go though checklist first https://en.doc.boardgamearena.com/Pre-release_checklist then use Request Alpha or Request Beta button in control panel",
-                "nested": null
-              }
-            ]
-          }
-        },
-        {
-          "text": "Your project seems to be deleted after you came back a year after - create a new project with SAME name as before (you have to remember name) - it will be restored",
-          "nested": null
-        },
-        {
-          "text": "You have permission issues syncing files, but you are admin - re-add yourself as admin via control panel. DO NOT delete yourself, select Admin (!Important, double check you selected Admin not Read/Write) type your name (same account name as before) and click add.",
-          "nested": null
-        },
-        {
-          "text": "You managed to delete yourself from your own project, or are not admin anymore - require admin interferance - contact studio via https://studio.boardgamearena.com/support",
-          "nested": null
-        },
-        {
-          "text": "You want to take over abandoned game",
-          "nested": {
-            "type": "list",
-            "ordered": false,
-            "items": [
-              {
-                "text": "Please first ask the dev (in PM, dev forum or discord) - it may not be actually abandoned",
-                "nested": null
-              },
-              {
-                "text": "Contact the Studio support to ask for access to this project via https://studio.boardgamearena.com/support",
-                "nested": null
-              }
-            ]
-          }
-        },
-        {
-          "text": "You have error creating new game: Not authorized adminstudionewproject",
-          "nested": {
-            "type": "list",
-            "ordered": false,
-            "items": [
-              {
-                "text": "Wait a little longer and try again",
-                "nested": null
-              }
-            ]
-          }
+            },
+            {
+              "text": "Upload ssh key https://studio.boardgamearena.com/controlpanel",
+              "nested": null
+            }
+          ]
         }
       ]
     },
     {
-      "type": "paragraph",
-      "text": "If you stuck or looking for help in regards to development (even if you think there is bug in framework) please contact fellow developers first before attempting to contact any of admins"
-    },
-    {
-      "type": "list",
-      "ordered": false,
-      "items": [
+      "heading": {
+        "level": 2,
+        "text": "Studio Games Management",
+        "id": "Studio_Games_Management"
+      },
+      "content": [
         {
-          "text": "Google it, you may find an answer unrelated to BGA",
-          "nested": null
-        },
-        {
-          "text": "Post question of DISCORD chat server for BGA developers (invite link https://discord.gg/YxEUacY ). Game authors and publishers can also go there to ask about digital adaptations. Do not go there if you are a non-developer BGA player, but feel free to check out unofficial BGA user servers (at your own risk)",
-          "nested": null
-        },
-        {
-          "text": "Search and/or post on Development forum",
-          "nested": null
-        },
-        {
-          "text": "If you think there is bug in studio or APIs check these bugs Bug tracking system FOR STUDIO issues and APIs . You can also submit a bug there",
-          "nested": null
+          "type": "list",
+          "ordered": false,
+          "items": [
+            {
+              "text": "Game management control panel located in Gear link if you click on your Account circle, direct link https://studio.boardgamearena.com/controlpanel",
+              "nested": {
+                "type": "list",
+                "ordered": false,
+                "items": [
+                  {
+                    "text": "This allows to create projects, delete projects and manage projects",
+                    "nested": null
+                  }
+                ]
+              }
+            },
+            {
+              "text": "Access to other project's source code",
+              "nested": {
+                "type": "list",
+                "ordered": false,
+                "items": [
+                  {
+                    "text": "Any developer can add themselves to a project as read-only from https://studio.boardgamearena.com/projects page (almost any project).",
+                    "nested": null
+                  },
+                  {
+                    "text": "If project is not there - its either does not have bgg id, already published (in this case check radio button on this page) or was not developed on studio (some old games).",
+                    "nested": null
+                  },
+                  {
+                    "text": "You can also try to use direct link https://studio.boardgamearena.com/gamepanel?game=template (replace template with game name in the link)",
+                    "nested": null
+                  },
+                  {
+                    "text": "If you prefer github see https://en.doc.boardgamearena.com/BGA_Code_Sharing",
+                    "nested": null
+                  }
+                ]
+              }
+            },
+            {
+              "text": "Access to frontend",
+              "nested": {
+                "type": "list",
+                "ordered": false,
+                "items": [
+                  {
+                    "text": "Even if you cannot get source access via studio, you can see the java code, css and images asset by using Browser dev tools, see Practical_debugging",
+                    "nested": null
+                  }
+                ]
+              }
+            },
+            {
+              "text": "Push game to Alpha or Beta",
+              "nested": {
+                "type": "list",
+                "ordered": false,
+                "items": [
+                  {
+                    "text": "You cannot do it yourself, you have to go though checklist first https://en.doc.boardgamearena.com/Pre-release_checklist then use Request Alpha or Request Beta button in control panel",
+                    "nested": null
+                  }
+                ]
+              }
+            },
+            {
+              "text": "Your project seems to be deleted after you came back a year after - create a new project with SAME name as before (you have to remember name) - it will be restored",
+              "nested": null
+            },
+            {
+              "text": "You have permission issues syncing files, but you are admin - re-add yourself as admin via control panel. DO NOT delete yourself, select Admin (!Important, double check you selected Admin not Read/Write) type your name (same account name as before) and click add.",
+              "nested": null
+            },
+            {
+              "text": "You managed to delete yourself from your own project, or are not admin anymore - require admin interferance - contact studio via https://studio.boardgamearena.com/support",
+              "nested": null
+            },
+            {
+              "text": "You want to take over abandoned game",
+              "nested": {
+                "type": "list",
+                "ordered": false,
+                "items": [
+                  {
+                    "text": "Please first ask the dev (in PM, dev forum or discord) - it may not be actually abandoned",
+                    "nested": null
+                  },
+                  {
+                    "text": "Contact the Studio support to ask for access to this project via https://studio.boardgamearena.com/support",
+                    "nested": null
+                  }
+                ]
+              }
+            },
+            {
+              "text": "You have error creating new game: Not authorized adminstudionewproject",
+              "nested": {
+                "type": "list",
+                "ordered": false,
+                "items": [
+                  {
+                    "text": "Wait a little longer and try again",
+                    "nested": null
+                  }
+                ]
+              }
+            }
+          ]
         }
       ]
     },
     {
-      "type": "paragraph",
-      "text": "Also some specific reading may help"
-    },
-    {
-      "type": "list",
-      "ordered": false,
-      "items": [
+      "heading": {
+        "level": 2,
+        "text": "Help with Game development or setup",
+        "id": "Help_with_Game_development_or_setup"
+      },
+      "content": [
         {
-          "text": "Studio development setup including sftp issues - Tools and tips of BGA Studio",
-          "nested": null
+          "type": "paragraph",
+          "text": "If you stuck or looking for help in regards to development (even if you think there is bug in framework) please contact fellow developers first before attempting to contact any of admins"
         },
         {
-          "text": "Debugging - Practical debugging",
-          "nested": null
+          "type": "list",
+          "ordered": false,
+          "items": [
+            {
+              "text": "Google it, you may find an answer unrelated to BGA",
+              "nested": null
+            },
+            {
+              "text": "Post question of DISCORD chat server for BGA developers (invite link https://discord.gg/YxEUacY ). Game authors and publishers can also go there to ask about digital adaptations. Do not go there if you are a non-developer BGA player, but feel free to check out unofficial BGA user servers (at your own risk)",
+              "nested": null
+            },
+            {
+              "text": "Search and/or post on Development forum",
+              "nested": null
+            },
+            {
+              "text": "If you think there is bug in studio or APIs check these bugs Bug tracking system FOR STUDIO issues and APIs . You can also submit a bug there",
+              "nested": null
+            }
+          ]
         },
         {
-          "text": "Completely Stuck - Troubleshooting",
-          "nested": null
+          "type": "paragraph",
+          "text": "Also some specific reading may help"
         },
         {
-          "text": "Anything else - Studio",
-          "nested": null
+          "type": "list",
+          "ordered": false,
+          "items": [
+            {
+              "text": "Studio development setup including sftp issues - Tools and tips of BGA Studio",
+              "nested": null
+            },
+            {
+              "text": "Debugging - Practical debugging",
+              "nested": null
+            },
+            {
+              "text": "Completely Stuck - Troubleshooting",
+              "nested": null
+            },
+            {
+              "text": "Anything else - Studio",
+              "nested": null
+            }
+          ]
         }
       ]
     },
     {
-      "type": "list",
-      "ordered": false,
-      "items": [
+      "heading": {
+        "level": 2,
+        "text": "Help with Game assets or licenses",
+        "id": "Help_with_Game_assets_or_licenses"
+      },
+      "content": [
         {
-          "text": "https://studio.boardgamearena.com/licensing",
-          "nested": null
-        },
-        {
-          "text": "Graphics help https://en.doc.boardgamearena.com/Game_art:_img_directory",
-          "nested": null
-        },
-        {
-          "text": "Request game assets (graphics) - https://studio.boardgamearena.com/support",
-          "nested": null
+          "type": "list",
+          "ordered": false,
+          "items": [
+            {
+              "text": "https://studio.boardgamearena.com/licensing",
+              "nested": null
+            },
+            {
+              "text": "Graphics help https://en.doc.boardgamearena.com/Game_art:_img_directory",
+              "nested": null
+            },
+            {
+              "text": "Request game assets (graphics) - https://studio.boardgamearena.com/support",
+              "nested": null
+            }
+          ]
         }
       ]
     },
     {
-      "type": "paragraph",
-      "text": "You can file a request that will land in the BGA ticketing system from the studio support page ."
+      "heading": {
+        "level": 2,
+        "text": "Last resort",
+        "id": "Last_resort"
+      },
+      "content": [
+        {
+          "type": "paragraph",
+          "text": "You can file a request that will land in the BGA ticketing system from the studio support page ."
+        }
+      ]
     }
   ],
   "links": [
@@ -368,7 +390,7 @@
   "images": [],
   "metadata": {
     "extractor_version": "1.0.0",
-    "extracted_at": "2026-07-06T06:53:17.279072+00:00",
+    "extracted_at": "2026-07-06T08:38:33.400318+00:00",
     "word_count": 126,
     "heading_count": 6,
     "code_block_count": 0,

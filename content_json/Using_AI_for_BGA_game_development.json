@@ -3,126 +3,141 @@
   "source_file": "Using_AI_for_BGA_game_development.html",
   "relative_path": "Using_AI_for_BGA_game_development.html",
   "content_json_path": "content_json/Using_AI_for_BGA_game_development.json",
-  "headings": [
+  "sections": [
     {
-      "level": 2,
-      "text": "Overview",
-      "id": "Overview"
-    },
-    {
-      "level": 2,
-      "text": "Setup",
-      "id": "Setup"
-    },
-    {
-      "level": 2,
-      "text": "Skills",
-      "id": "Skills"
-    }
-  ],
-  "content": [
-    {
-      "type": "paragraph",
-      "text": "This page is to share resources and advice about using AI for BGA development."
-    },
-    {
-      "type": "paragraph",
-      "text": "At the point of writing (Apr 2026) there is no model that can successfully code meaningful game completely using BGA framework. But AI can be used for a lot of tasks, examples of usages:"
-    },
-    {
-      "type": "list",
-      "ordered": false,
-      "items": [
+      "heading": null,
+      "content": [
         {
-          "text": "Generating boilerplate code",
-          "nested": null
-        },
-        {
-          "text": "Translating game rules from a rulebook into structured game logic and state machines",
-          "nested": null
-        },
-        {
-          "text": "Writing and maintaining unit tests for game operations",
-          "nested": null
-        },
-        {
-          "text": "Converting game material (cards, tokens, boards) from spreadsheets into PHP data structures",
-          "nested": null
-        },
-        {
-          "text": "Debugging complex state machine flows by analyzing execution traces",
-          "nested": null
-        },
-        {
-          "text": "Refactoring repetitive patterns across multiple operation classes",
-          "nested": null
-        },
-        {
-          "text": "Writing client-side UI code (TypeScript/JS) for token rendering and animations",
-          "nested": null
-        },
-        {
-          "text": "Reviewing code for common BGA framework pitfalls and anti-patterns",
-          "nested": null
-        },
-        {
-          "text": "Generating CSS/SCSS for card layouts and sprite positioning from asset images",
-          "nested": null
-        },
-        {
-          "text": "Explaining unfamiliar parts of the BGA framework or existing codebase",
-          "nested": null
+          "type": "paragraph",
+          "text": "This page is to share resources and advice about using AI for BGA development."
         }
       ]
     },
     {
-      "type": "paragraph",
-      "text": "To set up AI for success you need to add some documentation to your project, I suggest to use misc/docs folder. In addition you can run something like /init command to create initial AI document which it will use for your project."
-    },
-    {
-      "type": "list",
-      "ordered": false,
-      "items": [
+      "heading": {
+        "level": 2,
+        "text": "Overview",
+        "id": "Overview"
+      },
+      "content": [
         {
-          "text": "CLAUDE.md (or AI.md) - top-level project instructions that AI tools read automatically (would be in root of project)",
-          "nested": null
+          "type": "paragraph",
+          "text": "At the point of writing (Apr 2026) there is no model that can successfully code meaningful game completely using BGA framework. But AI can be used for a lot of tasks, examples of usages:"
         },
         {
-          "text": "RULES.md - exact rules converted from PDF (you can use AI to do that too. Make sure it is NOT summarized)",
-          "nested": null
-        },
-        {
-          "text": "DESIGN.md - design of your game (software design) - if it does not exist ask AI to create software design document",
-          "nested": null
-        },
-        {
-          "text": "PROCEDURES.md - add workflows that you want AI to follow (can reference explicit skills)",
-          "nested": null
-        },
-        {
-          "text": "PLAN.md - implementation plan (when game is not complete)",
-          "nested": null
-        },
-        {
-          "text": "TODO.md - todo list (when game is complete but few things left)",
-          "nested": null
-        },
-        {
-          "text": "ASSETS.md - asset pipeline documentation (PDF sources, sprite sheets, conversion steps, sounds, fonts)",
-          "nested": null
+          "type": "list",
+          "ordered": false,
+          "items": [
+            {
+              "text": "Generating boilerplate code",
+              "nested": null
+            },
+            {
+              "text": "Translating game rules from a rulebook into structured game logic and state machines",
+              "nested": null
+            },
+            {
+              "text": "Writing and maintaining unit tests for game operations",
+              "nested": null
+            },
+            {
+              "text": "Converting game material (cards, tokens, boards) from spreadsheets into PHP data structures",
+              "nested": null
+            },
+            {
+              "text": "Debugging complex state machine flows by analyzing execution traces",
+              "nested": null
+            },
+            {
+              "text": "Refactoring repetitive patterns across multiple operation classes",
+              "nested": null
+            },
+            {
+              "text": "Writing client-side UI code (TypeScript/JS) for token rendering and animations",
+              "nested": null
+            },
+            {
+              "text": "Reviewing code for common BGA framework pitfalls and anti-patterns",
+              "nested": null
+            },
+            {
+              "text": "Generating CSS/SCSS for card layouts and sprite positioning from asset images",
+              "nested": null
+            },
+            {
+              "text": "Explaining unfamiliar parts of the BGA framework or existing codebase",
+              "nested": null
+            }
+          ]
         }
       ]
     },
     {
-      "type": "paragraph",
-      "text": "The best way to save the workflows is to use skills. If you developed some AI skills I suggest sharing it here by providing link to git repo"
+      "heading": {
+        "level": 2,
+        "text": "Setup",
+        "id": "Setup"
+      },
+      "content": [
+        {
+          "type": "paragraph",
+          "text": "To set up AI for success you need to add some documentation to your project, I suggest to use misc/docs folder. In addition you can run something like /init command to create initial AI document which it will use for your project."
+        },
+        {
+          "type": "list",
+          "ordered": false,
+          "items": [
+            {
+              "text": "CLAUDE.md (or AI.md) - top-level project instructions that AI tools read automatically (would be in root of project)",
+              "nested": null
+            },
+            {
+              "text": "RULES.md - exact rules converted from PDF (you can use AI to do that too. Make sure it is NOT summarized)",
+              "nested": null
+            },
+            {
+              "text": "DESIGN.md - design of your game (software design) - if it does not exist ask AI to create software design document",
+              "nested": null
+            },
+            {
+              "text": "PROCEDURES.md - add workflows that you want AI to follow (can reference explicit skills)",
+              "nested": null
+            },
+            {
+              "text": "PLAN.md - implementation plan (when game is not complete)",
+              "nested": null
+            },
+            {
+              "text": "TODO.md - todo list (when game is complete but few things left)",
+              "nested": null
+            },
+            {
+              "text": "ASSETS.md - asset pipeline documentation (PDF sources, sprite sheets, conversion steps, sounds, fonts)",
+              "nested": null
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "heading": {
+        "level": 2,
+        "text": "Skills",
+        "id": "Skills"
+      },
+      "content": [
+        {
+          "type": "paragraph",
+          "text": "The best way to save the workflows is to use skills. If you developed some AI skills I suggest sharing it here by providing link to git repo"
+        }
+      ]
     }
   ],
   "links": [],
   "images": [],
   "metadata": {
     "extractor_version": "1.0.0",
-    "extracted_at": "2026-07-06T06:53:17.696844+00:00",
+    "extracted_at": "2026-07-06T08:38:33.779806+00:00",
     "word_count": 118,
     "heading_count": 3,
     "code_block_count": 0,

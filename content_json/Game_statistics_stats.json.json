@@ -3,162 +3,185 @@
   "source_file": "Game_statistics_stats.json.html",
   "relative_path": "Game_statistics_stats.json.html",
   "content_json_path": "content_json/Game_statistics_stats.json.json",
-  "headings": [
+  "sections": [
     {
-      "level": 3,
-      "text": "File Structure",
-      "id": "File_Structure"
-    },
-    {
-      "level": 3,
-      "text": "Generate PHP initialization",
-      "id": "Generate_PHP_initialization"
-    },
-    {
-      "level": 3,
-      "text": "Labeled stats",
-      "id": "Labeled_stats"
-    },
-    {
-      "level": 3,
-      "text": "Limited access stats",
-      "id": "Limited_access_stats"
-    },
-    {
-      "level": 3,
-      "text": "Translations",
-      "id": "Translations"
-    }
-  ],
-  "content": [
-    {
-      "type": "paragraph",
-      "text": "In this file, you are describing game statistics, that will be displayed at the end of the game."
-    },
-    {
-      "type": "paragraph",
-      "text": "There are 2 types of statistics:"
-    },
-    {
-      "type": "list",
-      "ordered": false,
-      "items": [
+      "heading": null,
+      "content": [
         {
-          "text": "table statistics, that are not associated to a specific player (i.e.: one value for each game).",
-          "nested": null
-        },
-        {
-          "text": "player statistics, that are associated to each players (i.e.: one value for each player in the game).",
-          "nested": null
+          "type": "paragraph",
+          "text": "In this file, you are describing game statistics, that will be displayed at the end of the game."
         }
       ]
     },
     {
-      "type": "paragraph",
-      "text": "Statistics types can be \"int\" for integer, \"float\" for floating point values, and \"bool\" for boolean."
-    },
-    {
-      "type": "paragraph",
-      "text": "If you want to skip some of your statistics according to game variants, do not init it, or call set or inc on it. It will be displayed as \"-\" (instead of 0 if you init it and don't update it afterwards)"
-    },
-    {
-      "type": "paragraph",
-      "text": "If your game is already public on BGA, please read the following before any change: https://en.doc.boardgamearena.com/Post-release_phase#Changes_that_breaks_the_games_in_progress"
-    },
-    {
-      "type": "list",
-      "ordered": false,
-      "items": [
+      "heading": {
+        "level": 3,
+        "text": "File Structure",
+        "id": "File_Structure"
+      },
+      "content": [
         {
-          "text": "Statistic index is the reference used in set/inc/init PHP method",
-          "nested": null
+          "type": "paragraph",
+          "text": "There are 2 types of statistics:"
         },
         {
-          "text": "Statistic index must contains alphanumerical characters and no space. Example: 'turn_played'",
-          "nested": null
+          "type": "list",
+          "ordered": false,
+          "items": [
+            {
+              "text": "table statistics, that are not associated to a specific player (i.e.: one value for each game).",
+              "nested": null
+            },
+            {
+              "text": "player statistics, that are associated to each players (i.e.: one value for each player in the game).",
+              "nested": null
+            }
+          ]
         },
         {
-          "text": "Statistics IDs must be >=10",
-          "nested": null
+          "type": "paragraph",
+          "text": "Statistics types can be \"int\" for integer, \"float\" for floating point values, and \"bool\" for boolean."
         },
         {
-          "text": "Two table statistics can't share the same ID, two player statistics can't share the same ID",
-          "nested": null
+          "type": "paragraph",
+          "text": "If you want to skip some of your statistics according to game variants, do not init it, or call set or inc on it. It will be displayed as \"-\" (instead of 0 if you init it and don't update it afterwards)"
         },
         {
-          "text": "A table statistic can have the same ID as a player statistics, however its not recommended unless it is same conceptually (like turns_number is same statistic in both per table and per player)",
-          "nested": null
+          "type": "paragraph",
+          "text": "If your game is already public on BGA, please read the following before any change: https://en.doc.boardgamearena.com/Post-release_phase#Changes_that_breaks_the_games_in_progress"
         },
         {
-          "text": "Statistics ID is the reference used by BGA website. If you change the ID, you lost all historical statistic data. Do NOT re-use an ID of a deleted statistic.",
-          "nested": null
+          "type": "list",
+          "ordered": false,
+          "items": [
+            {
+              "text": "Statistic index is the reference used in set/inc/init PHP method",
+              "nested": null
+            },
+            {
+              "text": "Statistic index must contains alphanumerical characters and no space. Example: 'turn_played'",
+              "nested": null
+            },
+            {
+              "text": "Statistics IDs must be >=10",
+              "nested": null
+            },
+            {
+              "text": "Two table statistics can't share the same ID, two player statistics can't share the same ID",
+              "nested": null
+            },
+            {
+              "text": "A table statistic can have the same ID as a player statistics, however its not recommended unless it is same conceptually (like turns_number is same statistic in both per table and per player)",
+              "nested": null
+            },
+            {
+              "text": "Statistics ID is the reference used by BGA website. If you change the ID, you lost all historical statistic data. Do NOT re-use an ID of a deleted statistic.",
+              "nested": null
+            },
+            {
+              "text": "Statistic name is the English description of the statistic as shown to players",
+              "nested": null
+            },
+            {
+              "text": "The order in which the stats will appear in the endscreen is determined by the order in the array, NOT by the ID. That is helpful for stats which getting added later but need to be higher up in the list.",
+              "nested": null
+            },
+            {
+              "text": "Statistic names and labels are automatically added to the translations system, so there is no need to wrap them in totranslate() calls",
+              "nested": null
+            },
+            {
+              "text": "Previously, this was a PHP file (stats.inc.php). You can continue to use this format for old projects. ( Note : once a game has been committed with a `stats.json` file, it is not possible to go back without admin intervention.",
+              "nested": null
+            },
+            {
+              "text": "(Number of table statistics) + (Number of player statistics × Maximum number of players) should not exceed ~930, or the game will crash. (Note: the maximum limit is not precise - Seems having stats around 980 broke the game, but reducing to around 930 solved this)",
+              "nested": null
+            }
+          ]
         },
         {
-          "text": "Statistic name is the English description of the statistic as shown to players",
-          "nested": null
-        },
-        {
-          "text": "The order in which the stats will appear in the endscreen is determined by the order in the array, NOT by the ID. That is helpful for stats which getting added later but need to be higher up in the list.",
-          "nested": null
-        },
-        {
-          "text": "Statistic names and labels are automatically added to the translations system, so there is no need to wrap them in totranslate() calls",
-          "nested": null
-        },
-        {
-          "text": "Previously, this was a PHP file (stats.inc.php). You can continue to use this format for old projects. ( Note : once a game has been committed with a `stats.json` file, it is not possible to go back without admin intervention.",
-          "nested": null
-        },
-        {
-          "text": "(Number of table statistics) + (Number of player statistics × Maximum number of players) should not exceed ~930, or the game will crash. (Note: the maximum limit is not precise - Seems having stats around 980 broke the game, but reducing to around 930 solved this)",
-          "nested": null
+          "type": "code",
+          "language": null,
+          "text": " {\n   \"table\": {\n     \"turns_number\": {\n       \"id\": 10,\n       \"name\": \"Number of turns\",\n       \"type\": \"int\"\n     }\n   },\n   \"player\": {\n     \"turns_number\": {\n       \"id\": 10,\n       \"name\": \"Number of turns\",\n       \"type\": \"int\"\n     },\n     \"player_teststat1\": {\n       \"id\": 11,\n       \"name\": \"player test stat 1\",\n       \"type\": \"int\"\n     },\n     \"player_teststat2\": {\n       \"id\": 12,\n       \"name\": \"player test stat 2\",\n       \"type\": \"float\"\n     }\n   }\n }"
         }
       ]
     },
     {
-      "type": "code",
-      "language": null,
-      "text": " {\n   \"table\": {\n     \"turns_number\": {\n       \"id\": 10,\n       \"name\": \"Number of turns\",\n       \"type\": \"int\"\n     }\n   },\n   \"player\": {\n     \"turns_number\": {\n       \"id\": 10,\n       \"name\": \"Number of turns\",\n       \"type\": \"int\"\n     },\n     \"player_teststat1\": {\n       \"id\": 11,\n       \"name\": \"player test stat 1\",\n       \"type\": \"int\"\n     },\n     \"player_teststat2\": {\n       \"id\": 12,\n       \"name\": \"player test stat 2\",\n       \"type\": \"float\"\n     }\n   }\n }"
+      "heading": {
+        "level": 3,
+        "text": "Generate PHP initialization",
+        "id": "Generate_PHP_initialization"
+      },
+      "content": [
+        {
+          "type": "paragraph",
+          "text": "In the Chrome DevTool console (F12), write"
+        },
+        {
+          "type": "code",
+          "language": null,
+          "text": "stats = <Ctrl+V of the content of your stats.json file>\n\n['table', 'player'].map(type => `$this->${type}Stats->init([${Object.keys(stats[type]).map(key => `'${key}'`).join(',')}], 0);`).join('\\n')"
+        },
+        {
+          "type": "paragraph",
+          "text": "Then on the result string do right click > Copy string content and paste it in your PHP setupNewGame function (this is assuming you want to init all your stats to 0)."
+        },
+        {
+          "type": "code",
+          "language": null,
+          "text": "['table', 'player'].map(type => Object.keys(stats[type]).map(key => `$this->${type}Stats->inc('${key}', 1${type === 'player' ? ', $playerId' : ''});`).join('\\n')).join('\\n')"
+        }
+      ]
     },
     {
-      "type": "paragraph",
-      "text": "In the Chrome DevTool console (F12), write"
+      "heading": {
+        "level": 3,
+        "text": "Labeled stats",
+        "id": "Labeled_stats"
+      },
+      "content": [
+        {
+          "type": "paragraph",
+          "text": "Sometimes you may want to display a label instead of a number (for instance if you want to indicate the winning faction as a table statistic, and the faction chosen by each player as a player statistic in a game like Terra Mystica)."
+        },
+        {
+          "type": "code",
+          "language": null,
+          "text": "{\n  \"table\": {\n    \"winning_race\": {\n      \"id\": 11,\n      \"name\": \"Winning race\",\n      \"type\": \"int\"\n    },\n  },\n  \"value_labels\": {\n    \"11\": [\n      \"None (or tied)\",\n      \"Auren\",\n      \"Witches\",\n      \"Fakirs\",\n      \"Nomads\",\n      \"Chaos Magicians\",\n      \"Giants\",\n      \"Swarmlings\",\n      \"Mermaids\",\n      \"Dwarves\",\n      \"Engineers\",\n      \"Halflings\",\n      \"Cultists\",\n      \"Alchemists\",\n      \"Darklings\"\n    ]\n  }\n}"
+        }
+      ]
     },
     {
-      "type": "code",
-      "language": null,
-      "text": "stats = <Ctrl+V of the content of your stats.json file>\n\n['table', 'player'].map(type => `$this->${type}Stats->init([${Object.keys(stats[type]).map(key => `'${key}'`).join(',')}], 0);`).join('\\n')"
+      "heading": {
+        "level": 3,
+        "text": "Limited access stats",
+        "id": "Limited_access_stats"
+      },
+      "content": [
+        {
+          "type": "paragraph",
+          "text": "If you want to consider some internal game statistics for game developer, publisher or admins's purpose only, simply add the following extra property : \"display\" => \"limited\". For instance :"
+        },
+        {
+          "type": "code",
+          "language": null,
+          "text": "{\n  \"player_teststat2\": {\n    \"id\": 12,\n    \"name\": \"player test stat 2\",\n    \"type\": \"float\",\n    \"display\": \"limited\"\n  }\n}"
+        }
+      ]
     },
     {
-      "type": "paragraph",
-      "text": "Then on the result string do right click > Copy string content and paste it in your PHP setupNewGame function (this is assuming you want to init all your stats to 0)."
-    },
-    {
-      "type": "code",
-      "language": null,
-      "text": "['table', 'player'].map(type => Object.keys(stats[type]).map(key => `$this->${type}Stats->inc('${key}', 1${type === 'player' ? ', $playerId' : ''});`).join('\\n')).join('\\n')"
-    },
-    {
-      "type": "paragraph",
-      "text": "Sometimes you may want to display a label instead of a number (for instance if you want to indicate the winning faction as a table statistic, and the faction chosen by each player as a player statistic in a game like Terra Mystica)."
-    },
-    {
-      "type": "code",
-      "language": null,
-      "text": "{\n  \"table\": {\n    \"winning_race\": {\n      \"id\": 11,\n      \"name\": \"Winning race\",\n      \"type\": \"int\"\n    },\n  },\n  \"value_labels\": {\n    \"11\": [\n      \"None (or tied)\",\n      \"Auren\",\n      \"Witches\",\n      \"Fakirs\",\n      \"Nomads\",\n      \"Chaos Magicians\",\n      \"Giants\",\n      \"Swarmlings\",\n      \"Mermaids\",\n      \"Dwarves\",\n      \"Engineers\",\n      \"Halflings\",\n      \"Cultists\",\n      \"Alchemists\",\n      \"Darklings\"\n    ]\n  }\n}"
-    },
-    {
-      "type": "paragraph",
-      "text": "If you want to consider some internal game statistics for game developer, publisher or admins's purpose only, simply add the following extra property : \"display\" => \"limited\". For instance :"
-    },
-    {
-      "type": "code",
-      "language": null,
-      "text": "{\n  \"player_teststat2\": {\n    \"id\": 12,\n    \"name\": \"player test stat 2\",\n    \"type\": \"float\",\n    \"display\": \"limited\"\n  }\n}"
-    },
-    {
-      "type": "paragraph",
-      "text": "Note that any name or value_labels text in these JSON files are automatically added to the translation system, even though they aren't wrapped in totranslate() calls."
+      "heading": {
+        "level": 3,
+        "text": "Translations",
+        "id": "Translations"
+      },
+      "content": [
+        {
+          "type": "paragraph",
+          "text": "Note that any name or value_labels text in these JSON files are automatically added to the translation system, even though they aren't wrapped in totranslate() calls."
+        }
+      ]
     }
   ],
   "links": [
@@ -170,7 +193,7 @@
   "images": [],
   "metadata": {
     "extractor_version": "1.0.0",
-    "extracted_at": "2026-07-06T06:53:17.412459+00:00",
+    "extracted_at": "2026-07-06T08:38:33.530339+00:00",
     "word_count": 376,
     "heading_count": 5,
     "code_block_count": 5,

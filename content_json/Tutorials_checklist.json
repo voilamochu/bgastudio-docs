@@ -3,155 +3,166 @@
   "source_file": "Tutorials_checklist.html",
   "relative_path": "Tutorials_checklist.html",
   "content_json_path": "content_json/Tutorials_checklist.json",
-  "headings": [
+  "sections": [
     {
-      "level": 2,
-      "text": "Publishing Tutorials",
-      "id": "Publishing_Tutorials"
-    },
-    {
-      "level": 2,
-      "text": "Tutorial Game release override",
-      "id": "Tutorial_Game_release_override"
-    }
-  ],
-  "content": [
-    {
-      "type": "paragraph",
-      "text": "In order to allow for a full-fledged tutorial to be built for the game you have adapted on BGA studio:"
-    },
-    {
-      "type": "list",
-      "ordered": true,
-      "items": [
+      "heading": null,
+      "content": [
         {
-          "text": "the game replay archive generated for the game must be valid (you should be able to run the replay from start to finish without errors using the \"Replay game\" function on a finished table)",
-          "nested": null
+          "type": "paragraph",
+          "text": "In order to allow for a full-fledged tutorial to be built for the game you have adapted on BGA studio:"
         },
         {
-          "text": "each action of the replay should be replayable by triggering it manually (i.e. by reproducing the exact same sequence as done played originally during the game",
-          "nested": null
+          "type": "list",
+          "ordered": true,
+          "items": [
+            {
+              "text": "the game replay archive generated for the game must be valid (you should be able to run the replay from start to finish without errors using the \"Replay game\" function on a finished table)",
+              "nested": null
+            },
+            {
+              "text": "each action of the replay should be replayable by triggering it manually (i.e. by reproducing the exact same sequence as done played originally during the game",
+              "nested": null
+            },
+            {
+              "text": "each element of the game interface should be available for attaching a comment or a highlight component on it.",
+              "nested": null
+            }
+          ]
         },
         {
-          "text": "each element of the game interface should be available for attaching a comment or a highlight component on it.",
-          "nested": null
+          "type": "paragraph",
+          "text": "You can read more about building tutorials in practice here: https://boardgamearena.com/tutorialfaq"
+        },
+        {
+          "type": "list",
+          "ordered": false,
+          "items": [
+            {
+              "text": "that you have triggered this.ajaxcall() / this.bgaPerformAction() programmatically in a notification handling function or a callback instead of only on a user interface action.",
+              "nested": null
+            },
+            {
+              "text": "or (for 2) ), that there are several way to trigger the next action with different URL/arguments. You should make sure that the same game actions are triggered with the same \"ajaxcall\"  / \"bgaPerformAction\" whatever the UX path used.",
+              "nested": null
+            }
+          ]
+        },
+        {
+          "type": "paragraph",
+          "text": "If a player trying to create a tutorial reports you an issue about 3):"
+        },
+        {
+          "type": "list",
+          "ordered": false,
+          "items": [
+            {
+              "text": "you might have some overlapping elements preventing to access the \"div\" tag of an important interface element to attach tutorial content to it.",
+              "nested": null
+            },
+            {
+              "text": "you might have some missing \"ID\" on elements of the interface, preventing the tutorial author to attach elements to them.",
+              "nested": null
+            }
+          ]
         }
       ]
     },
     {
-      "type": "paragraph",
-      "text": "You can read more about building tutorials in practice here: https://boardgamearena.com/tutorialfaq"
-    },
-    {
-      "type": "list",
-      "ordered": false,
-      "items": [
+      "heading": {
+        "level": 2,
+        "text": "Publishing Tutorials",
+        "id": "Publishing_Tutorials"
+      },
+      "content": [
         {
-          "text": "that you have triggered this.ajaxcall() / this.bgaPerformAction() programmatically in a notification handling function or a callback instead of only on a user interface action.",
-          "nested": null
+          "type": "paragraph",
+          "text": "Tutorials, in general, are only published if they satisfy these conditions:"
         },
         {
-          "text": "or (for 2) ), that there are several way to trigger the next action with different URL/arguments. You should make sure that the same game actions are triggered with the same \"ajaxcall\"  / \"bgaPerformAction\" whatever the UX path used.",
-          "nested": null
+          "type": "list",
+          "ordered": false,
+          "items": [
+            {
+              "text": "They have an average rating of 4.2 or higher",
+              "nested": null
+            },
+            {
+              "text": "They have been rated at least 10 times (for moving to BETA)",
+              "nested": null
+            },
+            {
+              "text": "They have been rated at least 100 times (for moving to LIVE)",
+              "nested": null
+            }
+          ]
+        },
+        {
+          "type": "paragraph",
+          "text": "If a tutorial should be published, but does not meet these requirements, the help of a BGA admin is required."
         }
       ]
     },
     {
-      "type": "paragraph",
-      "text": "If a player trying to create a tutorial reports you an issue about 3):"
-    },
-    {
-      "type": "list",
-      "ordered": false,
-      "items": [
+      "heading": {
+        "level": 2,
+        "text": "Tutorial Game release override",
+        "id": "Tutorial_Game_release_override"
+      },
+      "content": [
         {
-          "text": "you might have some overlapping elements preventing to access the \"div\" tag of an important interface element to attach tutorial content to it.",
-          "nested": null
+          "type": "paragraph",
+          "text": "In case someone already wrote a tutorial that did not work well because something small must be changed in the game adaptation code, it may be possible to make the existing tutorial works with a newer version of the game adaptation."
         },
         {
-          "text": "you might have some missing \"ID\" on elements of the interface, preventing the tutorial author to attach elements to them.",
-          "nested": null
+          "type": "list",
+          "ordered": false,
+          "items": [
+            {
+              "text": "You wrote 90% of a tutorial for game Carcassonne, based on a game replay which is using BGA version V1.",
+              "nested": null
+            },
+            {
+              "text": "Because of a problem in the game adaptation, you cannot write the remaining 10%.",
+              "nested": null
+            },
+            {
+              "text": "The developer of the Carcassonne adaptation fixes the issue in a new version of Carcassonne for BGA: version V2.",
+              "nested": null
+            },
+            {
+              "text": "You will have to rewrite the entire tutorial using a replay based on a game played with this new version V2.",
+              "nested": null
+            },
+            {
+              "text": "HOWEVER, using Tutorial game release override, you can ask a BGA admin to switch your tutorial to the newer version of the game.",
+              "nested": null
+            }
+          ]
+        },
+        {
+          "type": "note",
+          "variant": "warning",
+          "text": "Important: This can only works if the game release updates are limited. To be more specific: the new version must be compatible with the moves notifications sent by the previous version. For example, if on the new version you expect on Client side a new parameter in a move notification, the version override will just break the replay and make your tutorial unplayable."
+        },
+        {
+          "type": "list",
+          "ordered": false,
+          "items": [
+            {
+              "text": "The tutorial ID (you must be the tutorial author or the game adaptation developer)",
+              "nested": null
+            },
+            {
+              "text": "The game version that the tutorial should use",
+              "nested": null
+            }
+          ]
+        },
+        {
+          "type": "paragraph",
+          "text": "If you're the game dev, you can change the version used by the tutorial by clicking \"Tutorials\" on the Game Metadata Manager then : [image: Tutorial override gameversion.png] After changing the version, make sure the tutorial still works. If it doesn't, repoen this popin and save with an empty value, it will reset the game version used by the tutorial to its original one."
         }
       ]
-    },
-    {
-      "type": "paragraph",
-      "text": "Tutorials, in general, are only published if they satisfy these conditions:"
-    },
-    {
-      "type": "list",
-      "ordered": false,
-      "items": [
-        {
-          "text": "They have an average rating of 4.2 or higher",
-          "nested": null
-        },
-        {
-          "text": "They have been rated at least 10 times (for moving to BETA)",
-          "nested": null
-        },
-        {
-          "text": "They have been rated at least 100 times (for moving to LIVE)",
-          "nested": null
-        }
-      ]
-    },
-    {
-      "type": "paragraph",
-      "text": "If a tutorial should be published, but does not meet these requirements, the help of a BGA admin is required."
-    },
-    {
-      "type": "paragraph",
-      "text": "In case someone already wrote a tutorial that did not work well because something small must be changed in the game adaptation code, it may be possible to make the existing tutorial works with a newer version of the game adaptation."
-    },
-    {
-      "type": "list",
-      "ordered": false,
-      "items": [
-        {
-          "text": "You wrote 90% of a tutorial for game Carcassonne, based on a game replay which is using BGA version V1.",
-          "nested": null
-        },
-        {
-          "text": "Because of a problem in the game adaptation, you cannot write the remaining 10%.",
-          "nested": null
-        },
-        {
-          "text": "The developer of the Carcassonne adaptation fixes the issue in a new version of Carcassonne for BGA: version V2.",
-          "nested": null
-        },
-        {
-          "text": "You will have to rewrite the entire tutorial using a replay based on a game played with this new version V2.",
-          "nested": null
-        },
-        {
-          "text": "HOWEVER, using Tutorial game release override, you can ask a BGA admin to switch your tutorial to the newer version of the game.",
-          "nested": null
-        }
-      ]
-    },
-    {
-      "type": "note",
-      "variant": "warning",
-      "text": "Important: This can only works if the game release updates are limited. To be more specific: the new version must be compatible with the moves notifications sent by the previous version. For example, if on the new version you expect on Client side a new parameter in a move notification, the version override will just break the replay and make your tutorial unplayable."
-    },
-    {
-      "type": "list",
-      "ordered": false,
-      "items": [
-        {
-          "text": "The tutorial ID (you must be the tutorial author or the game adaptation developer)",
-          "nested": null
-        },
-        {
-          "text": "The game version that the tutorial should use",
-          "nested": null
-        }
-      ]
-    },
-    {
-      "type": "paragraph",
-      "text": "If you're the game dev, you can change the version used by the tutorial by clicking \"Tutorials\" on the Game Metadata Manager then : [image: Tutorial override gameversion.png] After changing the version, make sure the tutorial still works. If it doesn't, repoen this popin and save with an empty value, it will reset the game version used by the tutorial to its original one."
     }
   ],
   "links": [
@@ -160,24 +171,19 @@
       "url": "https://boardgamearena.com/tutorialfaq"
     },
     {
-      "text": "Tutorial override gameversion.png",
+      "text": "[image: Tutorial override gameversion.png]",
       "url": "File:Tutorial_override_gameversion.png.html"
     }
   ],
-  "images": [
-    {
-      "src": "/images/0/00/Tutorial_override_gameversion.png",
-      "alt": "Tutorial override gameversion.png"
-    }
-  ],
+  "images": [],
   "metadata": {
     "extractor_version": "1.0.0",
-    "extracted_at": "2026-07-06T06:53:17.693354+00:00",
+    "extracted_at": "2026-07-06T08:38:33.777120+00:00",
     "word_count": 244,
     "heading_count": 2,
     "code_block_count": 0,
     "table_count": 0,
-    "image_count": 1,
+    "image_count": 0,
     "list_count": 6
   }
 }

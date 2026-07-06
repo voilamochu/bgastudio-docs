@@ -3,261 +3,268 @@
   "source_file": "Compatibility.html",
   "relative_path": "Compatibility.html",
   "content_json_path": "content_json/Compatibility.json",
-  "headings": [
+  "sections": [
     {
-      "level": 2,
-      "text": "Current list",
-      "id": "Current_list"
-    }
-  ],
-  "content": [
-    {
-      "type": "paragraph",
-      "text": "The mainsite is built with compatibility for several old browsers."
+      "heading": null,
+      "content": [
+        {
+          "type": "paragraph",
+          "text": "The mainsite is built with compatibility for several old browsers."
+        },
+        {
+          "type": "paragraph",
+          "text": "There are currently no hard rules about what you should target, but it is recommended to follow the same targets as the mainsite. You can use babel to compile your modern JavaScript code into backwards compatible code. Babel accepts a browserslist targets string, so you can use the targets above."
+        }
+      ]
     },
     {
-      "type": "paragraph",
-      "text": "There are currently no hard rules about what you should target, but it is recommended to follow the same targets as the mainsite. You can use babel to compile your modern JavaScript code into backwards compatible code. Babel accepts a browserslist targets string, so you can use the targets above."
-    },
-    {
-      "type": "paragraph",
-      "text": "As of November 2023, `last 2 versions, not dead, > 0.2%, safari >= 11` corresponds to:"
-    },
-    {
-      "type": "list",
-      "ordered": false,
-      "items": [
+      "heading": {
+        "level": 2,
+        "text": "Current list",
+        "id": "Current_list"
+      },
+      "content": [
         {
-          "text": "and_chr 113",
-          "nested": null
+          "type": "paragraph",
+          "text": "As of November 2023, `last 2 versions, not dead, > 0.2%, safari >= 11` corresponds to:"
         },
         {
-          "text": "and_ff 113",
-          "nested": null
-        },
-        {
-          "text": "and_qq 13.1",
-          "nested": null
-        },
-        {
-          "text": "and_uc 13.4",
-          "nested": null
-        },
-        {
-          "text": "android 113",
-          "nested": null
-        },
-        {
-          "text": "android 4.4.3-4.4.4",
-          "nested": null
-        },
-        {
-          "text": "chrome 113",
-          "nested": null
-        },
-        {
-          "text": "chrome 112",
-          "nested": null
-        },
-        {
-          "text": "chrome 111",
-          "nested": null
-        },
-        {
-          "text": "chrome 110",
-          "nested": null
-        },
-        {
-          "text": "chrome 109",
-          "nested": null
-        },
-        {
-          "text": "chrome 108",
-          "nested": null
-        },
-        {
-          "text": "chrome 103",
-          "nested": null
-        },
-        {
-          "text": "chrome 79",
-          "nested": null
-        },
-        {
-          "text": "edge 113",
-          "nested": null
-        },
-        {
-          "text": "edge 112",
-          "nested": null
-        },
-        {
-          "text": "edge 111",
-          "nested": null
-        },
-        {
-          "text": "firefox 113",
-          "nested": null
-        },
-        {
-          "text": "firefox 112",
-          "nested": null
-        },
-        {
-          "text": "firefox 111",
-          "nested": null
-        },
-        {
-          "text": "ios_saf 16.4",
-          "nested": null
-        },
-        {
-          "text": "ios_saf 16.3",
-          "nested": null
-        },
-        {
-          "text": "ios_saf 16.2",
-          "nested": null
-        },
-        {
-          "text": "ios_saf 16.1",
-          "nested": null
-        },
-        {
-          "text": "ios_saf 16.0",
-          "nested": null
-        },
-        {
-          "text": "ios_saf 15.6",
-          "nested": null
-        },
-        {
-          "text": "ios_saf 15.5",
-          "nested": null
-        },
-        {
-          "text": "ios_saf 14.5-14.8",
-          "nested": null
-        },
-        {
-          "text": "ios_saf 14.0-14.4",
-          "nested": null
-        },
-        {
-          "text": "ios_saf 12.2-12.5",
-          "nested": null
-        },
-        {
-          "text": "kaios 3.0-3.1",
-          "nested": null
-        },
-        {
-          "text": "kaios 2.5",
-          "nested": null
-        },
-        {
-          "text": "op_mini all",
-          "nested": null
-        },
-        {
-          "text": "op_mob 73",
-          "nested": null
-        },
-        {
-          "text": "opera 98",
-          "nested": null
-        },
-        {
-          "text": "opera 97",
-          "nested": null
-        },
-        {
-          "text": "opera 96",
-          "nested": null
-        },
-        {
-          "text": "safari 16.4",
-          "nested": null
-        },
-        {
-          "text": "safari 16.3",
-          "nested": null
-        },
-        {
-          "text": "safari 16.2",
-          "nested": null
-        },
-        {
-          "text": "safari 16.1",
-          "nested": null
-        },
-        {
-          "text": "safari 16.0",
-          "nested": null
-        },
-        {
-          "text": "safari 15.6",
-          "nested": null
-        },
-        {
-          "text": "safari 15.5",
-          "nested": null
-        },
-        {
-          "text": "safari 15.4",
-          "nested": null
-        },
-        {
-          "text": "safari 15.2-15.3",
-          "nested": null
-        },
-        {
-          "text": "safari 15.1",
-          "nested": null
-        },
-        {
-          "text": "safari 15",
-          "nested": null
-        },
-        {
-          "text": "safari 14.1",
-          "nested": null
-        },
-        {
-          "text": "safari 14",
-          "nested": null
-        },
-        {
-          "text": "safari 13.1",
-          "nested": null
-        },
-        {
-          "text": "safari 13",
-          "nested": null
-        },
-        {
-          "text": "safari 12.1",
-          "nested": null
-        },
-        {
-          "text": "safari 12",
-          "nested": null
-        },
-        {
-          "text": "safari 11.1",
-          "nested": null
-        },
-        {
-          "text": "safari 11",
-          "nested": null
-        },
-        {
-          "text": "samsung 20",
-          "nested": null
-        },
-        {
-          "text": "samsung 19.0",
-          "nested": null
+          "type": "list",
+          "ordered": false,
+          "items": [
+            {
+              "text": "and_chr 113",
+              "nested": null
+            },
+            {
+              "text": "and_ff 113",
+              "nested": null
+            },
+            {
+              "text": "and_qq 13.1",
+              "nested": null
+            },
+            {
+              "text": "and_uc 13.4",
+              "nested": null
+            },
+            {
+              "text": "android 113",
+              "nested": null
+            },
+            {
+              "text": "android 4.4.3-4.4.4",
+              "nested": null
+            },
+            {
+              "text": "chrome 113",
+              "nested": null
+            },
+            {
+              "text": "chrome 112",
+              "nested": null
+            },
+            {
+              "text": "chrome 111",
+              "nested": null
+            },
+            {
+              "text": "chrome 110",
+              "nested": null
+            },
+            {
+              "text": "chrome 109",
+              "nested": null
+            },
+            {
+              "text": "chrome 108",
+              "nested": null
+            },
+            {
+              "text": "chrome 103",
+              "nested": null
+            },
+            {
+              "text": "chrome 79",
+              "nested": null
+            },
+            {
+              "text": "edge 113",
+              "nested": null
+            },
+            {
+              "text": "edge 112",
+              "nested": null
+            },
+            {
+              "text": "edge 111",
+              "nested": null
+            },
+            {
+              "text": "firefox 113",
+              "nested": null
+            },
+            {
+              "text": "firefox 112",
+              "nested": null
+            },
+            {
+              "text": "firefox 111",
+              "nested": null
+            },
+            {
+              "text": "ios_saf 16.4",
+              "nested": null
+            },
+            {
+              "text": "ios_saf 16.3",
+              "nested": null
+            },
+            {
+              "text": "ios_saf 16.2",
+              "nested": null
+            },
+            {
+              "text": "ios_saf 16.1",
+              "nested": null
+            },
+            {
+              "text": "ios_saf 16.0",
+              "nested": null
+            },
+            {
+              "text": "ios_saf 15.6",
+              "nested": null
+            },
+            {
+              "text": "ios_saf 15.5",
+              "nested": null
+            },
+            {
+              "text": "ios_saf 14.5-14.8",
+              "nested": null
+            },
+            {
+              "text": "ios_saf 14.0-14.4",
+              "nested": null
+            },
+            {
+              "text": "ios_saf 12.2-12.5",
+              "nested": null
+            },
+            {
+              "text": "kaios 3.0-3.1",
+              "nested": null
+            },
+            {
+              "text": "kaios 2.5",
+              "nested": null
+            },
+            {
+              "text": "op_mini all",
+              "nested": null
+            },
+            {
+              "text": "op_mob 73",
+              "nested": null
+            },
+            {
+              "text": "opera 98",
+              "nested": null
+            },
+            {
+              "text": "opera 97",
+              "nested": null
+            },
+            {
+              "text": "opera 96",
+              "nested": null
+            },
+            {
+              "text": "safari 16.4",
+              "nested": null
+            },
+            {
+              "text": "safari 16.3",
+              "nested": null
+            },
+            {
+              "text": "safari 16.2",
+              "nested": null
+            },
+            {
+              "text": "safari 16.1",
+              "nested": null
+            },
+            {
+              "text": "safari 16.0",
+              "nested": null
+            },
+            {
+              "text": "safari 15.6",
+              "nested": null
+            },
+            {
+              "text": "safari 15.5",
+              "nested": null
+            },
+            {
+              "text": "safari 15.4",
+              "nested": null
+            },
+            {
+              "text": "safari 15.2-15.3",
+              "nested": null
+            },
+            {
+              "text": "safari 15.1",
+              "nested": null
+            },
+            {
+              "text": "safari 15",
+              "nested": null
+            },
+            {
+              "text": "safari 14.1",
+              "nested": null
+            },
+            {
+              "text": "safari 14",
+              "nested": null
+            },
+            {
+              "text": "safari 13.1",
+              "nested": null
+            },
+            {
+              "text": "safari 13",
+              "nested": null
+            },
+            {
+              "text": "safari 12.1",
+              "nested": null
+            },
+            {
+              "text": "safari 12",
+              "nested": null
+            },
+            {
+              "text": "safari 11.1",
+              "nested": null
+            },
+            {
+              "text": "safari 11",
+              "nested": null
+            },
+            {
+              "text": "samsung 20",
+              "nested": null
+            },
+            {
+              "text": "samsung 19.0",
+              "nested": null
+            }
+          ]
         }
       ]
     }
@@ -271,7 +278,7 @@
   "images": [],
   "metadata": {
     "extractor_version": "1.0.0",
-    "extracted_at": "2026-07-06T06:53:17.272004+00:00",
+    "extracted_at": "2026-07-06T08:38:33.394500+00:00",
     "word_count": 76,
     "heading_count": 1,
     "code_block_count": 0,

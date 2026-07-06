@@ -3,298 +3,329 @@
   "source_file": "PlayerCounter_and_TableCounter.html",
   "relative_path": "PlayerCounter_and_TableCounter.html",
   "content_json_path": "content_json/PlayerCounter_and_TableCounter.json",
-  "headings": [
+  "sections": [
     {
-      "level": 2,
-      "text": "Overview",
-      "id": "Overview"
-    },
-    {
-      "level": 2,
-      "text": "PlayerCounter",
-      "id": "PlayerCounter"
-    },
-    {
-      "level": 2,
-      "text": "TableCounter",
-      "id": "TableCounter"
-    },
-    {
-      "level": 2,
-      "text": "Default args sent to the notif",
-      "id": "Default_args_sent_to_the_notif"
-    },
-    {
-      "level": 2,
-      "text": "Example",
-      "id": "Example"
-    },
-    {
-      "level": 2,
-      "text": "Listen to counter notification on the client",
-      "id": "Listen_to_counter_notification_on_the_client"
-    },
-    {
-      "level": 2,
-      "text": "Game's default Player Score",
-      "id": "Game.27s_default_Player_Score"
-    }
-  ],
-  "content": [
-    {
-      "type": "paragraph",
-      "text": "Counters allow to manipulate numbers in the game. PlayerCounter is for counters that have a distinct value for each player (for example, the player money). TableCounter is for single values, like current round."
-    },
-    {
-      "type": "paragraph",
-      "text": "They both share similar functions, and they can update automatically the JS counter (see Counter \"create\" parameters)."
-    },
-    {
-      "type": "code",
-      "language": null,
-      "text": "        $this->roundCounter = $this->counterFactory->createTableCounter('round');\n        $this->playerCredits = $this->counterFactory->createPlayerCounter('credits');"
-    },
-    {
-      "type": "paragraph",
-      "text": "Note that by default, they have a min to 0 and no max, but you can change that in the create function."
-    },
-    {
-      "type": "paragraph",
-      "text": "$this->counterFactory->createPlayerCounter(string $name, ?int $min = 0, ?int $max = null, CounterVisibility $visibility = CounterVisibility::VISIBLE, bool $useNo = false, ?bool $strict = null): PlayerCounter"
-    },
-    {
-      "type": "paragraph",
-      "text": "Visibility can be:"
-    },
-    {
-      "type": "list",
-      "ordered": false,
-      "items": [
+      "heading": null,
+      "content": [
         {
-          "text": "public (default): everyone can see the counter values",
-          "nested": null
-        },
-        {
-          "text": "self: only the current player can see the value of their counter, bot not the others (that will display '-')",
-          "nested": null
-        },
-        {
-          "text": "private: nobody can see the counter values (that will display '-')",
-          "nested": null
+          "type": "paragraph",
+          "text": "Counters allow to manipulate numbers in the game. PlayerCounter is for counters that have a distinct value for each player (for example, the player money). TableCounter is for single values, like current round."
         }
       ]
     },
     {
-      "type": "paragraph",
-      "text": "useNo means everytime you use the counter, you will pass player no instead of player id."
-    },
-    {
-      "type": "paragraph",
-      "text": "initDb(array $playerIdsOrNos, int $initialValue = 0)Creates database table if needed (bga_player_counters). Must be called fromsetupNewGame(or if adding to older games inupgradeTableDb).Parameters:array $playerIdsOrNosthe player ids (or player no) having the counter (usually,array_keys($players), but you might want to add 0 for an automata)int $initialValueinitial value, if different than 0"
-    },
-    {
-      "type": "paragraph",
-      "text": "get(int $playerIdOrNo): intReturns the current value of the counter for a player.Parameters:int $playerIdOrNothe player id (or no if useNo: true)Throws:UnknownPlayerExceptionif $playerId is not in the player ids initialized byinitDb"
-    },
-    {
-      "type": "paragraph",
-      "text": "set(int $playerIdOrNo, int $value, ?\\Bga\\GameFramework\\NotificationMessage $message): intSet the value of the counter, and send a notif (of typesetPlayerCounter)to update the value on the front side. Returns the new value.Parameters:int $playerIdOrNothe player id (or no if useNo: true)int $valuethe new value?\\Bga\\GameFramework\\NotificationMessage $messagethe next notif to send to the front. Empty for no log, null for no notif at all (the front will not be updated).Throws:OutOfRangeCounterExceptionif the value is outside the min/maxUnknownPlayerExceptionif $playerId is not in the player ids initialized by initDb"
-    },
-    {
-      "type": "paragraph",
-      "text": "inc(int $playerIdOrNo, int $inc, ?\\Bga\\GameFramework\\NotificationMessage $message): intIncrement the value of the counter, and send a notif (of typesetPlayerCounter)to update the value on the front side. Returns the new value. Note: if the inc is 0, no notif will be sent.Parameters:int $playerIdOrNothe player id (or no if useNo: true)int $incthe value to add to the current value?\\Bga\\GameFramework\\NotificationMessage $messagethe next notif to send to the front. Empty for no log, null for no notif at all (the front will not be updated).Throws:OutOfRangeCounterExceptionif the value is outside the min/maxUnknownPlayerExceptionif $playerId is not in the player ids initialized by initDb"
-    },
-    {
-      "type": "paragraph",
-      "text": "getMin(): intReturns the lowest value."
-    },
-    {
-      "type": "paragraph",
-      "text": "getMax(): intReturns the highest value."
-    },
-    {
-      "type": "paragraph",
-      "text": "getAll(): arrayReturn the values for each player, as an associative array ($playerId or $playerNo) => $value."
-    },
-    {
-      "type": "paragraph",
-      "text": "setAll(int $value, ?\\Bga\\GameFramework\\NotificationMessage $message): intSet the value of the counter for all the players, and send a notif (of typesetPlayerCounterAll)to update the value on the front side. Returns the new value.Parameters:int $valuethe new value?\\Bga\\GameFramework\\NotificationMessage $messagethe next notif to send to the front. Empty for no log, null for no notif at all (the front will not be updated).Throws:OutOfRangeCounterExceptionif the value is outside the min/max"
-    },
-    {
-      "type": "paragraph",
-      "text": "fillResult(array &$result, ?string $fieldName = null, ?int $currentPlayerId = null)Updates the result object, to be used in thegetAllDatasfunction. Will set the value on each$result[\"players\"]sub-array.Parameters:array &$resultthe object to update?string $fieldNamethe field name to set in $result[\"players\"], if different than the counter name.?int $currentPlayerIdthe current player for visibility \"self\"."
-    },
-    {
-      "type": "paragraph",
-      "text": "setVisibility(CounterVisibility $visibility)Set the counter visibility."
-    },
-    {
-      "type": "paragraph",
-      "text": "isVisible()boolReturn if the counter is visible by anyone."
-    },
-    {
-      "type": "paragraph",
-      "text": "isHidden()boolReturn if the counter is invisible."
-    },
-    {
-      "type": "paragraph",
-      "text": "isSelf()boolReturn if the counter is visible by the current player only."
-    },
-    {
-      "type": "paragraph",
-      "text": "setUseNo(bool $useNo)Tell if the counter input will be player no (true) or player id (false)"
-    },
-    {
-      "type": "paragraph",
-      "text": "setStrict(bool $strict)Tell if the counter input will be validated. If true, the counter will trigger an exception if the no or id doesn't exist in the game."
-    },
-    {
-      "type": "paragraph",
-      "text": "initDb(int $initialValue = 0)Creates database table if needed (bga_table_counters). Must be called fromsetupNewGame.Parameters:int $initialValueinitial value, if different than 0"
-    },
-    {
-      "type": "paragraph",
-      "text": "get(): intReturns the current value of the counter."
-    },
-    {
-      "type": "paragraph",
-      "text": "set(int $value, ?\\Bga\\GameFramework\\NotificationMessage $message): intSet the value of the counter, and send a notif (of typesetTableCounter)to update the value on the front side. Returns the new value.Parameters:int $valuethe new value?\\Bga\\GameFramework\\NotificationMessage $messagethe next notif to send to the front. Empty for no log, null for no notif at all (the front will not be updated).Throws:OutOfRangeCounterExceptionif the value is outside the min/max"
-    },
-    {
-      "type": "paragraph",
-      "text": "inc(int $inc, ?\\Bga\\GameFramework\\NotificationMessage $message): intIncrement the value of the counter, and send a notif (of typesetTableCounter)to update the value on the front side. Returns the new value. Note: if the inc is 0, no notif will be sent.Parameters:int $incthe value to add to the current value?\\Bga\\GameFramework\\NotificationMessage $messagethe next notif to send to the front. Empty for no log, null for no notif at all (the front will not be updated).Throws:OutOfRangeCounterExceptionif the value is outside the min/max"
-    },
-    {
-      "type": "paragraph",
-      "text": "fillResult(array &$result, ?string $fieldName = null)Updates the result object, to be used in the `getAllDatas` function.Parameters:array &$resultthe object to update?string $fieldNamethe field name to set in $result[, if different than the counter name."
-    },
-    {
-      "type": "paragraph",
-      "text": "The notification sent to the front-end will contain some default args, so if you want to write something like this:"
-    },
-    {
-      "type": "code",
-      "language": null,
-      "text": "$this->playerScore->inc(\n  $playerId, \n  -1, \n  new NotificationMessage(clienttranslate('${player_name} loses ${absInc} points with played card ${card_name}'), ['card_name' => 'Hunter'])\n);"
-    },
-    {
-      "type": "paragraph",
-      "text": "The NotificationMessage args only needs the one that are not supplied automatically by the PlayerCounter."
-    },
-    {
-      "type": "list",
-      "ordered": false,
-      "items": [
+      "heading": {
+        "level": 2,
+        "text": "Overview",
+        "id": "Overview"
+      },
+      "content": [
         {
-          "text": "name: the name of the player counter",
-          "nested": null
+          "type": "paragraph",
+          "text": "They both share similar functions, and they can update automatically the JS counter (see Counter \"create\" parameters)."
         },
         {
-          "text": "value: the new value",
-          "nested": null
+          "type": "code",
+          "language": null,
+          "text": "        $this->roundCounter = $this->counterFactory->createTableCounter('round');\n        $this->playerCredits = $this->counterFactory->createPlayerCounter('credits');"
         },
         {
-          "text": "oldValue: the value before the update",
-          "nested": null
+          "type": "paragraph",
+          "text": "Note that by default, they have a min to 0 and no max, but you can change that in the create function."
         },
         {
-          "text": "inc: the increment",
-          "nested": null
+          "type": "paragraph",
+          "text": "$this->counterFactory->createPlayerCounter(string $name, ?int $min = 0, ?int $max = null, CounterVisibility $visibility = CounterVisibility::VISIBLE, bool $useNo = false, ?bool $strict = null): PlayerCounter"
         },
         {
-          "text": "absInc: the absolute value of the increment, allowing you to use `'...loses ${absInc} ...'` in the notif message if you are incrementing with a negative value",
-          "nested": null
+          "type": "paragraph",
+          "text": "Visibility can be:"
         },
         {
-          "text": "playerId (only for PlayerCounter)",
-          "nested": null
+          "type": "list",
+          "ordered": false,
+          "items": [
+            {
+              "text": "public (default): everyone can see the counter values",
+              "nested": null
+            },
+            {
+              "text": "self: only the current player can see the value of their counter, bot not the others (that will display '-')",
+              "nested": null
+            },
+            {
+              "text": "private: nobody can see the counter values (that will display '-')",
+              "nested": null
+            }
+          ]
         },
         {
-          "text": "player_name (only for PlayerCounter)",
-          "nested": null
+          "type": "paragraph",
+          "text": "useNo means everytime you use the counter, you will pass player no instead of player id."
         }
       ]
     },
     {
-      "type": "paragraph",
-      "text": "To have a counter to store and display the player energy, you will have :"
+      "heading": {
+        "level": 2,
+        "text": "PlayerCounter",
+        "id": "PlayerCounter"
+      },
+      "content": [
+        {
+          "type": "paragraph",
+          "text": "initDb(array $playerIdsOrNos, int $initialValue = 0)Creates database table if needed (bga_player_counters). Must be called fromsetupNewGame(or if adding to older games inupgradeTableDb).Parameters:array $playerIdsOrNosthe player ids (or player no) having the counter (usually,array_keys($players), but you might want to add 0 for an automata)int $initialValueinitial value, if different than 0"
+        },
+        {
+          "type": "paragraph",
+          "text": "get(int $playerIdOrNo): intReturns the current value of the counter for a player.Parameters:int $playerIdOrNothe player id (or no if useNo: true)Throws:UnknownPlayerExceptionif $playerId is not in the player ids initialized byinitDb"
+        },
+        {
+          "type": "paragraph",
+          "text": "set(int $playerIdOrNo, int $value, ?\\Bga\\GameFramework\\NotificationMessage $message): intSet the value of the counter, and send a notif (of typesetPlayerCounter)to update the value on the front side. Returns the new value.Parameters:int $playerIdOrNothe player id (or no if useNo: true)int $valuethe new value?\\Bga\\GameFramework\\NotificationMessage $messagethe next notif to send to the front. Empty for no log, null for no notif at all (the front will not be updated).Throws:OutOfRangeCounterExceptionif the value is outside the min/maxUnknownPlayerExceptionif $playerId is not in the player ids initialized by initDb"
+        },
+        {
+          "type": "paragraph",
+          "text": "inc(int $playerIdOrNo, int $inc, ?\\Bga\\GameFramework\\NotificationMessage $message): intIncrement the value of the counter, and send a notif (of typesetPlayerCounter)to update the value on the front side. Returns the new value. Note: if the inc is 0, no notif will be sent.Parameters:int $playerIdOrNothe player id (or no if useNo: true)int $incthe value to add to the current value?\\Bga\\GameFramework\\NotificationMessage $messagethe next notif to send to the front. Empty for no log, null for no notif at all (the front will not be updated).Throws:OutOfRangeCounterExceptionif the value is outside the min/maxUnknownPlayerExceptionif $playerId is not in the player ids initialized by initDb"
+        },
+        {
+          "type": "paragraph",
+          "text": "getMin(): intReturns the lowest value."
+        },
+        {
+          "type": "paragraph",
+          "text": "getMax(): intReturns the highest value."
+        },
+        {
+          "type": "paragraph",
+          "text": "getAll(): arrayReturn the values for each player, as an associative array ($playerId or $playerNo) => $value."
+        },
+        {
+          "type": "paragraph",
+          "text": "setAll(int $value, ?\\Bga\\GameFramework\\NotificationMessage $message): intSet the value of the counter for all the players, and send a notif (of typesetPlayerCounterAll)to update the value on the front side. Returns the new value.Parameters:int $valuethe new value?\\Bga\\GameFramework\\NotificationMessage $messagethe next notif to send to the front. Empty for no log, null for no notif at all (the front will not be updated).Throws:OutOfRangeCounterExceptionif the value is outside the min/max"
+        },
+        {
+          "type": "paragraph",
+          "text": "fillResult(array &$result, ?string $fieldName = null, ?int $currentPlayerId = null)Updates the result object, to be used in thegetAllDatasfunction. Will set the value on each$result[\"players\"]sub-array.Parameters:array &$resultthe object to update?string $fieldNamethe field name to set in $result[\"players\"], if different than the counter name.?int $currentPlayerIdthe current player for visibility \"self\"."
+        },
+        {
+          "type": "paragraph",
+          "text": "setVisibility(CounterVisibility $visibility)Set the counter visibility."
+        },
+        {
+          "type": "paragraph",
+          "text": "isVisible()boolReturn if the counter is visible by anyone."
+        },
+        {
+          "type": "paragraph",
+          "text": "isHidden()boolReturn if the counter is invisible."
+        },
+        {
+          "type": "paragraph",
+          "text": "isSelf()boolReturn if the counter is visible by the current player only."
+        },
+        {
+          "type": "paragraph",
+          "text": "setUseNo(bool $useNo)Tell if the counter input will be player no (true) or player id (false)"
+        },
+        {
+          "type": "paragraph",
+          "text": "setStrict(bool $strict)Tell if the counter input will be validated. If true, the counter will trigger an exception if the no or id doesn't exist in the game."
+        }
+      ]
     },
     {
-      "type": "code",
-      "language": null,
-      "text": "public PlayerCounter $playerEnergy;"
+      "heading": {
+        "level": 2,
+        "text": "TableCounter",
+        "id": "TableCounter"
+      },
+      "content": [
+        {
+          "type": "paragraph",
+          "text": "initDb(int $initialValue = 0)Creates database table if needed (bga_table_counters). Must be called fromsetupNewGame.Parameters:int $initialValueinitial value, if different than 0"
+        },
+        {
+          "type": "paragraph",
+          "text": "get(): intReturns the current value of the counter."
+        },
+        {
+          "type": "paragraph",
+          "text": "set(int $value, ?\\Bga\\GameFramework\\NotificationMessage $message): intSet the value of the counter, and send a notif (of typesetTableCounter)to update the value on the front side. Returns the new value.Parameters:int $valuethe new value?\\Bga\\GameFramework\\NotificationMessage $messagethe next notif to send to the front. Empty for no log, null for no notif at all (the front will not be updated).Throws:OutOfRangeCounterExceptionif the value is outside the min/max"
+        },
+        {
+          "type": "paragraph",
+          "text": "inc(int $inc, ?\\Bga\\GameFramework\\NotificationMessage $message): intIncrement the value of the counter, and send a notif (of typesetTableCounter)to update the value on the front side. Returns the new value. Note: if the inc is 0, no notif will be sent.Parameters:int $incthe value to add to the current value?\\Bga\\GameFramework\\NotificationMessage $messagethe next notif to send to the front. Empty for no log, null for no notif at all (the front will not be updated).Throws:OutOfRangeCounterExceptionif the value is outside the min/max"
+        },
+        {
+          "type": "paragraph",
+          "text": "fillResult(array &$result, ?string $fieldName = null)Updates the result object, to be used in the `getAllDatas` function.Parameters:array &$resultthe object to update?string $fieldNamethe field name to set in $result[, if different than the counter name."
+        }
+      ]
     },
     {
-      "type": "paragraph",
-      "text": "In __construct of Game class:"
+      "heading": {
+        "level": 2,
+        "text": "Default args sent to the notif",
+        "id": "Default_args_sent_to_the_notif"
+      },
+      "content": [
+        {
+          "type": "paragraph",
+          "text": "The notification sent to the front-end will contain some default args, so if you want to write something like this:"
+        },
+        {
+          "type": "code",
+          "language": null,
+          "text": "$this->playerScore->inc(\n  $playerId, \n  -1, \n  new NotificationMessage(clienttranslate('${player_name} loses ${absInc} points with played card ${card_name}'), ['card_name' => 'Hunter'])\n);"
+        },
+        {
+          "type": "paragraph",
+          "text": "The NotificationMessage args only needs the one that are not supplied automatically by the PlayerCounter."
+        },
+        {
+          "type": "list",
+          "ordered": false,
+          "items": [
+            {
+              "text": "name: the name of the player counter",
+              "nested": null
+            },
+            {
+              "text": "value: the new value",
+              "nested": null
+            },
+            {
+              "text": "oldValue: the value before the update",
+              "nested": null
+            },
+            {
+              "text": "inc: the increment",
+              "nested": null
+            },
+            {
+              "text": "absInc: the absolute value of the increment, allowing you to use `'...loses ${absInc} ...'` in the notif message if you are incrementing with a negative value",
+              "nested": null
+            },
+            {
+              "text": "playerId (only for PlayerCounter)",
+              "nested": null
+            },
+            {
+              "text": "player_name (only for PlayerCounter)",
+              "nested": null
+            }
+          ]
+        }
+      ]
     },
     {
-      "type": "code",
-      "language": null,
-      "text": "$this->playerEnergy = $this->counterFactory->createPlayerCounter('energy');"
+      "heading": {
+        "level": 2,
+        "text": "Example",
+        "id": "Example"
+      },
+      "content": [
+        {
+          "type": "paragraph",
+          "text": "To have a counter to store and display the player energy, you will have :"
+        },
+        {
+          "type": "code",
+          "language": null,
+          "text": "public PlayerCounter $playerEnergy;"
+        },
+        {
+          "type": "paragraph",
+          "text": "In __construct of Game class:"
+        },
+        {
+          "type": "code",
+          "language": null,
+          "text": "$this->playerEnergy = $this->counterFactory->createPlayerCounter('energy');"
+        },
+        {
+          "type": "paragraph",
+          "text": "In setupNewGame:"
+        },
+        {
+          "type": "code",
+          "language": null,
+          "text": "$this->playerEnergy->initDb(array_keys($players));"
+        },
+        {
+          "type": "paragraph",
+          "text": "In getAllDatas:"
+        },
+        {
+          "type": "code",
+          "language": null,
+          "text": "$this->playerEnergy->fillResult($result);"
+        },
+        {
+          "type": "paragraph",
+          "text": "In an act function (i.e. in State class), when you want to update it:"
+        },
+        {
+          "type": "code",
+          "language": null,
+          "text": "$this->game->playerEnergy->inc($activePlayerId, 1);"
+        },
+        {
+          "type": "paragraph",
+          "text": "In the JS setup:"
+        },
+        {
+          "type": "code",
+          "language": null,
+          "text": "            Object.values(gamedatas.players).forEach(player => {\n                this.bga.playerPanels.getElement(player.id).insertAdjacentHTML('beforeend', `\n                    <div id=\"energy-player-counter-${player.id}\"></div> \n                    <span>${_(\"Energy\")}</span>\n                `);\n                const counter = new ebg.counter();\n                counter.create(\n                    `energy-player-counter-${player.id}`, \n                    { value: player.energy, playerCounter: 'energy', playerId: player.id }\n                );\n            });"
+        },
+        {
+          "type": "paragraph",
+          "text": "Nothing more needs to be set, the JS counter will update automatically when you call `set` or `inc` !"
+        },
+        {
+          "type": "code",
+          "language": null,
+          "text": "                const counter = new ebg.counter();\n                counter.create(\n                    `remaining-tokens-counter`, \n                    { value: gamedatas.remainingTokens, tableCounter: 'remainingTokens' }\n                );"
+        }
+      ]
     },
     {
-      "type": "paragraph",
-      "text": "In setupNewGame:"
+      "heading": {
+        "level": 2,
+        "text": "Listen to counter notification on the client",
+        "id": "Listen_to_counter_notification_on_the_client"
+      },
+      "content": [
+        {
+          "type": "paragraph",
+          "text": "If you want to get the update values on the client for something else than updating a Counter, you can listen to the predefined notification to do additional stuff:"
+        },
+        {
+          "type": "code",
+          "language": null,
+          "text": "    async notif_setPlayerCounter(args) {\n        const { name, value, oldValue, inc, absInc, playerId } = args;\n        if (name === 'energy') {\n            this.getPlayerTable(playerId).setEnergyTokens(value);\n        }\n    }"
+        },
+        {
+          "type": "paragraph",
+          "text": "In the same fashion, there is `notif_setTableCounter` and `notif_setPlayerCounterAll` ."
+        }
+      ]
     },
     {
-      "type": "code",
-      "language": null,
-      "text": "$this->playerEnergy->initDb(array_keys($players));"
-    },
-    {
-      "type": "paragraph",
-      "text": "In getAllDatas:"
-    },
-    {
-      "type": "code",
-      "language": null,
-      "text": "$this->playerEnergy->fillResult($result);"
-    },
-    {
-      "type": "paragraph",
-      "text": "In an act function (i.e. in State class), when you want to update it:"
-    },
-    {
-      "type": "code",
-      "language": null,
-      "text": "$this->game->playerEnergy->inc($activePlayerId, 1);"
-    },
-    {
-      "type": "paragraph",
-      "text": "In the JS setup:"
-    },
-    {
-      "type": "code",
-      "language": null,
-      "text": "            Object.values(gamedatas.players).forEach(player => {\n                this.bga.playerPanels.getElement(player.id).insertAdjacentHTML('beforeend', `\n                    <div id=\"energy-player-counter-${player.id}\"></div> \n                    <span>${_(\"Energy\")}</span>\n                `);\n                const counter = new ebg.counter();\n                counter.create(\n                    `energy-player-counter-${player.id}`, \n                    { value: player.energy, playerCounter: 'energy', playerId: player.id }\n                );\n            });"
-    },
-    {
-      "type": "paragraph",
-      "text": "Nothing more needs to be set, the JS counter will update automatically when you call `set` or `inc` !"
-    },
-    {
-      "type": "code",
-      "language": null,
-      "text": "                const counter = new ebg.counter();\n                counter.create(\n                    `remaining-tokens-counter`, \n                    { value: gamedatas.remainingTokens, tableCounter: 'remainingTokens' }\n                );"
-    },
-    {
-      "type": "paragraph",
-      "text": "If you want to get the update values on the client for something else than updating a Counter, you can listen to the predefined notification to do additional stuff:"
-    },
-    {
-      "type": "code",
-      "language": null,
-      "text": "    async notif_setPlayerCounter(args) {\n        const { name, value, oldValue, inc, absInc, playerId } = args;\n        if (name === 'energy') {\n            this.getPlayerTable(playerId).setEnergyTokens(value);\n        }\n    }"
-    },
-    {
-      "type": "paragraph",
-      "text": "In the same fashion, there is `notif_setTableCounter` and `notif_setPlayerCounterAll` ."
-    },
-    {
-      "type": "code",
-      "language": null,
-      "text": "  $result[\"players\"] = $this->getCollectionFromDb(\n            \"SELECT `player_id` `id`, `player_score` AS `score` FROM `player`\"\n        );"
+      "heading": {
+        "level": 2,
+        "text": "Game's default Player Score",
+        "id": "Game.27s_default_Player_Score"
+      },
+      "content": [
+        {
+          "type": "code",
+          "language": null,
+          "text": "  $result[\"players\"] = $this->getCollectionFromDb(\n            \"SELECT `player_id` `id`, `player_score` AS `score` FROM `player`\"\n        );"
+        }
+      ]
     }
   ],
   "links": [
@@ -306,7 +337,7 @@
   "images": [],
   "metadata": {
     "extractor_version": "1.0.0",
-    "extracted_at": "2026-07-06T06:53:17.487415+00:00",
+    "extracted_at": "2026-07-06T08:38:33.601844+00:00",
     "word_count": 1012,
     "heading_count": 7,
     "code_block_count": 11,

@@ -3,82 +3,92 @@
   "source_file": "ExpandableSection.html",
   "relative_path": "ExpandableSection.html",
   "content_json_path": "content_json/ExpandableSection.json",
-  "headings": [
+  "sections": [
     {
-      "level": 2,
-      "text": "Example",
-      "id": "Example"
-    },
-    {
-      "level": 3,
-      "text": "Notes",
-      "id": "Notes"
-    },
-    {
-      "level": 2,
-      "text": "Helper Code",
-      "id": "Helper_Code"
-    }
-  ],
-  "content": [
-    {
-      "type": "paragraph",
-      "text": "In mygame_mygame.tpl (the border is not required):"
-    },
-    {
-      "type": "code",
-      "language": null,
-      "text": "<div id=\"my_expandable\" style=\"border: 1px solid black\">\n    <a href=\"#\" id=\"my_click_to_toggle\" class=\"expandabletoggle expandablearrow\">\n        <div class=\"icon20\"></div>\n    </a>\n    <div id=\"my_hidden_content\" class=\"expandablecontent\">\n        Here's the hidden content\n    </div>\n</div>"
-    },
-    {
-      "type": "paragraph",
-      "text": "In Game.js :"
-    },
-    {
-      "type": "code",
-      "language": null,
-      "text": "const [expandablesection] = await importDojoLibs(['ebg/expandablesection']);"
-    },
-    {
-      "type": "code",
-      "language": null,
-      "text": "this.expanded = new ebg.expandablesection();\nthis.expanded.create(this.bga.gameui, \"my_expandable\");\nthis.expanded.expand();   // show\nthis.expanded.collapse(); // hide\nthis.expanded.toggle();   // switch show/hide"
-    },
-    {
-      "type": "list",
-      "ordered": false,
-      "items": [
+      "heading": {
+        "level": 2,
+        "text": "Example",
+        "id": "Example"
+      },
+      "content": [
         {
-          "text": "All of the inner parts of the expandable div must have ids so dojo.query can find them.",
-          "nested": null
+          "type": "paragraph",
+          "text": "In mygame_mygame.tpl (the border is not required):"
         },
         {
-          "text": "The section already starts with click-to-toggle behavior, so you probably won't need to toggle in your own code. Just set the initial state in your setup method.",
-          "nested": null
+          "type": "code",
+          "language": null,
+          "text": "<div id=\"my_expandable\" style=\"border: 1px solid black\">\n    <a href=\"#\" id=\"my_click_to_toggle\" class=\"expandabletoggle expandablearrow\">\n        <div class=\"icon20\"></div>\n    </a>\n    <div id=\"my_hidden_content\" class=\"expandablecontent\">\n        Here's the hidden content\n    </div>\n</div>"
         },
         {
-          "text": "Source code can be found here : https://x.boardgamearena.net/data/themereleases/220811-1000/js/modules/expandablesection.js",
-          "nested": null
+          "type": "paragraph",
+          "text": "In Game.js :"
+        },
+        {
+          "type": "code",
+          "language": null,
+          "text": "const [expandablesection] = await importDojoLibs(['ebg/expandablesection']);"
+        },
+        {
+          "type": "code",
+          "language": null,
+          "text": "this.expanded = new ebg.expandablesection();\nthis.expanded.create(this.bga.gameui, \"my_expandable\");\nthis.expanded.expand();   // show\nthis.expanded.collapse(); // hide\nthis.expanded.toggle();   // switch show/hide"
         }
       ]
     },
     {
-      "type": "paragraph",
-      "text": "This doesn't appear to be part of the BGA framework, but might make creating the above code easer and more readable."
+      "heading": {
+        "level": 3,
+        "text": "Notes",
+        "id": "Notes"
+      },
+      "content": [
+        {
+          "type": "list",
+          "ordered": false,
+          "items": [
+            {
+              "text": "All of the inner parts of the expandable div must have ids so dojo.query can find them.",
+              "nested": null
+            },
+            {
+              "text": "The section already starts with click-to-toggle behavior, so you probably won't need to toggle in your own code. Just set the initial state in your setup method.",
+              "nested": null
+            },
+            {
+              "text": "Source code can be found here : https://x.boardgamearena.net/data/themereleases/220811-1000/js/modules/expandablesection.js",
+              "nested": null
+            }
+          ]
+        }
+      ]
     },
     {
-      "type": "code",
-      "language": null,
-      "text": "var jstpl_expandablesection = '\\\n    <div id=\"${id}\">\\\n        <a href=\"#\" id=\"toggle_${id}\" class=\"expandabletoggle expandablearrow\">\\\n            <div class=\"icon20\"></div>\\\n        </a>\\\n        <div id=\"content_${id}\" class=\"expandablecontent\">\\\n            ${content}\\\n        </div>\\\n    </div>';"
-    },
-    {
-      "type": "paragraph",
-      "text": "In Game.js :"
-    },
-    {
-      "type": "code",
-      "language": null,
-      "text": "placeExpandableSection(parent_id, id, content) {\n   html = this.bga.gameui.format_block('jstpl_expandablesection', { id: id, content: content }); \n   dojo.place(html, parent_id);\n}"
+      "heading": {
+        "level": 2,
+        "text": "Helper Code",
+        "id": "Helper_Code"
+      },
+      "content": [
+        {
+          "type": "paragraph",
+          "text": "This doesn't appear to be part of the BGA framework, but might make creating the above code easer and more readable."
+        },
+        {
+          "type": "code",
+          "language": null,
+          "text": "var jstpl_expandablesection = '\\\n    <div id=\"${id}\">\\\n        <a href=\"#\" id=\"toggle_${id}\" class=\"expandabletoggle expandablearrow\">\\\n            <div class=\"icon20\"></div>\\\n        </a>\\\n        <div id=\"content_${id}\" class=\"expandablecontent\">\\\n            ${content}\\\n        </div>\\\n    </div>';"
+        },
+        {
+          "type": "paragraph",
+          "text": "In Game.js :"
+        },
+        {
+          "type": "code",
+          "language": null,
+          "text": "placeExpandableSection(parent_id, id, content) {\n   html = this.bga.gameui.format_block('jstpl_expandablesection', { id: id, content: content }); \n   dojo.place(html, parent_id);\n}"
+        }
+      ]
     }
   ],
   "links": [
@@ -90,7 +100,7 @@
   "images": [],
   "metadata": {
     "extractor_version": "1.0.0",
-    "extracted_at": "2026-07-06T06:53:17.322479+00:00",
+    "extracted_at": "2026-07-06T08:38:33.438852+00:00",
     "word_count": 114,
     "heading_count": 3,
     "code_block_count": 5,
