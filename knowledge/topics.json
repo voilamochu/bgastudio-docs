@@ -1,0 +1,1340 @@
+{
+  "Architecture": [
+    {
+      "path": "BGA_game_Lifecycle.html",
+      "title": "BGA game Lifecycle"
+    },
+    {
+      "path": "BGA_Studio_Migration_Guide.html",
+      "title": "BGA Studio Migration Guide"
+    },
+    {
+      "path": "Create_a_game_in_BGA_Studio_Complete_Walkthrough.html",
+      "title": "Create a game in BGA Studio: Complete Walkthrough"
+    },
+    {
+      "path": "Game_interface_logic_Game.js.html",
+      "title": "Game interface logic: Game.js"
+    },
+    {
+      "path": "Main_game_logic_Game.php.html",
+      "title": "Main game logic: Game.php"
+    },
+    {
+      "path": "Studio.html",
+      "title": "Studio"
+    },
+    {
+      "path": "Tutorial_reversi.html",
+      "title": "Tutorial reversi"
+    }
+  ],
+  "Artificial Intelligence": [
+    {
+      "path": "BGA_Game_licenses.html",
+      "title": "BGA Game licenses"
+    },
+    {
+      "path": "BGA_Studio_Cookbook.html",
+      "title": "BGA Studio Cookbook"
+    },
+    {
+      "path": "BGA_Studio_Guidelines.html",
+      "title": "BGA Studio Guidelines"
+    },
+    {
+      "path": "BGA_Studio_Migration_Guide.html",
+      "title": "BGA Studio Migration Guide"
+    },
+    {
+      "path": "Bots_and_Artificial_Intelligence.html",
+      "title": "Bots and Artificial Intelligence"
+    },
+    {
+      "path": "Create_a_game_in_BGA_Studio_Complete_Walkthrough.html",
+      "title": "Create a game in BGA Studio: Complete Walkthrough"
+    },
+    {
+      "path": "Game_art_img_directory.html",
+      "title": "Game art: img directory"
+    },
+    {
+      "path": "Game_interface_logic_Game.js.html",
+      "title": "Game interface logic: Game.js"
+    },
+    {
+      "path": "Game_meta-information_gameinfos.jsonc.html",
+      "title": "Game meta-information: gameinfos.jsonc"
+    },
+    {
+      "path": "Game_metadata_manager.html",
+      "title": "Game metadata manager"
+    },
+    {
+      "path": "Main_game_logic_Game.php.html",
+      "title": "Main game logic: Game.php"
+    },
+    {
+      "path": "Options_and_preferences_gameoptions.json,_gamepreferences.json.html",
+      "title": "Options and preferences: gameoptions.json, gamepreferences.json"
+    },
+    {
+      "path": "Practical_debugging.html",
+      "title": "Practical debugging"
+    },
+    {
+      "path": "Scrollmap.html",
+      "title": "Scrollmap"
+    },
+    {
+      "path": "Setting_up_BGA_Development_environment_using_VSCode.html",
+      "title": "Setting up BGA Development environment using VSCode"
+    },
+    {
+      "path": "State_classes_State_directory.html",
+      "title": "State classes: State directory"
+    },
+    {
+      "path": "Stock.html",
+      "title": "Stock"
+    },
+    {
+      "path": "Studio_FAQ.html",
+      "title": "Studio FAQ"
+    },
+    {
+      "path": "Studio_logs.html",
+      "title": "Studio logs"
+    },
+    {
+      "path": "Tools_and_tips_of_BGA_Studio.html",
+      "title": "Tools and tips of BGA Studio"
+    },
+    {
+      "path": "Translations.html",
+      "title": "Translations"
+    },
+    {
+      "path": "Troubleshooting.html",
+      "title": "Troubleshooting"
+    },
+    {
+      "path": "Tutorial_reversi.html",
+      "title": "Tutorial reversi"
+    },
+    {
+      "path": "Using_AI_for_BGA_game_development.html",
+      "title": "Using AI for BGA game development"
+    },
+    {
+      "path": "Using_Typescript_and_Scss.html",
+      "title": "Using Typescript and Scss"
+    },
+    {
+      "path": "Your_game_state_machine_states.inc.php.html",
+      "title": "Your game state machine: states.inc.php"
+    },
+    {
+      "path": "Zombie_Mode.html",
+      "title": "Zombie Mode"
+    }
+  ],
+  "Assets": [
+    {
+      "path": "Anti-Stock.html",
+      "title": "Anti-Stock"
+    },
+    {
+      "path": "BGA_Game_licenses.html",
+      "title": "BGA Game licenses"
+    },
+    {
+      "path": "BGA_Studio_Cookbook.html",
+      "title": "BGA Studio Cookbook"
+    },
+    {
+      "path": "BGA_Studio_Guidelines.html",
+      "title": "BGA Studio Guidelines"
+    },
+    {
+      "path": "BGA_Studio_Migration_Guide.html",
+      "title": "BGA Studio Migration Guide"
+    },
+    {
+      "path": "Bots_and_Artificial_Intelligence.html",
+      "title": "Bots and Artificial Intelligence"
+    },
+    {
+      "path": "ChromeExtension.html",
+      "title": "ChromeExtension"
+    },
+    {
+      "path": "Common_board_game_elements_image_resources.html",
+      "title": "Common board game elements image resources"
+    },
+    {
+      "path": "Create_a_game_in_BGA_Studio_Complete_Walkthrough.html",
+      "title": "Create a game in BGA Studio: Complete Walkthrough"
+    },
+    {
+      "path": "Deck.html",
+      "title": "Deck"
+    },
+    {
+      "path": "Game_art_img_directory.html",
+      "title": "Game art: img directory"
+    },
+    {
+      "path": "Game_fonts_fonts_directory.html",
+      "title": "Game fonts: fonts directory"
+    },
+    {
+      "path": "Game_interface_logic_Game.js.html",
+      "title": "Game interface logic: Game.js"
+    },
+    {
+      "path": "Game_interface_stylesheet_yourgamename.css.html",
+      "title": "Game interface stylesheet: yourgamename.css"
+    },
+    {
+      "path": "Game_metadata_manager.html",
+      "title": "Game metadata manager"
+    },
+    {
+      "path": "Game_sounds_sounds_directory.html",
+      "title": "Game sounds: sounds directory"
+    },
+    {
+      "path": "How_to_join_BGA_developer_team.html",
+      "title": "How to join BGA developer team?"
+    },
+    {
+      "path": "I_wish_I_knew_this_when_I_started.html",
+      "title": "I wish I knew this when I started"
+    },
+    {
+      "path": "Main_game_logic_Game.php.html",
+      "title": "Main game logic: Game.php"
+    },
+    {
+      "path": "Options_and_preferences_gameoptions.json,_gamepreferences.json.html",
+      "title": "Options and preferences: gameoptions.json, gamepreferences.json"
+    },
+    {
+      "path": "Practical_debugging.html",
+      "title": "Practical debugging"
+    },
+    {
+      "path": "Scrollmap.html",
+      "title": "Scrollmap"
+    },
+    {
+      "path": "Stock.html",
+      "title": "Stock"
+    },
+    {
+      "path": "Studio.html",
+      "title": "Studio"
+    },
+    {
+      "path": "Studio_FAQ.html",
+      "title": "Studio FAQ"
+    },
+    {
+      "path": "Studio_file_reference.html",
+      "title": "Studio file reference"
+    },
+    {
+      "path": "Studio_logs.html",
+      "title": "Studio logs"
+    },
+    {
+      "path": "Tools_and_tips_of_BGA_Studio.html",
+      "title": "Tools and tips of BGA Studio"
+    },
+    {
+      "path": "Troubleshooting.html",
+      "title": "Troubleshooting"
+    },
+    {
+      "path": "Tutorial_hearts.html",
+      "title": "Tutorial hearts"
+    },
+    {
+      "path": "Tutorial_reversi.html",
+      "title": "Tutorial reversi"
+    },
+    {
+      "path": "Using_Typescript_and_Scss.html",
+      "title": "Using Typescript and Scss"
+    },
+    {
+      "path": "Zone.html",
+      "title": "Zone"
+    }
+  ],
+  "Configuration": [
+    {
+      "path": "BGA_Studio_Cookbook.html",
+      "title": "BGA Studio Cookbook"
+    },
+    {
+      "path": "BGA_Studio_Migration_Guide.html",
+      "title": "BGA Studio Migration Guide"
+    },
+    {
+      "path": "Game_interface_logic_Game.js.html",
+      "title": "Game interface logic: Game.js"
+    },
+    {
+      "path": "Game_meta-information_gameinfos.jsonc.html",
+      "title": "Game meta-information: gameinfos.jsonc"
+    },
+    {
+      "path": "Main_game_logic_Game.php.html",
+      "title": "Main game logic: Game.php"
+    },
+    {
+      "path": "Options_and_preferences_gameoptions.json,_gamepreferences.json.html",
+      "title": "Options and preferences: gameoptions.json, gamepreferences.json"
+    },
+    {
+      "path": "Setting_up_BGA_Development_environment_using_VSCode.html",
+      "title": "Setting up BGA Development environment using VSCode"
+    },
+    {
+      "path": "Studio_file_reference.html",
+      "title": "Studio file reference"
+    },
+    {
+      "path": "Tools_and_tips_of_BGA_Studio.html",
+      "title": "Tools and tips of BGA Studio"
+    },
+    {
+      "path": "Troubleshooting.html",
+      "title": "Troubleshooting"
+    },
+    {
+      "path": "Tutorial_reversi.html",
+      "title": "Tutorial reversi"
+    },
+    {
+      "path": "Using_Typescript_and_Scss.html",
+      "title": "Using Typescript and Scss"
+    }
+  ],
+  "Database": [
+    {
+      "path": "BGA_Studio_Cookbook.html",
+      "title": "BGA Studio Cookbook"
+    },
+    {
+      "path": "BGA_Studio_Migration_Guide.html",
+      "title": "BGA Studio Migration Guide"
+    },
+    {
+      "path": "Create_a_game_in_BGA_Studio_Complete_Walkthrough.html",
+      "title": "Create a game in BGA Studio: Complete Walkthrough"
+    },
+    {
+      "path": "Deck.html",
+      "title": "Deck"
+    },
+    {
+      "path": "Game_database_model_dbmodel.sql.html",
+      "title": "Game database model: dbmodel.sql"
+    },
+    {
+      "path": "Main_game_logic_Game.php.html",
+      "title": "Main game logic: Game.php"
+    },
+    {
+      "path": "PlayerCounter_and_TableCounter.html",
+      "title": "PlayerCounter and TableCounter"
+    },
+    {
+      "path": "Post-release_phase.html",
+      "title": "Post-release phase"
+    },
+    {
+      "path": "Practical_debugging.html",
+      "title": "Practical debugging"
+    },
+    {
+      "path": "Studio_file_reference.html",
+      "title": "Studio file reference"
+    },
+    {
+      "path": "Studio_logs.html",
+      "title": "Studio logs"
+    },
+    {
+      "path": "Tools_and_tips_of_BGA_Studio.html",
+      "title": "Tools and tips of BGA Studio"
+    },
+    {
+      "path": "Troubleshooting.html",
+      "title": "Troubleshooting"
+    },
+    {
+      "path": "Tutorial_reversi.html",
+      "title": "Tutorial reversi"
+    }
+  ],
+  "Debugging": [
+    {
+      "path": "BGA_Studio_Cookbook.html",
+      "title": "BGA Studio Cookbook"
+    },
+    {
+      "path": "BGA_Studio_Migration_Guide.html",
+      "title": "BGA Studio Migration Guide"
+    },
+    {
+      "path": "BgaCards.html",
+      "title": "BgaCards"
+    },
+    {
+      "path": "BgaDice.html",
+      "title": "BgaDice"
+    },
+    {
+      "path": "ChromeExtension.html",
+      "title": "ChromeExtension"
+    },
+    {
+      "path": "Create_a_game_in_BGA_Studio_Complete_Walkthrough.html",
+      "title": "Create a game in BGA Studio: Complete Walkthrough"
+    },
+    {
+      "path": "Game_database_model_dbmodel.sql.html",
+      "title": "Game database model: dbmodel.sql"
+    },
+    {
+      "path": "Game_interface_logic_Game.js.html",
+      "title": "Game interface logic: Game.js"
+    },
+    {
+      "path": "Main_game_logic_Game.php.html",
+      "title": "Main game logic: Game.php"
+    },
+    {
+      "path": "Practical_debugging.html",
+      "title": "Practical debugging"
+    },
+    {
+      "path": "Studio_logs.html",
+      "title": "Studio logs"
+    },
+    {
+      "path": "Tools_and_tips_of_BGA_Studio.html",
+      "title": "Tools and tips of BGA Studio"
+    },
+    {
+      "path": "Troubleshooting.html",
+      "title": "Troubleshooting"
+    },
+    {
+      "path": "Tutorial_reversi.html",
+      "title": "Tutorial reversi"
+    },
+    {
+      "path": "Your_game_state_machine_states.inc.php.html",
+      "title": "Your game state machine: states.inc.php"
+    }
+  ],
+  "Game Interface": [
+    {
+      "path": "Anti-Stock.html",
+      "title": "Anti-Stock"
+    },
+    {
+      "path": "BGA_Studio_Cookbook.html",
+      "title": "BGA Studio Cookbook"
+    },
+    {
+      "path": "BGA_Studio_Guidelines.html",
+      "title": "BGA Studio Guidelines"
+    },
+    {
+      "path": "BGA_Studio_Migration_Guide.html",
+      "title": "BGA Studio Migration Guide"
+    },
+    {
+      "path": "BGA_Undo_policy.html",
+      "title": "BGA Undo policy"
+    },
+    {
+      "path": "BgaAnimations.html",
+      "title": "BgaAnimations"
+    },
+    {
+      "path": "BgaAutofit.html",
+      "title": "BgaAutofit"
+    },
+    {
+      "path": "BgaCards.html",
+      "title": "BgaCards"
+    },
+    {
+      "path": "BgaDice.html",
+      "title": "BgaDice"
+    },
+    {
+      "path": "BgaScoreSheet.html",
+      "title": "BgaScoreSheet"
+    },
+    {
+      "path": "Bots_and_Artificial_Intelligence.html",
+      "title": "Bots and Artificial Intelligence"
+    },
+    {
+      "path": "ChromeExtension.html",
+      "title": "ChromeExtension"
+    },
+    {
+      "path": "Create_a_game_in_BGA_Studio_Complete_Walkthrough.html",
+      "title": "Create a game in BGA Studio: Complete Walkthrough"
+    },
+    {
+      "path": "ExpandableSection.html",
+      "title": "ExpandableSection"
+    },
+    {
+      "path": "Game_interface_logic_Game.js.html",
+      "title": "Game interface logic: Game.js"
+    },
+    {
+      "path": "Game_interface_stylesheet_yourgamename.css.html",
+      "title": "Game interface stylesheet: yourgamename.css"
+    },
+    {
+      "path": "Game_layout_view_and_template_yourgamename.view.php_and_yourgamename_yourgamename.tpl.html",
+      "title": "Game layout: view and template: yourgamename.view.php and yourgamename yourgamename.tpl"
+    },
+    {
+      "path": "Game_metadata_manager.html",
+      "title": "Game metadata manager"
+    },
+    {
+      "path": "Main_game_logic_Game.php.html",
+      "title": "Main game logic: Game.php"
+    },
+    {
+      "path": "Practical_debugging.html",
+      "title": "Practical debugging"
+    },
+    {
+      "path": "Scrollmap.html",
+      "title": "Scrollmap"
+    },
+    {
+      "path": "Setting_up_BGA_Development_environment_using_VSCode.html",
+      "title": "Setting up BGA Development environment using VSCode"
+    },
+    {
+      "path": "Stock.html",
+      "title": "Stock"
+    },
+    {
+      "path": "Studio.html",
+      "title": "Studio"
+    },
+    {
+      "path": "Studio_file_reference.html",
+      "title": "Studio file reference"
+    },
+    {
+      "path": "Testing_by_developer.html",
+      "title": "Testing by developer"
+    },
+    {
+      "path": "Tools_and_tips_of_BGA_Studio.html",
+      "title": "Tools and tips of BGA Studio"
+    },
+    {
+      "path": "Translations.html",
+      "title": "Translations"
+    },
+    {
+      "path": "Troubleshooting.html",
+      "title": "Troubleshooting"
+    },
+    {
+      "path": "Tutorial_reversi.html",
+      "title": "Tutorial reversi"
+    },
+    {
+      "path": "Using_Typescript_and_Scss.html",
+      "title": "Using Typescript and Scss"
+    },
+    {
+      "path": "Your_game_mobile_version.html",
+      "title": "Your game mobile version"
+    },
+    {
+      "path": "Your_game_state_machine_states.inc.php.html",
+      "title": "Your game state machine: states.inc.php"
+    },
+    {
+      "path": "Zone.html",
+      "title": "Zone"
+    }
+  ],
+  "Game Logic": [
+    {
+      "path": "BGA_Studio_Cookbook.html",
+      "title": "BGA Studio Cookbook"
+    },
+    {
+      "path": "BGA_Studio_Migration_Guide.html",
+      "title": "BGA Studio Migration Guide"
+    },
+    {
+      "path": "Create_a_game_in_BGA_Studio_Complete_Walkthrough.html",
+      "title": "Create a game in BGA Studio: Complete Walkthrough"
+    },
+    {
+      "path": "Game_database_model_dbmodel.sql.html",
+      "title": "Game database model: dbmodel.sql"
+    },
+    {
+      "path": "Game_interface_logic_Game.js.html",
+      "title": "Game interface logic: Game.js"
+    },
+    {
+      "path": "Main_game_logic_Game.php.html",
+      "title": "Main game logic: Game.php"
+    },
+    {
+      "path": "Post-release_phase.html",
+      "title": "Post-release phase"
+    },
+    {
+      "path": "Practical_debugging.html",
+      "title": "Practical debugging"
+    },
+    {
+      "path": "State_classes_State_directory.html",
+      "title": "State classes: State directory"
+    },
+    {
+      "path": "Studio_file_reference.html",
+      "title": "Studio file reference"
+    },
+    {
+      "path": "Studio_logs.html",
+      "title": "Studio logs"
+    },
+    {
+      "path": "Tools_and_tips_of_BGA_Studio.html",
+      "title": "Tools and tips of BGA Studio"
+    },
+    {
+      "path": "Troubleshooting.html",
+      "title": "Troubleshooting"
+    },
+    {
+      "path": "Tutorial_reversi.html",
+      "title": "Tutorial reversi"
+    },
+    {
+      "path": "Your_game_state_machine_states.inc.php.html",
+      "title": "Your game state machine: states.inc.php"
+    }
+  ],
+  "Getting Started": [
+    {
+      "path": "BGA_Code_Sharing.html",
+      "title": "BGA Code Sharing"
+    },
+    {
+      "path": "BGA_Studio_Migration_Guide.html",
+      "title": "BGA Studio Migration Guide"
+    },
+    {
+      "path": "Compatibility.html",
+      "title": "Compatibility"
+    },
+    {
+      "path": "Contact_BGA_Studio.html",
+      "title": "Contact BGA Studio"
+    },
+    {
+      "path": "Create_a_game_in_BGA_Studio_Complete_Walkthrough.html",
+      "title": "Create a game in BGA Studio: Complete Walkthrough"
+    },
+    {
+      "path": "Draggable.html",
+      "title": "Draggable"
+    },
+    {
+      "path": "First_steps_with_BGA_Studio.html",
+      "title": "First steps with BGA Studio"
+    },
+    {
+      "path": "Game_interface_logic_Game.js.html",
+      "title": "Game interface logic: Game.js"
+    },
+    {
+      "path": "Game_replay.html",
+      "title": "Game replay"
+    },
+    {
+      "path": "How_to_join_BGA_developer_team.html",
+      "title": "How to join BGA developer team?"
+    },
+    {
+      "path": "Main_game_logic_Game.php.html",
+      "title": "Main game logic: Game.php"
+    },
+    {
+      "path": "Practical_debugging.html",
+      "title": "Practical debugging"
+    },
+    {
+      "path": "Setting_up_BGA_Development_environment_using_VSCode.html",
+      "title": "Setting up BGA Development environment using VSCode"
+    },
+    {
+      "path": "Studio.html",
+      "title": "Studio"
+    },
+    {
+      "path": "Testing_by_developer.html",
+      "title": "Testing by developer"
+    },
+    {
+      "path": "Troubleshooting.html",
+      "title": "Troubleshooting"
+    },
+    {
+      "path": "Tutorial_hearts.html",
+      "title": "Tutorial hearts"
+    },
+    {
+      "path": "Tutorial_reversi.html",
+      "title": "Tutorial reversi"
+    },
+    {
+      "path": "Tutorials_checklist.html",
+      "title": "Tutorials checklist"
+    },
+    {
+      "path": "Using_Typescript_and_Scss.html",
+      "title": "Using Typescript and Scss"
+    },
+    {
+      "path": "Using_Vue.html",
+      "title": "Using Vue"
+    }
+  ],
+  "Internationalization": [
+    {
+      "path": "BGA_Studio_Migration_Guide.html",
+      "title": "BGA Studio Migration Guide"
+    },
+    {
+      "path": "Game_interface_logic_Game.js.html",
+      "title": "Game interface logic: Game.js"
+    },
+    {
+      "path": "Main_game_logic_Game.php.html",
+      "title": "Main game logic: Game.php"
+    },
+    {
+      "path": "Translations.html",
+      "title": "Translations"
+    },
+    {
+      "path": "Your_game_state_machine_states.inc.php.html",
+      "title": "Your game state machine: states.inc.php"
+    }
+  ],
+  "JavaScript": [
+    {
+      "path": "BGA_Studio_Cookbook.html",
+      "title": "BGA Studio Cookbook"
+    },
+    {
+      "path": "BGA_Studio_Migration_Guide.html",
+      "title": "BGA Studio Migration Guide"
+    },
+    {
+      "path": "Bots_and_Artificial_Intelligence.html",
+      "title": "Bots and Artificial Intelligence"
+    },
+    {
+      "path": "Create_a_game_in_BGA_Studio_Complete_Walkthrough.html",
+      "title": "Create a game in BGA Studio: Complete Walkthrough"
+    },
+    {
+      "path": "ExpandableSection.html",
+      "title": "ExpandableSection"
+    },
+    {
+      "path": "Game_interface_logic_Game.js.html",
+      "title": "Game interface logic: Game.js"
+    },
+    {
+      "path": "Game_layout_view_and_template_yourgamename.view.php_and_yourgamename_yourgamename.tpl.html",
+      "title": "Game layout: view and template: yourgamename.view.php and yourgamename yourgamename.tpl"
+    },
+    {
+      "path": "Game_meta-information_gameinfos.jsonc.html",
+      "title": "Game meta-information: gameinfos.jsonc"
+    },
+    {
+      "path": "Game_statistics_stats.json.html",
+      "title": "Game statistics: stats.json"
+    },
+    {
+      "path": "Options_and_preferences_gameoptions.json,_gamepreferences.json.html",
+      "title": "Options and preferences: gameoptions.json, gamepreferences.json"
+    },
+    {
+      "path": "Practical_debugging.html",
+      "title": "Practical debugging"
+    },
+    {
+      "path": "Scrollmap.html",
+      "title": "Scrollmap"
+    },
+    {
+      "path": "Setting_up_BGA_Development_environment_using_VSCode.html",
+      "title": "Setting up BGA Development environment using VSCode"
+    },
+    {
+      "path": "Stock.html",
+      "title": "Stock"
+    },
+    {
+      "path": "Studio_file_reference.html",
+      "title": "Studio file reference"
+    },
+    {
+      "path": "Testing_by_developer.html",
+      "title": "Testing by developer"
+    },
+    {
+      "path": "Translations.html",
+      "title": "Translations"
+    },
+    {
+      "path": "Troubleshooting.html",
+      "title": "Troubleshooting"
+    },
+    {
+      "path": "Tutorial_reversi.html",
+      "title": "Tutorial reversi"
+    },
+    {
+      "path": "Using_Typescript_and_Scss.html",
+      "title": "Using Typescript and Scss"
+    },
+    {
+      "path": "Zone.html",
+      "title": "Zone"
+    }
+  ],
+  "Notifications": [
+    {
+      "path": "BGA_Studio_Cookbook.html",
+      "title": "BGA Studio Cookbook"
+    },
+    {
+      "path": "BGA_Studio_Migration_Guide.html",
+      "title": "BGA Studio Migration Guide"
+    },
+    {
+      "path": "Bots_and_Artificial_Intelligence.html",
+      "title": "Bots and Artificial Intelligence"
+    },
+    {
+      "path": "Create_a_game_in_BGA_Studio_Complete_Walkthrough.html",
+      "title": "Create a game in BGA Studio: Complete Walkthrough"
+    },
+    {
+      "path": "Game_interface_logic_Game.js.html",
+      "title": "Game interface logic: Game.js"
+    },
+    {
+      "path": "Main_game_logic_Game.php.html",
+      "title": "Main game logic: Game.php"
+    },
+    {
+      "path": "PlayerCounter_and_TableCounter.html",
+      "title": "PlayerCounter and TableCounter"
+    },
+    {
+      "path": "State_classes_State_directory.html",
+      "title": "State classes: State directory"
+    },
+    {
+      "path": "Translations.html",
+      "title": "Translations"
+    },
+    {
+      "path": "Troubleshooting.html",
+      "title": "Troubleshooting"
+    }
+  ],
+  "PHP": [
+    {
+      "path": "BGA_Studio_Cookbook.html",
+      "title": "BGA Studio Cookbook"
+    },
+    {
+      "path": "BGA_Studio_Guidelines.html",
+      "title": "BGA Studio Guidelines"
+    },
+    {
+      "path": "BGA_Studio_Migration_Guide.html",
+      "title": "BGA Studio Migration Guide"
+    },
+    {
+      "path": "BgaCards.html",
+      "title": "BgaCards"
+    },
+    {
+      "path": "Create_a_game_in_BGA_Studio_Complete_Walkthrough.html",
+      "title": "Create a game in BGA Studio: Complete Walkthrough"
+    },
+    {
+      "path": "Deck.html",
+      "title": "Deck"
+    },
+    {
+      "path": "Game_interface_logic_Game.js.html",
+      "title": "Game interface logic: Game.js"
+    },
+    {
+      "path": "Game_layout_view_and_template_yourgamename.view.php_and_yourgamename_yourgamename.tpl.html",
+      "title": "Game layout: view and template: yourgamename.view.php and yourgamename yourgamename.tpl"
+    },
+    {
+      "path": "Game_material_description_material.inc.php.html",
+      "title": "Game material description: material.inc.php"
+    },
+    {
+      "path": "Game_statistics_stats.json.html",
+      "title": "Game statistics: stats.json"
+    },
+    {
+      "path": "Main_game_logic_Game.php.html",
+      "title": "Main game logic: Game.php"
+    },
+    {
+      "path": "Players_actions_yourgamename.action.php.html",
+      "title": "Players actions: yourgamename.action.php"
+    },
+    {
+      "path": "Practical_debugging.html",
+      "title": "Practical debugging"
+    },
+    {
+      "path": "Setting_up_BGA_Development_environment_using_VSCode.html",
+      "title": "Setting up BGA Development environment using VSCode"
+    },
+    {
+      "path": "State_classes_State_directory.html",
+      "title": "State classes: State directory"
+    },
+    {
+      "path": "Studio.html",
+      "title": "Studio"
+    },
+    {
+      "path": "Studio_FAQ.html",
+      "title": "Studio FAQ"
+    },
+    {
+      "path": "Studio_file_reference.html",
+      "title": "Studio file reference"
+    },
+    {
+      "path": "Testing_by_developer.html",
+      "title": "Testing by developer"
+    },
+    {
+      "path": "Tools_and_tips_of_BGA_Studio.html",
+      "title": "Tools and tips of BGA Studio"
+    },
+    {
+      "path": "Translations.html",
+      "title": "Translations"
+    },
+    {
+      "path": "Troubleshooting.html",
+      "title": "Troubleshooting"
+    },
+    {
+      "path": "Tutorial_reversi.html",
+      "title": "Tutorial reversi"
+    },
+    {
+      "path": "Your_game_state_machine_states.inc.php.html",
+      "title": "Your game state machine: states.inc.php"
+    }
+  ],
+  "Publishing": [
+    {
+      "path": "BGA_Game_licenses.html",
+      "title": "BGA Game licenses"
+    },
+    {
+      "path": "BGA_Studio_Guidelines.html",
+      "title": "BGA Studio Guidelines"
+    },
+    {
+      "path": "Create_a_game_in_BGA_Studio_Complete_Walkthrough.html",
+      "title": "Create a game in BGA Studio: Complete Walkthrough"
+    },
+    {
+      "path": "Game_art_img_directory.html",
+      "title": "Game art: img directory"
+    },
+    {
+      "path": "Game_meta-information_gameinfos.jsonc.html",
+      "title": "Game meta-information: gameinfos.jsonc"
+    },
+    {
+      "path": "Post-release_phase.html",
+      "title": "Post-release phase"
+    },
+    {
+      "path": "Pre-release_checklist.html",
+      "title": "Pre-release checklist"
+    },
+    {
+      "path": "Troubleshooting.html",
+      "title": "Troubleshooting"
+    },
+    {
+      "path": "Tutorials_checklist.html",
+      "title": "Tutorials checklist"
+    }
+  ],
+  "State Machine": [
+    {
+      "path": "BGA_Studio_Cookbook.html",
+      "title": "BGA Studio Cookbook"
+    },
+    {
+      "path": "BGA_Studio_Guidelines.html",
+      "title": "BGA Studio Guidelines"
+    },
+    {
+      "path": "BGA_Studio_Migration_Guide.html",
+      "title": "BGA Studio Migration Guide"
+    },
+    {
+      "path": "BGA_Undo_policy.html",
+      "title": "BGA Undo policy"
+    },
+    {
+      "path": "Bots_and_Artificial_Intelligence.html",
+      "title": "Bots and Artificial Intelligence"
+    },
+    {
+      "path": "Create_a_game_in_BGA_Studio_Complete_Walkthrough.html",
+      "title": "Create a game in BGA Studio: Complete Walkthrough"
+    },
+    {
+      "path": "Game_interface_logic_Game.js.html",
+      "title": "Game interface logic: Game.js"
+    },
+    {
+      "path": "Main_game_logic_Game.php.html",
+      "title": "Main game logic: Game.php"
+    },
+    {
+      "path": "Practical_debugging.html",
+      "title": "Practical debugging"
+    },
+    {
+      "path": "State_classes_State_directory.html",
+      "title": "State classes: State directory"
+    },
+    {
+      "path": "Studio_file_reference.html",
+      "title": "Studio file reference"
+    },
+    {
+      "path": "Tools_and_tips_of_BGA_Studio.html",
+      "title": "Tools and tips of BGA Studio"
+    },
+    {
+      "path": "Troubleshooting.html",
+      "title": "Troubleshooting"
+    },
+    {
+      "path": "Tutorial_reversi.html",
+      "title": "Tutorial reversi"
+    },
+    {
+      "path": "Your_game_state_machine_states.inc.php.html",
+      "title": "Your game state machine: states.inc.php"
+    },
+    {
+      "path": "Zombie_Mode.html",
+      "title": "Zombie Mode"
+    }
+  ],
+  "Templates": [
+    {
+      "path": "Anti-Stock.html",
+      "title": "Anti-Stock"
+    },
+    {
+      "path": "BGA_Studio_Cookbook.html",
+      "title": "BGA Studio Cookbook"
+    },
+    {
+      "path": "BGA_Studio_Guidelines.html",
+      "title": "BGA Studio Guidelines"
+    },
+    {
+      "path": "BGA_Studio_Migration_Guide.html",
+      "title": "BGA Studio Migration Guide"
+    },
+    {
+      "path": "Create_a_game_in_BGA_Studio_Complete_Walkthrough.html",
+      "title": "Create a game in BGA Studio: Complete Walkthrough"
+    },
+    {
+      "path": "Game_interface_logic_Game.js.html",
+      "title": "Game interface logic: Game.js"
+    },
+    {
+      "path": "Game_layout_view_and_template_yourgamename.view.php_and_yourgamename_yourgamename.tpl.html",
+      "title": "Game layout: view and template: yourgamename.view.php and yourgamename yourgamename.tpl"
+    },
+    {
+      "path": "Main_game_logic_Game.php.html",
+      "title": "Main game logic: Game.php"
+    },
+    {
+      "path": "Scrollmap.html",
+      "title": "Scrollmap"
+    },
+    {
+      "path": "State_classes_State_directory.html",
+      "title": "State classes: State directory"
+    },
+    {
+      "path": "Troubleshooting.html",
+      "title": "Troubleshooting"
+    },
+    {
+      "path": "Tutorial_reversi.html",
+      "title": "Tutorial reversi"
+    },
+    {
+      "path": "Your_game_state_machine_states.inc.php.html",
+      "title": "Your game state machine: states.inc.php"
+    }
+  ],
+  "Testing": [
+    {
+      "path": "Bots_and_Artificial_Intelligence.html",
+      "title": "Bots and Artificial Intelligence"
+    },
+    {
+      "path": "Game_material_description_material.inc.php.html",
+      "title": "Game material description: material.inc.php"
+    },
+    {
+      "path": "Main_game_logic_Game.php.html",
+      "title": "Main game logic: Game.php"
+    },
+    {
+      "path": "Practical_debugging.html",
+      "title": "Practical debugging"
+    },
+    {
+      "path": "Setting_up_BGA_Development_environment_using_VSCode.html",
+      "title": "Setting up BGA Development environment using VSCode"
+    },
+    {
+      "path": "Testing_by_developer.html",
+      "title": "Testing by developer"
+    },
+    {
+      "path": "Tools_and_tips_of_BGA_Studio.html",
+      "title": "Tools and tips of BGA Studio"
+    },
+    {
+      "path": "Tutorial_reversi.html",
+      "title": "Tutorial reversi"
+    },
+    {
+      "path": "Zombie_Mode.html",
+      "title": "Zombie Mode"
+    }
+  ],
+  "UI": [
+    {
+      "path": "Anti-Stock.html",
+      "title": "Anti-Stock"
+    },
+    {
+      "path": "BGA_Studio_Cookbook.html",
+      "title": "BGA Studio Cookbook"
+    },
+    {
+      "path": "BGA_Studio_Migration_Guide.html",
+      "title": "BGA Studio Migration Guide"
+    },
+    {
+      "path": "BgaCards.html",
+      "title": "BgaCards"
+    },
+    {
+      "path": "ChromeExtension.html",
+      "title": "ChromeExtension"
+    },
+    {
+      "path": "Common_board_game_elements_image_resources.html",
+      "title": "Common board game elements image resources"
+    },
+    {
+      "path": "Counter.html",
+      "title": "Counter"
+    },
+    {
+      "path": "Create_a_game_in_BGA_Studio_Complete_Walkthrough.html",
+      "title": "Create a game in BGA Studio: Complete Walkthrough"
+    },
+    {
+      "path": "Game_art_img_directory.html",
+      "title": "Game art: img directory"
+    },
+    {
+      "path": "Game_interface_logic_Game.js.html",
+      "title": "Game interface logic: Game.js"
+    },
+    {
+      "path": "Game_interface_stylesheet_yourgamename.css.html",
+      "title": "Game interface stylesheet: yourgamename.css"
+    },
+    {
+      "path": "Game_layout_view_and_template_yourgamename.view.php_and_yourgamename_yourgamename.tpl.html",
+      "title": "Game layout: view and template: yourgamename.view.php and yourgamename yourgamename.tpl"
+    },
+    {
+      "path": "Main_game_logic_Game.php.html",
+      "title": "Main game logic: Game.php"
+    },
+    {
+      "path": "Practical_debugging.html",
+      "title": "Practical debugging"
+    },
+    {
+      "path": "Scrollmap.html",
+      "title": "Scrollmap"
+    },
+    {
+      "path": "Setting_up_BGA_Development_environment_using_VSCode.html",
+      "title": "Setting up BGA Development environment using VSCode"
+    },
+    {
+      "path": "State_classes_State_directory.html",
+      "title": "State classes: State directory"
+    },
+    {
+      "path": "Stock.html",
+      "title": "Stock"
+    },
+    {
+      "path": "Studio_file_reference.html",
+      "title": "Studio file reference"
+    },
+    {
+      "path": "Tools_and_tips_of_BGA_Studio.html",
+      "title": "Tools and tips of BGA Studio"
+    },
+    {
+      "path": "Troubleshooting.html",
+      "title": "Troubleshooting"
+    },
+    {
+      "path": "Tutorial_hearts.html",
+      "title": "Tutorial hearts"
+    },
+    {
+      "path": "Tutorial_reversi.html",
+      "title": "Tutorial reversi"
+    },
+    {
+      "path": "Using_Typescript_and_Scss.html",
+      "title": "Using Typescript and Scss"
+    },
+    {
+      "path": "Your_game_mobile_version.html",
+      "title": "Your game mobile version"
+    }
+  ],
+  "Utilities": [
+    {
+      "path": "Anti-Stock.html",
+      "title": "Anti-Stock"
+    },
+    {
+      "path": "BGA_Studio_Cookbook.html",
+      "title": "BGA Studio Cookbook"
+    },
+    {
+      "path": "BGA_Studio_Guidelines.html",
+      "title": "BGA Studio Guidelines"
+    },
+    {
+      "path": "BGA_Studio_Migration_Guide.html",
+      "title": "BGA Studio Migration Guide"
+    },
+    {
+      "path": "BgaCards.html",
+      "title": "BgaCards"
+    },
+    {
+      "path": "Counter.html",
+      "title": "Counter"
+    },
+    {
+      "path": "Create_a_game_in_BGA_Studio_Complete_Walkthrough.html",
+      "title": "Create a game in BGA Studio: Complete Walkthrough"
+    },
+    {
+      "path": "Deck.html",
+      "title": "Deck"
+    },
+    {
+      "path": "Game_art_img_directory.html",
+      "title": "Game art: img directory"
+    },
+    {
+      "path": "Game_interface_logic_Game.js.html",
+      "title": "Game interface logic: Game.js"
+    },
+    {
+      "path": "PlayerCounter_and_TableCounter.html",
+      "title": "PlayerCounter and TableCounter"
+    },
+    {
+      "path": "Practical_debugging.html",
+      "title": "Practical debugging"
+    },
+    {
+      "path": "Stock.html",
+      "title": "Stock"
+    },
+    {
+      "path": "Tools_and_tips_of_BGA_Studio.html",
+      "title": "Tools and tips of BGA Studio"
+    },
+    {
+      "path": "Tutorial_reversi.html",
+      "title": "Tutorial reversi"
+    }
+  ]
+}

@@ -122,8 +122,27 @@ py download.py
 5. Raw HTML is stored in `source-html/<Sanitized_Title>.html`.
 6. Compiles a consolidated `index.json` detailing Title, URL, Depth, Filename, UTC download timestamp, ETag, and Last-Modified header value.
 
-#### How to Force Overwrite
+## How to Force Overwrite
 If you want to force-redownload all pages regardless of cache status:
+ ```bash
+ py download.py --force
+ ```
+
+---
+
+## Phase 3: Build Knowledge Index
+
+Transform extracted JSON documentation into a searchable knowledge index:
+
 ```bash
-py download.py --force
+py build_knowledge_index.py
 ```
+
+This creates `knowledge/` containing:
+- `master_index.json` - One entry per page with metadata and counts
+- `toc.json` - Hierarchical table of contents per page
+- `glossary.json` - Extracted API names, classes, functions
+- `topics.json` - Pages grouped by topic classification
+- `search_index.json` - Searchable entries with keywords
+- `statistics.json` - Aggregate statistics
+- `knowledge_report.md` - Summary report

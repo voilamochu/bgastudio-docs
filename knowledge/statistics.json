@@ -1,0 +1,61 @@
+{
+  "total_pages": 67,
+  "total_words": 74315,
+  "total_headings": 945,
+  "total_sections": 945,
+  "total_code_blocks": 781,
+  "total_tables": 17,
+  "total_images": 37,
+  "total_links": 668,
+  "largest_page": {
+    "path": "Main_game_logic_Game.php.html",
+    "words": 11648
+  },
+  "smallest_page": {
+    "path": "BGA_game_Lifecycle.html",
+    "words": 17
+  },
+  "average_page_size": 1109.18,
+  "top_pages_by_size": [
+    {
+      "path": "Main_game_logic_Game.php.html",
+      "words": 11648
+    },
+    {
+      "path": "Game_interface_logic_Game.js.html",
+      "words": 7098
+    },
+    {
+      "path": "Tutorial_reversi.html",
+      "words": 3996
+    },
+    {
+      "path": "BGA_Studio_Cookbook.html",
+      "words": 3673
+    },
+    {
+      "path": "Create_a_game_in_BGA_Studio_Complete_Walkthrough.html",
+      "words": 3576
+    },
+    {
+      "path": "Your_game_state_machine_states.inc.php.html",
+      "words": 2749
+    },
+    {
+      "path": "Troubleshooting.html",
+      "words": 2223
+    },
+    {
+      "path": "State_classes_State_directory.html",
+      "words": 2075
+    },
+    {
+      "path": "Stock.html",
+      "words": 1716
+    },
+    {
+      "path": "Practical_debugging.html",
+      "words": 1712
+    }
+  ]
+}

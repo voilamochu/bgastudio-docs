@@ -1,0 +1,5939 @@
+{
+  "Anti-Stock.html": [
+    {
+      "level": 2,
+      "text": "Overview",
+      "id": "Overview",
+      "children": []
+    },
+    {
+      "level": 2,
+      "text": "Presentation",
+      "id": "Presentation",
+      "children": []
+    },
+    {
+      "level": 2,
+      "text": "Generating Dom Elements",
+      "id": "Generating_Dom_Elements",
+      "children": [
+        {
+          "level": 3,
+          "text": "Static - basic",
+          "id": "Static_-_basic",
+          "children": []
+        },
+        {
+          "level": 3,
+          "text": "Dynamic using a template string",
+          "id": "Dynamic_using_a_template_string",
+          "children": []
+        },
+        {
+          "level": 3,
+          "text": "Dynamic not using a template string",
+          "id": "Dynamic_not_using_a_template_string",
+          "children": []
+        }
+      ]
+    },
+    {
+      "level": 2,
+      "text": "Layout",
+      "id": "Layout",
+      "children": []
+    },
+    {
+      "level": 2,
+      "text": "Selection and Click Handlers",
+      "id": "Selection_and_Click_Handlers",
+      "children": []
+    },
+    {
+      "level": 2,
+      "text": "Animation",
+      "id": "Animation",
+      "children": []
+    }
+  ],
+  "BGA_Code_Sharing.html": [
+    {
+      "level": 2,
+      "text": "Community shared components, pens, etc",
+      "id": "Community_shared_components.2C_pens.2C_etc",
+      "children": []
+    },
+    {
+      "level": 2,
+      "text": "Projects",
+      "id": "Projects",
+      "children": []
+    },
+    {
+      "level": 2,
+      "text": "Projects on studio",
+      "id": "Projects_on_studio",
+      "children": []
+    },
+    {
+      "level": 2,
+      "text": "Other useful resources",
+      "id": "Other_useful_resources",
+      "children": []
+    }
+  ],
+  "BGA_Game_licenses.html": [
+    {
+      "level": 2,
+      "text": "What is a \"license\" exactly?",
+      "id": "What_is_a_.22license.22_exactly.3F",
+      "children": []
+    },
+    {
+      "level": 2,
+      "text": "Are all games on BGA licensed by their respective copyright owners?",
+      "id": "Are_all_games_on_BGA_licensed_by_their_respective_copyright_owners.3F",
+      "children": []
+    },
+    {
+      "level": 2,
+      "text": "Where can I find a list of games for which a license has already been granted?",
+      "id": "Where_can_I_find_a_list_of_games_for_which_a_license_has_already_been_granted.3F",
+      "children": []
+    },
+    {
+      "level": 2,
+      "text": "What if I start developing a game that is not on the \"Available licences\" list?",
+      "id": "What_if_I_start_developing_a_game_that_is_not_on_the_.22Available_licences.22_list.3F",
+      "children": []
+    },
+    {
+      "level": 2,
+      "text": "Wow, I WANT to develop a game on this list!",
+      "id": "Wow.2C_I_WANT_to_develop_a_game_on_this_list.21",
+      "children": []
+    },
+    {
+      "level": 2,
+      "text": "What needs to be done to add a game on this list?",
+      "id": "What_needs_to_be_done_to_add_a_game_on_this_list.3F",
+      "children": []
+    },
+    {
+      "level": 2,
+      "text": "Why aren't all the best-selling games that I love on that list?",
+      "id": "Why_aren.27t_all_the_best-selling_games_that_I_love_on_that_list.3F",
+      "children": []
+    },
+    {
+      "level": 2,
+      "text": "I want to make my prototype/unpublished game available on BGA",
+      "id": "I_want_to_make_my_prototype.2Funpublished_game_available_on_BGA",
+      "children": []
+    },
+    {
+      "level": 2,
+      "text": "What if I really want to develop a particular game that is NOT on the list of \"Available licences\"?",
+      "id": "What_if_I_really_want_to_develop_a_particular_game_that_is_NOT_on_the_list_of_.22Available_licences.22.3F",
+      "children": [
+        {
+          "level": 3,
+          "text": "0: The game is popular",
+          "id": "0:_The_game_is_popular",
+          "children": []
+        },
+        {
+          "level": 3,
+          "text": "1: Determine the Publisher",
+          "id": "1:_Determine_the_Publisher",
+          "children": []
+        },
+        {
+          "level": 3,
+          "text": "2: Check Publisher Relation with BGA",
+          "id": "2:_Check_Publisher_Relation_with_BGA",
+          "children": []
+        },
+        {
+          "level": 3,
+          "text": "3: Check Publisher's Other Available Licenses",
+          "id": "3:_Check_Publisher.27s_Other_Available_Licenses",
+          "children": []
+        },
+        {
+          "level": 3,
+          "text": "4: Publisher is not in the list",
+          "id": "4:_Publisher_is_not_in_the_list",
+          "children": []
+        }
+      ]
+    }
+  ],
+  "BGA_game_Lifecycle.html": [
+    {
+      "level": 3,
+      "text": "See also",
+      "id": "See_also",
+      "children": []
+    }
+  ],
+  "BGA_Studio_Cookbook.html": [
+    {
+      "level": 2,
+      "text": "Visual Effects, Layout and Animation",
+      "id": "Visual_Effects.2C_Layout_and_Animation",
+      "children": [
+        {
+          "level": 3,
+          "text": "DOM manipulations",
+          "id": "DOM_manipulations",
+          "children": [
+            {
+              "level": 4,
+              "text": "Create pieces dynamically (using string concatenation)",
+              "id": "Create_pieces_dynamically_.28using_string_concatenation.29",
+              "children": []
+            },
+            {
+              "level": 4,
+              "text": "Create all pieces statically",
+              "id": "Create_all_pieces_statically",
+              "children": []
+            },
+            {
+              "level": 4,
+              "text": "Use player color in template",
+              "id": "Use_player_color_in_template",
+              "children": []
+            }
+          ]
+        },
+        {
+          "level": 3,
+          "text": "Animation",
+          "id": "Animation",
+          "children": [
+            {
+              "level": 4,
+              "text": "Attach to new parent without destroying the object",
+              "id": "Attach_to_new_parent_without_destroying_the_object",
+              "children": []
+            },
+            {
+              "level": 4,
+              "text": "Animation on oversurface",
+              "id": "Animation_on_oversurface",
+              "children": []
+            },
+            {
+              "level": 4,
+              "text": "Scroll element into view",
+              "id": "Scroll_element_into_view",
+              "children": []
+            }
+          ]
+        },
+        {
+          "level": 3,
+          "text": "Logs",
+          "id": "Logs",
+          "children": [
+            {
+              "level": 4,
+              "text": "Inject images and styled html in the log",
+              "id": "Inject_images_and_styled_html_in_the_log",
+              "children": [
+                {
+                  "level": 5,
+                  "text": "Definethis.bgaFormatText()method",
+                  "id": "Define_this.bgaFormatText.28.29_method",
+                  "children": []
+                },
+                {
+                  "level": 5,
+                  "text": "Use:formatFunctionoption provided bydojo.string.substitute",
+                  "id": "Use_:formatFunction_option_provided_by_dojo.string.substitute",
+                  "children": []
+                },
+                {
+                  "level": 5,
+                  "text": "Usetransformargument ofdojo.string.substitute",
+                  "id": "Use_transform_argument_of_dojo.string.substitute",
+                  "children": []
+                }
+              ]
+            },
+            {
+              "level": 4,
+              "text": "Processing logs on re-loading",
+              "id": "Processing_logs_on_re-loading",
+              "children": []
+            },
+            {
+              "level": 4,
+              "text": "Overriding format_string_recursive to inject HTML into log, including adding tooltips to log",
+              "id": "Overriding_format_string_recursive_to_inject_HTML_into_log.2C_including_adding_tooltips_to_log",
+              "children": []
+            }
+          ]
+        },
+        {
+          "level": 3,
+          "text": "Images and Icons",
+          "id": "Images_and_Icons",
+          "children": [
+            {
+              "level": 4,
+              "text": "Accessing images from js",
+              "id": "Accessing_images_from_js",
+              "children": []
+            },
+            {
+              "level": 4,
+              "text": "High-Definition Graphics",
+              "id": "High-Definition_Graphics",
+              "children": []
+            },
+            {
+              "level": 4,
+              "text": "Using CSS to create different colors of game pieces if you have only white piece",
+              "id": "Using_CSS_to_create_different_colors_of_game_pieces_if_you_have_only_white_piece",
+              "children": []
+            },
+            {
+              "level": 4,
+              "text": "Adding Image buttons",
+              "id": "Adding_Image_buttons",
+              "children": []
+            }
+          ]
+        },
+        {
+          "level": 3,
+          "text": "Scale to fit for big boards",
+          "id": "Scale_to_fit_for_big_boards",
+          "children": []
+        },
+        {
+          "level": 3,
+          "text": "Dynamic tooltips",
+          "id": "Dynamic_tooltips",
+          "children": []
+        },
+        {
+          "level": 3,
+          "text": "Cool realistic shadow effect with CSS",
+          "id": "Cool_realistic_shadow_effect_with_CSS",
+          "children": [
+            {
+              "level": 4,
+              "text": "Rectangles and circles",
+              "id": "Rectangles_and_circles",
+              "children": []
+            },
+            {
+              "level": 4,
+              "text": "Irregular Shapes",
+              "id": "Irregular_Shapes",
+              "children": []
+            },
+            {
+              "level": 4,
+              "text": "Shadows with clip-path",
+              "id": "Shadows_with_clip-path",
+              "children": []
+            }
+          ]
+        },
+        {
+          "level": 3,
+          "text": "Using the CSS classes from the state machine",
+          "id": "Using_the_CSS_classes_from_the_state_machine",
+          "children": []
+        }
+      ]
+    },
+    {
+      "level": 2,
+      "text": "Game Model and Database design",
+      "id": "Game_Model_and_Database_design",
+      "children": [
+        {
+          "level": 3,
+          "text": "Database for The euro game",
+          "id": "Database_for_The_euro_game",
+          "children": []
+        },
+        {
+          "level": 3,
+          "text": "Database for The card game",
+          "id": "Database_for_The_card_game",
+          "children": []
+        }
+      ]
+    },
+    {
+      "level": 2,
+      "text": "Game Elements",
+      "id": "Game_Elements",
+      "children": [
+        {
+          "level": 3,
+          "text": "Resource",
+          "id": "Resource",
+          "children": [
+            {
+              "level": 4,
+              "text": "Representation in Database",
+              "id": "Representation_in_Database",
+              "children": []
+            },
+            {
+              "level": 4,
+              "text": "Representation in Material File (material.inc.php)",
+              "id": "Representation_in_Material_File_.28material.inc.php.29",
+              "children": []
+            },
+            {
+              "level": 4,
+              "text": "HTML Representation",
+              "id": "HTML_Representation",
+              "children": []
+            },
+            {
+              "level": 4,
+              "text": "JavaScript Handling",
+              "id": "JavaScript_Handling",
+              "children": []
+            }
+          ]
+        }
+      ]
+    }
+  ],
+  "BGA_Studio_Guidelines.html": [
+    {
+      "level": 1,
+      "text": "BGA Studio Guidelines (UX/UI)",
+      "id": "BGA_Studio_Guidelines_.28UX.2FUI.29",
+      "children": [
+        {
+          "level": 2,
+          "text": "A — Layouts",
+          "id": "A_.E2.80.94_Layouts",
+          "children": [
+            {
+              "level": 3,
+              "text": "A.1 Layout arrangement",
+              "id": "A.1_Layout_arrangement",
+              "children": []
+            },
+            {
+              "level": 3,
+              "text": "A.2 Action Bar",
+              "id": "A.2_Action_Bar",
+              "children": []
+            },
+            {
+              "level": 3,
+              "text": "A.3 Player panels",
+              "id": "A.3_Player_panels",
+              "children": []
+            },
+            {
+              "level": 3,
+              "text": "A.4 Popups",
+              "id": "A.4_Popups",
+              "children": []
+            },
+            {
+              "level": 3,
+              "text": "A.5 Clarity & Zoom",
+              "id": "A.5_Clarity_.26_Zoom",
+              "children": []
+            }
+          ]
+        },
+        {
+          "level": 2,
+          "text": "B — Usability",
+          "id": "B_.E2.80.94_Usability",
+          "children": [
+            {
+              "level": 3,
+              "text": "B.1 Tooltips",
+              "id": "B.1_Tooltips",
+              "children": []
+            },
+            {
+              "level": 3,
+              "text": "B.2 Forbidden actions",
+              "id": "B.2_Forbidden_actions",
+              "children": []
+            },
+            {
+              "level": 3,
+              "text": "B.3 Undo, Reset, Restart",
+              "id": "B.3_Undo.2C_Reset.2C_Restart",
+              "children": []
+            }
+          ]
+        },
+        {
+          "level": 2,
+          "text": "C — Design",
+          "id": "C_.E2.80.94_Design",
+          "children": [
+            {
+              "level": 3,
+              "text": "C.1 Typography & translations",
+              "id": "C.1_Typography_.26_translations",
+              "children": []
+            },
+            {
+              "level": 3,
+              "text": "C.2 Highlights & Glowing auras",
+              "id": "C.2_Highlights_.26_Glowing_auras",
+              "children": []
+            },
+            {
+              "level": 3,
+              "text": "C.3 Button colors and styling",
+              "id": "C.3_Button_colors_and_styling",
+              "children": []
+            },
+            {
+              "level": 3,
+              "text": "C.4 Sizing & responsiveness",
+              "id": "C.4_Sizing_.26_responsiveness",
+              "children": []
+            },
+            {
+              "level": 3,
+              "text": "C.5 Background & extras",
+              "id": "C.5_Background_.26_extras",
+              "children": []
+            }
+          ]
+        },
+        {
+          "level": 2,
+          "text": "D — Feedback",
+          "id": "D_.E2.80.94_Feedback",
+          "children": [
+            {
+              "level": 3,
+              "text": "D.1 Errors & invalid actions",
+              "id": "D.1_Errors_.26_invalid_actions",
+              "children": []
+            },
+            {
+              "level": 3,
+              "text": "D.2 Game Logs",
+              "id": "D.2_Game_Logs",
+              "children": []
+            },
+            {
+              "level": 3,
+              "text": "D.3 Animation",
+              "id": "D.3_Animation",
+              "children": []
+            },
+            {
+              "level": 3,
+              "text": "D.4 Sound effects",
+              "id": "D.4_Sound_effects",
+              "children": []
+            }
+          ]
+        },
+        {
+          "level": 2,
+          "text": "E — Accessibility",
+          "id": "E_.E2.80.94_Accessibility",
+          "children": [
+            {
+              "level": 3,
+              "text": "E.1 Design for all",
+              "id": "E.1_Design_for_all",
+              "children": []
+            },
+            {
+              "level": 3,
+              "text": "E.2 Colorblind-safe design",
+              "id": "E.2_Colorblind-safe_design",
+              "children": []
+            },
+            {
+              "level": 3,
+              "text": "E.3 Tap targets",
+              "id": "E.3_Tap_targets",
+              "children": []
+            },
+            {
+              "level": 3,
+              "text": "E.4 Settings & customization",
+              "id": "E.4_Settings_.26_customization",
+              "children": []
+            }
+          ]
+        },
+        {
+          "level": 2,
+          "text": "F — Technical",
+          "id": "F_.E2.80.94_Technical",
+          "children": [
+            {
+              "level": 3,
+              "text": "F.1 Endgame & Replays",
+              "id": "F.1_Endgame_.26_Replays",
+              "children": []
+            },
+            {
+              "level": 3,
+              "text": "F.2 Refresh & Continuity",
+              "id": "F.2_Refresh_.26_Continuity",
+              "children": []
+            },
+            {
+              "level": 3,
+              "text": "F.3 Error handling",
+              "id": "F.3_Error_handling",
+              "children": []
+            }
+          ]
+        },
+        {
+          "level": 2,
+          "text": "Pre-release Checklist",
+          "id": "Pre-release_Checklist",
+          "children": []
+        },
+        {
+          "level": 2,
+          "text": "Closing thoughts",
+          "id": "Closing_thoughts",
+          "children": []
+        }
+      ]
+    },
+    {
+      "level": 1,
+      "text": "BGA Studio Guidelines (Source Code)",
+      "id": "BGA_Studio_Guidelines_.28Source_Code.29",
+      "children": [
+        {
+          "level": 2,
+          "text": "Front (JS) code",
+          "id": "Front_.28JS.29_code",
+          "children": [
+            {
+              "level": 3,
+              "text": "Generated code",
+              "id": "Generated_code",
+              "children": []
+            },
+            {
+              "level": 3,
+              "text": "Templates",
+              "id": "Templates",
+              "children": []
+            }
+          ]
+        },
+        {
+          "level": 2,
+          "text": "Back (PHP) code",
+          "id": "Back_.28PHP.29_code",
+          "children": [
+            {
+              "level": 3,
+              "text": "Framework functions",
+              "id": "Framework_functions",
+              "children": [
+                {
+                  "level": 5,
+                  "text": "Undocumented functions",
+                  "id": "Undocumented_functions",
+                  "children": []
+                },
+                {
+                  "level": 4,
+                  "text": "Function override",
+                  "id": "Function_override",
+                  "children": []
+                },
+                {
+                  "level": 4,
+                  "text": "State functions",
+                  "id": "State_functions",
+                  "children": []
+                }
+              ]
+            },
+            {
+              "level": 3,
+              "text": "Namespacing",
+              "id": "Namespacing",
+              "children": []
+            },
+            {
+              "level": 3,
+              "text": "Other",
+              "id": "Other",
+              "children": []
+            }
+          ]
+        }
+      ]
+    }
+  ],
+  "BGA_Studio_Migration_Guide.html": [
+    {
+      "level": 2,
+      "text": "Overview",
+      "id": "Overview",
+      "children": []
+    },
+    {
+      "level": 2,
+      "text": "Structural changes",
+      "id": "Structural_changes",
+      "children": []
+    },
+    {
+      "level": 2,
+      "text": "IDE Support",
+      "id": "IDE_Support",
+      "children": []
+    },
+    {
+      "level": 2,
+      "text": "Game configuration",
+      "id": "Game_configuration",
+      "children": [
+        {
+          "level": 3,
+          "text": "User preferences",
+          "id": "User_preferences",
+          "children": [
+            {
+              "level": 4,
+              "text": "Instant cssPref on user preferences",
+              "id": "Instant_cssPref_on_user_preferences",
+              "children": []
+            }
+          ]
+        },
+        {
+          "level": 3,
+          "text": "Game options",
+          "id": "Game_options",
+          "children": []
+        }
+      ]
+    },
+    {
+      "level": 2,
+      "text": "Server parts (php, sql, etc)",
+      "id": "Server_parts_.28php.2C_sql.2C_etc.29",
+      "children": [
+        {
+          "level": 3,
+          "text": "PHP migration",
+          "id": "PHP_migration",
+          "children": []
+        },
+        {
+          "level": 3,
+          "text": "Namespaced game class",
+          "id": "Namespaced_game_class",
+          "children": []
+        },
+        {
+          "level": 3,
+          "text": "Material",
+          "id": "Material",
+          "children": []
+        },
+        {
+          "level": 3,
+          "text": "Autowire game actions",
+          "id": "Autowire_game_actions",
+          "children": []
+        },
+        {
+          "level": 3,
+          "text": "Notifications",
+          "id": "Notifications",
+          "children": [
+            {
+              "level": 4,
+              "text": "Notification Decorators",
+              "id": "Notification_Decorators",
+              "children": []
+            },
+            {
+              "level": 4,
+              "text": "Notification args consistency",
+              "id": "Notification_args_consistency",
+              "children": []
+            }
+          ]
+        },
+        {
+          "level": 3,
+          "text": "Deprecated getGameName",
+          "id": "Deprecated_getGameName",
+          "children": []
+        },
+        {
+          "level": 3,
+          "text": "State Management Functions",
+          "id": "State_Management_Functions",
+          "children": []
+        },
+        {
+          "level": 3,
+          "text": "Player Information Functions",
+          "id": "Player_Information_Functions",
+          "children": []
+        },
+        {
+          "level": 3,
+          "text": "Game Mode Functions",
+          "id": "Game_Mode_Functions",
+          "children": []
+        },
+        {
+          "level": 3,
+          "text": "Exception Classes",
+          "id": "Exception_Classes",
+          "children": []
+        },
+        {
+          "level": 3,
+          "text": "Namespace for Base Classes",
+          "id": "Namespace_for_Base_Classes",
+          "children": []
+        },
+        {
+          "level": 3,
+          "text": "Deprecated APP_* Classes",
+          "id": "Deprecated_APP_.2A_Classes",
+          "children": []
+        },
+        {
+          "level": 3,
+          "text": "Deprecated translation functions",
+          "id": "Deprecated_translation_functions",
+          "children": []
+        },
+        {
+          "level": 3,
+          "text": "Deprecated getNew",
+          "id": "Deprecated_getNew",
+          "children": []
+        },
+        {
+          "level": 3,
+          "text": "Stats",
+          "id": "Stats",
+          "children": []
+        },
+        {
+          "level": 3,
+          "text": "Legacy",
+          "id": "Legacy",
+          "children": []
+        },
+        {
+          "level": 3,
+          "text": "Any Globals",
+          "id": "Any_Globals",
+          "children": []
+        },
+        {
+          "level": 3,
+          "text": "Server Counters",
+          "id": "Server_Counters",
+          "children": []
+        },
+        {
+          "level": 3,
+          "text": "Updated Zombie Mode documentation and recommendations",
+          "id": "Updated_Zombie_Mode_documentation_and_recommendations",
+          "children": []
+        },
+        {
+          "level": 3,
+          "text": "View and template files: deprecated",
+          "id": "View_and_template_files:_deprecated",
+          "children": [
+            {
+              "level": 4,
+              "text": "Forbid access to global BGA variables and direct DB access on action/view files",
+              "id": "Forbid_access_to_global_BGA_variables_and_direct_DB_access_on_action.2Fview_files",
+              "children": []
+            }
+          ]
+        },
+        {
+          "level": 3,
+          "text": "States",
+          "id": "States",
+          "children": [
+            {
+              "level": 4,
+              "text": "If still using states.php",
+              "id": "If_still_using_states.php",
+              "children": []
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "level": 2,
+      "text": "Client parts (js, html, css)",
+      "id": "Client_parts_.28js.2C_html.2C_css.29",
+      "children": [
+        {
+          "level": 3,
+          "text": "Main class",
+          "id": "Main_class",
+          "children": []
+        },
+        {
+          "level": 3,
+          "text": "Deprecated ajaxcall",
+          "id": "Deprecated_ajaxcall",
+          "children": []
+        },
+        {
+          "level": 3,
+          "text": "New this.bga.* API Structure",
+          "id": "New_this.bga..2A_API_Structure",
+          "children": [
+            {
+              "level": 4,
+              "text": "Player Functions (this.bga.players)",
+              "id": "Player_Functions_.28this.bga.players.29",
+              "children": []
+            },
+            {
+              "level": 4,
+              "text": "State Functions (this.bga.states)",
+              "id": "State_Functions_.28this.bga.states.29",
+              "children": []
+            },
+            {
+              "level": 4,
+              "text": "Status Bar Functions (this.bga.statusBar)",
+              "id": "Status_Bar_Functions_.28this.bga.statusBar.29",
+              "children": []
+            },
+            {
+              "level": 4,
+              "text": "Action Functions (this.bga.actions)",
+              "id": "Action_Functions_.28this.bga.actions.29",
+              "children": []
+            },
+            {
+              "level": 4,
+              "text": "Dialog Functions (this.bga.dialogs)",
+              "id": "Dialog_Functions_.28this.bga.dialogs.29",
+              "children": []
+            },
+            {
+              "level": 4,
+              "text": "Image Functions (this.bga.images)",
+              "id": "Image_Functions_.28this.bga.images.29",
+              "children": []
+            },
+            {
+              "level": 4,
+              "text": "Game Area Functions (this.bga.gameArea)",
+              "id": "Game_Area_Functions_.28this.bga.gameArea.29",
+              "children": []
+            },
+            {
+              "level": 4,
+              "text": "Player Panel Functions (this.bga.playerPanels)",
+              "id": "Player_Panel_Functions_.28this.bga.playerPanels.29",
+              "children": []
+            },
+            {
+              "level": 4,
+              "text": "User Preferences (this.bga.userPreferences)",
+              "id": "User_Preferences_.28this.bga.userPreferences.29",
+              "children": []
+            },
+            {
+              "level": 4,
+              "text": "Notification Functions (this.bga.notifications)",
+              "id": "Notification_Functions_.28this.bga.notifications.29",
+              "children": []
+            },
+            {
+              "level": 4,
+              "text": "Animation Functions (this.bga.gameui)",
+              "id": "Animation_Functions_.28this.bga.gameui.29",
+              "children": []
+            }
+          ]
+        },
+        {
+          "level": 3,
+          "text": "Access to DOM elements",
+          "id": "Access_to_DOM_elements",
+          "children": []
+        },
+        {
+          "level": 3,
+          "text": "Notification setup",
+          "id": "Notification_setup",
+          "children": []
+        },
+        {
+          "level": 3,
+          "text": "Status bar manipulation",
+          "id": "Status_bar_manipulation",
+          "children": []
+        },
+        {
+          "level": 3,
+          "text": "Dojo usage",
+          "id": "Dojo_usage",
+          "children": []
+        },
+        {
+          "level": 3,
+          "text": "Sound loading",
+          "id": "Sound_loading",
+          "children": []
+        },
+        {
+          "level": 3,
+          "text": "Formatting of log message using bgaFormatText",
+          "id": "Formatting_of_log_message_using_bgaFormatText",
+          "children": []
+        },
+        {
+          "level": 3,
+          "text": "Automata player panel",
+          "id": "Automata_player_panel",
+          "children": []
+        },
+        {
+          "level": 3,
+          "text": "New JS libraries",
+          "id": "New_JS_libraries",
+          "children": []
+        },
+        {
+          "level": 3,
+          "text": "CSS imports",
+          "id": "CSS_imports",
+          "children": []
+        },
+        {
+          "level": 3,
+          "text": "Future support of dark mode",
+          "id": "Future_support_of_dark_mode",
+          "children": []
+        }
+      ]
+    }
+  ],
+  "BGA_Undo_policy.html": [
+    {
+      "level": 1,
+      "text": "What you must NEVER do",
+      "id": "What_you_must_NEVER_do",
+      "children": []
+    },
+    {
+      "level": 1,
+      "text": "When to propose to Undo?",
+      "id": "When_to_propose_to_Undo.3F",
+      "children": [
+        {
+          "level": 2,
+          "text": "About Undo to avoid \"misclick\"",
+          "id": "About_Undo_to_avoid_.22misclick.22",
+          "children": []
+        },
+        {
+          "level": 2,
+          "text": "About Undo to take back moves from a complex series of actions",
+          "id": "About_Undo_to_take_back_moves_from_a_complex_series_of_actions",
+          "children": []
+        }
+      ]
+    },
+    {
+      "level": 1,
+      "text": "How to implement Undo",
+      "id": "How_to_implement_Undo",
+      "children": [
+        {
+          "level": 2,
+          "text": "How does undoSavePoint/undoRestorepoint works?",
+          "id": "How_does_undoSavePoint.2FundoRestorepoint_works.3F",
+          "children": []
+        },
+        {
+          "level": 2,
+          "text": "Adding simple Undo action to your game",
+          "id": "Adding_simple_Undo_action_to_your_game",
+          "children": [
+            {
+              "level": 3,
+              "text": "Step 1: Declare in gameinfos",
+              "id": "Step_1:_Declare_in_gameinfos",
+              "children": []
+            },
+            {
+              "level": 3,
+              "text": "Step 2: Insert savepoint",
+              "id": "Step_2:_Insert_savepoint",
+              "children": []
+            },
+            {
+              "level": 3,
+              "text": "Step 3: Create undo action in server",
+              "id": "Step_3:_Create_undo_action_in_server",
+              "children": []
+            },
+            {
+              "level": 3,
+              "text": "Step 4: Create undo action in client",
+              "id": "Step_4:_Create_undo_action_in_client",
+              "children": []
+            },
+            {
+              "level": 3,
+              "text": "Step 5: Make it fancy",
+              "id": "Step_5:_Make_it_fancy",
+              "children": []
+            }
+          ]
+        }
+      ]
+    }
+  ],
+  "BgaAnimations.html": [
+    {
+      "level": 2,
+      "text": "Overview",
+      "id": "Overview",
+      "children": []
+    },
+    {
+      "level": 2,
+      "text": "Usage",
+      "id": "Usage",
+      "children": []
+    },
+    {
+      "level": 2,
+      "text": "Versioning",
+      "id": "Versioning",
+      "children": []
+    },
+    {
+      "level": 2,
+      "text": "Using with TypeScript",
+      "id": "Using_with_TypeScript",
+      "children": []
+    },
+    {
+      "level": 2,
+      "text": "Developer notes",
+      "id": "Developer_notes",
+      "children": []
+    },
+    {
+      "level": 2,
+      "text": "Changelog",
+      "id": "Changelog",
+      "children": []
+    }
+  ],
+  "BgaAutofit.html": [
+    {
+      "level": 2,
+      "text": "Overview",
+      "id": "Overview",
+      "children": []
+    },
+    {
+      "level": 2,
+      "text": "Usage",
+      "id": "Usage",
+      "children": []
+    },
+    {
+      "level": 2,
+      "text": "Versioning",
+      "id": "Versioning",
+      "children": []
+    },
+    {
+      "level": 2,
+      "text": "Using with TypeScript",
+      "id": "Using_with_TypeScript",
+      "children": []
+    },
+    {
+      "level": 2,
+      "text": "Changelog",
+      "id": "Changelog",
+      "children": []
+    }
+  ],
+  "BgaCards.html": [
+    {
+      "level": 2,
+      "text": "Overview",
+      "id": "Overview",
+      "children": []
+    },
+    {
+      "level": 2,
+      "text": "Usage",
+      "id": "Usage",
+      "children": []
+    },
+    {
+      "level": 2,
+      "text": "Random Observations",
+      "id": "Random_Observations",
+      "children": [
+        {
+          "level": 3,
+          "text": "Sprite Markup",
+          "id": "Sprite_Markup",
+          "children": []
+        },
+        {
+          "level": 3,
+          "text": "Card faces",
+          "id": "Card_faces",
+          "children": []
+        },
+        {
+          "level": 3,
+          "text": "Void Stock",
+          "id": "Void_Stock",
+          "children": []
+        },
+        {
+          "level": 3,
+          "text": "Type casting from PHP Deck",
+          "id": "Type_casting_from_PHP_Deck",
+          "children": []
+        },
+        {
+          "level": 3,
+          "text": "Asynchronicity",
+          "id": "Asynchronicity",
+          "children": []
+        }
+      ]
+    },
+    {
+      "level": 2,
+      "text": "Versioning",
+      "id": "Versioning",
+      "children": []
+    },
+    {
+      "level": 2,
+      "text": "Using with TypeScript",
+      "id": "Using_with_TypeScript",
+      "children": []
+    },
+    {
+      "level": 2,
+      "text": "Changelog",
+      "id": "Changelog",
+      "children": []
+    }
+  ],
+  "BgaDice.html": [
+    {
+      "level": 2,
+      "text": "Overview",
+      "id": "Overview",
+      "children": []
+    },
+    {
+      "level": 2,
+      "text": "Usage",
+      "id": "Usage",
+      "children": []
+    },
+    {
+      "level": 2,
+      "text": "Versioning",
+      "id": "Versioning",
+      "children": []
+    },
+    {
+      "level": 2,
+      "text": "Using with TypeScript",
+      "id": "Using_with_TypeScript",
+      "children": []
+    },
+    {
+      "level": 2,
+      "text": "Changelog",
+      "id": "Changelog",
+      "children": []
+    }
+  ],
+  "BgaScoreSheet.html": [
+    {
+      "level": 2,
+      "text": "Overview",
+      "id": "Overview",
+      "children": []
+    },
+    {
+      "level": 2,
+      "text": "Usage",
+      "id": "Usage",
+      "children": []
+    },
+    {
+      "level": 2,
+      "text": "Versioning",
+      "id": "Versioning",
+      "children": []
+    },
+    {
+      "level": 2,
+      "text": "Using with TypeScript",
+      "id": "Using_with_TypeScript",
+      "children": []
+    },
+    {
+      "level": 2,
+      "text": "Changelog",
+      "id": "Changelog",
+      "children": []
+    }
+  ],
+  "Bots_and_Artificial_Intelligence.html": [
+    {
+      "level": 2,
+      "text": "Games",
+      "id": "Games",
+      "children": []
+    },
+    {
+      "level": 2,
+      "text": "Techniques",
+      "id": "Techniques",
+      "children": [
+        {
+          "level": 3,
+          "text": "Testing bot",
+          "id": "Testing_bot",
+          "children": []
+        },
+        {
+          "level": 3,
+          "text": "JavaScript AI",
+          "id": "JavaScript_AI",
+          "children": []
+        },
+        {
+          "level": 3,
+          "text": "Server Bot as registered game Player",
+          "id": "Server_Bot_as_registered_game_Player",
+          "children": []
+        },
+        {
+          "level": 3,
+          "text": "Server Bot as game state action",
+          "id": "Server_Bot_as_game_state_action",
+          "children": [
+            {
+              "level": 4,
+              "text": "Bot Player ID",
+              "id": "Bot_Player_ID",
+              "children": []
+            },
+            {
+              "level": 4,
+              "text": "Bot Color, Order and Resources",
+              "id": "Bot_Color.2C_Order_and_Resources",
+              "children": []
+            },
+            {
+              "level": 4,
+              "text": "Bot Actions",
+              "id": "Bot_Actions",
+              "children": []
+            },
+            {
+              "level": 4,
+              "text": "Bot Player Panel",
+              "id": "Bot_Player_Panel",
+              "children": []
+            },
+            {
+              "level": 4,
+              "text": "Bot Player Notifications",
+              "id": "Bot_Player_Notifications",
+              "children": []
+            }
+          ]
+        }
+      ]
+    }
+  ],
+  "ChromeExtension.html": [
+    {
+      "level": 2,
+      "text": "List of current games",
+      "id": "List_of_current_games",
+      "children": []
+    },
+    {
+      "level": 2,
+      "text": "Settings",
+      "id": "Settings",
+      "children": []
+    },
+    {
+      "level": 2,
+      "text": "Advanced home page settings",
+      "id": "Advanced_home_page_settings",
+      "children": []
+    },
+    {
+      "level": 2,
+      "text": "Dark Mode",
+      "id": "Dark_Mode",
+      "children": []
+    },
+    {
+      "level": 2,
+      "text": "Hide friend's activities in game log",
+      "id": "Hide_friend.27s_activities_in_game_log",
+      "children": []
+    },
+    {
+      "level": 2,
+      "text": "Fast start button",
+      "id": "Fast_start_button",
+      "children": []
+    },
+    {
+      "level": 2,
+      "text": "Navigation menu",
+      "id": "Navigation_menu",
+      "children": []
+    },
+    {
+      "level": 2,
+      "text": "Floating menu",
+      "id": "Floating_menu",
+      "children": []
+    },
+    {
+      "level": 2,
+      "text": "Deleting a game",
+      "id": "Deleting_a_game",
+      "children": []
+    },
+    {
+      "level": 2,
+      "text": "Hide general chat",
+      "id": "Hide_general_chat",
+      "children": []
+    },
+    {
+      "level": 2,
+      "text": "Mute a player in game chat",
+      "id": "Mute_a_player_in_game_chat",
+      "children": []
+    },
+    {
+      "level": 2,
+      "text": "Custom CSS code",
+      "id": "Custom_CSS_code",
+      "children": []
+    }
+  ],
+  "Common_board_game_elements_image_resources.html": [],
+  "Compatibility.html": [
+    {
+      "level": 2,
+      "text": "Current list",
+      "id": "Current_list",
+      "children": []
+    }
+  ],
+  "Contact_BGA_Studio.html": [
+    {
+      "level": 2,
+      "text": "Purpose",
+      "id": "Purpose",
+      "children": []
+    },
+    {
+      "level": 2,
+      "text": "Studio Accounts Management",
+      "id": "Studio_Accounts_Management",
+      "children": []
+    },
+    {
+      "level": 2,
+      "text": "Studio Games Management",
+      "id": "Studio_Games_Management",
+      "children": []
+    },
+    {
+      "level": 2,
+      "text": "Help with Game development or setup",
+      "id": "Help_with_Game_development_or_setup",
+      "children": []
+    },
+    {
+      "level": 2,
+      "text": "Help with Game assets or licenses",
+      "id": "Help_with_Game_assets_or_licenses",
+      "children": []
+    },
+    {
+      "level": 2,
+      "text": "Last resort",
+      "id": "Last_resort",
+      "children": []
+    }
+  ],
+  "Counter.html": [
+    {
+      "level": 2,
+      "text": "Dependency",
+      "id": "Dependency",
+      "children": []
+    },
+    {
+      "level": 2,
+      "text": "Setup a counter",
+      "id": "Setup_a_counter",
+      "children": []
+    },
+    {
+      "level": 2,
+      "text": "API",
+      "id": "API",
+      "children": []
+    },
+    {
+      "level": 2,
+      "text": "Players panels",
+      "id": "Players_panels",
+      "children": [
+        {
+          "level": 3,
+          "text": "Adding stuff to player's panel",
+          "id": "Adding_stuff_to_player.27s_panel",
+          "children": []
+        }
+      ]
+    }
+  ],
+  "Create_a_game_in_BGA_Studio_Complete_Walkthrough.html": [
+    {
+      "level": 2,
+      "text": "Introduction",
+      "id": "Introduction",
+      "children": []
+    },
+    {
+      "level": 2,
+      "text": "Select a First Game",
+      "id": "Select_a_First_Game",
+      "children": []
+    },
+    {
+      "level": 2,
+      "text": "Create a project",
+      "id": "Create_a_project",
+      "children": []
+    },
+    {
+      "level": 2,
+      "text": "Development Tools",
+      "id": "Development_Tools",
+      "children": []
+    },
+    {
+      "level": 2,
+      "text": "Hook version control system",
+      "id": "Hook_version_control_system",
+      "children": []
+    },
+    {
+      "level": 2,
+      "text": "Obtain game graphics",
+      "id": "Obtain_game_graphics",
+      "children": []
+    },
+    {
+      "level": 2,
+      "text": "Obtain game documentation",
+      "id": "Obtain_game_documentation",
+      "children": []
+    },
+    {
+      "level": 2,
+      "text": "Update game info and box graphics",
+      "id": "Update_game_info_and_box_graphics",
+      "children": []
+    },
+    {
+      "level": 2,
+      "text": "Fix source copyright",
+      "id": "Fix_source_copyright",
+      "children": []
+    },
+    {
+      "level": 2,
+      "text": "Reduce the Rules",
+      "id": "Reduce_the_Rules",
+      "children": []
+    },
+    {
+      "level": 2,
+      "text": "Design Game Elements",
+      "id": "Design_Game_Elements",
+      "children": []
+    },
+    {
+      "level": 2,
+      "text": "Create Initial Layout and Game Graphics",
+      "id": "Create_Initial_Layout_and_Game_Graphics",
+      "children": []
+    },
+    {
+      "level": 2,
+      "text": "Create Database Schema",
+      "id": "Create_Database_Schema",
+      "children": []
+    },
+    {
+      "level": 2,
+      "text": "Implement Game Setup",
+      "id": "Implement_Game_Setup",
+      "children": []
+    },
+    {
+      "level": 2,
+      "text": "Implement one time game model synchronization",
+      "id": "Implement_one_time_game_model_synchronization",
+      "children": []
+    },
+    {
+      "level": 2,
+      "text": "Create State Machine",
+      "id": "Create_State_Machine",
+      "children": []
+    },
+    {
+      "level": 2,
+      "text": "Handle Turn Order",
+      "id": "Handle_Turn_Order",
+      "children": []
+    },
+    {
+      "level": 2,
+      "text": "Hook User Input",
+      "id": "Hook_User_Input",
+      "children": []
+    },
+    {
+      "level": 2,
+      "text": "Implement Notification handling and Animation",
+      "id": "Implement_Notification_handling_and_Animation",
+      "children": []
+    },
+    {
+      "level": 2,
+      "text": "Wrap Up",
+      "id": "Wrap_Up",
+      "children": []
+    },
+    {
+      "level": 2,
+      "text": "Alpha",
+      "id": "Alpha",
+      "children": []
+    },
+    {
+      "level": 2,
+      "text": "Level Up",
+      "id": "Level_Up",
+      "children": []
+    },
+    {
+      "level": 2,
+      "text": "After the alpha stage",
+      "id": "After_the_alpha_stage",
+      "children": []
+    }
+  ],
+  "Deck.html": [
+    {
+      "level": 2,
+      "text": "Using Deck: Hearts example",
+      "id": "Using_Deck:_Hearts_example",
+      "children": []
+    },
+    {
+      "level": 2,
+      "text": "Deck overview",
+      "id": "Deck_overview",
+      "children": [
+        {
+          "level": 3,
+          "text": "The 5 properties of each card",
+          "id": "The_5_properties_of_each_card",
+          "children": []
+        },
+        {
+          "level": 3,
+          "text": "Create a new Deck component",
+          "id": "Create_a_new_Deck_component",
+          "children": []
+        },
+        {
+          "level": 3,
+          "text": "Simple examples using Deck",
+          "id": "Simple_examples_using_Deck",
+          "children": []
+        }
+      ]
+    },
+    {
+      "level": 2,
+      "text": "Deck component reference",
+      "id": "Deck_component_reference",
+      "children": [
+        {
+          "level": 3,
+          "text": "Initializing Deck component",
+          "id": "Initializing_Deck_component",
+          "children": []
+        },
+        {
+          "level": 3,
+          "text": "Card standard format",
+          "id": "Card_standard_format",
+          "children": []
+        },
+        {
+          "level": 3,
+          "text": "Picking cards",
+          "id": "Picking_cards",
+          "children": []
+        },
+        {
+          "level": 3,
+          "text": "Moving cards",
+          "id": "Moving_cards",
+          "children": []
+        },
+        {
+          "level": 3,
+          "text": "Get cards informations",
+          "id": "Get_cards_informations",
+          "children": []
+        },
+        {
+          "level": 3,
+          "text": "Shuffling",
+          "id": "Shuffling",
+          "children": []
+        },
+        {
+          "level": 3,
+          "text": "Auto-reshuffle",
+          "id": "Auto-reshuffle",
+          "children": []
+        }
+      ]
+    }
+  ],
+  "Draggable.html": [
+    {
+      "level": 2,
+      "text": "Modern alternatives",
+      "id": "Modern_alternatives",
+      "children": []
+    }
+  ],
+  "ExpandableSection.html": [
+    {
+      "level": 2,
+      "text": "Example",
+      "id": "Example",
+      "children": [
+        {
+          "level": 3,
+          "text": "Notes",
+          "id": "Notes",
+          "children": []
+        }
+      ]
+    },
+    {
+      "level": 2,
+      "text": "Helper Code",
+      "id": "Helper_Code",
+      "children": []
+    }
+  ],
+  "First_steps_with_BGA_Studio.html": [
+    {
+      "level": 2,
+      "text": "Connect to the BGA Studio website",
+      "id": "Connect_to_the_BGA_Studio_website",
+      "children": []
+    },
+    {
+      "level": 2,
+      "text": "Create a new game project",
+      "id": "Create_a_new_game_project",
+      "children": []
+    },
+    {
+      "level": 2,
+      "text": "Set up dev environment ide, editor and File Sync",
+      "id": "Set_up_dev_environment_ide.2C_editor_and_File_Sync",
+      "children": []
+    },
+    {
+      "level": 2,
+      "text": "Let's code!",
+      "id": "Let.27s_code.21",
+      "children": []
+    },
+    {
+      "level": 2,
+      "text": "Commit your changes",
+      "id": "Commit_your_changes",
+      "children": []
+    },
+    {
+      "level": 2,
+      "text": "That's all!",
+      "id": "That.27s_all.21",
+      "children": []
+    }
+  ],
+  "Game_art_img_directory.html": [
+    {
+      "level": 2,
+      "text": "What assets to request from publisher",
+      "id": "What_assets_to_request_from_publisher",
+      "children": []
+    },
+    {
+      "level": 2,
+      "text": "Metadata images",
+      "id": "Metadata_images",
+      "children": []
+    },
+    {
+      "level": 2,
+      "text": "Game art",
+      "id": "Game_art",
+      "children": [
+        {
+          "level": 3,
+          "text": "Images naming constraints",
+          "id": "Images_naming_constraints",
+          "children": []
+        },
+        {
+          "level": 3,
+          "text": "Images loading",
+          "id": "Images_loading",
+          "children": []
+        },
+        {
+          "level": 3,
+          "text": "Images format",
+          "id": "Images_format",
+          "children": []
+        },
+        {
+          "level": 3,
+          "text": "Webp",
+          "id": "Webp",
+          "children": []
+        },
+        {
+          "level": 3,
+          "text": "Use background-size",
+          "id": "Use_background-size",
+          "children": []
+        },
+        {
+          "level": 3,
+          "text": "Use CSS Sprites",
+          "id": "Use_CSS_Sprites",
+          "children": []
+        },
+        {
+          "level": 3,
+          "text": "Shrink images",
+          "id": "Shrink_images",
+          "children": []
+        }
+      ]
+    },
+    {
+      "level": 2,
+      "text": "Image Manipulation Tools",
+      "id": "Image_Manipulation_Tools",
+      "children": [
+        {
+          "level": 3,
+          "text": "Examples",
+          "id": "Examples",
+          "children": []
+        },
+        {
+          "level": 3,
+          "text": "Online tools",
+          "id": "Online_tools",
+          "children": []
+        },
+        {
+          "level": 3,
+          "text": "Community Provided",
+          "id": "Community_Provided",
+          "children": []
+        }
+      ]
+    }
+  ],
+  "Game_database_model_dbmodel.sql.html": [
+    {
+      "level": 2,
+      "text": "Create your schema",
+      "id": "Create_your_schema",
+      "children": []
+    },
+    {
+      "level": 2,
+      "text": "Default tables",
+      "id": "Default_tables",
+      "children": [
+        {
+          "level": 3,
+          "text": "Theplayertable",
+          "id": "The_player_table",
+          "children": []
+        }
+      ]
+    },
+    {
+      "level": 2,
+      "text": "CREATE TABLES",
+      "id": "CREATE_TABLES",
+      "children": []
+    },
+    {
+      "level": 2,
+      "text": "PHP",
+      "id": "PHP",
+      "children": []
+    },
+    {
+      "level": 2,
+      "text": "Errors Log",
+      "id": "Errors_Log",
+      "children": []
+    },
+    {
+      "level": 2,
+      "text": "Post-release database modification",
+      "id": "Post-release_database_modification",
+      "children": []
+    },
+    {
+      "level": 2,
+      "text": "Uses and misuses of AUTO_INCREMENT",
+      "id": "Uses_and_misuses_of_AUTO_INCREMENT",
+      "children": []
+    },
+    {
+      "level": 2,
+      "text": "Beware of the size",
+      "id": "Beware_of_the_size",
+      "children": []
+    }
+  ],
+  "Game_fonts_fonts_directory.html": [
+    {
+      "level": 2,
+      "text": "Game fonts",
+      "id": "Game_fonts",
+      "children": []
+    },
+    {
+      "level": 2,
+      "text": "Example",
+      "id": "Example",
+      "children": []
+    },
+    {
+      "level": 2,
+      "text": "Debugging",
+      "id": "Debugging",
+      "children": []
+    }
+  ],
+  "Game_interface_logic_Game.js.html": [
+    {
+      "level": 2,
+      "text": "Framework sub-components",
+      "id": "Framework_sub-components",
+      "children": []
+    },
+    {
+      "level": 2,
+      "text": "File structure",
+      "id": "File_structure",
+      "children": []
+    },
+    {
+      "level": 2,
+      "text": "States",
+      "id": "States",
+      "children": [
+        {
+          "level": 3,
+          "text": "JS State classes",
+          "id": "JS_State_classes",
+          "children": []
+        },
+        {
+          "level": 3,
+          "text": "Client states",
+          "id": "Client_states",
+          "children": []
+        }
+      ]
+    },
+    {
+      "level": 2,
+      "text": "Dojo framework",
+      "id": "Dojo_framework",
+      "children": []
+    },
+    {
+      "level": 2,
+      "text": "Javascript minimization (after July 2020)",
+      "id": "Javascript_minimization_.28after_July_2020.29",
+      "children": []
+    },
+    {
+      "level": 2,
+      "text": "Accessing Players Information",
+      "id": "Accessing_Players_Information",
+      "children": []
+    },
+    {
+      "level": 2,
+      "text": "Accessing and manipulating the DOM",
+      "id": "Accessing_and_manipulating_the_DOM",
+      "children": [
+        {
+          "level": 3,
+          "text": "Main game area",
+          "id": "Main_game_area",
+          "children": []
+        },
+        {
+          "level": 3,
+          "text": "Element by Id",
+          "id": "Element_by_Id",
+          "children": []
+        },
+        {
+          "level": 3,
+          "text": "Style",
+          "id": "Style",
+          "children": []
+        },
+        {
+          "level": 3,
+          "text": "Classes",
+          "id": "Classes",
+          "children": []
+        },
+        {
+          "level": 3,
+          "text": "Element data",
+          "id": "Element_data",
+          "children": []
+        },
+        {
+          "level": 3,
+          "text": "Queries",
+          "id": "Queries",
+          "children": []
+        },
+        {
+          "level": 3,
+          "text": "Creating and Destroying elements",
+          "id": "Creating_and_Destroying_elements",
+          "children": []
+        },
+        {
+          "level": 3,
+          "text": "Moving elements",
+          "id": "Moving_elements",
+          "children": []
+        }
+      ]
+    },
+    {
+      "level": 2,
+      "text": "Animations",
+      "id": "Animations",
+      "children": [
+        {
+          "level": 3,
+          "text": "Dojo Animations",
+          "id": "Dojo_Animations",
+          "children": []
+        },
+        {
+          "level": 3,
+          "text": "Sliding",
+          "id": "Sliding",
+          "children": []
+        },
+        {
+          "level": 3,
+          "text": "Destroy",
+          "id": "Destroy",
+          "children": []
+        },
+        {
+          "level": 3,
+          "text": "Rotating elements",
+          "id": "Rotating_elements",
+          "children": []
+        },
+        {
+          "level": 3,
+          "text": "Animation Callbacks",
+          "id": "Animation_Callbacks",
+          "children": []
+        }
+      ]
+    },
+    {
+      "level": 2,
+      "text": "Players input",
+      "id": "Players_input",
+      "children": [
+        {
+          "level": 3,
+          "text": "Connecting",
+          "id": "Connecting",
+          "children": []
+        },
+        {
+          "level": 3,
+          "text": "Actions",
+          "id": "Actions",
+          "children": []
+        }
+      ]
+    },
+    {
+      "level": 2,
+      "text": "Notifications",
+      "id": "Notifications",
+      "children": [
+        {
+          "level": 3,
+          "text": "Subscribe to notifications manually",
+          "id": "Subscribe_to_notifications_manually",
+          "children": []
+        },
+        {
+          "level": 3,
+          "text": "The notification Object received by client",
+          "id": "The_notification_Object_received_by_client",
+          "children": []
+        },
+        {
+          "level": 3,
+          "text": "Ignoring notifications",
+          "id": "Ignoring_notifications",
+          "children": []
+        },
+        {
+          "level": 3,
+          "text": "Handle manually synchronous notifications",
+          "id": "Handle_manually_synchronous_notifications",
+          "children": []
+        },
+        {
+          "level": 3,
+          "text": "Pre-defined notification types",
+          "id": "Pre-defined_notification_types",
+          "children": []
+        }
+      ]
+    },
+    {
+      "level": 2,
+      "text": "Tooltips",
+      "id": "Tooltips",
+      "children": [
+        {
+          "level": 3,
+          "text": "Adding static tooltips",
+          "id": "Adding_static_tooltips",
+          "children": []
+        },
+        {
+          "level": 3,
+          "text": "Removing static tooltips",
+          "id": "Removing_static_tooltips",
+          "children": []
+        },
+        {
+          "level": 3,
+          "text": "Advanced tooltips",
+          "id": "Advanced_tooltips",
+          "children": []
+        }
+      ]
+    },
+    {
+      "level": 2,
+      "text": "Banners",
+      "id": "Banners",
+      "children": [
+        {
+          "level": 3,
+          "text": "Last turn banner",
+          "id": "Last_turn_banner",
+          "children": []
+        },
+        {
+          "level": 3,
+          "text": "Win condition banner",
+          "id": "Win_condition_banner",
+          "children": []
+        }
+      ]
+    },
+    {
+      "level": 2,
+      "text": "Warning messages",
+      "id": "Warning_messages",
+      "children": []
+    },
+    {
+      "level": 2,
+      "text": "Dialogs",
+      "id": "Dialogs",
+      "children": [
+        {
+          "level": 3,
+          "text": "Confirmation dialog",
+          "id": "Confirmation_dialog",
+          "children": []
+        },
+        {
+          "level": 3,
+          "text": "Multiple choice dialog",
+          "id": "Multiple_choice_dialog",
+          "children": []
+        },
+        {
+          "level": 3,
+          "text": "Generic Dialogs",
+          "id": "Generic_Dialogs",
+          "children": []
+        },
+        {
+          "level": 3,
+          "text": "Scoring dialogs",
+          "id": "Scoring_dialogs",
+          "children": []
+        },
+        {
+          "level": 3,
+          "text": "Scoring animated display",
+          "id": "Scoring_animated_display",
+          "children": []
+        },
+        {
+          "level": 3,
+          "text": "Speech bubble",
+          "id": "Speech_bubble",
+          "children": []
+        }
+      ]
+    },
+    {
+      "level": 2,
+      "text": "Translations",
+      "id": "Translations",
+      "children": []
+    },
+    {
+      "level": 2,
+      "text": "Players panels",
+      "id": "Players_panels",
+      "children": [
+        {
+          "level": 3,
+          "text": "Adding stuff to player's panel",
+          "id": "Adding_stuff_to_player.27s_panel",
+          "children": []
+        },
+        {
+          "level": 3,
+          "text": "Adding a player panel for an automata",
+          "id": "Adding_a_player_panel_for_an_automata",
+          "children": []
+        },
+        {
+          "level": 3,
+          "text": "Player's panel disabling/enabling",
+          "id": "Player.27s_panel_disabling.2Fenabling",
+          "children": []
+        },
+        {
+          "level": 3,
+          "text": "Player order",
+          "id": "Player_order",
+          "children": []
+        },
+        {
+          "level": 3,
+          "text": "Counters",
+          "id": "Counters",
+          "children": []
+        }
+      ]
+    },
+    {
+      "level": 2,
+      "text": "BGA GUI components",
+      "id": "BGA_GUI_components",
+      "children": []
+    },
+    {
+      "level": 2,
+      "text": "BGA Buttons",
+      "id": "BGA_Buttons",
+      "children": [
+        {
+          "level": 3,
+          "text": "Basic Button",
+          "id": "Basic_Button",
+          "children": []
+        }
+      ]
+    },
+    {
+      "level": 2,
+      "text": "Image loading",
+      "id": "Image_loading",
+      "children": []
+    },
+    {
+      "level": 2,
+      "text": "Sounds",
+      "id": "Sounds",
+      "children": []
+    },
+    {
+      "level": 2,
+      "text": "Status bar",
+      "id": "Status_bar",
+      "children": [
+        {
+          "level": 3,
+          "text": "Status bar text",
+          "id": "Status_bar_text",
+          "children": []
+        },
+        {
+          "level": 3,
+          "text": "Status bar buttons",
+          "id": "Status_bar_buttons",
+          "children": []
+        }
+      ]
+    },
+    {
+      "level": 2,
+      "text": "User preferences",
+      "id": "User_preferences",
+      "children": []
+    },
+    {
+      "level": 2,
+      "text": "Including classes from external files",
+      "id": "Including_classes_from_external_files",
+      "children": []
+    },
+    {
+      "level": 2,
+      "text": "Other useful stuff",
+      "id": "Other_useful_stuff",
+      "children": []
+    }
+  ],
+  "Game_interface_stylesheet_yourgamename.css.html": [
+    {
+      "level": 2,
+      "text": "Warning: using percentage in background-position",
+      "id": "Warning:_using_percentage_in_background-position",
+      "children": []
+    },
+    {
+      "level": 2,
+      "text": "Warning: using Z-index",
+      "id": "Warning:_using_Z-index",
+      "children": []
+    },
+    {
+      "level": 2,
+      "text": "Warning: using drop-shadow",
+      "id": "Warning:_using_drop-shadow",
+      "children": []
+    },
+    {
+      "level": 2,
+      "text": "Tip: how to make your cards looks beautiful :)",
+      "id": "Tip:_how_to_make_your_cards_looks_beautiful_:.29",
+      "children": []
+    },
+    {
+      "level": 2,
+      "text": "spectatorMode",
+      "id": "spectatorMode",
+      "children": []
+    },
+    {
+      "level": 2,
+      "text": "Support of the Dark mode",
+      "id": "Support_of_the_Dark_mode",
+      "children": [
+        {
+          "level": 3,
+          "text": "Migrating",
+          "id": "Migrating",
+          "children": []
+        },
+        {
+          "level": 3,
+          "text": "Using the work of the extension to migrate",
+          "id": "Using_the_work_of_the_extension_to_migrate",
+          "children": []
+        },
+        {
+          "level": 3,
+          "text": "Example of a background option compatible with dark mode",
+          "id": "Example_of_a_background_option_compatible_with_dark_mode",
+          "children": []
+        }
+      ]
+    }
+  ],
+  "Game_layout_view_and_template_yourgamename.view.php_and_yourgamename_yourgamename.tpl.html": [
+    {
+      "level": 2,
+      "text": "Purpose of this file",
+      "id": "Purpose_of_this_file",
+      "children": []
+    },
+    {
+      "level": 2,
+      "text": "Overview",
+      "id": "Overview",
+      "children": []
+    },
+    {
+      "level": 2,
+      "text": "Template system",
+      "id": "Template_system",
+      "children": []
+    },
+    {
+      "level": 2,
+      "text": "Variables",
+      "id": "Variables",
+      "children": []
+    },
+    {
+      "level": 2,
+      "text": "Template Blocks",
+      "id": "Template_Blocks",
+      "children": []
+    },
+    {
+      "level": 2,
+      "text": "Nested blocks",
+      "id": "Nested_blocks",
+      "children": []
+    },
+    {
+      "level": 2,
+      "text": "Conditional blocks",
+      "id": "Conditional_blocks",
+      "children": []
+    },
+    {
+      "level": 2,
+      "text": "Javascript templates",
+      "id": "Javascript_templates",
+      "children": []
+    },
+    {
+      "level": 2,
+      "text": "How to access game information from .view.php",
+      "id": "How_to_access_game_information_from_.view.php",
+      "children": [
+        {
+          "level": 3,
+          "text": "Access current player id",
+          "id": "Access_current_player_id",
+          "children": []
+        },
+        {
+          "level": 3,
+          "text": "Access game object",
+          "id": "Access_game_object",
+          "children": []
+        },
+        {
+          "level": 3,
+          "text": "Access spectator status",
+          "id": "Access_spectator_status",
+          "children": []
+        }
+      ]
+    }
+  ],
+  "Game_material_description_material.inc.php.html": [
+    {
+      "level": 2,
+      "text": "Overview",
+      "id": "Overview",
+      "children": []
+    },
+    {
+      "level": 2,
+      "text": "Definition",
+      "id": "Definition",
+      "children": []
+    },
+    {
+      "level": 2,
+      "text": "Access",
+      "id": "Access",
+      "children": [
+        {
+          "level": 3,
+          "text": "Data fields",
+          "id": "Data_fields",
+          "children": []
+        },
+        {
+          "level": 3,
+          "text": "PHP constants",
+          "id": "PHP_constants",
+          "children": []
+        }
+      ]
+    },
+    {
+      "level": 2,
+      "text": "Testing",
+      "id": "Testing",
+      "children": []
+    },
+    {
+      "level": 2,
+      "text": "Adjusting material",
+      "id": "Adjusting_material",
+      "children": []
+    },
+    {
+      "level": 2,
+      "text": "Move it to modules/php",
+      "id": "Move_it_to_modules.2Fphp",
+      "children": []
+    }
+  ],
+  "Game_meta-information_gameinfos.jsonc.html": [
+    {
+      "level": 2,
+      "text": "Overview",
+      "id": "Overview",
+      "children": []
+    },
+    {
+      "level": 2,
+      "text": "Publisher",
+      "id": "Publisher",
+      "children": []
+    },
+    {
+      "level": 2,
+      "text": "Time Profiles",
+      "id": "Time_Profiles",
+      "children": []
+    },
+    {
+      "level": 2,
+      "text": "Number of players",
+      "id": "Number_of_players",
+      "children": []
+    },
+    {
+      "level": 2,
+      "text": "Colors",
+      "id": "Colors",
+      "children": []
+    },
+    {
+      "level": 2,
+      "text": "Minimum screen size",
+      "id": "Minimum_screen_size",
+      "children": []
+    },
+    {
+      "level": 2,
+      "text": "Losers not ranked between themselves",
+      "id": "Losers_not_ranked_between_themselves",
+      "children": []
+    },
+    {
+      "level": 2,
+      "text": "Disable player rotation in case of rematch",
+      "id": "Disable_player_rotation_in_case_of_rematch",
+      "children": []
+    },
+    {
+      "level": 2,
+      "text": "Deprecated fields",
+      "id": "Deprecated_fields",
+      "children": []
+    },
+    {
+      "level": 2,
+      "text": "Tie breaker description",
+      "id": "Tie_breaker_description",
+      "children": []
+    },
+    {
+      "level": 2,
+      "text": "Multiple tie breaker management",
+      "id": "Multiple_tie_breaker_management",
+      "children": []
+    },
+    {
+      "level": 2,
+      "text": "Language dependency",
+      "id": "Language_dependency",
+      "children": []
+    },
+    {
+      "level": 2,
+      "text": "Coop Elo Mode",
+      "id": "Coop_Elo_Mode",
+      "children": []
+    }
+  ],
+  "Game_metadata_manager.html": [
+    {
+      "level": 2,
+      "text": "Media",
+      "id": "Media",
+      "children": []
+    },
+    {
+      "level": 2,
+      "text": "Tags",
+      "id": "Tags",
+      "children": []
+    },
+    {
+      "level": 2,
+      "text": "Metadata",
+      "id": "Metadata",
+      "children": [
+        {
+          "level": 6,
+          "text": "Artist(s) and Designer(s)",
+          "id": "Artist.28s.29_and_Designer.28s.29",
+          "children": []
+        },
+        {
+          "level": 6,
+          "text": "Publication year",
+          "id": "Publication_year",
+          "children": []
+        },
+        {
+          "level": 6,
+          "text": "Complexity",
+          "id": "Complexity",
+          "children": []
+        },
+        {
+          "level": 6,
+          "text": "Luck",
+          "id": "Luck",
+          "children": []
+        },
+        {
+          "level": 6,
+          "text": "Strategy",
+          "id": "Strategy",
+          "children": []
+        },
+        {
+          "level": 6,
+          "text": "Diplomacy",
+          "id": "Diplomacy",
+          "children": []
+        },
+        {
+          "level": 6,
+          "text": "Minimum age",
+          "id": "Minimum_age",
+          "children": []
+        },
+        {
+          "level": 6,
+          "text": "Zombie Mode level",
+          "id": "Zombie_Mode_level",
+          "children": []
+        },
+        {
+          "level": 6,
+          "text": "Game page warning",
+          "id": "Game_page_warning",
+          "children": []
+        },
+        {
+          "level": 6,
+          "text": "Custom \"buy this game\" button",
+          "id": "Custom_.22buy_this_game.22_button",
+          "children": []
+        },
+        {
+          "level": 6,
+          "text": "Description",
+          "id": "Description",
+          "children": []
+        }
+      ]
+    },
+    {
+      "level": 2,
+      "text": "Migration",
+      "id": "Migration",
+      "children": []
+    },
+    {
+      "level": 2,
+      "text": "Access Permissions",
+      "id": "Access_Permissions",
+      "children": []
+    },
+    {
+      "level": 2,
+      "text": "Future",
+      "id": "Future",
+      "children": []
+    }
+  ],
+  "Game_replay.html": [
+    {
+      "level": 3,
+      "text": "Preview Videos",
+      "id": "Preview_Videos",
+      "children": []
+    },
+    {
+      "level": 3,
+      "text": "Hiding UI elements from preview video",
+      "id": "Hiding_UI_elements_from_preview_video",
+      "children": []
+    }
+  ],
+  "Game_sounds_sounds_directory.html": [
+    {
+      "level": 2,
+      "text": "Game sounds",
+      "id": "Game_sounds",
+      "children": [
+        {
+          "level": 3,
+          "text": "Sounds format constraints",
+          "id": "Sounds_format_constraints",
+          "children": []
+        },
+        {
+          "level": 3,
+          "text": "Sounds loading",
+          "id": "Sounds_loading",
+          "children": []
+        }
+      ]
+    },
+    {
+      "level": 2,
+      "text": "Debugging",
+      "id": "Debugging",
+      "children": []
+    }
+  ],
+  "Game_statistics_stats.json.html": [
+    {
+      "level": 3,
+      "text": "File Structure",
+      "id": "File_Structure",
+      "children": []
+    },
+    {
+      "level": 3,
+      "text": "Generate PHP initialization",
+      "id": "Generate_PHP_initialization",
+      "children": []
+    },
+    {
+      "level": 3,
+      "text": "Labeled stats",
+      "id": "Labeled_stats",
+      "children": []
+    },
+    {
+      "level": 3,
+      "text": "Limited access stats",
+      "id": "Limited_access_stats",
+      "children": []
+    },
+    {
+      "level": 3,
+      "text": "Translations",
+      "id": "Translations",
+      "children": []
+    }
+  ],
+  "How_to_join_BGA_developer_team.html": [
+    {
+      "level": 2,
+      "text": "Is this right for me",
+      "id": "Is_this_right_for_me",
+      "children": []
+    },
+    {
+      "level": 2,
+      "text": "How to create BGA Studio development account",
+      "id": "How_to_create_BGA_Studio_development_account",
+      "children": []
+    },
+    {
+      "level": 2,
+      "text": "Ok, I registered, how to start?",
+      "id": "Ok.2C_I_registered.2C_how_to_start.3F",
+      "children": []
+    }
+  ],
+  "I_wish_I_knew_this_when_I_started.html": [],
+  "Main_game_logic_Game.php.html": [
+    {
+      "level": 2,
+      "text": "File Structure",
+      "id": "File_Structure",
+      "children": []
+    },
+    {
+      "level": 2,
+      "text": "Accessing player information",
+      "id": "Accessing_player_information",
+      "children": []
+    },
+    {
+      "level": 2,
+      "text": "Accessing the database",
+      "id": "Accessing_the_database",
+      "children": []
+    },
+    {
+      "level": 2,
+      "text": "Use bga globals",
+      "id": "Use_bga_globals",
+      "children": []
+    },
+    {
+      "level": 2,
+      "text": "Use globals (numbers only / game options)",
+      "id": "Use_globals_.28numbers_only_.2F_game_options.29",
+      "children": [
+        {
+          "level": 3,
+          "text": "BGA predefined globals",
+          "id": "BGA_predefined_globals",
+          "children": []
+        }
+      ]
+    },
+    {
+      "level": 2,
+      "text": "Game states and active players",
+      "id": "Game_states_and_active_players",
+      "children": [
+        {
+          "level": 3,
+          "text": "Activate player handling",
+          "id": "Activate_player_handling",
+          "children": []
+        },
+        {
+          "level": 3,
+          "text": "Multiple activate player handling",
+          "id": "Multiple_activate_player_handling",
+          "children": []
+        },
+        {
+          "level": 3,
+          "text": "States functions",
+          "id": "States_functions",
+          "children": []
+        },
+        {
+          "level": 3,
+          "text": "Private parallel states",
+          "id": "Private_parallel_states",
+          "children": [
+            {
+              "level": 4,
+              "text": "State Arguments in Private parallel states",
+              "id": "State_Arguments_in_Private_parallel_states",
+              "children": []
+            },
+            {
+              "level": 4,
+              "text": "Inactive Players",
+              "id": "Inactive_Players",
+              "children": []
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "level": 2,
+      "text": "Actions (autowired)",
+      "id": "Actions_.28autowired.29",
+      "children": [
+        {
+          "level": 3,
+          "text": "Possible attributes",
+          "id": "Possible_attributes",
+          "children": []
+        },
+        {
+          "level": 3,
+          "text": "checkAction",
+          "id": "checkAction",
+          "children": []
+        },
+        {
+          "level": 3,
+          "text": "act prefix",
+          "id": "act_prefix",
+          "children": []
+        }
+      ]
+    },
+    {
+      "level": 2,
+      "text": "Players turn order",
+      "id": "Players_turn_order",
+      "children": []
+    },
+    {
+      "level": 2,
+      "text": "Notifications",
+      "id": "Notifications",
+      "children": [
+        {
+          "level": 3,
+          "text": "Notify",
+          "id": "Notify",
+          "children": [
+            {
+              "level": 4,
+              "text": "Recursive Notifications",
+              "id": "Recursive_Notifications",
+              "children": []
+            },
+            {
+              "level": 4,
+              "text": "Sending private data to some players",
+              "id": "Sending_private_data_to_some_players",
+              "children": []
+            },
+            {
+              "level": 4,
+              "text": "Using player names",
+              "id": "Using_player_names",
+              "children": []
+            }
+          ]
+        },
+        {
+          "level": 3,
+          "text": "NotifyPlayer",
+          "id": "NotifyPlayer",
+          "children": []
+        },
+        {
+          "level": 3,
+          "text": "Notification decorators",
+          "id": "Notification_decorators",
+          "children": []
+        },
+        {
+          "level": 3,
+          "text": "Use player no in notifications",
+          "id": "Use_player_no_in_notifications",
+          "children": []
+        }
+      ]
+    },
+    {
+      "level": 2,
+      "text": "Randomization",
+      "id": "Randomization",
+      "children": [
+        {
+          "level": 3,
+          "text": "Dice and bga_rand",
+          "id": "Dice_and_bga_rand",
+          "children": []
+        },
+        {
+          "level": 3,
+          "text": "Arrays",
+          "id": "Arrays",
+          "children": []
+        },
+        {
+          "level": 3,
+          "text": "shuffle and cards shuffling",
+          "id": "shuffle_and_cards_shuffling",
+          "children": []
+        },
+        {
+          "level": 3,
+          "text": "Other methods",
+          "id": "Other_methods",
+          "children": []
+        }
+      ]
+    },
+    {
+      "level": 2,
+      "text": "Game statistics",
+      "id": "Game_statistics",
+      "children": []
+    },
+    {
+      "level": 2,
+      "text": "Translations",
+      "id": "Translations",
+      "children": []
+    },
+    {
+      "level": 2,
+      "text": "Manage player scores and Tie breaker",
+      "id": "Manage_player_scores_and_Tie_breaker",
+      "children": [
+        {
+          "level": 3,
+          "text": "Normal scoring",
+          "id": "Normal_scoring",
+          "children": []
+        },
+        {
+          "level": 3,
+          "text": "Tie breaker",
+          "id": "Tie_breaker",
+          "children": []
+        },
+        {
+          "level": 3,
+          "text": "Reverse scoring and reverse tie-breaker",
+          "id": "Reverse_scoring_and_reverse_tie-breaker",
+          "children": []
+        },
+        {
+          "level": 3,
+          "text": "Result neutralization",
+          "id": "Result_neutralization",
+          "children": []
+        },
+        {
+          "level": 3,
+          "text": "Co-operative game",
+          "id": "Co-operative_game",
+          "children": []
+        },
+        {
+          "level": 3,
+          "text": "Semi-coop",
+          "id": "Semi-coop",
+          "children": []
+        },
+        {
+          "level": 3,
+          "text": "Only \"winners\" and \"losers\"",
+          "id": "Only_.22winners.22_and_.22losers.22",
+          "children": []
+        },
+        {
+          "level": 3,
+          "text": "Solo",
+          "id": "Solo",
+          "children": []
+        },
+        {
+          "level": 3,
+          "text": "Player elimination",
+          "id": "Player_elimination",
+          "children": []
+        },
+        {
+          "level": 3,
+          "text": "Player concede",
+          "id": "Player_concede",
+          "children": []
+        }
+      ]
+    },
+    {
+      "level": 2,
+      "text": "Reflexion time",
+      "id": "Reflexion_time",
+      "children": []
+    },
+    {
+      "level": 2,
+      "text": "Undo moves",
+      "id": "Undo_moves",
+      "children": [
+        {
+          "level": 3,
+          "text": "Manually remove game logs",
+          "id": "Manually_remove_game_logs",
+          "children": []
+        }
+      ]
+    },
+    {
+      "level": 2,
+      "text": "Managing errors and exceptions",
+      "id": "Managing_errors_and_exceptions",
+      "children": []
+    },
+    {
+      "level": 2,
+      "text": "Zombie mode",
+      "id": "Zombie_mode",
+      "children": []
+    },
+    {
+      "level": 2,
+      "text": "User preferences",
+      "id": "User_preferences",
+      "children": []
+    },
+    {
+      "level": 2,
+      "text": "Player color preferences",
+      "id": "Player_color_preferences",
+      "children": [
+        {
+          "level": 3,
+          "text": "Custom color assignments",
+          "id": "Custom_color_assignments",
+          "children": []
+        }
+      ]
+    },
+    {
+      "level": 2,
+      "text": "Legacy games API",
+      "id": "Legacy_games_API",
+      "children": []
+    },
+    {
+      "level": 2,
+      "text": "Players text input and moderation",
+      "id": "Players_text_input_and_moderation",
+      "children": []
+    },
+    {
+      "level": 2,
+      "text": "Tournament API (🚧 Beta)",
+      "id": "Tournament_API_.28.F0.9F.9A.A7_Beta.29",
+      "children": []
+    },
+    {
+      "level": 2,
+      "text": "Language dependent games API",
+      "id": "Language_dependent_games_API",
+      "children": []
+    },
+    {
+      "level": 2,
+      "text": "Debugging and Tracing",
+      "id": "Debugging_and_Tracing",
+      "children": []
+    },
+    {
+      "level": 2,
+      "text": "Creating other classes",
+      "id": "Creating_other_classes",
+      "children": []
+    }
+  ],
+  "Options_and_preferences_gameoptions.json,_gamepreferences.json.html": [
+    {
+      "level": 2,
+      "text": "Game Options",
+      "id": "Game_Options",
+      "children": [
+        {
+          "level": 3,
+          "text": "Details of game options format",
+          "id": "Details_of_game_options_format",
+          "children": [
+            {
+              "level": 4,
+              "text": "displaycondition vs startcondition",
+              "id": "displaycondition_vs_startcondition",
+              "children": []
+            },
+            {
+              "level": 4,
+              "text": "gamestartonly",
+              "id": "gamestartonly",
+              "children": []
+            },
+            {
+              "level": 4,
+              "text": "level",
+              "id": "level",
+              "children": []
+            },
+            {
+              "level": 4,
+              "text": "option presentation",
+              "id": "option_presentation",
+              "children": []
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "level": 2,
+      "text": "User Preferences",
+      "id": "User_Preferences",
+      "children": [
+        {
+          "level": 3,
+          "text": "Listening for preference changes and updating preference from code",
+          "id": "Listening_for_preference_changes_and_updating_preference_from_code",
+          "children": []
+        },
+        {
+          "level": 3,
+          "text": "Accessing User Preferences on the server",
+          "id": "Accessing_User_Preferences_on_the_server",
+          "children": []
+        }
+      ]
+    },
+    {
+      "level": 2,
+      "text": "Translations",
+      "id": "Translations",
+      "children": []
+    },
+    {
+      "level": 2,
+      "text": "Migration",
+      "id": "Migration",
+      "children": []
+    }
+  ],
+  "PlayerCounter_and_TableCounter.html": [
+    {
+      "level": 2,
+      "text": "Overview",
+      "id": "Overview",
+      "children": []
+    },
+    {
+      "level": 2,
+      "text": "PlayerCounter",
+      "id": "PlayerCounter",
+      "children": []
+    },
+    {
+      "level": 2,
+      "text": "TableCounter",
+      "id": "TableCounter",
+      "children": []
+    },
+    {
+      "level": 2,
+      "text": "Default args sent to the notif",
+      "id": "Default_args_sent_to_the_notif",
+      "children": []
+    },
+    {
+      "level": 2,
+      "text": "Example",
+      "id": "Example",
+      "children": []
+    },
+    {
+      "level": 2,
+      "text": "Listen to counter notification on the client",
+      "id": "Listen_to_counter_notification_on_the_client",
+      "children": []
+    },
+    {
+      "level": 2,
+      "text": "Game's default Player Score",
+      "id": "Game.27s_default_Player_Score",
+      "children": []
+    }
+  ],
+  "Players_actions_yourgamename.action.php.html": [
+    {
+      "level": 2,
+      "text": "Purpose of this file",
+      "id": "Purpose_of_this_file",
+      "children": []
+    },
+    {
+      "level": 2,
+      "text": "Example of typical action method",
+      "id": "Example_of_typical_action_method",
+      "children": []
+    },
+    {
+      "level": 2,
+      "text": "Methods to use in action methods",
+      "id": "Methods_to_use_in_action_methods",
+      "children": []
+    },
+    {
+      "level": 2,
+      "text": "Useful tip: retrieve a list of numbers",
+      "id": "Useful_tip:_retrieve_a_list_of_numbers",
+      "children": []
+    },
+    {
+      "level": 2,
+      "text": "Example pass array of Id's",
+      "id": "Example_pass_array_of_Id.27s",
+      "children": []
+    },
+    {
+      "level": 2,
+      "text": "Retrieving data from ajax call",
+      "id": "Retrieving_data_from_ajax_call",
+      "children": []
+    },
+    {
+      "level": 2,
+      "text": "Game action handler",
+      "id": "Game_action_handler",
+      "children": []
+    }
+  ],
+  "Post-release_phase.html": [
+    {
+      "level": 2,
+      "text": "Bugs reporting",
+      "id": "Bugs_reporting",
+      "children": []
+    },
+    {
+      "level": 2,
+      "text": "Documentation for Bug Reports",
+      "id": "Documentation_for_Bug_Reports",
+      "children": []
+    },
+    {
+      "level": 2,
+      "text": "How to submit changes?",
+      "id": "How_to_submit_changes.3F",
+      "children": []
+    },
+    {
+      "level": 2,
+      "text": "What can be modified after release?",
+      "id": "What_can_be_modified_after_release.3F",
+      "children": [
+        {
+          "level": 3,
+          "text": "Changes that breaks the games in progress",
+          "id": "Changes_that_breaks_the_games_in_progress",
+          "children": []
+        },
+        {
+          "level": 3,
+          "text": "Updating game options",
+          "id": "Updating_game_options",
+          "children": []
+        },
+        {
+          "level": 3,
+          "text": "Updating Statistics",
+          "id": "Updating_Statistics",
+          "children": []
+        },
+        {
+          "level": 3,
+          "text": "Updating the database schema",
+          "id": "Updating_the_database_schema",
+          "children": []
+        },
+        {
+          "level": 3,
+          "text": "Updating string to be translated",
+          "id": "Updating_string_to_be_translated",
+          "children": []
+        },
+        {
+          "level": 3,
+          "text": "Tell the community about your changes :)",
+          "id": "Tell_the_community_about_your_changes_:.29",
+          "children": []
+        },
+        {
+          "level": 3,
+          "text": "Major changes",
+          "id": "Major_changes",
+          "children": []
+        }
+      ]
+    },
+    {
+      "level": 2,
+      "text": "Avoiding version mismatches",
+      "id": "Avoiding_version_mismatches",
+      "children": []
+    }
+  ],
+  "Practical_debugging.html": [
+    {
+      "level": 2,
+      "text": "Tools",
+      "id": "Tools",
+      "children": []
+    },
+    {
+      "level": 2,
+      "text": "General tip for debugging",
+      "id": "General_tip_for_debugging",
+      "children": [
+        {
+          "level": 3,
+          "text": "Save & Restore",
+          "id": "Save_.26_Restore",
+          "children": []
+        },
+        {
+          "level": 3,
+          "text": "Refresh",
+          "id": "Refresh",
+          "children": []
+        }
+      ]
+    },
+    {
+      "level": 2,
+      "text": "Debugging my game when it cannot start",
+      "id": "Debugging_my_game_when_it_cannot_start",
+      "children": []
+    },
+    {
+      "level": 2,
+      "text": "Debugging an issue with the waiting screen",
+      "id": "Debugging_an_issue_with_the_waiting_screen",
+      "children": []
+    },
+    {
+      "level": 2,
+      "text": "Debugging my PHP game logic (or my view)",
+      "id": "Debugging_my_PHP_game_logic_.28or_my_view.29",
+      "children": [
+        {
+          "level": 3,
+          "text": "Add traces to your code",
+          "id": "Add_traces_to_your_code",
+          "children": []
+        },
+        {
+          "level": 3,
+          "text": "Dump data and die",
+          "id": "Dump_data_and_die",
+          "children": []
+        },
+        {
+          "level": 3,
+          "text": "Debug at home",
+          "id": "Debug_at_home",
+          "children": []
+        },
+        {
+          "level": 3,
+          "text": "Debugging setupNewGame",
+          "id": "Debugging_setupNewGame",
+          "children": []
+        },
+        {
+          "level": 3,
+          "text": "Debugging endOfGame",
+          "id": "Debugging_endOfGame",
+          "children": []
+        },
+        {
+          "level": 3,
+          "text": "Writing custom debug functions",
+          "id": "Writing_custom_debug_functions",
+          "children": []
+        }
+      ]
+    },
+    {
+      "level": 2,
+      "text": "Debugging my HTML/CSS layout",
+      "id": "Debugging_my_HTML.2FCSS_layout",
+      "children": [
+        {
+          "level": 3,
+          "text": "Debugging Toolips CSS/Layout",
+          "id": "Debugging_Toolips_CSS.2FLayout",
+          "children": []
+        },
+        {
+          "level": 3,
+          "text": "Debugging my Javascript game interface logic",
+          "id": "Debugging_my_Javascript_game_interface_logic",
+          "children": []
+        },
+        {
+          "level": 3,
+          "text": "Do complex things on the PHP side",
+          "id": "Do_complex_things_on_the_PHP_side",
+          "children": []
+        },
+        {
+          "level": 3,
+          "text": "Add traces in your code",
+          "id": "Add_traces_in_your_code",
+          "children": []
+        }
+      ]
+    },
+    {
+      "level": 2,
+      "text": "Online format checkers",
+      "id": "Online_format_checkers",
+      "children": []
+    },
+    {
+      "level": 2,
+      "text": "Some frequent errors",
+      "id": "Some_frequent_errors",
+      "children": []
+    },
+    {
+      "level": 2,
+      "text": "Get the database matching a bug report",
+      "id": "Get_the_database_matching_a_bug_report",
+      "children": []
+    },
+    {
+      "level": 2,
+      "text": "Studio environment",
+      "id": "Studio_environment",
+      "children": []
+    }
+  ],
+  "Pre-release_checklist.html": [
+    {
+      "level": 3,
+      "text": "Move from Dev to Alpha",
+      "id": "Move_from_Dev_to_Alpha",
+      "children": []
+    },
+    {
+      "level": 3,
+      "text": "Finally move to Alpha status",
+      "id": "Finally_move_to_Alpha_status",
+      "children": []
+    },
+    {
+      "level": 3,
+      "text": "Move from Alpha to Beta",
+      "id": "Move_from_Alpha_to_Beta",
+      "children": []
+    }
+  ],
+  "Scrollmap.html": [
+    {
+      "level": 2,
+      "text": "Scrollmap in action",
+      "id": "Scrollmap_in_action",
+      "children": []
+    },
+    {
+      "level": 2,
+      "text": "How to use Scrollmap",
+      "id": "How_to_use_Scrollmap",
+      "children": []
+    },
+    {
+      "level": 2,
+      "text": "Scrollable area layers",
+      "id": "Scrollable_area_layers",
+      "children": []
+    },
+    {
+      "level": 2,
+      "text": "Customizations",
+      "id": "Customizations",
+      "children": [
+        {
+          "level": 3,
+          "text": "Disable move arrows",
+          "id": "Disable_move_arrows",
+          "children": []
+        },
+        {
+          "level": 3,
+          "text": "Enable scrollmap zone extension",
+          "id": "Enable_scrollmap_zone_extension",
+          "children": []
+        },
+        {
+          "level": 3,
+          "text": "Fall-through mouse events on oversurface",
+          "id": "Fall-through_mouse_events_on_oversurface",
+          "children": []
+        },
+        {
+          "level": 3,
+          "text": "Avoid scrolling on touch devices",
+          "id": "Avoid_scrolling_on_touch_devices",
+          "children": []
+        },
+        {
+          "level": 3,
+          "text": "Zooming",
+          "id": "Zooming",
+          "children": []
+        }
+      ]
+    },
+    {
+      "level": 2,
+      "text": "API Reference",
+      "id": "API_Reference",
+      "children": [
+        {
+          "level": 3,
+          "text": "Constructor",
+          "id": "Constructor",
+          "children": []
+        },
+        {
+          "level": 3,
+          "text": "Properties",
+          "id": "Properties",
+          "children": []
+        },
+        {
+          "level": 3,
+          "text": "Methods",
+          "id": "Methods",
+          "children": []
+        }
+      ]
+    }
+  ],
+  "Setting_up_BGA_Development_environment_using_VSCode.html": [
+    {
+      "level": 2,
+      "text": "Downloads",
+      "id": "Downloads",
+      "children": []
+    },
+    {
+      "level": 2,
+      "text": "Extensions",
+      "id": "Extensions",
+      "children": []
+    },
+    {
+      "level": 2,
+      "text": "Intellisense - Navigation/Auto-complete",
+      "id": "Intellisense_-_Navigation.2FAuto-complete",
+      "children": [
+        {
+          "level": 3,
+          "text": "JavaScript Intellisense",
+          "id": "JavaScript_Intellisense",
+          "children": []
+        },
+        {
+          "level": 3,
+          "text": "PHP Intellisense",
+          "id": "PHP_Intellisense",
+          "children": []
+        },
+        {
+          "level": 3,
+          "text": "Unit testing",
+          "id": "Unit_testing",
+          "children": []
+        }
+      ]
+    },
+    {
+      "level": 2,
+      "text": "File Sync",
+      "id": "File_Sync",
+      "children": [
+        {
+          "level": 3,
+          "text": "One time only - first sync",
+          "id": "One_time_only_-_first_sync",
+          "children": []
+        },
+        {
+          "level": 3,
+          "text": "Daily use",
+          "id": "Daily_use",
+          "children": []
+        },
+        {
+          "level": 3,
+          "text": "Split settings for version control",
+          "id": "Split_settings_for_version_control",
+          "children": []
+        }
+      ]
+    },
+    {
+      "level": 2,
+      "text": "Code Formatter",
+      "id": "Code_Formatter",
+      "children": []
+    },
+    {
+      "level": 2,
+      "text": "Code generators",
+      "id": "Code_generators",
+      "children": []
+    },
+    {
+      "level": 2,
+      "text": "User templates",
+      "id": "User_templates",
+      "children": []
+    }
+  ],
+  "State_classes_State_directory.html": [
+    {
+      "level": 2,
+      "text": "Overview",
+      "id": "Overview",
+      "children": []
+    },
+    {
+      "level": 2,
+      "text": "Example",
+      "id": "Example",
+      "children": []
+    },
+    {
+      "level": 2,
+      "text": "Name Parameters of Game State constructor",
+      "id": "Name_Parameters_of_Game_State_constructor",
+      "children": [
+        {
+          "level": 3,
+          "text": "id",
+          "id": "id",
+          "children": []
+        },
+        {
+          "level": 3,
+          "text": "type",
+          "id": "type",
+          "children": []
+        },
+        {
+          "level": 3,
+          "text": "name",
+          "id": "name",
+          "children": []
+        },
+        {
+          "level": 3,
+          "text": "description",
+          "id": "description",
+          "children": []
+        },
+        {
+          "level": 3,
+          "text": "descriptionMyTurn",
+          "id": "descriptionMyTurn",
+          "children": []
+        },
+        {
+          "level": 3,
+          "text": "transitions",
+          "id": "transitions",
+          "children": []
+        },
+        {
+          "level": 3,
+          "text": "updateGameProgression",
+          "id": "updateGameProgression",
+          "children": []
+        },
+        {
+          "level": 3,
+          "text": "initialPrivate",
+          "id": "initialPrivate",
+          "children": []
+        }
+      ]
+    },
+    {
+      "level": 2,
+      "text": "Initial state",
+      "id": "Initial_state",
+      "children": []
+    },
+    {
+      "level": 2,
+      "text": "Function getArgs",
+      "id": "Function_getArgs",
+      "children": [
+        {
+          "level": 4,
+          "text": "Private info in args",
+          "id": "Private_info_in_args",
+          "children": []
+        },
+        {
+          "level": 4,
+          "text": "Flag to indicate a skipped state",
+          "id": "Flag_to_indicate_a_skipped_state",
+          "children": []
+        }
+      ]
+    },
+    {
+      "level": 2,
+      "text": "Function onEnteringState",
+      "id": "Function_onEnteringState",
+      "children": []
+    },
+    {
+      "level": 2,
+      "text": "Functions act*",
+      "id": "Functions_act.2A",
+      "children": []
+    },
+    {
+      "level": 2,
+      "text": "Function zombie",
+      "id": "Function_zombie",
+      "children": []
+    },
+    {
+      "level": 2,
+      "text": "Implementation Notes",
+      "id": "Implementation_Notes",
+      "children": [
+        {
+          "level": 3,
+          "text": "End Score state",
+          "id": "End_Score_state",
+          "children": []
+        },
+        {
+          "level": 3,
+          "text": "Creating subfolders in the States folder",
+          "id": "Creating_subfolders_in_the_States_folder",
+          "children": []
+        },
+        {
+          "level": 3,
+          "text": "Private parallel states",
+          "id": "Private_parallel_states",
+          "children": []
+        },
+        {
+          "level": 3,
+          "text": "Client States",
+          "id": "Client_States",
+          "children": []
+        },
+        {
+          "level": 3,
+          "text": "Using Named Constants for States",
+          "id": "Using_Named_Constants_for_States",
+          "children": []
+        },
+        {
+          "level": 3,
+          "text": "Difference between Single active and Multi active states",
+          "id": "Difference_between_Single_active_and_Multi_active_states",
+          "children": []
+        },
+        {
+          "level": 3,
+          "text": "Designing states",
+          "id": "Designing_states",
+          "children": []
+        }
+      ]
+    },
+    {
+      "level": 2,
+      "text": "Migrating for states written in states.inc.php and Game.php",
+      "id": "Migrating_for_states_written_in_states.inc.php_and_Game.php",
+      "children": [
+        {
+          "level": 3,
+          "text": "Moved elements",
+          "id": "Moved_elements",
+          "children": []
+        },
+        {
+          "level": 3,
+          "text": "New elements",
+          "id": "New_elements",
+          "children": []
+        }
+      ]
+    }
+  ],
+  "Stock.html": [
+    {
+      "level": 2,
+      "text": "Overview",
+      "id": "Overview",
+      "children": []
+    },
+    {
+      "level": 2,
+      "text": "Using stock: a simple example",
+      "id": "Using_stock:_a_simple_example",
+      "children": []
+    },
+    {
+      "level": 2,
+      "text": "Complete stock component reference",
+      "id": "Complete_stock_component_reference",
+      "children": [
+        {
+          "level": 3,
+          "text": "Creation",
+          "id": "Creation",
+          "children": []
+        },
+        {
+          "level": 3,
+          "text": "Add/Remove items",
+          "id": "Add.2FRemove_items",
+          "children": []
+        },
+        {
+          "level": 3,
+          "text": "Getters",
+          "id": "Getters",
+          "children": []
+        },
+        {
+          "level": 3,
+          "text": "Selection",
+          "id": "Selection",
+          "children": []
+        },
+        {
+          "level": 3,
+          "text": "Layout",
+          "id": "Layout",
+          "children": []
+        },
+        {
+          "level": 3,
+          "text": "Customize Appearance",
+          "id": "Customize_Appearance",
+          "children": []
+        }
+      ]
+    },
+    {
+      "level": 2,
+      "text": "Tips when adding/removing items to/from Stock components",
+      "id": "Tips_when_adding.2Fremoving_items_to.2Ffrom_Stock_components",
+      "children": []
+    },
+    {
+      "level": 2,
+      "text": "Known issues",
+      "id": "Known_issues",
+      "children": [
+        {
+          "level": 4,
+          "text": "Incorrectly displayed sprites on Safari",
+          "id": "Incorrectly_displayed_sprites_on_Safari",
+          "children": []
+        }
+      ]
+    }
+  ],
+  "Studio.html": [
+    {
+      "level": 2,
+      "text": "What is Board Game Arena Studio?",
+      "id": "What_is_Board_Game_Arena_Studio.3F",
+      "children": []
+    },
+    {
+      "level": 2,
+      "text": "Discover BGA Studio in 5 presentations",
+      "id": "Discover_BGA_Studio_in_5_presentations",
+      "children": []
+    },
+    {
+      "level": 2,
+      "text": "How to join the BGA developer team?",
+      "id": "How_to_join_the_BGA_developer_team.3F",
+      "children": []
+    },
+    {
+      "level": 2,
+      "text": "Great, I'm in! ... How should I start?",
+      "id": "Great.2C_I.27m_in.21_..._How_should_I_start.3F",
+      "children": []
+    },
+    {
+      "level": 2,
+      "text": "BGA Studio documentation",
+      "id": "BGA_Studio_documentation",
+      "children": [
+        {
+          "level": 3,
+          "text": "BGA Studio Framework reference",
+          "id": "BGA_Studio_Framework_reference",
+          "children": [
+            {
+              "level": 4,
+              "text": "Game logic (Server side)",
+              "id": "Game_logic_.28Server_side.29",
+              "children": []
+            },
+            {
+              "level": 4,
+              "text": "Game interface (Client side)",
+              "id": "Game_interface_.28Client_side.29",
+              "children": []
+            },
+            {
+              "level": 4,
+              "text": "Other components",
+              "id": "Other_components",
+              "children": []
+            }
+          ]
+        },
+        {
+          "level": 3,
+          "text": "BGA Studio game components reference",
+          "id": "BGA_Studio_game_components_reference",
+          "children": []
+        },
+        {
+          "level": 3,
+          "text": "BGA Studio user guide",
+          "id": "BGA_Studio_user_guide",
+          "children": []
+        }
+      ]
+    },
+    {
+      "level": 2,
+      "text": "Software Versions",
+      "id": "Software_Versions",
+      "children": [
+        {
+          "level": 3,
+          "text": "PHP Extensions Used",
+          "id": "PHP_Extensions_Used",
+          "children": []
+        }
+      ]
+    },
+    {
+      "level": 2,
+      "text": "Other resources",
+      "id": "Other_resources",
+      "children": []
+    }
+  ],
+  "Studio_FAQ.html": [
+    {
+      "level": 2,
+      "text": "What is the PHP reference version?",
+      "id": "What_is_the_PHP_reference_version.3F",
+      "children": []
+    },
+    {
+      "level": 2,
+      "text": "What should I use to access the files through SFTP?",
+      "id": "What_should_I_use_to_access_the_files_through_SFTP.3F",
+      "children": []
+    },
+    {
+      "level": 2,
+      "text": "I can't edit the files in my game directory, it looks like they are readonly. What's happening?",
+      "id": "I_can.27t_edit_the_files_in_my_game_directory.2C_it_looks_like_they_are_readonly._What.27s_happening.3F",
+      "children": []
+    },
+    {
+      "level": 2,
+      "text": "What is the working language on BGA studio?",
+      "id": "What_is_the_working_language_on_BGA_studio.3F",
+      "children": []
+    },
+    {
+      "level": 2,
+      "text": "How can I provide translation in my language?",
+      "id": "How_can_I_provide_translation_in_my_language.3F",
+      "children": []
+    },
+    {
+      "level": 2,
+      "text": "I updated the images in the 'img' folder of my game, but they don't show?",
+      "id": "I_updated_the_images_in_the_.27img.27_folder_of_my_game.2C_but_they_don.27t_show.3F",
+      "children": []
+    },
+    {
+      "level": 2,
+      "text": "I added some game options / some game statistics / some game infos but they don't show?",
+      "id": "I_added_some_game_options_.2F_some_game_statistics_.2F_some_game_infos_but_they_don.27t_show.3F",
+      "children": []
+    },
+    {
+      "level": 2,
+      "text": "Should I use images free from copyright?",
+      "id": "Should_I_use_images_free_from_copyright.3F",
+      "children": []
+    },
+    {
+      "level": 2,
+      "text": "I registered on Studio but did not receive email",
+      "id": "I_registered_on_Studio_but_did_not_receive_email",
+      "children": []
+    },
+    {
+      "level": 2,
+      "text": "How to fix a bug in existing game",
+      "id": "How_to_fix_a_bug_in_existing_game",
+      "children": []
+    }
+  ],
+  "Studio_file_reference.html": [
+    {
+      "level": 3,
+      "text": "software versions",
+      "id": "software_versions",
+      "children": []
+    },
+    {
+      "level": 3,
+      "text": "img/",
+      "id": "img.2F",
+      "children": []
+    },
+    {
+      "level": 3,
+      "text": "gameinfos.jsonc",
+      "id": "gameinfos.jsonc",
+      "children": []
+    },
+    {
+      "level": 3,
+      "text": "dbmodel.sql",
+      "id": "dbmodel.sql",
+      "children": []
+    },
+    {
+      "level": 3,
+      "text": "gameoptions.json, gamepreferences.json",
+      "id": "gameoptions.json.2C_gamepreferences.json",
+      "children": []
+    },
+    {
+      "level": 3,
+      "text": "<gamename>.css",
+      "id": ".3Cgamename.3E.css",
+      "children": []
+    },
+    {
+      "level": 3,
+      "text": "modules/php/Game.php",
+      "id": "modules.2Fphp.2FGame.php",
+      "children": []
+    },
+    {
+      "level": 3,
+      "text": "modules/js/Game.js",
+      "id": "modules.2Fjs.2FGame.js",
+      "children": []
+    },
+    {
+      "level": 3,
+      "text": "<gamename>.view.php, <gamename>_<gamename>.tpl",
+      "id": ".3Cgamename.3E.view.php.2C_.3Cgamename.3E_.3Cgamename.3E.tpl",
+      "children": []
+    },
+    {
+      "level": 3,
+      "text": "material.inc.php",
+      "id": "material.inc.php",
+      "children": []
+    },
+    {
+      "level": 3,
+      "text": "modules/php/States",
+      "id": "modules.2Fphp.2FStates",
+      "children": []
+    },
+    {
+      "level": 3,
+      "text": "states.inc.php",
+      "id": "states.inc.php",
+      "children": []
+    },
+    {
+      "level": 3,
+      "text": "stats.json",
+      "id": "stats.json",
+      "children": []
+    },
+    {
+      "level": 3,
+      "text": "modules/",
+      "id": "modules.2F",
+      "children": []
+    },
+    {
+      "level": 3,
+      "text": "misc/",
+      "id": "misc.2F",
+      "children": []
+    },
+    {
+      "level": 3,
+      "text": "<other files>",
+      "id": ".3Cother_files.3E",
+      "children": []
+    }
+  ],
+  "Studio_logs.html": [
+    {
+      "level": 2,
+      "text": "BGA request&SQL logs",
+      "id": "BGA_request.26SQL_logs",
+      "children": [
+        {
+          "level": 3,
+          "text": "Your requests",
+          "id": "Your_requests",
+          "children": []
+        },
+        {
+          "level": 3,
+          "text": "Request responses",
+          "id": "Request_responses",
+          "children": []
+        },
+        {
+          "level": 3,
+          "text": "SQL requests",
+          "id": "SQL_requests",
+          "children": []
+        },
+        {
+          "level": 3,
+          "text": "Custom trace",
+          "id": "Custom_trace",
+          "children": []
+        }
+      ]
+    },
+    {
+      "level": 2,
+      "text": "BGA unexpected exceptions logs",
+      "id": "BGA_unexpected_exceptions_logs",
+      "children": []
+    },
+    {
+      "level": 2,
+      "text": "BGA Production Logs",
+      "id": "BGA_Production_Logs",
+      "children": [
+        {
+          "level": 3,
+          "text": "How to access production server exception logs",
+          "id": "How_to_access_production_server_exception_logs",
+          "children": []
+        }
+      ]
+    },
+    {
+      "level": 2,
+      "text": "Backend & frontend issues reporting",
+      "id": "Backend_.26_frontend_issues_reporting",
+      "children": [
+        {
+          "level": 3,
+          "text": "Sentry concepts",
+          "id": "Sentry_concepts",
+          "children": [
+            {
+              "level": 4,
+              "text": "Views",
+              "id": "Views",
+              "children": [
+                {
+                  "level": 5,
+                  "text": "Issues list view",
+                  "id": "Issues_list_view",
+                  "children": []
+                },
+                {
+                  "level": 5,
+                  "text": "Issue detail view",
+                  "id": "Issue_detail_view",
+                  "children": [
+                    {
+                      "level": 6,
+                      "text": "Main information",
+                      "id": "Main_information",
+                      "children": []
+                    },
+                    {
+                      "level": 6,
+                      "text": "Culprit",
+                      "id": "Culprit",
+                      "children": []
+                    },
+                    {
+                      "level": 6,
+                      "text": "Stack trace",
+                      "id": "Stack_trace",
+                      "children": []
+                    },
+                    {
+                      "level": 6,
+                      "text": "Request",
+                      "id": "Request",
+                      "children": []
+                    },
+                    {
+                      "level": 6,
+                      "text": "Tags",
+                      "id": "Tags",
+                      "children": []
+                    },
+                    {
+                      "level": 6,
+                      "text": "Statistics",
+                      "id": "Statistics",
+                      "children": []
+                    }
+                  ]
+                },
+                {
+                  "level": 5,
+                  "text": "Events list view",
+                  "id": "Events_list_view",
+                  "children": []
+                }
+              ]
+            }
+          ]
+        }
+      ]
+    }
+  ],
+  "Testing_by_developer.html": [
+    {
+      "level": 2,
+      "text": "Manual Testing on BGA",
+      "id": "Manual_Testing_on_BGA",
+      "children": []
+    },
+    {
+      "level": 2,
+      "text": "Manual Testing locally",
+      "id": "Manual_Testing_locally",
+      "children": []
+    },
+    {
+      "level": 2,
+      "text": "Automated Testing",
+      "id": "Automated_Testing",
+      "children": [
+        {
+          "level": 3,
+          "text": "JavaScript",
+          "id": "JavaScript",
+          "children": []
+        },
+        {
+          "level": 3,
+          "text": "PHP",
+          "id": "PHP",
+          "children": [
+            {
+              "level": 4,
+              "text": "Install PHPunit",
+              "id": "Install_PHPunit",
+              "children": []
+            },
+            {
+              "level": 4,
+              "text": "Setup minimal files",
+              "id": "Setup_minimal_files",
+              "children": []
+            },
+            {
+              "level": 4,
+              "text": "Create first tests",
+              "id": "Create_first_tests",
+              "children": []
+            },
+            {
+              "level": 4,
+              "text": "Running the tests",
+              "id": "Running_the_tests",
+              "children": []
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "level": 2,
+      "text": "Play testing on studio",
+      "id": "Play_testing_on_studio",
+      "children": []
+    }
+  ],
+  "Tools_and_tips_of_BGA_Studio.html": [
+    {
+      "level": 2,
+      "text": "Server Tools and Tips",
+      "id": "Server_Tools_and_Tips",
+      "children": [
+        {
+          "level": 3,
+          "text": "Starting a game in one click",
+          "id": "Starting_a_game_in_one_click",
+          "children": []
+        },
+        {
+          "level": 3,
+          "text": "Stopping a game in one click",
+          "id": "Stopping_a_game_in_one_click",
+          "children": []
+        },
+        {
+          "level": 3,
+          "text": "Switching between users",
+          "id": "Switching_between_users",
+          "children": []
+        },
+        {
+          "level": 3,
+          "text": "Access to game database and Logs",
+          "id": "Access_to_game_database_and_Logs",
+          "children": []
+        },
+        {
+          "level": 3,
+          "text": "Save & restore state",
+          "id": "Save_.26_restore_state",
+          "children": []
+        },
+        {
+          "level": 3,
+          "text": "Input/Output debugging section",
+          "id": "Input.2FOutput_debugging_section",
+          "children": []
+        },
+        {
+          "level": 3,
+          "text": "Zombify a player",
+          "id": "Zombify_a_player",
+          "children": []
+        },
+        {
+          "level": 3,
+          "text": "Stopping Hanging Game",
+          "id": "Stopping_Hanging_Game",
+          "children": []
+        }
+      ]
+    },
+    {
+      "level": 2,
+      "text": "Desktop and Web Tools",
+      "id": "Desktop_and_Web_Tools",
+      "children": [
+        {
+          "level": 3,
+          "text": "Code Editors and IDEs",
+          "id": "Code_Editors_and_IDEs",
+          "children": [
+            {
+              "level": 4,
+              "text": "Visual Studio Code",
+              "id": "Visual_Studio_Code",
+              "children": []
+            },
+            {
+              "level": 4,
+              "text": "Eclipse For PHP Developers",
+              "id": "Eclipse_For_PHP_Developers",
+              "children": []
+            },
+            {
+              "level": 4,
+              "text": "Gedit (Ubuntu)",
+              "id": "Gedit_.28Ubuntu.29",
+              "children": []
+            }
+          ]
+        },
+        {
+          "level": 3,
+          "text": "File Sync",
+          "id": "File_Sync",
+          "children": [
+            {
+              "level": 4,
+              "text": "File Sync on Windows",
+              "id": "File_Sync_on_Windows",
+              "children": []
+            },
+            {
+              "level": 4,
+              "text": "File Sync on Linux",
+              "id": "File_Sync_on_Linux",
+              "children": [
+                {
+                  "level": 5,
+                  "text": "Option 1 - Nautilus (file manager)",
+                  "id": "Option_1_-_Nautilus_.28file_manager.29",
+                  "children": []
+                },
+                {
+                  "level": 5,
+                  "text": "Option 2 - sshfs and rsync",
+                  "id": "Option_2_-_sshfs_and_rsync",
+                  "children": []
+                },
+                {
+                  "level": 5,
+                  "text": "Option 3 - lftp",
+                  "id": "Option_3_-_lftp",
+                  "children": []
+                }
+              ]
+            }
+          ]
+        },
+        {
+          "level": 3,
+          "text": "Debuggers",
+          "id": "Debuggers",
+          "children": []
+        },
+        {
+          "level": 3,
+          "text": "Version Control",
+          "id": "Version_Control",
+          "children": []
+        },
+        {
+          "level": 3,
+          "text": "PHP CLI",
+          "id": "PHP_CLI",
+          "children": []
+        },
+        {
+          "level": 3,
+          "text": "Image Manipulation",
+          "id": "Image_Manipulation",
+          "children": [
+            {
+              "level": 4,
+              "text": "ImageMagick",
+              "id": "ImageMagick",
+              "children": []
+            },
+            {
+              "level": 4,
+              "text": "Gimp",
+              "id": "Gimp",
+              "children": []
+            },
+            {
+              "level": 4,
+              "text": "Shrinking",
+              "id": "Shrinking",
+              "children": []
+            },
+            {
+              "level": 4,
+              "text": "PDF Scrapper",
+              "id": "PDF_Scrapper",
+              "children": []
+            }
+          ]
+        },
+        {
+          "level": 3,
+          "text": "Restore project to Original template",
+          "id": "Restore_project_to_Original_template",
+          "children": []
+        },
+        {
+          "level": 3,
+          "text": "Rename/Copy project",
+          "id": "Rename.2FCopy_project",
+          "children": []
+        },
+        {
+          "level": 3,
+          "text": "BGA Workbench",
+          "id": "BGA_Workbench",
+          "children": []
+        },
+        {
+          "level": 3,
+          "text": "Testing and validation tools",
+          "id": "Testing_and_validation_tools",
+          "children": []
+        },
+        {
+          "level": 3,
+          "text": "State machine diagram generation tool",
+          "id": "State_machine_diagram_generation_tool",
+          "children": []
+        }
+      ]
+    },
+    {
+      "level": 2,
+      "text": "Other useful tools",
+      "id": "Other_useful_tools",
+      "children": []
+    },
+    {
+      "level": 2,
+      "text": "Client Tips",
+      "id": "Client_Tips",
+      "children": [
+        {
+          "level": 3,
+          "text": "Speed up game re-loading by disabling Input/Output debug section",
+          "id": "Speed_up_game_re-loading_by_disabling_Input.2FOutput_debug_section",
+          "children": []
+        },
+        {
+          "level": 3,
+          "text": "Speed up CSS development and layout",
+          "id": "Speed_up_CSS_development_and_layout",
+          "children": []
+        }
+      ]
+    }
+  ],
+  "Translations.html": [
+    {
+      "level": 2,
+      "text": "Localization Overview",
+      "id": "Localization_Overview",
+      "children": []
+    },
+    {
+      "level": 2,
+      "text": "How will my strings be translated?",
+      "id": "How_will_my_strings_be_translated.3F",
+      "children": []
+    },
+    {
+      "level": 2,
+      "text": "What do I have to do from a programming standpoint?",
+      "id": "What_do_I_have_to_do_from_a_programming_standpoint.3F",
+      "children": []
+    },
+    {
+      "level": 2,
+      "text": "What strings should be marked for translation",
+      "id": "What_strings_should_be_marked_for_translation",
+      "children": []
+    },
+    {
+      "level": 2,
+      "text": "What rules should I follow for the original English strings?",
+      "id": "What_rules_should_I_follow_for_the_original_English_strings.3F",
+      "children": []
+    },
+    {
+      "level": 2,
+      "text": "Focus on translating notifications",
+      "id": "Focus_on_translating_notifications",
+      "children": []
+    },
+    {
+      "level": 2,
+      "text": "How to not make translators crazy ;)",
+      "id": "How_to_not_make_translators_crazy_.3B.29",
+      "children": []
+    },
+    {
+      "level": 2,
+      "text": "Gender specific pronouns",
+      "id": "Gender_specific_pronouns",
+      "children": []
+    },
+    {
+      "level": 2,
+      "text": "WARNING: Make sure your strings will be translated!",
+      "id": "WARNING:_Make_sure_your_strings_will_be_translated.21",
+      "children": []
+    },
+    {
+      "level": 2,
+      "text": "On client side (Javascript)",
+      "id": "On_client_side_.28Javascript.29",
+      "children": [
+        {
+          "level": 3,
+          "text": "Formatting on client side",
+          "id": "Formatting_on_client_side",
+          "children": []
+        }
+      ]
+    },
+    {
+      "level": 2,
+      "text": "On server side (PHP)",
+      "id": "On_server_side_.28PHP.29",
+      "children": [
+        {
+          "level": 3,
+          "text": "Function clienttranslate",
+          "id": "Function_clienttranslate",
+          "children": [
+            {
+              "level": 4,
+              "text": "Formatting arrays with i18n",
+              "id": "Formatting_arrays_with_i18n",
+              "children": []
+            },
+            {
+              "level": 4,
+              "text": "Throwing an exception because the player did a forbidden move",
+              "id": "Throwing_an_exception_because_the_player_did_a_forbidden_move",
+              "children": []
+            },
+            {
+              "level": 4,
+              "text": "Creating labels",
+              "id": "Creating_labels",
+              "children": []
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "level": 2,
+      "text": "Top Secret Undocumented Features",
+      "id": "Top_Secret_Undocumented_Features",
+      "children": []
+    },
+    {
+      "level": 2,
+      "text": "Preview another language",
+      "id": "Preview_another_language",
+      "children": []
+    },
+    {
+      "level": 2,
+      "text": "Analyze your project",
+      "id": "Analyze_your_project",
+      "children": []
+    },
+    {
+      "level": 2,
+      "text": "Using translations from a base project",
+      "id": "Using_translations_from_a_base_project",
+      "children": []
+    },
+    {
+      "level": 2,
+      "text": "Other Useful Links",
+      "id": "Other_Useful_Links",
+      "children": []
+    }
+  ],
+  "Troubleshooting.html": [
+    {
+      "level": 2,
+      "text": "Game does not start at all",
+      "id": "Game_does_not_start_at_all",
+      "children": [
+        {
+          "level": 3,
+          "text": "Undefined offset: 0 in table/table.game.php on line 1417",
+          "id": "Undefined_offset:_0_in_table.2Ftable.game.php_on_line_1417",
+          "children": []
+        },
+        {
+          "level": 3,
+          "text": "Unexpected error: Wrong formatted data from BGA gameserver 1 (method: createGame): ...",
+          "id": "Unexpected_error:_Wrong_formatted_data_from_BGA_gameserver_1_.28method:_createGame.29:_...",
+          "children": []
+        },
+        {
+          "level": 3,
+          "text": "Unexpected error: Propagating error from GS 1 (method: createGame): Fatal error during yourgame setup: Not logged",
+          "id": "Unexpected_error:_Propagating_error_from_GS_1_.28method:_createGame.29:_Fatal_error_during_yourgame_setup:_Not_logged",
+          "children": []
+        },
+        {
+          "level": 3,
+          "text": "Unexpected error: Propagating error from GS 1 (method: createGame): Fatal error during yourgame setup: Unknow player statistic:",
+          "id": "Unexpected_error:_Propagating_error_from_GS_1_.28method:_createGame.29:_Fatal_error_during_yourgame_setup:_Unknow_player_statistic:",
+          "children": []
+        },
+        {
+          "level": 3,
+          "text": "Unexpected error:  Propagating error from GS 1 (method: createGame): Fatal error during yourgame setup: Error while processing SQL request: INSERT INTO stats ...",
+          "id": "Unexpected_error:_Propagating_error_from_GS_1_.28method:_createGame.29:_Fatal_error_during_yourgame_setup:_Error_while_processing_SQL_request:_INSERT_INTO_stats_...",
+          "children": []
+        },
+        {
+          "level": 3,
+          "text": "Unexpected error:  Propagating error from GS 1 (method: createGame): Fatal error during yourgame setup: BGA main website do not respond",
+          "id": "Unexpected_error:_Propagating_error_from_GS_1_.28method:_createGame.29:_Fatal_error_during_yourgame_setup:_BGA_main_website_do_not_respond",
+          "children": []
+        },
+        {
+          "level": 3,
+          "text": "Unexpected error: Propagating error from GS 1 (method: createGame): BGA service error",
+          "id": "Unexpected_error:_Propagating_error_from_GS_1_.28method:_createGame.29:_BGA_service_error",
+          "children": []
+        },
+        {
+          "level": 3,
+          "text": "Unexpected error: Table status of a starting game should be 'setup'",
+          "id": "Unexpected_error:_Table_status_of_a_starting_game_should_be_.27setup.27",
+          "children": []
+        },
+        {
+          "level": 3,
+          "text": "Fatal error during creation of database ebd_quoridor_389 Not logged",
+          "id": "Fatal_error_during_creation_of_database_ebd_quoridor_389_Not_logged",
+          "children": []
+        },
+        {
+          "level": 3,
+          "text": "Warning: Invalid argument supplied for foreach() in table.game.php",
+          "id": "Warning:_Invalid_argument_supplied_for_foreach.28.29_in_table.game.php",
+          "children": []
+        },
+        {
+          "level": 3,
+          "text": "The server reported an error",
+          "id": "The_server_reported_an_error",
+          "children": []
+        },
+        {
+          "level": 3,
+          "text": "Unexpected Error : Invalid player number for this game : 4",
+          "id": "Unexpected_Error_:_Invalid_player_number_for_this_game_:_4",
+          "children": []
+        },
+        {
+          "level": 3,
+          "text": "Blank page",
+          "id": "Blank_page",
+          "children": []
+        },
+        {
+          "level": 3,
+          "text": "\"Ooooops, this page does not exists :/\"",
+          "id": ".22Ooooops.2C_this_page_does_not_exists_:.2F.22",
+          "children": []
+        },
+        {
+          "level": 3,
+          "text": "HTTP Error 500 (when the BGA server is stable)",
+          "id": "HTTP_Error_500_.28when_the_BGA_server_is_stable.29",
+          "children": []
+        },
+        {
+          "level": 3,
+          "text": "Unexpected error:  Wrong formatted data from gameserver 1 (method: createGame): JSON_ERROR_SYNTAX - Warning:  Undefined array key 100 in .../table.game.php - Unknown gamestate label: 100",
+          "id": "Unexpected_error:_Wrong_formatted_data_from_gameserver_1_.28method:_createGame.29:_JSON_ERROR_SYNTAX_-_Warning:_Undefined_array_key_100_in_....2Ftable.game.php_-_Unknown_gamestate_label:_100",
+          "children": []
+        }
+      ]
+    },
+    {
+      "level": 2,
+      "text": "Game starts but I can't make a move",
+      "id": "Game_starts_but_I_can.27t_make_a_move",
+      "children": [
+        {
+          "level": 3,
+          "text": "When I do a move, I got \"Move recorded, waiting for update ...\" forever",
+          "id": "When_I_do_a_move.2C_I_got_.22Move_recorded.2C_waiting_for_update_....22_forever",
+          "children": []
+        },
+        {
+          "level": 3,
+          "text": "When I do a move, I get \"Sending move to server...\" then nothing and game resets to state before the move",
+          "id": "When_I_do_a_move.2C_I_get_.22Sending_move_to_server....22_then_nothing_and_game_resets_to_state_before_the_move",
+          "children": []
+        },
+        {
+          "level": 3,
+          "text": "When I do a move, I get \"Ajaxcall error: empty answer\"",
+          "id": "When_I_do_a_move.2C_I_get_.22Ajaxcall_error:_empty_answer.22",
+          "children": []
+        },
+        {
+          "level": 3,
+          "text": "When I do a move, I get \"Gameserver is locked by configuration\".",
+          "id": "When_I_do_a_move.2C_I_get_.22Gameserver_is_locked_by_configuration.22.",
+          "children": []
+        },
+        {
+          "level": 3,
+          "text": "When I do a move, I get \"Server syntax error: Fatal error: Allowed memory size of X bytes exhausted\".",
+          "id": "When_I_do_a_move.2C_I_get_.22Server_syntax_error:_Fatal_error:_Allowed_memory_size_of_X_bytes_exhausted.22.",
+          "children": []
+        },
+        {
+          "level": 3,
+          "text": "Some player action is triggered randomly when I click somewhere on the game area",
+          "id": "Some_player_action_is_triggered_randomly_when_I_click_somewhere_on_the_game_area",
+          "children": []
+        },
+        {
+          "level": 3,
+          "text": "Error: This is not your turn",
+          "id": "Error:_This_is_not_your_turn",
+          "children": []
+        },
+        {
+          "level": 3,
+          "text": "Error: Please wait, an action is already in progress",
+          "id": "Error:_Please_wait.2C_an_action_is_already_in_progress",
+          "children": []
+        },
+        {
+          "level": 3,
+          "text": "Error: This move is not authorized now",
+          "id": "Error:_This_move_is_not_authorized_now",
+          "children": []
+        },
+        {
+          "level": 3,
+          "text": "Error: More than one possible action at this state",
+          "id": "Error:_More_than_one_possible_action_at_this_state",
+          "children": []
+        },
+        {
+          "level": 3,
+          "text": "Error: You are not connected - after waiting for the submitted move",
+          "id": "Error:_You_are_not_connected_-_after_waiting_for_the_submitted_move",
+          "children": []
+        },
+        {
+          "level": 3,
+          "text": "502 Bad Gateway",
+          "id": "502_Bad_Gateway",
+          "children": []
+        }
+      ]
+    },
+    {
+      "level": 2,
+      "text": "Predefined server errors",
+      "id": "Predefined_server_errors",
+      "children": [
+        {
+          "level": 3,
+          "text": "Unexpected error: Unexpected final game state (XX)",
+          "id": "Unexpected_error:_Unexpected_final_game_state_.28XX.29",
+          "children": []
+        },
+        {
+          "level": 3,
+          "text": "This game action is impossible right now",
+          "id": "This_game_action_is_impossible_right_now",
+          "children": []
+        },
+        {
+          "level": 3,
+          "text": "Unexpected error: This transition (playerTurn) is impossible at this state (42)",
+          "id": "Unexpected_error:_This_transition_.28playerTurn.29_is_impossible_at_this_state_.2842.29",
+          "children": []
+        }
+      ]
+    },
+    {
+      "level": 2,
+      "text": "Game interface hangs during reload or on start",
+      "id": "Game_interface_hangs_during_reload_or_on_start",
+      "children": [
+        {
+          "level": 3,
+          "text": "Javascript error: During pageload undefined no_stack_avail Script:",
+          "id": "Javascript_error:_During_pageload_undefined_no_stack_avail_Script:",
+          "children": []
+        },
+        {
+          "level": 3,
+          "text": "Javascript error: During pageload n is null",
+          "id": "Javascript_error:_During_pageload_n_is_null",
+          "children": []
+        },
+        {
+          "level": 3,
+          "text": "Other errors with \"Application loading...\"",
+          "id": "Other_errors_with_.22Application_loading....22",
+          "children": []
+        },
+        {
+          "level": 3,
+          "text": "Unexpected Syntax Error:",
+          "id": "Unexpected_Syntax_Error:",
+          "children": []
+        },
+        {
+          "level": 3,
+          "text": "Game interface spins in a loop throwing error",
+          "id": "Game_interface_spins_in_a_loop_throwing_error",
+          "children": []
+        },
+        {
+          "level": 3,
+          "text": "Unable to find table database (1): ebd_yourgame_112222",
+          "id": "Unable_to_find_table_database_.281.29:_ebd_yourgame_112222",
+          "children": []
+        }
+      ]
+    },
+    {
+      "level": 2,
+      "text": "Type conversion / juggling errors",
+      "id": "Type_conversion_.2F_juggling_errors",
+      "children": [
+        {
+          "level": 3,
+          "text": "On php side I get a number instead of string I expect",
+          "id": "On_php_side_I_get_a_number_instead_of_string_I_expect",
+          "children": []
+        },
+        {
+          "level": 3,
+          "text": "On php side my string comparison does not work",
+          "id": "On_php_side_my_string_comparison_does_not_work",
+          "children": []
+        },
+        {
+          "level": 3,
+          "text": "Integer columns in the database are returned as strings",
+          "id": "Integer_columns_in_the_database_are_returned_as_strings",
+          "children": []
+        }
+      ]
+    },
+    {
+      "level": 2,
+      "text": "Zombie mode",
+      "id": "Zombie_mode",
+      "children": [
+        {
+          "level": 3,
+          "text": "Unexpected error: Propagating error from GS 1 (method: zombie): Not logged",
+          "id": "Unexpected_error:_Propagating_error_from_GS_1_.28method:_zombie.29:_Not_logged",
+          "children": []
+        },
+        {
+          "level": 3,
+          "text": "Unexpected error: Can't manage zombie player in this game state",
+          "id": "Unexpected_error:_Can.27t_manage_zombie_player_in_this_game_state",
+          "children": []
+        },
+        {
+          "level": 3,
+          "text": "Unexpected error: Wrong formatted data from BGA gameserver 1 (method: zombie):",
+          "id": "Unexpected_error:_Wrong_formatted_data_from_BGA_gameserver_1_.28method:_zombie.29:",
+          "children": []
+        },
+        {
+          "level": 3,
+          "text": "Unexpected error: BGA gameserver 1 do not respond (method: zombie) (timeout: cluster)",
+          "id": "Unexpected_error:_BGA_gameserver_1_do_not_respond_.28method:_zombie.29_.28timeout:_cluster.29",
+          "children": []
+        },
+        {
+          "level": 3,
+          "text": "Game unexpectedly ends when one player becomes zombie",
+          "id": "Game_unexpectedly_ends_when_one_player_becomes_zombie",
+          "children": []
+        }
+      ]
+    },
+    {
+      "level": 2,
+      "text": "Dead locks",
+      "id": "Dead_locks",
+      "children": [
+        {
+          "level": 3,
+          "text": "Database dead lock in multiplayer state",
+          "id": "Database_dead_lock_in_multiplayer_state",
+          "children": []
+        }
+      ]
+    },
+    {
+      "level": 2,
+      "text": "Other errors",
+      "id": "Other_errors",
+      "children": [
+        {
+          "level": 3,
+          "text": "Javascript does not know how to sum two numbers",
+          "id": "Javascript_does_not_know_how_to_sum_two_numbers",
+          "children": []
+        },
+        {
+          "level": 3,
+          "text": "Javascript: do not use substr with negative numbers",
+          "id": "Javascript:_do_not_use_substr_with_negative_numbers",
+          "children": []
+        },
+        {
+          "level": 3,
+          "text": "Game \"spontaneously\" transition to a new state without user input",
+          "id": "Game_.22spontaneously.22_transition_to_a_new_state_without_user_input",
+          "children": []
+        },
+        {
+          "level": 3,
+          "text": "Message \"Invalid or missing substitution argument for log message: ${actplayer} ... \" when entering a state",
+          "id": "Message_.22Invalid_or_missing_substitution_argument_for_log_message:_.24.7Bactplayer.7D_..._.22_when_entering_a_state",
+          "children": []
+        },
+        {
+          "level": 3,
+          "text": "Server syntax error: Warning: count(): Parameter must be an array or an object that implements Countable in /var/tournoi/release/tournoi-220308-1000-gs/www/game/module/table/gamestate.game.php on line 823",
+          "id": "Server_syntax_error:_Warning:_count.28.29:_Parameter_must_be_an_array_or_an_object_that_implements_Countable_in_.2Fvar.2Ftournoi.2Frelease.2Ftournoi-220308-1000-gs.2Fwww.2Fgame.2Fmodule.2Ftable.2Fgamestate.game.php_on_line_823",
+          "children": []
+        },
+        {
+          "level": 3,
+          "text": "Red banner \"Uncaught EvalError: Possible side-effect in debug-evaluate\"",
+          "id": "Red_banner_.22Uncaught_EvalError:_Possible_side-effect_in_debug-evaluate.22",
+          "children": []
+        }
+      ]
+    }
+  ],
+  "Tutorial_hearts.html": [
+    {
+      "level": 2,
+      "text": "Introduction",
+      "id": "Introduction",
+      "children": []
+    },
+    {
+      "level": 2,
+      "text": "Hearts Rules",
+      "id": "Hearts_Rules",
+      "children": []
+    },
+    {
+      "level": 2,
+      "text": "Create your first game",
+      "id": "Create_your_first_game",
+      "children": []
+    },
+    {
+      "level": 2,
+      "text": "Hook version control system",
+      "id": "Hook_version_control_system",
+      "children": []
+    },
+    {
+      "level": 2,
+      "text": "Update game infos and box graphics",
+      "id": "Update_game_infos_and_box_graphics",
+      "children": []
+    },
+    {
+      "level": 2,
+      "text": "Layout and Graphics",
+      "id": "Layout_and_Graphics",
+      "children": []
+    }
+  ],
+  "Tutorial_reversi.html": [
+    {
+      "level": 2,
+      "text": "Introduction",
+      "id": "Introduction",
+      "children": [
+        {
+          "level": 3,
+          "text": "Javascript or Typescript",
+          "id": "Javascript_or_Typescript",
+          "children": []
+        }
+      ]
+    },
+    {
+      "level": 2,
+      "text": "Create your first game",
+      "id": "Create_your_first_game",
+      "children": []
+    },
+    {
+      "level": 2,
+      "text": "Editing the game information (Optional)",
+      "id": "Editing_the_game_information_.28Optional.29",
+      "children": [
+        {
+          "level": 4,
+          "text": "Edits to fix Errors",
+          "id": "Edits_to_fix_Errors",
+          "children": []
+        },
+        {
+          "level": 4,
+          "text": "Test your Edits",
+          "id": "Test_your_Edits",
+          "children": [
+            {
+              "level": 5,
+              "text": "Not working?",
+              "id": "Not_working.3F",
+              "children": []
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "level": 2,
+      "text": "Make sure the IDE is properly configured",
+      "id": "Make_sure_the_IDE_is_properly_configured",
+      "children": []
+    },
+    {
+      "level": 2,
+      "text": "Make it look like Reversi",
+      "id": "Make_it_look_like_Reversi",
+      "children": [
+        {
+          "level": 4,
+          "text": "Add the board",
+          "id": "Add_the_board",
+          "children": []
+        },
+        {
+          "level": 4,
+          "text": "Code the Grid",
+          "id": "Code_the_Grid",
+          "children": [
+            {
+              "level": 5,
+              "text": "Build the grid of squares",
+              "id": "Build_the_grid_of_squares",
+              "children": []
+            },
+            {
+              "level": 5,
+              "text": "Style Those Squares",
+              "id": "Style_Those_Squares",
+              "children": []
+            },
+            {
+              "level": 5,
+              "text": "Not Working?",
+              "id": "Not_Working.3F_2",
+              "children": []
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "level": 2,
+      "text": "The Tokens",
+      "id": "The_Tokens",
+      "children": [
+        {
+          "level": 3,
+          "text": "Build the Token",
+          "id": "Build_the_Token",
+          "children": [
+            {
+              "level": 4,
+              "text": "Add Token to img directory",
+              "id": "Add_Token_to_img_directory",
+              "children": []
+            },
+            {
+              "level": 4,
+              "text": "Style the Tokens in .css file",
+              "id": "Style_the_Tokens_in_.css_file",
+              "children": []
+            },
+            {
+              "level": 4,
+              "text": "Add Token Utility Method in .js file",
+              "id": "Add_Token_Utility_Method_in_.js_file",
+              "children": [
+                {
+                  "level": 5,
+                  "text": "Utility Method Explanation",
+                  "id": "Utility_Method_Explanation",
+                  "children": []
+                }
+              ]
+            },
+            {
+              "level": 4,
+              "text": "Set Token Colors in setupNewGame in modules/php/Game.php file",
+              "id": "Set_Token_Colors_in_setupNewGame_in_modules.2Fphp.2FGame.php_file",
+              "children": []
+            }
+          ]
+        },
+        {
+          "level": 3,
+          "text": "Test the Token",
+          "id": "Test_the_Token",
+          "children": []
+        }
+      ]
+    },
+    {
+      "level": 2,
+      "text": "The database",
+      "id": "The_database",
+      "children": [
+        {
+          "level": 3,
+          "text": "Accessing the Database",
+          "id": "Accessing_the_Database",
+          "children": []
+        },
+        {
+          "level": 3,
+          "text": "Create Table in .sql file",
+          "id": "Create_Table_in_.sql_file",
+          "children": []
+        },
+        {
+          "level": 3,
+          "text": "Test the Table",
+          "id": "Test_the_Table",
+          "children": []
+        }
+      ]
+    },
+    {
+      "level": 2,
+      "text": "Setup the initial game position",
+      "id": "Setup_the_initial_game_position",
+      "children": [
+        {
+          "level": 3,
+          "text": "Initialize the Board in modules/php/Game.php file",
+          "id": "Initialize_the_Board_in_modules.2Fphp.2FGame.php_file",
+          "children": [
+            {
+              "level": 4,
+              "text": "Board Initialization Explanation",
+              "id": "Board_Initialization_Explanation",
+              "children": []
+            }
+          ]
+        },
+        {
+          "level": 3,
+          "text": "Show the Initial Token Setup",
+          "id": "Show_the_Initial_Token_Setup",
+          "children": []
+        },
+        {
+          "level": 3,
+          "text": "Test the Game Start",
+          "id": "Test_the_Game_Start",
+          "children": []
+        }
+      ]
+    },
+    {
+      "level": 2,
+      "text": "State Machine",
+      "id": "State_Machine",
+      "children": [
+        {
+          "level": 3,
+          "text": "Build your States",
+          "id": "Build_your_States",
+          "children": []
+        },
+        {
+          "level": 3,
+          "text": "Test Your States",
+          "id": "Test_Your_States",
+          "children": []
+        }
+      ]
+    },
+    {
+      "level": 2,
+      "text": "The rules",
+      "id": "The_rules",
+      "children": []
+    },
+    {
+      "level": 2,
+      "text": "Display allowed moves",
+      "id": "Display_allowed_moves",
+      "children": []
+    },
+    {
+      "level": 2,
+      "text": "Let's play",
+      "id": "Let.27s_play",
+      "children": []
+    },
+    {
+      "level": 2,
+      "text": "Make the move appear automatically",
+      "id": "Make_the_move_appear_automatically",
+      "children": []
+    },
+    {
+      "level": 2,
+      "text": "Implement the zombie mode",
+      "id": "Implement_the_zombie_mode",
+      "children": []
+    },
+    {
+      "level": 2,
+      "text": "Add a debug function to help up test the code",
+      "id": "Add_a_debug_function_to_help_up_test_the_code",
+      "children": []
+    },
+    {
+      "level": 2,
+      "text": "Optional: add unit tests",
+      "id": "Optional:_add_unit_tests",
+      "children": []
+    },
+    {
+      "level": 2,
+      "text": "After the tutorial",
+      "id": "After_the_tutorial",
+      "children": []
+    }
+  ],
+  "Tutorials_checklist.html": [
+    {
+      "level": 2,
+      "text": "Publishing Tutorials",
+      "id": "Publishing_Tutorials",
+      "children": []
+    },
+    {
+      "level": 2,
+      "text": "Tutorial Game release override",
+      "id": "Tutorial_Game_release_override",
+      "children": []
+    }
+  ],
+  "Using_AI_for_BGA_game_development.html": [
+    {
+      "level": 2,
+      "text": "Overview",
+      "id": "Overview",
+      "children": []
+    },
+    {
+      "level": 2,
+      "text": "Setup",
+      "id": "Setup",
+      "children": []
+    },
+    {
+      "level": 2,
+      "text": "Skills",
+      "id": "Skills",
+      "children": []
+    }
+  ],
+  "Using_Typescript_and_Scss.html": [
+    {
+      "level": 2,
+      "text": "Install and configure",
+      "id": "Install_and_configure",
+      "children": [
+        {
+          "level": 3,
+          "text": "Install dev stack",
+          "id": "Install_dev_stack",
+          "children": []
+        },
+        {
+          "level": 3,
+          "text": "Configure package.json and tsconfig.json",
+          "id": "Configure_package.json_and_tsconfig.json",
+          "children": []
+        }
+      ]
+    },
+    {
+      "level": 2,
+      "text": "Create skeleton",
+      "id": "Create_skeleton",
+      "children": [
+        {
+          "level": 3,
+          "text": "Typescript file skeleton",
+          "id": "Typescript_file_skeleton",
+          "children": []
+        },
+        {
+          "level": 3,
+          "text": "SCSS file",
+          "id": "SCSS_file",
+          "children": []
+        }
+      ]
+    },
+    {
+      "level": 2,
+      "text": "Auto build and auto upload",
+      "id": "Auto_build_and_auto_upload",
+      "children": [
+        {
+          "level": 3,
+          "text": "Auto build JS and CSS files",
+          "id": "Auto_build_JS_and_CSS_files",
+          "children": []
+        },
+        {
+          "level": 3,
+          "text": "Auto-upload generated files",
+          "id": "Auto-upload_generated_files",
+          "children": []
+        },
+        {
+          "level": 3,
+          "text": "Exclusions from auto-upload",
+          "id": "Exclusions_from_auto-upload",
+          "children": []
+        },
+        {
+          "level": 3,
+          "text": "Code completion",
+          "id": "Code_completion",
+          "children": []
+        }
+      ]
+    },
+    {
+      "level": 2,
+      "text": "Using the new libs",
+      "id": "Using_the_new_libs",
+      "children": []
+    },
+    {
+      "level": 2,
+      "text": "Migrating from old way (ES5 build to gamename.js)",
+      "id": "Migrating_from_old_way_.28ES5_build_to_gamename.js.29",
+      "children": []
+    },
+    {
+      "level": 2,
+      "text": "Browser console info",
+      "id": "Browser_console_info",
+      "children": []
+    },
+    {
+      "level": 2,
+      "text": "Referenced Projects",
+      "id": "Referenced_Projects",
+      "children": []
+    }
+  ],
+  "Using_Vue.html": [],
+  "Your_game_mobile_version.html": [
+    {
+      "level": 2,
+      "text": "Declare your interface minimum width",
+      "id": "Declare_your_interface_minimum_width",
+      "children": [
+        {
+          "level": 3,
+          "text": "Autoscale",
+          "id": "Autoscale",
+          "children": []
+        }
+      ]
+    },
+    {
+      "level": 2,
+      "text": "Touchscreen compatibility",
+      "id": "Touchscreen_compatibility",
+      "children": []
+    },
+    {
+      "level": 2,
+      "text": "Viewport <meta> tag",
+      "id": "Viewport_.3Cmeta.3E_tag",
+      "children": []
+    }
+  ],
+  "Your_game_state_machine_states.inc.php.html": [
+    {
+      "level": 2,
+      "text": "Overall structure",
+      "id": "Overall_structure",
+      "children": []
+    },
+    {
+      "level": 2,
+      "text": "Syntax",
+      "id": "Syntax",
+      "children": [
+        {
+          "level": 3,
+          "text": "id",
+          "id": "id",
+          "children": []
+        },
+        {
+          "level": 3,
+          "text": "name",
+          "id": "name",
+          "children": []
+        },
+        {
+          "level": 3,
+          "text": "type",
+          "id": "type",
+          "children": []
+        },
+        {
+          "level": 3,
+          "text": "description",
+          "id": "description",
+          "children": []
+        },
+        {
+          "level": 3,
+          "text": "descriptionmyturn",
+          "id": "descriptionmyturn",
+          "children": []
+        },
+        {
+          "level": 3,
+          "text": "action",
+          "id": "action",
+          "children": []
+        },
+        {
+          "level": 3,
+          "text": "transitions",
+          "id": "transitions",
+          "children": []
+        },
+        {
+          "level": 3,
+          "text": "possibleactions",
+          "id": "possibleactions",
+          "children": []
+        },
+        {
+          "level": 3,
+          "text": "args",
+          "id": "args",
+          "children": [
+            {
+              "level": 4,
+              "text": "Naming and API conventions",
+              "id": "Naming_and_API_conventions",
+              "children": []
+            },
+            {
+              "level": 4,
+              "text": "Other usages",
+              "id": "Other_usages",
+              "children": []
+            },
+            {
+              "level": 4,
+              "text": "Private info in args",
+              "id": "Private_info_in_args",
+              "children": []
+            },
+            {
+              "level": 4,
+              "text": "Flag to indicate a skipped state",
+              "id": "Flag_to_indicate_a_skipped_state",
+              "children": []
+            },
+            {
+              "level": 4,
+              "text": "Translations in args",
+              "id": "Translations_in_args",
+              "children": []
+            }
+          ]
+        },
+        {
+          "level": 3,
+          "text": "updateGameProgression",
+          "id": "updateGameProgression",
+          "children": []
+        },
+        {
+          "level": 3,
+          "text": "initialprivate",
+          "id": "initialprivate",
+          "children": []
+        }
+      ]
+    },
+    {
+      "level": 2,
+      "text": "Implementation Notes",
+      "id": "Implementation_Notes",
+      "children": [
+        {
+          "level": 3,
+          "text": "End Score state",
+          "id": "End_Score_state",
+          "children": []
+        },
+        {
+          "level": 3,
+          "text": "Private parallel states",
+          "id": "Private_parallel_states",
+          "children": []
+        },
+        {
+          "level": 3,
+          "text": "Client States",
+          "id": "Client_States",
+          "children": []
+        },
+        {
+          "level": 3,
+          "text": "Using Named Constants for States",
+          "id": "Using_Named_Constants_for_States",
+          "children": []
+        },
+        {
+          "level": 3,
+          "text": "Example of MULTIPLE_ACTIVE_PLAYER state",
+          "id": "Example_of_MULTIPLE_ACTIVE_PLAYER_state",
+          "children": []
+        },
+        {
+          "level": 3,
+          "text": "Difference between Single active and Multi active states",
+          "id": "Difference_between_Single_active_and_Multi_active_states",
+          "children": []
+        },
+        {
+          "level": 3,
+          "text": "Designing states",
+          "id": "Designing_states",
+          "children": []
+        },
+        {
+          "level": 3,
+          "text": "Complete examples",
+          "id": "Complete_examples",
+          "children": []
+        }
+      ]
+    }
+  ],
+  "Zombie_Mode.html": [
+    {
+      "level": 2,
+      "text": "What is the Zombie mode",
+      "id": "What_is_the_Zombie_mode",
+      "children": []
+    },
+    {
+      "level": 2,
+      "text": "The different Zombie levels",
+      "id": "The_different_Zombie_levels",
+      "children": []
+    },
+    {
+      "level": 2,
+      "text": "Implementing the Zombie mode",
+      "id": "Implementing_the_Zombie_mode",
+      "children": []
+    },
+    {
+      "level": 2,
+      "text": "Testing the Zombie mode",
+      "id": "Testing_the_Zombie_mode",
+      "children": []
+    },
+    {
+      "level": 2,
+      "text": "Implementing the Zombie mode (if you're not using State classes)",
+      "id": "Implementing_the_Zombie_mode_.28if_you.27re_not_using_State_classes.29",
+      "children": []
+    },
+    {
+      "level": 2,
+      "text": "Testing the Zombie mode (if you're not using State classes)",
+      "id": "Testing_the_Zombie_mode_.28if_you.27re_not_using_State_classes.29",
+      "children": []
+    }
+  ],
+  "Zone.html": [
+    {
+      "level": 2,
+      "text": "Zone in action",
+      "id": "Zone_in_action",
+      "children": []
+    },
+    {
+      "level": 2,
+      "text": "How to use Zone",
+      "id": "How_to_use_Zone",
+      "children": []
+    },
+    {
+      "level": 2,
+      "text": "Patterns: positioning items within your zone",
+      "id": "Patterns:_positioning_items_within_your_zone",
+      "children": [
+        {
+          "level": 3,
+          "text": "grid",
+          "id": "grid",
+          "children": []
+        },
+        {
+          "level": 3,
+          "text": "diagonal",
+          "id": "diagonal",
+          "children": []
+        },
+        {
+          "level": 3,
+          "text": "verticalfit",
+          "id": "verticalfit",
+          "children": []
+        },
+        {
+          "level": 3,
+          "text": "horizontalfit",
+          "id": "horizontalfit",
+          "children": []
+        },
+        {
+          "level": 3,
+          "text": "ellipticalfit",
+          "id": "ellipticalfit",
+          "children": []
+        },
+        {
+          "level": 3,
+          "text": "custom",
+          "id": "custom",
+          "children": []
+        }
+      ]
+    }
+  ]
+}
