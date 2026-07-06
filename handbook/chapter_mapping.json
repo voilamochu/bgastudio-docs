@@ -1,0 +1,479 @@
+{
+  "page_to_chapters": {
+    "Studio.html": [
+      {
+        "chapter": 1,
+        "primary": true
+      }
+    ],
+    "How_to_join_BGA_developer_team.html": [
+      {
+        "chapter": 1,
+        "primary": true
+      }
+    ],
+    "First_steps_with_BGA_Studio.html": [
+      {
+        "chapter": 1,
+        "primary": true
+      }
+    ],
+    "BGA_Game_licenses.html": [
+      {
+        "chapter": 1,
+        "primary": true
+      }
+    ],
+    "Contact_BGA_Studio.html": [
+      {
+        "chapter": 1,
+        "primary": false
+      }
+    ],
+    "Setting_up_BGA_Development_environment_using_VSCode.html": [
+      {
+        "chapter": 2,
+        "primary": true
+      }
+    ],
+    "Studio_file_reference.html": [
+      {
+        "chapter": 2,
+        "primary": true
+      }
+    ],
+    "Tools_and_tips_of_BGA_Studio.html": [
+      {
+        "chapter": 2,
+        "primary": false
+      }
+    ],
+    "Game_meta-information_gameinfos.jsonc.html": [
+      {
+        "chapter": 3,
+        "primary": true
+      }
+    ],
+    "Game_database_model_dbmodel.sql.html": [
+      {
+        "chapter": 3,
+        "primary": true
+      }
+    ],
+    "Game_material_description_material.inc.php.html": [
+      {
+        "chapter": 3,
+        "primary": true
+      }
+    ],
+    "Players_actions_yourgamename.action.php.html": [
+      {
+        "chapter": 3,
+        "primary": true
+      }
+    ],
+    "Game_layout_view_and_template_yourgamename.view.php_and_yourgamename_yourgamename.tpl.html": [
+      {
+        "chapter": 3,
+        "primary": true
+      }
+    ],
+    "Your_game_state_machine_states.inc.php.html": [
+      {
+        "chapter": 4,
+        "primary": true
+      }
+    ],
+    "State_classes_State_directory.html": [
+      {
+        "chapter": 4,
+        "primary": true
+      }
+    ],
+    "BGA_Studio_Migration_Guide.html": [
+      {
+        "chapter": 4,
+        "primary": false,
+        "sections": [
+          "States",
+          "State Management Functions"
+        ]
+      },
+      {
+        "chapter": 5,
+        "primary": false,
+        "sections": [
+          "PHP migration",
+          "Autowire game actions",
+          "Notifications",
+          "State Management Functions",
+          "Deprecated translation functions"
+        ]
+      },
+      {
+        "chapter": 6,
+        "primary": false,
+        "sections": [
+          "Main class",
+          "Notification setup",
+          "Status bar manipulation",
+          "Dojo usage"
+        ]
+      },
+      {
+        "chapter": 9,
+        "primary": false,
+        "sections": [
+          "Notification Decorators",
+          "Notification args consistency"
+        ]
+      },
+      {
+        "chapter": 11,
+        "primary": false,
+        "sections": [
+          "Updated Zombie Mode documentation and recommendations"
+        ]
+      },
+      {
+        "chapter": 14,
+        "primary": true
+      }
+    ],
+    "Main_game_logic_Game.php.html": [
+      {
+        "chapter": 5,
+        "primary": true
+      }
+    ],
+    "Game_statistics_stats.json.html": [
+      {
+        "chapter": 5,
+        "primary": true
+      }
+    ],
+    "Game_interface_logic_Game.js.html": [
+      {
+        "chapter": 6,
+        "primary": true
+      }
+    ],
+    "Using_Typescript_and_Scss.html": [
+      {
+        "chapter": 6,
+        "primary": true
+      }
+    ],
+    "Stock.html": [
+      {
+        "chapter": 7,
+        "primary": true
+      }
+    ],
+    "Deck.html": [
+      {
+        "chapter": 7,
+        "primary": true
+      }
+    ],
+    "Zone.html": [
+      {
+        "chapter": 7,
+        "primary": true
+      }
+    ],
+    "Scrollmap.html": [
+      {
+        "chapter": 7,
+        "primary": true
+      }
+    ],
+    "Game_art_img_directory.html": [
+      {
+        "chapter": 7,
+        "primary": true
+      }
+    ],
+    "Game_interface_stylesheet_yourgamename.css.html": [
+      {
+        "chapter": 7,
+        "primary": true
+      }
+    ],
+    "Your_game_mobile_version.html": [
+      {
+        "chapter": 7,
+        "primary": true
+      }
+    ],
+    "BGA_Studio_Cookbook.html": [
+      {
+        "chapter": 8,
+        "primary": true,
+        "sections": [
+          "Visual Effects, Layout and Animation",
+          "Game Model and Database design",
+          "Images and Icons",
+          "Dynamic tooltips"
+        ]
+      }
+    ],
+    "BGA_Studio_Guidelines.html": [
+      {
+        "chapter": 8,
+        "primary": true
+      }
+    ],
+    "Options_and_preferences_gameoptions.json,_gamepreferences.json.html": [
+      {
+        "chapter": 8,
+        "primary": true
+      }
+    ],
+    "PlayerCounter_and_TableCounter.html": [
+      {
+        "chapter": 8,
+        "primary": true
+      }
+    ],
+    "Translations.html": [
+      {
+        "chapter": 10,
+        "primary": true
+      }
+    ],
+    "Bots_and_Artificial_Intelligence.html": [
+      {
+        "chapter": 11,
+        "primary": true
+      }
+    ],
+    "BGA_Undo_policy.html": [
+      {
+        "chapter": 11,
+        "primary": true
+      }
+    ],
+    "Zombie_Mode.html": [
+      {
+        "chapter": 11,
+        "primary": true
+      }
+    ],
+    "BgaAnimations.html": [
+      {
+        "chapter": 11,
+        "primary": true
+      }
+    ],
+    "BgaAutofit.html": [
+      {
+        "chapter": 11,
+        "primary": true
+      }
+    ],
+    "BgaCards.html": [
+      {
+        "chapter": 11,
+        "primary": true
+      }
+    ],
+    "BgaDice.html": [
+      {
+        "chapter": 11,
+        "primary": true
+      }
+    ],
+    "BgaScoreSheet.html": [
+      {
+        "chapter": 11,
+        "primary": true
+      }
+    ],
+    "ExpandableSection.html": [
+      {
+        "chapter": 11,
+        "primary": true
+      }
+    ],
+    "Counter.html": [
+      {
+        "chapter": 11,
+        "primary": true
+      }
+    ],
+    "Testing_by_developer.html": [
+      {
+        "chapter": 12,
+        "primary": true
+      }
+    ],
+    "Practical_debugging.html": [
+      {
+        "chapter": 12,
+        "primary": true
+      }
+    ],
+    "Troubleshooting.html": [
+      {
+        "chapter": 12,
+        "primary": true
+      }
+    ],
+    "Studio_logs.html": [
+      {
+        "chapter": 12,
+        "primary": true
+      }
+    ],
+    "Create_a_game_in_BGA_Studio_Complete_Walkthrough.html": [
+      {
+        "chapter": 13,
+        "primary": true
+      }
+    ],
+    "Post-release_phase.html": [
+      {
+        "chapter": 13,
+        "primary": true
+      }
+    ],
+    "Pre-release_checklist.html": [
+      {
+        "chapter": 13,
+        "primary": true
+      }
+    ],
+    "Tutorials_checklist.html": [
+      {
+        "chapter": 13,
+        "primary": true
+      }
+    ],
+    "Anti-Stock.html": [
+      {
+        "chapter": 15,
+        "primary": false,
+        "reason": "Stock alternative pattern"
+      }
+    ],
+    "BGA_Code_Sharing.html": [
+      {
+        "chapter": 15,
+        "primary": false,
+        "reason": "Community resources"
+      }
+    ],
+    "BGA_game_Lifecycle.html": [
+      {
+        "chapter": 15,
+        "primary": false,
+        "reason": "Lifecycle overview"
+      }
+    ],
+    "ChromeExtension.html": [
+      {
+        "chapter": 15,
+        "primary": false,
+        "reason": "Development tool"
+      }
+    ],
+    "Common_board_game_elements_image_resources.html": [
+      {
+        "chapter": 15,
+        "primary": false,
+        "reason": "Asset reference"
+      }
+    ],
+    "Compatibility.html": [
+      {
+        "chapter": 15,
+        "primary": false,
+        "reason": "Technical requirements"
+      }
+    ],
+    "Draggable.html": [
+      {
+        "chapter": 15,
+        "primary": false,
+        "reason": "Deprecated component reference"
+      }
+    ],
+    "Game_fonts_fonts_directory.html": [
+      {
+        "chapter": 15,
+        "primary": false,
+        "reason": "Font asset handling"
+      }
+    ],
+    "Game_metadata_manager.html": [
+      {
+        "chapter": 15,
+        "primary": false,
+        "reason": "Game metadata API"
+      }
+    ],
+    "Game_replay.html": [
+      {
+        "chapter": 15,
+        "primary": false,
+        "reason": "Replay feature"
+      }
+    ],
+    "Game_sounds_sounds_directory.html": [
+      {
+        "chapter": 15,
+        "primary": false,
+        "reason": "Sound assets"
+      }
+    ],
+    "I_wish_I_knew_this_when_I_started.html": [
+      {
+        "chapter": 15,
+        "primary": false,
+        "reason": "Developer tips"
+      }
+    ],
+    "Studio_FAQ.html": [
+      {
+        "chapter": 15,
+        "primary": false,
+        "reason": "FAQ reference"
+      }
+    ],
+    "Tutorial_hearts.html": [
+      {
+        "chapter": 15,
+        "primary": false,
+        "reason": "Tutorial reference"
+      }
+    ],
+    "Tutorial_reversi.html": [
+      {
+        "chapter": 15,
+        "primary": false,
+        "reason": "Tutorial reference"
+      }
+    ],
+    "Using_AI_for_BGA_game_development.html": [
+      {
+        "chapter": 15,
+        "primary": false,
+        "reason": "AI development tools"
+      }
+    ],
+    "Using_Vue.html": [
+      {
+        "chapter": 15,
+        "primary": false,
+        "reason": "Vue framework integration"
+      }
+    ]
+  },
+  "orphan_pages": [],
+  "validation": {
+    "total_pages_in_index": 67,
+    "covered_pages": 67,
+    "missing_pages": []
+  }
+}

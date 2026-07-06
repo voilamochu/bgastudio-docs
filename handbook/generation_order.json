@@ -1,0 +1,157 @@
+{
+  "generation_order": [
+    1,
+    2,
+    3,
+    4,
+    5,
+    6,
+    7,
+    8,
+    9,
+    10,
+    11,
+    12,
+    13,
+    14,
+    15
+  ],
+  "dependency_graph": {
+    "1": {
+      "requires": [],
+      "complexity": "Low",
+      "reading_time": 7
+    },
+    "2": {
+      "requires": [
+        1
+      ],
+      "complexity": "Medium",
+      "reading_time": 11
+    },
+    "3": {
+      "requires": [
+        2
+      ],
+      "complexity": "High",
+      "reading_time": 21
+    },
+    "4": {
+      "requires": [
+        3
+      ],
+      "complexity": "High",
+      "reading_time": 32
+    },
+    "5": {
+      "requires": [
+        4
+      ],
+      "complexity": "High",
+      "reading_time": 68
+    },
+    "6": {
+      "requires": [
+        4,
+        5
+      ],
+      "complexity": "High",
+      "reading_time": 48
+    },
+    "7": {
+      "requires": [
+        6
+      ],
+      "complexity": "High",
+      "reading_time": 39
+    },
+    "8": {
+      "requires": [
+        7
+      ],
+      "complexity": "High",
+      "reading_time": 33
+    },
+    "9": {
+      "requires": [
+        5,
+        6
+      ],
+      "complexity": "Low",
+      "reading_time": 8
+    },
+    "10": {
+      "requires": [
+        5
+      ],
+      "complexity": "Medium",
+      "reading_time": 6
+    },
+    "11": {
+      "requires": [
+        4,
+        5,
+        6
+      ],
+      "complexity": "High",
+      "reading_time": 32
+    },
+    "12": {
+      "requires": [
+        5,
+        6,
+        11
+      ],
+      "complexity": "High",
+      "reading_time": 26
+    },
+    "13": {
+      "requires": [
+        1,
+        12
+      ],
+      "complexity": "Medium",
+      "reading_time": 22
+    },
+    "14": {
+      "requires": [
+        1,
+        2,
+        5,
+        6
+      ],
+      "complexity": "Medium",
+      "reading_time": 8
+    },
+    "15": {
+      "requires": [],
+      "complexity": "High",
+      "reading_time": 43
+    }
+  },
+  "complexity_tier": {
+    "foundational": [
+      1,
+      2,
+      3,
+      4
+    ],
+    "implementation": [
+      5,
+      6,
+      7,
+      8
+    ],
+    "advanced_features": [
+      9,
+      10,
+      11,
+      12
+    ],
+    "reference": [
+      13,
+      14,
+      15
+    ]
+  }
+}

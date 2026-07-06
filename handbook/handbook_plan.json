@@ -1,0 +1,958 @@
+[
+  {
+    "number": 1,
+    "title": "Introduction to BGA Studio",
+    "purpose": "Introduce Board Game Arena Studio, its purpose, and how to get started as a developer.",
+    "learning_objectives": [
+      "Understand what BGA Studio is and its role in the ecosystem",
+      "Learn the requirements and prerequisites for BGA development",
+      "Set up a development account and understand the licensing model",
+      "Navigate the documentation and community resources"
+    ],
+    "prerequisite_chapters": [],
+    "glossary_terms_introduced": [
+      "Available",
+      "BGA Studio",
+      "BGA Studio Framework",
+      "Board Game Arena Studio",
+      "Change active player",
+      "Check Publisher",
+      "Check Publisher Relation",
+      "Client",
+      "Commit",
+      "Connect",
+      "Contact",
+      "Create",
+      "Determine",
+      "Discover BGA Studio",
+      "File Sync",
+      "First",
+      "Game",
+      "Game interface logic: Game",
+      "Game layout: view and template: yourgamename",
+      "Game material description: material"
+    ],
+    "estimated_reading_time_minutes": 7,
+    "estimated_implementation_complexity": "Low",
+    "total_word_count": 1541,
+    "pages": [
+      {
+        "path": "Studio.html",
+        "primary": true
+      },
+      {
+        "path": "How_to_join_BGA_developer_team.html",
+        "primary": true
+      },
+      {
+        "path": "First_steps_with_BGA_Studio.html",
+        "primary": true
+      },
+      {
+        "path": "BGA_Game_licenses.html",
+        "primary": true
+      },
+      {
+        "path": "Contact_BGA_Studio.html",
+        "primary": false
+      }
+    ]
+  },
+  {
+    "number": 2,
+    "title": "Development Environment Setup",
+    "purpose": "Configure the local development environment for efficient BGA game development.",
+    "learning_objectives": [
+      "Install and configure VSCode for BGA development",
+      "Set up file synchronization with the BGA Studio server",
+      "Understand the project structure and file organization",
+      "Configure code formatting and intellisense"
+    ],
+    "prerequisite_chapters": [
+      1
+    ],
+    "glossary_terms_introduced": [
+      "Access",
+      "Auto",
+      "BGA Workbench",
+      "Client Tips",
+      "Code",
+      "Code Editors",
+      "Code Formatter",
+      "Copy",
+      "Daily",
+      "Debuggers",
+      "Desktop",
+      "Development",
+      "Downloads",
+      "Eclipse For PHP Developers",
+      "Extensions",
+      "File Sync",
+      "Game",
+      "Game statistics: stats",
+      "Gedit",
+      "Gimp"
+    ],
+    "estimated_reading_time_minutes": 11,
+    "estimated_implementation_complexity": "Medium",
+    "total_word_count": 2381,
+    "pages": [
+      {
+        "path": "Setting_up_BGA_Development_environment_using_VSCode.html",
+        "primary": true
+      },
+      {
+        "path": "Studio_file_reference.html",
+        "primary": true
+      },
+      {
+        "path": "Tools_and_tips_of_BGA_Studio.html",
+        "primary": false
+      }
+    ]
+  },
+  {
+    "number": 3,
+    "title": "Game Project Fundamentals",
+    "purpose": "Understand the core structure of a BGA game project and essential configuration files.",
+    "learning_objectives": [
+      "Create a new game project using the template",
+      "Configure game metadata and player settings",
+      "Understand the file structure and their purposes",
+      "Set up version control for your project"
+    ],
+    "prerequisite_chapters": [
+      2
+    ],
+    "glossary_terms_introduced": [
+      "Access",
+      "Adjusting",
+      "Beware",
+      "CREATE TABLES",
+      "Colors",
+      "Conditional",
+      "Coop Elo Mode",
+      "Create",
+      "Data",
+      "Default",
+      "Definition",
+      "Deprecated",
+      "Disable",
+      "Errors Log",
+      "Example",
+      "Game",
+      "Javascript",
+      "Language",
+      "Losers",
+      "Main_game_logic:_yourgamename"
+    ],
+    "estimated_reading_time_minutes": 21,
+    "estimated_implementation_complexity": "High",
+    "total_word_count": 4391,
+    "pages": [
+      {
+        "path": "Game_meta-information_gameinfos.jsonc.html",
+        "primary": true
+      },
+      {
+        "path": "Game_database_model_dbmodel.sql.html",
+        "primary": true
+      },
+      {
+        "path": "Game_material_description_material.inc.php.html",
+        "primary": true
+      },
+      {
+        "path": "Players_actions_yourgamename.action.php.html",
+        "primary": true
+      },
+      {
+        "path": "Game_layout_view_and_template_yourgamename.view.php_and_yourgamename_yourgamename.tpl.html",
+        "primary": true
+      }
+    ]
+  },
+  {
+    "number": 4,
+    "title": "State Machine Architecture",
+    "purpose": "Master the BGA state machine system for controlling game flow and turn-based logic.",
+    "learning_objectives": [
+      "Design and implement game states",
+      "Control player activation and turn order",
+      "Handle state transitions and transitions",
+      "Understand client vs server states and private states"
+    ],
+    "prerequisite_chapters": [
+      3
+    ],
+    "glossary_terms_introduced": [
+      "API Structure",
+      "Access",
+      "Action Functions",
+      "Animation Functions",
+      "Any Globals",
+      "Automata",
+      "Autowire",
+      "Base Classes",
+      "Classes",
+      "Client",
+      "Client States",
+      "Complete",
+      "Creating",
+      "Deprecated",
+      "Designing",
+      "Dialog Functions",
+      "Difference",
+      "Dojo",
+      "End Score",
+      "Example"
+    ],
+    "estimated_reading_time_minutes": 32,
+    "estimated_implementation_complexity": "High",
+    "total_word_count": 6426,
+    "pages": [
+      {
+        "path": "Your_game_state_machine_states.inc.php.html",
+        "primary": true
+      },
+      {
+        "path": "State_classes_State_directory.html",
+        "primary": true
+      },
+      {
+        "path": "BGA_Studio_Migration_Guide.html",
+        "primary": false,
+        "sections": [
+          "States",
+          "State Management Functions"
+        ]
+      }
+    ]
+  },
+  {
+    "number": 5,
+    "title": "Server-Side Game Logic (PHP)",
+    "purpose": "Implement core game logic on the server side using PHP and the BGA framework.",
+    "learning_objectives": [
+      "Access and manipulate the database",
+      "Handle player actions and game events",
+      "Send notifications to clients",
+      "Manage randomness and game statistics"
+    ],
+    "prerequisite_chapters": [
+      4
+    ],
+    "glossary_terms_introduced": [
+      "API Structure",
+      "Access",
+      "Accessing",
+      "Action Functions",
+      "Actions",
+      "Activate",
+      "Animation Functions",
+      "Any Globals",
+      "Arrays",
+      "Automata",
+      "Autowire",
+      "Base Classes",
+      "Beta",
+      "Classes",
+      "Client",
+      "Creating",
+      "Custom",
+      "Debugging",
+      "Deprecated",
+      "Dialog Functions"
+    ],
+    "estimated_reading_time_minutes": 68,
+    "estimated_implementation_complexity": "High",
+    "total_word_count": 13626,
+    "pages": [
+      {
+        "path": "Main_game_logic_Game.php.html",
+        "primary": true
+      },
+      {
+        "path": "BGA_Studio_Migration_Guide.html",
+        "primary": false,
+        "sections": [
+          "PHP migration",
+          "Autowire game actions",
+          "Notifications",
+          "State Management Functions",
+          "Deprecated translation functions"
+        ]
+      },
+      {
+        "path": "Game_statistics_stats.json.html",
+        "primary": true
+      }
+    ]
+  },
+  {
+    "number": 6,
+    "title": "Client-Side Game Interface (JavaScript)",
+    "purpose": "Build the interactive client-side game interface using JavaScript/TypeScript.",
+    "learning_objectives": [
+      "Set up the Game.js structure and framework components",
+      "Handle player input and connect to server actions",
+      "Process notifications and update the UI",
+      "Work with the DOM and create interface elements"
+    ],
+    "prerequisite_chapters": [
+      4,
+      5
+    ],
+    "glossary_terms_introduced": [
+      "API Structure",
+      "AbortController",
+      "Access",
+      "Accessing",
+      "Accessing Players Information",
+      "Action Functions",
+      "Actions",
+      "Adding",
+      "Advanced",
+      "Animation Callbacks",
+      "Animation Functions",
+      "Animations",
+      "Any Globals",
+      "Auto",
+      "Automata",
+      "Autowire",
+      "BGA Buttons",
+      "BGA GUI",
+      "Banners",
+      "Base Classes"
+    ],
+    "estimated_reading_time_minutes": 48,
+    "estimated_implementation_complexity": "High",
+    "total_word_count": 9719,
+    "pages": [
+      {
+        "path": "Game_interface_logic_Game.js.html",
+        "primary": true
+      },
+      {
+        "path": "BGA_Studio_Migration_Guide.html",
+        "primary": false,
+        "sections": [
+          "Main class",
+          "Notification setup",
+          "Status bar manipulation",
+          "Dojo usage"
+        ]
+      },
+      {
+        "path": "Using_Typescript_and_Scss.html",
+        "primary": true
+      }
+    ]
+  },
+  {
+    "number": 7,
+    "title": "Game UI Components and Graphics",
+    "purpose": "Create and manage visual components, layout, and game assets.",
+    "learning_objectives": [
+      "Use BGA UI components (Stock, Deck, Zone, Scrollmap)",
+      "Manage game images and graphics assets",
+      "Create responsive layouts for different screen sizes",
+      "Handle animations and visual feedback"
+    ],
+    "prerequisite_chapters": [
+      6
+    ],
+    "glossary_terms_introduced": [
+      "API Reference",
+      "Auto",
+      "Autoscale",
+      "Avoid",
+      "Card",
+      "Community Provided",
+      "Complete",
+      "Constructor",
+      "Create",
+      "Creation",
+      "Customizations",
+      "Customize Appearance",
+      "Dark",
+      "Deck",
+      "Declare",
+      "Disable",
+      "Enable",
+      "Example",
+      "Examples",
+      "Fall"
+    ],
+    "estimated_reading_time_minutes": 39,
+    "estimated_implementation_complexity": "High",
+    "total_word_count": 7968,
+    "pages": [
+      {
+        "path": "Stock.html",
+        "primary": true
+      },
+      {
+        "path": "Deck.html",
+        "primary": true
+      },
+      {
+        "path": "Zone.html",
+        "primary": true
+      },
+      {
+        "path": "Scrollmap.html",
+        "primary": true
+      },
+      {
+        "path": "Game_art_img_directory.html",
+        "primary": true
+      },
+      {
+        "path": "Game_interface_stylesheet_yourgamename.css.html",
+        "primary": true
+      },
+      {
+        "path": "Your_game_mobile_version.html",
+        "primary": true
+      }
+    ]
+  },
+  {
+    "number": 8,
+    "title": "UI Enhancements and Interactivity",
+    "purpose": "Enhance the user interface with advanced features and polish.",
+    "learning_objectives": [
+      "Implement tooltips, dialogs, and banners",
+      "Add sound effects and image buttons",
+      "Handle user preferences and customization",
+      "Follow UI/UX best practices and guidelines"
+    ],
+    "prerequisite_chapters": [
+      7
+    ],
+    "glossary_terms_introduced": [
+      "Accessibility",
+      "Accessing",
+      "Accessing User Preferences",
+      "Action Bar",
+      "Adding Image",
+      "Animation",
+      "Attach",
+      "BGA Studio Guidelines",
+      "Back",
+      "Background",
+      "Button",
+      "Checklist",
+      "Clarity",
+      "Clientloginjection",
+      "Closing",
+      "Colorblind",
+      "Continuity",
+      "Cookbook",
+      "Cool",
+      "Create"
+    ],
+    "estimated_reading_time_minutes": 33,
+    "estimated_implementation_complexity": "High",
+    "total_word_count": 6643,
+    "pages": [
+      {
+        "path": "BGA_Studio_Cookbook.html",
+        "primary": true,
+        "sections": [
+          "Visual Effects, Layout and Animation",
+          "Game Model and Database design",
+          "Images and Icons",
+          "Dynamic tooltips"
+        ]
+      },
+      {
+        "path": "BGA_Studio_Guidelines.html",
+        "primary": true
+      },
+      {
+        "path": "Options_and_preferences_gameoptions.json,_gamepreferences.json.html",
+        "primary": true
+      },
+      {
+        "path": "PlayerCounter_and_TableCounter.html",
+        "primary": true
+      }
+    ]
+  },
+  {
+    "number": 9,
+    "title": "Notifications and Logging",
+    "purpose": "Implement game notifications and understand the logging system.",
+    "learning_objectives": [
+      "Send properly formatted notifications to clients",
+      "Handle notification args and decorators",
+      "Format log messages for translation",
+      "Understand BGA logging and error reporting"
+    ],
+    "prerequisite_chapters": [
+      5,
+      6
+    ],
+    "glossary_terms_introduced": [
+      "API Structure",
+      "Access",
+      "Action Functions",
+      "Animation Functions",
+      "Any Globals",
+      "Automata",
+      "Autowire",
+      "Base Classes",
+      "Classes",
+      "Client",
+      "Deprecated",
+      "Dialog Functions",
+      "Dojo",
+      "Exception Classes",
+      "Forbid",
+      "Formatting",
+      "Future",
+      "Game",
+      "Game Area Functions",
+      "Game Mode Functions"
+    ],
+    "estimated_reading_time_minutes": 8,
+    "estimated_implementation_complexity": "Low",
+    "total_word_count": 1602,
+    "pages": [
+      {
+        "path": "BGA_Studio_Migration_Guide.html",
+        "primary": false,
+        "sections": [
+          "Notification Decorators",
+          "Notification args consistency"
+        ]
+      }
+    ]
+  },
+  {
+    "number": 10,
+    "title": "Internationalization and Localization",
+    "purpose": "Implement multi-language support for your game.",
+    "learning_objectives": [
+      "Mark strings for translation in PHP and JavaScript",
+      "Use clienttranslate and proper i18n formatting",
+      "Handle gender-specific pronouns in translations",
+      "Preview and test translations"
+    ],
+    "prerequisite_chapters": [
+      5
+    ],
+    "glossary_terms_introduced": [
+      "Analyze",
+      "Creating",
+      "English",
+      "Focus",
+      "Formatting",
+      "Function",
+      "Gender",
+      "Javascript",
+      "Localization Overview",
+      "Make",
+      "NotificationMessage",
+      "Other Useful Links",
+      "Preview",
+      "Throwing",
+      "Top Secret Undocumented Features",
+      "Translations",
+      "UserException",
+      "Using",
+      "WARNING",
+      "What"
+    ],
+    "estimated_reading_time_minutes": 6,
+    "estimated_implementation_complexity": "Medium",
+    "total_word_count": 1359,
+    "pages": [
+      {
+        "path": "Translations.html",
+        "primary": true
+      }
+    ]
+  },
+  {
+    "number": 11,
+    "title": "Advanced Features",
+    "purpose": "Implement advanced BGA features including bots, undo, and zombie mode.",
+    "learning_objectives": [
+      "Create AI bots for your game",
+      "Implement undo functionality",
+      "Handle disconnected players with zombie mode",
+      "Use BGA helper libraries and utilities"
+    ],
+    "prerequisite_chapters": [
+      4,
+      5,
+      6
+    ],
+    "glossary_terms_introduced": [
+      "API Structure",
+      "About Undo",
+      "Access",
+      "Action Functions",
+      "Adding",
+      "Animation Functions",
+      "Any Globals",
+      "Artificial",
+      "Asynchronicity",
+      "Automata",
+      "Autowire",
+      "Base Classes",
+      "BgaAnimations",
+      "BgaAutofit",
+      "BgaCards",
+      "BgaDice",
+      "BgaScoreSheet",
+      "Bot Actions",
+      "Bot Color",
+      "Bot Player ID"
+    ],
+    "estimated_reading_time_minutes": 32,
+    "estimated_implementation_complexity": "High",
+    "total_word_count": 6527,
+    "pages": [
+      {
+        "path": "Bots_and_Artificial_Intelligence.html",
+        "primary": true
+      },
+      {
+        "path": "BGA_Undo_policy.html",
+        "primary": true
+      },
+      {
+        "path": "Zombie_Mode.html",
+        "primary": true
+      },
+      {
+        "path": "BGA_Studio_Migration_Guide.html",
+        "primary": false,
+        "sections": [
+          "Updated Zombie Mode documentation and recommendations"
+        ]
+      },
+      {
+        "path": "BgaAnimations.html",
+        "primary": true
+      },
+      {
+        "path": "BgaAutofit.html",
+        "primary": true
+      },
+      {
+        "path": "BgaCards.html",
+        "primary": true
+      },
+      {
+        "path": "BgaDice.html",
+        "primary": true
+      },
+      {
+        "path": "BgaScoreSheet.html",
+        "primary": true
+      },
+      {
+        "path": "ExpandableSection.html",
+        "primary": true
+      },
+      {
+        "path": "Counter.html",
+        "primary": true
+      }
+    ]
+  },
+  {
+    "number": 12,
+    "title": "Testing and Debugging",
+    "purpose": "Establish testing practices and debug issues effectively.",
+    "learning_objectives": [
+      "Write unit tests for PHP and JavaScript",
+      "Debug common runtime errors",
+      "Use BGA Studio debugging tools",
+      "Test with bots and playtesting"
+    ],
+    "prerequisite_chapters": [
+      5,
+      6,
+      11
+    ],
+    "glossary_terms_introduced": [
+      "Ajaxcall",
+      "Allowed",
+      "Application",
+      "Automated Testing",
+      "BGA Production Logs",
+      "Backend",
+      "Bad Gateway",
+      "BgaFrameworkStubs",
+      "Blank",
+      "Countable",
+      "Create",
+      "Culprit",
+      "Custom",
+      "Database",
+      "Dead",
+      "Debug",
+      "Debugging",
+      "Debugging Toolips CSS",
+      "Dump",
+      "During"
+    ],
+    "estimated_reading_time_minutes": 26,
+    "estimated_implementation_complexity": "High",
+    "total_word_count": 5278,
+    "pages": [
+      {
+        "path": "Testing_by_developer.html",
+        "primary": true
+      },
+      {
+        "path": "Practical_debugging.html",
+        "primary": true
+      },
+      {
+        "path": "Troubleshooting.html",
+        "primary": true
+      },
+      {
+        "path": "Studio_logs.html",
+        "primary": true
+      }
+    ]
+  },
+  {
+    "number": 13,
+    "title": "Game Lifecycle and Publishing",
+    "purpose": "Navigate the game development lifecycle from dev to release.",
+    "learning_objectives": [
+      "Understand the alpha/beta release process",
+      "Handle post-release updates and database migrations",
+      "Document changes and communicate with the community",
+      "Avoid version mismatches and production issues"
+    ],
+    "prerequisite_chapters": [
+      1,
+      12
+    ],
+    "glossary_terms_introduced": [
+      "After",
+      "Alpha",
+      "Animation",
+      "Avoiding",
+      "Beta",
+      "Bug Reports",
+      "Bugs",
+      "Changes",
+      "Complete",
+      "Create",
+      "Create Database Schema",
+      "Create Initial Layout",
+      "Create State Machine",
+      "Design Game Elements",
+      "Development Tools",
+      "Documentation",
+      "Finally",
+      "First Game",
+      "Game Graphics",
+      "Game_meta-information: gameinfos"
+    ],
+    "estimated_reading_time_minutes": 22,
+    "estimated_implementation_complexity": "Medium",
+    "total_word_count": 4545,
+    "pages": [
+      {
+        "path": "Create_a_game_in_BGA_Studio_Complete_Walkthrough.html",
+        "primary": true
+      },
+      {
+        "path": "Post-release_phase.html",
+        "primary": true
+      },
+      {
+        "path": "Pre-release_checklist.html",
+        "primary": true
+      },
+      {
+        "path": "Tutorials_checklist.html",
+        "primary": true
+      }
+    ]
+  },
+  {
+    "number": 14,
+    "title": "Reference and Migration Guide",
+    "purpose": "Reference for migrating existing games and understanding framework changes.",
+    "learning_objectives": [
+      "Migrate from legacy BGA patterns to modern API",
+      "Understand deprecated features and replacements",
+      "Use the new this.bga.* API structure",
+      "Update existing projects to current standards"
+    ],
+    "prerequisite_chapters": [
+      1,
+      2,
+      5,
+      6
+    ],
+    "glossary_terms_introduced": [
+      "API Structure",
+      "Access",
+      "Action Functions",
+      "Animation Functions",
+      "Any Globals",
+      "Automata",
+      "Autowire",
+      "Base Classes",
+      "Classes",
+      "Client",
+      "Deprecated",
+      "Dialog Functions",
+      "Dojo",
+      "Exception Classes",
+      "Forbid",
+      "Formatting",
+      "Future",
+      "Game",
+      "Game Area Functions",
+      "Game Mode Functions"
+    ],
+    "estimated_reading_time_minutes": 8,
+    "estimated_implementation_complexity": "Medium",
+    "total_word_count": 1602,
+    "pages": [
+      {
+        "path": "BGA_Studio_Migration_Guide.html",
+        "primary": true
+      }
+    ]
+  },
+  {
+    "number": 15,
+    "title": "Appendix: Additional Resources and Tutorials",
+    "purpose": "Supplementary materials including tutorials, community resources, and reference documentation.",
+    "learning_objectives": [
+      "Understand additional tools like ChromeExtension",
+      "Reference game asset formats and requirements",
+      "Find answers to common questions in the FAQ",
+      "Learn from complete tutorial implementations"
+    ],
+    "prerequisite_chapters": [],
+    "glossary_terms_introduced": [
+      "Access Permissions",
+      "Accessing",
+      "Add Token",
+      "Add Token Utility Method",
+      "Advanced",
+      "After",
+      "Animation",
+      "Anti",
+      "Artist",
+      "BgaAnimations",
+      "Board",
+      "Board Initialization Explanation",
+      "BoardManager",
+      "Box",
+      "Build",
+      "Chat",
+      "ChromeExtension",
+      "Click Handlers",
+      "Code",
+      "Common"
+    ],
+    "estimated_reading_time_minutes": 43,
+    "estimated_implementation_complexity": "High",
+    "total_word_count": 8717,
+    "pages": [
+      {
+        "path": "Anti-Stock.html",
+        "primary": false,
+        "reason": "Stock alternative pattern"
+      },
+      {
+        "path": "BGA_Code_Sharing.html",
+        "primary": false,
+        "reason": "Community resources"
+      },
+      {
+        "path": "BGA_game_Lifecycle.html",
+        "primary": false,
+        "reason": "Lifecycle overview"
+      },
+      {
+        "path": "ChromeExtension.html",
+        "primary": false,
+        "reason": "Development tool"
+      },
+      {
+        "path": "Common_board_game_elements_image_resources.html",
+        "primary": false,
+        "reason": "Asset reference"
+      },
+      {
+        "path": "Compatibility.html",
+        "primary": false,
+        "reason": "Technical requirements"
+      },
+      {
+        "path": "Draggable.html",
+        "primary": false,
+        "reason": "Deprecated component reference"
+      },
+      {
+        "path": "Game_fonts_fonts_directory.html",
+        "primary": false,
+        "reason": "Font asset handling"
+      },
+      {
+        "path": "Game_metadata_manager.html",
+        "primary": false,
+        "reason": "Game metadata API"
+      },
+      {
+        "path": "Game_replay.html",
+        "primary": false,
+        "reason": "Replay feature"
+      },
+      {
+        "path": "Game_sounds_sounds_directory.html",
+        "primary": false,
+        "reason": "Sound assets"
+      },
+      {
+        "path": "I_wish_I_knew_this_when_I_started.html",
+        "primary": false,
+        "reason": "Developer tips"
+      },
+      {
+        "path": "Studio_FAQ.html",
+        "primary": false,
+        "reason": "FAQ reference"
+      },
+      {
+        "path": "Tutorial_hearts.html",
+        "primary": false,
+        "reason": "Tutorial reference"
+      },
+      {
+        "path": "Tutorial_reversi.html",
+        "primary": false,
+        "reason": "Tutorial reference"
+      },
+      {
+        "path": "Using_AI_for_BGA_game_development.html",
+        "primary": false,
+        "reason": "AI development tools"
+      },
+      {
+        "path": "Using_Vue.html",
+        "primary": false,
+        "reason": "Vue framework integration"
+      }
+    ]
+  }
+]
